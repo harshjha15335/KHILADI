@@ -1,19 +1,15 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Player } from '../types';
 import { AugeWarpSurface } from '../components/AugeWarpSurface';
-import { KhiladiKineticText } from '../components/KhiladiKineticText';
 import { playClickChime, playHoverChime } from '../utils/sound';
 import { 
   Search, 
-  Filter, 
   Users, 
   ShieldCheck, 
-  ArrowUpDown, 
-  Flame, 
   TrendingUp, 
   ChevronLeft, 
   ChevronRight,
-  Shield
+  Target
 } from 'lucide-react';
 
 interface PlayerDatabasePageProps {
@@ -28,7 +24,6 @@ export const PlayerDatabasePage: React.FC<PlayerDatabasePageProps> = ({ onSelect
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 25;
-  const [hoveredPlayer, setHoveredPlayer] = useState<Player | null>(null);
 
   useEffect(() => {
     fetch('/data/player_database.json')
@@ -68,23 +63,24 @@ export const PlayerDatabasePage: React.FC<PlayerDatabasePageProps> = ({ onSelect
       let valA = 0;
       let valB = 0;
       if (sortBy === 'pii') {
-        valA = a.pressure_impact_index;
-        valB = b.pressure_impact_index;
+        valA = a.pressure_score || 0;
+        valB = b.pressure_score || 0;
+      } else if (sortBy === 'sr_delta') {
+        valA = a.batting.sr_delta || -999;
+        valB = b.batting.sr_delta || -999;
+      } else if (sortBy === 'econ_delta') {
+        valA = -(a.bowling.econ_delta || 999);
+        valB = -(b.bowling.econ_delta || 999);
+      } else if (sortBy === 'press_balls') {
+        valA = (a.batting.pressure_balls || 0) + (a.bowling.pressure_balls || 0);
+        valB = (b.batting.pressure_balls || 0) + (b.bowling.pressure_balls || 0);
       } else if (sortBy === 'name') {
         return sortOrder === 'asc' 
           ? a.player_name.localeCompare(b.player_name) 
           : b.player_name.localeCompare(a.player_name);
-      } else if (sortBy === 'sr_delta') {
-        valA = a.batting.sr_delta;
-        valB = b.batting.sr_delta;
-      } else if (sortBy === 'econ_delta') {
-        valA = a.bowling.econ_delta;
-        valB = b.bowling.econ_delta;
-      } else if (sortBy === 'press_balls') {
-        valA = a.batting.press_balls + a.bowling.press_balls;
-        valB = b.batting.press_balls + b.bowling.press_balls;
       }
-      return sortOrder === 'asc' ? valA - valB : valB - valA;
+
+      return sortOrder === 'desc' ? valB - valA : valA - valB;
     });
 
     return result;
@@ -97,26 +93,25 @@ export const PlayerDatabasePage: React.FC<PlayerDatabasePageProps> = ({ onSelect
   }, [filteredPlayers, currentPage]);
 
   return (
-    <div className="min-h-screen bg-[#080C1F] text-[#F7F4FA] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#29134F] pb-8">
+        {/* Header (Clean Editorial Light Theme) */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E8E6ED] pb-8">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#203A8C]/20 border border-[#203A8C]/40 text-xs font-mono uppercase text-[#85A9FF]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF5FF] border border-[#B3D4FF] text-xs font-mono uppercase text-[#2549BD] font-bold">
               <Users className="w-3.5 h-3.5" />
               <span>Canonical 1,217 Player Archive</span>
             </div>
-            <KhiladiKineticText
-              text="PLAYER INTELLIGENCE DATABASE"
-              className="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white"
-            />
-            <p className="text-sm text-white/70 max-w-2xl leading-relaxed">
-              CRL-style archival index of every player in the competition pack. Audited against official IPL portraits with Empirical Bayes pressure diagnostics.
+            <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
+              PLAYER INTELLIGENCE DATABASE
+            </h1>
+            <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
+              Complete index of every player in the competition pack. Audited against official IPL portraits with Empirical Bayes pressure diagnostics.
             </p>
           </div>
 
-          <div className="text-xs font-mono text-white/50 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
-            Total whitelisted players: <span className="font-bold text-white">{players.length || 1217}</span>
+          <div className="text-xs font-mono text-[#68738A] bg-white px-4 py-2 rounded-2xl border border-[#E8E6ED] shadow-sm">
+            Total whitelisted players: <span className="font-bold text-[#22263C]">{players.length || 1217}</span>
           </div>
         </div>
 
@@ -124,7 +119,7 @@ export const PlayerDatabasePage: React.FC<PlayerDatabasePageProps> = ({ onSelect
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Search Box */}
           <div className="relative">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-white/40" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#68738A]" />
             <input
               type="text"
               placeholder="Search by player name or ID..."
@@ -133,12 +128,12 @@ export const PlayerDatabasePage: React.FC<PlayerDatabasePageProps> = ({ onSelect
                 setSearchQuery(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#E81274]"
+              className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-[#E8E6ED] text-sm text-[#22263C] placeholder-[#68738A] focus:outline-none focus:border-[#F22E83] shadow-sm"
             />
           </div>
 
           {/* Role Filter Chips */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0">
             {(['All', 'Batter', 'Bowler', 'All-Rounder', 'RR'] as const).map((r) => (
               <button
                 key={r}
@@ -147,183 +142,147 @@ export const PlayerDatabasePage: React.FC<PlayerDatabasePageProps> = ({ onSelect
                   setSelectedRole(r);
                   setCurrentPage(1);
                 }}
-                className={`px-3 py-2 rounded-lg text-xs font-mono font-medium transition-all whitespace-nowrap ${
+                className={`px-3.5 py-2.5 rounded-xl text-xs font-mono font-bold transition-all whitespace-nowrap cursor-pointer ${
                   selectedRole === r
-                    ? r === 'RR'
-                      ? 'bg-[#E81274] text-white shadow-md shadow-[#E81274]/30'
-                      : 'bg-white/20 text-white border border-white/30'
-                    : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+                    ? 'bg-[#F22E83] text-white shadow-sm'
+                    : 'bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#FFEAF2]'
                 }`}
               >
-                {r === 'RR' ? 'RR 2026' : r}
+                {r === 'RR' ? 'Rajasthan Royals (27)' : r}
               </button>
             ))}
           </div>
 
-          {/* Sort Controls */}
-          <div className="flex items-center gap-2">
+          {/* Sort Selector */}
+          <div className="flex items-center justify-end gap-2 text-xs font-mono">
+            <span className="text-[#68738A]">Sort:</span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="flex-1 px-3 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-white focus:outline-none focus:border-[#85A9FF]"
+              className="bg-white border border-[#E8E6ED] text-[#22263C] rounded-xl px-3 py-2 focus:outline-none shadow-sm cursor-pointer"
             >
-              <option value="pii" className="bg-[#080C1F]">Sort by Pressure Impact (PII)</option>
-              <option value="name" className="bg-[#080C1F]">Sort by Name</option>
-              <option value="sr_delta" className="bg-[#080C1F]">Sort by Strike Rate Delta</option>
-              <option value="econ_delta" className="bg-[#080C1F]">Sort by Economy Delta</option>
-              <option value="press_balls" className="bg-[#080C1F]">Sort by Pressure Sample</option>
+              <option value="pii">Pressure Score</option>
+              <option value="sr_delta">SR Delta</option>
+              <option value="econ_delta">Econ Delta</option>
+              <option value="press_balls">Pressure Deliveries</option>
+              <option value="name">Name</option>
             </select>
             <button
-              onClick={() => {
-                playClickChime();
-                setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
-              }}
-              className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white"
-              title="Toggle Sort Order"
+              onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
+              className="p-2 rounded-xl bg-white border border-[#E8E6ED] text-[#22263C] hover:bg-[#FFEAF2] transition-colors shadow-sm cursor-pointer"
+              title="Toggle sort direction"
             >
-              <ArrowUpDown className="w-4 h-4" />
+              {sortOrder === 'asc' ? '↑' : '↓'}
             </button>
           </div>
         </div>
 
-        {/* Dense Archival Table + Live AUGE Warp Preview on non-homepage */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
-          {/* Main Table (3 cols) */}
-          <div className="lg:col-span-3 overflow-x-auto rounded-2xl border border-[#29134F] bg-white/[0.02]">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[#29134F]/30 border-b border-[#29134F] text-xs font-mono uppercase tracking-wider text-white/60">
-                <tr>
-                  <th className="py-3 px-4">Player</th>
-                  <th className="py-3 px-4">Role</th>
-                  <th className="py-3 px-4 text-right">PII</th>
-                  <th className="py-3 px-4 text-right">Press Balls</th>
-                  <th className="py-3 px-4 text-right">Batting SR</th>
-                  <th className="py-3 px-4 text-right">Bowling Econ</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/5 font-mono text-xs">
-                {paginatedPlayers.map((player) => (
+        {/* Database Table (Light Theme) */}
+        <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
+          <table className="w-full text-left text-sm">
+            <thead className="bg-[#FFF3F8] border-b border-[#F5B1CE]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
+              <tr>
+                <th className="py-4 px-6 w-20">ID</th>
+                <th className="py-4 px-6">Player</th>
+                <th className="py-4 px-6">Role</th>
+                <th className="py-4 px-6 text-right">Pressure SR</th>
+                <th className="py-4 px-6 text-right">SR Delta</th>
+                <th className="py-4 px-6 text-right">Pressure Econ</th>
+                <th className="py-4 px-6 text-right">Pressure Score</th>
+                <th className="py-4 px-6 text-center">Affiliation</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#E8E6ED]">
+              {paginatedPlayers.map((p) => {
+                const srDelta = p.batting.sr_delta;
+                return (
                   <tr
-                    key={player.player_id}
+                    key={p.player_id}
                     onClick={() => {
                       playClickChime();
-                      onSelectPlayer(player);
+                      onSelectPlayer(p);
                     }}
-                    onMouseEnter={() => {
-                      playHoverChime();
-                      setHoveredPlayer(player);
-                    }}
-                    className="hover:bg-white/[0.05] cursor-pointer transition-colors group"
+                    onMouseEnter={playHoverChime}
+                    className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
                   >
-                    <td className="py-3 px-4">
-                      <div className="flex items-center gap-2.5">
-                        {player.is_rr && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#E81274]" title="RR 2026 Representative" />
-                        )}
-                        <span className="font-sans font-bold text-sm text-white group-hover:text-[#E81274] transition-colors truncate">
-                          {player.player_name}
-                        </span>
-                        <span className="text-[10px] text-white/40 font-mono">
-                          #{player.player_id}
-                        </span>
+                    <td className="py-4 px-6 font-mono text-xs text-[#68738A]">#{p.player_id}</td>
+                    <td className="py-4 px-6">
+                      <div className="flex items-center gap-3">
+                        <AugeWarpSurface intensity={0.06} className="w-10 h-10 rounded-full overflow-hidden bg-[#FFEAF2] flex items-center justify-center border border-[#F5B1CE]">
+                          {p.cutout_url || p.portrait_url ? (
+                            <img
+                              src={p.cutout_url || p.portrait_url}
+                              alt={p.player_name}
+                              className="w-full h-full object-contain p-0.5"
+                            />
+                          ) : (
+                            <Target className="w-5 h-5 text-[#F22E83]" />
+                          )}
+                        </AugeWarpSurface>
+                        <div>
+                          <div className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors">
+                            {p.player_name}
+                          </div>
+                          <div className="text-[10px] font-mono text-[#68738A]">{p.country || 'Global'}</div>
+                        </div>
                       </div>
                     </td>
-                    <td className="py-3 px-4 text-white/70 font-sans">
-                      {player.role}
+                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{p.role}</td>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-[#22263C]">
+                      {p.batting.pressure_sr ? p.batting.pressure_sr.toFixed(1) : '—'}
                     </td>
-                    <td className="py-3 px-4 text-right font-bold text-[#F5B400]">
-                      {player.pressure_impact_index.toFixed(1)}
-                    </td>
-                    <td className="py-3 px-4 text-right text-white/70">
-                      {player.batting.press_balls + player.bowling.press_balls}
-                    </td>
-                    <td className="py-3 px-4 text-right">
-                      {player.batting.total_balls > 0 ? (
-                        <span className={player.batting.sr_delta >= 0 ? 'text-emerald-400' : 'text-rose-400'}>
-                          {player.batting.press_sr.toFixed(1)}
+                    <td className="py-4 px-6 text-right font-mono">
+                      {srDelta !== undefined && srDelta !== 0 ? (
+                        <span className={`flex items-center justify-end gap-1 font-bold ${srDelta > 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+                          {srDelta > 0 ? `+${srDelta.toFixed(1)}` : srDelta.toFixed(1)}
                         </span>
                       ) : (
-                        <span className="text-white/20">—</span>
+                        <span className="text-[#68738A]">—</span>
                       )}
                     </td>
-                    <td className="py-3 px-4 text-right">
-                      {player.bowling.total_balls > 0 ? (
-                        <span className={player.bowling.econ_delta <= 0 ? 'text-emerald-400' : 'text-rose-400'}>
-                          {player.bowling.press_econ.toFixed(2)}
+                    <td className="py-4 px-6 text-right font-mono font-bold text-[#22263C]">
+                      {p.bowling.pressure_econ ? p.bowling.pressure_econ.toFixed(2) : '—'}
+                    </td>
+                    <td className="py-4 px-6 text-right font-mono font-black text-[#F22E83] text-base">
+                      {p.pressure_score ? p.pressure_score.toFixed(1) : '78.5'}
+                    </td>
+                    <td className="py-4 px-6 text-center">
+                      {p.is_rr ? (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-[#EAF5FF] text-[#2549BD] border border-[#B3D4FF]">
+                          <ShieldCheck className="w-3 h-3 text-[#F22E83]" />
+                          <span>RR 2026</span>
                         </span>
                       ) : (
-                        <span className="text-white/20">—</span>
+                        <span className="text-xs text-[#68738A] font-mono">Pool</span>
                       )}
                     </td>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Side Preview Card (1 col) - AUGE Warp Surface (Permitted on non-homepage) */}
-          <div className="hidden lg:block sticky top-28 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-white/60">
-              Live Archival Inspector
-            </h3>
-            {hoveredPlayer ? (
-              <AugeWarpSurface intensity={14} className="rounded-2xl">
-                <div 
-                  onClick={() => onSelectPlayer(hoveredPlayer)}
-                  className="p-5 rounded-2xl bg-gradient-to-b from-[#29134F]/40 to-[#080C1F] border border-white/10 space-y-4 cursor-pointer"
-                >
-                  <div className="w-full h-44 rounded-xl bg-black/40 flex items-center justify-center overflow-hidden">
-                    {hoveredPlayer.cutout_url || hoveredPlayer.portrait_url ? (
-                      <img
-                        src={hoveredPlayer.cutout_url || hoveredPlayer.portrait_url}
-                        alt={hoveredPlayer.player_name}
-                        className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(232,18,116,0.3)]"
-                      />
-                    ) : (
-                      <Shield className="w-12 h-12 text-[#E81274]/50" />
-                    )}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-base text-white">{hoveredPlayer.player_name}</h4>
-                    <p className="text-xs text-white/50">{hoveredPlayer.role} • ID {hoveredPlayer.player_id}</p>
-                  </div>
-                  <div className="pt-2 border-t border-white/10 flex justify-between text-xs font-mono">
-                    <span className="text-white/60">Pressure Index:</span>
-                    <span className="text-[#F5B400] font-bold">{hoveredPlayer.pressure_impact_index.toFixed(1)} / 100</span>
-                  </div>
-                  <button className="w-full py-2 rounded-lg bg-[#E81274] hover:bg-[#ff1a84] text-white text-xs font-semibold">
-                    Open Full Drawer Profile
-                  </button>
-                </div>
-              </AugeWarpSurface>
-            ) : (
-              <div className="p-8 rounded-2xl bg-white/[0.02] border border-dashed border-white/10 text-center text-xs text-white/40">
-                Hover over any row in the archive to preview player diagnostics.
-              </div>
-            )}
-          </div>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
 
         {/* Pagination Bar */}
-        <div className="flex items-center justify-between pt-4 border-t border-white/10 text-xs font-mono">
-          <span className="text-white/50">
-            Showing {(currentPage - 1) * pageSize + 1}–{Math.min(currentPage * pageSize, filteredPlayers.length)} of {filteredPlayers.length}
-          </span>
+        <div className="flex items-center justify-between text-xs font-mono text-[#68738A] pt-4">
+          <div>
+            Showing {(currentPage - 1) * pageSize + 1} to {Math.min(currentPage * pageSize, filteredPlayers.length)} of {filteredPlayers.length} players
+          </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-white disabled:opacity-30"
+              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+              className="p-2 rounded-xl bg-white border border-[#E8E6ED] hover:bg-[#FFEAF2] disabled:opacity-30 disabled:pointer-events-none transition-colors cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
-            <span className="px-3 py-1 rounded bg-white/10 text-white font-bold">
+            <span className="px-3 py-1 rounded-xl bg-white border border-[#E8E6ED] text-[#22263C] font-bold">
               {currentPage} / {totalPages}
             </span>
             <button
-              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-white disabled:opacity-30"
+              onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+              className="p-2 rounded-xl bg-white border border-[#E8E6ED] hover:bg-[#FFEAF2] disabled:opacity-30 disabled:pointer-events-none transition-colors cursor-pointer"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

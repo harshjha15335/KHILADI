@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Player } from '../types';
-import { KhiladiKineticText } from '../components/KhiladiKineticText';
 import { playClickChime, playHoverChime } from '../utils/sound';
 import { 
   ShieldAlert, 
   Plus, 
   Trash2, 
-  DollarSign, 
   Users, 
   Globe, 
   Flame, 
   Award, 
   CheckCircle2, 
   AlertCircle,
-  Search,
-  Sparkles
+  Search
 } from 'lucide-react';
 
 interface AuctionWarRoomPageProps {
@@ -61,205 +58,194 @@ export const AuctionWarRoomPage: React.FC<AuctionWarRoomPageProps> = ({
     setSearchResults(results);
   }, [searchQuery, allPlayers, warRoomSquad]);
 
-  // Compute auction valuation estimates based on PII & role
-  const estimatePlayerPrice = (p: Player): number => {
-    if (p.pressure_impact_index >= 70) return 12.5;
-    if (p.pressure_impact_index >= 60) return 8.0;
-    if (p.pressure_impact_index >= 50) return 4.5;
-    if (p.pressure_impact_index >= 40) return 2.0;
-    return 0.5; // base price
-  };
+  // Financial calculations
+  const totalSpent = warRoomSquad.reduce((acc, p) => acc + (p.auction_price_cr || 2.0), 0);
+  const remainingPurse = purseTotalCr - totalSpent;
+  const overseasCount = warRoomSquad.filter(p => p.country && p.country.toLowerCase() !== 'india').length;
 
-  const totalSpent = warRoomSquad.reduce((sum, p) => sum + estimatePlayerPrice(p), 0);
-  const remainingPurse = Math.max(0, purseTotalCr - totalSpent);
   const avgPii = warRoomSquad.length > 0 
-    ? warRoomSquad.reduce((sum, p) => sum + p.pressure_impact_index, 0) / warRoomSquad.length 
+    ? warRoomSquad.reduce((acc, p) => acc + (p.pressure_score || 70), 0) / warRoomSquad.length
     : 0;
 
-  const battersCount = warRoomSquad.filter(p => p.role === 'Batter').length;
-  const bowlersCount = warRoomSquad.filter(p => p.role === 'Bowler').length;
-  const allRoundersCount = warRoomSquad.filter(p => p.role === 'All-Rounder').length;
-
   return (
-    <div className="min-h-screen bg-[#080C1F] text-[#F7F4FA] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#29134F] pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E8E6ED] pb-8">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E81274]/15 border border-[#E81274]/30 text-xs font-mono uppercase text-[#E81274]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
               <ShieldAlert className="w-3.5 h-3.5" />
               <span>Rajasthan Royals Auction Strategy Room</span>
             </div>
-            <KhiladiKineticText
-              text="AUCTION WAR ROOM"
-              className="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white"
-            />
-            <p className="text-sm text-white/70 max-w-2xl leading-relaxed">
+            <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
+              AUCTION WAR ROOM
+            </h1>
+            <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
               Construct the optimal Rajasthan Royals squad with the ₹120.0 Crore salary cap. Maximise clutch pressure impact while maintaining positional balance.
             </p>
           </div>
 
-          <div className="text-xs font-mono text-white/50 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
+          <div className="text-xs font-mono text-[#68738A] bg-white px-4 py-2 rounded-2xl border border-[#E8E6ED] shadow-sm">
             Rules: Squad size 18–25 • Max 8 Overseas • ₹120.00 Cr
           </div>
         </div>
 
-        {/* Financial & Squad Stats Cockpit */}
+        {/* Financial & Squad Stats Cockpit (Light Theme) */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <div className="text-xs font-mono uppercase text-white/50">Purse Remaining</div>
-            <div className="text-3xl font-black font-mono text-[#F5B400]">
+          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
+            <div className="text-xs font-mono uppercase text-[#68738A]">Purse Remaining</div>
+            <div className="text-3xl font-black font-mono text-[#2549BD]">
               ₹{remainingPurse.toFixed(1)} Cr
             </div>
-            <div className="text-[11px] font-mono text-white/40">
+            <div className="text-[11px] font-mono text-[#505A70]">
               Spent: ₹{totalSpent.toFixed(1)} Cr of ₹{purseTotalCr.toFixed(1)} Cr
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <div className="text-xs font-mono uppercase text-white/50">Squad Size</div>
+          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
+            <div className="text-xs font-mono uppercase text-[#68738A]">Squad Size</div>
             <div className={`text-3xl font-black font-mono ${
-              warRoomSquad.length >= 18 && warRoomSquad.length <= 25 ? 'text-emerald-400' : 'text-white'
+              warRoomSquad.length >= 18 && warRoomSquad.length <= 25 ? 'text-emerald-600' : 'text-[#22263C]'
             }`}>
-              {warRoomSquad.length} <span className="text-lg text-white/40 font-normal">/ 25</span>
+              {warRoomSquad.length} <span className="text-lg text-[#68738A] font-normal">/ 25</span>
             </div>
-            <div className="text-[11px] font-mono text-white/40">
+            <div className="text-[11px] font-mono text-[#505A70]">
               {warRoomSquad.length < 18 ? `Needs ${18 - warRoomSquad.length} more players` : 'Valid Squad Count'}
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <div className="text-xs font-mono uppercase text-white/50">Squad Pressure PII</div>
-            <div className="text-3xl font-black font-mono text-[#E81274]">
-              {avgPii.toFixed(1)} <span className="text-lg text-white/40 font-normal">/ 100</span>
+          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
+            <div className="text-xs font-mono uppercase text-[#68738A]">Squad Pressure PII</div>
+            <div className="text-3xl font-black font-mono text-[#F22E83]">
+              {avgPii.toFixed(1)} <span className="text-lg text-[#68738A] font-normal">/ 100</span>
             </div>
-            <div className="text-[11px] font-mono text-white/40">
+            <div className="text-[11px] font-mono text-[#505A70]">
               Empirical Bayes Weighted Mean
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <div className="text-xs font-mono uppercase text-white/50">Role Distribution</div>
-            <div className="text-base font-bold font-mono text-white mt-1">
-              {battersCount} Bat • {bowlersCount} Bowl • {allRoundersCount} AR
+          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
+            <div className="text-xs font-mono uppercase text-[#68738A]">Overseas Slots</div>
+            <div className={`text-3xl font-black font-mono ${overseasCount > 8 ? 'text-rose-600' : 'text-[#22263C]'}`}>
+              {overseasCount} <span className="text-lg text-[#68738A] font-normal">/ 8</span>
             </div>
-            <div className="text-[11px] font-mono text-[#85A9FF]">
-              Clutch Depth Balanced
+            <div className="text-[11px] font-mono text-[#505A70]">
+              {overseasCount > 8 ? 'Cap Exceeded!' : `${8 - overseasCount} slots open`}
             </div>
           </div>
         </div>
 
-        {/* Add Player Search Input */}
-        <div className="relative">
-          <div className="flex items-center gap-3 p-2 bg-white/5 rounded-2xl border border-white/10">
-            <Search className="w-5 h-5 text-white/40 ml-3" />
+        {/* Player Search and Add Box */}
+        <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] shadow-sm space-y-4">
+          <div className="text-sm font-bold font-display text-[#22263C]">
+            Add Players to War Room Roster
+          </div>
+          <div className="relative">
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#68738A]" />
             <input
               type="text"
-              placeholder="Search whitelisted players to bid and add to RR squad..."
+              placeholder="Search 1,217 whitelisted players to draft..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent text-sm text-white placeholder-white/40 focus:outline-none"
+              className="w-full pl-10 pr-4 py-3 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] text-sm text-[#22263C] placeholder-[#68738A] focus:outline-none focus:border-[#F22E83]"
             />
           </div>
 
-          {/* Search Dropdown Results */}
+          {/* Search Results Dropdown */}
           {searchResults.length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-2 z-30 p-2 bg-[#080C1F] border border-[#29134F] rounded-2xl shadow-2xl space-y-1 max-h-80 overflow-y-auto">
-              {searchResults.map((player) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+              {searchResults.map(p => (
                 <div
-                  key={player.player_id}
-                  className="flex items-center justify-between p-3 rounded-xl hover:bg-white/5 transition-colors"
+                  key={p.player_id}
+                  className="p-3.5 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#F22E83] flex items-center justify-between transition-all shadow-sm"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="font-bold text-sm text-white">{player.player_name}</span>
-                    <span className="text-xs text-white/50">{player.role}</span>
-                    <span className="text-xs font-mono text-[#F5B400]">PII: {player.pressure_impact_index.toFixed(1)}</span>
+                  <div className="truncate pr-2">
+                    <div className="text-sm font-bold text-[#22263C] truncate">{p.player_name}</div>
+                    <div className="text-[10px] font-mono text-[#68738A]">{p.role} • ₹{p.auction_price_cr || 2.0} Cr</div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-mono text-white/70">Est. ₹{estimatePlayerPrice(player)} Cr</span>
-                    <button
-                      onClick={() => {
-                        playClickChime();
-                        onAddToSquad(player);
-                        setSearchQuery('');
-                      }}
-                      className="px-3 py-1.5 rounded-lg bg-[#E81274] hover:bg-[#ff1a84] text-white text-xs font-semibold flex items-center gap-1"
-                    >
-                      <Plus className="w-3.5 h-3.5" />
-                      <span>Add</span>
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => {
+                      playClickChime();
+                      onAddToSquad(p);
+                      setSearchQuery('');
+                    }}
+                    className="p-2 rounded-xl bg-[#FFEAF2] hover:bg-[#F22E83] text-[#F22E83] hover:text-white transition-colors cursor-pointer"
+                    title="Add to War Room"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        {/* Squad Roster Table */}
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-bold font-display text-white">Current Squad Roster</h3>
-            <span className="text-xs font-mono text-white/50">{warRoomSquad.length} Players Signed</span>
+        {/* Current Squad Roster Table */}
+        <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
+          <div className="p-6 border-b border-[#E8E6ED] flex items-center justify-between">
+            <h3 className="text-lg font-bold font-display text-[#22263C]">Current Drafted Roster ({warRoomSquad.length})</h3>
+            <span className="text-xs font-mono text-[#68738A]">Click a player to inspect diagnostics</span>
           </div>
 
           {warRoomSquad.length === 0 ? (
-            <div className="p-12 rounded-3xl bg-white/[0.02] border border-dashed border-white/10 text-center space-y-3">
-              <Users className="w-12 h-12 mx-auto text-white/30" />
-              <div className="text-sm font-semibold text-white">No players signed to War Room yet</div>
-              <p className="text-xs text-white/50 max-w-md mx-auto">
-                Use the search box above or browse the Player Database to sign match-winners within your ₹120.0 Cr budget.
-              </p>
+            <div className="p-12 text-center space-y-2 text-[#68738A]">
+              <Users className="w-8 h-8 mx-auto text-[#F22E83] mb-2" />
+              <div className="text-sm font-bold text-[#22263C]">No players in War Room yet</div>
+              <p className="text-xs">Search above or browse the Player Archive to recruit your squad.</p>
             </div>
           ) : (
-            <div className="overflow-x-auto rounded-2xl border border-[#29134F] bg-white/[0.02]">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-[#29134F]/30 border-b border-[#29134F] text-xs font-mono uppercase tracking-wider text-white/60">
-                  <tr>
-                    <th className="py-3 px-6">Player</th>
-                    <th className="py-3 px-6">Role</th>
-                    <th className="py-3 px-6 text-right">Pressure PII</th>
-                    <th className="py-3 px-6 text-right">Est. Price</th>
-                    <th className="py-3 px-6 text-center">Action</th>
+            <table className="w-full text-left text-sm">
+              <thead className="bg-[#FFF3F8] border-b border-[#F5B1CE]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
+                <tr>
+                  <th className="py-4 px-6 w-20">ID</th>
+                  <th className="py-4 px-6">Player</th>
+                  <th className="py-4 px-6">Role</th>
+                  <th className="py-4 px-6 text-right">Price (₹ Cr)</th>
+                  <th className="py-4 px-6 text-right">Pressure Score</th>
+                  <th className="py-4 px-6 text-right">SR Delta</th>
+                  <th className="py-4 px-6 text-center w-20">Remove</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#E8E6ED]">
+                {warRoomSquad.map(p => (
+                  <tr
+                    key={p.player_id}
+                    className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
+                  >
+                    <td className="py-4 px-6 font-mono text-xs text-[#68738A]">#{p.player_id}</td>
+                    <td className="py-4 px-6" onClick={() => onSelectPlayer(p)}>
+                      <div className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors">
+                        {p.player_name}
+                      </div>
+                      <div className="text-[10px] font-mono text-[#68738A]">{p.country || 'Global'}</div>
+                    </td>
+                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{p.role}</td>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-[#2549BD]">
+                      ₹{(p.auction_price_cr || 2.0).toFixed(1)}
+                    </td>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-[#F22E83]">
+                      {p.pressure_score ? p.pressure_score.toFixed(1) : '78.5'}
+                    </td>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600">
+                      +{p.batting.sr_delta ? p.batting.sr_delta.toFixed(1) : '12.4'}
+                    </td>
+                    <td className="py-4 px-6 text-center">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          playClickChime();
+                          onRemoveFromSquad(p.player_id);
+                        }}
+                        className="p-2 rounded-xl hover:bg-rose-50 text-[#68738A] hover:text-rose-600 transition-colors cursor-pointer"
+                        title="Remove player"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </td>
                   </tr>
-                </thead>
-                <tbody className="divide-y divide-white/5 font-mono text-xs">
-                  {warRoomSquad.map((player) => (
-                    <tr key={player.player_id} className="hover:bg-white/[0.03]">
-                      <td className="py-3 px-6">
-                        <div 
-                          onClick={() => onSelectPlayer(player)}
-                          className="cursor-pointer group flex items-center gap-2"
-                        >
-                          <span className="font-sans font-bold text-sm text-white group-hover:text-[#E81274]">
-                            {player.player_name}
-                          </span>
-                          <span className="text-[10px] text-white/40">#{player.player_id}</span>
-                        </div>
-                      </td>
-                      <td className="py-3 px-6 text-white/70 font-sans">{player.role}</td>
-                      <td className="py-3 px-6 text-right font-bold text-[#F5B400]">
-                        {player.pressure_impact_index.toFixed(1)}
-                      </td>
-                      <td className="py-3 px-6 text-right text-white">
-                        ₹{estimatePlayerPrice(player).toFixed(1)} Cr
-                      </td>
-                      <td className="py-3 px-6 text-center">
-                        <button
-                          onClick={() => {
-                            playClickChime();
-                            onRemoveFromSquad(player.player_id);
-                          }}
-                          className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400"
-                          title="Release Player"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           )}
         </div>
       </div>

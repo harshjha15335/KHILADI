@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { KhiladiLogo } from './KhiladiLogo';
 
 interface CrlPreloaderProps {
   onComplete: () => void;
@@ -37,7 +36,7 @@ export const CrlPreloader: React.FC<CrlPreloaderProps> = ({ onComplete }) => {
       return;
     }
 
-    // Sequence: 0ms: Open -> 700ms: Zoom In -> 1400ms: Fade -> 1800ms: Complete
+    // Sequence: 0ms: Open -> 600ms: Zoom In -> 1300ms: Fade -> 1800ms: Complete
     const t1 = setTimeout(() => setStage('zoom'), 600);
     const t2 = setTimeout(() => setStage('fade'), 1300);
     const t3 = setTimeout(() => {
@@ -63,13 +62,13 @@ export const CrlPreloader: React.FC<CrlPreloaderProps> = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-[#080C1F] select-none transition-opacity duration-500 ease-out ${
+      className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-[#FFFDF8] select-none transition-opacity duration-500 ease-out ${
         stage === 'fade' ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
-      {/* Background glow lines */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-[#E81274] to-[#203A8C] rounded-full blur-[140px]" />
+      {/* Delicate background glow in light theme */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-[#FFEAF2] via-[#F2EBFF] to-[#EAF5FF] rounded-full blur-[140px]" />
       </div>
 
       <div
@@ -79,8 +78,10 @@ export const CrlPreloader: React.FC<CrlPreloaderProps> = ({ onComplete }) => {
             : 'scale-100 opacity-100 blur-0'
         }`}
       >
-        <KhiladiLogo size="lg" showSubtitle={false} />
-        <div className="mt-4 font-mono text-xs tracking-[0.3em] text-[#D6AF60] uppercase">
+        <span className="font-display font-black text-6xl sm:text-7xl tracking-tighter text-[#22263C]">
+          KHILADI
+        </span>
+        <div className="mt-4 font-mono text-xs tracking-[0.3em] text-[#F22E83] font-bold uppercase">
           EST. 2008 // PRESSURE ARCHIVE
         </div>
       </div>
@@ -88,7 +89,7 @@ export const CrlPreloader: React.FC<CrlPreloaderProps> = ({ onComplete }) => {
       {/* Skip button */}
       <button
         onClick={handleSkip}
-        className="absolute bottom-8 right-8 font-mono text-xs text-[#9DA3B4] hover:text-white uppercase tracking-widest border border-white/10 px-3 py-1.5 rounded-full transition-colors"
+        className="absolute bottom-8 right-8 font-mono text-xs text-[#68738A] hover:text-[#22263C] uppercase tracking-widest border border-[#E8E6ED] bg-white px-3 py-1.5 rounded-full transition-colors cursor-pointer shadow-sm"
       >
         Skip [ESC]
       </button>

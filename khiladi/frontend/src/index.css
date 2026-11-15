@@ -3,74 +3,156 @@
 @tailwind utilities;
 
 :root {
-  --royal-pink: #E81274;
-  --royal-pink-bright: #F52391;
-  --royal-navy: #101B4B;
-  --royal-blue: #203A8C;
-  --royal-purple: #29134F;
-  --royal-dark: #080C1F;
-  --royal-white: #F7F4FA;
-  --royal-gold: #D6AF60;
-  --royal-volt: #D4FF00;
+  /* MAIN LIGHT BACKGROUNDS */
+  --background-primary: #FFFDF8;
+  --background-white: #FFFFFF;
+  --background-blush: #FFEAF2;
+  --background-pink-soft: #FFF3F8;
+  --background-lavender: #F2EBFF;
+  --background-blue-soft: #EAF5FF;
+
+  /* BRAND COLOURS (RAJASTHAN ROYALS INSPIRED) */
+  --brand-pink: #F22E83;
+  --brand-pink-deep: #BA1656;
+  --brand-blue: #2549BD;
+  --brand-blue-bright: #3973E6;
+  --brand-purple: #7545B8;
+  --brand-gold: #EBC56D;
+
+  /* TYPOGRAPHY */
+  --text-primary: #22263C;
+  --text-secondary: #505A70;
+  --text-muted: #68738A;
+  --text-on-brand: #FFFFFF;
+
+  /* COMPONENTS */
+  --surface-card: #FFFFFF;
+  --surface-hover: #FFF1F7;
+  --border-subtle: #E8E6ED;
+  --border-pink: #F5B1CE;
+  --focus-ring: #2549BD;
+
+  /* SHADOWS */
+  --shadow-soft: 0 12px 36px rgba(62, 37, 87, 0.08);
+  --shadow-floating: 0 20px 60px rgba(62, 37, 87, 0.14);
 }
 
-/* Custom AUGE Diamond Cursor */
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom AUGE Diamond Cursor (Light Theme Adapted) */
 .custom-cursor-active {
   cursor: default;
 }
 
-/* Diamond cursor follower */
-.diamond-cursor-dot {
+#khiladi-diamond-cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 12px;
-  height: 12px;
-  background: #FDF48B; /* Pale gold/yellow from AUGE XP */
+  width: 14px;
+  height: 14px;
+  background: #EBC56D; /* Pale gold/yellow from AUGE XP */
+  border: 1.5px solid #22263C;
+  border-radius: 2px;
   transform: translate(-50%, -50%) rotate(45deg);
   pointer-events: none;
-  z-index: 99999;
-  mix-blend-mode: difference;
-  box-shadow: 0 0 10px rgba(253, 244, 139, 0.8);
-  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 999999;
+  box-shadow: 0 0 12px rgba(235, 197, 109, 0.7);
+  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+  will-change: transform;
 }
 
-.diamond-cursor-dot.hovered {
-  width: 24px;
-  height: 24px;
-  background: #E81274;
-  box-shadow: 0 0 16px rgba(232, 18, 116, 0.9);
-}
-
-/* Delta Button Animation */
-.khiladi-btn-mask {
+/* Delta-exact Button Animation */
+.delta-btn-mask {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 9999px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.khiladi-btn-mask::before {
+.delta-btn-mask::before {
   content: '';
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #E81274 0%, #203A8C 100%);
+  background: var(--brand-pink);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 0;
 }
 
-.khiladi-btn-mask:hover::before {
+.delta-btn-mask:hover::before {
   transform: translateY(-100%);
 }
 
-.khiladi-btn-mask span {
+.delta-btn-mask span,
+.delta-btn-mask svg {
   position: relative;
   z-index: 10;
+  transition: color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Orbiting Animation */
+.delta-btn-mask:hover span {
+  color: #FFFFFF !important;
+}
+
+.delta-btn-mask:hover svg {
+  color: #FFFFFF !important;
+  transform: translateX(4px);
+}
+
+/* Delta Button Secondary (Outline to Blue) */
+.delta-btn-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  border: 1.5px solid var(--border-subtle);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.delta-btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--brand-blue);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.delta-btn-outline:hover::before {
+  transform: translateY(-100%);
+}
+
+.delta-btn-outline span,
+.delta-btn-outline svg {
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.delta-btn-outline:hover span {
+  color: #FFFFFF !important;
+}
+
+.delta-btn-outline:hover svg {
+  color: #FFFFFF !important;
+  transform: translateX(4px);
+}
+
+/* Orbiting Animation for Player Quiz */
 @keyframes orbit-slow {
   from {
     transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
@@ -90,21 +172,21 @@
 }
 
 .animate-orbit-1 {
-  --orbit-radius: 200px;
+  --orbit-radius: 260px;
   animation: orbit-slow 35s linear infinite;
 }
 
 .animate-orbit-2 {
-  --orbit-radius: 290px;
+  --orbit-radius: 360px;
   animation: orbit-reverse 45s linear infinite;
 }
 
 .animate-orbit-3 {
-  --orbit-radius: 380px;
+  --orbit-radius: 460px;
   animation: orbit-slow 55s linear infinite;
 }
 
-/* Horizontal Squad Marquee */
+/* Horizontal Player Squad Marquee */
 @keyframes marquee-scroll {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
@@ -113,14 +195,14 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 45s linear infinite;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
 }
 
-/* Creative Underline Styles (Extrafazant inspired) */
+/* Creative Underlines (Extrafazant inspired) */
 .creative-underline-left {
   position: relative;
 }
@@ -131,7 +213,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: #E81274;
+  background: var(--brand-pink);
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .creative-underline-left:hover::after {
@@ -148,7 +230,7 @@
   left: 50%;
   width: 0%;
   height: 2px;
-  background: #D6AF60;
+  background: var(--brand-blue);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateX(-50%);
 }
@@ -156,7 +238,7 @@
   width: 100%;
 }
 
-/* Reduced motion */
+/* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

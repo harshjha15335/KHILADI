@@ -67,7 +67,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#080C1F] text-[#F7F4FA] relative selection:bg-[#E81274] selection:text-white">
+    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] relative selection:bg-[#F22E83] selection:text-white">
       {/* AUGE Global Yellow Diamond Cursor follower */}
       <DiamondCursor />
 

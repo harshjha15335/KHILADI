@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TopBatter, TopBowler, Player } from '../types';
-import { KhiladiAnimatedButton } from '../components/KhiladiAnimatedButton';
-import { KhiladiKineticText } from '../components/KhiladiKineticText';
+import { TopBatter, TopBowler } from '../types';
 import { playClickChime, playHoverChime } from '../utils/sound';
 import { 
   Award, 
@@ -11,8 +9,7 @@ import {
   TrendingDown, 
   ShieldCheck, 
   CheckCircle2, 
-  FileSpreadsheet,
-  Share2
+  FileSpreadsheet
 } from 'lucide-react';
 
 interface RankingsPageProps {
@@ -51,21 +48,20 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
   };
 
   return (
-    <div className="min-h-screen bg-[#080C1F] text-[#F7F4FA] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-10">
-        {/* Header with Extrafazant Kinetic Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#29134F] pb-8">
+        {/* Header (Clean Editorial Light Styling) */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E8E6ED] pb-8">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E81274]/15 border border-[#E81274]/30 text-xs font-mono uppercase text-[#E81274]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
               <Award className="w-3.5 h-3.5" />
               <span>Rajasthan Royals SupeRR Selector • Official Submission</span>
             </div>
-            <KhiladiKineticText
-              text="TOP 10 PRESSURE RANKINGS"
-              className="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white"
-            />
-            <p className="text-sm text-white/70 max-w-2xl leading-relaxed">
-              Strictly validated from the canonical dataset (<code className="text-[#85A9FF]">competition_team_player_mapping.csv</code>). Computed with Empirical Bayes shrinkage ($m=40$) under high-leverage match conditions ($LI \ge 1.8$).
+            <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
+              TOP 10 PRESSURE RANKINGS
+            </h1>
+            <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
+              Strictly validated from the canonical dataset (<code className="text-[#2549BD] font-bold">competition_team_player_mapping.csv</code>). Computed with Empirical Bayes shrinkage ($m=40$) under high-leverage match conditions ($LI \ge 1.8$).
             </p>
           </div>
 
@@ -73,9 +69,9 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           <div className="flex items-center gap-3">
             <button
               onClick={() => downloadCSV(activeTab)}
-              className="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono flex items-center gap-2 transition-all hover:border-[#E81274]"
+              className="delta-btn-mask px-5 py-2.5 bg-[#F22E83] text-white text-xs font-mono font-bold tracking-wider uppercase rounded-full shadow-sm cursor-pointer"
             >
-              <Download className="w-4 h-4 text-[#E81274]" />
+              <Download className="w-4 h-4 mr-2 inline-block" />
               <span>Export {activeTab === 'batters' ? 'Batters' : 'Bowlers'} CSV</span>
             </button>
           </div>
@@ -86,10 +82,10 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           <button
             onClick={() => { playClickChime(); setActiveTab('batters'); }}
             onMouseEnter={playHoverChime}
-            className={`px-6 py-3 rounded-xl font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 ${
+            className={`px-6 py-3 rounded-full font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'batters'
-                ? 'bg-gradient-to-r from-[#E81274] to-[#ff4d9e] text-white shadow-lg shadow-[#E81274]/30'
-                : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+                ? 'bg-[#F22E83] text-white shadow-md'
+                : 'bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#FFEAF2]'
             }`}
           >
             <Flame className="w-4 h-4" />
@@ -99,10 +95,10 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           <button
             onClick={() => { playClickChime(); setActiveTab('bowlers'); }}
             onMouseEnter={playHoverChime}
-            className={`px-6 py-3 rounded-xl font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 ${
+            className={`px-6 py-3 rounded-full font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'bowlers'
-                ? 'bg-gradient-to-r from-[#203A8C] to-[#85A9FF] text-white shadow-lg shadow-[#203A8C]/30'
-                : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+                ? 'bg-[#2549BD] text-white shadow-md'
+                : 'bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#EAF5FF]'
             }`}
           >
             <ShieldCheck className="w-4 h-4" />
@@ -110,85 +106,75 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           </button>
         </div>
 
-        {/* BATTERS TABLE */}
+        {/* BATTERS TABLE (Light Editorial Theme) */}
         {activeTab === 'batters' && (
-          <div className="overflow-x-auto rounded-2xl border border-[#29134F] bg-white/[0.02]">
+          <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#29134F]/40 border-b border-[#29134F] text-xs font-mono uppercase tracking-wider text-white/70">
+              <thead className="bg-[#FFF3F8] border-b border-[#F5B1CE]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
                 <tr>
                   <th className="py-4 px-6 text-center w-16">Rank</th>
                   <th className="py-4 px-6">Player</th>
+                  <th className="py-4 px-6">Role</th>
                   <th className="py-4 px-6 text-right">Pressure SR</th>
-                  <th className="py-4 px-6 text-right">Overall SR</th>
+                  <th className="py-4 px-6 text-right">Normal SR</th>
                   <th className="py-4 px-6 text-right">SR Delta</th>
-                  <th className="py-4 px-6 text-right">Pressure Balls</th>
-                  <th className="py-4 px-6 text-right">Pressure Impact</th>
-                  <th className="py-4 px-6 text-center">Profile</th>
+                  <th className="py-4 px-6 text-right">Pressure Score</th>
+                  <th className="py-4 px-6 text-center">Unstop Eligible</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
-                {batters.map((b) => (
+              <tbody className="divide-y divide-[#E8E6ED]">
+                {batters.map((b, idx) => (
                   <tr
                     key={b.player_id}
-                    className="hover:bg-white/[0.04] transition-colors group cursor-pointer"
                     onClick={() => {
                       playClickChime();
                       onSelectPlayerById(b.player_id);
                     }}
+                    onMouseEnter={playHoverChime}
+                    className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
                   >
-                    <td className="py-4 px-6 text-center">
-                      <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full font-mono font-bold text-xs ${
-                        b.rank === 1
-                          ? 'bg-[#F5B400] text-black shadow-[0_0_12px_#F5B400]'
-                          : b.rank === 2
-                          ? 'bg-slate-300 text-black'
-                          : b.rank === 3
-                          ? 'bg-amber-700 text-white'
-                          : 'bg-white/10 text-white/70'
-                      }`}>
-                        {b.rank}
-                      </span>
+                    <td className="py-4 px-6 text-center font-mono font-bold text-base text-[#22263C]">
+                      {idx === 0 ? <span className="text-[#F22E83] font-black">#1</span> : `#${idx + 1}`}
                     </td>
                     <td className="py-4 px-6">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                          {b.portrait_url ? (
-                            <img src={b.portrait_url} alt={b.player_name} className="w-full h-full object-cover" />
-                          ) : (
-                            <span className="text-[10px] font-mono text-white/40">ID {b.player_id}</span>
-                          )}
-                        </div>
+                        {b.portrait_url ? (
+                          <img
+                            src={b.portrait_url}
+                            alt={b.player_name}
+                            className="w-10 h-10 object-contain rounded-full bg-[#FFEAF2] p-1 border border-[#F5B1CE]"
+                          />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-[#FFEAF2] flex items-center justify-center text-[#F22E83] font-bold">
+                            {b.player_name.slice(0, 2)}
+                          </div>
+                        )}
                         <div>
-                          <div className="font-bold text-white group-hover:text-[#E81274] transition-colors">
+                          <div className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors">
                             {b.player_name}
                           </div>
-                          <div className="text-xs font-mono text-white/40">
-                            ID: {b.player_id} • Total Balls: {b.total_balls_faced}
-                          </div>
+                          <div className="text-[11px] font-mono text-[#68738A]">ID #{b.player_id}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-white">
-                      {b.pressure_strike_rate.toFixed(1)}
+                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{b.role || 'Batter'}</td>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-[#F22E83]">
+                      {(b.pressure_strike_rate || b.pressure_sr || 0).toFixed(1)}
                     </td>
-                    <td className="py-4 px-6 text-right font-mono text-white/60">
-                      {b.baseline_strike_rate.toFixed(1)}
+                    <td className="py-4 px-6 text-right font-mono text-[#505A70]">
+                      {(b.baseline_strike_rate || b.normal_sr || 0).toFixed(1)}
                     </td>
-                    <td className="py-4 px-6 text-right font-mono">
-                      <span className={`inline-flex items-center gap-1 font-bold ${b.strike_rate_delta >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-                        {b.strike_rate_delta >= 0 ? <TrendingUp className="w-3.5 h-3.5" /> : <TrendingDown className="w-3.5 h-3.5" />}
-                        {b.strike_rate_delta > 0 ? `+${b.strike_rate_delta.toFixed(1)}` : b.strike_rate_delta.toFixed(1)}
-                      </span>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600 flex items-center justify-end gap-1">
+                      +{(b.strike_rate_delta || b.sr_delta || 0).toFixed(1)}
+                      <TrendingUp className="w-3.5 h-3.5" />
                     </td>
-                    <td className="py-4 px-6 text-right font-mono text-white/80">
-                      {b.pressure_balls_faced}
-                    </td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-[#F5B400]">
-                      {b.pressure_impact_index.toFixed(1)}
+                    <td className="py-4 px-6 text-right font-mono font-black text-[#22263C] text-base">
+                      {(b.pressure_impact_index || b.pressure_score || 0).toFixed(1)}
                     </td>
                     <td className="py-4 px-6 text-center">
-                      <span className="text-xs font-mono text-[#85A9FF] group-hover:underline">
-                        View Details →
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                        <span>Verified</span>
                       </span>
                     </td>
                   </tr>
@@ -198,85 +184,75 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           </div>
         )}
 
-        {/* BOWLERS TABLE */}
+        {/* BOWLERS TABLE (Light Editorial Theme) */}
         {activeTab === 'bowlers' && (
-          <div className="overflow-x-auto rounded-2xl border border-[#29134F] bg-white/[0.02]">
+          <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#29134F]/40 border-b border-[#29134F] text-xs font-mono uppercase tracking-wider text-white/70">
+              <thead className="bg-[#EAF5FF] border-b border-[#B3D4FF]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
                 <tr>
                   <th className="py-4 px-6 text-center w-16">Rank</th>
                   <th className="py-4 px-6">Player</th>
+                  <th className="py-4 px-6">Role</th>
                   <th className="py-4 px-6 text-right">Pressure Econ</th>
-                  <th className="py-4 px-6 text-right">Overall Econ</th>
+                  <th className="py-4 px-6 text-right">Normal Econ</th>
                   <th className="py-4 px-6 text-right">Econ Delta</th>
-                  <th className="py-4 px-6 text-right">Pressure Dot %</th>
-                  <th className="py-4 px-6 text-right">Pressure Impact</th>
-                  <th className="py-4 px-6 text-center">Profile</th>
+                  <th className="py-4 px-6 text-right">Pressure Score</th>
+                  <th className="py-4 px-6 text-center">Unstop Eligible</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
-                {bowlers.map((bo) => (
+              <tbody className="divide-y divide-[#E8E6ED]">
+                {bowlers.map((bo, idx) => (
                   <tr
                     key={bo.player_id}
-                    className="hover:bg-white/[0.04] transition-colors group cursor-pointer"
                     onClick={() => {
                       playClickChime();
                       onSelectPlayerById(bo.player_id);
                     }}
+                    onMouseEnter={playHoverChime}
+                    className="hover:bg-[#EAF5FF]/50 transition-colors cursor-pointer group"
                   >
-                    <td className="py-4 px-6 text-center">
-                      <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full font-mono font-bold text-xs ${
-                        bo.rank === 1
-                          ? 'bg-[#F5B400] text-black shadow-[0_0_12px_#F5B400]'
-                          : bo.rank === 2
-                          ? 'bg-slate-300 text-black'
-                          : bo.rank === 3
-                          ? 'bg-amber-700 text-white'
-                          : 'bg-white/10 text-white/70'
-                      }`}>
-                        {bo.rank}
-                      </span>
+                    <td className="py-4 px-6 text-center font-mono font-bold text-base text-[#22263C]">
+                      {idx === 0 ? <span className="text-[#2549BD] font-black">#1</span> : `#${idx + 1}`}
                     </td>
                     <td className="py-4 px-6">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                          {bo.portrait_url ? (
-                            <img src={bo.portrait_url} alt={bo.player_name} className="w-full h-full object-cover" />
-                          ) : (
-                            <span className="text-[10px] font-mono text-white/40">ID {bo.player_id}</span>
-                          )}
-                        </div>
+                        {bo.portrait_url ? (
+                          <img
+                            src={bo.portrait_url}
+                            alt={bo.player_name}
+                            className="w-10 h-10 object-contain rounded-full bg-[#EAF5FF] p-1 border border-[#B3D4FF]"
+                          />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-[#EAF5FF] flex items-center justify-center text-[#2549BD] font-bold">
+                            {bo.player_name.slice(0, 2)}
+                          </div>
+                        )}
                         <div>
-                          <div className="font-bold text-white group-hover:text-[#85A9FF] transition-colors">
+                          <div className="font-bold text-[#22263C] group-hover:text-[#2549BD] transition-colors">
                             {bo.player_name}
                           </div>
-                          <div className="text-xs font-mono text-white/40">
-                            ID: {bo.player_id} • High-leverage balls: {bo.pressure_balls_bowled}
-                          </div>
+                          <div className="text-[11px] font-mono text-[#68738A]">ID #{bo.player_id}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-white">
-                      {bo.pressure_economy.toFixed(2)}
+                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{bo.role || 'Bowler'}</td>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-[#2549BD]">
+                      {(bo.pressure_economy || bo.pressure_econ || 0).toFixed(2)}
                     </td>
-                    <td className="py-4 px-6 text-right font-mono text-white/60">
-                      {bo.baseline_economy.toFixed(2)}
+                    <td className="py-4 px-6 text-right font-mono text-[#505A70]">
+                      {(bo.baseline_economy || bo.normal_econ || 0).toFixed(2)}
                     </td>
-                    <td className="py-4 px-6 text-right font-mono">
-                      <span className={`inline-flex items-center gap-1 font-bold ${bo.economy_delta <= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-                        {bo.economy_delta <= 0 ? <TrendingDown className="w-3.5 h-3.5" /> : <TrendingUp className="w-3.5 h-3.5" />}
-                        {bo.economy_delta > 0 ? `+${bo.economy_delta.toFixed(2)}` : bo.economy_delta.toFixed(2)}
-                      </span>
+                    <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600 flex items-center justify-end gap-1">
+                      {(bo.economy_delta || bo.econ_delta || 0).toFixed(2)}
+                      <TrendingDown className="w-3.5 h-3.5" />
                     </td>
-                    <td className="py-4 px-6 text-right font-mono text-white/80">
-                      {bo.pressure_dot_percentage.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-[#F5B400]">
-                      {bo.pressure_impact_index.toFixed(1)}
+                    <td className="py-4 px-6 text-right font-mono font-black text-[#22263C] text-base">
+                      {(bo.pressure_impact_index || bo.pressure_score || 0).toFixed(1)}
                     </td>
                     <td className="py-4 px-6 text-center">
-                      <span className="text-xs font-mono text-[#85A9FF] group-hover:underline">
-                        View Details →
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                        <span>Verified</span>
                       </span>
                     </td>
                   </tr>
@@ -285,19 +261,6 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
             </table>
           </div>
         )}
-
-        {/* Verification Footer Notice */}
-        <div className="p-6 rounded-2xl bg-gradient-to-r from-[#203A8C]/20 to-[#E81274]/20 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-            <div className="text-xs text-white/80">
-              <span className="font-semibold text-white">Audit Verified:</span> Both exported CSV tables strictly adhere to the user competition pack. Zero phantom IDs or unwhitelisted records.
-            </div>
-          </div>
-          <div className="text-xs font-mono text-[#F5B400] whitespace-nowrap">
-            Unstop Match Dropdown Ready
-          </div>
-        </div>
       </div>
     </div>
   );

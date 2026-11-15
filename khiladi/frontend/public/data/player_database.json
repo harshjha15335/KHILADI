@@ -6998,7 +6998,9 @@
       "econ_delta": -1.18,
       "press_dot_pct": 34.0,
       "press_wickets": 36
-    }
+    },
+    "cutout_url": "/assets/cutouts/4409_sam-curran_cutout.png",
+    "portrait_url": "/assets/portraits/4409_sam-curran.png"
   },
   {
     "player_id": 6457,
@@ -8775,7 +8777,9 @@
       "econ_delta": -2.08,
       "press_dot_pct": 31.0,
       "press_wickets": 8
-    }
+    },
+    "cutout_url": "/assets/cutouts/2436_dasun-shanaka_cutout.png",
+    "portrait_url": "/assets/portraits/2436_dasun-shanaka.png"
   },
   {
     "player_id": 8580,
@@ -14817,7 +14821,9 @@
       "econ_delta": 14.57,
       "press_dot_pct": 0.0,
       "press_wickets": 0
-    }
+    },
+    "cutout_url": "/assets/cutouts/6819_yashasvi-jaiswal_cutout.png",
+    "portrait_url": "/assets/portraits/6819_yashasvi-jaiswal.png"
   },
   {
     "player_id": 33443,
@@ -21121,7 +21127,9 @@
       "econ_delta": 0.0,
       "press_dot_pct": 0.0,
       "press_wickets": 0
-    }
+    },
+    "cutout_url": "/assets/cutouts/43965_emanjot-singh-chahal_cutout.png",
+    "portrait_url": "/assets/portraits/43965_emanjot-singh-chahal.png"
   },
   {
     "player_id": 25534,

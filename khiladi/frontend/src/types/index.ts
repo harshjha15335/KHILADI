@@ -7,6 +7,11 @@ export interface BattingMetrics {
   sr_delta: number;
   press_dot_pct: number;
   press_boundary_pct: number;
+  runs?: number;
+  balls?: number;
+  normal_sr?: number;
+  pressure_sr?: number;
+  pressure_balls?: number;
 }
 
 export interface BowlingMetrics {
@@ -18,12 +23,16 @@ export interface BowlingMetrics {
   econ_delta: number;
   press_dot_pct: number;
   press_wickets: number;
+  balls?: number;
+  normal_econ?: number;
+  pressure_econ?: number;
+  pressure_balls?: number;
 }
 
 export interface Player {
   player_id: number;
   player_name: string;
-  role: 'Batter' | 'Bowler' | 'All-Rounder' | 'Squad Member';
+  role: 'Batter' | 'Bowler' | 'All-Rounder' | 'Squad Member' | string;
   teams: string[];
   is_rr: boolean;
   pressure_impact_index: number;
@@ -33,6 +42,13 @@ export interface Player {
   cutout_url?: string;
   official_profile_url?: string;
   portrait_status?: string;
+  pressure_score?: number;
+  country?: string;
+  batting_style?: string;
+  bowling_style?: string;
+  auction_price_cr?: number;
+  ipl_url?: string;
+  matches?: number;
 }
 
 export interface TopBatter {
@@ -47,6 +63,11 @@ export interface TopBatter {
   total_balls_faced: number;
   portrait_url?: string;
   official_profile_url?: string;
+  role?: string;
+  pressure_sr?: number;
+  normal_sr?: number;
+  sr_delta?: number;
+  pressure_score?: number;
 }
 
 export interface TopBowler {
@@ -62,6 +83,11 @@ export interface TopBowler {
   total_balls_bowled: number;
   portrait_url?: string;
   official_profile_url?: string;
+  role?: string;
+  pressure_econ?: number;
+  normal_econ?: number;
+  econ_delta?: number;
+  pressure_score?: number;
 }
 
 export interface RRPlayer {
@@ -85,7 +111,7 @@ export interface Delivery {
   runs: number;
   total_runs: number;
   is_wicket: boolean;
-  dismissal?: string;
+  dismissal?: string | null;
   leverage_index: number;
   is_high_pressure: boolean;
   cum_score: string;

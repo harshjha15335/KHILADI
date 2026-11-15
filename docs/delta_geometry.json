@@ -1,0 +1,1456 @@
+[
+  {
+    "tagName": "HEADER",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 0,
+      "left": 0,
+      "width": 1440,
+      "height": 1126.984375
+    },
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "headings": [
+      {
+        "tag": "UL",
+        "text": "Delta, coffee with heart. About Delta The first Portuguese coffee. The Azores Coffee There is a lot ",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(227, 193, 173)",
+        "box": {
+          "x": 20,
+          "y": 512.4375,
+          "width": 583.46875,
+          "height": 224.5625
+        }
+      },
+      {
+        "tag": "H1",
+        "text": "Delta, coffee with heart.",
+        "fontSize": "77.28px",
+        "lineHeight": "77.28px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.5456px",
+        "color": "rgb(227, 193, 173)",
+        "box": {
+          "x": 20,
+          "y": 512.4375,
+          "width": 385.40625,
+          "height": 154.5625
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "The first Portuguese coffee.",
+        "fontSize": "77.28px",
+        "lineHeight": "77.28px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.5456px",
+        "color": "rgb(227, 193, 173)",
+        "box": {
+          "x": 20,
+          "y": 512.4375,
+          "width": 583.46875,
+          "height": 154.5625
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "There is a lot of Portugal in Delta.",
+        "fontSize": "77.28px",
+        "lineHeight": "77.28px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.5456px",
+        "color": "rgb(227, 193, 173)",
+        "box": {
+          "x": 20,
+          "y": 582.4375,
+          "width": 518.78125,
+          "height": 154.5625
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "01  Delta, coffee with heart.",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(227, 193, 173)",
+        "box": {
+          "x": 134,
+          "y": 775,
+          "width": 70.296875,
+          "height": 62
+        }
+      },
+      {
+        "tag": "P",
+        "text": "Delta, coffee with heart.",
+        "fontSize": "11.84px",
+        "lineHeight": "14.208px",
+        "fontWeight": "550",
+        "letterSpacing": "0.3552px",
+        "color": "rgb(227, 193, 173)",
+        "box": {
+          "x": 134,
+          "y": 808.59375,
+          "width": 70.296875,
+          "height": 28.40625
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "About Delta",
+        "href": "/en/about",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 20,
+          "y": 685,
+          "width": 187.203125,
+          "height": 52
+        }
+      },
+      {
+        "text": "The Azores Coffee",
+        "href": "/cafe-dos-acores",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 20,
+          "y": 685,
+          "width": 229.953125,
+          "height": 52
+        }
+      },
+      {
+        "text": "LOTE CH\u00c1VENA",
+        "href": "/en/products/ground/lote/chavena",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(242, 222, 206)",
+        "border": "0px none rgb(242, 222, 206)",
+        "box": {
+          "x": 0,
+          "y": 876.78125,
+          "width": 263,
+          "height": 250.203125
+        }
+      },
+      {
+        "text": "ROAST PORTUGAL",
+        "href": "/en/products/ground/roasted/portugal",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(242, 222, 206)",
+        "border": "0px none rgb(242, 222, 206)",
+        "box": {
+          "x": 275,
+          "y": 876.78125,
+          "width": 263,
+          "height": 250.203125
+        }
+      },
+      {
+        "text": "COLOMBIA",
+        "href": "/en/products/ground/origens/colombia",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(242, 222, 206)",
+        "border": "0px none rgb(242, 222, 206)",
+        "box": {
+          "x": 550,
+          "y": 876.78125,
+          "width": 263,
+          "height": 250.203125
+        }
+      },
+      {
+        "text": "TIMOR",
+        "href": "/en/products/ground/origens/timor",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(242, 222, 206)",
+        "border": "0px none rgb(242, 222, 206)",
+        "box": {
+          "x": 825,
+          "y": 876.78125,
+          "width": 263,
+          "height": 250.203125
+        }
+      },
+      {
+        "text": "CUBA",
+        "href": "/en/products/ground/origens/cuba",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(242, 222, 206)",
+        "border": "0px none rgb(242, 222, 206)",
+        "box": {
+          "x": 1100,
+          "y": 876.78125,
+          "width": 263,
+          "height": 250.203125
+        }
+      },
+      {
+        "text": "VIETNAM",
+        "href": "/en/products/ground/origens/vietnam",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(242, 222, 206)",
+        "border": "0px none rgb(242, 222, 206)",
+        "box": {
+          "x": 1375,
+          "y": 876.78125,
+          "width": 263,
+          "height": 250.203125
+        }
+      }
+    ],
+    "mediaCount": 25,
+    "media": [
+      {
+        "tag": "VIDEO",
+        "src": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 855
+        }
+      },
+      {
+        "tag": "VIDEO",
+        "src": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 855
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Ff0f69aff81fd15fba09ca70bcdf43e5e9fca029c-1280x720.jpg&w=640&q=88",
+        "box": {
+          "x": 20,
+          "y": 775,
+          "width": 102,
+          "height": 62
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fcf53c4b8ead0290391d473affb2485032690aaa2-206x124.jpg&w=640&q=88",
+        "box": {
+          "x": 272.109375,
+          "y": 775,
+          "width": 102,
+          "height": 62
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2ea2e09733aaa2f44783df1adcc4a1f86938bfa8-206x124.jpg&w=640&q=88",
+        "box": {
+          "x": 524.21875,
+          "y": 775,
+          "width": 102,
+          "height": 62
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 1126.984375,
+      "left": 0,
+      "width": 1440,
+      "height": 1486.890625
+    },
+    "backgroundColor": "rgb(43, 27, 20)",
+    "backgroundImage": "none",
+    "headings": [
+      {
+        "tag": "DIV",
+        "text": "SINCE 1961, COFFEE THAT AWAKENS STORIES History of Delta",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 365.421875,
+          "y": 1234.59375,
+          "width": 709.15625,
+          "height": 398.578125
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "SINCE 1961, COFFEE THAT AWAKENS STORIES",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 375.8125,
+          "y": 1234.59375,
+          "width": 688.375,
+          "height": 309.328125
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "SINCE 1961, COFFEE THAT AWAKENS STORIES",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 375.8125,
+          "y": 1234.59375,
+          "width": 688.375,
+          "height": 309.328125
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "History of Delta",
+        "href": "/en/history",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(86, 55, 42)",
+        "border": "0px none rgb(86, 55, 42)",
+        "box": {
+          "x": 615.46875,
+          "y": 1581.171875,
+          "width": 209.0625,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 7,
+    "media": [
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F68c7b46bbe4cc69656bb64d17a71a9a29788f006-288x218.png&w=1023&q=88",
+        "box": {
+          "x": 545.5,
+          "y": 1128.3125,
+          "width": 288,
+          "height": 218
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F4964395f83fc72a4a5fb8b25e1c99205ac4f03af-250x358.png&w=1023&q=88",
+        "box": {
+          "x": 545.5,
+          "y": 1346.3125,
+          "width": 250,
+          "height": 358
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F5b21088ca92b191a19f4194cc69c74192cb87b5d-328x468.png&w=1023&q=88",
+        "box": {
+          "x": 545.5,
+          "y": 1704.3125,
+          "width": 328,
+          "height": 468
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fda6cb5e4ba52bf708af9b2400e057ed6e7f2af1a-349x269.png&w=1023&q=88",
+        "box": {
+          "x": 545.5,
+          "y": 2172.3125,
+          "width": 349,
+          "height": 269
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fc57f070dd85d15b92018d6dc1ad6d79b79887072-332x254.png&w=1023&q=88",
+        "box": {
+          "x": 545.5,
+          "y": 2441.3125,
+          "width": 332,
+          "height": 254
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 2613.875,
+      "left": 0,
+      "width": 1440,
+      "height": 1086.84375
+    },
+    "backgroundColor": "rgb(43, 27, 20)",
+    "backgroundImage": "none",
+    "headings": [
+      {
+        "tag": "DIV",
+        "text": "THE JOURNEY OF COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 365.421875,
+          "y": 2780.46875,
+          "width": 709.15625,
+          "height": 103.109375
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "THE JOURNEY OF COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 376.25,
+          "y": 2780.46875,
+          "width": 687.5,
+          "height": 103.109375
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "THE JOURNEY OF COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 363.5,
+          "y": 2780.46875,
+          "width": 713,
+          "height": 103.109375
+        }
+      },
+      {
+        "tag": "UL",
+        "text": "Origins Roast Blend Tasting",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 0,
+          "y": 2883.578125,
+          "width": 0,
+          "height": 542.109375
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "The Coffee Cycle",
+        "href": "/en/coffee-cycle",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(86, 55, 42)",
+        "border": "0px none rgb(86, 55, 42)",
+        "box": {
+          "x": 608.921875,
+          "y": 3547.609375,
+          "width": 222.140625,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 1,
+    "media": [
+      {
+        "tag": "VIDEO",
+        "src": null,
+        "box": {
+          "x": 0,
+          "y": 2613.875,
+          "width": 1440,
+          "height": 1086.84375
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 3700.71875,
+      "left": 0,
+      "width": 1440,
+      "height": 1048.53125
+    },
+    "backgroundColor": "rgb(43, 27, 20)",
+    "backgroundImage": "none",
+    "headings": [
+      {
+        "tag": "DIV",
+        "text": "D DE DELTA  Coffee inspires vitality worldwide. DDD is Delta\u2019s digital magazine that shares the stor",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 464.890625,
+          "y": 4007.171875,
+          "width": 510.203125,
+          "height": 435.625
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "D DE DELTA",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 558.1875,
+          "y": 4087.59375,
+          "width": 323.609375,
+          "height": 103.109375
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "D DE DELTA",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(237, 209, 189)",
+        "box": {
+          "x": 558.1875,
+          "y": 4087.59375,
+          "width": 323.609375,
+          "height": 103.109375
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "D de Delta",
+        "href": "https://dddelta.com/",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(86, 55, 42)",
+        "border": "0px none rgb(86, 55, 42)",
+        "box": {
+          "x": 631.71875,
+          "y": 4310.375,
+          "width": 176.546875,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 48,
+    "media": [
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2f098cd19fd85ebe3af420bf92e778cc3cf2ba3b-440x630.jpg&w=1023&q=88",
+        "box": {
+          "x": 0,
+          "y": 3724.140625,
+          "width": 196.921875,
+          "height": 283.03125
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb8cc96c1ee7eceb172136cf852a381f743490ffd-440x630.jpg&w=1023&q=88",
+        "box": {
+          "x": 216.578125,
+          "y": 3724.140625,
+          "width": 196.921875,
+          "height": 283.03125
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F19ba32117828c96d389a3b3679626ae8188c598b-440x630.jpg&w=1023&q=88",
+        "box": {
+          "x": 433.15625,
+          "y": 3724.140625,
+          "width": 196.921875,
+          "height": 283.03125
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2d692ec563d59f492e29fd7cd0116005fba270ea-440x630.jpg&w=1023&q=88",
+        "box": {
+          "x": 649.734375,
+          "y": 3724.140625,
+          "width": 196.921875,
+          "height": 283.03125
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb562905c66d1ea28f85cad3229944180506dee4f-440x630.jpg&w=1023&q=88",
+        "box": {
+          "x": 866.3125,
+          "y": 3724.140625,
+          "width": 196.921875,
+          "height": 283.03125
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 4749.25,
+      "left": 0,
+      "width": 1440,
+      "height": 817.9375
+    },
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "url(\"https://deltacafes.com/imgs/product/product-bg-tile.png\")",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "The Culture of Coffee",
+        "fontSize": "59.215px",
+        "lineHeight": "59.215px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.77645px",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 21.65625,
+          "y": 4805.359375,
+          "width": 465.890625,
+          "height": 118.4375
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "Coffee Science Centre Explore",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(0, 0, 0)",
+        "box": {
+          "x": 675.6875,
+          "y": 4793.359375,
+          "width": 332.921875,
+          "height": 344.203125
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Coffee Science Centre",
+        "fontSize": "43.235px",
+        "lineHeight": "43.235px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.29705px",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 710.171875,
+          "y": 4805.359375,
+          "width": 298.4375,
+          "height": 86.46875
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "Barista Academy Explore",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(0, 0, 0)",
+        "box": {
+          "x": 675.6875,
+          "y": 5210.984375,
+          "width": 332.921875,
+          "height": 344.203125
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Barista Academy",
+        "fontSize": "43.235px",
+        "lineHeight": "43.235px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.29705px",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 710.171875,
+          "y": 5222.984375,
+          "width": 298.4375,
+          "height": 43.234375
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore",
+        "href": "/en/coffee-science-centre",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 710.171875,
+          "y": 4915.25,
+          "width": 157.609375,
+          "height": 52
+        }
+      },
+      {
+        "text": "Explore",
+        "href": "/en/barista-academy",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 710.171875,
+          "y": 5289.640625,
+          "width": 157.609375,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 2,
+    "media": [
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F10f1efd1149e8fd2c5696f01629b9b189c4617ac-628x440.jpg&w=3400&q=88",
+        "box": {
+          "x": 1108.078125,
+          "y": 4793.359375,
+          "width": 310.265625,
+          "height": 220
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F1f94aa3b0158d9642b43adf7a90223cebc4476ee-628x440.jpg&w=3400&q=88",
+        "box": {
+          "x": 1108.078125,
+          "y": 5210.984375,
+          "width": 310.265625,
+          "height": 220
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 5562.1875,
+      "left": 0,
+      "width": 1440,
+      "height": 1935
+    },
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "url(\"https://deltacafes.com/imgs/product/product-bg-tile.png\")",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Delta Quiz",
+        "fontSize": "22.83px",
+        "lineHeight": "27.396px",
+        "fontWeight": "420",
+        "letterSpacing": "-0.4566px",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 670.890625,
+          "y": 6399.6875,
+          "width": 98.21875,
+          "height": 27.390625
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "What is your coffee profile?",
+        "fontSize": "59.215px",
+        "lineHeight": "59.215px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.77645px",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 406.203125,
+          "y": 6435.078125,
+          "width": 627.59375,
+          "height": 59.21875
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start Quiz",
+        "href": "/en/quiz",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 632.78125,
+          "y": 6607.671875,
+          "width": 174.421875,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 54,
+    "media": [
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F5bf7ae776f3b58af2031c266fa9d99dba5688556-532x652.png&w=1023&q=88",
+        "box": {
+          "x": 662.78125,
+          "y": 5930.1435546875,
+          "width": 114.4375,
+          "height": 140.25
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fa59d12bc818e95eb7e654af833fdcd8278f7eb89-532x652.png&w=1023&q=88",
+        "box": {
+          "x": 843.8558349609375,
+          "y": 5962.072265625,
+          "width": 114.4375,
+          "height": 140.25
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fcc80cdfcde4a1f4b870fdb7ddf82bcdeee290a16-532x652.png&w=1023&q=88",
+        "box": {
+          "x": 1003.090087890625,
+          "y": 6054.005859375,
+          "width": 114.4375,
+          "height": 140.25
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb7c9fb6b4bb9f707b45a9931f561af76d34af6ae-532x652.png&w=1023&q=88",
+        "box": {
+          "x": 1121.278076171875,
+          "y": 6194.85693359375,
+          "width": 114.4375,
+          "height": 140.25
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F646bc4149f0dca782b015c657bdc5c4037c8ee8b-532x652.png&w=1023&q=88",
+        "box": {
+          "x": 1184.1646728515625,
+          "y": 6367.63623046875,
+          "width": 114.4375,
+          "height": 140.25
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 7492.1875,
+      "left": 0,
+      "width": 1440,
+      "height": 806.53125
+    },
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "url(\"https://deltacafes.com/imgs/product/product-bg-tile.png\")",
+    "headings": [
+      {
+        "tag": "DIV",
+        "text": "The Coffee Journal  Stories of people, culture, and places through the lens of coffee  Explore",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 10.828125,
+          "y": 7546.703125,
+          "width": 354.578125,
+          "height": 645.84375
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "The Coffee Journal",
+        "fontSize": "59.215px",
+        "lineHeight": "59.215px",
+        "fontWeight": "300",
+        "letterSpacing": "-1.77645px",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 21.65625,
+          "y": 7546.703125,
+          "width": 332.921875,
+          "height": 118.4375
+        }
+      },
+      {
+        "tag": "P",
+        "text": "Stories of people, culture, and places through the lens of coffee",
+        "fontSize": "22.83px",
+        "lineHeight": "27.396px",
+        "fontWeight": "510",
+        "letterSpacing": "normal",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 21.65625,
+          "y": 7681.140625,
+          "width": 244.265625,
+          "height": 109.5625
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Delta House on Tour from north to south",
+        "fontSize": "19.255px",
+        "lineHeight": "24.0687px",
+        "fontWeight": "550",
+        "letterSpacing": "normal",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 376.234375,
+          "y": 7947.21875,
+          "width": 332.9375,
+          "height": 48.125
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Delta Caf\u00e9s launches a range with exclusive Rainforest Alliance certification for the Horeca channel",
+        "fontSize": "19.255px",
+        "lineHeight": "24.0687px",
+        "fontWeight": "550",
+        "letterSpacing": "normal",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 730.828125,
+          "y": 8032.328125,
+          "width": 332.921875,
+          "height": 72.1875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Gala Dinner Coffee of the Guia Michelin Portugal is Delta",
+        "fontSize": "19.255px",
+        "lineHeight": "24.0687px",
+        "fontWeight": "550",
+        "letterSpacing": "normal",
+        "color": "rgb(53, 34, 26)",
+        "box": {
+          "x": 1085.40625,
+          "y": 7881.578125,
+          "width": 332.921875,
+          "height": 48.125
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore",
+        "href": "/en/journal",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 21.65625,
+          "y": 7806.703125,
+          "width": 157.609375,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 3,
+    "media": [
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F772c836cc90cbfe6290d0ccc38c124cdd769a77a-1024x683.jpg&w=1200&q=88",
+        "box": {
+          "x": 376.234375,
+          "y": 7546.703125,
+          "width": 332.9375,
+          "height": 384.515625
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb6879f4b3ab0af728582ac06947bea3fd92e7d8a-1721x857.jpg&w=1200&q=88",
+        "box": {
+          "x": 730.828125,
+          "y": 7546.703125,
+          "width": 332.921875,
+          "height": 469.625
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F94331cb0506255b47d10daf088ec79bfde5feee5-1920x1440.webp&w=1200&q=88",
+        "box": {
+          "x": 1085.40625,
+          "y": 7546.703125,
+          "width": 332.921875,
+          "height": 318.875
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "SECTION",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 8298.71875,
+      "left": 0,
+      "width": 1440,
+      "height": 1438.234375
+    },
+    "backgroundColor": "rgb(20, 33, 21)",
+    "backgroundImage": "none",
+    "headings": [
+      {
+        "tag": "DIV",
+        "text": "SUSTAINABILITY POSITIVE IMPACT FROM THE ORIGIN TO THE CUP Sustainability",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(101, 112, 99)",
+        "box": {
+          "x": 0,
+          "y": 8659.71875,
+          "width": 1440,
+          "height": 408.53125
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "SUSTAINABILITY POSITIVE IMPACT FROM THE ORIGIN TO THE CUP Sustainability",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(101, 112, 99)",
+        "box": {
+          "x": 365.421875,
+          "y": 8659.71875,
+          "width": 709.15625,
+          "height": 408.53125
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "SUSTAINABILITY POSITIVE IMPACT FROM THE ORIGIN TO THE CUP",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(240, 255, 223)",
+        "box": {
+          "x": 428.3125,
+          "y": 8659.71875,
+          "width": 583.359375,
+          "height": 356.53125
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "SUSTAINABILITY",
+        "fontSize": "14px",
+        "lineHeight": "16.8px",
+        "fontWeight": "580",
+        "letterSpacing": "0.28px",
+        "color": "rgb(240, 255, 223)",
+        "box": {
+          "x": 663.65625,
+          "y": 8659.71875,
+          "width": 112.671875,
+          "height": 16.796875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "POSITIVE IMPACT FROM THE ORIGIN TO THE CUP",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(240, 255, 223)",
+        "box": {
+          "x": 428.3125,
+          "y": 8706.921875,
+          "width": 583.359375,
+          "height": 309.328125
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sustainability",
+        "href": "/en/sustainability",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(35, 48, 30)",
+        "border": "0px none rgb(35, 48, 30)",
+        "box": {
+          "x": 621.734375,
+          "y": 9016.25,
+          "width": 196.53125,
+          "height": 52
+        }
+      }
+    ],
+    "mediaCount": 2,
+    "media": [
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fef681d8d80de465ba5ccfea283132fb0b57da12d-468x586.jpg&w=1200&q=88",
+        "box": {
+          "x": -24.691104888916016,
+          "y": 9028.0146484375,
+          "width": 253.6478271484375,
+          "height": 313.283203125
+        }
+      },
+      {
+        "tag": "IMG",
+        "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb2a5cb9fb3942f98659beae3c15ecb85e5157c83-582x388.jpg&w=1200&q=88",
+        "box": {
+          "x": 1193.5474853515625,
+          "y": 9465.5439453125,
+          "width": 301.311279296875,
+          "height": 212.052734375
+        }
+      }
+    ]
+  },
+  {
+    "tagName": "FOOTER",
+    "id": "",
+    "className": "",
+    "rect": {
+      "top": 9736.953125,
+      "left": 0,
+      "width": 1440,
+      "height": 1449.53125
+    },
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "headings": [
+      {
+        "tag": "DIV",
+        "text": "THE AZORES COFFEE THE AZORES COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(248, 234, 224)",
+        "box": {
+          "x": 648.0625,
+          "y": 10017.390625,
+          "width": 143.859375,
+          "height": 16.796875
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "THE AZORES COFFEE",
+        "fontSize": "14px",
+        "lineHeight": "16.8px",
+        "fontWeight": "580",
+        "letterSpacing": "0.28px",
+        "color": "rgb(248, 234, 224)",
+        "box": {
+          "x": 648.0625,
+          "y": 10017.390625,
+          "width": 143.859375,
+          "height": 16.796875
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "THE AZORES COFFEE",
+        "fontSize": "14px",
+        "lineHeight": "16.8px",
+        "fontWeight": "580",
+        "letterSpacing": "0.28px",
+        "color": "rgb(17, 11, 8)",
+        "box": {
+          "x": 648.0625,
+          "y": 10017.390625,
+          "width": 143.859375,
+          "height": 16.796875
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "THE FIRST PORTUGUESE COFFEE THE FIRST PORTUGUESE COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(248, 234, 224)",
+        "box": {
+          "x": 352.71875,
+          "y": 10066.234375,
+          "width": 734.5625,
+          "height": 206.21875
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "THE FIRST PORTUGUESE COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(248, 234, 224)",
+        "box": {
+          "x": 352.71875,
+          "y": 10066.234375,
+          "width": 734.5625,
+          "height": 206.21875
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "THE FIRST PORTUGUESE COFFEE",
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(248, 234, 224)",
+        "box": {
+          "x": 352.71875,
+          "y": 10066.234375,
+          "width": 734.5625,
+          "height": 206.21875
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "The Azores coffee",
+        "href": "/en/the-azores-coffee",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(53, 34, 26)",
+        "border": "0px none rgb(53, 34, 26)",
+        "box": {
+          "x": 606.28125,
+          "y": 10304.5,
+          "width": 227.421875,
+          "height": 52
+        }
+      },
+      {
+        "text": "Our History",
+        "href": "/en/history",
+        "fontSize": "14px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 298.75,
+          "y": 10752.765625,
+          "width": 74.234375,
+          "height": 16.796875
+        }
+      },
+      {
+        "text": "About Delta",
+        "href": "/en/about",
+        "fontSize": "14px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 298.75,
+          "y": 10775.5625,
+          "width": 78.359375,
+          "height": 16.796875
+        }
+      },
+      {
+        "text": "The Azores coffee",
+        "href": "/en/the-azores-coffee",
+        "fontSize": "14px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 298.75,
+          "y": 10798.359375,
+          "width": 118.578125,
+          "height": 16.796875
+        }
+      },
+      {
+        "text": "Coffee Cycle",
+        "href": "/en/coffee-cycle",
+        "fontSize": "16px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 472.171875,
+          "y": 10752.765625,
+          "width": 149.09375,
+          "height": 16.796875
+        }
+      },
+      {
+        "text": "Origins",
+        "href": "/en/coffee-cycle/origins",
+        "fontSize": "11.84px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 484.171875,
+          "y": 10774.5625,
+          "width": 39.203125,
+          "height": 14.203125
+        }
+      },
+      {
+        "text": "Blend",
+        "href": "/en/coffee-cycle/blend",
+        "fontSize": "11.84px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 484.171875,
+          "y": 10794.765625,
+          "width": 31.765625,
+          "height": 14.203125
+        }
+      },
+      {
+        "text": "Roast",
+        "href": "/en/coffee-cycle/roast",
+        "fontSize": "11.84px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(248, 234, 224)",
+        "border": "0px none rgb(248, 234, 224)",
+        "box": {
+          "x": 484.171875,
+          "y": 10814.96875,
+          "width": 31.734375,
+          "height": 14.203125
+        }
+      }
+    ],
+    "mediaCount": 1,
+    "media": [
+      {
+        "tag": "VIDEO",
+        "src": null,
+        "box": {
+          "x": 0,
+          "y": 9736.953125,
+          "width": 1440,
+          "height": 900
+        }
+      }
+    ]
+  }
+]

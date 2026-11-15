@@ -12,3 +12,8 @@ khiladi/backend/data_cache/
 *.mp4
 *.m4v
 *.tar.gz
+sourced_cricket_clips/
+delta_frames/
+test_*.png
+test_*.jpg
+frame_*.jpg
