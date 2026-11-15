@@ -1,101 +1,114 @@
-import React, { useEffect } from 'react';
-
+import React, { useEffect } from "react";
 export const DiamondCursor: React.FC = () => {
   useEffect(() => {
-    // Only enable on fine pointer devices (desktops) without reduced-motion preference
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (isTouch || prefersReducedMotion) {
-      return;
-    }
-
-    // Create a single global cursor DOM element attached directly to body
-    let cursorEl = document.getElementById('khiladi-diamond-cursor') as HTMLDivElement | null;
-    if (!cursorEl) {
-      cursorEl = document.createElement('div');
-      cursorEl.id = 'khiladi-diamond-cursor';
-      cursorEl.className = 'fixed pointer-events-none z-[9999] w-4 h-4 rounded-[1.5px] bg-[#F2E67C] border border-[#D6AF60] shadow-[0_0_12px_rgba(242,230,124,0.7)] transition-transform duration-75 will-change-transform';
-      cursorEl.style.top = '0';
-      cursorEl.style.left = '0';
-      cursorEl.style.opacity = '0';
-      cursorEl.style.transform = 'translate3d(-100px, -100px, 0) rotate(45deg)';
-      document.body.appendChild(cursorEl);
-    }
-
-    // Smooth physics variables
-    let mouseX = -100;
-    let mouseY = -100;
-    let cursorX = -100;
-    let cursorY = -100;
-    let targetScale = 1.0;
-    let currentScale = 1.0;
-    let isVisible = false;
-    let rafId: number;
-
-    const onPointerMove = (e: PointerEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      if (!isVisible) {
-        isVisible = true;
-        cursorX = mouseX;
-        cursorY = mouseY;
-        if (cursorEl) cursorEl.style.opacity = '1';
-      }
-    };
-
-    const onPointerOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-      if (!target) return;
-      const isInteractive = !!target.closest('a, button, [role="button"], input, select, .interactive-card, tr.cursor-pointer, .quiz-option');
-      targetScale = isInteractive ? 1.9 : 1.0;
-      if (cursorEl) {
-        if (isInteractive) {
-          cursorEl.style.borderColor = '#FFFFFF';
-          cursorEl.style.backgroundColor = '#FFE7F0';
-          cursorEl.style.boxShadow = '0 0 16px rgba(232, 18, 116, 0.8)';
-        } else {
-          cursorEl.style.borderColor = '#D6AF60';
-          cursorEl.style.backgroundColor = '#F2E67C';
-          cursorEl.style.boxShadow = '0 0 12px rgba(242, 230, 124, 0.7)';
+    const preference = matchMedia(
+      "(pointer:fine) and (prefers-reduced-motion:no-preference)",
+    );
+    let cleanup = () => {};
+    const initialize = () => {
+      cleanup();
+      if (!preference.matches) return;
+      const cursor = document.createElement("div");
+      cursor.id = "khiladi-diamond-cursor";
+      cursor.setAttribute("aria-hidden", "true");
+      Object.assign(cursor.style, {
+        position: "fixed",
+        left: "0",
+        top: "0",
+        width: "14px",
+        height: "14px",
+        background: "#f2e67c",
+        border: "1px solid #182643",
+        pointerEvents: "none",
+        zIndex: "2147483647",
+        opacity: "0",
+        transition: "opacity .15s",
+        boxShadow: "none",
+      });
+      document.body.appendChild(cursor);
+      let x = 0,
+        y = 0,
+        tx = 0,
+        ty = 0,
+        scale = 1,
+        targetScale = 1,
+        frame = 0,
+        last = 0,
+        visible = false;
+      const tick = (now: number) => {
+        const alpha = 1 - Math.exp(-Math.min(32, now - last || 16) / 32);
+        last = now;
+        x += (tx - x) * alpha;
+        y += (ty - y) * alpha;
+        scale += (targetScale - scale) * alpha;
+        cursor.style.transform = `translate3d(${x - 7}px,${y - 7}px,0) rotate(45deg) scale(${scale})`;
+        if (
+          Math.abs(tx - x) + Math.abs(ty - y) + Math.abs(targetScale - scale) >
+          0.05
+        )
+          frame = requestAnimationFrame(tick);
+        else frame = 0;
+      };
+      const wake = () => {
+        if (!frame) {
+          last = performance.now();
+          frame = requestAnimationFrame(tick);
         }
-      }
+      };
+      const move = (e: PointerEvent) => {
+        tx = e.clientX;
+        ty = e.clientY;
+        if (!visible) {
+          x = tx;
+          y = ty;
+          visible = true;
+          cursor.style.opacity = "1";
+        }
+        targetScale = (e.target as HTMLElement).closest(
+          "a,button,input,select,summary",
+        )
+          ? 1.5
+          : 1;
+        wake();
+      };
+      const leave = () => {
+        visible = false;
+        cursor.style.opacity = "0";
+        cancelAnimationFrame(frame);
+        frame = 0;
+      };
+      // Native dialogs occupy the top layer. Move the same cursor inside the active one.
+      const observer = new MutationObserver(() => {
+        const dialogs = Array.from(
+          document.querySelectorAll<HTMLDialogElement>("dialog[open]"),
+        );
+        const active = dialogs[dialogs.length - 1];
+        const parent = active || document.body;
+        if (cursor.parentElement !== parent) parent.appendChild(cursor);
+      });
+      observer.observe(document.body, {
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["open"],
+      });
+      window.addEventListener("pointermove", move, { passive: true });
+      document.addEventListener("mouseleave", leave);
+      window.addEventListener("blur", leave);
+      cleanup = () => {
+        cancelAnimationFrame(frame);
+        observer.disconnect();
+        window.removeEventListener("pointermove", move);
+        document.removeEventListener("mouseleave", leave);
+        window.removeEventListener("blur", leave);
+        cursor.remove();
+      };
     };
-
-    const onMouseLeave = () => {
-      isVisible = false;
-      if (cursorEl) cursorEl.style.opacity = '0';
-    };
-
-    window.addEventListener('pointermove', onPointerMove, { passive: true });
-    window.addEventListener('mouseover', onPointerOver, { passive: true });
-    document.addEventListener('mouseleave', onMouseLeave, { passive: true });
-
-    // Single RAF loop with smooth lerp
-    const tick = () => {
-      if (isVisible && cursorEl) {
-        const lerp = 0.35;
-        cursorX += (mouseX - cursorX) * lerp;
-        cursorY += (mouseY - cursorY) * lerp;
-        currentScale += (targetScale - currentScale) * 0.25;
-
-        cursorEl.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%) rotate(45deg) scale(${currentScale.toFixed(3)})`;
-      }
-      rafId = requestAnimationFrame(tick);
-    };
-
-    rafId = requestAnimationFrame(tick);
-
+    initialize();
+    preference.addEventListener("change", initialize);
     return () => {
-      window.removeEventListener('pointermove', onPointerMove);
-      window.removeEventListener('mouseover', onPointerOver);
-      document.removeEventListener('mouseleave', onMouseLeave);
-      cancelAnimationFrame(rafId);
-      if (cursorEl && cursorEl.parentNode) {
-        cursorEl.parentNode.removeChild(cursorEl);
-      }
+      cleanup();
+      preference.removeEventListener("change", initialize);
     };
   }, []);
-
-  return null; // Pure non-rendering controller: zero React tree re-renders!
+  return null;
 };

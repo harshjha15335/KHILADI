@@ -1,253 +1,182 @@
-import React, { useState, useEffect } from 'react';
-import { Player } from '../types';
-import { playClickChime, playHoverChime } from '../utils/sound';
-import { 
-  ShieldAlert, 
-  Plus, 
-  Trash2, 
-  Users, 
-  Globe, 
-  Flame, 
-  Award, 
-  CheckCircle2, 
-  AlertCircle,
-  Search
-} from 'lucide-react';
-
-interface AuctionWarRoomPageProps {
-  onSelectPlayer: (player: Player) => void;
+import React, { useEffect, useState } from "react";
+import { Player } from "../types";
+import { loadPlayers, metric } from "../utils/api";
+import { AnalyticsIntro } from "../components/AnalyticsIntro";
+import { KhiladiKineticText } from "../components/KhiladiKineticText";
+interface Props {
+  onSelectPlayer: (p: Player) => void;
   warRoomSquad: Player[];
-  onRemoveFromSquad: (playerId: number) => void;
-  onAddToSquad: (player: Player) => void;
+  onRemoveFromSquad: (id: number) => void;
+  onAddToSquad: (p: Player) => void;
   purseTotalCr?: number;
 }
-
-export const AuctionWarRoomPage: React.FC<AuctionWarRoomPageProps> = ({
+export const AuctionWarRoomPage: React.FC<Props> = ({
   onSelectPlayer,
   warRoomSquad,
   onRemoveFromSquad,
   onAddToSquad,
-  purseTotalCr = 120.0
+  purseTotalCr = 120,
 }) => {
-  const [allPlayers, setAllPlayers] = useState<Player[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<Player[]>([]);
-
+  const [players, setPlayers] = useState<Player[]>([]),
+    [query, setQuery] = useState(""),
+    [budget, setBudget] = useState(purseTotalCr),
+    [bids, setBids] = useState<Record<number, number>>({}),
+    [error, setError] = useState("");
   useEffect(() => {
-    fetch('/data/player_database.json')
-      .then(r => r.json())
-      .then((data: Player[]) => setAllPlayers(data))
-      .catch(() => {
-        fetch('/api/players?limit=1500')
-          .then(r => r.json())
-          .then(res => setAllPlayers(res.data));
-      });
+    loadPlayers()
+      .then(setPlayers)
+      .catch(() => setError("Player search is unavailable. Please reload."));
   }, []);
-
-  // Search whitelisted players
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      setSearchResults([]);
-      return;
-    }
-    const q = searchQuery.toLowerCase().trim();
-    const results = allPlayers
-      .filter(p => !warRoomSquad.some(s => s.player_id === p.player_id))
-      .filter(p => p.player_name.toLowerCase().includes(q) || p.player_id.toString().includes(q))
-      .slice(0, 8);
-    setSearchResults(results);
-  }, [searchQuery, allPlayers, warRoomSquad]);
-
-  // Financial calculations
-  const totalSpent = warRoomSquad.reduce((acc, p) => acc + (p.auction_price_cr || 2.0), 0);
-  const remainingPurse = purseTotalCr - totalSpent;
-  const overseasCount = warRoomSquad.filter(p => p.country && p.country.toLowerCase() !== 'india').length;
-
-  const avgPii = warRoomSquad.length > 0 
-    ? warRoomSquad.reduce((acc, p) => acc + (p.pressure_score || 70), 0) / warRoomSquad.length
-    : 0;
-
+  const spent = warRoomSquad.reduce(
+      (sum, p) => sum + (bids[p.player_id] ?? 0),
+      0,
+    ),
+    unknown = warRoomSquad.filter(
+      (p) => bids[p.player_id] === undefined,
+    ).length;
+  const matches = query.trim()
+    ? players
+        .filter(
+          (p) =>
+            p.player_name.toLowerCase().includes(query.toLowerCase()) &&
+            !warRoomSquad.some((s) => s.player_id === p.player_id),
+        )
+        .slice(0, 8)
+    : [];
   return (
-    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E8E6ED] pb-8">
-          <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
-              <ShieldAlert className="w-3.5 h-3.5" />
-              <span>Rajasthan Royals Auction Strategy Room</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
-              AUCTION WAR ROOM
-            </h1>
-            <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
-              Construct the optimal Rajasthan Royals squad with the ₹120.0 Crore salary cap. Maximise clutch pressure impact while maintaining positional balance.
-            </p>
-          </div>
-
-          <div className="text-xs font-mono text-[#68738A] bg-white px-4 py-2 rounded-2xl border border-[#E8E6ED] shadow-sm">
-            Rules: Squad size 18–25 • Max 8 Overseas • ₹120.00 Cr
-          </div>
-        </div>
-
-        {/* Financial & Squad Stats Cockpit (Light Theme) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
-            <div className="text-xs font-mono uppercase text-[#68738A]">Purse Remaining</div>
-            <div className="text-3xl font-black font-mono text-[#2549BD]">
-              ₹{remainingPurse.toFixed(1)} Cr
-            </div>
-            <div className="text-[11px] font-mono text-[#505A70]">
-              Spent: ₹{totalSpent.toFixed(1)} Cr of ₹{purseTotalCr.toFixed(1)} Cr
-            </div>
-          </div>
-
-          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
-            <div className="text-xs font-mono uppercase text-[#68738A]">Squad Size</div>
-            <div className={`text-3xl font-black font-mono ${
-              warRoomSquad.length >= 18 && warRoomSquad.length <= 25 ? 'text-emerald-600' : 'text-[#22263C]'
-            }`}>
-              {warRoomSquad.length} <span className="text-lg text-[#68738A] font-normal">/ 25</span>
-            </div>
-            <div className="text-[11px] font-mono text-[#505A70]">
-              {warRoomSquad.length < 18 ? `Needs ${18 - warRoomSquad.length} more players` : 'Valid Squad Count'}
-            </div>
-          </div>
-
-          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
-            <div className="text-xs font-mono uppercase text-[#68738A]">Squad Pressure PII</div>
-            <div className="text-3xl font-black font-mono text-[#F22E83]">
-              {avgPii.toFixed(1)} <span className="text-lg text-[#68738A] font-normal">/ 100</span>
-            </div>
-            <div className="text-[11px] font-mono text-[#505A70]">
-              Empirical Bayes Weighted Mean
-            </div>
-          </div>
-
-          <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] space-y-1 shadow-sm">
-            <div className="text-xs font-mono uppercase text-[#68738A]">Overseas Slots</div>
-            <div className={`text-3xl font-black font-mono ${overseasCount > 8 ? 'text-rose-600' : 'text-[#22263C]'}`}>
-              {overseasCount} <span className="text-lg text-[#68738A] font-normal">/ 8</span>
-            </div>
-            <div className="text-[11px] font-mono text-[#505A70]">
-              {overseasCount > 8 ? 'Cap Exceeded!' : `${8 - overseasCount} slots open`}
-            </div>
-          </div>
-        </div>
-
-        {/* Player Search and Add Box */}
-        <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] shadow-sm space-y-4">
-          <div className="text-sm font-bold font-display text-[#22263C]">
-            Add Players to War Room Roster
-          </div>
-          <div className="relative">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#68738A]" />
+    <div className="min-h-screen pt-32 pb-20 px-5">
+      <div className="max-w-6xl mx-auto space-y-8">
+        <KhiladiKineticText
+          as="h1"
+          text="Build your squad."
+          className="text-4xl sm:text-6xl font-bold"
+        />
+        <AnalyticsIntro details="This is a planning workspace. Enter your own hypothetical bids and budget; these are not official auction prices. The dataset does not supply reliable nationality or official auction eligibility for every player. No automatic optimizer is claimed.">
+          Add players you like. Balance your roles. Try a budget that works for
+          you.
+        </AnalyticsIntro>
+        <div className="discovery-controls">
+          <label>
+            Your planning budget (₹ crore)
             <input
-              type="text"
-              placeholder="Search 1,217 whitelisted players to draft..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] text-sm text-[#22263C] placeholder-[#68738A] focus:outline-none focus:border-[#F22E83]"
+              type="number"
+              min="0"
+              step=".1"
+              value={budget}
+              onChange={(e) => setBudget(Math.max(0, Number(e.target.value)))}
             />
-          </div>
-
-          {/* Search Results Dropdown */}
-          {searchResults.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
-              {searchResults.map(p => (
-                <div
-                  key={p.player_id}
-                  className="p-3.5 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#F22E83] flex items-center justify-between transition-all shadow-sm"
-                >
-                  <div className="truncate pr-2">
-                    <div className="text-sm font-bold text-[#22263C] truncate">{p.player_name}</div>
-                    <div className="text-[10px] font-mono text-[#68738A]">{p.role} • ₹{p.auction_price_cr || 2.0} Cr</div>
-                  </div>
-                  <button
-                    onClick={() => {
-                      playClickChime();
-                      onAddToSquad(p);
-                      setSearchQuery('');
-                    }}
-                    className="p-2 rounded-xl bg-[#FFEAF2] hover:bg-[#F22E83] text-[#F22E83] hover:text-white transition-colors cursor-pointer"
-                    title="Add to War Room"
-                  >
-                    <Plus className="w-4 h-4" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
+          </label>
+          <label>
+            Find a player
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search players to add"
+            />
+          </label>
         </div>
-
-        {/* Current Squad Roster Table */}
-        <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
-          <div className="p-6 border-b border-[#E8E6ED] flex items-center justify-between">
-            <h3 className="text-lg font-bold font-display text-[#22263C]">Current Drafted Roster ({warRoomSquad.length})</h3>
-            <span className="text-xs font-mono text-[#68738A]">Click a player to inspect diagnostics</span>
+        {error && <p role="alert">{error}</p>}
+        {matches.length > 0 && (
+          <div className="squad-search-results">
+            {matches.map((p) => (
+              <button
+                key={p.player_id}
+                onClick={() => {
+                  onAddToSquad(p);
+                  setQuery("");
+                }}
+              >
+                {p.player_name}
+                <span>{p.role} · Add +</span>
+              </button>
+            ))}
           </div>
-
-          {warRoomSquad.length === 0 ? (
-            <div className="p-12 text-center space-y-2 text-[#68738A]">
-              <Users className="w-8 h-8 mx-auto text-[#F22E83] mb-2" />
-              <div className="text-sm font-bold text-[#22263C]">No players in War Room yet</div>
-              <p className="text-xs">Search above or browse the Player Archive to recruit your squad.</p>
-            </div>
-          ) : (
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[#FFF3F8] border-b border-[#F5B1CE]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
-                <tr>
-                  <th className="py-4 px-6 w-20">ID</th>
-                  <th className="py-4 px-6">Player</th>
-                  <th className="py-4 px-6">Role</th>
-                  <th className="py-4 px-6 text-right">Price (₹ Cr)</th>
-                  <th className="py-4 px-6 text-right">Pressure Score</th>
-                  <th className="py-4 px-6 text-right">SR Delta</th>
-                  <th className="py-4 px-6 text-center w-20">Remove</th>
+        )}
+        <p role="status">
+          {warRoomSquad.length} players · ₹{spent.toFixed(2)} crore in entered
+          bids · ₹{(budget - spent).toFixed(2)} crore remaining
+          {unknown > 0 ? ` · ${unknown} players still need a bid` : ""}
+        </p>
+        {spent > budget && (
+          <p role="alert">Your entered bids exceed your planning budget.</p>
+        )}
+        <div className="overflow-x-auto">
+          <table className="planning-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Role</th>
+                <th>Your bid (₹ crore)</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {warRoomSquad.map((p) => (
+                <tr key={p.player_id}>
+                  <td>
+                    <button
+                      className="text-link"
+                      onClick={() => onSelectPlayer(p)}
+                    >
+                      {p.player_name} ↗
+                    </button>
+                  </td>
+                  <td>{p.role}</td>
+                  <td>
+                    <input
+                      type="number"
+                      min="0"
+                      step=".1"
+                      aria-label={`Planning bid for ${p.player_name}`}
+                      value={bids[p.player_id] ?? ""}
+                      placeholder="Not entered"
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        setBids((old) => {
+                          const next = { ...old };
+                          if (value === "") delete next[p.player_id];
+                          else next[p.player_id] = Math.max(0, Number(value));
+                          return next;
+                        });
+                      }}
+                    />
+                  </td>
+                  <td>
+                    <button
+                      aria-label={`Remove ${p.player_name}`}
+                      onClick={() => onRemoveFromSquad(p.player_id)}
+                    >
+                      Remove ×
+                    </button>
+                  </td>
                 </tr>
-              </thead>
-              <tbody className="divide-y divide-[#E8E6ED]">
-                {warRoomSquad.map(p => (
-                  <tr
-                    key={p.player_id}
-                    className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
-                  >
-                    <td className="py-4 px-6 font-mono text-xs text-[#68738A]">#{p.player_id}</td>
-                    <td className="py-4 px-6" onClick={() => onSelectPlayer(p)}>
-                      <div className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors">
-                        {p.player_name}
-                      </div>
-                      <div className="text-[10px] font-mono text-[#68738A]">{p.country || 'Global'}</div>
-                    </td>
-                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{p.role}</td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-[#2549BD]">
-                      ₹{(p.auction_price_cr || 2.0).toFixed(1)}
-                    </td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-[#F22E83]">
-                      {p.pressure_score ? p.pressure_score.toFixed(1) : '78.5'}
-                    </td>
-                    <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600">
-                      +{p.batting.sr_delta ? p.batting.sr_delta.toFixed(1) : '12.4'}
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          playClickChime();
-                          onRemoveFromSquad(p.player_id);
-                        }}
-                        className="p-2 rounded-xl hover:bg-rose-50 text-[#68738A] hover:text-rose-600 transition-colors cursor-pointer"
-                        title="Remove player"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+              ))}
+            </tbody>
+          </table>
         </div>
+        {!warRoomSquad.length && (
+          <p>
+            Start by searching for a player above, or add someone from their
+            profile.
+          </p>
+        )}
+        <details>
+          <summary>See squad evidence and planning guidelines</summary>
+          <p className="my-4">
+            Common planning constraints: 18–25 squad members, up to 8 overseas
+            players. Verify the applicable competition rules and each player's
+            eligibility separately. Nationality is unavailable in this export.
+          </p>
+          <ul>
+            {warRoomSquad.map((p) => (
+              <li key={p.player_id}>
+                {p.player_name} · model index{" "}
+                {metric(p.pressure_impact_index, 2)}
+              </li>
+            ))}
+          </ul>
+        </details>
       </div>
     </div>
   );

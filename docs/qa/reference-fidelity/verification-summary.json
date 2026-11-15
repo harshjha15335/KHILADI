@@ -1,0 +1,25 @@
+{
+  "build": "passed",
+  "browser_tests": {
+    "startTime": "2026-11-15T14:54:49.182Z",
+    "duration": 33774.271,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "data_regressions": {
+    "passed": 6,
+    "failed": 0
+  },
+  "production_smoke_routes": 6,
+  "protected_source_changes": false,
+  "frame_timing_ms": {
+    "meanMs": 17.14,
+    "medianMs": 16.7,
+    "p95Ms": 23.6,
+    "framesOver33ms": 3
+  },
+  "reference_parity": "NOT VERIFIED; original recordings and Cyera reference unavailable",
+  "production_media": "BLOCKED pending reuse permission and required trophy/film assets"
+}

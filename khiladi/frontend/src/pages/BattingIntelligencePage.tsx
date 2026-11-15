@@ -1,30 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Player } from '../types';
-import { playClickChime } from '../utils/sound';
-import { Flame, TrendingUp, Search } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Player } from "../types";
+import { playClickChime } from "../utils/sound";
+import { Flame, TrendingUp, Search } from "lucide-react";
 
 interface BattingIntelligencePageProps {
   onSelectPlayer: (player: Player) => void;
 }
 
-export const BattingIntelligencePage: React.FC<BattingIntelligencePageProps> = ({ onSelectPlayer }) => {
+export const BattingIntelligencePage: React.FC<
+  BattingIntelligencePageProps
+> = ({ onSelectPlayer }) => {
   const [players, setPlayers] = useState<Player[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch('/data/player_database.json')
-      .then(r => r.json())
+    fetch("/data/player_database.json")
+      .then((r) => r.json())
       .then((data: Player[]) => {
         const filtered = data
-          .filter(p => (p.batting.pressure_balls || 0) >= 10)
-          .sort((a, b) => (b.batting.pressure_sr || 0) - (a.batting.pressure_sr || 0));
+          .filter((p) => (p.batting.press_balls || 0) >= 10)
+          .sort(
+            (a, b) => (b.batting.press_sr || 0) - (a.batting.press_sr || 0),
+          );
         setPlayers(filtered);
       });
   }, []);
 
-  const displayed = players.filter(p => 
-    p.player_name.toLowerCase().includes(searchQuery.toLowerCase())
-  ).slice(0, 30);
+  const displayed = players
+    .filter((p) =>
+      p.player_name.toLowerCase().includes(searchQuery.toLowerCase()),
+    )
+    .slice(0, 30);
 
   return (
     <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
@@ -35,10 +41,12 @@ export const BattingIntelligencePage: React.FC<BattingIntelligencePageProps> = (
             <span>High-Leverage Batting Metrics</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
-            CLUTCH BATTING INTELLIGENCE
+            Who makes the runs?
           </h1>
           <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
-            Decomposing batting potency when required run rates spike. Highlighting positive strike-rate delta over regular baseline.
+            Compare how quickly players score in the recorded pressure
+            situations and across their whole sample. A positive change means
+            faster scoring under pressure; small samples need care.
           </p>
         </div>
 
@@ -67,23 +75,44 @@ export const BattingIntelligencePage: React.FC<BattingIntelligencePageProps> = (
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E8E6ED]">
-              {displayed.map(p => (
+              {displayed.map((p) => (
                 <tr
                   key={p.player_id}
-                  onClick={() => { playClickChime(); onSelectPlayer(p); }}
+                  onClick={() => {
+                    playClickChime();
+                    onSelectPlayer(p);
+                  }}
                   className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
                 >
                   <td className="py-4 px-6">
-                    <div className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors">{p.player_name}</div>
-                    <div className="text-[10px] font-mono text-[#68738A]">ID #{p.player_id}</div>
+                    <button
+                      className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelectPlayer(p);
+                      }}
+                    >
+                      {p.player_name}
+                    </button>
+                    <div className="text-[10px] font-mono text-[#68738A]">
+                      ID #{p.player_id}
+                    </div>
                   </td>
-                  <td className="py-4 px-6 text-right font-mono text-[#505A70]">{p.batting.pressure_balls || 0}</td>
-                  <td className="py-4 px-6 text-right font-mono font-bold text-[#F22E83]">{(p.batting.pressure_sr || 0).toFixed(1)}</td>
-                  <td className="py-4 px-6 text-right font-mono text-[#505A70]">{(p.batting.normal_sr || 0).toFixed(1)}</td>
+                  <td className="py-4 px-6 text-right font-mono text-[#505A70]">
+                    {p.batting.press_balls || 0}
+                  </td>
+                  <td className="py-4 px-6 text-right font-mono font-bold text-[#F22E83]">
+                    {(p.batting.press_sr || 0).toFixed(1)}
+                  </td>
+                  <td className="py-4 px-6 text-right font-mono text-[#505A70]">
+                    {(p.batting.overall_sr || 0).toFixed(1)}
+                  </td>
                   <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600">
                     +{(p.batting.sr_delta || 0).toFixed(1)}
                   </td>
-                  <td className="py-4 px-6 text-right font-mono font-black text-[#22263C]">{(p.pressure_score || 0).toFixed(1)}</td>
+                  <td className="py-4 px-6 text-right font-mono font-black text-[#22263C]">
+                    {(p.pressure_impact_index || 0).toFixed(1)}
+                  </td>
                 </tr>
               ))}
             </tbody>

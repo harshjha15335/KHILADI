@@ -17,3 +17,14 @@ delta_frames/
 test_*.png
 test_*.jpg
 frame_*.jpg
+
+# Private media review and generated browser scratch recordings
+.venv/
+.khiladi/
+docs/qa/reference-fidelity/*.png
+docs/qa/reference-fidelity/*.webm
+docs/qa/reference-fidelity/*-observations.json
+docs/qa/reference-fidelity/media-review/
+docs/qa/reference-fidelity/reference-videos/
+docs/qa/reference-fidelity/walkthrough-raw/
+docs/qa/reference-fidelity/test-artifacts/

@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "skills": {
+    "agent-browser": {
+      "source": "../../tmp/khiladi-vendor/vercel-labs/agent-browser",
+      "sourceType": "local",
+      "computedHash": "a0dfac7503f69bcf529b2660fc79964064c4f179eb65695904ddc45fc0d99d20"
+    },
+    "find-skills": {
+      "source": "../../tmp/khiladi-skills-cli",
+      "sourceType": "local",
+      "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f"
+    },
+    "frontend-design": {
+      "source": "../../tmp/khiladi-vendor/vercel-labs/open-agents",
+      "sourceType": "local",
+      "computedHash": "e096e0563684970eba6a7a29d9f6801d03f0d7fe4ce5e938befb21256394f72c"
+    },
+    "gsap-core": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "dfc8ba849fa8b81c8cc60964ee2a5fa8db4b2a2611801cf549a5b267b8284fa5"
+    },
+    "gsap-frameworks": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "25f2f1f85c3d7a6431623c50e894af58213cc96d4e6660564be80ca011b883f6"
+    },
+    "gsap-performance": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "4dd4382cad329927a248fbe55c426901f2bf4f5c598db6ef5ec38c19861b829f"
+    },
+    "gsap-plugins": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "328b52a98e9704c0349ba2cee23a6a92376c06b6b1fd3e60e5c20395b55e25e8"
+    },
+    "gsap-react": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "35fd08f2cbfc945f1a8cdd39e232882a19e27781a4043ee1bc71f65432f03389"
+    },
+    "gsap-scrolltrigger": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "c29c5a0fb1506a7f577fe68282eafc6df14b8d2b8ecd24f1f05836f5a0957b67"
+    },
+    "gsap-timeline": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "622140f48b7aa6bcf2f4d4c050b8fa20effa533688a1650854f5ffc1be169a0b"
+    },
+    "gsap-utils": {
+      "source": "../../tmp/khiladi-vendor/greensock/gsap-skills",
+      "sourceType": "local",
+      "computedHash": "d05b56284eea0118d481b8c673aff27cae66199282995bfe78315785f561002d"
+    },
+    "playwright-best-practices": {
+      "source": "../../tmp/khiladi-vendor/currents-dev/playwright-best-practices-skill",
+      "sourceType": "local",
+      "computedHash": "111e9d3e9d63dea34814120fb6583c0b28ee45371662801d8e8d8bdf4b05dcb0"
+    },
+    "remotion-best-practices": {
+      "source": "../../tmp/khiladi-vendor/remotion-dev/skills",
+      "sourceType": "local",
+      "computedHash": "55e6029eeafb7f64bfcaef013f7b9f569dfcc4db6554c6d6fb833ad141ec1494"
+    },
+    "vercel-react-best-practices": {
+      "source": "../../tmp/khiladi-vendor/vercel-labs/agent-skills",
+      "sourceType": "local",
+      "computedHash": "7991ed4fbecdac23f47c1a40c243e00a212a9e7f3604db93959b3ae11dffe299"
+    },
+    "web-animation-design": {
+      "source": "../../tmp/khiladi-vendor/vercel-labs/open-agents",
+      "sourceType": "local",
+      "computedHash": "5ab3163ce37913cb01408ca0621df49aa920bc87140fa3b3d5092f2d9c1cd624"
+    },
+    "web-design-guidelines": {
+      "source": "../../tmp/khiladi-vendor/vercel-labs/agent-skills",
+      "sourceType": "local",
+      "computedHash": "4f68ae07187fb0d1fb78c88b503d089da4cf5a9d9625d1f2e425b1590bf96d92"
+    }
+  }
+}

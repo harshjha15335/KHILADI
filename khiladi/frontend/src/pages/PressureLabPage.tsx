@@ -84,7 +84,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
   if (!replay || replay.deliveries.length === 0) {
     return (
       <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-32 text-center font-mono">
-        Loading Pressure Lab Telemetry...
+        Loading the match replay…
       </div>
     );
   }
@@ -101,13 +101,13 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
               <Flame className="w-3.5 h-3.5" />
-              <span>Ball-by-Ball Leverage Telemetry</span>
+              <span>WATCH THE MATCH TURN</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
               THE PRESSURE LAB
             </h1>
             <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
-              Scrub through real historical match deliveries. Observe how leverage index ($LI$) spikes during death overs and high-stakes dismissals, penalising low-leverage stat-padding.
+              Move through the match one ball at a time. See who is batting, what happened, and how the model describes the pressure of the situation.
             </p>
           </div>
 

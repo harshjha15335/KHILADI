@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "home",
+    "database",
+    "rankings",
+    "comparison",
+    "pressure-lab",
+    "war-room"
+  ],
+  "errors": [],
+  "protected_media_in_output": false
+}

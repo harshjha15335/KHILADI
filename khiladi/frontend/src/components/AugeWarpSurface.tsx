@@ -1,63 +1,84 @@
-import React, { useRef, useState } from 'react';
-
-interface AugeWarpSurfaceProps {
+import React, { useEffect, useId, useRef } from "react";
+interface Props {
   children: React.ReactNode;
   className?: string;
   intensity?: number;
   disabled?: boolean;
 }
-
-export const AugeWarpSurface: React.FC<AugeWarpSurfaceProps> = ({
+export const AugeWarpSurface: React.FC<Props> = ({
   children,
-  className = '',
-  intensity = 1.0,
-  disabled = false
+  className = "",
+  intensity = 1,
+  disabled = false,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [transform, setTransform] = useState<string>('perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)');
-  const [filter, setFilter] = useState<string>('none');
-
-  if (disabled) {
-    return <div className={className}>{children}</div>;
-  }
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    // Normalize coordinates -1 to +1
-    const normX = (x / rect.width - 0.5) * 2;
-    const normY = (y / rect.height - 0.5) * 2;
-    
-    // Calculate 3D tilt & skew
-    const rotX = -normY * 10 * intensity;
-    const rotY = normX * 10 * intensity;
-    const skew = normX * normY * 3 * intensity;
-
-    setTransform(`perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) skew(${skew}deg) scale(1.02)`);
-    // Subtle chromatic displacement simulated via drop-shadow
-    setFilter(`drop-shadow(${normX * 4 * intensity}px ${normY * 4 * intensity}px 12px rgba(232, 18, 116, 0.35))`);
+  const root = useRef<HTMLDivElement>(null),
+    displacement = useRef<SVGFEDisplacementMapElement>(null),
+    frame = useRef(0),
+    id = "warp-" + useId().replace(/:/g, "");
+  useEffect(() => () => cancelAnimationFrame(frame.current), []);
+  const reset = () => {
+    cancelAnimationFrame(frame.current);
+    if (displacement.current) displacement.current.setAttribute("scale", "0");
+    root.current
+      ?.querySelectorAll("img")
+      .forEach((img) => (img.style.filter = ""));
   };
-
-  const handleMouseLeave = () => {
-    setTransform('perspective(800px) rotateX(0deg) rotateY(0deg) skew(0deg) scale(1)');
-    setFilter('none');
-  };
-
   return (
     <div
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className={`transition-all duration-300 ease-out will-change-transform ${className}`}
-      style={{
-        transform,
-        filter,
-        transformStyle: 'preserve-3d'
+      ref={root}
+      className={`warp-surface ${className}`}
+      onPointerMove={(event) => {
+        if (
+          disabled ||
+          event.pointerType === "touch" ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          return;
+        const rect = event.currentTarget.getBoundingClientRect(),
+          x = (event.clientX - rect.left) / rect.width;
+        cancelAnimationFrame(frame.current);
+        frame.current = requestAnimationFrame(() => {
+          displacement.current?.setAttribute(
+            "scale",
+            String((Math.sin(x * Math.PI) * 14 + 2) * intensity),
+          );
+          root.current
+            ?.querySelectorAll("img")
+            .forEach((img) => (img.style.filter = `url(#${id})`));
+        });
       }}
+      onPointerLeave={reset}
     >
+      {!disabled && (
+        <svg className="warp-filter-defs" aria-hidden="true">
+          <defs>
+            <filter
+              id={id}
+              x="-10%"
+              y="-10%"
+              width="120%"
+              height="120%"
+              colorInterpolationFilters="sRGB"
+            >
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency=".013 .035"
+                numOctaves="1"
+                seed="8"
+                result="noise"
+              />
+              <feDisplacementMap
+                ref={displacement}
+                in="SourceGraphic"
+                in2="noise"
+                scale="0"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
+            </filter>
+          </defs>
+        </svg>
+      )}
       {children}
     </div>
   );

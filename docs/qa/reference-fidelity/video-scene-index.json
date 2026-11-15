@@ -1,0 +1,44 @@
+[
+  {
+    "clip": "preloader",
+    "matched_screenshot": "loader-start",
+    "video_seconds": 0.25,
+    "mean_absolute_thumbnail_error": 1.1585978835978836
+  },
+  {
+    "clip": "button-interaction",
+    "matched_screenshot": "button-hover",
+    "video_seconds": 5.25,
+    "mean_absolute_thumbnail_error": 1.8576719576719576
+  },
+  {
+    "clip": "squad-parade",
+    "matched_screenshot": "squad-parade",
+    "video_seconds": 7.5,
+    "mean_absolute_thumbnail_error": 1.654100529100529
+  },
+  {
+    "clip": "photo-composition",
+    "matched_screenshot": "heritage-collage",
+    "video_seconds": 12.75,
+    "mean_absolute_thumbnail_error": 2.0691137566137567
+  },
+  {
+    "clip": "quiz-choreography",
+    "matched_screenshot": "quiz-middle",
+    "video_seconds": 16.0,
+    "mean_absolute_thumbnail_error": 1.8368386243386243
+  },
+  {
+    "clip": "profile-reveal",
+    "matched_screenshot": "profile-open",
+    "video_seconds": 25.0,
+    "mean_absolute_thumbnail_error": 2.21765873015873
+  },
+  {
+    "clip": "cursor-and-warp",
+    "matched_screenshot": "database-hover",
+    "video_seconds": 27.25,
+    "mean_absolute_thumbnail_error": 2.3150132275132274
+  }
+]

@@ -1,45 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { TopBatter, TopBowler } from '../types';
-import { playClickChime, playHoverChime } from '../utils/sound';
-import { 
-  Award, 
-  Download, 
-  Flame, 
-  TrendingUp, 
-  TrendingDown, 
-  ShieldCheck, 
-  CheckCircle2, 
-  FileSpreadsheet
-} from 'lucide-react';
+import { playerImage } from "../utils/media";
+import React, { useState, useEffect } from "react";
+import { TopBatter, TopBowler } from "../types";
+import { playClickChime, playHoverChime } from "../utils/sound";
+import {
+  Award,
+  Download,
+  Flame,
+  TrendingUp,
+  TrendingDown,
+  ShieldCheck,
+  CheckCircle2,
+  FileSpreadsheet,
+} from "lucide-react";
 
 interface RankingsPageProps {
   onSelectPlayerById: (playerId: number) => void;
 }
 
-export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }) => {
-  const [activeTab, setActiveTab] = useState<'batters' | 'bowlers'>('batters');
+export const RankingsPage: React.FC<RankingsPageProps> = ({
+  onSelectPlayerById,
+}) => {
+  const [activeTab, setActiveTab] = useState<"batters" | "bowlers">("batters");
   const [batters, setBatters] = useState<TopBatter[]>([]);
   const [bowlers, setBowlers] = useState<TopBowler[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/top_10_batters.json').then(r => r.json()).catch(() => fetch('/api/rankings/batters').then(r => r.json())),
-      fetch('/data/top_10_bowlers.json').then(r => r.json()).catch(() => fetch('/api/rankings/bowlers').then(r => r.json()))
-    ]).then(([bData, boData]) => {
-      setBatters(bData);
-      setBowlers(boData);
-      setLoading(false);
-    }).catch(err => {
-      console.error('Failed to load rankings:', err);
-      setLoading(false);
-    });
+      fetch("/data/top_10_batters.json")
+        .then((r) => r.json())
+        .catch(() => fetch("/api/rankings/batters").then((r) => r.json())),
+      fetch("/data/top_10_bowlers.json")
+        .then((r) => r.json())
+        .catch(() => fetch("/api/rankings/bowlers").then((r) => r.json())),
+    ])
+      .then(([bData, boData]) => {
+        setBatters(Array.isArray(bData) ? bData : bData.rankings);
+        setBowlers(Array.isArray(boData) ? boData : boData.rankings);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load rankings:", err);
+        setLoading(false);
+      });
   }, []);
 
-  const downloadCSV = (type: 'batters' | 'bowlers') => {
+  const downloadCSV = (type: "batters" | "bowlers") => {
     playClickChime();
-    const url = type === 'batters' ? '/data/top_10_batters.csv' : '/data/top_10_bowlers.csv';
-    const link = document.createElement('a');
+    const url =
+      type === "batters"
+        ? "/data/top_10_batters.csv"
+        : "/data/top_10_bowlers.csv";
+    const link = document.createElement("a");
     link.href = url;
     link.download = `rr_superr_selector_top_10_${type}.csv`;
     document.body.appendChild(link);
@@ -55,37 +67,45 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
               <Award className="w-3.5 h-3.5" />
-              <span>Rajasthan Royals SupeRR Selector • Official Submission</span>
+              <span>COMPETITION MODEL OUTPUTS</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
-              TOP 10 PRESSURE RANKINGS
+              Who delivers under pressure?
             </h1>
             <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
-              Strictly validated from the canonical dataset (<code className="text-[#2549BD] font-bold">competition_team_player_mapping.csv</code>). Computed with Empirical Bayes shrinkage ($m=40$) under high-leverage match conditions ($LI \ge 1.8$).
+              Explore the ten highest-ranked batters and bowlers in the stored
+              model outputs. A higher impact index means stronger estimated
+              pressure performance in this sample. Open a player to inspect
+              their record; these rankings are estimates, not guarantees.
             </p>
           </div>
 
           {/* Export Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={() => downloadCSV(activeTab)}
               className="delta-btn-mask px-5 py-2.5 bg-[#F22E83] text-white text-xs font-mono font-bold tracking-wider uppercase rounded-full shadow-sm cursor-pointer"
             >
               <Download className="w-4 h-4 mr-2 inline-block" />
-              <span>Export {activeTab === 'batters' ? 'Batters' : 'Bowlers'} CSV</span>
+              <span>
+                Export {activeTab === "batters" ? "Batters" : "Bowlers"} CSV
+              </span>
             </button>
           </div>
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <button
-            onClick={() => { playClickChime(); setActiveTab('batters'); }}
+            onClick={() => {
+              playClickChime();
+              setActiveTab("batters");
+            }}
             onMouseEnter={playHoverChime}
             className={`px-6 py-3 rounded-full font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
-              activeTab === 'batters'
-                ? 'bg-[#F22E83] text-white shadow-md'
-                : 'bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#FFEAF2]'
+              activeTab === "batters"
+                ? "bg-[#F22E83] text-white shadow-md"
+                : "bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#FFEAF2]"
             }`}
           >
             <Flame className="w-4 h-4" />
@@ -93,12 +113,15 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
           </button>
 
           <button
-            onClick={() => { playClickChime(); setActiveTab('bowlers'); }}
+            onClick={() => {
+              playClickChime();
+              setActiveTab("bowlers");
+            }}
             onMouseEnter={playHoverChime}
             className={`px-6 py-3 rounded-full font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
-              activeTab === 'bowlers'
-                ? 'bg-[#2549BD] text-white shadow-md'
-                : 'bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#EAF5FF]'
+              activeTab === "bowlers"
+                ? "bg-[#2549BD] text-white shadow-md"
+                : "bg-white text-[#505A70] border border-[#E8E6ED] hover:bg-[#EAF5FF]"
             }`}
           >
             <ShieldCheck className="w-4 h-4" />
@@ -107,7 +130,7 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
         </div>
 
         {/* BATTERS TABLE (Light Editorial Theme) */}
-        {activeTab === 'batters' && (
+        {activeTab === "batters" && (
           <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
             <table className="w-full text-left text-sm">
               <thead className="bg-[#FFF3F8] border-b border-[#F5B1CE]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
@@ -134,13 +157,23 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
                     className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
                   >
                     <td className="py-4 px-6 text-center font-mono font-bold text-base text-[#22263C]">
-                      {idx === 0 ? <span className="text-[#F22E83] font-black">#1</span> : `#${idx + 1}`}
+                      {idx === 0 ? (
+                        <span className="text-[#F22E83] font-black">#1</span>
+                      ) : (
+                        `#${idx + 1}`
+                      )}
                     </td>
                     <td className="py-4 px-6">
-                      <div className="flex items-center gap-3">
-                        {b.portrait_url ? (
+                      <div className="flex flex-wrap items-center gap-3">
+                        {playerImage({
+                          player_id: b.player_id,
+                          portrait_url: b.portrait_url,
+                        }) ? (
                           <img
-                            src={b.portrait_url}
+                            src={playerImage({
+                              player_id: b.player_id,
+                              portrait_url: b.portrait_url,
+                            })}
                             alt={b.player_name}
                             className="w-10 h-10 object-contain rounded-full bg-[#FFEAF2] p-1 border border-[#F5B1CE]"
                           />
@@ -150,26 +183,43 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
                           </div>
                         )}
                         <div>
-                          <div className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors">
+                          <button
+                            className="font-bold text-[#22263C] group-hover:text-[#F22E83] transition-colors"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onSelectPlayerById(b.player_id);
+                            }}
+                          >
                             {b.player_name}
+                          </button>
+                          <div className="text-[11px] font-mono text-[#68738A]">
+                            ID #{b.player_id}
                           </div>
-                          <div className="text-[11px] font-mono text-[#68738A]">ID #{b.player_id}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{b.role || 'Batter'}</td>
+                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">
+                      {b.role || "Batter"}
+                    </td>
                     <td className="py-4 px-6 text-right font-mono font-bold text-[#F22E83]">
-                      {(b.pressure_strike_rate || b.pressure_sr || 0).toFixed(1)}
+                      {(b.pressure_strike_rate || b.pressure_sr || 0).toFixed(
+                        1,
+                      )}
                     </td>
                     <td className="py-4 px-6 text-right font-mono text-[#505A70]">
                       {(b.baseline_strike_rate || b.normal_sr || 0).toFixed(1)}
                     </td>
                     <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600 flex items-center justify-end gap-1">
-                      +{(b.strike_rate_delta || b.sr_delta || 0).toFixed(1)}
+                      {(b.strike_rate_delta ?? b.sr_delta ?? 0) >= 0 ? "+" : ""}
+                      {(b.strike_rate_delta ?? b.sr_delta ?? 0).toFixed(1)}
                       <TrendingUp className="w-3.5 h-3.5" />
                     </td>
                     <td className="py-4 px-6 text-right font-mono font-black text-[#22263C] text-base">
-                      {(b.pressure_impact_index || b.pressure_score || 0).toFixed(1)}
+                      {(
+                        b.pressure_impact_index ||
+                        b.pressure_score ||
+                        0
+                      ).toFixed(1)}
                     </td>
                     <td className="py-4 px-6 text-center">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
@@ -185,7 +235,7 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
         )}
 
         {/* BOWLERS TABLE (Light Editorial Theme) */}
-        {activeTab === 'bowlers' && (
+        {activeTab === "bowlers" && (
           <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
             <table className="w-full text-left text-sm">
               <thead className="bg-[#EAF5FF] border-b border-[#B3D4FF]/60 text-xs font-mono uppercase tracking-wider text-[#505A70]">
@@ -212,13 +262,23 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
                     className="hover:bg-[#EAF5FF]/50 transition-colors cursor-pointer group"
                   >
                     <td className="py-4 px-6 text-center font-mono font-bold text-base text-[#22263C]">
-                      {idx === 0 ? <span className="text-[#2549BD] font-black">#1</span> : `#${idx + 1}`}
+                      {idx === 0 ? (
+                        <span className="text-[#2549BD] font-black">#1</span>
+                      ) : (
+                        `#${idx + 1}`
+                      )}
                     </td>
                     <td className="py-4 px-6">
-                      <div className="flex items-center gap-3">
-                        {bo.portrait_url ? (
+                      <div className="flex flex-wrap items-center gap-3">
+                        {playerImage({
+                          player_id: bo.player_id,
+                          portrait_url: bo.portrait_url,
+                        }) ? (
                           <img
-                            src={bo.portrait_url}
+                            src={playerImage({
+                              player_id: bo.player_id,
+                              portrait_url: bo.portrait_url,
+                            })}
                             alt={bo.player_name}
                             className="w-10 h-10 object-contain rounded-full bg-[#EAF5FF] p-1 border border-[#B3D4FF]"
                           />
@@ -228,16 +288,28 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
                           </div>
                         )}
                         <div>
-                          <div className="font-bold text-[#22263C] group-hover:text-[#2549BD] transition-colors">
+                          <button
+                            className="font-bold text-[#22263C] group-hover:text-[#2549BD] transition-colors"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onSelectPlayerById(bo.player_id);
+                            }}
+                          >
                             {bo.player_name}
+                          </button>
+                          <div className="text-[11px] font-mono text-[#68738A]">
+                            ID #{bo.player_id}
                           </div>
-                          <div className="text-[11px] font-mono text-[#68738A]">ID #{bo.player_id}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">{bo.role || 'Bowler'}</td>
+                    <td className="py-4 px-6 font-mono text-xs text-[#505A70]">
+                      {bo.role || "Bowler"}
+                    </td>
                     <td className="py-4 px-6 text-right font-mono font-bold text-[#2549BD]">
-                      {(bo.pressure_economy || bo.pressure_econ || 0).toFixed(2)}
+                      {(bo.pressure_economy || bo.pressure_econ || 0).toFixed(
+                        2,
+                      )}
                     </td>
                     <td className="py-4 px-6 text-right font-mono text-[#505A70]">
                       {(bo.baseline_economy || bo.normal_econ || 0).toFixed(2)}
@@ -247,7 +319,11 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({ onSelectPlayerById }
                       <TrendingDown className="w-3.5 h-3.5" />
                     </td>
                     <td className="py-4 px-6 text-right font-mono font-black text-[#22263C] text-base">
-                      {(bo.pressure_impact_index || bo.pressure_score || 0).toFixed(1)}
+                      {(
+                        bo.pressure_impact_index ||
+                        bo.pressure_score ||
+                        0
+                      ).toFixed(1)}
                     </td>
                     <td className="py-4 px-6 text-center">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">

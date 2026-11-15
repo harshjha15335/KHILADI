@@ -1,0 +1,206 @@
+[
+  {
+    "event": "loader-start",
+    "time": 1794754551.8204455,
+    "seconds": 1.2743251323699951,
+    "scrollY": 0
+  },
+  {
+    "event": "loader-middle",
+    "time": 1794754552.8903503,
+    "seconds": 2.3442301750183105,
+    "scrollY": 0
+  },
+  {
+    "event": "loader-zoom",
+    "time": 1794754554.202521,
+    "seconds": 3.656400680541992,
+    "scrollY": 0
+  },
+  {
+    "event": "desktop-hero",
+    "time": 1794754555.604,
+    "seconds": 5.057879686355591,
+    "scrollY": 0
+  },
+  {
+    "event": "button-hover",
+    "time": 1794754556.6176217,
+    "seconds": 6.0715012550354,
+    "scrollY": 0
+  },
+  {
+    "event": "squad-parade",
+    "time": 1794754558.7240183,
+    "seconds": 8.177898168563843,
+    "scrollY": 790
+  },
+  {
+    "event": "editorial",
+    "time": 1794754560.5488327,
+    "seconds": 10.002712726593018,
+    "scrollY": 1094
+  },
+  {
+    "event": "heritage-entry",
+    "time": 1794754562.384658,
+    "seconds": 11.83853793144226,
+    "scrollY": 2094
+  },
+  {
+    "event": "heritage-collage",
+    "time": 1794754564.3204482,
+    "seconds": 13.774327754974365,
+    "scrollY": 2491
+  },
+  {
+    "event": "quiz-start",
+    "time": 1794754566.1337852,
+    "seconds": 15.58766484260559,
+    "scrollY": 3656
+  },
+  {
+    "event": "heritage-colour",
+    "time": 1794754566.8682857,
+    "seconds": 16.3221652507782,
+    "scrollY": 2571
+  },
+  {
+    "event": "quiz-middle",
+    "time": 1794754567.9009874,
+    "seconds": 17.354867219924927,
+    "scrollY": 3866
+  },
+  {
+    "event": "quiz-settled",
+    "time": 1794754568.8871021,
+    "seconds": 18.34098196029663,
+    "scrollY": 4166
+  },
+  {
+    "event": "quiz-reverse",
+    "time": 1794754569.8771818,
+    "seconds": 19.331061601638794,
+    "scrollY": 3466
+  },
+  {
+    "event": "quiz-final",
+    "time": 1794754570.8523202,
+    "seconds": 20.30619978904724,
+    "scrollY": 4216
+  },
+  {
+    "event": "closing",
+    "time": 1794754572.5608637,
+    "seconds": 22.01474356651306,
+    "scrollY": 5006
+  },
+  {
+    "event": "quiz-results",
+    "time": 1794754575.1482,
+    "seconds": 24.60207986831665,
+    "scrollY": 4673
+  },
+  {
+    "event": "profile-open",
+    "time": 1794754576.3108907,
+    "seconds": 25.76477026939392,
+    "scrollY": 5025
+  },
+  {
+    "event": "profile-evidence",
+    "time": 1794754576.4125466,
+    "seconds": 25.86642622947693,
+    "scrollY": 5025
+  },
+  {
+    "event": "menu-open",
+    "time": 1794754577.1973414,
+    "seconds": 26.65122127532959,
+    "scrollY": 5025
+  },
+  {
+    "event": "database-hover",
+    "time": 1794754578.4592419,
+    "seconds": 27.913121938705444,
+    "scrollY": 23
+  },
+  {
+    "event": "profile-archer",
+    "time": 1794754579.3437657,
+    "seconds": 28.797645330429077,
+    "scrollY": 23
+  },
+  {
+    "event": "mobile-hero",
+    "time": 1794754590.0440538,
+    "seconds": 39.49793338775635,
+    "scrollY": 0
+  },
+  {
+    "event": "mobile-squad",
+    "time": 1794754591.7732263,
+    "seconds": 41.22710585594177,
+    "scrollY": 810
+  },
+  {
+    "event": "mobile-collage",
+    "time": 1794754593.5251098,
+    "seconds": 42.978989362716675,
+    "scrollY": 2209
+  },
+  {
+    "event": "mobile-quiz",
+    "time": 1794754595.2255747,
+    "seconds": 44.67945432662964,
+    "scrollY": 3658
+  },
+  {
+    "event": "mobile-closing",
+    "time": 1794754596.9251835,
+    "seconds": 46.37906336784363,
+    "scrollY": 4270
+  },
+  {
+    "event": "mobile-menu",
+    "time": 1794754597.0104728,
+    "seconds": 46.46435236930847,
+    "scrollY": 4270
+  },
+  {
+    "event": "tablet-hero",
+    "time": 1794754601.3317544,
+    "seconds": 50.7856342792511,
+    "scrollY": 0
+  },
+  {
+    "event": "tablet-squad",
+    "time": 1794754603.0618777,
+    "seconds": 52.5157573223114,
+    "scrollY": 914
+  },
+  {
+    "event": "tablet-collage",
+    "time": 1794754604.8932943,
+    "seconds": 54.34717416763306,
+    "scrollY": 2545
+  },
+  {
+    "event": "tablet-quiz",
+    "time": 1794754606.6115825,
+    "seconds": 56.06546235084534,
+    "scrollY": 4070
+  },
+  {
+    "event": "tablet-closing",
+    "time": 1794754608.3568513,
+    "seconds": 57.810731410980225,
+    "scrollY": 4910
+  },
+  {
+    "event": "tablet-menu",
+    "time": 1794754608.6292639,
+    "seconds": 58.08314371109009,
+    "scrollY": 4910
+  }
+]

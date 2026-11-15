@@ -1,98 +1,103 @@
-import React, { useEffect, useState } from 'react';
-
-interface CrlPreloaderProps {
-  onComplete: () => void;
-}
-
-const safeGetSession = (key: string): string | null => {
-  try {
-    return typeof window !== 'undefined' ? sessionStorage.getItem(key) : null;
-  } catch (e) {
-    return null;
-  }
-};
-
-const safeSetSession = (key: string, val: string) => {
-  try {
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem(key, val);
+import React, { useCallback, useEffect, useRef } from "react";
+import { gsap, useGSAP } from "../utils/motion";
+export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
+  onComplete,
+}) => {
+  const root = useRef<HTMLDivElement>(null),
+    finished = useRef(false),
+    complete = useRef(onComplete);
+  complete.current = onComplete;
+  const finish = useCallback(() => {
+    if (finished.current) return;
+    finished.current = true;
+    try {
+      sessionStorage.setItem("khiladi_intro_seen", "true");
+    } catch {
+      /* storage optional */
     }
-  } catch (e) {}
-};
-
-export const CrlPreloader: React.FC<CrlPreloaderProps> = ({ onComplete }) => {
-  const [stage, setStage] = useState<'open' | 'zoom' | 'fade' | 'done'>('open');
-
+    complete.current();
+  }, []);
+  useGSAP(
+    () => {
+      let seen = false;
+      try {
+        seen = sessionStorage.getItem("khiladi_intro_seen") === "true";
+      } catch {
+        /* storage optional */
+      }
+      if (seen || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        finish();
+        return;
+      }
+      const old = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.inOut" },
+        onComplete: finish,
+      });
+      tl.fromTo(
+        ".intro-glyph",
+        { yPercent: 105 },
+        { yPercent: 0, duration: 0.75, stagger: 0.09 },
+        0.12,
+      )
+        .to(
+          ".intro-glyph",
+          {
+            x: (i: number) => (3 - i) * 8,
+            rotation: (i: number) => (3 - i) * -3,
+            duration: 0.65,
+          },
+          1.05,
+        )
+        .to(
+          ".intro-type",
+          { scale: 16, rotation: -12, duration: 1.15, ease: "expo.in" },
+          1.55,
+        )
+        .to(
+          ".intro-curtain",
+          { yPercent: -100, duration: 0.8, ease: "power4.inOut" },
+          2.2,
+        );
+      return () => {
+        tl.kill();
+        document.body.style.overflow = old;
+      };
+    },
+    { scope: root },
+  );
   useEffect(() => {
-    // Check if user already saw intro in current session
-    const seen = safeGetSession('khiladi_intro_seen');
-    const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia
-      ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      : false;
-
-    if (seen === 'true' || prefersReducedMotion) {
-      setStage('done');
-      onComplete();
-      return;
-    }
-
-    // Sequence: 0ms: Open -> 600ms: Zoom In -> 1300ms: Fade -> 1800ms: Complete
-    const t1 = setTimeout(() => setStage('zoom'), 600);
-    const t2 = setTimeout(() => setStage('fade'), 1300);
-    const t3 = setTimeout(() => {
-      safeSetSession('khiladi_intro_seen', 'true');
-      setStage('done');
-      onComplete();
-    }, 1800);
-
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
+    const key = (e: KeyboardEvent) => {
+      if (e.key === "Escape") finish();
     };
-  }, [onComplete]);
-
-  if (stage === 'done') return null;
-
-  const handleSkip = () => {
-    safeSetSession('khiladi_intro_seen', 'true');
-    setStage('done');
-    onComplete();
-  };
-
+    window.addEventListener("keydown", key);
+    return () => window.removeEventListener("keydown", key);
+  }, [finish]);
   return (
     <div
-      className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-[#FFFDF8] select-none transition-opacity duration-500 ease-out ${
-        stage === 'fade' ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+      ref={root}
+      className="intro-root"
+      role="status"
+      aria-label="Introducing KHILADI"
     >
-      {/* Delicate background glow in light theme */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-[#FFEAF2] via-[#F2EBFF] to-[#EAF5FF] rounded-full blur-[140px]" />
-      </div>
-
-      <div
-        className={`relative z-10 flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
-          stage === 'zoom'
-            ? 'scale-[2.4] opacity-0 blur-sm'
-            : 'scale-100 opacity-100 blur-0'
-        }`}
-      >
-        <span className="font-display font-black text-6xl sm:text-7xl tracking-tighter text-[#22263C]">
-          KHILADI
-        </span>
-        <div className="mt-4 font-mono text-xs tracking-[0.3em] text-[#F22E83] font-bold uppercase">
-          EST. 2008 // PRESSURE ARCHIVE
+      <div className="intro-curtain">
+        <div className="intro-meta">
+          <span>A GAME OF MOMENTS</span>
+          <span>KHILADI / RAJASTHAN</span>
         </div>
+        <div className="intro-type" aria-hidden="true">
+          {"KHILADI".split("").map((letter, i) => (
+            <span className="intro-window" key={i}>
+              <span className="intro-glyph">{letter}</span>
+            </span>
+          ))}
+        </div>
+        <button className="intro-skip" onClick={finish}>
+          Skip introduction ↗
+        </button>
+        <span className="intro-foot">GREAT PLAYERS. BIG MOMENTS.</span>
       </div>
-
-      {/* Skip button */}
-      <button
-        onClick={handleSkip}
-        className="absolute bottom-8 right-8 font-mono text-xs text-[#68738A] hover:text-[#22263C] uppercase tracking-widest border border-[#E8E6ED] bg-white px-3 py-1.5 rounded-full transition-colors cursor-pointer shadow-sm"
-      >
-        Skip [ESC]
-      </button>
     </div>
   );
 };

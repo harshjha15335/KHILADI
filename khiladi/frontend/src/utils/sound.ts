@@ -3,6 +3,7 @@
 
 let audioCtx: AudioContext | null = null;
 let isMuted: boolean = true;
+let lastSoundAt = 0;
 
 const safeGetStorage = (key: string): string | null => {
   try {
@@ -45,6 +46,9 @@ const initAudio = () => {
 
 export const playSound = (type: 'hover_tick' | 'button_click' | 'modal_open' | 'quiz_select' | 'chime') => {
   if (isMuted) return;
+  const timestamp = performance.now();
+  if (timestamp - lastSoundAt < 70) return;
+  lastSoundAt = timestamp;
   try {
     initAudio();
     if (!audioCtx) return;
@@ -54,6 +58,7 @@ export const playSound = (type: 'hover_tick' | 'button_click' | 'modal_open' | '
     osc.connect(gain);
     gain.connect(audioCtx.destination);
 
+    osc.onended = () => { osc.disconnect(); gain.disconnect(); };
     const now = audioCtx.currentTime;
 
     if (type === 'hover_tick') {

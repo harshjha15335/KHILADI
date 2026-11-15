@@ -1,100 +1,121 @@
-import React from 'react';
-import { playClickChime } from '../utils/sound';
-import { 
-  FileText, 
-  Printer, 
-  ShieldCheck, 
-  CheckCircle2, 
-  Code
-} from 'lucide-react';
-
-export const MethodologyPage: React.FC = () => {
-  const handlePrint = () => {
-    playClickChime();
-    window.print();
-  };
-
-  return (
-    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-12">
-        {/* Header & Print Action */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E8E6ED] pb-8">
-          <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
-              <FileText className="w-3.5 h-3.5" />
-              <span>Rajasthan Royals SupeRR Selector S2 • Technical Report</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
-              METHODOLOGY & AUDIT EVIDENCE
-            </h1>
-            <p className="text-sm text-[#505A70] leading-relaxed">
-              Formal mathematical specification, leverage index modeling, Empirical Bayes shrinkage derivation, and reproducible verification proofs.
+import React from "react";
+import { KhiladiKineticText } from "../components/KhiladiKineticText";
+import { AnalyticsIntro } from "../components/AnalyticsIntro";
+export const MethodologyPage: React.FC = () => (
+  <div className="min-h-screen pt-32 pb-20 px-5">
+    <div className="max-w-4xl mx-auto space-y-10">
+      <KhiladiKineticText
+        as="h1"
+        text="Behind the big moments."
+        className="text-4xl sm:text-6xl font-bold"
+      />
+      <AnalyticsIntro>
+        The numbers help you ask better questions about a player. They describe
+        recorded performance, and cannot promise what happens next.
+      </AnalyticsIntro>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">What counts as pressure?</h2>
+        <p>
+          The inherited model uses rules based on innings, overs, runs needed,
+          wickets already lost, and knockout status. A delivery is labelled high
+          pressure when its calculated index reaches 1.8. This is a match-state
+          heuristic; it is not a calibrated win-probability model.
+        </p>
+        <details>
+          <summary>Inspect the match-state rules</summary>
+          <div className="space-y-4 py-4">
+            <p>
+              For example, a first-innings delivery in overs 16–20 receives 2.2
+              when at most five wickets have fallen, or 1.8 with six to eight
+              wickets down. A knockout match multiplies the score by 1.25.
+              Chases also use required run rate and balls remaining.
+            </p>
+            <p>
+              The implementation is in{" "}
+              <code>scripts/build_pressure_model.py</code>. Its ball-count and
+              leakage assumptions require separate statistical validation; this
+              frontend takeover did not rebuild the model.
             </p>
           </div>
-
-          <button
-            onClick={handlePrint}
-            className="delta-btn-mask px-6 py-3 bg-[#F22E83] text-white text-xs font-mono font-bold tracking-wider uppercase rounded-full shadow-sm cursor-pointer self-start md:self-auto"
-          >
-            <Printer className="w-4 h-4 mr-2 inline-block" />
-            <span>Save / Print PDF Report</span>
-          </button>
-        </div>
-
-        {/* Executive Summary */}
-        <div className="p-8 rounded-3xl bg-white border border-[#E8E6ED] shadow-sm space-y-4">
-          <h2 className="text-xl font-bold font-display text-[#22263C]">1. Executive Overview</h2>
-          <p className="text-sm text-[#505A70] leading-relaxed">
-            The Rajasthan Royals SupeRR Selector Season 2 competition challenges analysts to identify genuine clutch performers under extreme match pressure. Traditional aggregate metrics (batting average, economy rate) fail because they treat low-stakes runs and high-stakes match-deciding deliveries identically. KHILADI introduces a two-tier Bayesian framework that filters deliveries down to high-pressure balls ($LI \ge 1.5$) and applies Empirical Bayes shrinkage to prevent small-sample distortion.
-          </p>
-        </div>
-
-        {/* Mathematical Formulation */}
-        <div className="p-8 rounded-3xl bg-white border border-[#E8E6ED] shadow-sm space-y-6">
-          <h2 className="text-xl font-bold font-display text-[#22263C]">2. Mathematical Framework</h2>
-          
-          <div className="space-y-2">
-            <div className="text-sm font-bold text-[#2549BD]">Leverage Index ($LI$) Definition</div>
-            <div className="p-4 rounded-2xl bg-[#EAF5FF] border border-[#B3D4FF] font-mono text-xs text-[#22263C]">
-              LI(d) = |ΔWP(d)| / E[|ΔWP|]
-            </div>
-            <p className="text-xs text-[#68738A] leading-relaxed">
-              Where $WP$ denotes the win probability function derived from the chase target, current run rate deficit, wickets remaining, and ball position. Deliveries with $LI \ge 1.5$ represent high-leverage events.
+        </details>
+      </section>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">Compare like with like.</h2>
+        <p>
+          Batting strike rate means runs per 100 balls. Bowling economy means
+          runs conceded per over. The baseline shown here is the player's
+          overall recorded sample, including pressure deliveries. It is not a
+          separately estimated normal-only or role-adjusted baseline.
+        </p>
+        <details>
+          <summary>Understand the changes and model index</summary>
+          <div className="space-y-4 py-4">
+            <p>
+              Batting change = pressure strike rate − overall strike rate. A
+              positive value means faster scoring. Bowling economy improvement =
+              overall economy − pressure economy. A positive value means fewer
+              runs conceded under pressure.
+            </p>
+            <p>
+              The batting index combines a strike rate shrunk toward 125 with a
+              40-ball prior, boundary frequency, dot-ball avoidance, and
+              pressure average. The bowling index uses an economy prior of 9
+              with 40 balls, dot-ball percentage, and wicket-taking rate. The
+              stored all-rounder index combines the batting and bowling indices
+              using the inherited weights.
+            </p>
+            <p>
+              These composite indices are estimates, not percentages,
+              psychological diagnoses, or probabilities of success. Scores from
+              different roles are not directly interchangeable.
             </p>
           </div>
-
-          <div className="space-y-2">
-            <div className="text-sm font-bold text-[#F22E83]">Empirical Bayes Shrinkage Estimator</div>
-            <div className="p-4 rounded-2xl bg-[#FFEAF2] border border-[#F5B1CE] font-mono text-xs text-[#22263C]">
-              θ̂_i = (n_i / (n_i + m)) · ȳ_i + (m / (n_i + m)) · μ_prior
-            </div>
-            <p className="text-xs text-[#68738A] leading-relaxed">
-              With $m = 40$ deliveries. Players with few high-pressure deliveries are shrunk toward the population baseline, ensuring that single-ball anomalies do not corrupt tournament selection.
-            </p>
-          </div>
-        </div>
-
-        {/* Whitelist Governance */}
-        <div className="p-8 rounded-3xl bg-white border border-[#E8E6ED] shadow-sm space-y-4">
-          <div className="flex items-center gap-2 text-emerald-600 font-bold">
-            <ShieldCheck className="w-5 h-5" />
-            <span>3. Zero Hallucination Whitelist Compliance</span>
-          </div>
-          <p className="text-sm text-[#505A70] leading-relaxed">
-            Every single player in the KHILADI application is strictly bound to <code className="text-[#2549BD] font-bold">Data Pack/competition_team_player_mapping.csv</code>. Exactly 1,217 players exist in the universe. No external web additions, fantasy rosters, or unverified auction candidates are selectable or ranked.
-          </p>
-          <div className="p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] font-mono text-xs space-y-1">
-            <div className="text-emerald-700 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4" />
-              <span>Verified 1,217 unique canonical player IDs.</span>
-            </div>
-            <div className="text-emerald-700 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4" />
-              <span>100% of top-10 batters and top-10 bowlers match Unstop submission dropdown.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+        </details>
+      </section>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">
+          A small sample tells a smaller story.
+        </h2>
+        <p>
+          The two top-ten exports use the existing qualification rules: batters
+          need at least 100 recorded balls and 35 pressure balls; bowlers need
+          at least 120 recorded balls and 40 pressure balls. The broader player
+          database includes players with less evidence.
+        </p>
+        <p>
+          Confidence intervals, chronological backtesting, role-adjusted
+          baselines and separate phase-level estimates are not present in the
+          supplied outputs. They have not been invented for this interface.
+        </p>
+      </section>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">Where do the players come from?</h2>
+        <p>
+          Selectable players are restricted to the original competition mapping.
+          The Royals parade uses the latest Rajasthan Royals IPL season
+          represented in that pack—IPL 2026. This does not claim a current live
+          squad or auction eligibility.
+        </p>
+        <p>
+          Official IPL source identity and media reuse permission are separate
+          checks. The local preview includes review-only imagery; a production
+          build requires cleared media. Existing model outputs, source files and
+          ranking exports are preserved.
+        </p>
+      </section>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">How recommendations work</h2>
+        <p>
+          The existing recommendation service filters by playing role and
+          recorded pressure sample, then orders by model index or pressure
+          strike rate/economy for its final-overs option. It does not calculate
+          a separate phase-specific forecast or risk preference. Recommendations
+          are a starting point for research.
+        </p>
+      </section>
+      <button className="text-link" onClick={() => window.print()}>
+        Print these notes ↗
+      </button>
     </div>
-  );
-};
+  </div>
+);
