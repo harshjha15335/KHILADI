@@ -34,3 +34,23 @@ docs/qa/phase2/*.png
 docs/qa/phase2/*.webm
 docs/qa/phase2/raw/
 docs/qa/phase2/parade-raw/
+
+# Private original competition pack, uncleared review media and generated reports
+Data Pack/
+assets/cutouts/
+assets/portraits/
+khiladi/assets/cutouts/
+khiladi/assets/portraits/
+khiladi/frontend/public/assets/cutouts/
+khiladi/frontend/public/assets/portraits/
+khiladi/frontend/public/assets/archival/
+docs/**/*.png
+docs/**/*.jpg
+docs/**/*.jpeg
+docs/**/*.webm
+docs/**/*.pdf
+khiladi/frontend/public/*.pdf
+.env
+.env.*
+!.env.example
+.DS_Store

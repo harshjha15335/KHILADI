@@ -1,3 +1,4 @@
+import { siteURL } from "../utils/urls";
 import { metric } from "../utils/api";
 import { playerImage } from "../utils/media";
 import React, { useState, useEffect } from "react";
@@ -16,7 +17,7 @@ export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
   const [playerBId, setPlayerBId] = useState<number>(6423); // Riyan Parag
 
   useEffect(() => {
-    fetch("/data/player_database.json")
+    fetch(siteURL("/data/player_database.json"))
       .then((r) => r.json())
       .then((data: Player[]) => setPlayers(data));
   }, []);

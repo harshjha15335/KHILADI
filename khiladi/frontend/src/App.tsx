@@ -1,3 +1,4 @@
+import { apiURL } from "./utils/urls";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
@@ -73,7 +74,7 @@ export const App: React.FC = () => {
       setSelectedPlayer(found);
     } else {
       // Fetch single player from API if not loaded
-      fetch(`/api/players/${playerId}`)
+      fetch(apiURL(`/api/players/${playerId}`))
         .then((res) => res.json())
         .then((data) => setSelectedPlayer(data.player))
         .catch((err) => console.error("Failed to load player:", err));

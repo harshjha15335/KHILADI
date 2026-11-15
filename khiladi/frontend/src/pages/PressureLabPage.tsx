@@ -1,3 +1,4 @@
+import { apiURL, siteURL } from "../utils/urls";
 import React, { useState, useEffect } from "react";
 import {
   Flame,
@@ -51,7 +52,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
   const [playbackSpeed, setPlaybackSpeed] = useState(600); // ms per ball
 
   useEffect(() => {
-    fetch("/data/sample_match_replay.json")
+    fetch(siteURL("/data/sample_match_replay.json"))
       .then((res) => res.json())
       .then((data: ReplayData) => {
         setReplay(data);
@@ -59,7 +60,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
         if (firstHp !== -1) setCurrentIndex(firstHp);
       })
       .catch(() => {
-        fetch("/api/match-replay")
+        fetch(apiURL("/api/match-replay"))
           .then((res) => res.json())
           .then((data: ReplayData) => setReplay(data))
           .catch((err) => console.error("Failed to load match replay:", err));

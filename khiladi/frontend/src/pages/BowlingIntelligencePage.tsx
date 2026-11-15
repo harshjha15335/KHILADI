@@ -1,3 +1,4 @@
+import { siteURL } from "../utils/urls";
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
 import { ShieldCheck, TrendingDown, Search } from "lucide-react";
@@ -13,7 +14,7 @@ export const BowlingIntelligencePage: React.FC<
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("/data/player_database.json")
+    fetch(siteURL("/data/player_database.json"))
       .then((r) => r.json())
       .then((data: Player[]) => {
         const filtered = data

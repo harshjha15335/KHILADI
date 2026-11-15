@@ -1,9 +1,13 @@
+import { apiURL, siteURL, staticPages } from "./urls";
 import { Player } from "../types";
 export async function requestJSON<T>(
   url: string,
   signal?: AbortSignal,
 ): Promise<T> {
-  const response = await fetch(url, { signal });
+  const response = await fetch(
+    url.startsWith("/api/") ? apiURL(url) : siteURL(url),
+    { signal },
+  );
   if (!response.ok) throw new Error(`Request failed (${response.status})`);
   return response.json();
 }
@@ -48,3 +52,40 @@ export function describePlayer(player: Player): string {
 }
 export const metric = (value: number | undefined, digits = 1) =>
   Number.isFinite(value) ? value!.toFixed(digits) : "Unavailable";
+
+export interface RecommendationQuery {
+  role_priority: string;
+  match_phase: string;
+  risk_profile: string;
+}
+export interface RecommendationResult {
+  recommendations: Player[];
+  matched_count: number;
+  query: RecommendationQuery;
+}
+export async function recommendPlayers(
+  query: RecommendationQuery,
+): Promise<RecommendationResult> {
+  if (staticPages) {
+    const snapshots = await requestJSON<Record<string, RecommendationResult>>(
+      "/data/quiz_recommendations.json",
+    );
+    const result =
+      snapshots[
+        JSON.stringify([
+          query.role_priority,
+          query.match_phase,
+          query.risk_profile,
+        ])
+      ];
+    if (!result) throw new Error("No saved model output for this selection");
+    return result;
+  }
+  const response = await fetch(apiURL("/api/quiz/recommend"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(query),
+  });
+  if (!response.ok) throw new Error("Recommendation service unavailable");
+  return response.json();
+}

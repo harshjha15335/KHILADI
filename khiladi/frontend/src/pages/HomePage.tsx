@@ -1,7 +1,13 @@
+import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
 import { Player } from "../types";
 import { gsap, ScrollTrigger, useGSAP } from "../utils/motion";
-import { describePlayer, loadPlayers, requestJSON } from "../utils/api";
+import {
+  describePlayer,
+  loadPlayers,
+  requestJSON,
+  recommendPlayers,
+} from "../utils/api";
 import {
   approvedHeroClips,
   archivalImages,
@@ -254,17 +260,11 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
     setBusy(true);
     setQuizError("");
     try {
-      const response = await fetch("/api/quiz/recommend", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          role_priority: role,
-          match_phase: phase,
-          risk_profile: "Consistent Reliability",
-        }),
+      const data = await recommendPlayers({
+        role_priority: role,
+        match_phase: phase,
+        risk_profile: "Consistent Reliability",
       });
-      if (!response.ok) throw new Error("Recommendation service unavailable");
-      const data = await response.json();
       const canonical = await loadPlayers();
       const ids = new Set(canonical.map((p) => p.player_id));
       setResults(
@@ -670,6 +670,8 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
                 )}
                 <p className="quiz-caveat">
                   Model suggestions, not predictions or guarantees.
+                  {staticPages &&
+                    " This static site uses saved outputs of the existing model."}
                 </p>
                 <button className="text-link" onClick={() => setQuizStep(1)}>
                   Try another combination ↗

@@ -1,3 +1,10 @@
+## Run or view the preserved project
+
+- Windows / Codex Local: [LOCAL_WINDOWS_SETUP.md](LOCAL_WINDOWS_SETUP.md).
+- Static GitHub Pages deployment: [docs/GITHUB_PAGES.md](docs/GITHUB_PAGES.md).
+- Migration branch: `migration/windows-and-pages`. Restore private source/media only
+  from the separate private handoff; do not commit them.
+
 # KHILADI
 
 Cricket player discovery and pressure-performance research, with a React/Vite

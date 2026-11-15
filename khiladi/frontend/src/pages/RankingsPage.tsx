@@ -1,3 +1,4 @@
+import { apiURL, siteURL } from "../utils/urls";
 import { playerImage } from "../utils/media";
 import React, { useState, useEffect } from "react";
 import { TopBatter, TopBowler } from "../types";
@@ -26,12 +27,16 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/top_10_batters.json")
+      fetch(siteURL("/data/top_10_batters.json"))
         .then((r) => r.json())
-        .catch(() => fetch("/api/rankings/batters").then((r) => r.json())),
-      fetch("/data/top_10_bowlers.json")
+        .catch(() =>
+          fetch(apiURL("/api/rankings/batters")).then((r) => r.json()),
+        ),
+      fetch(siteURL("/data/top_10_bowlers.json"))
         .then((r) => r.json())
-        .catch(() => fetch("/api/rankings/bowlers").then((r) => r.json())),
+        .catch(() =>
+          fetch(apiURL("/api/rankings/bowlers")).then((r) => r.json()),
+        ),
     ])
       .then(([bData, boData]) => {
         setBatters(Array.isArray(bData) ? bData : bData.rankings);
@@ -50,7 +55,7 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
         ? "/data/top_10_batters.csv"
         : "/data/top_10_bowlers.csv";
     const link = document.createElement("a");
-    link.href = url;
+    link.href = siteURL(url);
     link.download = `rr_superr_selector_top_10_${type}.csv`;
     document.body.appendChild(link);
     link.click();
