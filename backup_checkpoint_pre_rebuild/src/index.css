@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --royal-pink: #E81274;
+  --royal-pink-bright: #F52391;
+  --royal-navy: #101B4B;
+  --royal-blue: #203A8C;
+  --royal-purple: #29134F;
+  --royal-dark: #080C1F;
+  --royal-white: #F7F4FA;
+  --royal-gold: #D6AF60;
+  --royal-volt: #D4FF00;
+}
+
+/* Custom AUGE Diamond Cursor */
+.custom-cursor-active {
+  cursor: none !important;
+}
+
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active [role="button"],
+.custom-cursor-active input,
+.custom-cursor-active select {
+  cursor: none !important;
+}
+
+/* Diamond cursor follower */
+.diamond-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #FDF48B; /* Pale gold/yellow from AUGE XP */
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  box-shadow: 0 0 10px rgba(253, 244, 139, 0.8);
+  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.diamond-cursor-dot.hovered {
+  width: 24px;
+  height: 24px;
+  background: #E81274;
+  box-shadow: 0 0 16px rgba(232, 18, 116, 0.9);
+}
+
+/* Delta Button Animation */
+.khiladi-btn-mask {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.khiladi-btn-mask::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #E81274 0%, #203A8C 100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.khiladi-btn-mask:hover::before {
+  transform: translateY(-100%);
+}
+
+.khiladi-btn-mask span {
+  position: relative;
+  z-index: 10;
+}
+
+/* Orbiting Animation */
+@keyframes orbit-slow {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  from {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+}
+
+.animate-orbit-1 {
+  --orbit-radius: 200px;
+  animation: orbit-slow 35s linear infinite;
+}
+
+.animate-orbit-2 {
+  --orbit-radius: 290px;
+  animation: orbit-reverse 45s linear infinite;
+}
+
+.animate-orbit-3 {
+  --orbit-radius: 380px;
+  animation: orbit-slow 55s linear infinite;
+}
+
+/* Horizontal Squad Marquee */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Creative Underline Styles (Extrafazant inspired) */
+.creative-underline-left {
+  position: relative;
+}
+.creative-underline-left::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #E81274;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.creative-underline-left:hover::after {
+  width: 100%;
+}
+
+.creative-underline-center {
+  position: relative;
+}
+.creative-underline-center::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #D6AF60;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+}
+.creative-underline-center:hover::after {
+  width: 100%;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-orbit-1, .animate-orbit-2, .animate-orbit-3, .animate-marquee {
+    animation: none !important;
+  }
+}

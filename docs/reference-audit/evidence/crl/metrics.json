@@ -1,0 +1,6 @@
+{
+  "console_logs": [],
+  "detection": {},
+  "viewports": {},
+  "error": "Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://crl-2026.webflow.io/\", waiting until \"domcontentloaded\"\n"
+}

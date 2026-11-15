@@ -1,0 +1,14 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.playwright/
+khiladi/frontend/node_modules/
+khiladi/frontend/dist/
+khiladi/backend/__pycache__/
+khiladi/backend/data_cache/
+*.zip
+*.mp4
+*.m4v
+*.tar.gz

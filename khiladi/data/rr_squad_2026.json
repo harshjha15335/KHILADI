@@ -1,0 +1,237 @@
+[
+  {
+    "player_id": 152,
+    "player_name": "Ravindra Jadeja",
+    "role": "All-Rounder",
+    "pressure_impact_index": 9.06,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/152_ravindra-jadeja_cutout.png",
+    "portrait_url": "/assets/portraits/152_ravindra-jadeja.png"
+  },
+  {
+    "player_id": 1487,
+    "player_name": "Adam Milne",
+    "role": "All-Rounder",
+    "pressure_impact_index": 7.02,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/1487_adam-milne_cutout.png",
+    "portrait_url": "/assets/portraits/1487_adam-milne.png"
+  },
+  {
+    "player_id": 2411,
+    "player_name": "Sandeep Sharma",
+    "role": "All-Rounder",
+    "pressure_impact_index": 5.58,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/2411_sandeep-sharma_cutout.png",
+    "portrait_url": "/assets/portraits/2411_sandeep-sharma.png"
+  },
+  {
+    "player_id": 2436,
+    "player_name": "Dasun Shanaka",
+    "role": "All-Rounder",
+    "pressure_impact_index": 7.32,
+    "season_label": "IPL 2026 \u2014 from supplied data"
+  },
+  {
+    "player_id": 3297,
+    "player_name": "Shimron Hetmyer",
+    "role": "Batter",
+    "pressure_impact_index": 8.33,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/3297_shimron-hetmyer_cutout.png",
+    "portrait_url": "/assets/portraits/3297_shimron-hetmyer.png"
+  },
+  {
+    "player_id": 3298,
+    "player_name": "Jofra Archer",
+    "role": "All-Rounder",
+    "pressure_impact_index": 8.18,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/3298_jofra-archer_cutout.png",
+    "portrait_url": "/assets/portraits/3298_jofra-archer.png"
+  },
+  {
+    "player_id": 4409,
+    "player_name": "Sam Curran",
+    "role": "All-Rounder",
+    "pressure_impact_index": 7.52,
+    "season_label": "IPL 2026 \u2014 from supplied data"
+  },
+  {
+    "player_id": 6423,
+    "player_name": "Riyan Parag",
+    "role": "All-Rounder",
+    "pressure_impact_index": 7.54,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/6423_riyan-parag_cutout.png",
+    "portrait_url": "/assets/portraits/6423_riyan-parag.png"
+  },
+  {
+    "player_id": 6806,
+    "player_name": "Tushar Deshpande",
+    "role": "All-Rounder",
+    "pressure_impact_index": 5.62,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/6806_tushar-deshpande_cutout.png",
+    "portrait_url": "/assets/portraits/6806_tushar-deshpande.png"
+  },
+  {
+    "player_id": 6819,
+    "player_name": "Yashasvi Jaiswal",
+    "role": "Batter",
+    "pressure_impact_index": 8.38,
+    "season_label": "IPL 2026 \u2014 from supplied data"
+  },
+  {
+    "player_id": 7260,
+    "player_name": "Dhruv Jurel",
+    "role": "Batter",
+    "pressure_impact_index": 8.98,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/7260_dhruv-jurel_cutout.png",
+    "portrait_url": "/assets/portraits/7260_dhruv-jurel.png"
+  },
+  {
+    "player_id": 7269,
+    "player_name": "Sushant Mishra",
+    "role": "Bowler",
+    "pressure_impact_index": 7.08,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/7269_sushant-mishra_cutout.png",
+    "portrait_url": "/assets/portraits/7269_sushant-mishra.png"
+  },
+  {
+    "player_id": 7312,
+    "player_name": "Nandre Burger",
+    "role": "All-Rounder",
+    "pressure_impact_index": 6.34,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/7312_nandre-burger_cutout.png",
+    "portrait_url": "/assets/portraits/7312_nandre-burger.png"
+  },
+  {
+    "player_id": 7503,
+    "player_name": "Ravi Bishnoi",
+    "role": "All-Rounder",
+    "pressure_impact_index": 7.71,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/7503_ravi-bishnoi_cutout.png",
+    "portrait_url": "/assets/portraits/7503_ravi-bishnoi.png"
+  },
+  {
+    "player_id": 7545,
+    "player_name": "Kuldeep Sen",
+    "role": "Bowler",
+    "pressure_impact_index": 5.67,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/7545_kuldeep-sen_cutout.png",
+    "portrait_url": "/assets/portraits/7545_kuldeep-sen.png"
+  },
+  {
+    "player_id": 8182,
+    "player_name": "Donovan Ferreira",
+    "role": "All-Rounder",
+    "pressure_impact_index": 7.02,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/8182_donovan-ferreira_cutout.png",
+    "portrait_url": "/assets/portraits/8182_donovan-ferreira.png"
+  },
+  {
+    "player_id": 8580,
+    "player_name": "Yudhvir Singh",
+    "role": "All-Rounder",
+    "pressure_impact_index": 3.62,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/8580_yudhvir-singh_cutout.png",
+    "portrait_url": "/assets/portraits/8580_yudhvir-singh.png"
+  },
+  {
+    "player_id": 25139,
+    "player_name": "Shubham Dubey",
+    "role": "Batter",
+    "pressure_impact_index": 8.31,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/25139_shubham-dubey_cutout.png",
+    "portrait_url": "/assets/portraits/25139_shubham-dubey.png"
+  },
+  {
+    "player_id": 26663,
+    "player_name": "Kwena Maphaka",
+    "role": "All-Rounder",
+    "pressure_impact_index": 6.05,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/26663_kwena-maphaka_cutout.png",
+    "portrait_url": "/assets/portraits/26663_kwena-maphaka.png"
+  },
+  {
+    "player_id": 41503,
+    "player_name": "Yash Punja",
+    "role": "Bowler",
+    "pressure_impact_index": 5.78,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/41503_yash-punja_cutout.png",
+    "portrait_url": "/assets/portraits/41503_yash-punja.png"
+  },
+  {
+    "player_id": 43798,
+    "player_name": "Lhuan Pretorius",
+    "role": "Batter",
+    "pressure_impact_index": 4.07,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/43798_lhuan-pretorius_cutout.png",
+    "portrait_url": "/assets/portraits/43798_lhuan-pretorius.png"
+  },
+  {
+    "player_id": 43965,
+    "player_name": "Emanjot Singh Chahal",
+    "role": "Squad Member",
+    "pressure_impact_index": 0.0,
+    "season_label": "IPL 2026 \u2014 from supplied data"
+  },
+  {
+    "player_id": 47523,
+    "player_name": "Aman Rao Perala",
+    "role": "Squad Member",
+    "pressure_impact_index": 0.0,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/47523_aman-rao-perala_cutout.png",
+    "portrait_url": "/assets/portraits/47523_aman-rao-perala.png"
+  },
+  {
+    "player_id": 48557,
+    "player_name": "Vignesh Puthur",
+    "role": "Bowler",
+    "pressure_impact_index": 8.27,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/48557_vignesh-puthur_cutout.png",
+    "portrait_url": "/assets/portraits/48557_vignesh-puthur.png"
+  },
+  {
+    "player_id": 50284,
+    "player_name": "Vaibhav Sooryavanshi",
+    "role": "Batter",
+    "pressure_impact_index": 11.81,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/50284_vaibhav-sooryavanshi_cutout.png",
+    "portrait_url": "/assets/portraits/50284_vaibhav-sooryavanshi.png"
+  },
+  {
+    "player_id": 60700,
+    "player_name": "Ravi Singh",
+    "role": "Squad Member",
+    "pressure_impact_index": 5.67,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/60700_ravi-singh_cutout.png",
+    "portrait_url": "/assets/portraits/60700_ravi-singh.png"
+  },
+  {
+    "player_id": 67036,
+    "player_name": "Brijesh Sharma",
+    "role": "Bowler",
+    "pressure_impact_index": 5.07,
+    "season_label": "IPL 2026 \u2014 from supplied data",
+    "cutout_url": "/assets/cutouts/67036_brijesh-sharma_cutout.png",
+    "portrait_url": "/assets/portraits/67036_brijesh-sharma.png"
+  }
+]

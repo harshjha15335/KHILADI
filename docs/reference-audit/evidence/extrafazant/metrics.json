@@ -1,0 +1,40 @@
+{
+  "console_logs": [
+    "[warning] [Meta Pixel] - An invalid email address was specified for 'em'. This data will not be sent with any events for this Pixel.",
+    "[warning] [Meta Pixel] - Duplicate Pixel ID: 736147309922216.",
+    "[info] [@barba/core]  2.10.3",
+    "[info] [@barba/core]  Transition found [once] {name: default, sync: true, once: , leave: , enter: }",
+    "[log] \u2705 CookieFlow\u2122 by Reform Digital\u00ae loaded \u00b7 \ud83d\udcd8: Docs: https://docs.reform.digital/cookie-flow",
+    "[log] \u2705 TooltipX\u2122 by Reform Digital\u00ae loaded \u00b7 \ud83d\udcd8: Docs: https://docs.reform.digital/tooltip-x",
+    "[log] \u2705 TooltipX\u2122 by Reform Digital\u00ae loaded \u00b7 \ud83d\udcd8: Docs: https://docs.reform.digital/tooltip-x"
+  ],
+  "detection": {
+    "hasGSAP": true,
+    "gsapVersion": "3.15.0",
+    "hasScrollTrigger": true,
+    "hasLenis": true,
+    "hasLocomotive": false,
+    "hasThree": false,
+    "hasWebGL": true,
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "hasFramerMotion": false,
+    "hasSwiper": false,
+    "hasLottie": false,
+    "fontFamilies": [
+      "sans-serif",
+      "\"Helvetica Now Subset\", Arial, sans-serif"
+    ],
+    "canvasCount": 0,
+    "videoCount": 7,
+    "svgCount": 25,
+    "pageHeight": 12068,
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "performanceTiming": {
+      "loadTimeMs": 6141,
+      "domReadyMs": 5543
+    }
+  },
+  "viewports": {},
+  "status": 200
+}

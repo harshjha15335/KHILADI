@@ -1,0 +1,31 @@
+{
+  "console_logs": [],
+  "detection": {
+    "hasGSAP": false,
+    "gsapVersion": null,
+    "hasScrollTrigger": null,
+    "hasLenis": false,
+    "hasLocomotive": false,
+    "hasThree": false,
+    "hasWebGL": true,
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "hasFramerMotion": false,
+    "hasSwiper": false,
+    "hasLottie": false,
+    "fontFamilies": [
+      "\"Times New Roman\""
+    ],
+    "canvasCount": 0,
+    "videoCount": 0,
+    "svgCount": 0,
+    "pageHeight": 1080,
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "performanceTiming": {
+      "loadTimeMs": 439,
+      "domReadyMs": 438
+    }
+  },
+  "viewports": {},
+  "status": 200
+}

@@ -1,0 +1,15 @@
+# ROYAL EDGE — Mandatory Antigravity Workspace Rules (Revision 2)
+
+## Source-of-truth priority
+1. The user's latest explicit design and source restrictions override the earlier Phase 0 document.
+2. Player roster: `Data Pack/competition_team_player_mapping.csv` in the **user-uploaded ZIP only**. `player_id` is the immutable key. Every player displayed, selectable, searched, ranked, compared or recommended must belong to this canonical source. No current live IPL roster or web player database may add players.
+3. RR player band: RR-affiliated records for the latest RR IPL competition season present *in the supplied ZIP*, labelled as 'RR players represented in the data pack — IPL 2026' if supported. It is **not** a claim of current 2027 squad membership.
+4. Player portraits: **IPL official website exclusively** (`https://www.iplt20.com/` and image assets explicitly linked from its official player pages). No Google Images, RR site, ESPNcricinfo, Instagram, Wikipedia, third-party stock or AI portraits as substitutes. Validate one-to-one identity. For players without official IPL portraits: an elegant typographic / silhouette fallback, never a wrong person.
+5. Orbiting quiz visual: players should be isolated foreground cutouts on **transparent backgrounds**; NO rectangular photo backgrounds, photo tiles, scenery, or background images behind them. Transparent processing only with authorization to modify originals. Quiz section's own backdrop may use brand-colour gradients and non-photographic shapes.
+6. Footage: The user accepts cricket footage from any match/team/source and does not require RR-only clips. Prefer Rajasthan Royals scenes for RR branding. No fake claim that unrelated scenes depict RR. Source, rights, embed restrictions, editing permission and attribution still must be audited.
+7. Theme: RR royal pink, deep navy, royal purple, white, subtle gold. Delta Cafés is homepage interaction/layout reference, not source of colours/images/assets.
+8. Motion ownership: CRL initial zoom loader; Delta homepage chronology and buttons; AUGE yellow diamond cursor globally and optional user-enabled sound; AUGE warp on non-home *image surfaces only*; Cyera player-card expansion; Extrafazant text-separation on non-home only and custom link underline effects. NO warp and NO Extrafazant split-hover on homepage.
+9. Player stats, metrics, forecast, squad fit and final top-10 batting/bowling rankings must come from cleaned source data and validated models. No made-up results or auction figures. Exclude unavailable cases explicitly.
+10. Copyright/rights: IPL official site photos are protected, and source availability alone does NOT authorize copying or removing backgrounds. Maintain rights manifest; do not ship unlicensed derived images or re-edited broadcast clips publicly.
+11. Privacy: never expose original competition CSV/ZIP in public web bundles or unauthenticated bulk endpoints. No paid services/deployment without explicit user approval.
+12. Before tasks, discover and read relevant `.agents/skills/<skill-name>/SKILL.md`. Record acceptance evidence in screenshots, recordings and tests, and do not mark blocked features done.

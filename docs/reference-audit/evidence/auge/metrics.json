@@ -1,0 +1,35 @@
+{
+  "console_logs": [
+    "[log] %c[AUGE XP] \ud83d\udc4b Hey, curious developer! Looking for something? \ud83d\ude80 Handmade by Manuel Mancini (Tech Director) & Fabio Minerva (Design Director). Follow us! background: #fdf48b; color: #111; font-weight: bold; padding: 4px; border-radius: 6px; font-size: 10px;"
+  ],
+  "detection": {
+    "hasGSAP": false,
+    "gsapVersion": null,
+    "hasScrollTrigger": null,
+    "hasLenis": false,
+    "hasLocomotive": false,
+    "hasThree": false,
+    "hasWebGL": true,
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "hasFramerMotion": false,
+    "hasSwiper": false,
+    "hasLottie": false,
+    "fontFamilies": [
+      "ppNeueMontreal, \"ppNeueMontreal Fallback\"",
+      "ppNeueMontreal, \"ppNeueMontreal Fallback\", sans-serif",
+      "sans-serif"
+    ],
+    "canvasCount": 1,
+    "videoCount": 0,
+    "svgCount": 4,
+    "pageHeight": 1080,
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "performanceTiming": {
+      "loadTimeMs": 4218,
+      "domReadyMs": 2008
+    }
+  },
+  "viewports": {},
+  "status": 200
+}

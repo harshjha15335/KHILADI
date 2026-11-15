@@ -1,0 +1,22 @@
+# Reference to Feature Mapping: The ROYAL EDGE Adaptation Matrix
+
+This matrix maps every key technique discovered during the reverse-engineering audit directly to its corresponding feature inside **ROYAL EDGE**, explaining how it delivers tangible analytical or strategic value to cricket scouts, competition judges, and Rajasthan Royals auction strategists.
+
+---
+
+## The Master Adaptation Matrix
+
+| Reference Origin | Observed Interaction / Effect | Underlying Mechanism | ROYAL EDGE Feature Use Case | Practical Value to Analyst / Judge / Scout | Difficulty | Performance Impact | Priority |
+|---|---|---|---|---|:---:|:---:|:---:|
+| **Extrafazant** | SplitText line-mask character reveal | GSAP `SplitText.min.js`, masked `overflow:hidden` divs | **Homepage & Pressure Lab Entrance Titles** | Creates immediate visual authority, framing pressure analysis as a prestigious discipline rather than a generic dashboard. | Low | Negligible (<1ms render) | **P1 (Core)** |
+| **Extrafazant** | Magnetic pill CTA button with spring physics | Mouse offset calculation + `elastic.out(1, 0.3)` spring | **Primary Decision CTAs** (*"Shortlist for Auction"*, *"Simulate RTM Match"*) | Gives tactile physical weight to strategic decision-making in the Auction War Room. | Low | Negligible | **P1 (Core)** |
+| **Extrafazant** | Barba.js full-screen curtain wipe transition | Outgoing slide + vertical curtain scale (`scaleY: 0->1`) | **Global Route Transitions** (Homepage -> Command Centre) | Delivers a cohesive, app-like experience without white screen flashes or abrupt page jumps. | Moderate | Low (Composite transform) | **P1 (Core)** |
+| **CRL** | Archival monospaced index table with hairline grid | Swiss-style monospaced data alignment, 8px grid | **Player Database & Top 20 Rankings** | Allows scouts to scan 250+ players rapidly; tabular numbers ensure instant visual comparison across economy, strike rate, and PII. | Moderate | Ultra-fast (<10ms render) | **P0 (Critical)** |
+| **CRL** | Cursor-following floating live preview card | `transform: translate3d` with smooth `lerp: 0.15` tracking | **Hover Player Scouting Snapshot** | Allows scouts to inspect radar charts and pressure splits without leaving the main database table. | Low | Low (<2ms RAF loop) | **P0 (Critical)** |
+| **CRL** | Instant FLIP category filter row collapse | FLIP layout calculation + height/opacity animation | **Auction Filter Chips** (e.g., Death Bowler, Finisher, Overseas) | Zero input latency; analysts see the database instantly re-aggregate around their query. | Moderate | Low | **P0 (Critical)** |
+| **Cyera** | 3D particle clustering and radial shockwave | WebGL vertex shader displacement + particle attractor | **Pressure Lab Match Replay & Wicket Waves** | Visualizes match pressure not as an abstract number, but as a dynamic force field where wickets cause structural collapses. | High | Medium (GPU throttled) | **P2 (Differentiator)** |
+| **Cyera** | Monospaced telemetry counter roll | Numerical interpolation RAF loop (60 ticks/sec) | **Live Win Probability & Auction Purse Telemetry** | Elevates tension during match scrub; emphasizes quantitative precision. | Low | Negligible | **P1 (Core)** |
+| **AUGE XP** | Shared-element project card expansion | Plane detached from carousel -> fullscreen viewport | **Top 5 Hero Card -> Player Intelligence Profile** | Seamlessly bridges the marketing narrative on the homepage into deep, actionable analytics for judges. | Moderate | Low (Framer Motion `layoutId`) | **P1 (Core)** |
+| **AUGE XP** | Curved 3D plane carousel with inertial momentum | Velocity accumulator (`velocity *= 0.92`) + cylinder curve | **Homepage "Top Pressure Performers" Showcase** | Makes exploring Rajasthan Royals' top scouting recommendations tactile and engaging. | High | Medium (Canvas isolated) | **P2 (Differentiator)** |
+| **Delta Cafés** | SVG Logo Aperture Mask Zoom (`TransitionLogoMask`) | CSS `clip-path` SVG path scaled exponentially on scroll | **Rajasthan Royals Crest Transition Portal** | Anchors the platform deeply in the Rajasthan Royals brand identity as users transition into the Auction War Room. | Moderate | Low (GPU compositor) | **P2 (Differentiator)** |
+| **Delta Cafés** | Interactive multi-step diagnostic quiz | Step-by-step card slider with spring transitions | **"RR Squad Gap Diagnostic" Shortlist Wizard** | Guides auction decision-makers through identifying their most pressing tactical squad deficits in under 60 seconds. | Moderate | Low | **P1 (Core)** |

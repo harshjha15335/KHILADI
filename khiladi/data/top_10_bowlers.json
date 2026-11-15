@@ -1,0 +1,122 @@
+[
+  {
+    "player_id": 20310,
+    "player_name": "Ahmed Daniyal",
+    "pressure_impact_index": 13.5899877451,
+    "pressure_economy": 4.9411764706,
+    "baseline_economy": 5.4482758621,
+    "economy_delta": 0.5070993915,
+    "pressure_dot_percentage": 57.6470588235,
+    "pressure_balls_bowled": 85.0,
+    "total_balls_bowled": 174,
+    "rank": 1
+  },
+  {
+    "player_id": 34485,
+    "player_name": "Sufiyan Muqeem",
+    "pressure_impact_index": 12.8437461117,
+    "pressure_economy": 5.8404255319,
+    "baseline_economy": 6.1271676301,
+    "economy_delta": 0.2867420981,
+    "pressure_dot_percentage": 55.3191489362,
+    "pressure_balls_bowled": 188.0,
+    "total_balls_bowled": 519,
+    "rank": 2
+  },
+  {
+    "player_id": 5979,
+    "player_name": "Abrar Ahmed",
+    "pressure_impact_index": 12.5753298219,
+    "pressure_economy": 5.8167938931,
+    "baseline_economy": 6.7853403141,
+    "economy_delta": 0.968546421,
+    "pressure_dot_percentage": 49.2366412214,
+    "pressure_balls_bowled": 262.0,
+    "total_balls_bowled": 764,
+    "rank": 3
+  },
+  {
+    "player_id": 20704,
+    "player_name": "Salman Mirza",
+    "pressure_impact_index": 12.1183860953,
+    "pressure_economy": 6.188976378,
+    "baseline_economy": 7.0030395137,
+    "economy_delta": 0.8140631357,
+    "pressure_dot_percentage": 47.2440944882,
+    "pressure_balls_bowled": 127.0,
+    "total_balls_bowled": 329,
+    "rank": 4
+  },
+  {
+    "player_id": 22471,
+    "player_name": "Matthew Humphreys",
+    "pressure_impact_index": 11.9761904762,
+    "pressure_economy": 6.3529411765,
+    "baseline_economy": 7.2,
+    "economy_delta": 0.8470588235,
+    "pressure_dot_percentage": 50.0,
+    "pressure_balls_bowled": 68.0,
+    "total_balls_bowled": 305,
+    "rank": 5
+  },
+  {
+    "player_id": 3578,
+    "player_name": "Imad Wasim",
+    "pressure_impact_index": 11.9188169521,
+    "pressure_economy": 5.8965517241,
+    "baseline_economy": 6.3170731707,
+    "economy_delta": 0.4205214466,
+    "pressure_dot_percentage": 46.5517241379,
+    "pressure_balls_bowled": 58.0,
+    "total_balls_bowled": 246,
+    "rank": 6
+  },
+  {
+    "player_id": 3689,
+    "player_name": "Mark Watt",
+    "pressure_impact_index": 11.8343495935,
+    "pressure_economy": 5.7073170732,
+    "baseline_economy": 8.304,
+    "economy_delta": 2.5966829268,
+    "pressure_dot_percentage": 43.9024390244,
+    "pressure_balls_bowled": 41.0,
+    "total_balls_bowled": 125,
+    "rank": 7
+  },
+  {
+    "player_id": 2490,
+    "player_name": "Mohammad Nawaz",
+    "pressure_impact_index": 11.8042665668,
+    "pressure_economy": 6.4581818182,
+    "baseline_economy": 7.1582089552,
+    "economy_delta": 0.700027137,
+    "pressure_dot_percentage": 41.8181818182,
+    "pressure_balls_bowled": 275.0,
+    "total_balls_bowled": 1005,
+    "rank": 8
+  },
+  {
+    "player_id": 7906,
+    "player_name": "Rakibul Hasan",
+    "pressure_impact_index": 11.5224458614,
+    "pressure_economy": 6.338028169,
+    "baseline_economy": 6.5666666667,
+    "economy_delta": 0.2286384977,
+    "pressure_dot_percentage": 49.2957746479,
+    "pressure_balls_bowled": 71.0,
+    "total_balls_bowled": 180,
+    "rank": 9
+  },
+  {
+    "player_id": 6196,
+    "player_name": "Josh Tongue",
+    "pressure_impact_index": 11.2393233922,
+    "pressure_economy": 8.1509433962,
+    "baseline_economy": 9.4214876033,
+    "economy_delta": 1.2705442071,
+    "pressure_dot_percentage": 60.3773584906,
+    "pressure_balls_bowled": 53.0,
+    "total_balls_bowled": 121,
+    "rank": 10
+  }
+]

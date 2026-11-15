@@ -1,0 +1,114 @@
+[
+  {
+    "player_id": 2485,
+    "player_name": "Babar Azam",
+    "pressure_impact_index": 12.3514194139,
+    "pressure_strike_rate": 192.3076923077,
+    "baseline_strike_rate": 133.1922099915,
+    "strike_rate_delta": 59.1154823162,
+    "pressure_balls_faced": 156.0,
+    "total_balls_faced": 1181,
+    "rank": 1
+  },
+  {
+    "player_id": 26843,
+    "player_name": "Maaz Sadaqat",
+    "pressure_impact_index": 12.0051368264,
+    "pressure_strike_rate": 213.9534883721,
+    "baseline_strike_rate": 176.8558951965,
+    "strike_rate_delta": 37.0975931756,
+    "pressure_balls_faced": 43.0,
+    "total_balls_faced": 229,
+    "rank": 2
+  },
+  {
+    "player_id": 50284,
+    "player_name": "Vaibhav Sooryavanshi",
+    "pressure_impact_index": 11.8094771242,
+    "pressure_strike_rate": 217.7777777778,
+    "baseline_strike_rate": 223.224852071,
+    "strike_rate_delta": -5.4470742932,
+    "pressure_balls_faced": 45.0,
+    "total_balls_faced": 676,
+    "rank": 3,
+    "cutout_url": "/assets/cutouts/50284_vaibhav-sooryavanshi_cutout.png",
+    "portrait_url": "/assets/portraits/50284_vaibhav-sooryavanshi.png"
+  },
+  {
+    "player_id": 2756,
+    "player_name": "Shashank Singh",
+    "pressure_impact_index": 11.4675666317,
+    "pressure_strike_rate": 186.2170087977,
+    "baseline_strike_rate": 161.6071428571,
+    "strike_rate_delta": 24.6098659405,
+    "pressure_balls_faced": 341.0,
+    "total_balls_faced": 560,
+    "rank": 4
+  },
+  {
+    "player_id": 37052,
+    "player_name": "Naman Dhir",
+    "pressure_impact_index": 11.1000434877,
+    "pressure_strike_rate": 191.2698412698,
+    "baseline_strike_rate": 168.4210526316,
+    "strike_rate_delta": 22.8487886383,
+    "pressure_balls_faced": 252.0,
+    "total_balls_faced": 589,
+    "rank": 5
+  },
+  {
+    "player_id": 6396,
+    "player_name": "Tim David",
+    "pressure_impact_index": 10.8794994636,
+    "pressure_strike_rate": 191.9463087248,
+    "baseline_strike_rate": 177.6508972268,
+    "strike_rate_delta": 14.2954114981,
+    "pressure_balls_faced": 745.0,
+    "total_balls_faced": 1226,
+    "rank": 6
+  },
+  {
+    "player_id": 813,
+    "player_name": "Jos Buttler",
+    "pressure_impact_index": 10.8668548345,
+    "pressure_strike_rate": 188.5085574572,
+    "baseline_strike_rate": 155.3905973842,
+    "strike_rate_delta": 33.117960073,
+    "pressure_balls_faced": 409.0,
+    "total_balls_faced": 2829,
+    "rank": 7
+  },
+  {
+    "player_id": 1699,
+    "player_name": "Suryakumar Yadav",
+    "pressure_impact_index": 10.67198804,
+    "pressure_strike_rate": 177.8010471204,
+    "baseline_strike_rate": 166.4252082579,
+    "strike_rate_delta": 11.3758388625,
+    "pressure_balls_faced": 955.0,
+    "total_balls_faced": 2761,
+    "rank": 8
+  },
+  {
+    "player_id": 143,
+    "player_name": "Dinesh Karthik",
+    "pressure_impact_index": 10.5053850127,
+    "pressure_strike_rate": 183.8899803536,
+    "baseline_strike_rate": 167.2926447574,
+    "strike_rate_delta": 16.5973355962,
+    "pressure_balls_faced": 509.0,
+    "total_balls_faced": 639,
+    "rank": 9
+  },
+  {
+    "player_id": 6273,
+    "player_name": "Tom Banton",
+    "pressure_impact_index": 10.4841589923,
+    "pressure_strike_rate": 191.4893617021,
+    "baseline_strike_rate": 159.4890510949,
+    "strike_rate_delta": 32.0003106072,
+    "pressure_balls_faced": 94.0,
+    "total_balls_faced": 274,
+    "rank": 10
+  }
+]

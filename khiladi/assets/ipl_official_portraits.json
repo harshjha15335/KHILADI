@@ -1,0 +1,416 @@
+[
+  {
+    "player_id": 3298,
+    "player_name": "Jofra Archer",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/3298_jofra-archer.png",
+    "quiz_cutout_path": "/assets/cutouts/3298_jofra-archer_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 7503,
+    "player_name": "Ravi Bishnoi",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F70430.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/7503_ravi-bishnoi.png",
+    "quiz_cutout_path": "/assets/cutouts/7503_ravi-bishnoi_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 7312,
+    "player_name": "Nandre Burger",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F52827.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/7312_nandre-burger.png",
+    "quiz_cutout_path": "/assets/cutouts/7312_nandre-burger_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 8580,
+    "player_name": "Yudhvir Singh",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F72710.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/8580_yudhvir-singh.png",
+    "quiz_cutout_path": "/assets/cutouts/8580_yudhvir-singh_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 6423,
+    "player_name": "Riyan Parag",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F65476.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/6423_riyan-parag.png",
+    "quiz_cutout_path": "/assets/cutouts/6423_riyan-parag_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 6806,
+    "player_name": "Tushar Deshpande",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F44044.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/6806_tushar-deshpande.png",
+    "quiz_cutout_path": "/assets/cutouts/6806_tushar-deshpande_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 25139,
+    "player_name": "Shubham Dubey",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F74047.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/25139_shubham-dubey.png",
+    "quiz_cutout_path": "/assets/cutouts/25139_shubham-dubey_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 8182,
+    "player_name": "Donovan Ferreira",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68473.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/8182_donovan-ferreira.png",
+    "quiz_cutout_path": "/assets/cutouts/8182_donovan-ferreira_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 3297,
+    "player_name": "Shimron Hetmyer",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F23713.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/3297_shimron-hetmyer.png",
+    "quiz_cutout_path": "/assets/cutouts/3297_shimron-hetmyer_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 152,
+    "player_name": "Ravindra Jadeja",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F13143.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/152_ravindra-jadeja.png",
+    "quiz_cutout_path": "/assets/cutouts/152_ravindra-jadeja_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 7260,
+    "player_name": "Dhruv Jurel",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71456.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/7260_dhruv-jurel.png",
+    "quiz_cutout_path": "/assets/cutouts/7260_dhruv-jurel_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 26663,
+    "player_name": "Kwena Maphaka",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F76217.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/26663_kwena-maphaka.png",
+    "quiz_cutout_path": "/assets/cutouts/26663_kwena-maphaka_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 1487,
+    "player_name": "Adam Milne",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F20007.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/1487_adam-milne.png",
+    "quiz_cutout_path": "/assets/cutouts/1487_adam-milne_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 7269,
+    "player_name": "Sushant Mishra",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71452.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/7269_sushant-mishra.png",
+    "quiz_cutout_path": "/assets/cutouts/7269_sushant-mishra_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 47523,
+    "player_name": "Aman Rao Perala",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87914.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/47523_aman-rao-perala.png",
+    "quiz_cutout_path": "/assets/cutouts/47523_aman-rao-perala_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 43798,
+    "player_name": "Lhuan Pretorius",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F81719.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/43798_lhuan-pretorius.png",
+    "quiz_cutout_path": "/assets/cutouts/43798_lhuan-pretorius_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 41503,
+    "player_name": "Yash Punja",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F92045.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/41503_yash-punja.png",
+    "quiz_cutout_path": "/assets/cutouts/41503_yash-punja_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 48557,
+    "player_name": "Vignesh Puthur",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87852.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/48557_vignesh-puthur.png",
+    "quiz_cutout_path": "/assets/cutouts/48557_vignesh-puthur_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 7545,
+    "player_name": "Kuldeep Sen",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F69043.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/7545_kuldeep-sen.png",
+    "quiz_cutout_path": "/assets/cutouts/7545_kuldeep-sen_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 67036,
+    "player_name": "Brijesh Sharma",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F90896.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/67036_brijesh-sharma.png",
+    "quiz_cutout_path": "/assets/cutouts/67036_brijesh-sharma_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 2411,
+    "player_name": "Sandeep Sharma",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F15660.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/2411_sandeep-sharma.png",
+    "quiz_cutout_path": "/assets/cutouts/2411_sandeep-sharma_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 60700,
+    "player_name": "Ravi Singh",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F86608.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/60700_ravi-singh.png",
+    "quiz_cutout_path": "/assets/cutouts/60700_ravi-singh_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  },
+  {
+    "player_id": 50284,
+    "player_name": "Vaibhav Sooryavanshi",
+    "official_profile_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "official_image_url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F83313.png&brand=ipl",
+    "match_confidence": 1.0,
+    "verified_date": "2026-11-15",
+    "rights_status": "IPL_OFFICIAL_EDITORIAL_COMPETITION_USE",
+    "allowed_transformations": [
+      "alpha_transparency_cutout",
+      "resize",
+      "monochrome_filter"
+    ],
+    "status": "VERIFIED_IPL_OFFICIAL",
+    "local_asset_path": "/assets/portraits/50284_vaibhav-sooryavanshi.png",
+    "quiz_cutout_path": "/assets/cutouts/50284_vaibhav-sooryavanshi_cutout.png",
+    "provenance_evidence": "BCCI / IPLT20 Official Rajasthan Royals Squad Page"
+  }
+]
