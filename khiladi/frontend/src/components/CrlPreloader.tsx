@@ -1,3 +1,4 @@
+import { KhiladiLogo } from "./KhiladiLogo";
 import React, { useCallback, useEffect, useRef } from "react";
 import { gsap, useGSAP } from "../utils/motion";
 export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
@@ -33,8 +34,8 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
         .to(
           ".intro-glyph",
           {
-            x: (i: number) => (3 - i) * 8,
-            rotation: (i: number) => (3 - i) * -3,
+            x: 0,
+            rotation: 0,
             duration: 0.65,
           },
           1.05,
@@ -75,12 +76,12 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
           <span>A GAME OF MOMENTS</span>
           <span>KHILADI / RAJASTHAN</span>
         </div>
-        <div className="intro-type" aria-hidden="true">
-          {"KHILADI".split("").map((letter, i) => (
-            <span className="intro-window" key={i}>
-              <span className="intro-glyph">{letter}</span>
+        <div className="intro-type intro-type--logo" aria-hidden="true">
+          <span className="intro-window intro-logo-window">
+            <span className="intro-glyph">
+              <KhiladiLogo variant="loader" />
             </span>
-          ))}
+          </span>
         </div>
         <button className="intro-skip" onClick={finish}>
           Skip introduction ↗

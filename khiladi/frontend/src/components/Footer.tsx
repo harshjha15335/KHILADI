@@ -1,3 +1,4 @@
+import { KhiladiLogo } from "./KhiladiLogo";
 import React from "react";
 export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
   onNavigate,
@@ -29,8 +30,8 @@ export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
         ))}
       </nav>
     </div>
-    <div className="footer-wordmark" aria-hidden="true">
-      KHILADI
+    <div className="footer-wordmark">
+      <KhiladiLogo variant="footer" />
     </div>
     <div className="footer-bottom">
       <span>© {new Date().getFullYear()} KHILADI</span>

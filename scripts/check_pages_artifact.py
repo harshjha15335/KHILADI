@@ -7,7 +7,8 @@ for p in dist.rglob('*'):
  if not p.is_file():continue
  parts=p.relative_to(dist).parts
  assert not set(parts)&{'Data Pack','portraits','cutouts','archival','media-review','__review-media','.git','node_modules'},p
- assert p.suffix.lower() not in {'.pdf','.zip','.webm','.mp4','.jpg','.jpeg','.png'},p
+ is_product_logo = p.relative_to(dist).as_posix() == 'assets/brand/khiladi-logo.png'
+ assert is_product_logo or p.suffix.lower() not in {'.pdf','.zip','.webm','.mp4','.jpg','.jpeg','.png'},p
  assert not p.name.startswith('.env'),p
  if parts[0]=='data':assert p.name in allowed_data,p
  if p.suffix=='.csv':assert p.name in {'top_10_batters.csv','top_10_bowlers.csv'},p

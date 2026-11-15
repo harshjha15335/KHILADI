@@ -74,7 +74,12 @@ export const Navbar: React.FC<{
       >
         <div className="navigation-inner">
           <div className="navigation-top">
-            <span id="menu-title">THE GAME STARTS HERE</span>
+            <div>
+              <KhiladiLogo />
+              <span id="menu-title" className="sr-only">
+                THE GAME STARTS HERE
+              </span>
+            </div>
             <button onClick={close} aria-label="Close menu">
               Close ×
             </button>
