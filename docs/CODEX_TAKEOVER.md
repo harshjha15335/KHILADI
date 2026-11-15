@@ -1,6 +1,6 @@
 # KHILADI Codex takeover
 
-The working frontend has been rebuilt in the existing checkout. This is a functional implementation milestone, **not completion of the exact-reference brief**. No push, deployment, environment-draft update or publication has been performed.
+The working frontend has been rebuilt in the existing checkout. This is a functional implementation milestone, **not completion of the exact-reference brief**. Source changes are committed and transferred through Git for the Windows handoff. No public website deployment, environment-draft update or environment publication has been performed.
 
 ## Run locally
 

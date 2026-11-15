@@ -27,6 +27,8 @@ Windows-native startup has not been verified from that remote machine. Original
 reference recordings, media reuse permission, the specific 2008 trophy image and
 exact Cyera motion matching remain outstanding. No public deployment is implied.
 
+- [Original engineering directive](docs/handoff/MASTER_ENGINEERING_DIRECTIVE.md)
+- [Original takeover brief](docs/handoff/FULL_PROJECT_TAKEOVER.md)
 - [Implementation and validation](docs/CODEX_TAKEOVER.md)
 - [Reference observations and differences](docs/CODEX_REFERENCE_MAP.md)
 - [Installed skill sources](docs/CODEX_SKILL_READINESS.md)

@@ -84,11 +84,14 @@ Then open **http://127.0.0.1:3000** in Brave on that same Windows PC.
 ## Continue with Codex Local or Codex CLI
 
 In the desktop app, select **Work in → This computer (Local)** and open this
-repository folder. Alternatively, start Codex CLI from PowerShell in that folder:
+repository folder. Alternatively, install Codex CLI if needed, then start it from PowerShell in that folder:
 
 ```powershell
+npm.cmd install -g @openai/codex
 codex
 ```
+
+The two original user-supplied redesign prompts are preserved in `docs/handoff/`. Read those, `AGENTS.md` and the current implementation notes before continuing the design. The latest direction is to work locally and avoid external tunnels.
 
 Tell that local session:
 
