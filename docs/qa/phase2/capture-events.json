@@ -1,0 +1,94 @@
+[
+  {
+    "capture": "hero-no-sound",
+    "scrollY": 0
+  },
+  {
+    "capture": "hero-hover",
+    "scrollY": 0
+  },
+  {
+    "capture": "names-only-parade",
+    "scrollY": 900
+  },
+  {
+    "capture": "editorial-crest-cleared",
+    "scrollY": 1160
+  },
+  {
+    "capture": "collage-entrance",
+    "scrollY": 2160
+  },
+  {
+    "capture": "collage-middle",
+    "scrollY": 2257
+  },
+  {
+    "capture": "collage-arranged",
+    "scrollY": 2667
+  },
+  {
+    "capture": "collage-hover",
+    "scrollY": 2667
+  },
+  {
+    "capture": "discovery-settled",
+    "scrollY": 3722
+  },
+  {
+    "capture": "discovery-drift-later",
+    "scrollY": 3722
+  },
+  {
+    "capture": "quiz-results",
+    "scrollY": 4729
+  },
+  {
+    "capture": "profile",
+    "scrollY": 4729
+  },
+  {
+    "capture": "closing",
+    "scrollY": 5072
+  },
+  {
+    "capture": "compact-menu",
+    "scrollY": 5586
+  },
+  {
+    "capture": "mobile-hero",
+    "scrollY": 0
+  },
+  {
+    "capture": "mobile-menu",
+    "scrollY": 4336
+  },
+  {
+    "capture": "button-before",
+    "scrollY": 3722
+  },
+  {
+    "capture": "button-hover-start",
+    "scrollY": 3722
+  },
+  {
+    "capture": "button-hover-25",
+    "scrollY": 3722
+  },
+  {
+    "capture": "button-hover-50",
+    "scrollY": 3722
+  },
+  {
+    "capture": "button-hover-75",
+    "scrollY": 3722
+  },
+  {
+    "capture": "button-hover-100",
+    "scrollY": 3722
+  },
+  {
+    "capture": "button-exit",
+    "scrollY": 3722
+  }
+]

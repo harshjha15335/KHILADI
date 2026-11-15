@@ -7,6 +7,8 @@ test("homepage and player dialog have no serious accessibility violations", asyn
     sessionStorage.setItem("khiladi_intro_seen", "true"),
   );
   await page.goto("/");
+  await expect(page.locator(".intro-root")).toBeVisible();
+  await page.keyboard.press("Escape");
   await expect(page.locator(".squad-player").first()).toBeVisible();
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])

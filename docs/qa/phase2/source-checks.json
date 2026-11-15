@@ -1,0 +1,57 @@
+[
+  {
+    "url": "https://deltacafes.com/en",
+    "status": 200,
+    "bytes": 520208,
+    "final": "https://deltacafes.com/en",
+    "snippet": "<!DOCTYPE html> \n <!--\n  \n    B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \n     B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R O B \u00dc R "
+  },
+  {
+    "url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "status": 200,
+    "bytes": 336525,
+    "final": "https://www.iplt20.com/teams/rajasthan-royals",
+    "snippet": "<!DOCTYPE html><html lang=\"en\" class=\"bricolage_grotesque_4a227831-module__2b4iXq__variable\"><head><meta charSet=\"utf-8\"/><link rel=\"preconnect\" href=\"/\" crossorigin=\"\"/><meta name"
+  },
+  {
+    "url": "https://www.iplt20.com/players/sam-curran/2939",
+    "status": 200,
+    "bytes": 389119,
+    "final": "https://www.iplt20.com/",
+    "snippet": "<!DOCTYPE html><html lang=\"en\" class=\"bricolage_grotesque_4a227831-module__2b4iXq__variable\"><head><meta charSet=\"utf-8\"/><link rel=\"preconnect\" href=\"/\" crossorigin=\"\"/><meta name"
+  },
+  {
+    "url": "https://www.iplt20.com/players/dasun-shanaka/4916",
+    "status": 200,
+    "bytes": 128275,
+    "final": "https://www.iplt20.com/players/dasun-shanaka/4916",
+    "snippet": "<!DOCTYPE html><html lang=\"en\" class=\"bricolage_grotesque_4a227831-module__2b4iXq__variable\"><head><meta charSet=\"utf-8\"/><link rel=\"preconnect\" href=\"/\" crossorigin=\"\"/><meta name"
+  },
+  {
+    "url": "https://www.rajasthanroyals.com/latest-news/ipl-2008-final-rajasthan-royals-vs-chennai-super-kings-score-result",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://www.rajasthanroyals.com/photos/remembering-shane-warne-our-first-royal",
+    "status": 200,
+    "bytes": 520919,
+    "final": "https://www.rajasthanroyals.com/photos/remembering-shane-warne-our-first-royal",
+    "snippet": "<!doctype html><html data-n-head-ssr lang=\"en\" data-n-head=\"%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D\"><head ><meta data-n-head=\"ssr\" charset=\"utf-8\"><meta data-n-head=\"ssr\" http-e"
+  },
+  {
+    "url": "https://www.dailymotion.com/embed/video/x9j1xrq?autoplay=1&mute=1",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.dailymotion.com/embed/video/x9i1kti?autoplay=1&mute=1",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.dailymotion.com/embed/video/x9i1jyo?autoplay=1&mute=1",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.iplt20.com/about/terms-and-conditions",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

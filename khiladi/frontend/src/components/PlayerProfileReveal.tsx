@@ -5,7 +5,6 @@ import { describePlayer, metric } from "../utils/api";
 import { playerImage } from "../utils/media";
 import { KhiladiAnimatedButton as CTA } from "./KhiladiAnimatedButton";
 import { AugeWarpSurface } from "./AugeWarpSurface";
-import { playSound } from "../utils/sound";
 interface Props {
   player: Player | null;
   onClose: () => void;
@@ -29,7 +28,6 @@ export const PlayerProfileReveal: React.FC<Props> = ({
     const old = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.current.showModal();
-    playSound("modal_open");
     const context = gsap.context(() => {
       const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
       timeline.current = gsap

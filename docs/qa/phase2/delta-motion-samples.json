@@ -1,0 +1,1872 @@
+{
+  "mediaParents": [
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F68c7b46bbe4cc69656bb64d17a71a9a29788f006-288x218.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F4964395f83fc72a4a5fb8b25e1c99205ac4f03af-250x358.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F5b21088ca92b191a19f4194cc69c74192cb87b5d-328x468.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fda6cb5e4ba52bf708af9b2400e057ed6e7f2af1a-349x269.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fc57f070dd85d15b92018d6dc1ad6d79b79887072-332x254.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fc0c8079c3fc884c1d097d773ff9c7e9deba0e12f-216x310.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F1ba13eb3a47f2c7f0e90f0415b8aa3c8460decd8-425x317.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F11ca77fa3d76d195abda20b19e0f935f2746d9b7-271x381.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fa850c8389fb748bbf5b9637c4bfd87dccb9f2d85-480x379.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F9f513ffd4131a61fd2003c65de09c7342dcf98b0-186x280.png&w=640&q=88",
+      "parent": "item",
+      "grandparent": "photos-list"
+    },
+    {
+      "src": "https://deltacafes.com/imgs/history/tv-herman-jose.png",
+      "parent": "video-container",
+      "grandparent": "item"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F306aed7832fb7bcdee6138ceb3d8bd6fb0fb723f-694x911.png&w=640&q=88",
+      "parent": "main-photo-container",
+      "grandparent": "camera"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2f098cd19fd85ebe3af420bf92e778cc3cf2ba3b-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb8cc96c1ee7eceb172136cf852a381f743490ffd-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F19ba32117828c96d389a3b3679626ae8188c598b-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2d692ec563d59f492e29fd7cd0116005fba270ea-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb562905c66d1ea28f85cad3229944180506dee4f-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F6a0fb810927ab4afa56229925b099557d2a64bd2-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F63da04340cd540da1584bfddd73da03ef7a73282-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F98672e02ff0965fa58e8ec156cbb57c73f794b7f-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F377a4a27863726b29c9815130d2f85dfe7acdfcb-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F660609afa319fcfc87512ccd2f13fb13535284d4-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F1976772bcafa43ca9d45a8e8e96581d50b8a2f89-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F9363237a5593e6ee265d422ec43a4c66bb363522-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2f098cd19fd85ebe3af420bf92e778cc3cf2ba3b-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb8cc96c1ee7eceb172136cf852a381f743490ffd-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F19ba32117828c96d389a3b3679626ae8188c598b-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F2d692ec563d59f492e29fd7cd0116005fba270ea-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2Fb562905c66d1ea28f85cad3229944180506dee4f-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    },
+    {
+      "src": "https://deltacafes.com/_vercel/image?url=https:%2F%2Fcdn.sanity.io%2Fimages%2Fpcdkofnf%2Fproduction%2F6a0fb810927ab4afa56229925b099557d2a64bd2-440x630.jpg&w=640&q=88",
+      "parent": "image-container",
+      "grandparent": "track"
+    }
+  ],
+  "transforms": [
+    {
+      "scroll": 700,
+      "samples": [
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 767.187, 1521.05)",
+            "x": 1244.8514404296875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 768.219, 970.607)",
+            "x": 1244.1380615234375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 728.891, 366.177)",
+            "x": 1208.1787109375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -439.09, 232.201)",
+            "x": 40.028594970703125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -449.756, 506.65)",
+            "x": 29.935211181640625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -393.805, 736.1)",
+            "x": 85.17660522460938,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 468.867, 42.3211)",
+            "x": 868.1633911132812,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -233.562, -514.66)",
+            "x": 354.7852478027344,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -468.596, -629.698)",
+            "x": 223.43402099609375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -58.445, -733.292)",
+            "x": 462.23089599609375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 253.012, -1006.3)",
+            "x": 700.299560546875,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 717.1248168945312,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 554.423, -1437.22)",
+            "x": 911.5960083007812,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(0.678287, 0.494659, -0.494659, 0.678287, 0, 0)",
+            "x": 917.590576171875,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, -8.1953, 0)",
+            "x": 943.2049560546875,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, -9.5584, 0)",
+            "x": 974.1758422851562,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(0.787846, 0.138919, -0.138919, 0.787846, 0, 0)",
+            "x": 206.5663604736328,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 210.90322875976562,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 224.6752166748047,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 262.8888244628906,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2473907470703,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 231.62242126464844,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2473907470703,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 268.4671630859375,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.6659698486328,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 265.29913330078125,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2473907470703,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2473907470703,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ],
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 769.82, 1521.84)",
+            "x": 1247.484375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 768.59, 979.738)",
+            "x": 1244.5087890625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 719.379, 372.184)",
+            "x": 1198.667236328125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -444.363, 230.416)",
+            "x": 34.755462646484375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -448.864, 502.382)",
+            "x": 30.8280029296875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -391.899, 746.864)",
+            "x": 87.08251953125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 511.94, 41.8671)",
+            "x": 898.314208984375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -256.619, -563.469)",
+            "x": 338.6458740234375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -512.234, -681.755)",
+            "x": 192.88687133789062,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -72.9738, -809.349)",
+            "x": 452.0607604980469,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 277.61, -1103.21)",
+            "x": 717.5185546875,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 734.34375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 612.378, -1585.7)",
+            "x": 952.1640014648438,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 959.4088745117188,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 989.5064697265625,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1021.430908203125,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(0.787846, 0.138919, -0.138919, 0.787846, 0, 0)",
+            "x": 206.564697265625,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 210.9015655517578,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 224.67355346679688,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 262.8871765136719,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2457275390625,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 231.62075805664062,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2457275390625,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 268.4654846191406,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.664306640625,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 265.2974853515625,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2457275390625,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 223.2457275390625,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ]
+      ]
+    },
+    {
+      "scroll": 1000,
+      "samples": [
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 766.403, 1529.84)",
+            "x": 1244.067626953125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 766.002, 963.719)",
+            "x": 1241.921142578125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 718.533, 370.835)",
+            "x": 1197.8209228515625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -453.03, 245.004)",
+            "x": 26.08837890625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -449.899, 517.803)",
+            "x": 29.792694091796875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -401.601, 726.989)",
+            "x": 77.38037109375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 514.885, 48.3799)",
+            "x": 900.3758544921875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -264.992, -553.129)",
+            "x": 332.78436279296875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -513.75, -690.651)",
+            "x": 191.82611083984375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -61.2154, -802.097)",
+            "x": 460.2915954589844,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 277.07, -1103.05)",
+            "x": 717.1400146484375,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 733.9652099609375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 606.913, -1573.62)",
+            "x": 948.3390502929688,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 955.5839233398438,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 985.6815185546875,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1017.60595703125,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 242.9460906982422,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 203.26016235351562,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 250.02655029296875,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 222.35467529296875,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.00546264648438,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ],
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 766.484, 1529.66)",
+            "x": 1244.1485595703125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 766.517, 966.894)",
+            "x": 1242.435791015625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 723.126, 377.641)",
+            "x": 1202.414306640625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -452.156, 243.57)",
+            "x": 26.96282958984375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -450.313, 523.948)",
+            "x": 29.3787841796875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -400.23, 729.759)",
+            "x": 78.75115966796875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 514.663, 47.89)",
+            "x": 900.2207641601562,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -262.722, -555.933)",
+            "x": 334.37384033203125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -514.009, -692.17)",
+            "x": 191.64495849609375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -62.1472, -802.671)",
+            "x": 459.63934326171875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 281.444, -1104.39)",
+            "x": 720.202392578125,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 737.027587890625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 606.361, -1572.4)",
+            "x": 947.9526977539062,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 955.1975708007812,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 985.295166015625,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1017.2196044921875,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 242.9460906982422,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 203.26016235351562,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 250.02655029296875,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 222.35467529296875,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.00546264648438,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ]
+      ]
+    },
+    {
+      "scroll": 3500,
+      "samples": [
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 768.781, 1524.29)",
+            "x": 1246.4453125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 767.92, 975.573)",
+            "x": 1243.839111328125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 723.32, 377.978)",
+            "x": 1202.6085205078125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -447.928, 236.481)",
+            "x": 31.18994140625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -450.366, 524.751)",
+            "x": 29.3255615234375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -393.869, 742.778)",
+            "x": 85.11264038085938,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 512.62, 43.3727)",
+            "x": 898.7908325195312,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -256.497, -563.62)",
+            "x": 338.7312316894531,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -512.929, -685.831)",
+            "x": 192.40084838867188,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -68.3141, -806.475)",
+            "x": 455.322509765625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 283.447, -1105)",
+            "x": 721.60400390625,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 738.42919921875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 608.942, -1578.11)",
+            "x": 949.7593994140625,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 957.0042724609375,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 987.101806640625,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1019.0263061523438,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 242.9460906982422,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 203.26016235351562,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 250.02655029296875,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 222.35467529296875,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.00546264648438,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ],
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 768.781, 1524.29)",
+            "x": 1246.4453125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 767.92, 975.573)",
+            "x": 1243.839111328125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 723.32, 377.978)",
+            "x": 1202.6085205078125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -447.928, 236.481)",
+            "x": 31.18994140625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -450.366, 524.751)",
+            "x": 29.3255615234375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -393.869, 742.778)",
+            "x": 85.11264038085938,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 512.62, 43.3727)",
+            "x": 898.7908325195312,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -256.497, -563.62)",
+            "x": 338.7312316894531,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -512.929, -685.831)",
+            "x": 192.40084838867188,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -68.3141, -806.475)",
+            "x": 455.322509765625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 283.447, -1105)",
+            "x": 721.60400390625,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 738.42919921875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 608.942, -1578.11)",
+            "x": 949.7593994140625,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 957.0042724609375,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 987.101806640625,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1019.0263061523438,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 242.9460906982422,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 203.26016235351562,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 250.02655029296875,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 222.35467529296875,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.00546264648438,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ]
+      ]
+    },
+    {
+      "scroll": 4500,
+      "samples": [
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 768.781, 1524.29)",
+            "x": 1246.4453125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 767.92, 975.573)",
+            "x": 1243.839111328125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 723.32, 377.978)",
+            "x": 1202.6085205078125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -447.928, 236.481)",
+            "x": 31.18994140625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -450.366, 524.751)",
+            "x": 29.3255615234375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -393.869, 742.778)",
+            "x": 85.11264038085938,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 512.62, 43.3727)",
+            "x": 898.7908325195312,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -256.497, -563.62)",
+            "x": 338.7312316894531,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -512.929, -685.831)",
+            "x": 192.40084838867188,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -68.3141, -806.475)",
+            "x": 455.322509765625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 283.447, -1105)",
+            "x": 721.60400390625,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 738.42919921875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 608.942, -1578.11)",
+            "x": 949.7593994140625,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 957.0042724609375,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 987.101806640625,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1019.0263061523438,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 242.9460906982422,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 203.26016235351562,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 250.02655029296875,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 222.35467529296875,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.00546264648438,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ],
+        [
+          {
+            "tag": "SPAN",
+            "cls": "icon-container arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 762.53125,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "icon-container ghost arrow-right",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 688.53125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999025, 0.044145, -0.044145, 0.999025, 768.781, 1524.29)",
+            "x": 1246.4453125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998925, -0.0463514, 0.0463514, 0.998925, 767.92, 975.573)",
+            "x": 1243.839111328125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999981, 0.00609702, -0.00609702, 0.999981, 723.32, 377.978)",
+            "x": 1202.6085205078125,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, -0.0132222, 0.0132222, 0.999913, -447.928, 236.481)",
+            "x": 31.18994140625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999988, -0.00487159, 0.00487159, 0.999988, -450.366, 524.751)",
+            "x": 29.3255615234375,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999913, 0.0132034, -0.0132034, 0.999913, -393.869, 742.778)",
+            "x": 85.11264038085938,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999387, -0.0350132, 0.0350132, 0.999387, 512.62, 43.3727)",
+            "x": 898.7908325195312,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.99984, -0.0178945, 0.0178945, 0.99984, -256.497, -563.62)",
+            "x": 338.7312316894531,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999991, 0.00414946, -0.00414946, 0.999991, -512.929, -685.831)",
+            "x": 192.40084838867188,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.998781, 0.0493566, -0.0493566, 0.998781, -68.3141, -806.475)",
+            "x": 455.322509765625,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999434, 0.0336286, -0.0336286, 0.999434, 283.447, -1105)",
+            "x": 721.60400390625,
+            "text": ""
+          },
+          {
+            "tag": "VIDEO",
+            "cls": "video",
+            "transform": "matrix(1, 0, 0, 1, -108.117, -81.0859)",
+            "x": 738.42919921875,
+            "text": ""
+          },
+          {
+            "tag": "LI",
+            "cls": "item",
+            "transform": "matrix(0.999435, -0.0336041, 0.0336041, 0.999435, 608.942, -1578.11)",
+            "x": 949.7593994140625,
+            "text": "1986Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "flag-container",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 957.0042724609375,
+            "text": ""
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-mix-text-2-regular date",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 987.101806640625,
+            "text": "1986"
+          },
+          {
+            "tag": "DIV",
+            "cls": "right-col",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 1019.0263061523438,
+            "text": "Start of activity in Spain"
+          },
+          {
+            "tag": "DIV",
+            "cls": "popup",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritageThe calendar crazeThe c"
+          },
+          {
+            "tag": "DIV",
+            "cls": "item active",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "x": 176.796875,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Delta cups: a porcelain heritage"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 242.9460906982422,
+            "text": "The calendar craze"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The creation of the Camelo brand"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 203.26016235351562,
+            "text": "The official coffee of Expo\u201998"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Wake up every day with Ant\u00f3nio Sala"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 250.02655029296875,
+            "text": "Delta Foundation"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 222.35467529296875,
+            "text": "A caf\u00e9 for Timor Lorosae"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 246.00546264648438,
+            "text": "The sugar packets"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "The birth of the children Jo\u00e3o and Helena"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "-sans-text-2-medium description",
+            "transform": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+            "x": 194.4421844482422,
+            "text": "Innovation through Delta Q Rise"
+          }
+        ]
+      ]
+    }
+  ]
+}

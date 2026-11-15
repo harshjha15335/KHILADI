@@ -20,15 +20,9 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
     hero = useRef<HTMLElement>(null),
     belt = useRef<HTMLDivElement>(null),
     beltTween = useRef<gsap.core.Tween | null>(null),
-    pauseRef = useRef(false),
     beltVisible = useRef(true);
   const [squad, setSquad] = useState<Player[]>([]),
-    [error, setError] = useState(""),
-    [paused, setPaused] = useState(false);
-  pauseRef.current = paused;
-  useEffect(() => {
-    beltTween.current?.paused(paused || !beltVisible.current);
-  }, [paused]);
+    [error, setError] = useState("");
   const [activeClip, setActiveClip] = useState(0),
     [videoEnabled, setVideoEnabled] = useState(approvedHeroClips.length > 1),
     [heroVisible, setHeroVisible] = useState(true);
@@ -97,6 +91,16 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             invalidateOnRefresh: true,
           },
         });
+        gsap.to(".persistent-crest", {
+          autoAlpha: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".editorial-chapter",
+            start: "top 30%",
+            end: "top top",
+            scrub: true,
+          },
+        });
         gsap.from(".story-line", {
           yPercent: 80,
           opacity: 1,
@@ -109,31 +113,53 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             scrub: true,
           },
         });
+        gsap.utils.toArray<HTMLElement>(".archive-photo").forEach((photo, i) =>
+          gsap.fromTo(
+            photo,
+            {
+              y: 120 + (i % 3) * 65,
+              rotation: (i % 2 ? 1 : -1) * 10,
+              opacity: 0.2,
+            },
+            {
+              y: 0,
+              rotation: (i % 2 ? 1 : -1) * 3,
+              opacity: 1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".heritage-composition",
+                start: "top 85%",
+                end: "center 55%",
+                scrub: 0.45,
+                invalidateOnRefresh: true,
+              },
+            },
+          ),
+        );
         gsap.utils
-          .toArray<HTMLElement>(".archive-photo")
-          .forEach((photo, i) =>
-            gsap.fromTo(
-              photo,
-              {
-                y: 120 + (i % 3) * 65,
-                rotation: (i % 2 ? 1 : -1) * 10,
-                opacity: 0.2,
-              },
-              {
-                y: 0,
-                rotation: (i % 2 ? 1 : -1) * 3,
-                opacity: 1,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: ".heritage-composition",
-                  start: "top 85%",
-                  end: "center 55%",
-                  scrub: 0.45,
-                  invalidateOnRefresh: true,
-                },
-              },
-            ),
-          );
+          .toArray<HTMLElement>(".quiz-figure-drift")
+          .forEach((figure, i) => {
+            const drift = gsap.timeline({
+              repeat: -1,
+              yoyo: true,
+              paused: true,
+            });
+            drift.to(figure, {
+              x: (i % 2 ? -1 : 1) * (innerWidth < 600 ? 5 : 12),
+              y: (i % 3 ? 1 : -1) * (innerWidth < 600 ? 8 : 16),
+              rotation: i % 2 ? 1.5 : -1.5,
+              scale: 1.015,
+              duration: 3.8 + i * 0.37,
+              ease: "sine.inOut",
+            });
+            drift.totalTime(i * 0.43);
+            ScrollTrigger.create({
+              trigger: ".quiz-chapter",
+              start: "top bottom",
+              end: "bottom top",
+              onToggle: ({ isActive }) => drift.paused(!isActive),
+            });
+          });
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".quiz-chapter",
@@ -183,19 +209,21 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
       // Two identical groups; exactly one group's width is travelled before repetition.
       const tween = gsap.to(track, {
         xPercent: -50,
-        duration: squad.length * 5.5,
+        duration: squad.length * 9,
         repeat: -1,
         ease: "none",
       });
       beltTween.current = tween;
       const observer = new IntersectionObserver(([e]) => {
         beltVisible.current = e.isIntersecting;
-        tween.paused(!e.isIntersecting || pauseRef.current);
+        tween.paused(
+          !e.isIntersecting || track.contains(document.activeElement),
+        );
       });
       observer.observe(track);
       const focus = () => tween.pause(),
         blur = () => {
-          if (!pauseRef.current && beltVisible.current) tween.resume();
+          if (beltVisible.current) tween.resume();
         };
       track.addEventListener("focusin", focus);
       track.addEventListener("focusout", blur);
@@ -371,15 +399,9 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
         className="squad-chapter"
         aria-label="Rajasthan Royals players from the supplied IPL 2026 data"
       >
-        <div className="squad-controls">
-          <span>Meet the Royals</span>
-          <button onClick={() => setPaused((v) => !v)} aria-pressed={paused}>
-            {paused ? "Play movement" : "Pause movement"} {paused ? "▷" : "Ⅱ"}
-          </button>
-        </div>
         {error && <p role="alert">{error}</p>}
         <div
-          className={`squad-viewport ${paused || reduced ? "squad-viewport--static" : ""}`}
+          className={`squad-viewport ${reduced ? "squad-viewport--static" : ""}`}
         >
           <div ref={belt} className="squad-track">
             {[0, 1].map((copy) => (
@@ -506,6 +528,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
               aria-hidden="true"
             >
               <img
+                className="quiz-figure-drift"
                 src={playerImage(player)}
                 alt=""
                 width="220"

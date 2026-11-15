@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
-import { playClickChime } from "../utils/sound";
 import { ShieldCheck, TrendingDown, Search } from "lucide-react";
 
 interface BowlingIntelligencePageProps {
@@ -47,11 +46,11 @@ export const BowlingIntelligencePage: React.FC<
             <span>Bowling under pressure Matrix</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
-            DEATH OVERS BOWLING FORTRESS
+            BOWLING UNDER PRESSURE
           </h1>
           <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
-            Measuring dot-ball percentage and run-suppression composure in
-            high-leverage overs 16–20.
+            Recorded pressure bowling aggregates, not a separate overs 16–20
+            split. Includes players with at least 12 pressure deliveries.
           </p>
         </div>
 
@@ -72,9 +71,9 @@ export const BowlingIntelligencePage: React.FC<
             <thead className="bg-[#EAF5FF] border-b border-[#B3D4FF]/60 text-xs font-mono uppercase text-[#505A70]">
               <tr>
                 <th className="py-4 px-6">Bowler</th>
-                <th className="py-4 px-6 text-right">Death Balls</th>
+                <th className="py-4 px-6 text-right">Pressure Balls</th>
                 <th className="py-4 px-6 text-right">Pressure Econ</th>
-                <th className="py-4 px-6 text-right">Normal Econ</th>
+                <th className="py-4 px-6 text-right">Overall Econ</th>
                 <th className="py-4 px-6 text-right">Econ Delta</th>
                 <th className="py-4 px-6 text-right">Pressure Score</th>
               </tr>
@@ -84,7 +83,6 @@ export const BowlingIntelligencePage: React.FC<
                 <tr
                   key={p.player_id}
                   onClick={() => {
-                    playClickChime();
                     onSelectPlayer(p);
                   }}
                   className="hover:bg-[#EAF5FF]/40 transition-colors cursor-pointer group"

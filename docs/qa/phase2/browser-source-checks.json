@@ -1,0 +1,288 @@
+[
+  {
+    "reference": "Delta",
+    "videos": [
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-10T15-08-34.030Z-historia-menu.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 463.390625,
+          "y": 102.5,
+          "width": 240.078125,
+          "height": 77.6484375,
+          "top": 102.5,
+          "right": 703.46875,
+          "bottom": 180.1484375,
+          "left": 463.390625
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-06-19T09-23-25.595Z-menu-about.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 727.46875,
+          "y": 102.5,
+          "width": 240.078125,
+          "height": 77.6484375,
+          "top": 102.5,
+          "right": 967.546875,
+          "bottom": 180.1484375,
+          "left": 727.46875
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-10T14-16-48.360Z-acores-menu.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 991.546875,
+          "y": 102.5,
+          "width": 240.078125,
+          "height": 77.6484375,
+          "top": 102.5,
+          "right": 1231.625,
+          "bottom": 180.1484375,
+          "left": 991.546875
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-10T14-33-40.575Z-ciclo-menu.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 463.390625,
+          "y": 102.5,
+          "width": 240.078125,
+          "height": 77.6484375,
+          "top": 102.5,
+          "right": 703.46875,
+          "bottom": 180.1484375,
+          "left": 463.390625
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-10T15-05-01.687Z-academia-menu.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 727.46875,
+          "y": 102.5,
+          "width": 240.078125,
+          "height": 77.6484375,
+          "top": 102.5,
+          "right": 967.546875,
+          "bottom": 180.1484375,
+          "left": 727.46875
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-10T15-19-01.080Z-ccc-menu.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 991.546875,
+          "y": 102.5,
+          "width": 240.078125,
+          "height": 77.6484375,
+          "top": 102.5,
+          "right": 1231.625,
+          "bottom": 180.1484375,
+          "left": 991.546875
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-31T15-28-54.839Z-homepage-mobile.mp4#t=0.1",
+        "paused": false,
+        "time": 4.0076,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 855,
+          "top": 0,
+          "right": 1440,
+          "bottom": 855,
+          "left": 0
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-03-31T16-08-38.041Z-acores-mobile.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 855,
+          "top": 0,
+          "right": 1440,
+          "bottom": 855,
+          "left": 0
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-01-28T17-42-18.232Z-herman-jose-web.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 729.3861083984375,
+          "y": 2371.532470703125,
+          "width": 155.095947265625,
+          "height": 118.546142578125,
+          "top": 2371.532470703125,
+          "right": 884.4820556640625,
+          "bottom": 2490.07861328125,
+          "left": 729.3861083984375
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-05-28T14-22-31.599Z-ciclo-mobile.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": 0,
+          "y": 2613.875,
+          "width": 1440,
+          "height": 2101.609375,
+          "top": 2613.875,
+          "right": 1440,
+          "bottom": 4715.484375,
+          "left": 0
+        }
+      },
+      {
+        "src": "https://burospaces1.fra1.cdn.digitaloceanspaces.com/delta/2026-05-28T14-25-45.349Z-acores-footer-mobile.mp4#t=0.1",
+        "paused": true,
+        "time": 0.1,
+        "rect": {
+          "x": -72,
+          "y": 9465.921875,
+          "width": 1584,
+          "height": 990,
+          "top": 9465.921875,
+          "right": 1512,
+          "bottom": 10455.921875,
+          "left": -72
+        }
+      }
+    ]
+  },
+  {
+    "reference": "Delta",
+    "animated_elements": [
+      {
+        "target": "media",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 24000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "none",
+          "iterationStart": 0,
+          "iterations": Infinity
+        },
+        "frames": [
+          {
+            "offset": 0,
+            "easing": "linear",
+            "composite": "auto",
+            "transform": "rotate(0deg)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "linear",
+            "composite": "auto",
+            "transform": "rotate(360deg)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "emanjot",
+    "url": "https://www.iplt20.com/players/02c3d48a-5f7d-4854-94c5-946bd48ea26b/emanjot-singh-chahal",
+    "status": 200,
+    "title": "Emanjot Singh Chahal | Rajasthan Royals Profile | IPLT20",
+    "text": "",
+    "images": [
+      {
+        "alt": "Emanjot Singh Chahal",
+        "src": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75"
+      },
+      {
+        "alt": "Sam Curran",
+        "src": "inline generic IPL silhouette (SVG)"
+      },
+      {
+        "alt": "Dasun Shanaka",
+        "src": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F16094.png%26brand%3Dipl&w=750&q=75"
+      }
+    ],
+    "links": [
+      {
+        "text": "58Sam CurranAll Rounder",
+        "url": "https://www.iplt20.com/players/7e05ef83-dbbd-4ad5-80cb-2514984aa0db/sam-curran"
+      },
+      {
+        "text": "7Dasun ShanakaBatter",
+        "url": "https://www.iplt20.com/players/04ea76e2-4aa7-46f7-bc3f-dfde523e0374/dasun-shanaka"
+      },
+      {
+        "text": "Image Use Terms",
+        "url": "https://www.iplt20.com/image-use-terms"
+      },
+      {
+        "text": "Media Accreditation Terms and Conditions",
+        "url": "https://www.iplt20.com/media-accreditation-terms-and-conditions"
+      },
+      {
+        "text": "Ticket Terms and Conditions",
+        "url": "https://www.iplt20.com/ticket-terms-and-conditions"
+      },
+      {
+        "text": "Terms & Conditions",
+        "url": "https://www.iplt20.com/terms-and-conditions"
+      }
+    ]
+  },
+  {
+    "label": "players",
+    "url": "https://www.iplt20.com/",
+    "status": 200,
+    "title": "Home",
+    "text": "",
+    "images": [],
+    "links": [
+      {
+        "text": "Image Use Terms",
+        "url": "https://www.iplt20.com/image-use-terms"
+      },
+      {
+        "text": "Media Accreditation Terms and Conditions",
+        "url": "https://www.iplt20.com/media-accreditation-terms-and-conditions"
+      },
+      {
+        "text": "Ticket Terms and Conditions",
+        "url": "https://www.iplt20.com/ticket-terms-and-conditions"
+      },
+      {
+        "text": "Terms & Conditions",
+        "url": "https://www.iplt20.com/terms-and-conditions"
+      }
+    ]
+  },
+  {
+    "label": "embed",
+    "url": "https://geo.dailymotion.com/player.html?mute=true&video=x9j1xrq",
+    "status": 403,
+    "title": "",
+    "text": "Forbidden\n",
+    "images": [],
+    "links": []
+  }
+]

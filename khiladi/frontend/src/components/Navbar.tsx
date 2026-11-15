@@ -1,6 +1,5 @@
+import { KhiladiLogo } from "./KhiladiLogo";
 import React, { useRef, useState } from "react";
-import { SoundToggle } from "./SoundToggle";
-import { playClickChime } from "../utils/sound";
 const destinations = [
   ["home", "Home"],
   ["database", "Explore players"],
@@ -27,7 +26,6 @@ export const Navbar: React.FC<{
     trigger.current?.focus();
   };
   const navigate = (id: string) => {
-    playClickChime();
     close();
     onNavigate(id);
   };
@@ -44,10 +42,9 @@ export const Navbar: React.FC<{
             onNavigate("home");
           }}
         >
-          KHILADI
+          <KhiladiLogo />
         </a>
         <div className="site-header-tools">
-          <SoundToggle />
           <button
             ref={trigger}
             className="menu-trigger"

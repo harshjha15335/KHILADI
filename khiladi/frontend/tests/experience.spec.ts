@@ -1,9 +1,18 @@
 import { test, expect } from "@playwright/test";
 test.beforeEach(async ({ page }, info) => {
   if (!info.title.startsWith("loader can"))
-    await page.addInitScript(() =>
-      sessionStorage.setItem("khiladi_intro_seen", "true"),
-    );
+    await page.addInitScript(() => {
+      // Tests dismiss the intro through its supported Escape action; storage cannot suppress it.
+      const skip = () => {
+        if (document.querySelector(".intro-root")) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+        }
+      };
+      new MutationObserver(skip).observe(document, {
+        childList: true,
+        subtree: true,
+      });
+    });
 });
 test("homepage uses restrained navigation, names-only parade and settled quiz figures", async ({
   page,
@@ -171,7 +180,8 @@ test("loader can be skipped with Escape and never locks later navigation", async
     "hidden",
   );
   await page.reload();
-  await expect(page.locator(".intro-root")).toHaveCount(0);
+  await expect(page.locator(".intro-root")).toBeVisible();
+  await page.keyboard.press("Escape");
 });
 test("route cleanup prevents duplicated cursors and scroll timelines", async ({
   page,

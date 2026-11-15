@@ -1,7 +1,6 @@
 import { playerImage } from "../utils/media";
 import React, { useState, useEffect } from "react";
 import { TopBatter, TopBowler } from "../types";
-import { playClickChime, playHoverChime } from "../utils/sound";
 import {
   Award,
   Download,
@@ -46,7 +45,6 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
   }, []);
 
   const downloadCSV = (type: "batters" | "bowlers") => {
-    playClickChime();
     const url =
       type === "batters"
         ? "/data/top_10_batters.csv"
@@ -98,10 +96,8 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={() => {
-              playClickChime();
               setActiveTab("batters");
             }}
-            onMouseEnter={playHoverChime}
             className={`px-6 py-3 rounded-full font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === "batters"
                 ? "bg-[#F22E83] text-white shadow-md"
@@ -114,10 +110,8 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
 
           <button
             onClick={() => {
-              playClickChime();
               setActiveTab("bowlers");
             }}
-            onMouseEnter={playHoverChime}
             className={`px-6 py-3 rounded-full font-display text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === "bowlers"
                 ? "bg-[#2549BD] text-white shadow-md"
@@ -150,10 +144,8 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
                   <tr
                     key={b.player_id}
                     onClick={() => {
-                      playClickChime();
                       onSelectPlayerById(b.player_id);
                     }}
-                    onMouseEnter={playHoverChime}
                     className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"
                   >
                     <td className="py-4 px-6 text-center font-mono font-bold text-base text-[#22263C]">
@@ -255,10 +247,8 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
                   <tr
                     key={bo.player_id}
                     onClick={() => {
-                      playClickChime();
                       onSelectPlayerById(bo.player_id);
                     }}
-                    onMouseEnter={playHoverChime}
                     className="hover:bg-[#EAF5FF]/50 transition-colors cursor-pointer group"
                   >
                     <td className="py-4 px-6 text-center font-mono font-bold text-base text-[#22263C]">

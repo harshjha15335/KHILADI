@@ -1,6 +1,5 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import { playClickChime, playHoverChime } from "../utils/sound";
 interface Props {
   children: React.ReactNode;
   onClick?: () => void;
@@ -25,9 +24,7 @@ export const KhiladiAnimatedButton: React.FC<Props> = ({
     type={type}
     disabled={disabled}
     className={`chapter-button chapter-button--${variant} chapter-button--${size} ${className}`}
-    onMouseEnter={playHoverChime}
     onClick={() => {
-      playClickChime();
       onClick?.();
     }}
   >

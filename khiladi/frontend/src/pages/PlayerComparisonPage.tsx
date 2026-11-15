@@ -2,7 +2,6 @@ import { metric } from "../utils/api";
 import { playerImage } from "../utils/media";
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
-import { playClickChime } from "../utils/sound";
 import { SlidersHorizontal, Flame, Shield, ArrowRight } from "lucide-react";
 
 interface PlayerComparisonPageProps {

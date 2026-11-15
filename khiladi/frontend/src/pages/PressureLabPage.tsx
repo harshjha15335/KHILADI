@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { playClickChime, playHoverChime } from '../utils/sound';
-import { 
-  Flame, 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  FastForward, 
-  Activity, 
-  AlertTriangle, 
-  ShieldAlert, 
-  TrendingUp, 
+import React, { useState, useEffect } from "react";
+import {
+  Flame,
+  Play,
+  Pause,
+  RotateCcw,
+  FastForward,
+  Activity,
+  AlertTriangle,
+  ShieldAlert,
+  TrendingUp,
   Zap,
-  Target
-} from 'lucide-react';
+  Target,
+} from "lucide-react";
 
 interface Delivery {
   innings: number;
@@ -43,25 +42,27 @@ interface PressureLabPageProps {
   onSelectPlayerById: (playerId: number) => void;
 }
 
-export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayerById }) => {
+export const PressureLabPage: React.FC<PressureLabPageProps> = ({
+  onSelectPlayerById,
+}) => {
   const [replay, setReplay] = useState<ReplayData | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(600); // ms per ball
 
   useEffect(() => {
-    fetch('/data/sample_match_replay.json')
-      .then(res => res.json())
+    fetch("/data/sample_match_replay.json")
+      .then((res) => res.json())
       .then((data: ReplayData) => {
         setReplay(data);
-        const firstHp = data.deliveries.findIndex(d => d.is_high_pressure);
+        const firstHp = data.deliveries.findIndex((d) => d.is_high_pressure);
         if (firstHp !== -1) setCurrentIndex(firstHp);
       })
       .catch(() => {
-        fetch('/api/match-replay')
-          .then(res => res.json())
+        fetch("/api/match-replay")
+          .then((res) => res.json())
           .then((data: ReplayData) => setReplay(data))
-          .catch(err => console.error('Failed to load match replay:', err));
+          .catch((err) => console.error("Failed to load match replay:", err));
       });
   }, []);
 
@@ -69,7 +70,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
   useEffect(() => {
     if (!isPlaying || !replay) return;
     const interval = setInterval(() => {
-      setCurrentIndex(prev => {
+      setCurrentIndex((prev) => {
         if (prev >= replay.deliveries.length - 1) {
           setIsPlaying(false);
           return prev;
@@ -89,7 +90,8 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
     );
   }
 
-  const currentDelivery = replay.deliveries[currentIndex] || replay.deliveries[0];
+  const currentDelivery =
+    replay.deliveries[currentIndex] || replay.deliveries[0];
   const li = currentDelivery.leverage_index;
   const isHighLI = currentDelivery.is_high_pressure;
 
@@ -107,14 +109,22 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
               THE PRESSURE LAB
             </h1>
             <p className="text-sm text-[#505A70] max-w-2xl leading-relaxed">
-              Move through the match one ball at a time. See who is batting, what happened, and how the model describes the pressure of the situation.
+              Move through the match one ball at a time. See who is batting,
+              what happened, and how the model describes the pressure of the
+              situation.
             </p>
           </div>
 
           <div className="p-4 rounded-2xl bg-white border border-[#E8E6ED] text-xs font-mono space-y-1 shadow-sm">
-            <div className="text-[#68738A] uppercase">Match {replay.match_id}</div>
-            <div className="font-bold text-[#22263C] text-sm">{replay.home_team} vs {replay.away_team}</div>
-            <div className="text-[#2549BD] font-bold">{replay.total_deliveries} Deliveries Recorded</div>
+            <div className="text-[#68738A] uppercase">
+              Match {replay.match_id}
+            </div>
+            <div className="font-bold text-[#22263C] text-sm">
+              {replay.home_team} vs {replay.away_team}
+            </div>
+            <div className="text-[#2549BD] font-bold">
+              {replay.total_deliveries} Deliveries Recorded
+            </div>
           </div>
         </div>
 
@@ -148,11 +158,15 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
             {/* Duel Presentation: Striker vs Bowler */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
               {/* Batter */}
-              <div 
-                onClick={() => { playClickChime(); onSelectPlayerById(currentDelivery.striker_id); }}
+              <div
+                onClick={() => {
+                  onSelectPlayerById(currentDelivery.striker_id);
+                }}
                 className="p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group shadow-sm"
               >
-                <div className="text-[10px] font-mono uppercase text-[#F22E83] font-bold mb-1">Striker</div>
+                <div className="text-[10px] font-mono uppercase text-[#F22E83] font-bold mb-1">
+                  Striker
+                </div>
                 <div className="text-lg font-bold font-display text-[#22263C] group-hover:text-[#F22E83] transition-colors truncate">
                   {currentDelivery.striker}
                 </div>
@@ -162,11 +176,15 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
               </div>
 
               {/* Bowler */}
-              <div 
-                onClick={() => { playClickChime(); onSelectPlayerById(currentDelivery.bowler_id); }}
+              <div
+                onClick={() => {
+                  onSelectPlayerById(currentDelivery.bowler_id);
+                }}
                 className="p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group shadow-sm"
               >
-                <div className="text-[10px] font-mono uppercase text-[#2549BD] font-bold mb-1">Bowler</div>
+                <div className="text-[10px] font-mono uppercase text-[#2549BD] font-bold mb-1">
+                  Bowler
+                </div>
                 <div className="text-lg font-bold font-display text-[#22263C] group-hover:text-[#2549BD] transition-colors truncate">
                   {currentDelivery.bowler}
                 </div>
@@ -179,12 +197,14 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
             {/* Ball Outcome Stage */}
             <div className="p-6 rounded-2xl bg-[#FFF3F8] border border-[#F5B1CE]/60 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <div className="text-xs font-mono uppercase text-[#68738A]">Delivery Outcome</div>
+                <div className="text-xs font-mono uppercase text-[#68738A]">
+                  Delivery Outcome
+                </div>
                 <div className="text-3xl font-display font-black text-[#22263C] mt-1">
                   {currentDelivery.is_wicket ? (
                     <span className="text-[#F22E83] flex items-center gap-2">
                       <AlertTriangle className="w-6 h-6" />
-                      WICKET! {currentDelivery.dismissal || 'Caught'}
+                      WICKET! {currentDelivery.dismissal || "Caught"}
                     </span>
                   ) : currentDelivery.runs >= 4 ? (
                     <span className="text-[#2549BD] flex items-center gap-2">
@@ -192,15 +212,22 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
                       BOUNDARY! {currentDelivery.runs} Runs
                     </span>
                   ) : (
-                    <span>{currentDelivery.runs} Run{currentDelivery.runs === 1 ? '' : 's'}</span>
+                    <span>
+                      {currentDelivery.runs} Run
+                      {currentDelivery.runs === 1 ? "" : "s"}
+                    </span>
                   )}
                 </div>
               </div>
 
               <div className="text-right">
-                <div className="text-xs font-mono uppercase text-[#68738A]">Leverage Index ($LI$)</div>
-                <div className={`text-3xl font-mono font-black ${isHighLI ? 'text-[#F22E83]' : 'text-[#2549BD]'}`}>
-                  {li.toFixed(2)}x
+                <div className="text-xs font-mono uppercase text-[#68738A]">
+                  Leverage index (heuristic)
+                </div>
+                <div
+                  className={`text-3xl font-mono font-black ${isHighLI ? "text-[#F22E83]" : "text-[#2549BD]"}`}
+                >
+                  {li.toFixed(2)}
                 </div>
               </div>
             </div>
@@ -208,8 +235,16 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
             {/* Scrubber Timeline Controls */}
             <div className="space-y-3 pt-2">
               <div className="flex items-center justify-between text-xs font-mono text-[#68738A]">
-                <span>Ball {currentIndex + 1} of {replay.deliveries.length}</span>
-                <span>{((currentIndex / (replay.deliveries.length - 1)) * 100).toFixed(0)}% Match Timeline</span>
+                <span>
+                  Ball {currentIndex + 1} of {replay.deliveries.length}
+                </span>
+                <span>
+                  {(
+                    (currentIndex / (replay.deliveries.length - 1)) *
+                    100
+                  ).toFixed(0)}
+                  % Match Timeline
+                </span>
               </div>
 
               <input
@@ -227,15 +262,24 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
               <div className="flex items-center justify-between pt-2">
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => { playClickChime(); setIsPlaying(!isPlaying); }}
+                    onClick={() => {
+                      setIsPlaying(!isPlaying);
+                    }}
                     className="px-4 py-2 rounded-full bg-[#F22E83] text-white text-xs font-mono font-bold flex items-center gap-2 hover:bg-[#BA1656] transition-colors shadow-sm cursor-pointer"
                   >
-                    {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-                    <span>{isPlaying ? 'PAUSE' : 'PLAY REPLAY'}</span>
+                    {isPlaying ? (
+                      <Pause className="w-3.5 h-3.5" />
+                    ) : (
+                      <Play className="w-3.5 h-3.5" />
+                    )}
+                    <span>{isPlaying ? "PAUSE" : "PLAY REPLAY"}</span>
                   </button>
 
                   <button
-                    onClick={() => { playClickChime(); setCurrentIndex(0); setIsPlaying(false); }}
+                    onClick={() => {
+                      setCurrentIndex(0);
+                      setIsPlaying(false);
+                    }}
                     className="p-2 rounded-full bg-white border border-[#E8E6ED] text-[#505A70] hover:bg-[#FFEAF2] transition-colors cursor-pointer"
                     title="Reset to Ball 1"
                   >
@@ -245,17 +289,17 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
 
                 <div className="flex items-center gap-2 text-xs font-mono">
                   <span className="text-[#68738A]">Speed:</span>
-                  {[1000, 500, 200].map(sp => (
+                  {[1000, 500, 200].map((sp) => (
                     <button
                       key={sp}
                       onClick={() => setPlaybackSpeed(sp)}
                       className={`px-2.5 py-1 rounded-lg border text-[11px] cursor-pointer ${
-                        playbackSpeed === sp 
-                          ? 'bg-[#2549BD] text-white border-[#2549BD] font-bold' 
-                          : 'bg-white text-[#505A70] border-[#E8E6ED]'
+                        playbackSpeed === sp
+                          ? "bg-[#2549BD] text-white border-[#2549BD] font-bold"
+                          : "bg-white text-[#505A70] border-[#E8E6ED]"
                       }`}
                     >
-                      {sp === 1000 ? '1x' : sp === 500 ? '2x' : '5x'}
+                      {sp === 1000 ? "1x" : sp === 500 ? "2x" : "5x"}
                     </button>
                   ))}
                 </div>
@@ -271,23 +315,27 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({ onSelectPlayer
                 <span>Pressure Model State</span>
               </div>
               <div className="text-sm font-bold font-display text-[#22263C]">
-                Why is this delivery {isHighLI ? 'CRITICAL' : 'ROUTINE'}?
+                Why is this delivery {isHighLI ? "CRITICAL" : "ROUTINE"}?
               </div>
               <p className="text-xs text-[#505A70] leading-relaxed">
-                Win probability swings exponentially in over {currentDelivery.over}. Each boundary or wicket at $LI = {li.toFixed(2)}$ has {li.toFixed(1)}x the weight of a standard middle-overs single.
+                The stored match-state heuristic is {li.toFixed(2)} for this
+                delivery. It is not a calibrated win probability or a measured
+                multiplier of match impact.
               </p>
               <div className="space-y-2 pt-2 text-xs font-mono text-[#505A70]">
                 <div className="flex justify-between py-1 border-b border-[#E8E6ED]">
-                  <span>Win Prob Swing</span>
-                  <strong className="text-[#F22E83]">±{(li * 4.2).toFixed(1)}%</strong>
+                  <span>Win probability</span>
+                  <strong className="text-[#F22E83]">Not estimated</strong>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#E8E6ED]">
                   <span>Threshold</span>
-                  <strong className="text-[#2549BD]">&gt; 1.50 LI</strong>
+                  <strong className="text-[#2549BD]">≥ 1.80 LI</strong>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#E8E6ED]">
-                  <span>Shrinkage Applied</span>
-                  <strong className="text-[#22263C]">m = 40 deliveries</strong>
+                  <span>Ranking prior</span>
+                  <strong className="text-[#22263C]">
+                    40 balls (aggregate rankings)
+                  </strong>
                 </div>
               </div>
             </div>

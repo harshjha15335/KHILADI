@@ -10,9 +10,14 @@ be verified from the cloud session.
 If you already have the repository on your PC, open PowerShell in that folder:
 
 ```powershell
+git remote get-url origin
 git status
+# Continue only if origin is https://github.com/harshjha15335/KHILADI.git
 git pull --ff-only origin main
 ```
+
+If the remote says ASTFLOW or another repository, stop and use a new KHILADI
+clone below. Do not merge unrelated repository histories.
 
 Keep any existing local changes. If Git reports a conflict or divergent history,
 let Codex Local inspect it; do not reset or overwrite your files.

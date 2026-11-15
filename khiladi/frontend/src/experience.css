@@ -391,8 +391,8 @@ input:focus-visible {
   position: absolute;
   inset: -2px;
   background: var(--blue);
-  border-radius: 50%;
-  transform: translateY(105%) scaleX(0.7);
+  border-radius: inherit;
+  transform: translateY(105%);
   transition: transform 0.55s var(--ease);
   z-index: -1;
 }
@@ -428,7 +428,7 @@ input:focus-visible {
 }
 .chapter-button:hover:before,
 .chapter-button:focus-visible:before {
-  transform: translateY(0) scaleX(1.2);
+  transform: translateY(0);
 }
 .chapter-button:hover,
 .chapter-button:focus-visible {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
-import { playClickChime } from "../utils/sound";
 import { Flame, TrendingUp, Search } from "lucide-react";
 
 interface BattingIntelligencePageProps {
@@ -79,7 +78,6 @@ export const BattingIntelligencePage: React.FC<
                 <tr
                   key={p.player_id}
                   onClick={() => {
-                    playClickChime();
                     onSelectPlayer(p);
                   }}
                   className="hover:bg-[#FFF1F7] transition-colors cursor-pointer group"

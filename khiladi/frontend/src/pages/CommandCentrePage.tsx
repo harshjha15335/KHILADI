@@ -1,5 +1,4 @@
 import React from "react";
-import { playClickChime } from "../utils/sound";
 import {
   Layers,
   Flame,
@@ -39,7 +38,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div
             onClick={() => {
-              playClickChime();
               onNavigate("rankings");
             }}
             className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
@@ -58,7 +56,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
 
           <div
             onClick={() => {
-              playClickChime();
               onNavigate("database");
             }}
             className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
@@ -77,7 +74,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
 
           <div
             onClick={() => {
-              playClickChime();
               onNavigate("pressure-lab");
             }}
             className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#7545B8] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
@@ -96,7 +92,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
 
           <div
             onClick={() => {
-              playClickChime();
               onNavigate("war-room");
             }}
             className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
@@ -118,7 +113,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
           <div
             onClick={() => {
-              playClickChime();
               onNavigate("home");
             }}
             className="p-8 rounded-3xl bg-[#FFEAF2] border border-[#F5B1CE] hover:shadow-md transition-all cursor-pointer space-y-4"
@@ -140,7 +134,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
 
           <div
             onClick={() => {
-              playClickChime();
               onNavigate("methodology");
             }}
             className="p-8 rounded-3xl bg-[#EAF5FF] border border-[#B3D4FF] hover:shadow-md transition-all cursor-pointer space-y-4"

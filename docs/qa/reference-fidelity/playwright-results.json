@@ -122,12 +122,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4693,
+                  "duration": 5534,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:54:49.867Z",
+                  "startTime": "2026-11-15T16:32:30.525Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -164,12 +164,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1580,
+                  "duration": 1809,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:54:54.916Z",
+                  "startTime": "2026-11-15T16:32:36.357Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -179,7 +179,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-08a61a9cbbff22b92750",
           "file": "experience.spec.ts",
-          "line": 8,
+          "line": 17,
           "column": 1
         },
         {
@@ -198,12 +198,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1763,
+                  "duration": 2763,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:54:56.509Z",
+                  "startTime": "2026-11-15T16:32:38.193Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -213,7 +213,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-caa9253213e71f91498a",
           "file": "experience.spec.ts",
-          "line": 27,
+          "line": 36,
           "column": 1
         },
         {
@@ -232,12 +232,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4166,
+                  "duration": 5336,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:54:58.317Z",
+                  "startTime": "2026-11-15T16:32:40.976Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -247,7 +247,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-a68b80c27d987d0912e7",
           "file": "experience.spec.ts",
-          "line": 50,
+          "line": 59,
           "column": 1
         },
         {
@@ -266,12 +266,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3159,
+                  "duration": 3407,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:02.498Z",
+                  "startTime": "2026-11-15T16:32:46.331Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -281,7 +281,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-cad75de6e6ceaf509c22",
           "file": "experience.spec.ts",
-          "line": 81,
+          "line": 90,
           "column": 1
         },
         {
@@ -300,12 +300,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1471,
+                  "duration": 1821,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:05.677Z",
+                  "startTime": "2026-11-15T16:32:49.761Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -315,7 +315,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-119868c23b5c3c09bde2",
           "file": "experience.spec.ts",
-          "line": 106,
+          "line": 115,
           "column": 3
         },
         {
@@ -334,12 +334,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1305,
+                  "duration": 1346,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:07.164Z",
+                  "startTime": "2026-11-15T16:32:51.597Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -349,7 +349,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-8b952479d2422f7d3961",
           "file": "experience.spec.ts",
-          "line": 106,
+          "line": 115,
           "column": 3
         },
         {
@@ -368,12 +368,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1502,
+                  "duration": 1690,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:08.491Z",
+                  "startTime": "2026-11-15T16:32:52.964Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -383,7 +383,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-521cb225ef1daea7ceb8",
           "file": "experience.spec.ts",
-          "line": 106,
+          "line": 115,
           "column": 3
         },
         {
@@ -402,12 +402,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1484,
+                  "duration": 1509,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:10.008Z",
+                  "startTime": "2026-11-15T16:32:54.674Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -417,7 +417,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-d87c40c6ae5e07dc2ec2",
           "file": "experience.spec.ts",
-          "line": 106,
+          "line": 115,
           "column": 3
         },
         {
@@ -436,12 +436,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1630,
+                  "duration": 1482,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:11.505Z",
+                  "startTime": "2026-11-15T16:32:56.211Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -451,7 +451,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-374f2d1644c12d5ca2d5",
           "file": "experience.spec.ts",
-          "line": 106,
+          "line": 115,
           "column": 3
         },
         {
@@ -470,12 +470,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1352,
+                  "duration": 1624,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:13.148Z",
+                  "startTime": "2026-11-15T16:32:57.706Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -485,7 +485,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-ef88199704d4f7d636da",
           "file": "experience.spec.ts",
-          "line": 106,
+          "line": 115,
           "column": 3
         },
         {
@@ -504,12 +504,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1610,
+                  "duration": 1430,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:14.513Z",
+                  "startTime": "2026-11-15T16:32:59.350Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -519,7 +519,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-c8c9ba19a2c096e58584",
           "file": "experience.spec.ts",
-          "line": 127,
+          "line": 136,
           "column": 1
         },
         {
@@ -538,12 +538,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1873,
+                  "duration": 2124,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:16.139Z",
+                  "startTime": "2026-11-15T16:33:00.810Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -553,7 +553,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-632d23581078b072a089",
           "file": "experience.spec.ts",
-          "line": 141,
+          "line": 150,
           "column": 1
         },
         {
@@ -572,12 +572,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1431,
+                  "duration": 2165,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:18.023Z",
+                  "startTime": "2026-11-15T16:33:02.952Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -587,7 +587,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-73107e84c4f8be52c449",
           "file": "experience.spec.ts",
-          "line": 163,
+          "line": 172,
           "column": 1
         },
         {
@@ -606,12 +606,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2079,
+                  "duration": 2237,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:19.470Z",
+                  "startTime": "2026-11-15T16:33:05.129Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -621,7 +621,7 @@
           ],
           "id": "116f6b4a9defd92cdbb9-a9cc91de0fe5ae3f715c",
           "file": "experience.spec.ts",
-          "line": 176,
+          "line": 186,
           "column": 1
         },
         {
@@ -640,12 +640,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1239,
+                  "duration": 1312,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-15T14:55:21.572Z",
+                  "startTime": "2026-11-15T16:33:07.386Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -655,7 +655,457 @@
           ],
           "id": "116f6b4a9defd92cdbb9-4498ad967ae3331579a1",
           "file": "experience.spec.ts",
-          "line": 199,
+          "line": 209,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "phase2.spec.ts",
+      "file": "phase2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "full document reload plays the complete loader five times despite old session flag",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:08.734Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-ef0a46ceb3f8ebf51844",
+          "file": "phase2.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "sound is absent even for previously opted-in users; parade has names only and no pause control",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4211,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:26.981Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-6ed21ec1ce3b24f5a3b1",
+          "file": "phase2.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "button fill is rectangular, fully covers multiple widths and recovers after rapid pointer movement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:31.210Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-5fd9b47e4787dde4c1dc",
+          "file": "phase2.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "discovery drifts continuously, reverses scroll cleanly and releases loops on navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8769,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:40.875Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-53b71fd9426ef1350ec2",
+          "file": "phase2.spec.ts",
+          "line": 89,
+          "column": 1
+        },
+        {
+          "title": "parade is slower, has identical loop groups and remains keyboard-interactive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:49.656Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-120ad612d1eed6ac5b89",
+          "file": "phase2.spec.ts",
+          "line": 126,
+          "column": 1
+        },
+        {
+          "title": "bowling and pressure labels match preserved data definitions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1188,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:54.406Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-e7b5688447f0408d379f",
+          "file": "phase2.spec.ts",
+          "line": 154,
+          "column": 1
+        },
+        {
+          "title": "phase2 responsive 1920x1080",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6709,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:33:55.608Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-408a1561348bf76c7f04",
+          "file": "phase2.spec.ts",
+          "line": 183,
+          "column": 3
+        },
+        {
+          "title": "phase2 responsive 1440x900",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6887,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:34:02.329Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-c68b85b4c1aa036cafe5",
+          "file": "phase2.spec.ts",
+          "line": 183,
+          "column": 3
+        },
+        {
+          "title": "phase2 responsive 1366x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:34:09.238Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-69499f40d6a58eaeb8eb",
+          "file": "phase2.spec.ts",
+          "line": 183,
+          "column": 3
+        },
+        {
+          "title": "phase2 responsive 768x1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6802,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:34:16.037Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-93e71bf5a205760a6501",
+          "file": "phase2.spec.ts",
+          "line": 183,
+          "column": 3
+        },
+        {
+          "title": "phase2 responsive 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6692,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:34:22.850Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-36373ab10c8c8739394a",
+          "file": "phase2.spec.ts",
+          "line": 183,
+          "column": 3
+        },
+        {
+          "title": "phase2 responsive 360x800",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7074,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:34:29.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-a37a3a1d3e31645209a5",
+          "file": "phase2.spec.ts",
+          "line": 183,
+          "column": 3
+        },
+        {
+          "title": "ranking downloads, replay and changed comparison remain functional",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4486,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T16:34:36.646Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-3f0c6a717dc04bdf8c01",
+          "file": "phase2.spec.ts",
+          "line": 204,
           "column": 1
         }
       ]
@@ -663,9 +1113,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-15T14:54:49.182Z",
-    "duration": 33774.271,
-    "expected": 16,
+    "startTime": "2026-11-15T16:32:29.950Z",
+    "duration": 131412.299,
+    "expected": 29,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

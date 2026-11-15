@@ -10,22 +10,11 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
   const finish = useCallback(() => {
     if (finished.current) return;
     finished.current = true;
-    try {
-      sessionStorage.setItem("khiladi_intro_seen", "true");
-    } catch {
-      /* storage optional */
-    }
     complete.current();
   }, []);
   useGSAP(
     () => {
-      let seen = false;
-      try {
-        seen = sessionStorage.getItem("khiladi_intro_seen") === "true";
-      } catch {
-        /* storage optional */
-      }
-      if (seen || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
         finish();
         return;
       }

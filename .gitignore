@@ -28,3 +28,9 @@ docs/qa/reference-fidelity/media-review/
 docs/qa/reference-fidelity/reference-videos/
 docs/qa/reference-fidelity/walkthrough-raw/
 docs/qa/reference-fidelity/test-artifacts/
+
+# Phase 2 private browser evidence (source metadata and tests remain tracked)
+docs/qa/phase2/*.png
+docs/qa/phase2/*.webm
+docs/qa/phase2/raw/
+docs/qa/phase2/parade-raw/
