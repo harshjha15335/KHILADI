@@ -1,10 +1,11 @@
-import React, { useEffect, useId, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 interface Props {
   children: React.ReactNode;
   className?: string;
   intensity?: number;
   disabled?: boolean;
 }
+// The recordings establish local image translation and edge movement, not a noise shader.
 export const AugeWarpSurface: React.FC<Props> = ({
   children,
   className = "",
@@ -12,73 +13,48 @@ export const AugeWarpSurface: React.FC<Props> = ({
   disabled = false,
 }) => {
   const root = useRef<HTMLDivElement>(null),
-    displacement = useRef<SVGFEDisplacementMapElement>(null),
-    frame = useRef(0),
-    id = "warp-" + useId().replace(/:/g, "");
-  useEffect(() => () => cancelAnimationFrame(frame.current), []);
+    frame = useRef(0);
   const reset = () => {
     cancelAnimationFrame(frame.current);
-    if (displacement.current) displacement.current.setAttribute("scale", "0");
-    root.current
-      ?.querySelectorAll("img")
-      .forEach((img) => (img.style.filter = ""));
+    root.current?.querySelectorAll("img").forEach((img) => {
+      img.style.transform = "";
+    });
   };
+  useEffect(() => {
+    const preference = matchMedia("(prefers-reduced-motion: reduce)");
+    preference.addEventListener("change", reset);
+    return () => {
+      cancelAnimationFrame(frame.current);
+      preference.removeEventListener("change", reset);
+    };
+  }, []);
   return (
     <div
       ref={root}
       className={`warp-surface ${className}`}
+      data-cursor-label={disabled ? undefined : "Explore player"}
       onPointerMove={(event) => {
         if (
           disabled ||
-          event.pointerType === "touch" ||
-          matchMedia("(prefers-reduced-motion: reduce)").matches
+          event.pointerType !== "mouse" ||
+          !matchMedia(
+            "(pointer:fine) and (prefers-reduced-motion:no-preference)",
+          ).matches
         )
           return;
-        const rect = event.currentTarget.getBoundingClientRect(),
-          x = (event.clientX - rect.left) / rect.width;
+        const rect = event.currentTarget.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
         cancelAnimationFrame(frame.current);
         frame.current = requestAnimationFrame(() => {
-          displacement.current?.setAttribute(
-            "scale",
-            String((Math.sin(x * Math.PI) * 14 + 2) * intensity),
-          );
-          root.current
-            ?.querySelectorAll("img")
-            .forEach((img) => (img.style.filter = `url(#${id})`));
+          root.current?.querySelectorAll("img").forEach((img) => {
+            img.style.transform = `translate3d(${x * 18 * intensity}px,${y * 12 * intensity}px,0) skewY(${x * 1.8 * intensity}deg) scale(1.035)`;
+          });
         });
       }}
       onPointerLeave={reset}
+      onPointerCancel={reset}
     >
-      {!disabled && (
-        <svg className="warp-filter-defs" aria-hidden="true">
-          <defs>
-            <filter
-              id={id}
-              x="-10%"
-              y="-10%"
-              width="120%"
-              height="120%"
-              colorInterpolationFilters="sRGB"
-            >
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency=".013 .035"
-                numOctaves="1"
-                seed="8"
-                result="noise"
-              />
-              <feDisplacementMap
-                ref={displacement}
-                in="SourceGraphic"
-                in2="noise"
-                scale="0"
-                xChannelSelector="R"
-                yChannelSelector="G"
-              />
-            </filter>
-          </defs>
-        </svg>
-      )}
       {children}
     </div>
   );

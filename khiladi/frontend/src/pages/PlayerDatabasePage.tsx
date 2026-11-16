@@ -4,6 +4,7 @@ import { loadPlayers, describePlayer, metric } from "../utils/api";
 import { playerImage } from "../utils/media";
 import { AugeWarpSurface } from "../components/AugeWarpSurface";
 import { KhiladiKineticText } from "../components/KhiladiKineticText";
+import { PlayerEditorialTrack } from "../components/PlayerEditorialTrack";
 import { AnalyticsIntro } from "../components/AnalyticsIntro";
 export const PlayerDatabasePage: React.FC<{
   onSelectPlayer: (p: Player) => void;
@@ -44,6 +45,7 @@ export const PlayerDatabasePage: React.FC<{
     <div className="min-h-screen pt-32 pb-20 px-5">
       <div className="max-w-7xl mx-auto space-y-8">
         <KhiladiKineticText
+          preview={players.map(playerImage).find(Boolean)}
           as="h1"
           text="Find your match-winner."
           className="text-4xl sm:text-6xl font-bold tracking-tight"
@@ -52,6 +54,10 @@ export const PlayerDatabasePage: React.FC<{
           Discover the players who fit your team. Open a profile to see what
           their recorded performance tells us.
         </AnalyticsIntro>
+        <PlayerEditorialTrack
+          players={players}
+          onSelectPlayer={onSelectPlayer}
+        />
         <div className="discovery-controls">
           <label>
             Find a player
@@ -97,10 +103,18 @@ export const PlayerDatabasePage: React.FC<{
         </p>
         <div className="discovery-grid">
           {filtered.slice(page * 18, page * 18 + 18).map((player) => (
-            <article key={player.player_id} className="discovery-player">
+            <article
+              key={player.player_id}
+              className="discovery-player"
+              data-player-id={player.player_id}
+            >
               <button
                 className="discovery-open"
-                onClick={() => onSelectPlayer(player)}
+                data-cursor-label="View player"
+                onClick={(event) => {
+                  event.currentTarget.focus({ preventScroll: true });
+                  onSelectPlayer(player);
+                }}
               >
                 <AugeWarpSurface className="discovery-photo">
                   {playerImage(player) ? (

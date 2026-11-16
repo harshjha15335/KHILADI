@@ -27,7 +27,37 @@ export const PlayerProfileReveal: React.FC<Props> = ({
     priorFocus.current = document.activeElement as HTMLElement;
     const old = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const source =
+      priorFocus.current?.closest(
+        ".discovery-player, .squad-player, .editorial-player, .quiz-result, tr",
+      ) || priorFocus.current;
+    const origin = source?.getBoundingClientRect();
     dialog.current.showModal();
+    const bounds = dialog.current.getBoundingClientRect();
+    // Keep the selected surface's origin while resolving into a narrow information card.
+    const dx = origin
+      ? Math.max(
+          -innerWidth * 0.35,
+          Math.min(
+            innerWidth * 0.35,
+            origin.left + origin.width / 2 - bounds.left - bounds.width / 2,
+          ),
+        )
+      : 0;
+    const dy = origin
+      ? Math.max(
+          -innerHeight * 0.3,
+          Math.min(
+            innerHeight * 0.3,
+            origin.top + origin.height / 2 - bounds.top - bounds.height / 2,
+          ),
+        )
+      : 0;
+    const sourceOldTransform =
+      source instanceof HTMLElement ? source.style.transform : "";
+    if (source instanceof HTMLElement)
+      source.style.transform = "translateY(-6px)";
+    document.documentElement.classList.add("profile-is-open");
     const context = gsap.context(() => {
       const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
       timeline.current = gsap
@@ -41,43 +71,63 @@ export const PlayerProfileReveal: React.FC<Props> = ({
         .fromTo(
           ".profile-sheet",
           {
-            y: reduced ? 0 : 90,
-            rotationX: reduced ? 0 : 9,
-            scale: reduced ? 1 : 0.88,
+            x: reduced ? 0 : dx,
+            y: reduced ? 0 : dy,
             opacity: 0,
+            clipPath: reduced
+              ? "inset(0% 0% 0% 0%)"
+              : "inset(48.5% 0% 48.5% 0%)",
           },
           {
+            x: 0,
             y: 0,
-            rotationX: 0,
-            scale: 1,
             opacity: 1,
-            duration: reduced ? 0 : 0.55,
+            duration: reduced ? 0 : 0.3,
+            ease: "power3.inOut",
           },
         )
+        .to(".profile-sheet", {
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: reduced ? 0 : 0.5,
+          ease: "power3.inOut",
+        })
         .fromTo(
-          ".profile-reveal-item",
-          { y: reduced ? 0 : 22, opacity: 0 },
+          ".profile-visual",
+          { opacity: 0, clipPath: "inset(0 0 100% 0)" },
+          {
+            opacity: 1,
+            clipPath: "inset(0 0 0% 0)",
+            duration: reduced ? 0 : 0.35,
+          },
+          reduced ? 0 : 0.7,
+        )
+        .fromTo(
+          ".profile-reveal-item, .profile-toolbar, .profile-evidence, .profile-summary .chapter-button",
+          { y: reduced ? 0 : 18, opacity: 0 },
           {
             y: 0,
             opacity: 1,
-            stagger: reduced ? 0 : 0.065,
-            duration: reduced ? 0 : 0.35,
+            stagger: reduced ? 0 : 0.045,
+            duration: reduced ? 0 : 0.32,
           },
-          reduced ? 0 : 0.15,
+          reduced ? 0 : 0.9,
         );
     }, dialog);
     return () => {
       context.revert();
       timeline.current = null;
       document.body.style.overflow = old;
-      priorFocus.current?.focus();
+      document.documentElement.classList.remove("profile-is-open");
+      if (source instanceof HTMLElement)
+        source.style.transform = sourceOldTransform;
+      priorFocus.current?.focus({ preventScroll: true });
     };
   }, [player]);
   const close = () => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
       dialog.current?.close();
       callback.current();
-    } else if (timeline.current) timeline.current.timeScale(1.6).reverse();
+    } else if (timeline.current) timeline.current.timeScale(1.4).reverse();
   };
   if (!player) return null;
   const bat = player.batting,
@@ -108,7 +158,7 @@ export const PlayerProfileReveal: React.FC<Props> = ({
             disabled={Boolean(document.querySelector(".cinematic-home"))}
             className="profile-visual"
           >
-            <div className="profile-reveal-item">
+            <div className="profile-portrait-content">
               {image ? (
                 <img
                   src={image}

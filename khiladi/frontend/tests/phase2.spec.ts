@@ -45,7 +45,8 @@ test("sound is absent even for previously opted-in users; parade has names only 
         .some((e) => e.name.endsWith("/sound.ts")),
     ),
   ).toBe(false);
-  await expect(page.locator(".site-wordmark")).toHaveText("KHILADI");
+  await expect(page.locator(".site-wordmark").getByRole("img", { name: "KHILADI" })).toBeVisible();
+  await expect(page.locator(".site-wordmark img")).toHaveAttribute("src", /khiladi-symbol\.svg$/);
   await expect(page.locator(".squad-controls")).toHaveCount(0);
   await expect(page.locator(".squad-player").first()).not.toContainText(
     /score|role|crore/i,

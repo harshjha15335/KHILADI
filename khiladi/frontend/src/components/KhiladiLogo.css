@@ -1,8 +1,8 @@
 .khiladi-logo {
   position: relative;
   display: block;
-  width: 196px;
-  aspect-ratio: 3 / 1;
+  width: 44px;
+  aspect-ratio: 496 / 748;
   flex: none;
 }
 .khiladi-logo > img {
@@ -38,11 +38,11 @@
   white-space: normal;
 }
 .footer-wordmark .khiladi-logo--footer {
-  width: min(100%, 1050px);
+  width: clamp(100px, 14vw, 210px);
   margin-inline: auto;
 }
 .intro-type.intro-type--logo {
-  width: min(82vw, 960px);
+  width: min(28vw, 220px);
   justify-content: center;
 }
 .intro-logo-window {
@@ -54,6 +54,6 @@
 }
 @media (max-width: 600px) {
   .site-header .khiladi-logo--header {
-    width: 152px;
+    width: 36px;
   }
 }

@@ -1,0 +1,377 @@
+[
+  {
+    "event": "homepage-start",
+    "wallTime": 1794825139.3463,
+    "scrollY": 0
+  },
+  {
+    "event": "homepage-section-00",
+    "wallTime": 1794825145.0068321,
+    "scrollY": 820
+  },
+  {
+    "event": "homepage-section-01",
+    "wallTime": 1794825147.5602489,
+    "scrollY": 1080
+  },
+  {
+    "event": "homepage-section-02",
+    "wallTime": 1794825150.2487612,
+    "scrollY": 2080
+  },
+  {
+    "event": "homepage-section-03",
+    "wallTime": 1794825152.8444076,
+    "scrollY": 2477
+  },
+  {
+    "event": "homepage-section-04",
+    "wallTime": 1794825155.833742,
+    "scrollY": 3642
+  },
+  {
+    "event": "homepage-section-05",
+    "wallTime": 1794825158.5634727,
+    "scrollY": 4542
+  },
+  {
+    "event": "homepage-section-06",
+    "wallTime": 1794825161.0053983,
+    "scrollY": 5406
+  },
+  {
+    "event": "homepage-section-07",
+    "wallTime": 1794825163.527706,
+    "scrollY": 6140
+  },
+  {
+    "event": "homepage-section-08",
+    "wallTime": 1794825165.9918573,
+    "scrollY": 7490
+  },
+  {
+    "event": "homepage-section-09",
+    "wallTime": 1794825168.391055,
+    "scrollY": 8377
+  },
+  {
+    "event": "homepage-section-10",
+    "wallTime": 1794825170.9083097,
+    "scrollY": 9017
+  },
+  {
+    "event": "extrafazant-preview",
+    "wallTime": 1794825196.5838003,
+    "scrollY": 0
+  },
+  {
+    "event": "profile-thin-surface",
+    "wallTime": 1794825200.9094994,
+    "scrollY": 674
+  },
+  {
+    "event": "profile-expanding-surface",
+    "wallTime": 1794825201.7294772,
+    "scrollY": 674
+  },
+  {
+    "event": "profile-image-stage",
+    "wallTime": 1794825202.3829224,
+    "scrollY": 674
+  },
+  {
+    "event": "profile-settled",
+    "wallTime": 1794825203.4520586,
+    "scrollY": 674
+  },
+  {
+    "event": "profile-data",
+    "wallTime": 1794825204.6541843,
+    "scrollY": 674
+  },
+  {
+    "event": "profile-closed",
+    "wallTime": 1794825206.204773,
+    "scrollY": 674
+  },
+  {
+    "event": "auge-context-label",
+    "wallTime": 1794825214.6513793,
+    "scrollY": 0
+  },
+  {
+    "event": "mobile-profile",
+    "wallTime": 1794825256.8047569,
+    "scrollY": 921
+  },
+  {
+    "event": "1920x1080-hero-chapter",
+    "wallTime": 1794825260.409129,
+    "scrollY": 0
+  },
+  {
+    "event": "1920x1080-heritage-chapter",
+    "wallTime": 1794825261.038888,
+    "scrollY": 2340
+  },
+  {
+    "event": "1920x1080-journey-chapter",
+    "wallTime": 1794825262.5575092,
+    "scrollY": 3912
+  },
+  {
+    "event": "1920x1080-portrait-chapter",
+    "wallTime": 1794825263.1603348,
+    "scrollY": 4992
+  },
+  {
+    "event": "1920x1080-editorial-bridge",
+    "wallTime": 1794825263.7050312,
+    "scrollY": 5904
+  },
+  {
+    "event": "1920x1080-quiz-chapter",
+    "wallTime": 1794825264.2957597,
+    "scrollY": 6656
+  },
+  {
+    "event": "1920x1080-home-notes",
+    "wallTime": 1794825264.8737433,
+    "scrollY": 8006
+  },
+  {
+    "event": "1920x1080-brand-footer",
+    "wallTime": 1794825265.595877,
+    "scrollY": 9304
+  },
+  {
+    "event": "1920x1080-profile",
+    "wallTime": 1794825266.2717133,
+    "scrollY": 293
+  },
+  {
+    "event": "1440x900-hero-chapter",
+    "wallTime": 1794825267.8362696,
+    "scrollY": 0
+  },
+  {
+    "event": "1440x900-heritage-chapter",
+    "wallTime": 1794825268.4359627,
+    "scrollY": 2160
+  },
+  {
+    "event": "1440x900-journey-chapter",
+    "wallTime": 1794825269.4173157,
+    "scrollY": 3722
+  },
+  {
+    "event": "1440x900-portrait-chapter",
+    "wallTime": 1794825269.9948518,
+    "scrollY": 4622
+  },
+  {
+    "event": "1440x900-editorial-bridge",
+    "wallTime": 1794825270.5111237,
+    "scrollY": 5486
+  },
+  {
+    "event": "1440x900-quiz-chapter",
+    "wallTime": 1794825271.066285,
+    "scrollY": 6220
+  },
+  {
+    "event": "1440x900-home-notes",
+    "wallTime": 1794825271.6137521,
+    "scrollY": 7570
+  },
+  {
+    "event": "1440x900-brand-footer",
+    "wallTime": 1794825272.2821636,
+    "scrollY": 9017
+  },
+  {
+    "event": "1440x900-profile",
+    "wallTime": 1794825272.8779116,
+    "scrollY": 674
+  },
+  {
+    "event": "1366x768-hero-chapter",
+    "wallTime": 1794825274.3186302,
+    "scrollY": 0
+  },
+  {
+    "event": "1366x768-heritage-chapter",
+    "wallTime": 1794825274.9556262,
+    "scrollY": 2120
+  },
+  {
+    "event": "1366x768-journey-chapter",
+    "wallTime": 1794825275.8902466,
+    "scrollY": 3673
+  },
+  {
+    "event": "1366x768-portrait-chapter",
+    "wallTime": 1794825276.4362056,
+    "scrollY": 4441
+  },
+  {
+    "event": "1366x768-editorial-bridge",
+    "wallTime": 1794825277.0691998,
+    "scrollY": 5279
+  },
+  {
+    "event": "1366x768-quiz-chapter",
+    "wallTime": 1794825277.6299813,
+    "scrollY": 5991
+  },
+  {
+    "event": "1366x768-home-notes",
+    "wallTime": 1794825278.1688082,
+    "scrollY": 7341
+  },
+  {
+    "event": "1366x768-brand-footer",
+    "wallTime": 1794825278.831376,
+    "scrollY": 8895
+  },
+  {
+    "event": "1366x768-profile",
+    "wallTime": 1794825279.3522682,
+    "scrollY": 740
+  },
+  {
+    "event": "768x1024-hero-chapter",
+    "wallTime": 1794825281.5863564,
+    "scrollY": 0
+  },
+  {
+    "event": "768x1024-heritage-chapter",
+    "wallTime": 1794825282.169314,
+    "scrollY": 2284
+  },
+  {
+    "event": "768x1024-journey-chapter",
+    "wallTime": 1794825283.0591104,
+    "scrollY": 3626
+  },
+  {
+    "event": "768x1024-portrait-chapter",
+    "wallTime": 1794825283.6945238,
+    "scrollY": 4650
+  },
+  {
+    "event": "768x1024-editorial-bridge",
+    "wallTime": 1794825284.2403061,
+    "scrollY": 5339
+  },
+  {
+    "event": "768x1024-quiz-chapter",
+    "wallTime": 1794825284.796396,
+    "scrollY": 6015
+  },
+  {
+    "event": "768x1024-home-notes",
+    "wallTime": 1794825285.33712,
+    "scrollY": 7365
+  },
+  {
+    "event": "768x1024-brand-footer",
+    "wallTime": 1794825285.9200852,
+    "scrollY": 8488
+  },
+  {
+    "event": "768x1024-profile",
+    "wallTime": 1794825286.2735715,
+    "scrollY": 375
+  },
+  {
+    "event": "390x844-hero-chapter",
+    "wallTime": 1794825287.6124675,
+    "scrollY": 0
+  },
+  {
+    "event": "390x844-heritage-chapter",
+    "wallTime": 1794825288.1808214,
+    "scrollY": 2120
+  },
+  {
+    "event": "390x844-journey-chapter",
+    "wallTime": 1794825288.8091257,
+    "scrollY": 3416
+  },
+  {
+    "event": "390x844-portrait-chapter",
+    "wallTime": 1794825289.327318,
+    "scrollY": 4236
+  },
+  {
+    "event": "390x844-editorial-bridge",
+    "wallTime": 1794825289.828013,
+    "scrollY": 4855
+  },
+  {
+    "event": "390x844-quiz-chapter",
+    "wallTime": 1794825290.3547263,
+    "scrollY": 5569
+  },
+  {
+    "event": "390x844-home-notes",
+    "wallTime": 1794825290.8614101,
+    "scrollY": 6649
+  },
+  {
+    "event": "390x844-brand-footer",
+    "wallTime": 1794825291.3927941,
+    "scrollY": 8546
+  },
+  {
+    "event": "390x844-profile",
+    "wallTime": 1794825291.6367283,
+    "scrollY": 921
+  },
+  {
+    "event": "360x800-hero-chapter",
+    "wallTime": 1794825293.2628229,
+    "scrollY": 0
+  },
+  {
+    "event": "360x800-heritage-chapter",
+    "wallTime": 1794825293.787773,
+    "scrollY": 2120
+  },
+  {
+    "event": "360x800-journey-chapter",
+    "wallTime": 1794825294.450613,
+    "scrollY": 3425
+  },
+  {
+    "event": "360x800-portrait-chapter",
+    "wallTime": 1794825295.0581174,
+    "scrollY": 4245
+  },
+  {
+    "event": "360x800-editorial-bridge",
+    "wallTime": 1794825295.5511215,
+    "scrollY": 4864
+  },
+  {
+    "event": "360x800-quiz-chapter",
+    "wallTime": 1794825296.05076,
+    "scrollY": 5578
+  },
+  {
+    "event": "360x800-home-notes",
+    "wallTime": 1794825296.5571136,
+    "scrollY": 6658
+  },
+  {
+    "event": "360x800-brand-footer",
+    "wallTime": 1794825297.14312,
+    "scrollY": 8674
+  },
+  {
+    "event": "360x800-profile",
+    "wallTime": 1794825297.3557084,
+    "scrollY": 991
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "logo": {
+    "src": "/assets/brand/khiladi-symbol.svg",
+    "loaded": true
+  },
+  "errors": [],
+  "failedResponses": [],
+  "intentionalPrivateMediaOmission": true,
+  "port": 4175,
+  "note": "Local preview only; not a deployment"
+}

@@ -1,3 +1,4 @@
+import { KhiladiLogo } from "../components/KhiladiLogo";
 import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
 import { Player } from "../types";
@@ -30,8 +31,9 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
   const [squad, setSquad] = useState<Player[]>([]),
     [error, setError] = useState("");
   const [activeClip, setActiveClip] = useState(0),
-    [videoEnabled, setVideoEnabled] = useState(approvedHeroClips.length > 1),
+    [videoEnabled, setVideoEnabled] = useState(approvedHeroClips.length > 0),
     [heroVisible, setHeroVisible] = useState(true);
+  const [journeyTopic, setJourneyTopic] = useState(0);
   const [quizStep, setQuizStep] = useState(0),
     [role, setRole] = useState("Batting"),
     [phase, setPhase] = useState("Death Overs");
@@ -81,30 +83,45 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
     () => {
       const media = gsap.matchMedia();
       media.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.to(".persistent-crest", {
-          scale: () => (innerWidth < 600 ? 0.32 : 0.25),
-          y: () => {
-            const el = root.current?.querySelector(".persistent-crest");
-            return 28 - (el ? parseFloat(getComputedStyle(el).top) : 0);
+        gsap.fromTo(
+          ".journey-image",
+          { yPercent: -8, scale: 1.12 },
+          {
+            yPercent: 8,
+            scale: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".journey-chapter",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.5,
+            },
           },
-          x: () => (innerWidth < 600 ? -(innerWidth / 2 - 90) : 0),
+        );
+        gsap.fromTo(
+          ".home-portrait-strip",
+          { xPercent: 4 },
+          {
+            xPercent: -8,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".portrait-chapter",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.5,
+            },
+          },
+        );
+        gsap.from(".bridge-copy > *", {
+          y: 65,
+          opacity: 0,
+          stagger: 0.15,
           ease: "none",
           scrollTrigger: {
-            trigger: ".hero-chapter",
-            start: "top top",
-            end: "bottom 15%",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        });
-        gsap.to(".persistent-crest", {
-          autoAlpha: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".editorial-chapter",
-            start: "top 30%",
-            end: "top top",
-            scrub: true,
+            trigger: ".editorial-bridge",
+            start: "top 85%",
+            end: "top 30%",
+            scrub: 0.45,
           },
         });
         gsap.from(".story-line", {
@@ -324,30 +341,80 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             />
           )}
 
-        {crestURL && (
-          <div className="persistent-crest">
-            <img
-              src={crestURL}
-              alt="Rajasthan Royals"
-              width="320"
-              height="320"
-            />
-          </div>
-        )}
         <div className="hero-copy">
           <p className="eyebrow">A GAME OF MOMENTS</p>
-          <h1 id="hero-heading">
-            Great players.
-            <br />
-            <em>Big moments.</em>
-            <br />
-            The right choice.
+          <h1
+            id="hero-heading"
+            key={activeClip}
+            className="hero-chapter-heading"
+          >
+            {activeClip === 0 ? (
+              <>
+                Great players.
+                <br />
+                <em>Big moments.</em>
+                <br />
+                The right choice.
+              </>
+            ) : activeClip === 1 ? (
+              <>
+                One chance.
+                <br />
+                <em>Make it count.</em>
+                <br />
+                Back your player.
+              </>
+            ) : (
+              <>
+                Every ball.
+                <br />
+                <em>Every possibility.</em>
+                <br />
+                Find your moment.
+              </>
+            )}
           </h1>
           <p>Discover who delivers when the match is on the line.</p>
           <CTA onClick={scrollQuiz}>Find my player</CTA>
         </div>
         <div className="hero-side">
-          <span>HALLA BOL.</span>
+          <div className="hero-story-cards">
+            {squad
+              .filter((p) => playerImage(p))
+              .slice(0, 2)
+              .map((player, i) => (
+                <button
+                  className={`hero-story hero-story--${i}`}
+                  key={player.player_id}
+                  onClick={(event) => {
+                    event.currentTarget.focus({ preventScroll: true });
+                    onSelectPlayer(player);
+                  }}
+                >
+                  <img
+                    src={playerImage(player)}
+                    alt=""
+                    width="200"
+                    height="270"
+                  />
+                  <span>
+                    {i === 0 ? "THE NEXT MOMENT" : "A ROYAL STATE OF MIND"}
+                  </span>
+                  <strong>{player.player_name} ↗</strong>
+                </button>
+              ))}
+          </div>
+          <div className="hero-team-label">
+            {crestURL && (
+              <img
+                src={crestURL}
+                alt="Rajasthan Royals"
+                width="40"
+                height="48"
+              />
+            )}
+            <span>HALLA BOL.</span>
+          </div>
           {approvedHeroClips.length > 0 ? (
             <button
               onClick={() => setVideoEnabled((v) => !v)}
@@ -388,6 +455,21 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
                 if (approvedHeroClips.length) setVideoEnabled(true);
               }}
             >
+              {squad.find(
+                (p) => p.player_name === clip.caption.split(" · ")[0],
+              ) && (
+                <img
+                  className="chapter-thumbnail"
+                  src={playerImage(
+                    squad.find(
+                      (p) => p.player_name === clip.caption.split(" · ")[0],
+                    )!,
+                  )}
+                  alt=""
+                  width="70"
+                  height="54"
+                />
+              )}
               <span>0{i + 1}</span>
               <span>{clip.title}</span>
               <span className="film-progress" />
@@ -414,7 +496,11 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
                   <button
                     className={`squad-player squad-colour-${i % 4}`}
                     key={player.player_id}
-                    onClick={() => choose(player.player_id)}
+                    data-player-id={player.player_id}
+                    onClick={(event) => {
+                      event.currentTarget.focus({ preventScroll: true });
+                      choose(player.player_id);
+                    }}
                     tabIndex={copy === 1 ? -1 : 0}
                   >
                     {playerImage(player) ? (
@@ -514,6 +600,111 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             2008 trophy photograph and public-use permissions are still pending.
           </p>
         )}
+      </section>
+      <section className="journey-chapter" aria-labelledby="journey-heading">
+        {archivalImages[0] && (
+          <img
+            className="journey-image"
+            src={archivalImages[0].src}
+            alt="Shane Warne and Rajasthan Royals, from the official Royals archive"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+        )}
+        <div className="journey-shade" />
+        <div className="journey-copy">
+          <p className="eyebrow">FROM A FIRST TITLE TO YOUR NEXT CHOICE</p>
+          <h2 id="journey-heading">
+            A Royal story.
+            <br />
+            <em>Still being written.</em>
+          </h2>
+          <p>
+            {
+              [
+                "A first title in 2008. A lasting belief in players who rise to the occasion.",
+                "Every player brings a different game. Look past the headline and get to know the person behind the performance.",
+                "Your next decision starts with the evidence. Explore the recorded performances and find a player who fits.",
+              ][journeyTopic]
+            }
+          </p>
+          <CTA
+            onClick={() =>
+              onNavigate(journeyTopic === 0 ? "methodology" : "database")
+            }
+          >
+            Explore the story
+          </CTA>
+        </div>
+        <div className="journey-hotspots" aria-label="Explore the Royals story">
+          {["The beginning", "The people", "Your next choice"].map(
+            (topic, i) => (
+              <button
+                key={topic}
+                aria-pressed={journeyTopic === i}
+                onClick={() => setJourneyTopic(i)}
+              >
+                <span aria-hidden="true">+</span>
+                <span>{topic}</span>
+              </button>
+            ),
+          )}
+        </div>
+      </section>
+      <section className="portrait-chapter" aria-labelledby="portrait-heading">
+        <div className="portrait-caption">
+          <p className="eyebrow">THE PEOPLE MAKE THE GAME</p>
+          <h2 id="portrait-heading">
+            Different players.
+            <br />
+            <em>One shared feeling.</em>
+          </h2>
+        </div>
+        <div className="home-portrait-strip">
+          {squad
+            .filter((p) => playerImage(p))
+            .slice(0, 7)
+            .map((player, i) => (
+              <button
+                className={`home-portrait home-portrait--${i % 3}`}
+                key={player.player_id}
+                data-player-id={player.player_id}
+                onClick={(event) => {
+                  event.currentTarget.focus({ preventScroll: true });
+                  onSelectPlayer(player);
+                }}
+              >
+                <img
+                  src={playerImage(player)}
+                  alt=""
+                  width="260"
+                  height="340"
+                  loading="lazy"
+                />
+                <span>{player.player_name} ↗</span>
+              </button>
+            ))}
+        </div>
+      </section>
+      <section className="editorial-bridge" aria-labelledby="bridge-heading">
+        <div className="bridge-mark" aria-hidden="true"><KhiladiLogo variant="footer" /></div>
+        <div className="bridge-copy">
+          <p className="eyebrow">A FEELING. A LITTLE EVIDENCE.</p>
+          <h2 id="bridge-heading">
+            Know the player.
+            <br />
+            <em>Back the moment.</em>
+          </h2>
+          <p>
+            Some choices start with a feeling. Give yours a little more
+            perspective. Discover the people, explore their records, and find
+            the players you would trust when the game is on the line.
+          </p>
+          <CTA variant="secondary" onClick={() => onNavigate("database")}>
+            Get to know your players
+          </CTA>
+        </div>
       </section>
       <section
         id="discovery"
@@ -681,6 +872,22 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             {quizError && <p role="alert">{quizError}</p>}
           </div>
         )}
+      </section>
+      <section className="home-notes" aria-labelledby="home-notes-heading">
+        <p className="eyebrow">A FEW WAYS INTO THE GAME</p>
+        <h2 id="home-notes-heading">Follow your <em>curiosity.</em></h2>
+        <div className="home-notes-stories">
+          {[
+            ["database", "THE PEOPLE", "Look beyond the headline.", "Get to know the players"],
+            ["methodology", "THE MOMENT", "What changes under pressure?", "Understand the evidence"],
+            ["war-room", "YOUR TEAM", "Make the next choice yours.", "Build your squad"],
+          ].map(([destination, label, title, action], i) => <article key={destination} className={`home-note home-note--${i}`}>
+            <button onClick={() => onNavigate(destination)}>
+              {figures[i] && <img src={playerImage(figures[i])} alt="" width="300" height="290" loading="lazy" />}
+              <span className="home-note-copy"><small>{label}</small><strong>{title}</strong><span>{action} ↗</span></span>
+            </button>
+          </article>)}
+        </div>
       </section>
       <section className="closing-chapter">
         <p className="eyebrow">BACK YOUR INSTINCT. KNOW YOUR PLAYER.</p>
