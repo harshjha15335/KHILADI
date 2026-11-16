@@ -18,8 +18,10 @@ pairs=[
  ('cyera','Recording_153838_part_11',8.5,5.5,'matched-cyera',1.2,'Thin surface to tall card; original player content'),
  ('auge','Recording_154049_part_00',0,6.4,'matched-auge',0.8,'Moving image strip and context label; no shader claim'),
 ]
+timings=json.loads((OUT/"matched-events.json").read_text())
 manifest=[]
 for name,source,source_start,duration,capture,capture_start,note in pairs:
+ capture_start=max(0,timings[name] - (0.15 if name=='cyera' else 0))
  out=OUT/(name+'-comparison.mp4')
  filters=(f'[0:v]fps=30,scale=950:414:force_original_aspect_ratio=decrease,pad=950:414:(ow-iw)/2:(oh-ih)/2:color=fffdf8,setsar=1,setpts=PTS-STARTPTS[a];'
  f'[1:v]fps=30,scale=950:414:force_original_aspect_ratio=decrease,pad=950:414:(ow-iw)/2:(oh-ih)/2:color=fffdf8,setsar=1,setpts=PTS-STARTPTS[b];'
