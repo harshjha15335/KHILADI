@@ -41,19 +41,13 @@
   width: clamp(100px, 14vw, 210px);
   margin-inline: auto;
 }
-.intro-type.intro-type--logo {
-  width: min(28vw, 220px);
-  justify-content: center;
-}
-.intro-logo-window {
-  width: 100%;
-  display: block;
-}
-.intro-logo-window .khiladi-logo--loader {
-  width: 100%;
-}
 @media (max-width: 600px) {
   .site-header .khiladi-logo--header {
     width: 36px;
   }
+}
+
+/* Rendering-only variants retain the approved source pixels, alpha and proportions. */
+.khiladi-logo--white > img {
+  filter: brightness(0) invert(1) drop-shadow(0 1px 2px #18264320);
 }

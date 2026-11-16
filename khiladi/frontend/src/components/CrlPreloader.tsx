@@ -53,6 +53,11 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
           },
           2.05,
         )
+        .to(
+          ".intro-curtain",
+          { backgroundColor: "#ED267B", duration: 0.65 },
+          2.0,
+        )
         .to(".intro-symbol", { opacity: 0, duration: 0.2 }, 1.8)
         .to(
           ".intro-curtain",
@@ -86,7 +91,7 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
           <span>KHILADI / RAJASTHAN</span>
         </div>
         <div className="intro-symbol" aria-hidden="true">
-          <KhiladiLogo variant="loader" />
+          <KhiladiLogo variant="loader" tone="white" />
         </div>
         <div className="intro-type intro-type--letters" aria-hidden="true">
           {[..."KHILADI"].map((letter, i) => (

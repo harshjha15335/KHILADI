@@ -249,37 +249,6 @@ input:focus-visible {
   right: -280px;
   top: -100px;
 }
-.hero-film {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  z-index: -1;
-  background: var(--blue);
-}
-.hero-chapter:has(.hero-film)::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(90deg, #182643a0, transparent 80%);
-  pointer-events: none;
-}
-.persistent-crest {
-  position: absolute;
-  left: calc(50% - 150px);
-  top: 20%;
-  width: 300px;
-  z-index: 3;
-  pointer-events: none;
-  transform-origin: center top;
-}
-.persistent-crest img {
-  width: 100%;
-  height: 250px;
-  object-fit: contain;
-}
 .hero-copy {
   position: absolute;
   left: 30px;
@@ -299,35 +268,6 @@ input:focus-visible {
   max-width: 420px;
   line-height: 1.6;
   margin-bottom: 22px;
-}
-.hero-side {
-  position: absolute;
-  right: 30px;
-  bottom: 170px;
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.hero-side > span {
-  font-size: 36px;
-  font-family: Impact, sans-serif;
-  letter-spacing: -1px;
-}
-.hero-side button {
-  background: var(--ivory);
-  color: var(--ink);
-  padding: 17px 20px;
-  border-radius: 4px;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-}
-.hero-side a {
-  font-size: 12px;
-  line-height: 1.6;
-  text-underline-offset: 5px;
 }
 .hero-chapters {
   position: absolute;
@@ -463,98 +403,6 @@ input:focus-visible {
 .chapter-button--sm .chapter-button-arrow {
   height: 44px;
   width: 44px;
-}
-.squad-chapter {
-  background: var(--blue);
-  padding: 20px 0 30px;
-  color: white;
-}
-.squad-controls {
-  padding: 0 30px 16px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-.squad-controls button {
-  padding: 4px 0;
-  min-height: 28px;
-  border-bottom: 1px solid #ffffff60;
-}
-.squad-viewport {
-  overflow: hidden;
-}
-.squad-track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-}
-.squad-group {
-  display: flex;
-  gap: 12px;
-  padding-right: 12px;
-}
-.squad-player {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  flex-shrink: 0;
-  width: 240px;
-  height: 260px;
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.squad-player img {
-  height: 220px;
-  width: 210px;
-  object-fit: contain;
-  object-position: bottom;
-  transition: transform 0.5s var(--ease);
-}
-.squad-player > span:last-child {
-  padding: 10px 12px;
-  background: #18264315;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-}
-.squad-player:hover img {
-  transform: scale(1.04);
-}
-.squad-colour-0 {
-  background: #ed267b;
-  color: white;
-}
-.squad-colour-1 {
-  background: #dce8ff;
-  color: var(--blue);
-}
-.squad-colour-2 {
-  background: #ffa8cc;
-  color: var(--blue);
-}
-.squad-colour-3 {
-  background: #fffdf8;
-  color: var(--blue);
-}
-.player-initials {
-  height: 220px;
-  display: grid;
-  place-items: center;
-  font-family: Georgia, serif;
-  font-size: 68px;
-  opacity: 0.6;
-}
-.squad-viewport--static {
-  overflow-x: auto;
-}
-.squad-viewport--static .squad-group[aria-hidden] {
-  display: none;
-}
-.squad-viewport--static .squad-track {
-  transform: none !important;
 }
 .editorial-chapter {
   background: var(--blue);
@@ -1149,18 +997,6 @@ input:focus-visible {
   .hero-copy h1 {
     font-size: 8vw;
   }
-  .persistent-crest {
-    left: auto;
-    right: 40px;
-    top: 18%;
-    width: 220px;
-  }
-  .persistent-crest img {
-    height: 210px;
-  }
-  .hero-side {
-    width: 220px;
-  }
   .hero-chapters button {
     max-width: none;
   }
@@ -1251,33 +1087,6 @@ input:focus-visible {
   .hero-copy .eyebrow {
     font-size: 9px;
   }
-  .persistent-crest {
-    top: 11%;
-    right: 20px;
-    width: 140px;
-  }
-  .persistent-crest img {
-    height: 140px;
-  }
-  .hero-side {
-    left: 20px;
-    right: 20px;
-    bottom: 120px;
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .hero-side > span {
-    display: none;
-  }
-  .hero-side a {
-    font-size: 10px;
-  }
-  .hero-side button {
-    padding: 13px;
-    font-size: 12px;
-  }
   .hero-chapters {
     left: 20px;
     right: 20px;
@@ -1292,21 +1101,6 @@ input:focus-visible {
   .hero-chapters button > span:first-child {
     display: block;
     margin-bottom: 7px;
-  }
-  .squad-controls {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .squad-player {
-    width: 190px;
-    height: 230px;
-  }
-  .squad-player img {
-    height: 190px;
-    width: 180px;
-  }
-  .squad-player > span:last-child {
-    font-size: 13px;
   }
   .editorial-chapter {
     padding: 100px 20px;
@@ -1525,26 +1319,13 @@ input:focus-visible {
   .intro-root {
     display: none;
   }
-  .hero-film {
-    display: none;
-  }
   .quiz-figure,
   .archive-photo,
   .story-line,
-  .quiz-introduction,
-  .persistent-crest {
+  .quiz-introduction {
     transform: none !important;
     opacity: 1 !important;
     visibility: visible !important;
-  }
-  .squad-track {
-    transform: none !important;
-  }
-  .squad-viewport {
-    overflow-x: auto;
-  }
-  .squad-group[aria-hidden] {
-    display: none;
   }
   .kinetic-char {
     transform: none !important;
@@ -1710,26 +1491,6 @@ input:focus-visible {
     font-size: 12px;
   }
 }
-.persistent-crest {
-  position: fixed;
-  top: 20vh;
-  z-index: 65;
-}
-@media (max-width: 1000px) {
-  .persistent-crest {
-    top: 18vh;
-  }
-}
-@media (max-width: 600px) {
-  .persistent-crest {
-    top: 11vh;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .persistent-crest {
-    position: absolute;
-  }
-}
 .official-film-link {
   display: block;
   background: var(--ivory);
@@ -1738,22 +1499,12 @@ input:focus-visible {
   border-radius: 4px;
   text-decoration: none;
 }
-.hero-media-status {
-  font-size: 11px;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 230px;
-}
-.hero-film {
-  object-fit: cover;
-}
 body {
   font-family: "DM Sans", sans-serif;
 }
 .intro-type,
 .editorial-chapter h2,
-.footer-wordmark,
-.hero-side > span {
+.footer-wordmark {
   font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
   font-weight: 700;
 }
@@ -1763,45 +1514,15 @@ body {
 .hero-chapter,
 .closing-chapter,
 .navigation-dialog,
-.squad-colour-0,
 .quiz-introduction .chapter-button {
   background-color: #d91868;
-}
-.squad-colour-2 {
-  color: var(--ink);
-}
-.player-initials {
-  opacity: 0.85;
 }
 .hero-copy h1 {
   letter-spacing: -0.06em;
 }
-.squad-player {
-  width: 220px;
-  height: 210px;
-}
-.squad-player img {
-  height: 170px;
-  width: 190px;
-}
-.squad-player .player-initials {
-  height: 170px;
-}
-.squad-player > span:last-child {
-  font-size: 14px;
-  min-height: 40px;
-}
-@media (max-width: 600px) {
-  .squad-player {
-    width: 190px;
-    height: 210px;
-  }
-  .squad-player img {
-    height: 170px;
-    width: 170px;
-  }
-}
 body:has(dialog[open]) {
   overflow: hidden;
 }
-.editorial-chapter .chapter-button--outline{color:var(--ivory)}
+.editorial-chapter .chapter-button--outline {
+  color: var(--ivory);
+}

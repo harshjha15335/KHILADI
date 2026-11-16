@@ -1,0 +1,218 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "sections": [
+      {
+        "selector": ".hero-chapter",
+        "overflow": false,
+        "brand": "hero"
+      },
+      {
+        "selector": ".editorial-chapter",
+        "overflow": false,
+        "brand": "compact"
+      },
+      {
+        "selector": ".heritage-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".journey-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".quiz-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".closing-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "sections": [
+      {
+        "selector": ".hero-chapter",
+        "overflow": false,
+        "brand": "hero"
+      },
+      {
+        "selector": ".editorial-chapter",
+        "overflow": false,
+        "brand": "compact"
+      },
+      {
+        "selector": ".heritage-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".journey-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".quiz-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".closing-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      }
+    ]
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "sections": [
+      {
+        "selector": ".hero-chapter",
+        "overflow": false,
+        "brand": "hero"
+      },
+      {
+        "selector": ".editorial-chapter",
+        "overflow": false,
+        "brand": "compact"
+      },
+      {
+        "selector": ".heritage-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".journey-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".quiz-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".closing-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "sections": [
+      {
+        "selector": ".hero-chapter",
+        "overflow": false,
+        "brand": "hero"
+      },
+      {
+        "selector": ".editorial-chapter",
+        "overflow": false,
+        "brand": "compact"
+      },
+      {
+        "selector": ".heritage-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".journey-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".quiz-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".closing-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "sections": [
+      {
+        "selector": ".hero-chapter",
+        "overflow": false,
+        "brand": "hero"
+      },
+      {
+        "selector": ".editorial-chapter",
+        "overflow": false,
+        "brand": "compact"
+      },
+      {
+        "selector": ".heritage-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".journey-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".quiz-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".closing-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "sections": [
+      {
+        "selector": ".hero-chapter",
+        "overflow": false,
+        "brand": "hero"
+      },
+      {
+        "selector": ".editorial-chapter",
+        "overflow": false,
+        "brand": "compact"
+      },
+      {
+        "selector": ".heritage-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".journey-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".quiz-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      },
+      {
+        "selector": ".closing-chapter",
+        "overflow": false,
+        "brand": "hidden"
+      }
+    ]
+  }
+]

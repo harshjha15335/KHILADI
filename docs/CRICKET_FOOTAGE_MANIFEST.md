@@ -2,7 +2,7 @@
 
 The live hero currently has **no approved in-page RR video assets**.
 `khiladi/frontend/src/config/approved-media.json` is the production authority.
-Official external links are a disclosed fallback, not completion of the montage.
+The hero external-link fallback has been removed. There is no actual montage until permitted clips are supplied.
 
 An older version of this manifest claimed four Commons clips were verified and
 playing. That claim was not supported by asset URLs, licence records or current
@@ -30,3 +30,10 @@ The RR montage remains **blocked**, including three-scene playback, transition,
 poster/codec, mobile cropping and black-frame acceptance checks. Those cannot be
 passed using URLs or an empty video component. A permitted media package or a
 supported, reachable official player is needed before processing footage.
+
+
+## Targeted homepage correction — 16 November 2026
+
+Both `heroClips` and `moments` are empty. No real match footage was found in local project/attachment inventories or Git LFS. FFmpeg/ffprobe are available and yt-dlp was installed in an isolated tools environment after inspecting the suggested skill. The official RR YouTube channel metadata request returned cloud proxy HTTP 403; no video was downloaded. The legitimate official RR Dailymotion embeds return player HTML but show “This video cannot be played on this site” inside localhost, with all three clocks at zero. No reuse/rehosting/editing permission has been established.
+
+Native playback, production-base-aware URLs, posters, crossfade, hidden/offscreen pause, reduced motion and failed-clip poster fallback were tested with explicitly synthetic QA patterns only. This is not RR footage verification. No portrait-card or external-link substitute is presented as a moments sequence. See `docs/qa/homepage-corrections/MEDIA_REQUIREMENTS.md` for evidence and the exact 3–6 authorized MP4 clips required.

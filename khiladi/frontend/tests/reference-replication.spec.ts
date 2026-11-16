@@ -4,26 +4,30 @@ const skip = async (page: import("@playwright/test").Page, route = "/") => {
   await page.keyboard.press("Escape");
   await expect(page.locator(".intro-root")).toHaveCount(0);
 };
-test("chapters change editorial copy and active thumbnails without creating unavailable films", async ({
+test("homepage removes repeated cards and unavailable movie controls while keeping the quiz", async ({
   page,
 }) => {
   await skip(page);
-  const chapters = page.locator(".hero-chapters button");
-  await chapters.nth(1).click();
-  await expect(chapters.nth(1)).toHaveAttribute("aria-pressed", "true");
-  await expect(page.locator("#hero-heading")).toContainText("Make it count.");
-  await chapters.nth(2).click();
-  await expect(page.locator("#hero-heading")).toContainText(
-    "Every possibility.",
-  );
-  await chapters.first().click();
-  await expect(page.locator("#hero-heading")).toContainText("Great players.");
+  await expect(page.locator(".quiz-figure")).toHaveCount(8);
   await expect(
-    page.locator(".site-header--home .khiladi-logo img"),
-  ).toHaveAttribute("src", /khiladi-symbol\.svg$/);
+    page.locator(
+      ".squad-chapter, .portrait-chapter, .hero-story-cards, .editorial-bridge, .home-notes",
+    ),
+  ).toHaveCount(0);
+  await expect(
+    page.locator(
+      ".hero-chapters, .hero-film, .hero-media-status, .official-film-link",
+    ),
+  ).toHaveCount(0);
+  await expect(page.locator(".hero-chapter a")).toHaveCount(0);
   await expect(page.locator(".cinematic-home .warp-surface")).toHaveCount(0);
+  await page
+    .locator(".hero-copy")
+    .getByRole("button", { name: "Find my player" })
+    .click();
+  await expect(page.locator(".quiz-introduction")).toBeInViewport();
 });
-test("journey hotspots work by keyboard and portraits open the selected canonical player", async ({
+test("journey controls remain keyboard operable after the adjacent sections are removed", async ({
   page,
 }) => {
   await skip(page);
@@ -37,16 +41,7 @@ test("journey hotspots work by keyboard and portraits open the selected canonica
   await expect(page.locator(".journey-copy")).toContainText(
     "Your next decision starts with the evidence.",
   );
-  const portrait = page.locator(".home-portrait").first();
-  const name = await portrait.innerText();
-  await portrait.focus();
-  await page.keyboard.press("Enter");
-  await expect(page.locator("#player-profile-title")).toHaveText(
-    name.replace(" ↗", ""),
-  );
-  await page.keyboard.press("Escape");
-  await expect(page.locator(".profile-dialog")).not.toBeVisible();
-  await expect(portrait).toBeFocused();
+  await expect(page.locator(".quiz-chapter")).toBeAttached();
 });
 test("profile passes through a thin surface before its tall content and restores scroll/focus", async ({
   page,
@@ -65,7 +60,11 @@ test("profile passes through a thin surface before its tall content and restores
   }));
   expect(early.clip).not.toBe("none");
   expect(early.width).toBeLessThanOrEqual(421);
-  expect(await page.locator(".profile-summary .chapter-button").evaluate(e => Number(getComputedStyle(e).opacity))).toBeLessThan(1);
+  expect(
+    await page
+      .locator(".profile-summary .chapter-button")
+      .evaluate((e) => Number(getComputedStyle(e).opacity)),
+  ).toBeLessThan(1);
   await expect(page.locator(".profile-summary h2")).toHaveCSS("opacity", "1");
   const size = await sheet.boundingBox();
   expect(size!.height).toBeGreaterThan(size!.width);
@@ -104,8 +103,14 @@ test("pointer image/label reset and route changes release track motion", async (
   await expect(page.locator(".editorial-player-track")).toBeVisible();
   await page.locator(".kinetic-text").hover();
   await expect(page.locator(".kinetic-preview")).toHaveCSS("opacity", "1");
-  const movingImage = await page.locator(".editorial-player img").nth(1).boundingBox();
-  await page.mouse.move(movingImage!.x + movingImage!.width / 2, movingImage!.y + movingImage!.height / 2);
+  const movingImage = await page
+    .locator(".editorial-player img")
+    .nth(1)
+    .boundingBox();
+  await page.mouse.move(
+    movingImage!.x + movingImage!.width / 2,
+    movingImage!.y + movingImage!.height / 2,
+  );
   await expect(page.locator("#khiladi-cursor-label")).toHaveText(
     "Explore player",
   );

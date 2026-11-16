@@ -5,13 +5,14 @@ import "./KhiladiLogo.css";
 export const KhiladiLogo: React.FC<{
   className?: string;
   variant?: "header" | "footer" | "loader";
-}> = ({ className = "", variant = "header" }) => {
+  tone?: "original" | "white";
+}> = ({ className = "", variant = "header", tone = "original" }) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <span
       role="img"
       aria-label="KHILADI"
-      className={`khiladi-logo khiladi-logo--${variant} ${loaded ? "khiladi-logo--ready" : ""} ${className}`}
+      className={`khiladi-logo khiladi-logo--${variant} khiladi-logo--${tone} ${loaded ? "khiladi-logo--ready" : ""} ${className}`}
     >
       <span className="khiladi-logo-fallback" aria-hidden="true"></span>
       <img

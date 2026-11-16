@@ -1,0 +1,317 @@
+[
+  {
+    "state": "loader-blue",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "loader-pink-transition",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "hero-no-cards",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "hero-intentional-brand",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "editorial-white-corner-brand",
+    "scrollY": 900,
+    "brand": "compact"
+  },
+  {
+    "state": "heritage-brand-exited",
+    "scrollY": 1900,
+    "brand": "hidden"
+  },
+  {
+    "state": "heritage-collage",
+    "scrollY": 2297,
+    "brand": "hidden"
+  },
+  {
+    "state": "journey-no-overlap",
+    "scrollY": 3397,
+    "brand": "hidden"
+  },
+  {
+    "state": "quiz-no-overlap",
+    "scrollY": 4297,
+    "brand": "hidden"
+  },
+  {
+    "state": "closing",
+    "scrollY": 5647,
+    "brand": "hidden"
+  },
+  {
+    "state": "footer-single-white-brand",
+    "scrollY": 6207,
+    "brand": "hidden"
+  },
+  {
+    "state": "warp-enter",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-horizontal-left",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-horizontal-right",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-vertical-top",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-vertical-bottom",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-diagonal-a",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-diagonal-b",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "warp-reset",
+    "scrollY": 676,
+    "brand": "compact"
+  },
+  {
+    "state": "mobile-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "mobile-editorial-chapter",
+    "scrollY": 844,
+    "brand": "compact"
+  },
+  {
+    "state": "mobile-heritage-chapter",
+    "scrollY": 1624,
+    "brand": "hidden"
+  },
+  {
+    "state": "mobile-journey-chapter",
+    "scrollY": 2839,
+    "brand": "hidden"
+  },
+  {
+    "state": "mobile-quiz-chapter",
+    "scrollY": 3659,
+    "brand": "hidden"
+  },
+  {
+    "state": "mobile-closing-chapter",
+    "scrollY": 4739,
+    "brand": "hidden"
+  },
+  {
+    "state": "mobile-brand-footer",
+    "scrollY": 5145,
+    "brand": "hidden"
+  },
+  {
+    "state": "mobile-profile",
+    "scrollY": 4573,
+    "brand": "hidden"
+  },
+  {
+    "state": "1920x1080-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "1920x1080-editorial-chapter",
+    "scrollY": 1080,
+    "brand": "compact"
+  },
+  {
+    "state": "1920x1080-heritage-chapter",
+    "scrollY": 2080,
+    "brand": "hidden"
+  },
+  {
+    "state": "1920x1080-journey-chapter",
+    "scrollY": 3587,
+    "brand": "hidden"
+  },
+  {
+    "state": "1920x1080-quiz-chapter",
+    "scrollY": 4667,
+    "brand": "hidden"
+  },
+  {
+    "state": "1920x1080-closing-chapter",
+    "scrollY": 6017,
+    "brand": "hidden"
+  },
+  {
+    "state": "1440x900-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "1440x900-editorial-chapter",
+    "scrollY": 900,
+    "brand": "compact"
+  },
+  {
+    "state": "1440x900-heritage-chapter",
+    "scrollY": 1900,
+    "brand": "hidden"
+  },
+  {
+    "state": "1440x900-journey-chapter",
+    "scrollY": 3397,
+    "brand": "hidden"
+  },
+  {
+    "state": "1440x900-quiz-chapter",
+    "scrollY": 4297,
+    "brand": "hidden"
+  },
+  {
+    "state": "1440x900-closing-chapter",
+    "scrollY": 5647,
+    "brand": "hidden"
+  },
+  {
+    "state": "1366x768-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "1366x768-editorial-chapter",
+    "scrollY": 860,
+    "brand": "compact"
+  },
+  {
+    "state": "1366x768-heritage-chapter",
+    "scrollY": 1860,
+    "brand": "hidden"
+  },
+  {
+    "state": "1366x768-journey-chapter",
+    "scrollY": 3349,
+    "brand": "hidden"
+  },
+  {
+    "state": "1366x768-quiz-chapter",
+    "scrollY": 4117,
+    "brand": "hidden"
+  },
+  {
+    "state": "1366x768-closing-chapter",
+    "scrollY": 5467,
+    "brand": "hidden"
+  },
+  {
+    "state": "768x1024-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "768x1024-editorial-chapter",
+    "scrollY": 1024,
+    "brand": "compact"
+  },
+  {
+    "state": "768x1024-heritage-chapter",
+    "scrollY": 2024,
+    "brand": "hidden"
+  },
+  {
+    "state": "768x1024-journey-chapter",
+    "scrollY": 3301,
+    "brand": "hidden"
+  },
+  {
+    "state": "768x1024-quiz-chapter",
+    "scrollY": 4325,
+    "brand": "hidden"
+  },
+  {
+    "state": "768x1024-closing-chapter",
+    "scrollY": 5675,
+    "brand": "hidden"
+  },
+  {
+    "state": "390x844-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "390x844-editorial-chapter",
+    "scrollY": 844,
+    "brand": "compact"
+  },
+  {
+    "state": "390x844-heritage-chapter",
+    "scrollY": 1624,
+    "brand": "hidden"
+  },
+  {
+    "state": "390x844-journey-chapter",
+    "scrollY": 2839,
+    "brand": "hidden"
+  },
+  {
+    "state": "390x844-quiz-chapter",
+    "scrollY": 3659,
+    "brand": "hidden"
+  },
+  {
+    "state": "390x844-closing-chapter",
+    "scrollY": 4739,
+    "brand": "hidden"
+  },
+  {
+    "state": "360x800-hero-chapter",
+    "scrollY": 0,
+    "brand": "hero"
+  },
+  {
+    "state": "360x800-editorial-chapter",
+    "scrollY": 800,
+    "brand": "compact"
+  },
+  {
+    "state": "360x800-heritage-chapter",
+    "scrollY": 1580,
+    "brand": "hidden"
+  },
+  {
+    "state": "360x800-journey-chapter",
+    "scrollY": 2787,
+    "brand": "hidden"
+  },
+  {
+    "state": "360x800-quiz-chapter",
+    "scrollY": 3607,
+    "brand": "hidden"
+  },
+  {
+    "state": "360x800-closing-chapter",
+    "scrollY": 4687,
+    "brand": "hidden"
+  }
+]

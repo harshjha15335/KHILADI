@@ -1,5 +1,7 @@
 # KHILADI reference implementation
 
+Historical checkpoint: homepage repetition and branding are superseded by [targeted corrections](../homepage-corrections/README.md).
+
 Start with [implementation status](IMPLEMENTATION_STATUS.md) for the precise completed/partial/blocked distinctions. This is a local implementation and review package. GitHub Pages was left untouched.
 
 ## Watch the actual build

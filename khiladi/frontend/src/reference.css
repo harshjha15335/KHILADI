@@ -12,8 +12,8 @@
   margin-left: auto;
 }
 .intro-curtain {
-  background: #e7e7e4;
-  color: #182643;
+  background: #2450b8;
+  color: #ffffff;
   perspective: 900px;
 }
 .intro-type--letters {
@@ -37,9 +37,6 @@
 .intro-skip {
   border-bottom-color: currentColor;
 }
-.hero-film {
-  object-fit: cover;
-}
 .hero-chapter-heading {
   animation: chapter-copy-in 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
@@ -54,73 +51,6 @@
     clip-path: inset(0);
     transform: none;
   }
-}
-.hero-side {
-  top: 16%;
-  bottom: auto;
-  width: min(35vw, 510px);
-  gap: 14px;
-}
-.hero-story-cards {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-}
-.hero-side .hero-story {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  flex: 1;
-  height: clamp(180px, 24vw, 340px);
-  border-radius: 3px;
-  padding: 0;
-  background: #ffeaf2;
-  color: var(--ink);
-}
-.hero-side .hero-story--1 {
-  margin-top: 65px;
-  background: #d6e4ff;
-}
-.hero-story img {
-  height: 85%;
-  width: 100%;
-  object-fit: contain;
-  object-position: bottom;
-  transition: transform 0.5s var(--ease);
-}
-.hero-story:hover img,
-.hero-story:focus-visible img {
-  transform: translateY(-8px) rotate(-2deg);
-}
-.hero-story span,
-.hero-story strong {
-  display: block;
-  position: relative;
-  margin: 0 12px;
-  font-size: 9px;
-  letter-spacing: 1px;
-}
-.hero-story strong {
-  font-size: 13px;
-  letter-spacing: -0.3px;
-  margin-top: 4px;
-}
-.hero-team-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-.hero-team-label img {
-  width: 26px;
-  height: 32px;
-  object-fit: contain;
-}
-.hero-side .official-film-link {
-  padding: 0;
-  background: transparent;
-  color: inherit;
 }
 .hero-chapters {
   right: 30px;
@@ -138,9 +68,6 @@
 }
 .hero-chapters .film-progress {
   animation-play-state: paused;
-}
-.hero-chapter:has(.hero-film) .film-progress {
-  animation-play-state: running;
 }
 .journey-chapter {
   position: relative;
@@ -173,9 +100,7 @@
   padding: 20vh 5vw 100px;
   max-width: 690px;
 }
-.journey-copy h2,
-.portrait-caption h2,
-.bridge-copy h2 {
+.journey-copy h2 {
   font:
     400 clamp(48px, 5.7vw, 90px)/1.02 Georgia,
     serif;
@@ -231,90 +156,6 @@
 .journey-hotspots button:hover > span:first-child {
   background: #fff3;
   transform: scale(1.08);
-}
-.portrait-chapter {
-  padding: 80px 0 100px;
-  background: #ffeaf2;
-  overflow: hidden;
-}
-.portrait-caption {
-  padding: 0 5vw 50px;
-}
-.portrait-caption h2 {
-  font-size: clamp(42px, 4vw, 68px);
-}
-.home-portrait-strip {
-  display: flex;
-  gap: 25px;
-  width: max-content;
-  padding-inline: 5vw;
-  align-items: flex-start;
-}
-.home-portrait {
-  position: relative;
-  width: clamp(190px, 21vw, 350px);
-  flex: none;
-  background: #dce6ff;
-  text-align: left;
-  overflow: hidden;
-}
-.home-portrait--1 {
-  margin-top: 55px;
-  background: #f5d577;
-}
-.home-portrait--2 {
-  margin-top: 15px;
-  background: #ed267b;
-}
-.home-portrait img {
-  width: 100%;
-  height: clamp(260px, 28vw, 430px);
-  object-fit: contain;
-  object-position: center bottom;
-  transition: transform 0.6s var(--ease);
-}
-.home-portrait span {
-  display: block;
-  padding: 16px;
-  font-size: 14px;
-  background: var(--ivory);
-}
-.home-portrait:hover img,
-.home-portrait:focus-visible img {
-  transform: translateY(-7px);
-}
-.editorial-bridge {
-  padding: 150px 8vw;
-  background: var(--ivory);
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  align-items: center;
-  gap: 7vw;
-}
-.bridge-mark {
-  position: relative;
-  font:
-    900 clamp(180px, 30vw, 450px)/0.8 Arial,
-    sans-serif;
-  color: #2549bd;
-  letter-spacing: -0.12em;
-}
-.bridge-mark > span:not(.khiladi-logo) {
-  position: absolute;
-  font:
-    400 0.5em Georgia,
-    serif;
-  color: var(--pink);
-  left: 35%;
-  top: 0;
-}
-.bridge-copy h2 {
-  font-size: clamp(44px, 4.7vw, 76px);
-}
-.bridge-copy > p:not(.eyebrow) {
-  max-width: 470px;
-  line-height: 1.8;
-  margin: 20px 0 30px;
 }
 /* Tall Cyera information surface, with actual content kept at full size during clipping. */
 .profile-dialog {
@@ -530,24 +371,6 @@
   }
 }
 @media (max-width: 900px) {
-  .hero-side {
-    width: 34%;
-    top: 20%;
-    right: 24px;
-  }
-  .hero-story-cards {
-    gap: 10px;
-  }
-  .hero-side .hero-story {
-    height: 190px;
-  }
-  .hero-story span {
-    font-size: 7px;
-    letter-spacing: 0.3px;
-  }
-  .hero-story strong {
-    font-size: 10px;
-  }
   .hero-chapters button {
     gap: 8px;
   }
@@ -593,45 +416,6 @@
   }
   .hero-copy h1 {
     font-size: 13.5vw;
-  }
-  .hero-side {
-    top: auto;
-    bottom: 135px;
-    left: 20px;
-    right: 20px;
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .hero-story-cards {
-    grid-column: 1 / -1;
-    gap: 12px;
-    margin-bottom: 6px;
-  }
-  .hero-side .hero-story {
-    height: 210px;
-  }
-  .hero-side .hero-story--1 {
-    margin-top: 22px;
-  }
-  .hero-story img {
-    height: 76%;
-  }
-  .hero-story span {
-    font-size: 8px;
-  }
-  .hero-story strong {
-    font-size: 12px;
-  }
-  .hero-team-label {
-    display: none;
-  }
-  .hero-side > a {
-    font-size: 9px;
-  }
-  .hero-media-status {
-    grid-column: 1 / -1;
   }
   .hero-chapters {
     gap: 12px;
@@ -681,32 +465,6 @@
     width: 40px;
     height: 40px;
   }
-  .portrait-chapter {
-    padding: 65px 0;
-  }
-  .portrait-caption {
-    padding: 0 22px 30px;
-  }
-  .portrait-caption h2 {
-    font-size: 42px;
-  }
-  .home-portrait-strip {
-    gap: 15px;
-  }
-  .editorial-bridge {
-    padding: 75px 22px;
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .bridge-mark {
-    font-size: 180px;
-  }
-  .bridge-copy h2 {
-    font-size: 44px;
-  }
-  .bridge-copy > p:not(.eyebrow) {
-    font-size: 14px;
-  }
   .profile-dialog {
     max-width: calc(100vw - 24px);
   }
@@ -749,15 +507,10 @@
   .hero-chapter-heading {
     animation: none;
   }
-  .home-portrait-strip {
-    overflow-x: auto;
-    width: 100%;
-  }
   .kinetic-preview {
     display: none;
   }
-  .warp-surface img,
-  .home-portrait img {
+  .warp-surface img {
     transition: none;
   }
   .editorial-track-viewport {
@@ -767,28 +520,177 @@
     display: none;
   }
 }
-
-.bridge-mark .khiladi-logo { width: clamp(130px, 20vw, 300px); margin: auto; }
 /* Delta's human portrait row has a common baseline; stagger belongs to the non-home AUGE track. */
-.home-portrait--1,
-.home-portrait--2 { margin-top: 0; }
 
-.home-notes { padding: 100px 5vw 120px; background: #fffdf8; }
-.home-notes h2 { font: 400 clamp(44px, 5.2vw, 82px)/1.05 Georgia,serif; letter-spacing: -.06em; margin: 25px 0 50px; }
-.home-notes-stories { display: grid; grid-template-columns: repeat(3,1fr); gap: 25px; }
-.home-note button { width: 100%; display: block; text-align: left; background: #ffeaf2; overflow: hidden; }
-.home-note--1 button { background: #e1eaff; }
-.home-note--2 button { background: #f4e6b4; }
-.home-note img { width: 100%; height: 290px; object-fit: contain; object-position: bottom; transition: transform .5s var(--ease); }
-.home-note button:hover img, .home-note button:focus-visible img { transform: translateY(-6px); }
-.home-note-copy { display: flex; flex-direction: column; gap: 20px; padding: 25px; }
-.home-note-copy small { font-size: 9px; letter-spacing: 2px; }
-.home-note-copy strong { font: 400 clamp(27px, 2.7vw, 44px)/1.06 Georgia,serif; letter-spacing: -.04em; min-height: 2.2em; }
-.home-note-copy > span { font-size: 12px; }
-@media(max-width:600px) {
- .home-notes { padding: 70px 22px; }
- .home-notes-stories { grid-template-columns: 1fr; gap: 22px; }
- .home-note img { height: 230px; }
- .home-note-copy strong { min-height: 0; }
+/* Intentional brand lifecycle: hero centre → small navigation mark → exit before heritage. */
+.site-header--home .site-wordmark {
+  transition:
+    left 0.45s var(--ease),
+    transform 0.45s var(--ease),
+    opacity 0.25s,
+    visibility 0.25s;
 }
-@media(prefers-reduced-motion:reduce) { .home-note img { transition: none; } }
+.site-header--home[data-brand-placement="compact"] .site-wordmark {
+  left: 0;
+  top: 0;
+  transform: none;
+}
+.site-header--home[data-brand-placement="compact"] .khiladi-logo {
+  width: 40px;
+}
+.site-header--home[data-brand-placement="hidden"] .site-wordmark {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.intro-meta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 24px;
+  height: 3px;
+  background: #ed267b;
+}
+.hero-chapter:not(:has(.hero-chapters)) .hero-copy {
+  bottom: clamp(90px, 16vh, 160px);
+}
+.cinematic-films {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #2450b8;
+}
+.film-poster,
+.cinematic-film {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cinematic-film {
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  pointer-events: none;
+}
+.cinematic-film--visible {
+  opacity: 1;
+}
+.hero-films {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero-films::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #182643a8, transparent 85%);
+  pointer-events: none;
+}
+.film-play-control {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  padding: 10px 15px;
+  background: #fffdf8;
+  color: #182643;
+  font-size: 11px;
+  border-radius: 30px;
+}
+.royals-moments {
+  position: relative;
+  height: 230svh;
+  color: white;
+}
+.royals-moments-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 600px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.moments-films {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.royals-moments-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #182643b0, transparent 80%);
+  pointer-events: none;
+}
+.moments-caption {
+  position: absolute;
+  left: 5vw;
+  bottom: 15%;
+  max-width: 620px;
+}
+.moments-caption h2 {
+  font:
+    400 clamp(56px, 7vw, 110px)/0.98 Georgia,
+    serif;
+  letter-spacing: -0.06em;
+  margin: 25px 0;
+}
+.moments-caption > p:last-child {
+  font-size: 14px;
+}
+.moment-selectors {
+  position: absolute;
+  left: 5vw;
+  bottom: 35px;
+  display: flex;
+  gap: 12px;
+}
+.moment-selectors button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.moment-selectors button[aria-pressed="true"] {
+  background: #fffdf8;
+  color: #2450b8;
+}
+@media (max-width: 600px) {
+  .hero-chapter {
+    height: max(760px, 100svh);
+  }
+  .hero-chapter:not(:has(.hero-chapters)) .hero-copy {
+    top: 170px;
+    bottom: auto;
+  }
+  .site-header--home[data-brand-placement="compact"] .khiladi-logo {
+    width: 32px;
+  }
+  .film-play-control {
+    right: 16px;
+    bottom: 16px;
+  }
+  .moments-caption {
+    left: 22px;
+    right: 22px;
+    bottom: 20%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header--home .site-wordmark,
+  .cinematic-film {
+    transition: none;
+  }
+  .royals-moments {
+    height: auto;
+  }
+  .royals-moments-stage {
+    position: relative;
+    height: 85svh;
+  }
+}

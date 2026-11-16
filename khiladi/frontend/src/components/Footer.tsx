@@ -3,7 +3,7 @@ import React from "react";
 export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
   onNavigate,
 }) => (
-  <footer className="brand-footer">
+  <footer className="brand-footer" data-brand-tone="white" data-header-brand="hidden">
     <div className="footer-top">
       <p>
         For the love
@@ -31,7 +31,7 @@ export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
       </nav>
     </div>
     <div className="footer-wordmark">
-      <KhiladiLogo variant="footer" />
+      <KhiladiLogo variant="footer" tone="white" />
     </div>
     <div className="footer-bottom">
       <span>© {new Date().getFullYear()} KHILADI</span>

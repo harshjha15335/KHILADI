@@ -1,0 +1,342 @@
+[
+  {
+    "path": "/workspace/KHILADI/docs/qa_evidence/recordings/khiladi_complete_walkthrough.webm",
+    "bytes": 11549612,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa_evidence/recordings/page@653c552cf0d77e82e4b216cdfa71e621.webm",
+    "bytes": 7641144,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa_evidence/recordings/page@0fd737668c5bfbaaeeccaf8ac882b119.webm",
+    "bytes": 8411280,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa_evidence/recordings/page@2e3adf278e8bba46f7683bdb5f1dea7a.webm",
+    "bytes": 11549612,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/phase2/mobile-uninterrupted-homepage.webm",
+    "bytes": 2889944,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/phase2/desktop-uninterrupted-homepage.webm",
+    "bytes": 7252712,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/phase2/parade-full-natural-loop.webm",
+    "bytes": 32202832,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/preloader.webm",
+    "bytes": 505619,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/button-interaction.webm",
+    "bytes": 509875,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/photo-composition.webm",
+    "bytes": 544001,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/desktop-walkthrough.webm",
+    "bytes": 4928663,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/profile-reveal.webm",
+    "bytes": 550304,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/cursor-and-warp.webm",
+    "bytes": 554701,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/mobile-walkthrough.webm",
+    "bytes": 1156376,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/quiz-choreography.webm",
+    "bytes": 566177,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/tablet-walkthrough.webm",
+    "bytes": 1321508,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/global-interactions.webm",
+    "bytes": 424219,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/squad-parade.webm",
+    "bytes": 526825,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/official-playback-attempt.webm",
+    "bytes": 1006104,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/matched-cyera.webm",
+    "bytes": 607702,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/matched-crl.webm",
+    "bytes": 507799,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/auge-media.webm",
+    "bytes": 901800,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/crl-comparison.mp4",
+    "bytes": 260665,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/cyera-comparison.mp4",
+    "bytes": 137111,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/player-discovery.webm",
+    "bytes": 1168328,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/extrafazant-comparison.mp4",
+    "bytes": 477519,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/matched-auge.webm",
+    "bytes": 992743,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/delta-comparison.mp4",
+    "bytes": 2319067,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/extrafazant-hover.webm",
+    "bytes": 1249220,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/matched-extrafazant.webm",
+    "bytes": 905705,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/cyera-profile.webm",
+    "bytes": 586267,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/crl-loader.webm",
+    "bytes": 532087,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/mobile-walkthrough.webm",
+    "bytes": 3366354,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/homepage-continuous.webm",
+    "bytes": 8715991,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/matched-delta.webm",
+    "bytes": 1819416,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-replication/auge-comparison.mp4",
+    "bytes": 889047,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/phase2/parade-raw/page@33a862767183fdc342e159fb9038fe5d.webm",
+    "bytes": 25615027,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/phase2/parade-raw/page@5466f605b6d775fdc32403d465948a96.webm",
+    "bytes": 32202832,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@aa8a46d250bc9acc02fe8bacf09ae40a.webm",
+    "bytes": 1321508,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@1e7040d5c794ec4dda08b7badcc68a5d.webm",
+    "bytes": 1283322,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@38b242d2822b185516527fb28e540815.webm",
+    "bytes": 424219,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@fd6c5e86ce79550084aaaec01445a2f6.webm",
+    "bytes": 5685391,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@a13687d9c10b6cd0da9ced2f9e6c990c.webm",
+    "bytes": 6010397,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@58f6d86ab8bf524c4d7c6abd73708b69.webm",
+    "bytes": 1156376,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@60775a1cf2f4c351368ff16070915868.webm",
+    "bytes": 1251251,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@5d3f733ea1cc88bf974b9b8fa4ce0fb7.webm",
+    "bytes": 1635019,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@99a4902dc5da4c9602762fdcf378e5bb.webm",
+    "bytes": 4928663,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@6fd2400891a565e74e4354a92fc0097f.webm",
+    "bytes": 1438849,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@183eaf4f7a69aff7ca5f330b8ee055e6.webm",
+    "bytes": 1455387,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@40643fae875ca0054cbf245332992b65.webm",
+    "bytes": 949765,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/walkthrough-raw/page@e4093a8ba7fb7d379aa5aa36c150d3af.webm",
+    "bytes": 6720892,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/KHILADI/docs/qa/reference-fidelity/reference-videos/page@0af98c679a5c783d0828aa9eaa8ab639.webm",
+    "bytes": 7266932,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/dff3fb7f-7aa6-44b4-a422-70982221a7cb/Recording_153838_part_00.mp4",
+    "bytes": 14862891,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/1d402fa1-9c59-4f0d-a70f-bef437bf728f/Recording_153838_part_01.mp4",
+    "bytes": 14653721,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/5416709a-8c66-4fc7-bb5c-698c51f4ab59/Recording_153838_part_07.mp4",
+    "bytes": 14747130,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/0b1a0395-bd95-4759-be36-0797fc31883a/Recording_153838_part_10.mp4",
+    "bytes": 14777233,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/d5d764ee-6d25-416f-b6ae-0d4693310668/Recording_153838_part_02.mp4",
+    "bytes": 14355483,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/2f21ca0b-a766-435c-b506-9748dc76c366/Recording_153944_part_00.mp4",
+    "bytes": 13881788,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/167b5aea-8518-4485-bfde-0dd0ceeb5145/Recording_153838_part_12.mp4",
+    "bytes": 3435665,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/6190f051-938c-4259-8a86-00b7e323f6e8/Recording_153838_part_11.mp4",
+    "bytes": 14640038,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/811ad52c-da22-4b96-a8ca-ba0fbdf52904/Recording_153838_part_06.mp4",
+    "bytes": 15081538,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/10fccde7-6fd6-460a-bc04-52372270545a/Recording_153838_part_05.mp4",
+    "bytes": 14515581,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/4dff52fa-cf51-4993-968d-c55b4088291d/Recording_153944_part_01.mp4",
+    "bytes": 11789550,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/068dcc9f-8c85-4070-9a5f-96d57852a302/Recording_154049_part_00.mp4",
+    "bytes": 6244894,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/1ffc6c60-b35e-4352-9499-476c76f757d3/Recording_153838_part_09.mp4",
+    "bytes": 14187445,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/57a8ff35-f4ac-4165-a7f7-c4f06bb3f1dc/Recording_153838_part_03.mp4",
+    "bytes": 13911161,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/cd64871e-ac08-4c03-a2f9-7545d99df1b5/Recording_153838_part_04.mp4",
+    "bytes": 13968677,
+    "category": "reference/QA evidence"
+  },
+  {
+    "path": "/workspace/attachments/a8f2b6e8-bb87-4492-a6aa-aeb7e59fa80f/Recording_153838_part_08.mp4",
+    "bytes": 14841532,
+    "category": "reference/QA evidence"
+  }
+]

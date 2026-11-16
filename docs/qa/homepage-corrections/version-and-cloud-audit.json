@@ -1,0 +1,60 @@
+{
+  "workingBranchAtStart": "reference-replication/local",
+  "workingCommitAtStart": "5829093103b78c92720e78dc7f2b8e23980de405",
+  "uncommittedAtStart": [],
+  "safeCheckpoint": "checkpoint/homepage-corrections-5829093",
+  "correctionBranch": "fix/rr-homepage-cinematics",
+  "recording": "docs/qa/reference-replication/homepage-continuous.webm",
+  "recordingDuration": 46.16,
+  "pages": {
+    "html_url": "https://harshjha15335.github.io/KHILADI/",
+    "build_type": "workflow",
+    "status": null
+  },
+  "latestRuns": [
+    {
+      "head_branch": "main",
+      "head_sha": "523d77e07fccfacf40af8dc4ebd10d109c60f431",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/harshjha15335/KHILADI/actions/runs/43755292450"
+    },
+    {
+      "head_branch": "migration/windows-and-pages",
+      "head_sha": "523d77e07fccfacf40af8dc4ebd10d109c60f431",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/harshjha15335/KHILADI/actions/runs/43755290966"
+    },
+    {
+      "head_branch": "main",
+      "head_sha": "6c8f8df3c122892eb5d7e153e57338970b4909e5",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/harshjha15335/KHILADI/actions/runs/43751903810"
+    }
+  ],
+  "deploymentBranchPolicies": [
+    {
+      "name": "main",
+      "type": "branch"
+    }
+  ],
+  "actualProductComponents": [
+    "HomePage",
+    "CrlPreloader",
+    "KhiladiLogo",
+    "Navbar",
+    "Footer",
+    "AugeWarpSurface",
+    "KhiladiAnimatedButton",
+    "reference.css"
+  ],
+  "originalBrandSHA256": "9f6ea333e6caf4e944ea01e47444e546c64191d702a22b814a107ab09e929a99",
+  "findings": [
+    "Live deployment predates recorded local implementation",
+    "No clips in heroClips or moments",
+    "No LFS files or non-reference local videos",
+    "No bucket/storage integration found in application configuration"
+  ]
+}
