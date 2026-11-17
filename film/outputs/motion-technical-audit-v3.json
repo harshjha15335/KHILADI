@@ -1,0 +1,25 @@
+{
+  "technical_checks": {
+    "native_1080_portrait": true,
+    "native_30fps": true,
+    "240_frames": true,
+    "exactly_8_seconds": true,
+    "all_source_frames_present": true,
+    "full_file_decodes": true
+  },
+  "duration": "8.000000",
+  "frame_count": "240",
+  "fps": "30/1",
+  "source_frame_dimensions": [
+    1080,
+    1920
+  ],
+  "timing_specification": {
+    "0\u20132": "Neutral, looking at notebook",
+    "2\u20133": "Sudden realization",
+    "3\u20135": "Frustration with brow deformation and arm movement",
+    "5\u20137": "Exaggerated laughter, head bobbing",
+    "7\u20138": "Neutral return and comedic pause"
+  },
+  "note": "Silent character validation test. No full-film production. Aesthetic review requires viewing against the original reel; technical checks do not establish style approval."
+}

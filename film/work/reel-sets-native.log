@@ -1,0 +1,29 @@
+C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel_sets.py:22: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*rgb,1);m.use_nodes=True
+C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel_sets.py:343: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  S.world=bpy.data.worlds.new('Warm ambient world');S.world.use_nodes=True
+00:20.140  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\01_notebook_1.png'
+REEL_PLATE_READY 01_notebook 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\01_notebook_1.png seconds 14.3
+00:27.890  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\01_notebook_2.png'
+REEL_PLATE_READY 01_notebook 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\01_notebook_2.png seconds 22.0
+00:35.531  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\01_notebook_3.png'
+REEL_PLATE_READY 01_notebook 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\01_notebook_3.png seconds 29.6
+Info: Saved as "khiladi-environments.blend"
+REEL_SCENE_COMPLETE 01_notebook
+00:47.328  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\02_hackathon_1.png'
+REEL_PLATE_READY 02_hackathon 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\02_hackathon_1.png seconds 9.6
+00:54.906  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\02_hackathon_2.png'
+REEL_PLATE_READY 02_hackathon 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\02_hackathon_2.png seconds 17.2
+01:02.562  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\02_hackathon_3.png'
+REEL_PLATE_READY 02_hackathon 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\02_hackathon_3.png seconds 24.8
+Traceback (most recent call last):
+  File "C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel_sets.py", line 405, in <module>
+  File "C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel_sets.py", line 402, in main
+    for saved_scene in bpy.data.scenes:saved_scene.use_fake_user=True
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Error: Cannot overwrite used library 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\outputs\khiladi-environments.blend'
+
+Error: Cannot overwrite used library 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\outputs\khiladi-environments.blend'
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

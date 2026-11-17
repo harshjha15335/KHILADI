@@ -1,0 +1,13 @@
+{
+  "outward_head_normals_fraction": 1.0,
+  "head_contour_expands_outward": true,
+  "max_foot_world_drift": 0,
+  "max_notebook_hand_relative_matrix_drift": 2.2351741790771484e-07,
+  "frames_examined": 240,
+  "checks": {
+    "head_normals_outward": true,
+    "contour_expands": true,
+    "feet_planted": true,
+    "notebook_attachment_stable": true
+  }
+}

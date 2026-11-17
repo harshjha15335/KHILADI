@@ -1,0 +1,5 @@
+# Observed desktop versions; Blender uses its own bundled Python, not pip bpy.
+Pillow==13.0.0
+# Optional: existing MP3s/word timings are already included; do not regenerate by default.
+edge-tts==7.3.1
+aiohttp==3.14.5

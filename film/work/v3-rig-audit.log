@@ -1,0 +1,17 @@
+00:10.328  blend            | Read blend: "C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\outputs\khiladi-master-v3.blend"
+{
+  "outward_head_normals_fraction": 1.0,
+  "head_contour_expands_outward": true,
+  "max_foot_world_drift": 0,
+  "max_notebook_hand_relative_matrix_drift": 2.2351741790771484e-07,
+  "frames_examined": 240,
+  "checks": {
+    "head_normals_outward": true,
+    "contour_expands": true,
+    "feet_planted": true,
+    "notebook_attachment_stable": true
+  }
+}
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

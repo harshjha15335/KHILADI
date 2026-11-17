@@ -1,0 +1,7 @@
+# Preserve checkpoint bytes, including Windows-generated JSON/log line endings.
+* -text
+*.png binary
+*.blend binary
+*.mp4 binary
+*.mp3 binary
+*.sh text eol=lf

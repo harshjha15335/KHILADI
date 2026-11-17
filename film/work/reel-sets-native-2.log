@@ -1,0 +1,46 @@
+C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel_sets.py:22: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*rgb,1);m.use_nodes=True
+C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel_sets.py:343: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  S.world=bpy.data.worlds.new('Warm ambient world');S.world.use_nodes=True
+Info: Saved as "environments-staging.blend"
+REEL_SCENE_COMPLETE 02_hackathon
+00:23.266  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\03_clean_1.png'
+REEL_PLATE_READY 03_clean 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\03_clean_1.png seconds 13.5
+00:30.156  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\03_clean_2.png'
+REEL_PLATE_READY 03_clean 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\03_clean_2.png seconds 20.4
+00:36.562  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\03_clean_3.png'
+REEL_PLATE_READY 03_clean 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\03_clean_3.png seconds 26.8
+Info: Saved as "environments-staging.blend"
+REEL_SCENE_COMPLETE 03_clean
+00:47.266  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\04_preball_1.png'
+REEL_PLATE_READY 04_preball 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\04_preball_1.png seconds 8.7
+00:55.375  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\04_preball_2.png'
+REEL_PLATE_READY 04_preball 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\04_preball_2.png seconds 16.8
+01:00.422  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\04_preball_3.png'
+REEL_PLATE_READY 04_preball 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\04_preball_3.png seconds 21.9
+Info: Saved as "environments-staging.blend"
+REEL_SCENE_COMPLETE 04_preball
+01:12.766  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\05_pressure_1.png'
+REEL_PLATE_READY 05_pressure 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\05_pressure_1.png seconds 7.9
+01:18.547  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\05_pressure_2.png'
+REEL_PLATE_READY 05_pressure 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\05_pressure_2.png seconds 13.7
+01:24.125  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\05_pressure_3.png'
+REEL_PLATE_READY 05_pressure 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\05_pressure_3.png seconds 19.2
+Info: Saved as "environments-staging.blend"
+REEL_SCENE_COMPLETE 05_pressure
+01:43.109  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\06_hybrid_1.png'
+REEL_PLATE_READY 06_hybrid 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\06_hybrid_1.png seconds 6.9
+01:49.328  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\06_hybrid_2.png'
+REEL_PLATE_READY 06_hybrid 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\06_hybrid_2.png seconds 13.2
+01:56.141  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\06_hybrid_3.png'
+REEL_PLATE_READY 06_hybrid 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\06_hybrid_3.png seconds 20.0
+Info: Saved as "environments-staging.blend"
+REEL_SCENE_COMPLETE 06_hybrid
+02:37.141  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\07_expected_1.png'
+REEL_PLATE_READY 07_expected 1 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\07_expected_1.png seconds 9.7
+02:45.500  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\07_expected_2.png'
+REEL_PLATE_READY 07_expected 2 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\07_expected_2.png seconds 18.1
+02:52.734  render           | Saved: 'C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\07_expected_3.png'
+REEL_PLATE_READY 07_expected 3 C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\reel\plates\07_expected_3.png seconds 25.3
+Info: Saved as "environments-staging.blend"
+REEL_SCENE_COMPLETE 07_expected

@@ -1,0 +1,39 @@
+{
+  "base_geometry_hashes": {
+    "1": "5ff20a7bfb93fb7c1ea1b3c3dcce2f320bd00b265a42d964d24f58f02d0c5dfb",
+    "60": "5ff20a7bfb93fb7c1ea1b3c3dcce2f320bd00b265a42d964d24f58f02d0c5dfb",
+    "90": "5ff20a7bfb93fb7c1ea1b3c3dcce2f320bd00b265a42d964d24f58f02d0c5dfb",
+    "150": "5ff20a7bfb93fb7c1ea1b3c3dcce2f320bd00b265a42d964d24f58f02d0c5dfb",
+    "210": "5ff20a7bfb93fb7c1ea1b3c3dcce2f320bd00b265a42d964d24f58f02d0c5dfb",
+    "240": "5ff20a7bfb93fb7c1ea1b3c3dcce2f320bd00b265a42d964d24f58f02d0c5dfb"
+  },
+  "fixed_base_geometry": true,
+  "bone_lengths": {
+    "root": 0.2,
+    "body": 1.084,
+    "head": 0.9200001,
+    "upper_arm.L": 0.5266877,
+    "forearm.L": 0.4357753,
+    "upper_arm.R": 0.5266877,
+    "forearm.R": 0.4357753,
+    "thigh.L": 0.3362975,
+    "shin.L": 0.3203124,
+    "thigh.R": 0.3362975,
+    "shin.R": 0.3203124
+  },
+  "bone_count": 11,
+  "proportions": {
+    "head_width": 1.66,
+    "head_height": 1.58,
+    "torso_width": 1.02,
+    "torso_height": 1.04,
+    "visible_leg_height": 0.64,
+    "leg_to_head_height": 0.405,
+    "torso_to_head_height": 0.658
+  },
+  "allowed_face_animation": "Expression visibility, facial stroke points and brow controls intentionally change. Base head/body/hair/limbs remain fixed.",
+  "fps": 30,
+  "frames": 240,
+  "seconds": 8,
+  "software": "5.3.0"
+}

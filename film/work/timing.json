@@ -1,0 +1,114 @@
+[
+  {
+    "id": "01_notebook",
+    "duration": 10.133333333333333,
+    "audio_duration": 9.816,
+    "frames": 304,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\01_notebook.mp3"
+  },
+  {
+    "id": "02_hackathon",
+    "duration": 11.566666666666666,
+    "audio_duration": 11.256,
+    "frames": 347,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\02_hackathon.mp3"
+  },
+  {
+    "id": "03_clean",
+    "duration": 14.066666666666666,
+    "audio_duration": 13.752,
+    "frames": 422,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\03_clean.mp3"
+  },
+  {
+    "id": "04_preball",
+    "duration": 14.133333333333333,
+    "audio_duration": 13.824,
+    "frames": 424,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\04_preball.mp3"
+  },
+  {
+    "id": "05_pressure",
+    "duration": 15.1,
+    "audio_duration": 14.784,
+    "frames": 453,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\05_pressure.mp3"
+  },
+  {
+    "id": "06_hybrid",
+    "duration": 12.3,
+    "audio_duration": 11.976,
+    "frames": 369,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\06_hybrid.mp3"
+  },
+  {
+    "id": "07_expected",
+    "duration": 14.933333333333334,
+    "audio_duration": 14.616,
+    "frames": 448,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\07_expected.mp3"
+  },
+  {
+    "id": "08_adjust",
+    "duration": 12.933333333333334,
+    "audio_duration": 12.624,
+    "frames": 388,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\08_adjust.mp3"
+  },
+  {
+    "id": "09_shrink",
+    "duration": 13.166666666666666,
+    "audio_duration": 12.864,
+    "frames": 395,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\09_shrink.mp3"
+  },
+  {
+    "id": "10_delta",
+    "duration": 12.8,
+    "audio_duration": 12.48,
+    "frames": 384,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\10_delta.mp3"
+  },
+  {
+    "id": "11_holdout",
+    "duration": 14.466666666666667,
+    "audio_duration": 14.136,
+    "frames": 434,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\11_holdout.mp3"
+  },
+  {
+    "id": "12_uncertainty",
+    "duration": 15.066666666666666,
+    "audio_duration": 14.736,
+    "frames": 452,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\12_uncertainty.mp3"
+  },
+  {
+    "id": "13_sensitivity",
+    "duration": 12.6,
+    "audio_duration": 12.288,
+    "frames": 378,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\13_sensitivity.mp3"
+  },
+  {
+    "id": "14_shortlist",
+    "duration": 14.966666666666667,
+    "audio_duration": 14.664,
+    "frames": 449,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\14_shortlist.mp3"
+  },
+  {
+    "id": "15_replay",
+    "duration": 10.6,
+    "audio_duration": 10.296,
+    "frames": 318,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\15_replay.mp3"
+  },
+  {
+    "id": "16_end",
+    "duration": 10.833333333333334,
+    "audio_duration": 10.512,
+    "frames": 325,
+    "audio": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\narration\\16_end.mp3"
+  }
+]

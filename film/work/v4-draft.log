@@ -1,0 +1,9 @@
+00:04.828  blend            | Read blend: "C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\outputs\khiladi-master-v3.blend"
+Traceback (most recent call last):
+  File "C:\Users\ranja\Documents\Codex\2026-11-16\master-character-style-lock-khiladi-animated\work\animate_character_v4.py", line 222, in <module>
+    if cam.location.y<-12:raise RuntimeError('Acting bounds could not fit the fixed camera')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Acting bounds could not fit the fixed camera
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

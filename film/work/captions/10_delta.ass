@@ -1,0 +1,19 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Arial,64,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,90,90,340,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.10,0:00:02.03,Main,,0,0,0,,And performing well under {\c&H00FFFF&}pressure{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.13,0:00:03.83,Main,,0,0,0,,isn't the same as {\c&H00FFFF&}improving{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.83,0:00:04.86,Main,,0,0,0,,because of {\c&H00FFFF&}pressure.{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.67,0:00:07.97,Main,,0,0,0,,Bowling showed no validated {\c&H00FFFF&}repeatable{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.97,0:00:10.48,Main,,0,0,0,,pressure {\c&H00FFFF&}delta.{\c&HFFFFFF&} The batting delta
+Dialogue: 0,0:00:10.48,0:00:11.63,Main,,0,0,0,,gains were {\c&H00FFFF&}tiny.{\c&HFFFFFF&}

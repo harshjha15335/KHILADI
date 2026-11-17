@@ -1,0 +1,25 @@
+{
+  "fps": 30,
+  "loops": {
+    "reading": {
+      "raw_directory": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\reel\\actors_raw\\reading",
+      "pattern": "frame_%04d.png",
+      "frame_count": 48,
+      "source_frames": [
+        1,
+        60
+      ],
+      "fixed_identity": "V3 mesh and material data; V4 rig acting"
+    },
+    "thinking": {
+      "raw_directory": "C:\\Users\\ranja\\Documents\\Codex\\2026-11-16\\master-character-style-lock-khiladi-animated\\work\\reel\\actors_raw\\thinking",
+      "pattern": "frame_%04d.png",
+      "frame_count": 48,
+      "source_frames": [
+        1,
+        60
+      ],
+      "fixed_identity": "V3 mesh and material data; V4 rig acting"
+    }
+  }
+}
