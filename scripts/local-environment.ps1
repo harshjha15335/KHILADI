@@ -1,7 +1,7 @@
 # Read only known, optional local settings. Never evaluate dotenv contents as code.
 function Import-KhiladiLocalEnvironment {
     $environmentPath = Join-Path (Split-Path $PSScriptRoot -Parent) '.env'
-    $known = @('VITE_MEDIA_REVIEW', 'VITE_BASE_PATH', 'VITE_API_BASE_URL', 'VITE_GITHUB_PAGES', 'KHILADI_ALLOWED_ORIGINS')
+    $known = @('VITE_MEDIA_REVIEW', 'VITE_BASE_PATH', 'VITE_API_BASE_URL', 'VITE_GITHUB_PAGES', 'KHILADI_ALLOWED_ORIGINS', 'KHILADI_ANALYTICS_DIR', 'KHILADI_ANALYTICS_TOKEN')
     if (Test-Path -LiteralPath $environmentPath) {
         foreach ($line in Get-Content -LiteralPath $environmentPath) {
             $text = $line.Trim()

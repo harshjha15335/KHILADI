@@ -4,6 +4,10 @@ from typing import List, Optional
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+if __package__:
+    from .analytics_v2 import create_analytics_router
+else:
+    from analytics_v2 import create_analytics_router
 
 app = FastAPI(
     title="KHILADI API",
@@ -38,6 +42,13 @@ TOP_BATTERS = load_json("top_10_batters.json")
 TOP_BOWLERS = load_json("top_10_bowlers.json")
 RR_SQUAD_2026 = load_json("rr_squad_2026.json")
 MATCH_REPLAY = load_json("sample_match_replay.json")
+
+# Additive contract: recovered competition research never enters the public data tree.
+app.include_router(create_analytics_router(
+    {p["player_id"]: p["player_name"] for p in PLAYERS_DB},
+    os.getenv("KHILADI_ANALYTICS_DIR"),
+    os.getenv("KHILADI_ANALYTICS_TOKEN"),
+))
 
 # Load portraits manifest
 manifest_path = os.path.join(ASSETS_DIR, "ipl_official_portraits.json")
