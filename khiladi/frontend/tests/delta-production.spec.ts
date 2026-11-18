@@ -96,23 +96,23 @@ test("all nine public quiz selections return real data without a backend",async(
   expect(results.every(x=>x.count>0)).toBe(true);
 });
 
-test("hero cinematic scroll visibly enlarges trophy and disperses supporting images",async({page})=>{
+test("memory ribbon remains composed on scroll and keeps original navigation", async ({page}) => {
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/#home");
   await page.keyboard.press("Escape");
-  const centre=page.locator(".hero-photo-slot--centre");
-  const left=page.locator(".hero-photo-slot--left-top");
-  const before=await centre.evaluate(el=>el.getBoundingClientRect().width);
+  const gallery=page.getByTestId("cinematic-memory-ribbon");
+  await expect(gallery).toBeVisible();
+  const before=(await gallery.boundingBox())?.width ?? 0;
+  expect(before).toBeGreaterThan(400);
+  await gallery.getByRole("button",{name:"Next cricket photograph"}).click();
+  await expect(gallery.locator(".memory-ribbon__count")).toHaveText("02 / 05");
   await page.evaluate(()=>window.scrollTo(0,Math.floor(innerHeight*.78)));
-  await page.waitForTimeout(1050);
-  const after=await centre.evaluate(el=>el.getBoundingClientRect().width);
-  const otherOpacity=await left.evaluate(el=>parseFloat(getComputedStyle(el).opacity));
-  expect(after).toBeGreaterThan(before*1.35);
-  expect(otherOpacity).toBeLessThan(.9);
+  await page.waitForTimeout(450);
+  expect((await gallery.boundingBox())?.width).toBeCloseTo(before,0);
+  await page.evaluate(()=>window.scrollTo(0,0));
   await expect(page.getByRole("navigation",{name:"Primary navigation"})).toBeVisible();
 });
-
 test("player gallery translates as the reader progresses but remains directly scrollable",async({page})=>{
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
@@ -249,21 +249,22 @@ test("the editorial font system is present on homepage and analytics pages",asyn
   for(const route of ["home","database","rankings","pressure-lab"]){
     await page.goto("/#"+route);
     const family=await page.locator("main h1, main h2").first().evaluate(el=>getComputedStyle(el).fontFamily);
-    expect(family,route).toContain("Instrument Serif");
+    expect(family,route).toContain(route==="home"?"Barlow Condensed":"Instrument Serif");
   }
 });
 
-test("home trophy photo has measurable scroll progress and navbar entrance completes",async({page})=>{
+test("memory ribbon reports actual scroll progress and navbar entrance completes",async({page})=>{
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/#home");
   await page.keyboard.press("Escape");
   const nav=page.locator(".khiladi-top-nav");
   await expect.poll(async()=>nav.getAttribute("data-intro-motion"),{timeout:5500}).toBe("ready");
-  const hero=page.locator(".hero-chapter");
+  const ribbon=page.getByTestId("cinematic-memory-ribbon");
+  const before=Number(await ribbon.getAttribute("data-scroll-progress"));
   await page.evaluate(()=>scrollTo(0,530));
   await expect.poll(async()=>{
-    const n=Number(await hero.getAttribute("data-scroll-progress"));
+    const n=Number(await ribbon.getAttribute("data-scroll-progress"));
     return Number.isFinite(n)?n:0;
-  },{timeout:5500}).toBeGreaterThan(.05);
+  },{timeout:5500}).toBeGreaterThan(before + .05);
 });

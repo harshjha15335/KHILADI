@@ -6,7 +6,7 @@ export type IridescentActionButtonProps = {
   children: React.ReactNode;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   href?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "garnet" | "sapphire" | "opal" | "graphite";
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode | false;
   disabled?: boolean;
@@ -22,7 +22,7 @@ export type IridescentActionButtonProps = {
  *  The text and action remain semantic and stable while optical layers move.
  */
 export function IridescentActionButton({
-  children, onClick, href, variant = "primary", size = "md",
+  children, onClick, href, variant = "garnet", size = "md",
   icon, disabled = false, loading = false, type = "button",
   className = "", target, rel, "aria-label": ariaLabel,
 }: IridescentActionButtonProps) {

@@ -47,7 +47,7 @@ export function MetricVortexScene({
       <span className="metric-vortex-scene__kicker">{meta.kicker}</span>
       <h2>{meta.title}</h2>
       <p>{meta.subtitle}</p>
-      <IridescentActionButton onClick={()=>onNavigate(meta.next)} size="md">{meta.action}</IridescentActionButton>
+      <IridescentActionButton variant="graphite" onClick={()=>onNavigate(meta.next)} size="md">{meta.action}</IridescentActionButton>
     </div>
     <div className="metric-vortex-scene__hint">MOVE / DISSOLVE &nbsp;·&nbsp; CLICK / SUCTION</div>
   </section>;
