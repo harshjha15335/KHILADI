@@ -224,7 +224,8 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 onClick={() => onSelectPlayerById(currentDelivery.striker_id)}
                 className="pressure-duel p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group shadow-sm text-left"
               >
-                <DeliveryPortrait id={currentDelivery.striker_id} name={currentDelivery.striker} />
+                <DeliveryPortrait key={currentDelivery.striker_id} id={currentDelivery.striker_id} name={currentDelivery.striker} />
+                <div className="pressure-duel__info">
                 <div className="text-[10px] font-mono uppercase text-[#F22E83] font-bold mb-1">
                   Striker
                 </div>
@@ -234,6 +235,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 <div className="text-xs font-mono text-[#68738A] mt-1">
                   ID #{currentDelivery.striker_id} • Click for Bio
                 </div>
+                </div>
               </button>
 
               {/* Bowler */}
@@ -241,7 +243,8 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 onClick={() => onSelectPlayerById(currentDelivery.bowler_id)}
                 className="pressure-duel p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group shadow-sm text-left"
               >
-                <DeliveryPortrait id={currentDelivery.bowler_id} name={currentDelivery.bowler} />
+                <DeliveryPortrait key={currentDelivery.bowler_id} id={currentDelivery.bowler_id} name={currentDelivery.bowler} />
+                <div className="pressure-duel__info">
                 <div className="text-[10px] font-mono uppercase text-[#2549BD] font-bold mb-1">
                   Bowler
                 </div>
@@ -250,6 +253,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 </div>
                 <div className="text-xs font-mono text-[#68738A] mt-1">
                   ID #{currentDelivery.bowler_id} • Click for Bio
+                </div>
                 </div>
               </button>
             </div>
