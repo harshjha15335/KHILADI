@@ -1,0 +1,140 @@
+/* Royal Editorial / KHILADI design system — preserve the approved navbar and vortex. */
+:root {
+  --royal-ivory: #FAF8F5;
+  --royal-ink: #17171B;
+  --royal-cobalt: #234AA4;
+  --royal-rose: #C43670;
+  --royal-garnet: #9D2452;
+  --royal-lavender: #EAE5F0;
+  --royal-plum: #625269;
+  --royal-pearl: #DCDDEA;
+  --royal-white: #FFFFFF;
+  --royal-text-secondary: #57515A;
+  --royal-border: #DDD5DF;
+  --font-editorial: "Instrument Serif", Georgia, serif;
+  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-interface: "Inter", "DM Sans", Arial, sans-serif;
+  /* Backward-compatible component tokens. */
+  --background-primary: #FAF8F5;
+  --background-white: #FFFFFF;
+  --background-blush: #F5EFF2;
+  --background-pink-soft: #F8F2F5;
+  --background-lavender: #EAE5F0;
+  --background-blue-soft: #EDF0F8;
+  --brand-pink: #C43670;
+  --brand-pink-deep: #9D2452;
+  --brand-blue: #234AA4;
+  --brand-blue-bright: #3157BB;
+  --brand-purple: #625269;
+  --text-primary: #17171B;
+  --text-secondary: #57515A;
+  --text-muted: #68616B;
+  --surface-hover: #F8F2F5;
+  --border-subtle: #DDD5DF;
+  --border-pink: #EBC6D5;
+  --focus-ring: #234AA4;
+  --kh-blue: #234AA4;
+  --kh-deep: #132B69;
+  --kh-pink: #C43670;
+  --kh-lavender: #EAE5F0;
+  --kh-white: #FAF8F5;
+  --kh-text: #17171B;
+  --kh-muted: #625269;
+  --editorial-paper: #FAF8F5;
+  --editorial-blue: #234AA4;
+  --editorial-ink: #17171B;
+  --editorial-pink: #C43670;
+  --editorial-lavender: #EAE5F0;
+  --editorial-gold: #B69B60;
+}
+html, body, #root, .royal-editorial-app { background-color: var(--royal-ivory); }
+.royal-editorial-app { color: var(--royal-ink); }
+.cinematic-home, #main-content.analytics-workspace {
+  font-family: var(--font-interface);
+  color: var(--royal-ink);
+  font-variant-numeric: tabular-nums;
+}
+#main-content.analytics-workspace,
+#main-content.analytics-workspace > div,
+#main-content.analytics-workspace > div[class*="min-h-screen"] {
+  background-color: var(--royal-ivory) !important;
+  color: var(--royal-ink) !important;
+}
+/* Type scales are optically distinct, with condensed functional labels and serif statements. */
+#main-content.analytics-workspace h1:not(.dock-brand-name),
+#main-content.analytics-workspace .analytics-intro h1 {
+  font-family: var(--font-editorial) !important;
+  font-weight: 400;
+  letter-spacing: -.038em;
+  color: var(--royal-ink);
+}
+#main-content.analytics-workspace h2:not(.metric-vortex-scene h2):not(.typography-vortex-component h2) {
+  letter-spacing: -.025em;
+}
+#main-content.analytics-workspace :is(.analytics-intro, .editorial-track-heading) > p,
+#main-content.analytics-workspace thead th,
+.cinematic-home .eyebrow {
+  font-family: var(--font-condensed);
+  letter-spacing: .085em;
+}
+#main-content.analytics-workspace table {
+  font-family: var(--font-interface);
+  font-variant-numeric: tabular-nums;
+}
+#main-content.analytics-workspace thead { background: #F2EDF1; }
+#main-content.analytics-workspace thead th { color: #554B5C; }
+#main-content.analytics-workspace tbody td {
+  border-color: var(--royal-border);
+  color: var(--royal-ink);
+}
+#main-content.analytics-workspace tbody tr:hover { background: #F5F1F3; }
+#main-content.analytics-workspace :is(input[type="search"], input[type="text"], input[type="number"], select) {
+  background-color: #FFF !important;
+  border-color: var(--royal-border) !important;
+  color: var(--royal-ink) !important;
+}
+#main-content.analytics-workspace :is(input, select, button, a):focus-visible {
+  outline-color: var(--royal-cobalt);
+}
+#main-content.analytics-workspace :is(.pc-preview, .discovery-player, .public-ranking-player) {
+  background: #fff;
+  border-color: var(--royal-border);
+  box-shadow: 0 12px 34px #17171B0D;
+}
+/* Premium editorial paper in place of an undifferentiated pink footer gradient. */
+.khiladi-glass-footer {
+  background: #EAE5F0 !important;
+  color: var(--royal-ink) !important;
+  border-top-color: var(--royal-border) !important;
+}
+.khiladi-glass-footer::before {
+  background: radial-gradient(ellipse, #ffffff60, transparent 70%) !important;
+}
+.khiladi-glass-footer .footer-top {
+  background: rgba(255,255,255,.72) !important;
+  border-color: rgba(255,255,255,.86) !important;
+  box-shadow: 0 25px 70px #17171b0e !important;
+}
+.khiladi-glass-footer .footer-top p {
+  color: var(--royal-ink) !important;
+  font-family: var(--font-editorial) !important;
+}
+.khiladi-glass-footer .footer-top a { color: var(--royal-cobalt) !important; }
+.khiladi-glass-footer .footer-top a:hover { color: var(--royal-garnet) !important; }
+.khiladi-glass-footer .footer-replay {
+  color: var(--royal-cobalt) !important;
+  border-color: var(--royal-border) !important;
+}
+/* Preserve the original dark Typography Vortex geometry, rings and interactions. */
+.metric-vortex-scene, .typography-vortex-component {
+  background-color: #0b0b0b;
+}
+.metric-vortex-scene h2 {
+  color: #fffdf8 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+.metric-vortex-scene .metric-vortex-scene__kicker { color: #d2d2cd; }
+.metric-vortex-scene p { color: #e2e2e0; }
+@media (max-width: 760px) {
+  #main-content.analytics-workspace h1 { font-size: clamp(37px, 9vw, 64px); }
+}
