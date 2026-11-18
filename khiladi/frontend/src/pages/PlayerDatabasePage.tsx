@@ -9,6 +9,7 @@ import { AugeWarpSurface } from "../components/AugeWarpSurface";
 import { KhiladiKineticText } from "../components/KhiladiKineticText";
 import { PlayerEditorialTrack } from "../components/PlayerEditorialTrack";
 import { AnalyticsIntro } from "../components/AnalyticsIntro";
+import { EditorialSpotlight } from "../components/EditorialSpotlight";
 export const PlayerDatabasePage: React.FC<{
   onSelectPlayer: (p: Player) => void;
   onComparePlayer?: (id: number, role?: "batting" | "bowling") => void;
@@ -76,6 +77,16 @@ export const PlayerDatabasePage: React.FC<{
           Discover the players who fit your team. Open a profile to see what
           their recorded performance tells us.
         </AnalyticsIntro>
+        <EditorialSpotlight
+          title="See the player. Read the performance."
+          subtitle="Rajasthan-associated identities are featured for photographic discovery; the searchable pool below remains complete."
+          entries={players.filter(p=>p.is_rr && Boolean(playerImage(p))).slice(0,3).map(p=>({
+            player_id:p.player_id, player_name:p.player_name, role:p.role,
+            label:"Recorded pressure deliveries",
+            value:String(p.batting.press_balls+p.bowling.press_balls),
+          }))}
+          onInspect={id=>{const player=players.find(p=>p.player_id===id);if(player)onSelectPlayer(player)}}
+        />
         <PlayerEditorialTrack
           players={players}
           onSelectPlayer={onSelectPlayer}

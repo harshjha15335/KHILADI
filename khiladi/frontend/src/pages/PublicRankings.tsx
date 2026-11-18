@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
+import { EditorialSpotlight } from "../components/EditorialSpotlight";
+import { playerImage } from "../utils/media";
 import { requestJSON } from "../utils/api";
 import type { AnalyticalRole } from "../types/analytics";
 
@@ -55,6 +57,18 @@ export function PublicRankings({
             </button>
           ))}
         </div>
+        {!loading && !error && rows.length > 0 && (
+          <EditorialSpotlight
+            title={role === "batting" ? "Batters in the spotlight." : "Bowlers in the spotlight."}
+            subtitle="Photographed players from the recorded legacy ranking. Exact rank and full sample appear below."
+            entries={rows.filter(p=>Boolean(playerImage(p))).slice(0,3).map(p=>({
+              player_id:p.player_id,player_name:p.player_name,
+              label:`Legacy rank #${p.rank}`,
+              value:`Index ${p.pressure_impact_index.toFixed(2)}`,
+            }))}
+            onInspect={id=>onSelectPlayerById(id,role)}
+          />
+        )}
         {loading && <p role="status">Loading player records…</p>}
         {error && <p role="alert">{error}</p>}
         {!loading && !error && (

@@ -2,6 +2,8 @@ import { loadPlayers, metric } from "../utils/api";
 import { siteURL } from "../utils/urls";
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
+import { EditorialSpotlight } from "../components/EditorialSpotlight";
+import { playerImage } from "../utils/media";
 import { ShieldCheck, TrendingDown, Search } from "lucide-react";
 
 interface BowlingIntelligencePageProps {
@@ -75,6 +77,16 @@ export const BowlingIntelligencePage: React.FC<
           </p>
         </div>
 
+        <EditorialSpotlight
+          title="Meet the bowlers."
+          subtitle="Featured players with source-matched portraits and recorded pressure bowling aggregates."
+          entries={players.filter(p=>Boolean(playerImage(p))).slice(0,3).map(p=>({
+            player_id:p.player_id,player_name:p.player_name,role:p.role,
+            label:"Pressure economy",
+            value:metric(p.bowling.press_econ,2),
+          }))}
+          onInspect={id=>{const player=players.find(p=>p.player_id===id);if(player)onSelectPlayer(player)}}
+        />
         {/* Search */}
         <div className="max-w-md">
           <input

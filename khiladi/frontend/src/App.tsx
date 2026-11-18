@@ -248,7 +248,7 @@ export const App: React.FC = () => {
           )}
 
           {currentPage === "command-centre" && (
-            <CommandCentrePage onNavigate={handleNavigate} rrPurseCr={120.0} />
+            <CommandCentrePage onNavigate={handleNavigate} rrPurseCr={120.0} players={allPlayers} onSelectPlayer={selectPlayer} />
           )}
 
           {currentPage === "rankings" && (

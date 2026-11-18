@@ -4,6 +4,8 @@ import { loadPlayers } from "../utils/api";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
 import { KhiladiKineticText } from "../components/KhiladiKineticText";
 import { AnalyticsIntro } from "../components/AnalyticsIntro";
+import { EditorialSpotlight } from "../components/EditorialSpotlight";
+import { playerImage } from "../utils/media";
 
 type RoleFilter = "All" | "Batter" | "Bowler" | "All-Rounder" | "Other";
 const DISPLAY_ROLES: RoleFilter[] = ["All", "Batter", "Bowler", "All-Rounder", "Other"];
@@ -100,6 +102,16 @@ export function DataExplorerPage({
           </div>
         </header>
 
+        <EditorialSpotlight
+          title="A world of players."
+          subtitle="Explore Rajasthan-associated identities here, then use the coverage filters for the complete sample."
+          entries={players.filter(p=>p.is_rr && Boolean(playerImage(p))).slice(0,3).map(p=>({
+            player_id:p.player_id,player_name:p.player_name,role:p.role,
+            label:"Recorded batting + bowling pressure deliveries",
+            value:String(p.batting.press_balls+p.bowling.press_balls),
+          }))}
+          onInspect={id=>{const player=players.find(p=>p.player_id===id);if(player)onSelectPlayer(player)}}
+        />
         {loadError && (
           <div role="alert" className="space-y-3 border-l-4 border-[#ED267B] bg-[#FFE5F0] p-5">
             <p>{loadError}</p>

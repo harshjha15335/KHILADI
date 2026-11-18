@@ -1,9 +1,14 @@
 import React from "react";
 import { PublicDataPulse } from "../components/PublicDataPulse";
+import { EditorialSpotlight } from "../components/EditorialSpotlight";
+import type { Player } from "../types";
+import { playerImage } from "../utils/media";
 
 interface CommandCentrePageProps {
   onNavigate: (page: string) => void;
   rrPurseCr?: number;
+  players?: Player[];
+  onSelectPlayer?: (player:Player)=>void;
 }
 
 export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
@@ -27,6 +32,16 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
         </div>
 
         <PublicDataPulse onNavigate={onNavigate} compact />
+        <EditorialSpotlight
+          title="People before predictions."
+          subtitle="A source-matched photographic entry into the historical records."
+          entries={players.filter(p=>p.is_rr && Boolean(playerImage(p))).slice(0,3).map(p=>({
+            player_id:p.player_id,player_name:p.player_name,role:p.role,
+            label:"Recorded pressure deliveries",
+            value:String(p.batting.press_balls+p.bowling.press_balls),
+          }))}
+          onInspect={id=>{const player=players.find(p=>p.player_id===id);if(player)onSelectPlayer?.(player)}}
+        />
         {/* Existing source-specific quick-launch cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <button
