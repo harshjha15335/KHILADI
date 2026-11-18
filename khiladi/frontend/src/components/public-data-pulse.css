@@ -1,0 +1,25 @@
+.public-data-pulse{margin:0 auto;padding:clamp(65px,7.5vw,125px) clamp(24px,6vw,96px);background:#f8f7ff;color:#1c2856}
+.public-data-pulse header{max-width:800px;margin:0 0 clamp(28px,4vw,50px)}
+.public-data-pulse header .eyebrow{font-size:12px;color:#2453b7;letter-spacing:.15em}
+.public-data-pulse header h2{font:400 clamp(44px,5.5vw,78px)/1.04 Georgia,serif;letter-spacing:-.06em;color:#2453b7;margin:18px 0}
+.public-data-pulse header h2 em{color:#e73589}
+.public-data-pulse header>p:last-child{font-size:17px;color:#52617e;max-width:660px;line-height:1.65}
+.public-data-pulse__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.public-data-pulse__stat{background:#fff;border:1px solid #e7e5f4;border-radius:26px;padding:clamp(19px,2.5vw,35px);min-width:0;
+ box-shadow:0 12px 30px #24355b0d;transition:transform .35s ease,box-shadow .35s ease}
+.public-data-pulse__stat:hover{transform:translateY(-5px);box-shadow:0 22px 42px #24355b18}
+.public-data-pulse__stat strong{display:block;font:600 clamp(32px,4vw,60px)/1.15 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:#2453b7;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.public-data-pulse__stat span{display:block;font-size:13px;color:#586684;line-height:1.4;margin-top:11px}
+.public-data-pulse__actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:25px}
+.public-data-pulse__actions button{border-radius:999px;background:#2453b7;color:white;padding:13px 22px;font-size:14px;font-weight:600;transition:background .25s,transform .25s}
+.public-data-pulse__actions button:nth-child(2){background:#fff;border:1px solid #d8d7ed;color:#2453b7}
+.public-data-pulse__actions button:hover{transform:translateY(-2px);background:#e73589;color:white}
+.public-data-pulse__actions button span{margin-left:12px}
+.public-data-pulse--compact{padding:35px;background:#f8f7ff;border-radius:28px}
+.public-data-pulse--compact header h2{font-size:43px}
+.public-data-pulse--compact .public-data-pulse__stat{padding:18px;border-radius:18px}
+.public-data-pulse--compact .public-data-pulse__stat strong{font-size:35px}
+@media(max-width:1000px){.public-data-pulse__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.public-data-pulse__grid{gap:10px}.public-data-pulse__stat{padding:18px;border-radius:18px}
+.public-data-pulse__stat strong{font-size:34px}.public-data-pulse__stat span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.public-data-pulse__stat{transition:none}}

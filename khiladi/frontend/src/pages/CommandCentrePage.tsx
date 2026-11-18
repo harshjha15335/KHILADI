@@ -1,4 +1,5 @@
 import React from "react";
+import { PublicDataPulse } from "../components/PublicDataPulse";
 import {
   Layers,
   Flame,
@@ -34,7 +35,8 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
           </p>
         </div>
 
-        {/* Top 4 KPI Cards */}
+        <PublicDataPulse onNavigate={onNavigate} compact />
+        {/* Existing source-specific quick-launch cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <button
             type="button"

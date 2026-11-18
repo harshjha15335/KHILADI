@@ -1,5 +1,6 @@
 import "./home-editorial.css";
 import { StudyAthlete } from "../components/player-cards/StudyAthlete";
+import { PublicDataPulse } from "../components/PublicDataPulse";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
 import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
@@ -308,6 +309,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           <span>FOR THE LOVE OF THE GAME</span><span>SCROLL TO DISCOVER ↓</span>
         </div>
       </section>
+      <PublicDataPulse onNavigate={onNavigate} />
       <section className="home-player-showcase" aria-labelledby="home-player-heading" data-brand-tone="white" data-header-brand="compact">
         <header className="home-showcase-intro">
           <p className="eyebrow">PLAYERS IN FOCUS</p>
