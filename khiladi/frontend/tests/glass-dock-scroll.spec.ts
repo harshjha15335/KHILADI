@@ -40,12 +40,12 @@ test("glass dock links navigate and reflect the current page", async ({ page }) 
   await expect(page).toHaveURL(/#home$/);
 });
 
-test("desktop builds the scroll-triggered trophy portal and player parade", async ({ page }) => {
+test("desktop builds the memory ribbon and player parade", async ({ page }) => {
   await page.goto("/");
   await page.keyboard.press("Escape");
   await expect(page.locator(".intro-root")).toHaveCount(0);
-  await expect(page.locator(".hero-photo-slot")).toHaveCount(5);
-  await expect(page.locator(".hero-photo-slot--centre")).toHaveCount(1);
+  await expect(page.getByTestId("cinematic-memory-ribbon")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Next cricket photograph" })).toBeVisible();
   await expect(page.locator(".home-player-item")).toHaveCount(8);
   const count = await page.evaluate(async () => {
     const { ScrollTrigger } = await import("/src/utils/motion.ts");
@@ -72,13 +72,21 @@ test("narrow touch screens retain scrollable left and right dock groups", async 
   expect(result.rightScroll).toBeGreaterThan(0);
 });
 
-test("public build renders uploaded trophy and four other real cricket photos", async ({page}) => {
+test("public gallery preserves authentic trophy plus four available photographs", async ({page}) => {
   await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/");
-  const photos=page.locator(".hero-collage img");
-  await expect(photos).toHaveCount(5);
-  await expect.poll(async()=>photos.evaluateAll(imgs=>imgs.filter(i=>(i as HTMLImageElement).naturalWidth>0).length)).toBe(5);
-  await expect(photos.nth(2)).toHaveAttribute("src",/trophy-celebration\.webp/);
+  const gallery = page.getByTestId("cinematic-memory-ribbon");
+  const fallback = gallery.locator(".memory-ribbon__fallback");
+  await expect(fallback.locator("img")).toHaveCount(3);
+  await expect(fallback.locator(".memory-ribbon__still--1 img")).toHaveAttribute("src", /trophy-celebration\\.webp/);
+  await expect.poll(async () => fallback.locator("img").evaluateAll(imgs =>
+    imgs.filter(img => (img as HTMLImageElement).naturalWidth > 0).length)).toBe(3);
+  const counter = gallery.locator(".memory-ribbon__count");
+  await expect(counter).toHaveText("01 / 05");
+  await gallery.getByRole("button", { name: "Next cricket photograph" }).click();
+  await expect(counter).toHaveText("02 / 05");
+  await gallery.getByRole("button", { name: "Previous cricket photograph" }).click();
+  await expect(counter).toHaveText("01 / 05");
 });
 test("public leaderboard and canonical player data load without private D20", async({page})=>{
   await page.emulateMedia({reducedMotion:"reduce"});
