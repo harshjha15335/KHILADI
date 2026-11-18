@@ -36,13 +36,9 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({ onComplete 
         { scaleX: 1, duration: .6, ease: "power3.out" }, 1.9)
       .to(".intro-words", { scale: 1.12, opacity: 0, duration: .65, ease: "power3.in" }, 2.57)
       .to(".intro-symbol", { scale: 5, opacity: 0, duration: .7, ease: "power3.in" }, 2.65)
-      // Geometric page handoff inspired by the supplied Delta Cafés recordings:
-      // the full-page curtain resolves to a triangular aperture, then folds away.
-      // No triangle is added behind the KHILADI logo itself.
-      .to(".intro-curtain", { clipPath: "polygon(50% -10%, 100% 120%, 50% 120%, 0% 120%)",
-        duration: .58, ease: "power3.inOut" }, 2.91)
-      .to(".intro-curtain", { clipPath: "polygon(50% 101%, 50% 101%, 50% 101%, 50% 101%)",
-        duration: .72, ease: "power4.inOut" }, 3.43);
+      // Restore the approved original startup handoff. The two triangle
+      // effects belong to navbar navigation, not the first page load.
+      .to(".intro-curtain", { yPercent: -101, duration: .76, ease: "power4.inOut" }, 2.93);
     return () => { tl.kill(); document.body.style.overflow = previous; };
   }, { scope: root });
   useEffect(() => {
