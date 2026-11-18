@@ -253,17 +253,18 @@ test("the editorial font system is present on homepage and analytics pages",asyn
   }
 });
 
-test("home trophy photo has measurable scroll progress and navbar entrance completes",async({page})=>{
+test("memory ribbon reports actual scroll progress and navbar entrance completes",async({page})=>{
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/#home");
   await page.keyboard.press("Escape");
   const nav=page.locator(".khiladi-top-nav");
   await expect.poll(async()=>nav.getAttribute("data-intro-motion"),{timeout:5500}).toBe("ready");
-  const hero=page.locator(".hero-chapter");
+  const ribbon=page.getByTestId("cinematic-memory-ribbon");
+  const before=Number(await ribbon.getAttribute("data-scroll-progress"));
   await page.evaluate(()=>scrollTo(0,530));
   await expect.poll(async()=>{
-    const n=Number(await hero.getAttribute("data-scroll-progress"));
+    const n=Number(await ribbon.getAttribute("data-scroll-progress"));
     return Number.isFinite(n)?n:0;
-  },{timeout:5500}).toBeGreaterThan(.05);
+  },{timeout:5500}).toBeGreaterThan(before + .05);
 });
