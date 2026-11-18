@@ -4,7 +4,7 @@ import type { AnalyticalRole } from "../../types/analytics";
 import { RoyalPlayerCard } from "./RoyalPlayerCard";
 import { ResearchAccess, useRoyalResearch } from "./RoyalResearch";
 import { number, tierLabel } from "./cardData";
-import { officialPortrait } from "./portraitSource";
+import { playerImage } from "../../utils/media";
 import "./royal-card.css";
 import "./player-cards.css";
 export default function RoyalPlayerDialog({
@@ -30,7 +30,7 @@ export default function RoyalPlayerDialog({
   closeRef.current = onClose;
   const research = useRoyalResearch(),
     data = research.lookup(player.player_id, role),
-    portrait = officialPortrait(player.player_id);
+    portrait = playerImage(player);
   useEffect(() => {
     const focus = returnFocus ?? (document.activeElement as HTMLElement),
       old = document.body.style.overflow;
@@ -178,18 +178,7 @@ export default function RoyalPlayerDialog({
             </p>
           )}
           <p className="pc-portrait-credit">
-            {portrait ? (
-              <>
-                Portrait:{" "}
-                <a href={portrait.source} target="_blank" rel="noreferrer">
-                  official IPL player page
-                </a>
-                . Unmodified private development review; production image
-                publication is disabled.
-              </>
-            ) : (
-              "No verified official portrait is available in this card manifest. The illustrated fallback is not a player likeness."
-            )}
+            {portrait ? "Player photo sourced for this identity; photo credits are in the site footer." : "Original cricket illustration is shown when a reusable player photo is unavailable."}
           </p>
           <div className="pc-profile-actions">
             <button
