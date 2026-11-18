@@ -68,11 +68,14 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: .9,
             ease: "power3.out", stagger: .12, clearProps: "transform,filter,opacity,visibility" }
         );
-        gsap.fromTo(".hero-photo-slot",
-          { autoAlpha: 0, y: 75, scale: .82, rotation: 0 },
-          { autoAlpha: 1, y: 0, scale: 1, rotation: 0, duration: 1.05,
+        // Entrance animates photographic contents, not the outer frame.
+        // The outer frame is owned exclusively by the scroll choreography,
+        // preventing the intro's clearProps from erasing satellite motion.
+        gsap.fromTo(".hero-photo-slot > img",
+          { autoAlpha: 0, y: 62, scale: .86 },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 1.03,
             stagger: { each: .11, from: "center" }, ease: "power3.out",
-            clearProps: "opacity,visibility,y,scale,rotation" });
+            clearProps: "opacity,visibility,y,scale" });
         // Editorial scroll choreography without clipping the original photos.
         // Keep the hero in the normal document flow so no half-hidden heading
         // or pinned image blocks the next section.
