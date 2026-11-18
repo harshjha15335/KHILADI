@@ -30,3 +30,8 @@
  .matte-rise__heading>p:first-child{font-size:10px}
  .matte-rise__copy{max-width:290px;margin:auto}}
 @media(prefers-reduced-motion:reduce){.matte-rise h2>span>span{will-change:auto}}
+/* The photographic side panels were removed at the owner's request. */
+.matte-rise { min-height: min(82svh, 790px); padding-block:clamp(125px,12vw,190px); background:radial-gradient(ellipse at 50% 38%,#eee8f7,#faf8f5 72%); }
+.matte-rise__heading {max-width: min(100%,1080px);padding-inline:clamp(8px,3vw,30px);}
+.matte-rise__heading h2 { position: relative; z-index: 2; }
+@media(max-width:650px){ .matte-rise {min-height:540px;padding:120px 12px} }
