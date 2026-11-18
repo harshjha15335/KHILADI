@@ -156,3 +156,17 @@
 @media(max-width:899px){.cinematic-home .hero-copy h1{font-size:clamp(45px,9.7vw,70px)!important}
 .cinematic-home .hero-photo-slot{will-change:auto}}
 @media(prefers-reduced-motion:reduce){.cinematic-home .hero-collage,.cinematic-home .hero-photo-slot{will-change:auto}}
+
+/* Prefer the existing, legitimately linked Barlow Condensed family to a brittle
+   Impact substitute. Delta-style strong display, unchanged Khiladi colours. */
+.cinematic-home .hero-copy h1{
+ font-family:"Barlow Condensed",Impact,"Arial Narrow",sans-serif!important;
+ font-weight:700!important;font-size:clamp(65px,6.7vw,110px)!important;
+ letter-spacing:-.027em!important;line-height:.88!important;
+}
+.cinematic-home .hero-copy h1 em{line-height:1.04!important;font-size:.76em!important}
+.cinematic-home .editorial-chapter h2 .story-line:not(:last-child){
+ font-family:"Barlow Condensed",Impact,"Arial Narrow",sans-serif!important;
+ font-weight:700;letter-spacing:-.024em}
+@media(max-width:899px){.cinematic-home .hero-copy h1{
+ font-size:clamp(48px,10vw,76px)!important;line-height:.93!important}}
