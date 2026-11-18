@@ -1,5 +1,5 @@
 import "./home-editorial.css";
-import { StudyAthlete } from "../components/player-cards/StudyAthlete";
+import { NeutralPlayerAvatar } from "../components/NeutralPlayerAvatar";
 import { PublicDataPulse } from "../components/PublicDataPulse";
 import { KhiladiBento } from "../components/KhiladiBento";
 import { EditorialMatteRise } from "../components/EditorialMatteRise";
@@ -20,6 +20,17 @@ interface Props {
   introComplete?: boolean;
   onNavigate: (page: string) => void;
   onSelectPlayer: (player: Player) => void;
+}
+function QuizPlayerPhoto({player}:{player:Player}) {
+  const [failed,setFailed]=useState(false);
+  const src=playerImage(player);
+  return src&&!failed ? (
+    <img src={src} alt="" width="220" height="270" loading="lazy"
+      decoding="async" referrerPolicy="no-referrer" onError={()=>setFailed(true)} />
+  ) : (
+    <NeutralPlayerAvatar className="quiz-neutral-player"
+      label={`No verified IPL portrait for ${player.player_name}`} />
+  );
 }
 export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, onSelectPlayer }) => {
   const root = useRef<HTMLDivElement>(null);
@@ -84,8 +95,13 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
         const centre = hero?.querySelector<HTMLElement>(".hero-photo-slot--centre");
         if (hero && centre && window.innerWidth >= 900) {
           const timeline = gsap.timeline({
-            scrollTrigger: { trigger: hero, start: "top top", end: "bottom top",
-              scrub: .65, invalidateOnRefresh: true },
+            scrollTrigger: {
+              trigger: hero, start: "top top",
+              end:()=>"+="+Math.round(Math.min(window.innerHeight,930)*.72),
+              pin:true, pinSpacing:true, anticipatePin:1,
+              scrub:.68, invalidateOnRefresh:true,
+              onUpdate:(self)=>{hero.dataset.scrollProgress=self.progress.toFixed(2);}
+            },
           });
           timeline
             .to(".hero-copy", { y: -112, opacity: .10, ease: "none" }, 0)
@@ -113,6 +129,14 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
             },
           });
         }
+        // Explicit, measurable scroll-driven text reveals for the full editorial journey.
+        gsap.utils.toArray<HTMLElement>(
+          ".home-showcase-intro h2, .khiladi-bento__title h2, .heritage-chapter h2, .quiz-introduction h2"
+        ).forEach(title=>{
+          gsap.fromTo(title,{clipPath:"inset(0 0 95% 0)",opacity:.2},
+            {clipPath:"inset(0 0 0% 0)",opacity:1,ease:"none",
+              scrollTrigger:{trigger:title,start:"top 92%",end:"top 42%",scrub:.65}});
+        });
         gsap.fromTo(".home-player-item",
           { y: 48, autoAlpha: .25 },
           { y: 0, autoAlpha: 1, ease: "none", stagger: .045,
@@ -471,177 +495,5 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
               aria-hidden="true"
             >
               <div className="quiz-figure-drift">
-                {playerImage(player) ? (
-                  <img src={playerImage(player)} alt="" width="220" height="270" loading="lazy" />
-                ) : <StudyAthlete />}
-              </div>
-              <span className="quiz-figure-name">{player.player_name}</span>
-            </div>
-          ))}
-          <div className="quiz-introduction">
-            <p className="eyebrow">YOUR TEAM. YOUR MOMENT.</p>
-            <h2 id="quiz-heading">
-              Who’s your
-              <br />
-              <em>match-winner?</em>
-            </h2>
-            <p>
-              Tell us what your team needs.
-              <br />
-              Find the players who fit.
-            </p>
-            <CTA onClick={() => setQuizStep(1)}>Find my player</CTA>
-          </div>
-        </div>
-        {quizStep > 0 && (
-          <div
-            className="quiz-panel"
-            tabIndex={-1}
-            aria-live="polite"
-            onKeyDown={(e) => {
-              if (e.key === "Escape") {
-                setQuizStep(0);
-                root.current
-                  ?.querySelector<HTMLButtonElement>(
-                    ".quiz-introduction button",
-                  )
-                  ?.focus();
-              }
-            }}
-          >
-            <button
-              className="quiz-close"
-              aria-label="Close quiz"
-              onClick={() => setQuizStep(0)}
-            >
-              ×
-            </button>
-            {quizStep === 1 && (
-              <>
-                <p className="eyebrow">FIRST, YOUR TEAM NEEDS…</p>
-                <h3>
-                  A bat, a ball,
-                  <br />
-                  or a little of both?
-                </h3>
-                <fieldset>
-                  <legend className="sr-only">Choose a playing role</legend>
-                  {[
-                    ["Batting", "Runs on the board"],
-                    ["Bowling", "Wickets when it matters"],
-                    ["All-Rounder", "A bit of everything"],
-                  ].map(([value, text]) => (
-                    <label key={value}>
-                      <input
-                        type="radio"
-                        name="quiz-role"
-                        value={value}
-                        checked={role === value}
-                        onChange={() => setRole(value)}
-                      />
-                      <span>{text}</span>
-                    </label>
-                  ))}
-                </fieldset>
-                <CTA onClick={() => setQuizStep(2)}>Next question</CTA>
-              </>
-            )}
-            {quizStep === 2 && (
-              <>
-                <p className="eyebrow">AND THE MOMENT?</p>
-                <h3>
-                  When do you
-                  <br />
-                  need them most?
-                </h3>
-                <fieldset>
-                  <legend className="sr-only">Choose a match situation</legend>
-                  {[
-                    ["Powerplay", "Making a strong start"],
-                    ["Death Overs", "The final few overs"],
-                    ["Chase Master", "Chasing the target"],
-                  ].map(([value, text]) => (
-                    <label key={value}>
-                      <input
-                        type="radio"
-                        name="quiz-phase"
-                        value={value}
-                        checked={phase === value}
-                        onChange={() => setPhase(value)}
-                      />
-                      <span>{text}</span>
-                    </label>
-                  ))}
-                </fieldset>
-                <p className="quiz-caveat">
-                  Suggestions use recorded pressure performance. The current
-                  model has no separate phase-specific estimates.
-                </p>
-                <CTA disabled={busy} onClick={findPlayers}>
-                  {busy ? "Finding players…" : "Show my players"}
-                </CTA>
-                <button className="text-link" onClick={() => setQuizStep(1)}>
-                  Back
-                </button>
-              </>
-            )}
-            {quizStep === 3 && (
-              <>
-                <p className="eyebrow">A FEW PLAYERS TO EXPLORE</p>
-                <h3>
-                  Your next
-                  <br />
-                  match-winner?
-                </h3>
-                {results.length ? (
-                  results.map((player) => (
-                    <button
-                      key={player.player_id}
-                      className="quiz-result"
-                      onClick={() => onSelectPlayer(player)}
-                    >
-                      <strong>{player.player_name} ↗</strong>
-                      <span>{describePlayer(player)}</span>
-                    </button>
-                  ))
-                ) : (
-                  <p>
-                    No players have enough recorded evidence for this choice.
-                  </p>
-                )}
-                <p className="quiz-caveat">
-                  Model suggestions, not predictions or guarantees.
-                  {staticPages &&
-                    " This static site uses saved outputs of the existing model."}
-                </p>
-                <button className="text-link" onClick={() => setQuizStep(1)}>
-                  Try another combination ↗
-                </button>
-              </>
-            )}
-            {quizError && <p role="alert">{quizError}</p>}
-          </div>
-        )}
-      </section>
-      <section
-        className="closing-chapter"
-        data-brand-tone="white"
-        data-header-brand="hidden"
-      >
-        <p className="eyebrow">BACK YOUR INSTINCT. KNOW YOUR PLAYER.</p>
-        <h2>
-          Ready to find
-          <br />
-          your <em>match-winner?</em>
-        </h2>
-        <div>
-          <CTA onClick={scrollQuiz}>Find my player</CTA>
-          <CTA variant="outline" onClick={() => onNavigate("database")}>
-            Explore players
-          </CTA>
-        </div>
-        <p>For the fans who feel every ball.</p>
-      </section>
-    </div>
-  );
-};
+                <QuizPlayerPhoto player={player} />
+

@@ -1,5 +1,5 @@
 import { requestJSON } from "../utils/api";
-import { apiURL, siteURL } from "../utils/urls";
+import { apiURL } from "../utils/urls";
 import { playerImage } from "../utils/media";
 import { NeutralPlayerAvatar } from "../components/NeutralPlayerAvatar";
 import "./pressure-theatre.css";

@@ -16,14 +16,16 @@ export const Navbar: React.FC<{
   const root = useRef<HTMLElement>(null);
   const hasPlayed = useRef(false);
   useEffect(() => {
-    if (!introComplete || !root.current || hasPlayed.current) return;
+    if (!introComplete) { hasPlayed.current=false; return; }
+    if (!root.current || hasPlayed.current) return;
     hasPlayed.current = true;
     const scope = root.current;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const left = scope.querySelectorAll<HTMLElement>(".dock-link--left");
     const right = scope.querySelectorAll<HTMLElement>(".dock-link--right");
     const centre = scope.querySelector(".dock-home");
-    const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+    scope.dataset.introMotion = "entering";
+    const timeline = gsap.timeline({ defaults: { ease: "power3.out" }, onComplete:()=>{scope.dataset.introMotion="ready";} });
     timeline
       .fromTo(scope, { autoAlpha: 0, y: -20, scale: .985 },
         { autoAlpha: 1, y: 0, scale: 1, duration: .55 }, 0)
@@ -33,7 +35,7 @@ export const Navbar: React.FC<{
         { autoAlpha: 1, y: 0, scale: 1, duration: .6, ease: "power4.out" }, .55)
       .fromTo(right, { autoAlpha: 0, y: -24, x: 16, filter: "blur(8px)" },
         { autoAlpha: 1, y: 0, x: 0, filter: "blur(0px)", duration: .55, stagger: .09 }, .85);
-    return () => { timeline.kill(); gsap.set([scope, ...Array.from(left), ...Array.from(right), centre].filter(Boolean), { clearProps: "all" }); };
+    return () => { timeline.kill(); if(scope.dataset.introMotion!=="ready")scope.dataset.introMotion="idle"; gsap.set([scope, ...Array.from(left), ...Array.from(right), centre].filter(Boolean), { clearProps: "all" }); };
   }, [introComplete]);
   useEffect(() => {
     if (!root.current || !introComplete) return;
