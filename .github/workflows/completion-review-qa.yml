@@ -75,6 +75,11 @@ jobs:
         env:
           KHILADI_TEST_TOKEN_FILE: ""
 
+      - name: Regression-check existing public site interactions
+        run: npx playwright test tests/phase2.spec.ts tests/homepage-corrections.spec.ts tests/accessibility.spec.ts tests/experience.spec.ts tests/reference-replication.spec.ts --reporter=list
+        env:
+          KHILADI_TEST_TOKEN_FILE: ""
+
       - name: Upload KHILADI and Delta visual review evidence
         if: always()
         uses: actions/upload-artifact@v4
