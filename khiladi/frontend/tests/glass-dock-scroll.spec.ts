@@ -78,7 +78,7 @@ test("public gallery preserves authentic trophy plus four available photographs"
   const gallery = page.getByTestId("cinematic-memory-ribbon");
   const fallback = gallery.locator(".memory-ribbon__fallback");
   await expect(fallback.locator("img")).toHaveCount(3);
-  await expect(fallback.locator(".memory-ribbon__still--1 img")).toHaveAttribute("src", /trophy-celebration\\.webp/);
+  await expect(fallback.locator(".memory-ribbon__still--1 img")).toHaveAttribute("src", /trophy-celebration[.]webp/);
   await expect.poll(async () => fallback.locator("img").evaluateAll(imgs =>
     imgs.filter(img => (img as HTMLImageElement).naturalWidth > 0).length)).toBe(3);
   const counter = gallery.locator(".memory-ribbon__count");
