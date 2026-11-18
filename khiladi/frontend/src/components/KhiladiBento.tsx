@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import type { Player } from "../types";
 import { playerImage } from "../utils/media";
 import { NeutralPlayerAvatar } from "./NeutralPlayerAvatar";
 import "./khiladi-bento.css";
 
 const Portrait: React.FC<{player?:Player}> = ({player}) => {
-  if(!player)return <NeutralPlayerAvatar className="kb-empty-player" />;
-  const src=playerImage(player);
+  const src = player ? playerImage(player) : undefined;
+  const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [player?.player_id, src]);
   return <span className="kb-mini-portrait">
-    {src ? <img src={src} alt="" loading="lazy" decoding="async" referrerPolicy="no-referrer"
-      onError={e=>{e.currentTarget.style.display="none"}}/> : null}
-    <NeutralPlayerAvatar className="kb-neutral-avatar" label={`No verified IPL portrait for ${player.player_name}`} />
+    {src && !failed
+      ? <img src={src} alt="" loading="lazy" decoding="async"
+          referrerPolicy="no-referrer" onError={() => setFailed(true)} />
+      : <NeutralPlayerAvatar className="kb-neutral-avatar"
+          label={player ? `Portrait unavailable for ${player.player_name}` : "Player portrait unavailable"} />}
   </span>;
 };
 export const KhiladiBento:React.FC<{featured:Player[];onNavigate:(page:string)=>void}> = ({featured,onNavigate}) => {
