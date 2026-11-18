@@ -23,11 +23,19 @@ export function CinematicMemoryRibbon() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [webglReady, setWebglReady] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [compact, setCompact] = useState(() => window.matchMedia("(max-width: 760px)").matches);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const sync = () => setReducedMotion(mq.matches);
     sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 760px)");
+    const sync = () => setCompact(mq.matches);
     mq.addEventListener("change", sync);
     return () => mq.removeEventListener("change", sync);
   }, []);
@@ -42,7 +50,7 @@ export function CinematicMemoryRibbon() {
   useEffect(() => {
     const element = host.current;
     const surface = canvas.current;
-    if (!element || !surface || reducedMotion) return;
+    if (!element || !surface || reducedMotion || compact) return;
 
     let renderer: THREE.WebGLRenderer;
     try {
@@ -150,10 +158,15 @@ export function CinematicMemoryRibbon() {
         if (typeof hit === "number") select(hit);
       }
     };
+    const onCancel = () => { dragging = false; };
     const onScroll = () => {
       const rect = element.getBoundingClientRect();
       const viewport = Math.max(window.innerHeight, 1);
       velocities.scroll = THREE.MathUtils.clamp((viewport - rect.top) / (viewport + rect.height), 0, 1);
+    };
+
+    const onVisibility = () => {
+      if (!document.hidden && isVisible && !frame) frame = requestAnimationFrame(animate);
     };
 
     const observer = new IntersectionObserver(entries => {
@@ -212,9 +225,9 @@ export function CinematicMemoryRibbon() {
     surface.addEventListener("pointerleave", onLeave);
     surface.addEventListener("pointerdown", onDown);
     surface.addEventListener("pointerup", onUp);
-    surface.addEventListener("pointercancel", () => { dragging = false; });
+    surface.addEventListener("pointercancel", onCancel);
     window.addEventListener("scroll", onScroll, { passive: true });
-    document.addEventListener("visibilitychange", onScroll);
+    document.addEventListener("visibilitychange", onVisibility);
     onScroll();
     frame = requestAnimationFrame(animate);
 
@@ -227,14 +240,15 @@ export function CinematicMemoryRibbon() {
       surface.removeEventListener("pointerleave", onLeave);
       surface.removeEventListener("pointerdown", onDown);
       surface.removeEventListener("pointerup", onUp);
+      surface.removeEventListener("pointercancel", onCancel);
       window.removeEventListener("scroll", onScroll);
-      document.removeEventListener("visibilitychange", onScroll);
+      document.removeEventListener("visibilitychange", onVisibility);
       meshes.forEach(mesh => { scene.remove(mesh); mesh.geometry.dispose(); mesh.material.dispose(); });
       textures.forEach(texture => texture.dispose());
       renderer.dispose();
       setWebglReady(false);
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, compact]);
 
   return (
     <div className="memory-ribbon" ref={host} data-testid="cinematic-memory-ribbon"
