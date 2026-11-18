@@ -80,15 +80,18 @@ test("Royal Editorial tokens and typography stay consistent without repainting t
   const tokens = await page.evaluate(() => {
     const css = getComputedStyle(document.documentElement);
     const heading = getComputedStyle(document.querySelector(".hero-chapter-heading")!);
+    const eyebrow = getComputedStyle(document.querySelector(".hero-copy .eyebrow")!);
     return {
       ivory: css.getPropertyValue("--royal-ivory").trim(),
       ink: css.getPropertyValue("--royal-ink").trim(),
       rose: css.getPropertyValue("--royal-rose").trim(),
       headingFont: heading.fontFamily,
+      eyebrowFont: eyebrow.fontFamily,
     };
   });
   expect(tokens).toMatchObject({ ivory: "#FAF8F5", ink: "#17171B", rose: "#C43670" });
-  expect(tokens.headingFont).toContain("Barlow Condensed");
+  expect(tokens.headingFont).toContain("Instrument Serif");
+  expect(tokens.eyebrowFont).toContain("Barlow Condensed");
 
   const cta = page.getByRole("button", { name: /Find my player/ }).first();
   await expect(cta).toHaveClass(/iridescent-glass--garnet/);
