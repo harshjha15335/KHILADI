@@ -22,6 +22,7 @@ import { PlayerComparisonPage } from "./pages/PlayerComparisonPage";
 import { AuctionWarRoomPage } from "./pages/AuctionWarRoomPage";
 import { MethodologyPage } from "./pages/MethodologyPage";
 import { CommandCentrePage } from "./pages/CommandCentrePage";
+import { DataExplorerPage } from "./pages/DataExplorerPage";
 
 const RoyalPlayerDialog = React.lazy(
   () => import("./components/player-cards/RoyalPlayerDialog"),
@@ -30,6 +31,7 @@ const RoyalPlayerDialog = React.lazy(
 const routeNames = new Set([
   "home",
   "database",
+  "data-explorer",
   "rankings",
   "pressure-lab",
   "comparison",
@@ -191,6 +193,10 @@ export const App: React.FC = () => {
               onSelectPlayer={selectPlayer}
               onComparePlayer={comparePlayer}
             />
+          )}
+
+          {currentPage === "data-explorer" && (
+            <DataExplorerPage onSelectPlayer={selectPlayer} />
           )}
 
           {currentPage === "pressure-lab" && (
