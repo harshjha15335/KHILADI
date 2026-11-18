@@ -94,6 +94,14 @@ jobs:
       - name: Full original GitHub Pages publication artifact audit
         run: python3 ../../scripts/check_pages_artifact.py
 
+      - name: Ensure review-only portrait metadata is not bundled for visitors
+        run: |
+          if grep -R -E -q 'private_development_only|redistribution_permission|review-portraits' dist; then
+            echo "Review-only portrait metadata leaked into public build" >&2
+            exit 1
+          fi
+          echo "No review-only portrait metadata found in static build"
+
       - name: Guard against obviously restricted build artifacts
         run: |
           if find dist -type f | grep -Ei '(private[_-]?d20|serving[_-]?bundle|raw[_-]?competition|\\.env|token[_-]?file)'; then
