@@ -220,11 +220,13 @@ test("official player photographs are never replaced with another player's ident
     const {playerImage}=await import("/src/utils/media.ts");
     return [playerImage({player_id:3298,player_name:"Jofra Archer"}),
       playerImage({player_id:3298,player_name:"Wrong Name"}),
-      playerImage({player_id:9999999,player_name:"Unknown Person"})];
+      playerImage({player_id:9999999,player_name:"Unknown Person"}),
+      playerImage({player_id:43965,player_name:"Emanjot Singh Chahal"})];
   });
   expect(result[0]).toMatch(/^https:\/\/www\.iplt20\.com\/api\/team-assets/);
   expect(result[1]).toBeUndefined();
   expect(result[2]).toBeUndefined();
+  expect(result[3]).toBeUndefined();
 });
 
 test("Pressure replay has no unrelated Rajasthan image and retains the live delivery controls",async({page})=>{

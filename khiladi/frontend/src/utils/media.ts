@@ -64,6 +64,9 @@ export function playerImage(player: {
   }>)[String(player.player_id)];
   if (!record || !player.player_name) return undefined;
   const norm=(v:string)=>v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
+  // IPL profile pages documented as displaying only the league’s generic silhouette.
+  const noOfficialPhoto=new Set(["sam curran","dasun shanaka","emanjot singh chahal"]);
+  if(noOfficialPhoto.has(norm(player.player_name)))return undefined;
   if(norm(record.name)!==norm(player.player_name)) return undefined;
   if(!/^https:\/\/www\.iplt20\.com\/players\//.test(record.source)
     && !/^https:\/\/www\.iplt20\.com\/teams\//.test(record.source)) return undefined;
