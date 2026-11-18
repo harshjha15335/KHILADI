@@ -149,27 +149,26 @@ def get_player_profile(player_id: int):
     if not player:
         raise HTTPException(status_code=404, detail="Player not found in canonical whitelist")
         
-    # Calculate radar chart scores (0 - 100)
-    bat = player["batting"]
-    bowl = player["bowling"]
-    
-    radar = {
-        "pressure_handling": min(100, int(player["pressure_impact_index"] * 7.5)),
-        "boundary_potency": min(100, int(bat["press_boundary_pct"] * 3.5)),
-        "dot_control": min(100, int((45 - min(45, bat["press_dot_pct"])) * 2.2 + (bowl["press_dot_pct"] * 1.2))),
-        "economy_discipline": min(100, int(max(0, (12 - bowl["press_econ"]) * 14))) if bowl["press_balls"] > 0 else 50,
-        "consistency": min(100, int(player["pressure_impact_index"] * 7.0)),
-        "clutch_finishing": min(100, int((bat["press_sr"] / 220) * 100)) if bat["press_balls"] > 0 else 40
-    }
-    
+    # This legacy identity endpoint has no validated player-level auction-fit
+    # predictor or calibrated six-axis radar model. Publishing invented 0–100
+    # scores as if they were accepted research would mislead users.
+    #
+    # Keep the historical recorded player fields unchanged; declare the
+    # unsupported forecasts unavailable. The separately authenticated /api/v2
+    # D20 ranking contract remains the source of accepted research.
     return {
         "player": player,
-        "radar_metrics": radar,
+        "radar_metrics": None,
         "rr_auction_fit": {
-            "fit_score": min(98, max(65, int(player["pressure_impact_index"] * 7.8))),
-            "tactical_role": "High Leverage Finisher / Anchor" if player["role"] in ["Batter", "All-Rounder"] else "Death Overs Boundary Denier",
-            "recommended_strategy": "Aggressive RTM Match" if player["is_rr"] else "Primary Target Tier 1"
-        }
+            "available": False,
+            "fit_score": None,
+            "tactical_role": None,
+            "recommended_strategy": None,
+            "reason": (
+                "Player-level auction fit, strategy and radar scores are not "
+                "estimated by the accepted D20 model."
+            ),
+        },
     }
 
 @app.get("/api/rankings/batters")
