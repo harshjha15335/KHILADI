@@ -52,9 +52,18 @@ jobs:
           exit 1
 
       - name: Review new scenario comparison and official media
-        run: npx playwright test tests/auction-scenario-comparison.spec.ts tests/official-media-integration.spec.ts --reporter=list
+        run: npx playwright test tests/auction-scenario-comparison.spec.ts tests/official-media-integration.spec.ts tests/visual-delta-review.spec.ts --reporter=list
         env:
           KHILADI_TEST_TOKEN_FILE: ""
+
+      - name: Upload KHILADI and Delta visual review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: khiladi-delta-visual-review
+          path: khiladi/frontend/visual-review-output
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: Build static release candidate without publishing
         run: npm run build
