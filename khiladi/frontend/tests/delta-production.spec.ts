@@ -127,3 +127,70 @@ test("player gallery translates as the reader progresses but remains directly sc
   expect(pos.left).toBeGreaterThan(0);
   await expect(rail.locator(".home-player-item").first()).toHaveCount(1);
 });
+
+test("the framed ranking filmstrip preserves true leaderboard data and selection",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#rankings");
+  const strip=page.locator(".rank-filmstrip");
+  await expect(strip).toBeVisible();
+  await expect(strip.locator(".rank-filmstrip__card")).toHaveCount(10);
+  const first=strip.locator(".rank-filmstrip__controls > span");
+  const before=await first.textContent();
+  await strip.getByRole("button",{name:"Next →"}).click();
+  await expect.poll(async()=>first.textContent()).not.toBe(before);
+  await page.getByRole("button",{name:"Bowling",exact:true}).click();
+  await expect(strip.locator(".rank-filmstrip__card")).toHaveCount(10);
+  await expect(strip).toContainText("Pressure economy");
+  await expect(page.locator(".public-ranking-grid .public-ranking-player")).toHaveCount(10);
+});
+
+test("both performance gauges show selected player's recorded numbers and keep fixed domains",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const [route,max] of [["batting-intel","250"],["bowling-intel","18"]] as const){
+    await page.goto("/#"+route);
+    const gauge=page.locator(".kh-gauge");
+    await expect(gauge).toBeVisible();
+    await expect(gauge.locator(".kh-gauge__max")).toHaveText(max);
+    const selector=gauge.locator("select");
+    const options=await selector.locator("option").count();
+    expect(options).toBeGreaterThan(1);
+    const second=await selector.locator("option").nth(1).getAttribute("value");
+    if(second)await selector.selectOption(second);
+    await expect(gauge.locator(".kh-gauge__player")).toContainText("PLAYER ID "+second);
+    expect(Number(await gauge.getByTestId("gauge-value").innerText())).toBeGreaterThan(0);
+    await expect(gauge.locator(".kh-gauge__details dl > div")).toHaveCount(4);
+  }
+});
+
+test("methodology relationship graph responds to focus and explains the true sample",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#methodology");
+  const graph=page.locator(".method-connectivity");
+  await expect(graph.locator("canvas")).toBeVisible();
+  await graph.getByRole("button",{name:/Pressure economy/}).focus();
+  await expect(graph.locator(".method-connectivity__description")).toContainText("Runs conceded per six");
+  await expect(graph.locator("button[aria-pressed=true]")).toHaveCount(1);
+  await expect(page.locator("#accepted-d20-method")).toBeVisible();
+});
+
+test("particle loader hands off to the branded intro without a second loader",async({page})=>{
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/#home");
+  const intro=page.locator(".khiladi-intro");
+  await expect(intro.locator(".intro-particle-wordmark")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(intro).toHaveCount(0);
+  await page.getByRole("navigation",{name:"Primary navigation"}).getByRole("link",{name:"Rankings"}).click();
+  await expect(intro).toHaveCount(0);
+});
+
+test("Matte Rise displays readable photography with an accessible title",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#home");
+  const matte=page.locator(".matte-rise");
+  await matte.scrollIntoViewIfNeeded();
+  await expect(matte.getByRole("heading",{name:/BEYOND THE SCORECARD/})).toBeVisible();
+  await expect(matte.locator(".matte-rise__photo img")).toHaveCount(2);
+  const photoStyles=await matte.locator(".matte-rise__photo img").first().evaluate(el=>getComputedStyle(el).objectFit);
+  expect(photoStyles).toBe("contain");
+});

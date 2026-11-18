@@ -12,7 +12,7 @@ export function KhiladiParticleWordmark(){
   const size=()=>{const r=c.getBoundingClientRect();const d=Math.min(2,devicePixelRatio||1);
     c.width=Math.max(1,Math.ceil(r.width*d));c.height=Math.max(1,Math.ceil(r.height*d));
     context.setTransform(d,0,0,d,0,0)};
-  size();const ro=new ResizeObserver(size);ro.observe(c);
+  size();const ro=new ResizeObserver(()=>{size();reset();});
   let seed=0x124fe7;
   const rand=()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return(seed>>>0)/4294967296};
   type Part={x:number;y:number;tx:number;ty:number;s:number;kind:number;delay:number};
@@ -35,7 +35,7 @@ export function KhiladiParticleWordmark(){
    }
    parts=out;start=0;
   };
-  reset();ro.disconnect();
+  reset();ro.observe(c);
   const draw=(now:number)=>{
    if(disposed)return;if(!start)start=now;
    const t=(now-start)/1000;
