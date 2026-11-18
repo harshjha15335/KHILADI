@@ -341,7 +341,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
                   event.currentTarget.parentElement?.classList.add("awaiting-photo");
                 }}
               />
-              <div className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></div>
+              <div className="gallery-photo-backup" aria-hidden="true"><NeutralPlayerAvatar className="gallery-neutral-avatar" label="Photograph unavailable" /></div>
             </div>
           ))}
         </div>
@@ -426,7 +426,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
                 loading="lazy"
                 onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.add("awaiting-photo"); }}
               />
-              <span className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></span>
+              <span className="gallery-photo-backup" aria-hidden="true"><NeutralPlayerAvatar className="gallery-neutral-avatar" label="Photograph unavailable" /></span>
             </div>
           ))}
         </div>
