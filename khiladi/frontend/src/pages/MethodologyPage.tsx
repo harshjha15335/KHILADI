@@ -4,7 +4,7 @@ import { AnalyticsIntro } from "../components/AnalyticsIntro";
 import { MethodologyConnectivityGraph } from "../components/MethodologyConnectivityGraph";
 import "./methodology-story.css";
 export const MethodologyPage: React.FC = () => (
-  <div className="min-h-screen pt-32 pb-20 px-5">
+  <div className="methodology-page min-h-screen pt-48 sm:pt-52 pb-20 px-5">
     <div className="max-w-4xl mx-auto space-y-10">
       <KhiladiKineticText
         as="h1"
