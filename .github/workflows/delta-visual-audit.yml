@@ -8,7 +8,7 @@ permissions:
 jobs:
   screenshot-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,6 +29,7 @@ jobs:
         working-directory: khiladi/frontend
         env:
           KHILADI_BASE_URL: "http://127.0.0.1:3000/#"
+          KHILADI_PRODUCTION_URL: "https://khiladi-six.vercel.app/#"
         run: |
           export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux64/chrome' -type f | head -1)"
           if [ -z "$CHROMIUM_PATH" ]; then export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux/chrome' -type f | head -1)"; fi
