@@ -1,0 +1,79 @@
+name: KHILADI Desktop Review QA
+
+on:
+  pull_request:
+    branches:
+      - feat/private-d20-contracts
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  desktop-planner-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: khiladi/frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: khiladi/frontend/package-lock.json
+
+      - name: Install locked frontend dependencies
+        run: npm ci --include=dev --no-audit --no-fund
+
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit --incremental false
+
+      - name: Install Chromium and its dependencies
+        run: |
+          npx playwright install --with-deps chromium
+          BIN="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux*/chrome' | head -n 1)"
+          if [ -z "$BIN" ]; then
+            echo "Playwright's Chromium executable was not found" >&2
+            exit 1
+          fi
+          echo "CHROMIUM_PATH=$BIN" >> "$GITHUB_ENV"
+
+      - name: Start test-only Vite dev server
+        run: |
+          nohup npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-vite-review.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl --silent --fail http://127.0.0.1:3000/ >/dev/null; then
+              echo "Vite is ready"
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/khiladi-vite-review.log
+          exit 1
+
+      - name: Browser-check planner persistence and safe JSON transfer
+        run: npx playwright test tests/desktop-planner-release.spec.ts --reporter=list
+        env:
+          KHILADI_TEST_TOKEN_FILE: ""
+
+      - name: Production build (no deployment)
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /KHILADI/
+          VITE_GITHUB_PAGES: "true"
+          VITE_MEDIA_REVIEW: "false"
+
+      - name: Inspect generated static build for forbidden private files
+        run: |
+          if find dist -type f | grep -Ei '(private[_-]?d20|serving[_-]?bundle|raw[_-]?competition|\.env|token[_-]?file)' ; then
+            echo "Potentially restricted file in public build" >&2
+            exit 1
+          fi
+          echo "No forbidden filename patterns detected"
+
+      - name: Show Vite log on failure
+        if: failure()
+        run: cat /tmp/khiladi-vite-review.log || true
