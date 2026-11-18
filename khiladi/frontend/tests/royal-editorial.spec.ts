@@ -90,7 +90,7 @@ test("Royal Editorial tokens and typography stay consistent without repainting t
     };
   });
   expect(tokens).toMatchObject({ ivory: "#FAF8F5", ink: "#17171B", rose: "#C43670" });
-  expect(tokens.headingFont).toContain("Instrument Serif");
+  expect(tokens.headingFont).toContain("Barlow Condensed");
   expect(tokens.eyebrowFont).toContain("Barlow Condensed");
 
   const cta = page.getByRole("button", { name: /Find my player/ }).first();
