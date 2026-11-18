@@ -29,7 +29,15 @@ test("capture public KHILADI routes for human Delta reference comparison", async
   const snapshots = [];
   for (const { route, reference, section } of PAGES) {
     await page.goto(`/#${route}`);
+    // Every full page load intentionally plays KHILADI's cinematic intro.
+    // Never confuse a preloader screenshot with evidence of a finished page.
+    const skip = page.getByRole("button", { name: /Skip introduction/ });
+    if (await skip.count()) await skip.click();
+    await expect(page.locator(".intro-root")).toHaveCount(0);
     await expect(page.locator("#main-content")).toBeVisible();
+    await page.locator("#main-content").evaluate(() =>
+      document.fonts?.ready ?? Promise.resolve(),
+    );
     const image = await page.screenshot({
       path: join(OUTPUT, `khiladi-${route}.png`),
       animations: "disabled",
@@ -58,6 +66,7 @@ test("capture public KHILADI routes for human Delta reference comparison", async
 test("capture Delta reference viewports when accessible; record blockers honestly", async ({
   page,
 }) => {
+  test.setTimeout(180000);
   mkdirSync(OUTPUT, { recursive: true });
   const references = [...new Set(PAGES.map((entry) => entry.reference))];
   const statuses = [];
@@ -69,7 +78,18 @@ test("capture Delta reference viewports when accessible; record blockers honestl
         waitUntil: "domcontentloaded",
       });
       if (!response || !response.ok()) throw new Error(`HTTP ${response?.status() ?? "unknown"}`);
-      await page.waitForTimeout(800);
+      // Delta also uses a branded preloader. Do not call its loading
+      // curtain an inspected products page or make visual-parity claims.
+      await page.waitForTimeout(2200);
+      const substantive = await page.locator("body").evaluate((body) => ({
+        text: (body.innerText ?? "").trim().length,
+        media: body.querySelectorAll("img,video,canvas").length,
+      }));
+      if (substantive.text < 120 || substantive.media < 2) {
+        throw new Error(
+          `Delta page did not reach a substantive visible state (text=${substantive.text}, media=${substantive.media})`,
+        );
+      }
       const image = await page.screenshot({
         path: join(OUTPUT, `${name}.png`),
         animations: "disabled",
