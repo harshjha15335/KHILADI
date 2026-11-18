@@ -9,7 +9,6 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { DiamondCursor } from "./components/DiamondCursor";
 import { CrlPreloader } from "./components/CrlPreloader";
-import { PlayerProfileReveal } from "./components/PlayerProfileReveal";
 
 // Pages
 import { HomePage } from "./pages/HomePage";
@@ -140,7 +139,7 @@ export const App: React.FC = () => {
     handleNavigate("comparison");
   };
   React.useLayoutEffect(() => {
-    if (!selectedPlayer || currentPage === "home") return;
+    if (!selectedPlayer) return;
     const closePendingProfile = (event: KeyboardEvent) => {
       if (event.key !== "Escape" || event.defaultPrevented) return;
       // RoyalPlayerDialog is split into a lazy JS chunk. Escape must work
@@ -257,21 +256,8 @@ export const App: React.FC = () => {
         {/* Footer */}
         <Footer onNavigate={handleNavigate} />
 
-        {/* Cyera Slide-Out Drawer Profile */}
-        {currentPage === "home" ? (
-          <PlayerProfileReveal
-            player={selectedPlayer}
-            onClose={() => setSelectedPlayer(null)}
-            onAddToWarRoom={handleAddToWarRoom}
-            isInWarRoom={
-              selectedPlayer
-                ? warRoomSquad.some(
-                    (p) => p.player_id === selectedPlayer.player_id,
-                  )
-                : false
-            }
-          />
-        ) : selectedPlayer ? (
+        {/* One premium interactive player card everywhere, including the homepage. */}
+        {selectedPlayer && (
           <React.Suspense fallback={<p role="status">Opening player card…</p>}>
             <RoyalPlayerDialog
               key={`${selectedPlayer.player_id}:${selectedRole}`}
@@ -286,7 +272,7 @@ export const App: React.FC = () => {
               )}
             />
           </React.Suspense>
-        ) : null}
+        )}
       </div>
     </RoyalResearchProvider>
   );

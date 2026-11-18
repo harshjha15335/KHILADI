@@ -38,13 +38,7 @@ export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
       <span>
         Independent cricket research project. Not an official team website.
       </span>
-      <a
-        href="https://www.rajasthanroyals.com/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Rajasthan Royals ↗
-      </a>
+      <span>Designed for the love of cricket.</span>
     </div>
   </footer>
 );

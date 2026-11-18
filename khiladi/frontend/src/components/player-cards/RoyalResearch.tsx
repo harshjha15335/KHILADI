@@ -134,6 +134,7 @@ export const useRoyalResearch = () => useContext(Context);
 export function ResearchAccess() {
   const research = useRoyalResearch(),
     [draft, setDraft] = useState("");
+  if (!research.available) return null;
   return (
     <section className="pc-access" aria-label="Private D20 research access">
       {!research.available ? (

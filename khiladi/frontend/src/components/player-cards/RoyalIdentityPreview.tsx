@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import type { AnalyticalRole } from "../../types/analytics";
-import { officialPortrait } from "./portraitSource";
+import { playerImage } from "../../utils/media";
+import { StudyAthlete } from "./StudyAthlete";
 import { number, tierLabel } from "./cardData";
 import { useRoyalResearch } from "./RoyalResearch";
 export interface Identity {
@@ -21,7 +22,7 @@ export function RoyalIdentityPreview({
       role ?? (player.role === "Bowler" ? "bowling" : "batting"),
     research = useRoyalResearch(),
     data = research.lookup(player.player_id, selectedRole);
-  const source = officialPortrait(player.player_id);
+  const source = playerImage(player);
   const [failed, setFailed] = useState(false),
     [loaded, setLoaded] = useState(false);
   return (
@@ -38,7 +39,7 @@ export function RoyalIdentityPreview({
         </span>
         {source && !failed ? (
           <img
-            src={source.previewUrl ?? source.url}
+            src={source}
             alt=""
             width="300"
             height="300"
@@ -50,16 +51,7 @@ export function RoyalIdentityPreview({
             onError={() => setFailed(true)}
           />
         ) : (
-          <span
-            className="pc-initials"
-            aria-label="Official portrait unavailable"
-          >
-            {player.player_name
-              .split(/\s+/)
-              .slice(0, 2)
-              .map((w) => w[0])
-              .join("")}
-          </span>
+          <div className="pc-preview-athlete"><StudyAthlete /></div>
         )}
         {source && !failed && !loaded && (
           <span className="pc-initials" aria-label="Portrait loading">
@@ -77,8 +69,8 @@ export function RoyalIdentityPreview({
       <div className="pc-preview-info">
         <strong className="pc-preview-name">{player.player_name}</strong>
         <div className="pc-preview-rating">
-          <span>D20 rating</span>
-          <b>{data ? number(data.record.rating) : "Unavailable"}</b>
+          <span>{data ? "D20 rating" : "Explore player"}</span>
+          <b>{data ? number(data.record.rating) : "↗"}</b>
         </div>
         {data ? (
           <p>
@@ -89,7 +81,7 @@ export function RoyalIdentityPreview({
           <p>
             {research.loading
               ? "Loading accepted evidence…"
-              : "Accepted D20 evidence unavailable in this serving scope."}
+              : "Open this player’s card to explore the public player record."}
           </p>
         )}
         <span className="pc-preview-inspect">Inspect player ↗</span>
