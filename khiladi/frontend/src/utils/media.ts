@@ -69,7 +69,8 @@ export function playerImage(player: {
   // Use only exact identity matches from publicly visible IPL player profiles.
   // We link to official image endpoints; do not copy or claim ownership.
   const officialIPLImage =
-    player.player_name && ipl?.name?.trim().toLocaleLowerCase("en") ===
+    player.player_name && ipl?.url?.startsWith("https://www.iplt20.com/api/team-assets") &&
+    ipl?.name?.trim().toLocaleLowerCase("en") ===
       player.player_name.trim().toLocaleLowerCase("en")
       ? ipl.url
       : undefined;
