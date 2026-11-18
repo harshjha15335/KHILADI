@@ -64,10 +64,17 @@ test("rapid close during the opening sequence leaves no modal or body lock", asy
 }) => {
   await skip(page, "/#database");
   await page.getByRole("searchbox").fill("Jofra Archer");
+  const trigger = page.getByRole("button", { name: "Inspect Jofra Archer" });
   for (let i = 0; i < 3; i++) {
-    await page.locator(".discovery-open").click();
+    await trigger.click();
+    // Exercise both states: Escape before the lazy chunk opens on the first
+    // attempt, and Escape against a real native modal on later attempts.
+    if (i > 0) {
+      await expect(page.locator(".royal-dialog[open]")).toBeVisible();
+    }
     await page.keyboard.press("Escape");
     await expect(page.locator(".royal-dialog")).toHaveCount(0);
+    await expect(trigger).toBeFocused();
     expect(
       await page.evaluate(() =>
         document.documentElement.classList.contains("profile-is-open"),
