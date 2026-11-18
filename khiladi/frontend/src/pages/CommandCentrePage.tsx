@@ -36,11 +36,12 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
 
         {/* Top 4 KPI Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div
+          <button
+            type="button"
             onClick={() => {
               onNavigate("rankings");
             }}
-            className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
+            className="text-left p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Top 10 Rankings</span>
@@ -52,13 +53,14 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
             <div className="text-xs text-[#505A70]">
               10 Batters + 10 Bowlers
             </div>
-          </div>
+          </button>
 
-          <div
+          <button
+            type="button"
             onClick={() => {
               onNavigate("database");
             }}
-            className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
+            className="text-left p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Whitelisted Pool</span>
@@ -70,31 +72,33 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
             <div className="text-xs text-[#505A70]">
               100% Canonical Data Pack
             </div>
-          </div>
+          </button>
 
-          <div
+          <button
+            type="button"
             onClick={() => {
               onNavigate("pressure-lab");
             }}
-            className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#7545B8] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
+            className="text-left p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#7545B8] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
-              <span>Pressure Telemetry</span>
+              <span>Legacy Sample Replay</span>
               <Flame className="w-4 h-4 text-[#7545B8]" />
             </div>
             <div className="text-3xl font-black font-mono text-[#22263C] group-hover:text-[#7545B8] transition-colors">
-              LI &ge; 1.80
+              Index &ge; 1.80
             </div>
             <div className="text-xs text-[#505A70]">
-              High-Leverage Deliveries
+              Inherited heuristic, not D20 telemetry
             </div>
-          </div>
+          </button>
 
-          <div
+          <button
+            type="button"
             onClick={() => {
               onNavigate("war-room");
             }}
-            className="p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
+            className="text-left p-6 rounded-3xl bg-white border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group space-y-2 shadow-sm hover:shadow"
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Example Planning Budget</span>
@@ -106,7 +110,7 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
             <div className="text-xs text-[#505A70]">
               Editable planning scenario
             </div>
-          </div>
+          </button>
         </div>
 
         {/* Quick Launch Cards */}

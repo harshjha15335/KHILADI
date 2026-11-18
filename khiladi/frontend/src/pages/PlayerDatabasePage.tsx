@@ -1,3 +1,5 @@
+import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
+import { ResearchAccess } from "../components/player-cards/RoyalResearch";
 import React, { useEffect, useMemo, useState } from "react";
 import { Player } from "../types";
 import { loadPlayers, describePlayer, metric } from "../utils/api";
@@ -8,7 +10,8 @@ import { PlayerEditorialTrack } from "../components/PlayerEditorialTrack";
 import { AnalyticsIntro } from "../components/AnalyticsIntro";
 export const PlayerDatabasePage: React.FC<{
   onSelectPlayer: (p: Player) => void;
-}> = ({ onSelectPlayer }) => {
+  onComparePlayer?: (id: number, role?: "batting" | "bowling") => void;
+}> = ({ onSelectPlayer, onComparePlayer }) => {
   const [players, setPlayers] = useState<Player[]>([]),
     [query, setQuery] = useState(""),
     [role, setRole] = useState("All"),
@@ -42,7 +45,7 @@ export const PlayerDatabasePage: React.FC<{
   );
   const pages = Math.max(1, Math.ceil(filtered.length / 18));
   return (
-    <div className="min-h-screen pt-32 pb-20 px-5">
+    <div className="pc-inner-catalogue min-h-screen pt-32 pb-20 px-5">
       <div className="max-w-7xl mx-auto space-y-8">
         <KhiladiKineticText
           preview={players.map(playerImage).find(Boolean)}
@@ -50,7 +53,7 @@ export const PlayerDatabasePage: React.FC<{
           text="Find your match-winner."
           className="text-4xl sm:text-6xl font-bold tracking-tight"
         />
-        <AnalyticsIntro details="The model index orders players by their stored pressure performance. Small samples can be misleading; inspect the evidence before comparing roles. Confidence intervals are not available in the current export.">
+        <AnalyticsIntro details="Catalogue ordering uses the inherited legacy pressure index. Accepted D20 is a separate private model; its conditional intervals appear only where a matching accepted record is available. Small samples remain uncertain.">
           Discover the players who fit your team. Open a profile to see what
           their recorded performance tells us.
         </AnalyticsIntro>
@@ -58,6 +61,13 @@ export const PlayerDatabasePage: React.FC<{
           players={players}
           onSelectPlayer={onSelectPlayer}
         />
+        <ResearchAccess />
+        <p className="pc-identity-scope">
+          1,217 canonical identities. Official photographs are used where
+          source-verified for private review; other identities have a labelled
+          initials fallback. D20 evidence is available only for matching records
+          in the private serving scope.
+        </p>
         <div className="discovery-controls">
           <label>
             Find a player
@@ -111,40 +121,18 @@ export const PlayerDatabasePage: React.FC<{
               <button
                 className="discovery-open"
                 data-cursor-label="View player"
+                aria-label={`Inspect ${player.player_name}`}
                 onClick={(event) => {
                   event.currentTarget.focus({ preventScroll: true });
                   onSelectPlayer(player);
                 }}
               >
-                <AugeWarpSurface className="discovery-photo">
-                  {playerImage(player) ? (
-                    <img
-                      src={playerImage(player)}
-                      alt=""
-                      width="240"
-                      height="240"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <span aria-label="Portrait unavailable">
-                      {player.player_name
-                        .split(" ")
-                        .map((w) => w[0])
-                        .slice(0, 2)
-                        .join("")}
-                    </span>
-                  )}
-                </AugeWarpSurface>
-                <span className="discovery-role">{player.role}</span>
-                <strong>{player.player_name} ↗</strong>
-                <span className="discovery-description">
-                  {describePlayer(player)}
-                </span>
+                <RoyalIdentityPreview player={player} />
               </button>
               {advanced && (
                 <dl className="discovery-metrics">
                   <div>
-                    <dt>Model index</dt>
+                    <dt>Legacy model index</dt>
                     <dd>{metric(player.pressure_impact_index, 2)}</dd>
                   </div>
                   <div>
@@ -157,9 +145,18 @@ export const PlayerDatabasePage: React.FC<{
                   </div>
                 </dl>
               )}
-              <a className="text-link" href="#comparison">
+              <button
+                type="button"
+                className="text-link"
+                onClick={() =>
+                  onComparePlayer?.(
+                    player.player_id,
+                    player.role === "Bowler" ? "bowling" : "batting",
+                  )
+                }
+              >
                 Compare players ↗
-              </a>
+              </button>
             </article>
           ))}
         </div>

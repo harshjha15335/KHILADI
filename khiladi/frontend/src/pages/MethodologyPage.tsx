@@ -13,8 +13,75 @@ export const MethodologyPage: React.FC = () => (
         The numbers help you ask better questions about a player. They describe
         recorded performance, and cannot promise what happens next.
       </AnalyticsIntro>
+      <section
+        className="space-y-5 rounded-3xl border border-[#cbd5e9] bg-white p-6 sm:p-8"
+        aria-labelledby="accepted-d20-method"
+      >
+        <p className="text-sm font-bold uppercase tracking-wider text-[#2450b8]">
+          Accepted D20 / private analytical model
+        </p>
+        <h2 id="accepted-d20-method" className="text-2xl font-bold">
+          The evidence on the Royal Player Card.
+        </h2>
+        <p>
+          The accepted D20 pipeline combines pre-ball scoreboard difficulty A
+          and win-probability leverage B into hybrid pressure D. D20 selects the
+          top 20% under that definition. This is separate from the inherited
+          1.8-threshold heuristic described below.
+        </p>
+        <p>
+          Expected outcomes, era and opposition adjustment produce
+          run-equivalent contributions. Component-specific empirical-Bayes
+          shrinkage and exposure eligibility precede separate batting and
+          bowling ratings. Primary eligibility requires at least 60 pressure
+          events, 12 pressure matches, 15 total matches, two seasons and four
+          opponents.
+        </p>
+        <p>
+          The role-standardized historical rating combines 70% standardized EB
+          pressure quality, 20% standardized match reliability and 10%
+          standardized EB pressure delta. The accepted bowling delta is fully
+          shrunk to zero; its weight is not redistributed. A numerical zero is
+          distinct from unavailable evidence.
+        </p>
+        <p>
+          Conditional 95% rating intervals and historical P(top 10) use 750
+          within-player whole-match bootstrap resamples with frozen
+          cohort/scales. P(top 10) describes historical selection stability, not
+          a future selection or match-win probability. The intervals do not
+          include all model-choice uncertainty.
+        </p>
+        <p>
+          Robust means P(top 10) at least 65% and a positive lower interval
+          bound. Probable means at least 45% when not Robust. Borderline covers
+          the other selected top-ten records. These are evidence tiers, not
+          collectible rarity or psychological diagnoses.
+        </p>
+        <p>
+          The primary model pools IPL, T20I and Other T20 evidence. Format
+          shares divide pressure-event counts by total pressure events; a
+          visible IPL share does not turn the pooled rating into an IPL-only
+          estimate.
+        </p>
+        <p>
+          The private serving scope currently contains ten batting and ten
+          bowling records, drawn from accepted cohorts of 157 and 154
+          respectively. The 1,217-player identity catalogue is broader. A
+          missing served record is unavailable, not a zero score or a finding of
+          ineligibility.
+        </p>
+        <p className="text-sm text-[#536079]">
+          Accepted downstream outputs have been verified from supplied artifacts
+          and match composites. Full raw-to-final replay remains incomplete, and
+          original event-level A/B/D features are missing. The website does not
+          invent those event traces, future forecasts, auction prices or
+          team-fit scores.
+        </p>
+      </section>
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">What counts as pressure?</h2>
+        <h2 className="text-2xl font-bold">
+          Legacy pressure rules — a separate model.
+        </h2>
         <p>
           The inherited model uses rules based on innings, overs, runs needed,
           wickets already lost, and knockout status. A delivery is labelled high

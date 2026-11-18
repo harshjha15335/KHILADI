@@ -1,3 +1,6 @@
+import { RoyalResearchProvider } from "./components/player-cards/RoyalResearch";
+import type { AnalyticalRole } from "./types/analytics";
+import "./components/player-cards/player-cards.css";
 import { apiURL } from "./utils/urls";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
@@ -19,6 +22,10 @@ import { PlayerComparisonPage } from "./pages/PlayerComparisonPage";
 import { AuctionWarRoomPage } from "./pages/AuctionWarRoomPage";
 import { MethodologyPage } from "./pages/MethodologyPage";
 import { CommandCentrePage } from "./pages/CommandCentrePage";
+
+const RoyalPlayerDialog = React.lazy(
+  () => import("./components/player-cards/RoyalPlayerDialog"),
+);
 
 const routeNames = new Set([
   "home",
@@ -43,6 +50,18 @@ export const App: React.FC = () => {
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [allPlayers, setAllPlayers] = useState<Player[]>([]);
   const [warRoomSquad, setWarRoomSquad] = useState<Player[]>([]);
+  const [planningBudget, setPlanningBudget] = useState(120);
+  const [planningBids, setPlanningBids] = useState<Record<number, number>>({});
+  const selectedTrigger = React.useRef<HTMLElement | null>(null);
+  const [selectedRole, setSelectedRole] = useState<AnalyticalRole>("batting");
+  const [comparisonIds, setComparisonIds] = useState<number[]>([3297, 6423]);
+  const [comparisonRole, setComparisonRole] =
+    useState<AnalyticalRole>("batting");
+  const selectPlayer = (player: Player) => {
+    selectedTrigger.current = document.activeElement as HTMLElement;
+    setSelectedRole(player.role === "Bowler" ? "bowling" : "batting");
+    setSelectedPlayer(player);
+  };
 
   // Load all players for fast lookups
   useEffect(() => {
@@ -68,15 +87,24 @@ export const App: React.FC = () => {
     return () => window.removeEventListener("hashchange", changed);
   }, []);
 
-  const handleSelectPlayerById = (playerId: number) => {
+  const handleSelectPlayerById = (playerId: number, role?: AnalyticalRole) => {
+    selectedTrigger.current = document.activeElement as HTMLElement;
     const found = allPlayers.find((p) => p.player_id === playerId);
     if (found) {
+      setSelectedRole(
+        role ?? (found.role === "Bowler" ? "bowling" : "batting"),
+      );
       setSelectedPlayer(found);
     } else {
       // Fetch single player from API if not loaded
       fetch(apiURL(`/api/players/${playerId}`))
         .then((res) => res.json())
-        .then((data) => setSelectedPlayer(data.player))
+        .then((data) => {
+          setSelectedRole(
+            role ?? (data.player.role === "Bowler" ? "bowling" : "batting"),
+          );
+          setSelectedPlayer(data.player);
+        })
         .catch((err) => console.error("Failed to load player:", err));
     }
   };
@@ -89,6 +117,11 @@ export const App: React.FC = () => {
 
   const handleRemoveFromWarRoom = (playerId: number) => {
     setWarRoomSquad((prev) => prev.filter((p) => p.player_id !== playerId));
+    setPlanningBids((old) => {
+      const next = { ...old };
+      delete next[playerId];
+      return next;
+    });
   };
 
   // Scroll to top on page change
@@ -98,102 +131,141 @@ export const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
 
+  const comparePlayer = (id: number, role: AnalyticalRole = "batting") => {
+    setComparisonIds((old) => (old[0] === id ? old : [id, old[0]]));
+    setComparisonRole(role);
+    setSelectedPlayer(null);
+    handleNavigate("comparison");
+  };
   return (
-    <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] relative selection:bg-[#F22E83] selection:text-white">
-      <a
-        className="skip-link"
-        href="#main-content"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById("main-content")?.focus();
-        }}
-      >
-        Skip to content
-      </a>
-      {/* AUGE Global Yellow Diamond Cursor follower */}
-      <DiamondCursor />
+    <RoyalResearchProvider active={currentPage !== "home"}>
+      <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] relative selection:bg-[#F22E83] selection:text-white">
+        <a
+          className="skip-link"
+          href="#main-content"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("main-content")?.focus();
+          }}
+        >
+          Skip to content
+        </a>
+        {/* AUGE Global Yellow Diamond Cursor follower */}
+        <DiamondCursor />
 
-      {/* CRL Typography Scale/Zoom Preloader */}
-      {!preloaderComplete && (
-        <CrlPreloader onComplete={() => setPreloaderComplete(true)} />
-      )}
+        {/* CRL Typography Scale/Zoom Preloader */}
+        {!preloaderComplete && (
+          <CrlPreloader onComplete={() => setPreloaderComplete(true)} />
+        )}
 
-      {/* Top Navbar */}
-      <Navbar
-        currentPage={currentPage}
-        onNavigate={handleNavigate}
-        rrPurseCr={120.0}
-      />
+        {/* Top Navbar */}
+        <Navbar
+          currentPage={currentPage}
+          onNavigate={handleNavigate}
+          rrPurseCr={120.0}
+        />
 
-      {/* Page Routing */}
-      <main
-        id="main-content"
-        tabIndex={-1}
-        className={currentPage === "home" ? "" : "analytics-workspace"}
-      >
-        {currentPage === "home" && (
-          <HomePage
-            onNavigate={handleNavigate}
-            onSelectPlayer={setSelectedPlayer}
+        {/* Page Routing */}
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className={currentPage === "home" ? "" : "analytics-workspace"}
+        >
+          {currentPage === "home" && (
+            <HomePage
+              onNavigate={handleNavigate}
+              onSelectPlayer={selectPlayer}
+            />
+          )}
+
+          {currentPage === "command-centre" && (
+            <CommandCentrePage onNavigate={handleNavigate} rrPurseCr={120.0} />
+          )}
+
+          {currentPage === "rankings" && (
+            <RankingsPage onSelectPlayerById={handleSelectPlayerById} />
+          )}
+
+          {currentPage === "database" && (
+            <PlayerDatabasePage
+              onSelectPlayer={selectPlayer}
+              onComparePlayer={comparePlayer}
+            />
+          )}
+
+          {currentPage === "pressure-lab" && (
+            <PressureLabPage onSelectPlayerById={handleSelectPlayerById} />
+          )}
+
+          {currentPage === "batting-intel" && (
+            <BattingIntelligencePage onSelectPlayer={selectPlayer} />
+          )}
+
+          {currentPage === "bowling-intel" && (
+            <BowlingIntelligencePage onSelectPlayer={selectPlayer} />
+          )}
+
+          {currentPage === "comparison" && (
+            <PlayerComparisonPage
+              onSelectPlayer={selectPlayer}
+              selectedIds={comparisonIds}
+              initialAnalyticalRole={comparisonRole}
+            />
+          )}
+
+          {currentPage === "war-room" && (
+            <AuctionWarRoomPage
+              onSelectPlayer={selectPlayer}
+              warRoomSquad={warRoomSquad}
+              onAddToSquad={handleAddToWarRoom}
+              onRemoveFromSquad={handleRemoveFromWarRoom}
+              purseTotalCr={120.0}
+              planningBudget={planningBudget}
+              setPlanningBudget={setPlanningBudget}
+              planningBids={planningBids}
+              setPlanningBids={setPlanningBids}
+              onReplaceSquad={setWarRoomSquad}
+            />
+          )}
+
+          {currentPage === "methodology" && <MethodologyPage />}
+        </main>
+
+        {/* Footer */}
+        <Footer onNavigate={handleNavigate} />
+
+        {/* Cyera Slide-Out Drawer Profile */}
+        {currentPage === "home" ? (
+          <PlayerProfileReveal
+            player={selectedPlayer}
+            onClose={() => setSelectedPlayer(null)}
+            onAddToWarRoom={handleAddToWarRoom}
+            isInWarRoom={
+              selectedPlayer
+                ? warRoomSquad.some(
+                    (p) => p.player_id === selectedPlayer.player_id,
+                  )
+                : false
+            }
           />
-        )}
-
-        {currentPage === "command-centre" && (
-          <CommandCentrePage onNavigate={handleNavigate} rrPurseCr={120.0} />
-        )}
-
-        {currentPage === "rankings" && (
-          <RankingsPage onSelectPlayerById={handleSelectPlayerById} />
-        )}
-
-        {currentPage === "database" && (
-          <PlayerDatabasePage onSelectPlayer={setSelectedPlayer} />
-        )}
-
-        {currentPage === "pressure-lab" && (
-          <PressureLabPage onSelectPlayerById={handleSelectPlayerById} />
-        )}
-
-        {currentPage === "batting-intel" && (
-          <BattingIntelligencePage onSelectPlayer={setSelectedPlayer} />
-        )}
-
-        {currentPage === "bowling-intel" && (
-          <BowlingIntelligencePage onSelectPlayer={setSelectedPlayer} />
-        )}
-
-        {currentPage === "comparison" && (
-          <PlayerComparisonPage onSelectPlayer={setSelectedPlayer} />
-        )}
-
-        {currentPage === "war-room" && (
-          <AuctionWarRoomPage
-            onSelectPlayer={setSelectedPlayer}
-            warRoomSquad={warRoomSquad}
-            onAddToSquad={handleAddToWarRoom}
-            onRemoveFromSquad={handleRemoveFromWarRoom}
-            purseTotalCr={120.0}
-          />
-        )}
-
-        {currentPage === "methodology" && <MethodologyPage />}
-      </main>
-
-      {/* Footer */}
-      <Footer onNavigate={handleNavigate} />
-
-      {/* Cyera Slide-Out Drawer Profile */}
-      <PlayerProfileReveal
-        player={selectedPlayer}
-        onClose={() => setSelectedPlayer(null)}
-        onAddToWarRoom={handleAddToWarRoom}
-        isInWarRoom={
-          selectedPlayer
-            ? warRoomSquad.some((p) => p.player_id === selectedPlayer.player_id)
-            : false
-        }
-      />
-    </div>
+        ) : selectedPlayer ? (
+          <React.Suspense fallback={<p role="status">Opening player card…</p>}>
+            <RoyalPlayerDialog
+              key={`${selectedPlayer.player_id}:${selectedRole}`}
+              player={selectedPlayer}
+              initialRole={selectedRole}
+              returnFocus={selectedTrigger.current}
+              onClose={() => setSelectedPlayer(null)}
+              onCompare={comparePlayer}
+              onAddToWarRoom={handleAddToWarRoom}
+              isInWarRoom={warRoomSquad.some(
+                (p) => p.player_id === selectedPlayer.player_id,
+              )}
+            />
+          </React.Suspense>
+        ) : null}
+      </div>
+    </RoyalResearchProvider>
   );
 };
 export default App;
