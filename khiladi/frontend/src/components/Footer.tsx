@@ -1,14 +1,11 @@
-import { KhiladiLogo } from "./KhiladiLogo";
 import React from "react";
-import { siteURL } from "../utils/urls";
-export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
-  onNavigate,
+export const Footer: React.FC<{ onNavigate: (page: string) => void; onReplayIntro?: () => void }> = ({
+  onNavigate, onReplayIntro,
 }) => (
   <footer
     className="brand-footer khiladi-glass-footer"
     data-brand-tone="white"
     data-header-brand="hidden"
-    style={{ backgroundImage: `linear-gradient(110deg, rgba(19,34,57,.83), rgba(19,34,57,.60)), url("${siteURL("/assets/gallery/trophy-celebration.webp")}")` }}
   >
     <div className="footer-top">
       <p>
@@ -36,15 +33,12 @@ export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
         ))}
       </nav>
     </div>
-    <div className="footer-wordmark">
-      <KhiladiLogo variant="footer" tone="white" />
-    </div>
     <div className="footer-bottom">
       <span>© {new Date().getFullYear()} KHILADI</span>
       <span>
         Independent cricket research project. Not an official team website.
       </span>
-      <span>Design study: Delta-inspired editorial layout · Photos: supplied cricket images and official IPL source links.</span>
+      {onReplayIntro && <button className="footer-replay" type="button" onClick={onReplayIntro}>Replay introduction ↻</button>}
     </div>
   </footer>
 );

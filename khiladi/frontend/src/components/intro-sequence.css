@@ -17,3 +17,17 @@
  .khiladi-intro .intro-symbol{width:45px;height:80px}
  .khiladi-intro .intro-symbol .khiladi-logo{width:40px}}
 @media(prefers-reduced-motion:reduce){.khiladi-intro{display:none!important}}
+
+/* Single optical lock-up — never a three-column grid leaving a void after the logo. */
+.khiladi-intro .intro-words{display:flex!important;align-items:center;justify-content:center;gap:0!important;width:max-content!important;max-width:96vw;margin:0 auto;transform-origin:center}
+.khiladi-intro .intro-side{display:inline-flex!important;flex:none!important;align-items:center;justify-content:center;white-space:nowrap;font-size:clamp(50px,9vw,145px);letter-spacing:-.07em}
+.khiladi-intro .intro-side--left{justify-content:flex-end}
+.khiladi-intro .intro-side--right{justify-content:flex-start;margin-left:-5px}
+.khiladi-intro .intro-symbol{width:clamp(43px,5.8vw,84px)!important;height:clamp(70px,10vw,135px)!important;display:flex!important;align-items:center;justify-content:center;margin:0 -3px!important;flex:none}
+.khiladi-intro .intro-symbol .khiladi-logo{width:clamp(38px,5.4vw,77px)!important;height:auto}
+.khiladi-intro .intro-window{display:inline-flex;overflow:hidden;line-height:1}
+@media(max-width:680px){.khiladi-intro .intro-words{max-width:96vw}.khiladi-intro .intro-side{font-size:clamp(38px,10.5vw,66px)}.khiladi-intro .intro-symbol{width:38px!important;height:63px!important;margin:0 -3px!important}.khiladi-intro .intro-symbol .khiladi-logo{width:34px!important}.khiladi-intro .intro-side--right{margin-left:-4px}}
+
+/* Optical kerning: the graphic's transparent right-side viewBox leaves visual whitespace. */
+.khiladi-intro .intro-side--right{margin-left:-40px!important}
+@media(max-width:680px){.khiladi-intro .intro-side--right{margin-left:-18px!important}}

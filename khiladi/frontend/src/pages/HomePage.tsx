@@ -16,10 +16,11 @@ import {
 import { playerImage } from "../utils/media";
 import { KhiladiAnimatedButton as CTA } from "../components/KhiladiAnimatedButton";
 interface Props {
+  introComplete?: boolean;
   onNavigate: (page: string) => void;
   onSelectPlayer: (player: Player) => void;
 }
-export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
+export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, onSelectPlayer }) => {
   const root = useRef<HTMLDivElement>(null);
   const [squad, setSquad] = useState<Player[]>([]),
     [error, setError] = useState("");
@@ -56,66 +57,62 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
   useGSAP(
     () => {
       const media = gsap.matchMedia();
+      if (!introComplete) return () => media.revert();
       media.add("(prefers-reduced-motion: no-preference)", () => {
+
+        // Entrance begins only AFTER the preloader clears. These animations
+        // are observable on replay and never leave half-hidden static content.
+        gsap.fromTo(
+          ".hero-copy > .eyebrow, .hero-copy > h1, .hero-copy > p:not(.eyebrow), .hero-copy > button",
+          { autoAlpha: 0, y: 38, filter: "blur(9px)" },
+          { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: .9,
+            ease: "power3.out", stagger: .12, clearProps: "transform,filter,opacity,visibility" }
+        );
+        gsap.fromTo(".hero-photo-slot",
+          { autoAlpha: 0, y: 75, scale: .82, rotation: 0 },
+          { autoAlpha: 1, y: 0, scale: 1, rotation: 0, duration: 1.05,
+            stagger: { each: .11, from: "center" }, ease: "power3.out",
+            clearProps: "opacity,visibility,y,scale,rotation" });
+        // Editorial scroll choreography without clipping the original photos.
+        // Keep the hero in the normal document flow so no half-hidden heading
+        // or pinned image blocks the next section.
         const hero = root.current?.querySelector<HTMLElement>(".hero-chapter");
         const centre = hero?.querySelector<HTMLElement>(".hero-photo-slot--centre");
         if (hero && centre && window.innerWidth >= 900) {
-          const heroTimeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: hero, start: "top top", end: "+=105%",
-              scrub: 0.8, pin: true, anticipatePin: 1, invalidateOnRefresh: true,
-            },
+          const timeline = gsap.timeline({
+            scrollTrigger: { trigger: hero, start: "top top", end: "bottom top",
+              scrub: .65, invalidateOnRefresh: true },
           });
-          heroTimeline
-            .to(".hero-copy", { yPercent: -43, autoAlpha: 0, duration: .38 }, 0)
-            .to(".hero-bottom-line", { opacity: 0, duration: .26 }, .04)
-            .to(".hero-photo-slot:not(.hero-photo-slot--centre)", {
-              x: (i: number) => (i % 2 ? 1 : -1) * (140 + i * 55),
-              y: (i: number) => (i < 2 ? -120 : 140),
-              autoAlpha: 0, scale: .7, duration: .58, ease: "power2.inOut",
-            }, .08)
-            .to(centre, {
-              x: () => {
-                const rect = centre.getBoundingClientRect();
-                return (window.innerWidth - rect.width) / 2 - rect.left;
-              },
-              y: () => {
-                const rect = centre.getBoundingClientRect();
-                return (window.innerHeight - rect.height) / 2 - rect.top;
-              },
-              scale: () => {
-                const rect = centre.getBoundingClientRect();
-                return Math.max(window.innerWidth / Math.max(1, rect.width),
-                  window.innerHeight / Math.max(1, rect.height)) * 1.12;
-              },
-              rotation: 0, borderRadius: 0, ease: "none", duration: .72,
-            }, .17)
-            .to(".hero-collage", { autoAlpha: 0, duration: .19 }, .82)
-            .to(".hero-chapter", { backgroundColor: "#fff0f6", duration: .3 }, .73);
+          timeline
+            .to(".hero-copy", { y: -68, opacity: .18, ease: "none" }, 0)
+            .to(".hero-photo-slot--left-top, .hero-photo-slot--right-middle",
+              { y: -44, x: -28, rotation: -3, ease: "none" }, 0)
+            .to(".hero-photo-slot--left-bottom, .hero-photo-slot--right-top",
+              { y: 35, x: 20, rotation: 3, ease: "none" }, 0)
+            .to(centre, { scale: 1.08, rotation: 0, ease: "none" }, 0)
+            .to(".hero-bottom-line", { opacity: .18, ease: "none" }, 0);
         }
 
-        const showcase = root.current?.querySelector<HTMLElement>(".home-player-showcase");
-        const track = showcase?.querySelector<HTMLElement>(".home-player-grid");
-        if (showcase && track && window.innerWidth >= 900) {
-          const distance = () => {
-            const style = getComputedStyle(showcase);
-            const usable = showcase.clientWidth -
-              parseFloat(style.paddingLeft || "0") -
-              parseFloat(style.paddingRight || "0");
-            return Math.max(0, track.scrollWidth - usable);
-          };
-          if (distance() > 50) {
-            gsap.to(track, {
-              x: () => -distance(), ease: "none",
-              scrollTrigger: {
-                trigger: showcase, start: "top top",
-                end: () => "+=" + Math.max(450, distance()),
-                scrub: .85, pin: true, anticipatePin: 1,
-                invalidateOnRefresh: true,
-              },
-            });
-          }
-        }
+        // A horizontally scrollable rail remains usable without vertical
+        // scroll hijacking. Its reveal is tied to ordinary vertical scrolling.
+        gsap.fromTo(".home-player-item",
+          { y: 48, autoAlpha: .25 },
+          { y: 0, autoAlpha: 1, ease: "none", stagger: .045,
+            scrollTrigger: {
+              trigger: ".home-player-showcase", start: "top 90%",
+              end: "top 32%", scrub: .75, invalidateOnRefresh: true
+            } });
+        gsap.utils.toArray<HTMLElement>(".khiladi-bento .kb-card").forEach((card, i) => {
+          gsap.fromTo(card, { y: 56, opacity: .45, scale: .98 },
+            { y: 0, opacity: 1, scale: 1, ease: "none",
+              scrollTrigger: { trigger: card, start: "top 92%",
+                end: "top 68%", scrub: .5 } });
+        });
+        gsap.fromTo(".public-data-pulse__stat",
+          { y: 38, autoAlpha: .4 },
+          { y: 0, autoAlpha: 1, stagger: .07, ease: "none",
+            scrollTrigger: { trigger: ".public-data-pulse",
+              start: "top 85%", end: "top 44%", scrub: .6 } });
 
         gsap.utils.toArray<HTMLElement>(".heritage-shot").forEach((shot, i) => {
           gsap.fromTo(shot,
@@ -216,7 +213,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
       ScrollTrigger.refresh();
       return () => media.revert();
     },
-    { scope: root, dependencies: [squad.length], revertOnUpdate: true },
+    { scope: root, dependencies: [squad.length, introComplete], revertOnUpdate: true },
   );
   useEffect(() => {
     if (quizStep > 0) {
@@ -315,7 +312,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
         <header className="home-showcase-intro">
           <p className="eyebrow">PLAYERS IN FOCUS</p>
           <h2 id="home-player-heading">More than a name. <em>A game changer.</em></h2>
-          <p>Discover players, explore the records, and open their interactive collector cards.</p>
+          <p>Explore complete player photographs and recorded performances. Swipe or scroll sideways to see every card.</p>
         </header>
         <div className="home-player-grid">
           {featured.map((player) => (
@@ -331,7 +328,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           ))}
         </div>
         <div className="home-showcase-bottom">
-          <span>Original player records. Verifiable statistics. No invented photographs.</span>
+          <span>SWIPE OR DRAG SIDEWAYS TO EXPLORE THE CARDS →</span>
           <CTA variant="outline" onClick={() => onNavigate("database")}>Explore every player</CTA>
         </div>
       </section>

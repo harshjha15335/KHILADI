@@ -1,13 +1,5 @@
 import React from "react";
 import { PublicDataPulse } from "../components/PublicDataPulse";
-import {
-  Layers,
-  Flame,
-  ShieldCheck,
-  Award,
-  Users,
-  ArrowRight,
-} from "lucide-react";
 
 interface CommandCentrePageProps {
   onNavigate: (page: string) => void;
@@ -23,7 +15,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="border-b border-[#E8E6ED] pb-8 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFEAF2] border border-[#F5B1CE] text-xs font-mono uppercase text-[#F22E83] font-bold">
-            <Layers className="w-3.5 h-3.5" />
             <span>EXPLORE THE GAME</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-[#22263C]">
@@ -47,7 +38,7 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Top 10 Rankings</span>
-              <Award className="w-4 h-4 text-[#F22E83]" />
+              
             </div>
             <div className="text-3xl font-black font-mono text-[#22263C] group-hover:text-[#F22E83] transition-colors">
               20 Players
@@ -66,7 +57,7 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Whitelisted Pool</span>
-              <Users className="w-4 h-4 text-[#2549BD]" />
+              
             </div>
             <div className="text-3xl font-black font-mono text-[#22263C] group-hover:text-[#2549BD] transition-colors">
               1,217
@@ -85,7 +76,7 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Legacy Sample Replay</span>
-              <Flame className="w-4 h-4 text-[#7545B8]" />
+              
             </div>
             <div className="text-3xl font-black font-mono text-[#22263C] group-hover:text-[#7545B8] transition-colors">
               Index &ge; 1.80
@@ -104,7 +95,7 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
           >
             <div className="flex items-center justify-between text-[#68738A] text-xs font-mono uppercase">
               <span>Example Planning Budget</span>
-              <ShieldCheck className="w-4 h-4 text-[#2549BD]" />
+              
             </div>
             <div className="text-3xl font-black font-mono text-[#22263C] group-hover:text-[#2549BD] transition-colors">
               ₹{rrPurseCr.toFixed(1)} Cr
@@ -123,9 +114,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
             }}
             className="p-8 rounded-3xl bg-[#FFEAF2] border border-[#F5B1CE] hover:shadow-md transition-all cursor-pointer space-y-4"
           >
-            <div className="w-12 h-12 rounded-2xl bg-white text-[#F22E83] flex items-center justify-center shadow-sm">
-              <Award className="w-6 h-6" />
-            </div>
             <h3 className="text-2xl font-bold font-display text-[#22263C]">
               Feel the game
             </h3>
@@ -133,8 +121,8 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
               Meet the Royals and find the players who fit your moment.
             </p>
             <div className="text-xs font-mono font-bold text-[#F22E83] flex items-center gap-1.5">
-              <span>Enter Homepage Experience</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Enter Homepage Experience ↗</span>
+              
             </div>
           </div>
 
@@ -144,9 +132,6 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
             }}
             className="p-8 rounded-3xl bg-[#EAF5FF] border border-[#B3D4FF] hover:shadow-md transition-all cursor-pointer space-y-4"
           >
-            <div className="w-12 h-12 rounded-2xl bg-white text-[#2549BD] flex items-center justify-center shadow-sm">
-              <Layers className="w-6 h-6" />
-            </div>
             <h3 className="text-2xl font-bold font-display text-[#22263C]">
               Technical Methodology & Audit
             </h3>
@@ -155,8 +140,8 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
               export ready PDF documentation.
             </p>
             <div className="text-xs font-mono font-bold text-[#2549BD] flex items-center gap-1.5">
-              <span>Inspect Technical Proofs</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Inspect Technical Proofs ↗</span>
+              
             </div>
           </div>
         </div>

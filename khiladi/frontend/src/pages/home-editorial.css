@@ -106,3 +106,37 @@
  .cinematic-home .hero-copy h1{font-size:clamp(43px,9vw,70px)}
  .cinematic-home .hero-collage{top:425px!important}
 }
+
+/* 2026-11-18 visual corrections: full images and a readable hero at every scroll position. */
+.cinematic-home .hero-chapter{height:clamp(680px,100svh,930px);min-height:680px;max-height:none;overflow:hidden}
+.cinematic-home .hero-copy{top:clamp(145px,24vh,255px)!important;left:clamp(32px,5vw,76px)!important;max-width:min(44vw,620px)!important;width:min(44vw,620px)!important;z-index:12}
+.cinematic-home .hero-copy h1{font-size:clamp(48px,4.7vw,74px)!important;max-width:100%;line-height:1.03!important;letter-spacing:-.057em!important}
+.cinematic-home .hero-copy p:not(.eyebrow){font-size:15px!important;max-width:400px}
+.cinematic-home .hero-photo-slot{background:linear-gradient(145deg,#efe9f8,#dbe3fb);box-shadow:0 18px 58px #26387526}
+.cinematic-home .hero-photo-slot > img{object-fit:contain!important;object-position:center!important;width:100%;height:100%;background:linear-gradient(135deg,#e6e8fa,#f3ebf5)}
+.cinematic-home .hero-photo-slot--centre{left:23%;top:29%;width:60%;height:45%;border-width:9px;border-radius:26px;z-index:9}
+.cinematic-home .hero-photo-slot--left-top{left:0%;top:1%;width:30%;height:41%}
+.cinematic-home .hero-photo-slot--left-bottom{left:1%;bottom:0%;width:31%;height:36%}
+.cinematic-home .hero-photo-slot--right-top{right:0%;top:0%;width:31%;height:29%}
+.cinematic-home .hero-photo-slot--right-middle{right:0%;top:68%;width:30%;height:32%}
+.cinematic-home .heritage-shot img{object-fit:contain!important;object-position:center!important;background:#e9e8f6}
+.cinematic-home .heritage-shot--2{left:24%;top:32%;width:58%;height:38%;border-width:10px}
+.cinematic-home .heritage-shot--0{top:1%;left:0;width:28%;height:39%}
+.cinematic-home .heritage-shot--1{bottom:0%;left:4%;width:29%;height:38%}
+.cinematic-home .heritage-shot--3{top:1%;right:2%;width:28%;height:32%}
+.cinematic-home .heritage-shot--4{right:0;top:61%;width:29%;height:37%}
+/* The old pinned 100svh rail placed the card bodies BELOW the viewport.
+   This new rail keeps the full card height visible and lets users navigate. */
+.cinematic-home .home-player-showcase{min-height:auto!important;display:block!important;overflow:visible!important;padding:68px clamp(18px,5vw,76px) 70px!important}
+.cinematic-home .home-showcase-intro{max-width:940px;margin:0 auto 30px}
+.cinematic-home .home-showcase-intro h2{font-size:clamp(43px,5.3vw,78px);line-height:1.07;margin:17px 0 15px}
+.cinematic-home .home-showcase-intro>p:last-child{font-size:15px;line-height:1.5}
+.cinematic-home .home-player-grid{display:flex!important;max-width:100%!important;width:100%!important;overflow-x:auto!important;overflow-y:visible!important;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;gap:22px;padding:12px 5px 24px!important;scrollbar-width:thin;scrollbar-color:#d1b9e4 transparent;touch-action:pan-x pan-y}
+.cinematic-home .home-player-item{flex:0 0 clamp(210px,21vw,298px)!important;max-width:298px;scroll-snap-align:start;align-self:stretch;transform:none}
+.cinematic-home .home-player-item .pc-preview{width:100%;height:100%;min-height:360px}
+.cinematic-home .home-player-item .pc-preview-visual{height:235px!important;min-height:235px}
+.cinematic-home .home-player-item .pc-preview-visual img{object-fit:contain!important;object-position:center bottom!important;transform:none!important;background:transparent}
+.cinematic-home .home-player-item .pc-preview-visual>img{padding:5px 8px 0}
+.cinematic-home .home-showcase-bottom{margin-top:8px;font-size:12px}
+@media(max-width:899px){.cinematic-home .hero-chapter{height:860px;min-height:860px}.cinematic-home .hero-copy{left:6%!important;top:118px!important;width:88%!important;max-width:88%!important}.cinematic-home .hero-copy h1{font-size:clamp(42px,9vw,62px)!important}.cinematic-home .hero-collage{top:430px!important;left:4%;right:4%;width:92%;height:305px}.cinematic-home .home-player-item{flex-basis:240px!important}.cinematic-home .home-player-grid{gap:14px}}
+@media(prefers-reduced-motion:reduce){.cinematic-home .home-player-grid{scroll-behavior:auto}}
