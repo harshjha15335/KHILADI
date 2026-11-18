@@ -80,3 +80,13 @@
   .home-player-item{flex:0 0 min(65vw,285px);scroll-snap-align:center}
 }
 @media(prefers-reduced-motion:reduce){.home-player-grid{scroll-behavior:auto}}
+
+/* Five authentic uploaded photos, with central 2008 trophy and four satellite moments. */
+.hero-photo-slot--centre > img,.heritage-shot--2 > img{object-position:center center}
+.hero-photo-slot--left-top > img{object-position:50% 18%}
+.hero-photo-slot--left-bottom > img{object-position:50% 20%}
+.hero-photo-slot--right-middle > img{object-position:center 20%}
+.heritage-shot--5,.hero-photo-slot--right-bottom{display:none}
+.hero-collage,.heritage-photo-composition{filter:none}
+.hero-photo-slot>img{transition:filter .7s ease,transform .7s ease}
+.hero-photo-slot:hover>img{transform:scale(1.055)}

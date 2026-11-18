@@ -282,12 +282,12 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
         </div>
         <div className="hero-collage" aria-label="Cricket celebration collage">
           {[
-            ["moment-1.jpg", "A cricket moment", "left-top"],
-            ["moment-2.jpg", "Cricket fans and players", "left-bottom"],
-            ["trophy-celebration.jpg", "Trophy celebration", "centre"],
-            ["moment-3.jpg", "A memorable cricket moment", "right-top"],
-            ["moment-4.jpg", "Cricket players", "right-middle"],
-            ["moment-5.jpg", "Cricket celebrations", "right-bottom"],
+            ["moment-1.webp", "A cricket moment", "left-top"],
+            ["moment-2.webp", "Cricket fans and players", "left-bottom"],
+            ["trophy-celebration.webp", "Trophy celebration", "centre"],
+            ["moment-3.webp", "A memorable cricket moment", "right-top"],
+            ["moment-4.webp", "Cricket players", "right-middle"],
+
           ].map(([filename, alt, placement]) => (
             <div className={`hero-photo-slot hero-photo-slot--${placement}`} key={filename}>
               <img
@@ -376,7 +376,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           </p>
         </div>
         <div className="heritage-photo-composition" aria-label="Cricket photographic collection">
-          {["moment-1.jpg", "moment-2.jpg", "trophy-celebration.jpg", "moment-3.jpg", "moment-4.jpg", "moment-5.jpg"].map((filename, i) => (
+          {["moment-1.webp", "moment-2.webp", "trophy-celebration.webp", "moment-3.webp", "moment-4.webp"].map((filename, i) => (
             <div className={`heritage-shot heritage-shot--${i}`} key={filename}>
               <img
                 src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
