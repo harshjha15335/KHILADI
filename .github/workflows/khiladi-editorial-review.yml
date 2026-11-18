@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: khiladi-editorial-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 jobs:
   build-and-smoke:
     runs-on: ubuntu-latest

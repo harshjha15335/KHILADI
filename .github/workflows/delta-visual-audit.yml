@@ -5,6 +5,9 @@ on:
     branches: [main]
 permissions:
   contents: read
+concurrency:
+  group: khiladi-delta-visual-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 jobs:
   screenshot-audit:
     runs-on: ubuntu-latest
