@@ -36,6 +36,6 @@
  background:#DADDE2}
 .editorial-track-neutral{width:100%;height:100%;object-fit:contain;display:block;background:#DADDE2}
 .kb-mini-portrait{position:relative;isolation:isolate}
-.kb-mini-portrait>.kb-neutral-avatar{display:block;z-index:-1}
+.kb-mini-portrait>.kb-neutral-avatar{display:block;z-index:0}
 .kb-mini-portrait>img{z-index:2}
 .rank-filmstrip__portrait>.rank-neutral-avatar{object-fit:contain;background:#DADDE2}
