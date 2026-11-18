@@ -361,6 +361,28 @@
 .pc-selected-row {
   background: #e8f1ff;
 }
+.pc-inner-catalogue .analytics-intro {
+  max-width: 780px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #536079;
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.75;
+}
+.pc-inner-catalogue .analytics-intro details {
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 18px;
+  border-top: 1px solid #cbd5e9;
+  padding-top: 12px;
+  color: #2450b8;
+  font-size: 13px;
+}
+.pc-inner-catalogue .analytics-intro details p {
+  max-width: 780px;
+  color: #536079;
+}
 .pc-inner-catalogue .discovery-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
