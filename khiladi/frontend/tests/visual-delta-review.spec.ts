@@ -11,6 +11,7 @@ const OUTPUT = "visual-review-output";
 const PAGES = [
   { route: "home", reference: "https://deltacafes.com/en", section: "Storytelling/hero" },
   { route: "database", reference: "https://deltacafes.com/en/products", section: "Catalogue and filtering" },
+  { route: "data-explorer", reference: "https://deltacafes.com/en/products", section: "Identity catalogue/provenance" },
   { route: "rankings", reference: "https://deltacafes.com/en/products", section: "Catalogue/evidence selection" },
   { route: "pressure-lab", reference: "https://deltacafes.com/en/coffee-cycle/roast", section: "Process narrative" },
   { route: "batting-intel", reference: "https://deltacafes.com/en/coffee-cycle/blend", section: "Deep explanatory content" },
