@@ -1,8 +1,37 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Player } from "../types";
 import { playerImage } from "../utils/media";
 import { gsap, useGSAP } from "../utils/motion";
 import { AugeWarpSurface } from "./AugeWarpSurface";
+/** A failed source must never leave a broken-image icon or imply another player's identity. */
+function EditorialPlayerPortrait({ player }: { player: Player }) {
+  const [failed, setFailed] = useState(false);
+  const image = playerImage(player);
+  if (!image || failed) {
+    return (
+      <div
+        role="img"
+        aria-label={`Official IPL portrait unavailable for ${player.player_name}`}
+        className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#F0E8FF] via-[#E8F1FF] to-[#FFE5F0] text-[#2450B8]"
+      >
+        <span className="text-6xl font-bold tracking-[-.08em] opacity-80" aria-hidden="true">
+          {player.player_name.split(/\\s+/).slice(0, 2).map((part) => part[0]).join("")}
+        </span>
+      </div>
+    );
+  }
+  return (
+    <img
+      src={image}
+      alt=""
+      width="260"
+      height="310"
+      loading="lazy"
+      decoding="async"
+      onError={() => setFailed(true)}
+    />
+  );
+}
 export const PlayerEditorialTrack: React.FC<{
   players: Player[];
   onSelectPlayer: (p: Player) => void;
@@ -77,13 +106,7 @@ export const PlayerEditorialTrack: React.FC<{
                   onClick={() => onSelectPlayer(player)}
                 >
                   <AugeWarpSurface>
-                    <img
-                      src={playerImage(player)}
-                      alt=""
-                      width="260"
-                      height="310"
-                      loading="lazy"
-                    />
+                    <EditorialPlayerPortrait player={player} />
                   </AugeWarpSurface>
                   <span>{player.player_name} ↗</span>
                 </button>
