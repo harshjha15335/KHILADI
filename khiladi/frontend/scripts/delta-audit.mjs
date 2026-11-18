@@ -9,6 +9,10 @@ const targets=[
   ["delta-desktop","https://deltacafes.com/en",1440,900],
   ["khiladi-desktop",KHILADI_BASE_URL+"home",1440,900],
   ["delta-mobile","https://deltacafes.com/en",390,844],
+  ["delta-products","https://deltacafes.com/en/products",1440,900],
+  ["delta-about","https://deltacafes.com/en/about",1440,900],
+  ["delta-cycle","https://deltacafes.com/en/coffee-cycle",1440,900],
+  ["delta-sustainability","https://deltacafes.com/en/sustainability",1440,900],
   ["khiladi-mobile",KHILADI_BASE_URL+"home",390,844],
   ...["database","rankings","data-explorer","pressure-lab","comparison","war-room","batting-intel","bowling-intel","command-centre","methodology"].map(r=>[r,KHILADI_BASE_URL+r,1440,900])
 ];
@@ -26,7 +30,15 @@ for(const [id,url,width,height] of targets){
        const button=page.getByRole("button",{name:label}).first();
        if(await button.isVisible().catch(()=>false)){await button.click({timeout:3000}).catch(()=>{});break;}
      }
-     await page.waitForTimeout(4400);
+     // For audit framing only, remove Cookiebot's consent overlay after
+   // attempting the proper decline action, so actual reference content is visible.
+   await page.evaluate(()=>{
+     for(const sel of ["#CybotCookiebotDialog","#CybotCookiebotDialogBodyUnderlay",
+       "#CookiebotWidget","#CookiebotWidget-widgetContent"]){
+       document.querySelectorAll(sel).forEach(el=>{el.style.setProperty("display","none","important")});
+     }
+   }).catch(()=>{});
+   await page.waitForTimeout(4400);
    }else await page.waitForTimeout(3100);
    if(!id.startsWith("delta")){await page.keyboard.press("Escape");await page.waitForTimeout(600)}
  }catch(e){error=String(e)}
@@ -75,6 +87,7 @@ await fs.writeFile(path.join(output,"metrics.json"),JSON.stringify(results,null,
 await fs.writeFile(path.join(output,"SUMMARY.md"),[
  "# Khiladi vs Delta live screenshot audit",
  "Chromium desktop + mobile. See metrics.json and corresponding scroll-depth PNG captures.",
+ "Reference-only overlay policy: Cookiebot consent was declined when possible and visually hidden for layout comparisons; no source site content was changed.",
  ...results.map(r=>`- ${r.id}: HTTP ${r.status}; nav ${r.metrics.navPosition} at ${r.metrics.navTop}; images ${r.metrics.loadedImages}/${r.metrics.images}; broken ${r.metrics.brokenImages?.length}; cards ${r.metrics.playerCards}; overflow ${r.metrics.overflow}; browser errors ${r.errors.length}`),
  "Public D20 remains a separate protected dataset and must not be replaced with legacy statistics."
 ].join("\n"));
