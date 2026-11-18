@@ -29,12 +29,12 @@ export const Navbar: React.FC<{
     timeline
       .fromTo(scope, { autoAlpha: 0, y: -20, scale: .985 },
         { autoAlpha: 1, y: 0, scale: 1, duration: .55 }, 0)
-      .fromTo(left, { autoAlpha: 0, y: -24, x: -16, filter: "blur(8px)" },
-        { autoAlpha: 1, y: 0, x: 0, filter: "blur(0px)", duration: .55, stagger: .09 }, .15)
-      .fromTo(centre, { autoAlpha: 0, y: -18, scale: .75 },
-        { autoAlpha: 1, y: 0, scale: 1, duration: .6, ease: "power4.out" }, .55)
-      .fromTo(right, { autoAlpha: 0, y: -24, x: 16, filter: "blur(8px)" },
-        { autoAlpha: 1, y: 0, x: 0, filter: "blur(0px)", duration: .55, stagger: .09 }, .85);
+      .fromTo(left, { autoAlpha: 0, y: -18, x: -45, filter: "blur(10px)" },
+        { autoAlpha: 1, y: 0, x: 0, filter: "blur(0px)", duration: .72, stagger: .085 }, .14)
+      .fromTo(centre, { autoAlpha: 0, y: -26, scale: .72 },
+        { autoAlpha: 1, y: 0, scale: 1, duration: .65, ease: "back.out(1.55)" }, .52)
+      .fromTo(right, { autoAlpha: 0, y: 16, x: 36, scale: .9, filter: "blur(9px)" },
+        { autoAlpha: 1, y: 0, x: 0, scale: 1, filter: "blur(0px)", duration: .66, stagger: .08, ease:"back.out(1.25)" }, .78);
     return () => { timeline.kill(); if(scope.dataset.introMotion!=="ready")scope.dataset.introMotion="idle"; gsap.set([scope, ...Array.from(left), ...Array.from(right), centre].filter(Boolean), { clearProps: "all" }); };
   }, [introComplete]);
   useEffect(() => {
@@ -48,12 +48,12 @@ export const Navbar: React.FC<{
   function renderLink(entry: readonly [string, string], side: "left" | "right") {
     const [page, label] = entry;
     return <a key={page} data-dock-item href={`#${page}`}
-      className={`dock-link dock-link--${side}`}
+      className={`dock-link dock-link--${side}`} data-nav-motion={side === "left" ? "sweep" : "ripple"}
       title={label} aria-label={label}
       aria-current={currentPage === page ? "page" : undefined}
       data-active={currentPage === page}
       onClick={e => { e.preventDefault(); onNavigate(page); }}>
-      <span>{label}</span>
+      <span className="dock-link__label">{label}</span>
     </a>;
   }
   return <nav ref={root} className="khiladi-top-nav" aria-label="Primary navigation">
