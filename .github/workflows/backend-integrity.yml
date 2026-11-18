@@ -1,0 +1,27 @@
+name: KHILADI Backend Integrity
+
+on:
+  pull_request:
+    branches: [feat/private-d20-contracts]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backend-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated backend test requirements
+        run: |
+          python -m pip install -r khiladi/backend/requirements.txt
+          python -m pip install -r khiladi/backend/requirements-dev.txt
+      - name: Verify no invented profile predictions
+        run: python scripts/test_no_fabricated_player_predictions.py
+      - name: Verify accepted D20 contracts remain fail closed
+        run: python scripts/test_analytics_v2.py
