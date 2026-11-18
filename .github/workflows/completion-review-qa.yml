@@ -19,6 +19,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install backend requirements for original publication checks
+        run: python -m pip install -r khiladi/backend/requirements.txt
+        working-directory: .
+
+      - name: Prepare static recommendation export
+        run: python scripts/export_pages_quiz.py
+        working-directory: .
+
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -74,6 +86,9 @@ jobs:
           VITE_BASE_PATH: /KHILADI/
           VITE_GITHUB_PAGES: "true"
           VITE_MEDIA_REVIEW: "false"
+
+      - name: Full original GitHub Pages publication artifact audit
+        run: python3 ../../scripts/check_pages_artifact.py
 
       - name: Guard against obviously restricted build artifacts
         run: |
