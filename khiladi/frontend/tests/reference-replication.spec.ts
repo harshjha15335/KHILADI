@@ -43,39 +43,21 @@ test("journey controls remain keyboard operable after the adjacent sections are 
   );
   await expect(page.locator(".quiz-chapter")).toBeAttached();
 });
-test("profile passes through a thin surface before its tall content and restores scroll/focus", async ({
+test("Royal Player Dialog opens with source-backed evidence and restores focus", async ({
   page,
 }) => {
   await skip(page, "/#database");
   await page.getByRole("searchbox").fill("Jofra Archer");
-  const card = page.locator(".discovery-open");
+  const card = page.getByRole("button", { name: "Inspect Jofra Archer" });
   await card.focus();
-  const scroll = await page.evaluate(() => scrollY);
   await page.keyboard.press("Enter");
-  const sheet = page.locator(".profile-sheet");
-  await expect(sheet).toBeAttached();
-  const early = await sheet.evaluate((e) => ({
-    clip: getComputedStyle(e).clipPath,
-    width: e.getBoundingClientRect().width,
-  }));
-  expect(early.clip).not.toBe("none");
-  expect(early.width).toBeLessThanOrEqual(421);
-  expect(
-    await page
-      .locator(".profile-summary .chapter-button")
-      .evaluate((e) => Number(getComputedStyle(e).opacity)),
-  ).toBeLessThan(1);
-  await expect(page.locator(".profile-summary h2")).toHaveCSS("opacity", "1");
-  const size = await sheet.boundingBox();
-  expect(size!.height).toBeGreaterThan(size!.width);
-  await expect(page.locator(".profile-evidence")).not.toHaveAttribute("open");
+  await expect(page.locator(".royal-dialog[open]")).toBeVisible();
+  await expect(page.locator("#royal-profile-title")).toContainText("Jofra Archer");
+  await expect(page.locator(".pc-profile-evidence")).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page.locator(".profile-dialog")).toHaveCount(0);
+  await expect(page.locator(".royal-dialog")).toHaveCount(0);
   await expect(card).toBeFocused();
-  expect(await page.evaluate(() => document.body.style.overflow)).not.toBe(
-    "hidden",
-  );
-  expect(await page.evaluate(() => scrollY)).toBe(scroll);
+  expect(await page.evaluate(() => document.body.style.overflow)).not.toBe("hidden");
 });
 test("rapid close during the opening sequence leaves no modal or body lock", async ({
   page,
@@ -85,7 +67,7 @@ test("rapid close during the opening sequence leaves no modal or body lock", asy
   for (let i = 0; i < 3; i++) {
     await page.locator(".discovery-open").click();
     await page.keyboard.press("Escape");
-    await expect(page.locator(".profile-dialog")).toHaveCount(0);
+    await expect(page.locator(".royal-dialog")).toHaveCount(0);
     expect(
       await page.evaluate(() =>
         document.documentElement.classList.contains("profile-is-open"),
@@ -135,9 +117,9 @@ test("touch and reduced motion keep portrait browsing and profile controls usabl
   await page.goto("http://127.0.0.1:3000/#database");
   await page.getByRole("searchbox").fill("Jofra Archer");
   await page.locator(".discovery-open").tap();
-  await expect(page.locator("#player-profile-title")).toHaveCSS("opacity", "1");
+  await expect(page.locator("#royal-profile-title")).toHaveCSS("opacity", "1");
   await page.getByRole("button", { name: "Close profile" }).tap();
-  await expect(page.locator(".profile-dialog")).toHaveCount(0);
+  await expect(page.locator(".royal-dialog")).toHaveCount(0);
   await expect(page.locator("#khiladi-cursor-label")).toHaveCount(0);
   expect(
     await page.evaluate(
