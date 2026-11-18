@@ -71,14 +71,14 @@ export function playerImage(player: {
   const officialIPLImage =
     player.player_name && ipl?.name?.trim().toLocaleLowerCase("en") ===
       player.player_name.trim().toLocaleLowerCase("en")
-      ? ipl.previewUrl ?? ipl.url
+      ? ipl.url
       : undefined;
   return (
+    officialIPLImage ||
     ((publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)]?.name === player.player_name
       ? (publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)].src
       : undefined) ||
     approved.portraits[String(player.player_id)]?.src ||
-    officialIPLImage ||
     (reviewMedia
       ? (reviewPortraits as Record<string, string>)[String(player.player_id)]
       : undefined) ||

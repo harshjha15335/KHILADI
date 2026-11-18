@@ -26,9 +26,6 @@
 .khiladi-top-nav .dock-home{position:relative;min-height:55px;display:flex;justify-content:center;align-items:center;gap:9px;
  border-radius:0;text-decoration:none;outline-offset:4px;transform:translateY(-2px);
  background:transparent;}
-.khiladi-top-nav .dock-home:before{content:"";position:absolute;inset:0 7px;z-index:-1;
- background:linear-gradient(165deg,#f6e4f4,#f0eaff);border-radius:8px 8px 18px 18px;
- clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.75;}
 .khiladi-top-nav .dock-home .khiladi-logo {width:29px;height:44px;aspect-ratio:496/748;}
 .khiladi-top-nav .dock-brand-name {font-size:15px;font-weight:850;letter-spacing:.08em;color:#2453b7}
 .khiladi-top-nav .dock-link:focus-visible,.khiladi-top-nav .dock-home:focus-visible{outline:3px solid #2453b7}
@@ -42,8 +39,12 @@ body {padding-bottom:0!important;}
  .khiladi-top-nav .dock-group::-webkit-scrollbar{display:none}
  .khiladi-top-nav .dock-link{flex:0 0 auto;padding:9px 8px;font-size:10px;min-height:43px;scroll-snap-align:center}
  .khiladi-top-nav .dock-home{flex-direction:column;gap:0;min-height:56px}
- .khiladi-top-nav .dock-home:before{inset:0 1px}
  .khiladi-top-nav .dock-home .khiladi-logo{width:17px;height:28px}
  .khiladi-top-nav .dock-brand-name{font-size:8px}}
 @media(prefers-reduced-transparency:reduce){.khiladi-top-nav{background:#fffdfb}}
 @media(prefers-reduced-motion:reduce){.khiladi-top-nav *{transition:none!important}}
+
+/* The mark is free-standing, never backed by a triangle or novelty plaque. */
+.khiladi-top-nav .dock-home::before,.khiladi-top-nav .dock-home::after{content:none!important;display:none!important;clip-path:none!important}
+.khiladi-top-nav .dock-home{background:transparent!important;border:0!important;box-shadow:none!important;gap:5px}
+.khiladi-top-nav .dock-home:hover{transform:translateY(-2px) scale(1.025)}

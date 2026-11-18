@@ -9,7 +9,6 @@ import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { DiamondCursor } from "./components/DiamondCursor";
 import { CrlPreloader } from "./components/CrlPreloader";
 
 // Pages
@@ -210,8 +209,6 @@ export const App: React.FC = () => {
         >
           Skip to content
         </a>
-        {/* AUGE Global Yellow Diamond Cursor follower */}
-        <DiamondCursor />
 
         {/* CRL Typography Scale/Zoom Preloader */}
         {!preloaderComplete && (
@@ -234,6 +231,7 @@ export const App: React.FC = () => {
         >
           {currentPage === "home" && (
             <HomePage
+              introComplete={preloaderComplete}
               onNavigate={handleNavigate}
               onSelectPlayer={selectPlayer}
             />
@@ -297,7 +295,7 @@ export const App: React.FC = () => {
         </main>
 
         {/* Footer */}
-        <Footer onNavigate={handleNavigate} />
+        <Footer onNavigate={handleNavigate} onReplayIntro={() => { window.scrollTo({ top: 0, behavior: "instant" }); setPreloaderComplete(false); }} />
 
         {/* One premium interactive player card everywhere, including the homepage. */}
         {selectedPlayer && (
