@@ -1,3 +1,4 @@
+import "./home-editorial.css";
 import { StudyAthlete } from "../components/player-cards/StudyAthlete";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
 import { staticPages } from "../utils/urls";
