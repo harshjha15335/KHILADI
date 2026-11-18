@@ -1,0 +1,32 @@
+.matte-rise{position:relative;isolation:isolate;overflow:hidden;min-height:720px;
+ display:grid;place-items:center;padding:150px 24px;background:radial-gradient(circle at 51% 37%,#e8dff5,#f7f4fa 57%,#fcfbf9);
+ border-block:1px solid #e5e1ef}
+.matte-rise__orbit{position:absolute;inset:0;z-index:-1;width:100%;height:100%}
+.matte-rise__heading{position:relative;z-index:3;max-width:1080px;text-align:center;color:#254ca6}
+.matte-rise__heading>p:first-child{letter-spacing:.24em;font-size:12px;font-weight:700;color:#274fa5}
+.matte-rise h2{font:800 clamp(65px,10vw,158px)/.91 Impact,"Arial Narrow",sans-serif;
+ letter-spacing:-.055em;display:flex;flex-direction:column;margin:32px 0;text-transform:uppercase}
+.matte-rise h2>span{display:block;overflow:hidden;padding:0 15px 14px}
+.matte-rise h2>span>span{display:block;will-change:transform}
+.matte-rise h2 em{font:italic 500 clamp(62px,9vw,145px)/.95 Georgia,serif;letter-spacing:-.075em;color:#e73589}
+.matte-rise__copy{font:400 clamp(17px,2.3vw,25px)/1.5 Georgia,serif;color:#394e83}
+.matte-rise__photo{position:absolute;z-index:2;width:clamp(180px,23vw,340px);height:clamp(255px,30vw,425px);
+ padding:9px;background:#fffc;border:1px solid #dddbe7;border-radius:18px;
+ box-shadow:0 20px 47px #172a572d;pointer-events:none}
+.matte-rise__photo img{width:100%;height:100%;object-fit:contain;object-position:center;background:#dfe5f4;
+ border-radius:9px}
+.matte-rise__photo--left{left:-4%;top:9%;transform:rotate(-7deg)}
+.matte-rise__photo--right{right:-3%;bottom:7%;transform:rotate(7deg)}
+@media(max-width:950px){.matte-rise{min-height:620px;padding:160px 20px}
+ .matte-rise__photo{width:220px;height:260px}
+ .matte-rise__photo--left{top:1%;left:-7%}.matte-rise__photo--right{right:-7%;bottom:0%}
+ .matte-rise h2{font-size:clamp(59px,10vw,105px)}
+ .matte-rise h2 em{font-size:clamp(58px,9.5vw,96px)}}
+@media(max-width:650px){.matte-rise{min-height:630px;padding:155px 10px}
+ .matte-rise__photo{width:148px;height:188px;padding:5px;border-radius:12px}
+ .matte-rise__photo--left{top:3%;left:-15%}.matte-rise__photo--right{right:-15%;bottom:0%}
+ .matte-rise h2{font-size:clamp(50px,11.2vw,70px)}
+ .matte-rise h2 em{font-size:clamp(45px,11vw,67px)}
+ .matte-rise__heading>p:first-child{font-size:10px}
+ .matte-rise__copy{max-width:290px;margin:auto}}
+@media(prefers-reduced-motion:reduce){.matte-rise h2>span>span{will-change:auto}}

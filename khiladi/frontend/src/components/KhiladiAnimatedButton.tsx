@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { IridescentActionButton } from "./IridescentActionButton";
 interface Props {
   children: React.ReactNode;
   onClick?: () => void;
@@ -19,7 +20,12 @@ export const KhiladiAnimatedButton: React.FC<Props> = ({
   className = "",
   type = "button",
   disabled,
-}) => (
+}) => variant === "primary" ? (
+  <IridescentActionButton onClick={onClick} disabled={disabled} type={type}
+    size={size} className={`chapter-button chapter-button--primary ${className}`} icon={showArrow ? undefined : false}>
+    {children}
+  </IridescentActionButton>
+) : (
   <button
     type={type}
     disabled={disabled}

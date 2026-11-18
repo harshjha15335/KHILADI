@@ -31,3 +31,21 @@
 /* Optical kerning: the graphic's transparent right-side viewBox leaves visual whitespace. */
 .khiladi-intro .intro-side--right{margin-left:-40px!important}
 @media(max-width:680px){.khiladi-intro .intro-side--right{margin-left:-18px!important}}
+
+/* 2026-11-18 official color-mark direction: same mark orientation/proportions,
+   no white filter and no triangle plate, warm-paper canvas for contrast. */
+.khiladi-intro .intro-curtain { background: #fffdf8 !important; color: #244eb5 !important; }
+.khiladi-intro .intro-meta,
+.khiladi-intro .intro-foot,
+.khiladi-intro .intro-skip { color: #244eb5 !important; }
+.khiladi-intro .intro-rule { background: #e73589 !important; }
+.khiladi-intro .intro-symbol .khiladi-logo--original img {
+  filter: none !important; opacity: 1 !important;
+}
+/* Leave the icon optically centred between KHILA and DI. */
+.khiladi-intro .intro-symbol { transform-origin: 50% 50%; }
+
+/* One continuous canvas assembly / coloured logo resolution */
+.khiladi-intro .intro-words{position:relative;isolation:isolate}
+.intro-particle-wordmark{position:absolute;inset:-25% -8%;width:116%;height:150%;z-index:9;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.intro-particle-wordmark{display:none}}

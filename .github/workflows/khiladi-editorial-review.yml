@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: khiladi-editorial-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 jobs:
   build-and-smoke:
     runs-on: ubuntu-latest
@@ -43,4 +46,4 @@ jobs:
           fi
           VITE_GITHUB_PAGES=true VITE_MEDIA_REVIEW=false npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-vite.log 2>&1 &
           for i in $(seq 1 40); do curl -fsS http://127.0.0.1:3000/ >/dev/null && break; sleep 1; done
-          npx playwright test tests/glass-dock-scroll.spec.ts
+          npx playwright test tests/glass-dock-scroll.spec.ts tests/delta-production.spec.ts

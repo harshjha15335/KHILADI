@@ -651,3 +651,16 @@
 .pc-preview-athlete .rc-athlete { width:100%; height:100%; max-width:280px; display:block; }
 .pc-preview-visual > img { object-fit:cover; object-position:center 20%; }
 .pc-preview:hover .pc-preview-visual > img, .pc-preview:focus-within .pc-preview-visual > img { transform:scale(1.075); }
+
+/* Distinct editorial identity treatment for unavailable portraits.
+   Never replace a player with another player's photo or a repeated silhouette. */
+.pc-typographic-fallback{position:absolute;inset:0;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:13px;
+ background:radial-gradient(ellipse at 50% 72%,#e7e6ff,#f3e9f5 61%,#fdf9fc);
+ overflow:hidden}
+.pc-typographic-fallback:before,.pc-typographic-fallback:after{content:"";position:absolute;
+ inset:auto auto -48% -42%;width:130%;aspect-ratio:1;border:1px solid #3654a42a;border-radius:50%}
+.pc-typographic-fallback:after{inset:-56% -46% auto auto;width:115%;border-color:#d02a8339}
+.pc-typographic-fallback__mark{font:italic 500 clamp(54px,6vw,94px)/1 Georgia,serif;
+ color:#3458aa;letter-spacing:-.09em;text-shadow:0 4px 19px #1c357522}
+.pc-typographic-fallback__caption{font-size:9px;letter-spacing:.23em;color:#6b6493;font-weight:750}

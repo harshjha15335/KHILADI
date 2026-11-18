@@ -57,3 +57,13 @@ body{background:var(--kh-white);color:var(--kh-text);font-family:-apple-system,B
 .kb-mini-portrait img{object-fit:contain!important;object-position:center bottom!important}
 @media(max-width:680px){.khiladi-glass-footer{padding:36px 14px 23px!important;min-height:430px}.khiladi-glass-footer .footer-top{padding:26px;border-radius:22px}.khiladi-glass-footer .footer-top p{font-size:43px}.khiladi-glass-footer .footer-top nav{grid-template-columns:1fr 1fr;gap:14px}.khiladi-glass-footer .footer-top a{font-size:12px}}
 @media(prefers-reduced-transparency:reduce){.khiladi-glass-footer .footer-top{background:#fffdfb!important}}
+
+/* Editorial continuity: individual routes are the readable second chapter after the vortex. */
+#main-content.analytics-workspace > div[class*="min-h-screen"] { padding-top:60px !important; }
+#main-content.analytics-workspace > .public-rankings { padding-top:55px !important; }
+#main-content.analytics-workspace h1,
+#main-content.analytics-workspace .analytics-intro h1 {font-family:Georgia,"Times New Roman",serif;letter-spacing:-.062em}
+#main-content.analytics-workspace .font-mono {font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+#main-content.analytics-workspace .metric-vortex-scene h2{font-family:Georgia,"Times New Roman",serif}
+#main-content.analytics-workspace .metric-vortex-scene button{transform:none}
+@media(max-width:760px){#main-content.analytics-workspace > div[class*="min-h-screen"]{padding-top:35px!important}}

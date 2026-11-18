@@ -1,0 +1,40 @@
+
+/* Deliberately preserve the original ThreeUI dark typography palette.
+   Copyright (c) 2026 Meng To, MIT license in vendor/threeui/LICENSE. */
+.metric-vortex-scene{position:relative;isolation:isolate;width:min(1360px,calc(100% - 40px));
+  margin:130px auto 30px;min-height:430px;overflow:hidden;border-radius:30px;
+  color:#eaeae6;background:#0b0b0b;
+  box-shadow:0 22px 60px #18284b23,0 2px 12px #18284b1c}
+.metric-vortex-scene__art{position:absolute;inset:0;z-index:0}
+.typography-vortex-component{position:relative;width:100%;height:100%;
+  min-height:0;min-width:0;overflow:hidden;container-type:inline-size;
+  background:#0b0b0b;color:#ecece8;font-family:"Helvetica Neue",Arial,sans-serif}
+.typography-vortex-component canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.typography-vortex-component--light{background:#eef1f6}
+.typography-vortex-component__hint{display:none}
+.typography-vortex-component::after{position:absolute;inset:0;z-index:1;pointer-events:none;
+  content:"";opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+.metric-vortex-scene__copy{position:relative;z-index:2;display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:center;max-width:590px;min-height:430px;
+  padding:55px clamp(30px,6vw,88px);
+  pointer-events:none}
+.metric-vortex-scene__copy .iridescent-glass{pointer-events:auto}
+.metric-vortex-scene__kicker{font-size:12px;letter-spacing:.22em;font-weight:700;color:#d2d2cd}
+.metric-vortex-scene h2{font:400 clamp(45px,5.2vw,76px)/1.03 Georgia,"Times New Roman",serif;
+  letter-spacing:-.065em;color:#fffdf8;margin:19px 0 16px;text-wrap:balance;
+  text-shadow:0 2px 18px #0909097a}
+.metric-vortex-scene p{color:#e2e2e0;max-width:430px;font-size:16px;line-height:1.65;margin-bottom:30px;
+  text-shadow:0 1px 8px #080808a3}
+.metric-vortex-scene__hint{position:absolute;bottom:24px;right:27px;z-index:3;pointer-events:none;
+  font:500 10px/1.2 ui-monospace,Menlo,monospace;color:#b4b3b0;letter-spacing:.11em}
+.metric-vortex-scene--rankings,.metric-vortex-scene--comparison,.metric-vortex-scene--data-explorer{min-height:360px}
+.metric-vortex-scene--rankings .metric-vortex-scene__copy,.metric-vortex-scene--comparison .metric-vortex-scene__copy,
+.metric-vortex-scene--data-explorer .metric-vortex-scene__copy{min-height:360px}
+@media(max-width:768px){
+.metric-vortex-scene{width:calc(100% - 20px);margin:130px auto 24px;min-height:420px;border-radius:24px}
+.metric-vortex-scene__copy{min-height:420px;padding:35px 25px 50px;max-width:90%}
+.metric-vortex-scene h2{font-size:clamp(43px,12vw,64px)}
+.metric-vortex-scene p{font-size:14px}
+.metric-vortex-scene__hint{bottom:16px;right:20px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.metric-vortex-scene__hint{display:none}}

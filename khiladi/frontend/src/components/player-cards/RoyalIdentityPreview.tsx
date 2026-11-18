@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import type { AnalyticalRole } from "../../types/analytics";
 import { playerImage } from "../../utils/media";
-import { StudyAthlete } from "./StudyAthlete";
 import { number, tierLabel } from "./cardData";
 import { useRoyalResearch } from "./RoyalResearch";
 export interface Identity {
   player_id: number;
   player_name: string;
   role?: string;
+  pressure_impact_index?: number;
 }
 export function RoyalIdentityPreview({
   player,
@@ -23,6 +23,7 @@ export function RoyalIdentityPreview({
     research = useRoyalResearch(),
     data = research.lookup(player.player_id, selectedRole);
   const source = playerImage(player);
+  const publicIndex = Number.isFinite(player.pressure_impact_index) ? player.pressure_impact_index : undefined;
   const [failed, setFailed] = useState(false),
     [loaded, setLoaded] = useState(false);
   return (
@@ -51,7 +52,15 @@ export function RoyalIdentityPreview({
             onError={() => setFailed(true)}
           />
         ) : (
-          <div className="pc-preview-athlete"><StudyAthlete /></div>
+          <div className="pc-typographic-fallback" role="img"
+             aria-label={`Photograph unavailable for ${player.player_name}`}>
+            <span className="pc-typographic-fallback__mark" aria-hidden="true">
+              {player.player_name.split(/\s+/).slice(0,2).map(w=>w[0]).join("")}
+            </span>
+            <span className="pc-typographic-fallback__caption" aria-hidden="true">
+              KHILADI / PLAYER ARCHIVE
+            </span>
+          </div>
         )}
         {source && !failed && !loaded && (
           <span className="pc-initials" aria-label="Portrait loading">
@@ -69,8 +78,8 @@ export function RoyalIdentityPreview({
       <div className="pc-preview-info">
         <strong className="pc-preview-name">{player.player_name}</strong>
         <div className="pc-preview-rating">
-          <span>{data ? "D20 rating" : "Explore player"}</span>
-          <b>{data ? number(data.record.rating) : "↗"}</b>
+          <span>{data ? "D20 rating" : publicIndex===undefined ? "Recorded profile" : "Legacy pressure index"}</span>
+          <b>{data ? number(data.record.rating) : publicIndex===undefined ? "↗" : number(publicIndex,2)}</b>
         </div>
         {data ? (
           <p>
@@ -81,7 +90,7 @@ export function RoyalIdentityPreview({
           <p>
             {research.loading
               ? "Loading accepted evidence…"
-              : "Open this player’s card to explore the public player record."}
+              : publicIndex!==undefined ? "Observed legacy sample; not an accepted D20 score." : "Open this player’s public record."}
           </p>
         )}
         <span className="pc-preview-inspect">Inspect player ↗</span>

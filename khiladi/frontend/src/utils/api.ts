@@ -66,21 +66,24 @@ export interface RecommendationResult {
 export async function recommendPlayers(
   query: RecommendationQuery,
 ): Promise<RecommendationResult> {
-  if (staticPages) {
+  // The public archive ships deterministic snapshots and must work on both
+  // GitHub Pages and Vercel even when no API service is deployed.
+  const key = JSON.stringify([query.role_priority, query.match_phase, query.risk_profile]);
+  try {
     const snapshots = await requestJSON<Record<string, RecommendationResult>>(
       "/data/quiz_recommendations.json",
     );
-    const result =
-      snapshots[
-        JSON.stringify([
-          query.role_priority,
-          query.match_phase,
-          query.risk_profile,
-        ])
-      ];
-    if (!result) throw new Error("No saved model output for this selection");
-    return result;
+    if (snapshots[key]) return snapshots[key];
+  } catch (error) {
+    if (staticPages) {
+      throw new Error("Saved public recommendations are unavailable");
+    }
   }
+  if (staticPages) {
+    throw new Error("No saved model output for this selection");
+  }
+  // A separately configured backend may support new combinations, but its
+  // availability cannot be assumed on static production hosts.
   const response = await fetch(apiURL("/api/quiz/recommend"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },

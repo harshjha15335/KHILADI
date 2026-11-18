@@ -123,7 +123,7 @@ test("loader is a continuous KHILA-symbol-DI lockup and can be replayed",async({
   const intro=page.locator(".khiladi-intro");
   await expect(intro).toBeVisible();
   // Measure the settled lockup, not the first frame while the logo is scaling in.
-  await page.waitForTimeout(1320);
+  await page.waitForTimeout(2380);
   const gap=await page.evaluate(()=>{
     const symbol=document.querySelector(".khiladi-intro .intro-symbol");
     const right=document.querySelector(".khiladi-intro .intro-side--right");

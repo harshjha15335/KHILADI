@@ -1,0 +1,42 @@
+/* Real cricket atmosphere around a functional match-state replay. */
+.pressure-photo-theatre{display:grid;grid-template-columns:1.04fr 1fr;
+ min-height:380px;border-radius:30px;overflow:hidden;
+ background:#1c2b55;color:#fff;border:1px solid #ffffffae;
+ box-shadow:0 25px 65px #1c315829}
+.pressure-photo-theatre__image{position:relative;min-height:350px;overflow:hidden}
+.pressure-photo-theatre__image img{width:100%;height:100%;object-fit:cover;
+ object-position:50% 22%;filter:saturate(.92);transition:transform 1s cubic-bezier(.22,1,.36,1)}
+.pressure-photo-theatre:hover .pressure-photo-theatre__image img{transform:scale(1.055)}
+.pressure-photo-theatre__story{display:flex;flex-direction:column;justify-content:center;gap:18px;
+ padding:clamp(26px,5vw,65px);background:linear-gradient(135deg,#203b84,#1b2752)}
+.pressure-photo-theatre__story>span{font-size:11px;letter-spacing:.2em;color:#eeb8d6;font-weight:750}
+.pressure-photo-theatre h2{font:400 clamp(38px,4vw,64px)/1.05 Georgia,serif;color:#fffdf8;
+ letter-spacing:-.058em;margin:0}
+.pressure-photo-theatre p{font-size:13px;line-height:1.6;color:#e8e7f4;max-width:460px}
+.pressure-photo-theatre__score{display:flex;align-items:center;gap:18px;border-top:1px solid #ffffff5c;
+ padding-top:20px;flex-wrap:wrap}
+.pressure-photo-theatre__score>strong{font:700 46px/1 -apple-system,BlinkMacSystemFont,Arial,sans-serif;
+ letter-spacing:-.05em;color:#fff}
+.pressure-photo-theatre__score>span{display:flex;flex-direction:column;gap:5px;
+ color:#f0ecf6;font-size:14px;font-weight:650}
+.pressure-photo-theatre__score small{font-size:10px;font-weight:500;letter-spacing:.04em;color:#c3c9e0}
+.pressure-duel{display:flex;align-items:center;gap:17px;min-height:130px;
+ text-align:left;overflow:hidden;position:relative;transition:transform .3s,box-shadow .3s}
+.pressure-duel:hover{transform:translateY(-4px)}
+.pressure-duel__portrait{display:block;flex:0 0 100px;width:100px;height:125px;object-fit:contain;
+ object-position:center bottom;align-self:end;margin-bottom:-18px;
+ background:radial-gradient(ellipse at 50% 70%,#f0e0f6,#e2e9fa);
+ border-radius:13px 13px 0 0}
+.pressure-duel__initials{flex:0 0 100px;width:100px;height:110px;display:grid;
+ place-items:center;border-radius:12px;background:#f0eaf9;color:#2551ab;
+ font:italic 38px Georgia,serif}
+.pressure-duel>div{min-width:0}
+@media(max-width:1000px){.pressure-photo-theatre{grid-template-columns:1fr 1fr}
+.pressure-photo-theatre__image{min-height:315px}.pressure-photo-theatre__story{padding:30px}}
+@media(max-width:650px){.pressure-photo-theatre{grid-template-columns:1fr;border-radius:22px}
+.pressure-photo-theatre__image{min-height:270px;max-height:310px}
+.pressure-photo-theatre__story{padding:28px}
+.pressure-photo-theatre h2{font-size:47px}
+.pressure-duel__portrait,.pressure-duel__initials{width:90px;flex-basis:90px}
+}
+@media(prefers-reduced-motion:reduce){.pressure-photo-theatre__image img{transition:none}}

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
+import { RankingFilmstrip } from "../components/RankingFilmstrip";
+import { playerImage } from "../utils/media";
 import { requestJSON } from "../utils/api";
 import type { AnalyticalRole } from "../types/analytics";
 
@@ -55,6 +57,10 @@ export function PublicRankings({
             </button>
           ))}
         </div>
+        {!loading && !error && rows.length>0 && (
+          <RankingFilmstrip key={role} rows={rows} role={role}
+            onInspect={id=>onSelectPlayerById(id,role)}/>
+        )}
         {loading && <p role="status">Loading player records…</p>}
         {error && <p role="alert">{error}</p>}
         {!loading && !error && (
