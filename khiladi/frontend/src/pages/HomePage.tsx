@@ -16,6 +16,7 @@ import {
 } from "../utils/api";
 import { playerImage } from "../utils/media";
 import { KhiladiAnimatedButton as CTA } from "../components/KhiladiAnimatedButton";
+import { CinematicMemoryRibbon } from "../components/CinematicMemoryRibbon";
 interface Props {
   introComplete?: boolean;
   onNavigate: (page: string) => void;
@@ -69,35 +70,8 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: .9,
             ease: "power3.out", stagger: .12, clearProps: "transform,filter,opacity,visibility" }
         );
-        // Entrance animates photographic contents, not the outer frame.
-        // The outer frame is owned exclusively by the scroll choreography,
-        // preventing the intro's clearProps from erasing satellite motion.
-        gsap.fromTo(".hero-photo-slot > img",
-          { autoAlpha: 0, y: 62, scale: .86 },
-          { autoAlpha: 1, y: 0, scale: 1, duration: 1.03,
-            stagger: { each: .11, from: "center" }, ease: "power3.out",
-            clearProps: "opacity,visibility,y,scale" });
-        // Editorial scroll choreography without clipping the original photos.
-        // Keep the hero in the normal document flow so no half-hidden heading
-        // or pinned image blocks the next section.
-        const hero = root.current?.querySelector<HTMLElement>(".hero-chapter");
-        const centre = hero?.querySelector<HTMLElement>(".hero-photo-slot--centre");
-        if (hero && centre && window.innerWidth >= 900) {
-          const timeline = gsap.timeline({
-            scrollTrigger: { trigger: hero, start: "top top", end: "bottom top",
-              scrub: .65, invalidateOnRefresh: true },
-          });
-          timeline
-            .to(".hero-copy", { y: -112, opacity: .10, ease: "none" }, 0)
-            .to(".hero-photo-slot--left-top, .hero-photo-slot--left-bottom",
-              { x: -185, y: (i:number)=>i ? 100 : -130, scale:.68, opacity:.06, rotation:-16,ease:"none" }, 0)
-            .to(".hero-photo-slot--right-top, .hero-photo-slot--right-middle",
-              { x: 190, y: (i:number)=>i ? 115 : -105, scale:.68, opacity:.06, rotation:16,ease:"none" }, 0)
-            .to(centre, { scale: 2.15, yPercent:-5, rotation: 0,
-              borderRadius:0, ease: "none" }, 0)
-            .to(".hero-bottom-line", { opacity: 0, ease: "none" }, 0);
-        }
-
+        // The memory ribbon now owns its WebGL depth and scroll response.
+        // Do not overlay a second GSAP pin/zoom onto this exhibition scene.
         // A horizontally scrollable rail remains usable without vertical
         // scroll hijacking. Its reveal is tied to ordinary vertical scrolling.
         // Vertical scrolling advances the player gallery without clipping or pinning cards.
@@ -297,30 +271,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           <p>Discover who delivers when the match is on the line.</p>
           <CTA onClick={scrollQuiz}>Find my player</CTA>
         </div>
-        <div className="hero-collage" aria-label="Cricket celebration collage">
-          {[
-            ["moment-1.webp", "A cricket moment", "left-top"],
-            ["moment-2.webp", "Cricket fans and players", "left-bottom"],
-            ["trophy-celebration.webp", "Trophy celebration", "centre"],
-            ["moment-3.webp", "A memorable cricket moment", "right-top"],
-            ["moment-4.webp", "Cricket players", "right-middle"],
-
-          ].map(([filename, alt, placement]) => (
-            <div className={`hero-photo-slot hero-photo-slot--${placement}`} key={filename}>
-              <img
-                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
-                alt={alt}
-                decoding="async"
-                loading={placement === "centre" ? "eager" : "lazy"}
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                  event.currentTarget.parentElement?.classList.add("awaiting-photo");
-                }}
-              />
-              <div className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></div>
-            </div>
-          ))}
-        </div>
+        <CinematicMemoryRibbon />
         <div className="hero-bottom-line">
           <span>FOR THE LOVE OF THE GAME</span><span>SCROLL TO DISCOVER ↓</span>
         </div>
