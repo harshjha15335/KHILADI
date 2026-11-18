@@ -11,10 +11,6 @@
 .public-data-pulse__stat strong{display:block;font:600 clamp(32px,4vw,60px)/1.15 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:#2453b7;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
 .public-data-pulse__stat span{display:block;font-size:13px;color:#586684;line-height:1.4;margin-top:11px}
 .public-data-pulse__actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:25px}
-.public-data-pulse__actions button{border-radius:999px;background:#2453b7;color:white;padding:13px 22px;font-size:14px;font-weight:600;transition:background .25s,transform .25s}
-.public-data-pulse__actions button:nth-child(2){background:#fff;border:1px solid #d8d7ed;color:#2453b7}
-.public-data-pulse__actions button:hover{transform:translateY(-2px);background:#e73589;color:white}
-.public-data-pulse__actions button span{margin-left:12px}
 .public-data-pulse--compact{padding:35px;background:#f8f7ff;border-radius:28px}
 .public-data-pulse--compact header h2{font-size:43px}
 .public-data-pulse--compact .public-data-pulse__stat{padding:18px;border-radius:18px}
@@ -35,4 +31,18 @@
 .public-data-pulse__actions .iridescent-glass:hover{
  background:linear-gradient(115deg,var(--glass-from),var(--glass-middle) 51%,var(--glass-to));
  color:#fff;
+}
+
+/* The retired generic-button rule applied margin-left to every internal glass
+   layer (aurora, rim, gleam), producing a second overlapping glass capsule. */
+.public-data-pulse__actions{align-items:center}
+.public-data-pulse__actions .iridescent-glass__aurora,
+.public-data-pulse__actions .iridescent-glass__rim,
+.public-data-pulse__actions .iridescent-glass__gleam,
+.public-data-pulse__actions .iridescent-glass__label,
+.public-data-pulse__actions .iridescent-glass__label span{margin-left:0!important}
+.public-data-pulse__actions .iridescent-glass{
+ display:inline-flex;isolation:isolate;position:relative;
+ overflow:hidden;transform:translateZ(0);
+ flex:0 1 auto;max-width:100%;
 }
