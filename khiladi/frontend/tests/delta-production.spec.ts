@@ -221,12 +221,19 @@ test("official player photographs are never replaced with another player's ident
     return [playerImage({player_id:3298,player_name:"Jofra Archer"}),
       playerImage({player_id:3298,player_name:"Wrong Name"}),
       playerImage({player_id:9999999,player_name:"Unknown Person"}),
-      playerImage({player_id:43965,player_name:"Emanjot Singh Chahal"})];
+      playerImage({player_id:43965,player_name:"Emanjot Singh Chahal"}),
+      playerImage({player_id:2379,player_name:"Ben Duckett"}),
+      playerImage({player_id:6097,player_name:"Brydon Carse"}),
+      playerImage({player_id:31205,player_name:"Ruchit Ahir"}),
+      playerImage({player_id:63497,player_name:"RS Ambrish"}),
+      playerImage({player_id:2933,player_name:"Jasprit Bumrah"}),
+      playerImage({player_id:3644,player_name:"Kuldeep Yadav"})];
   });
   expect(result[0]).toMatch(/^https:\/\/www\.iplt20\.com\/api\/team-assets/);
   expect(result[1]).toBeUndefined();
   expect(result[2]).toBeUndefined();
   expect(result[3]).toBeUndefined();
+  expect(result.slice(4).every(x=>x===undefined)).toBe(true);
 });
 
 test("Pressure replay has no unrelated Rajasthan image and retains the live delivery controls",async({page})=>{

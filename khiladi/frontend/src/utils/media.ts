@@ -64,9 +64,14 @@ export function playerImage(player: {
   }>)[String(player.player_id)];
   if (!record || !player.player_name) return undefined;
   const norm=(v:string)=>v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
-  // IPL profile pages documented as displaying only the league’s generic silhouette.
-  const noOfficialPhoto=new Set(["sam curran","dasun shanaka","emanjot singh chahal"]);
-  if(noOfficialPhoto.has(norm(player.player_name)))return undefined;
+  // Visually audited on a 60-player contact sheet (3 sheets, November 2026):
+  // five IPL URLs return a generic human silhouette instead of the player's face.
+  // Two historical documents.iplt20.com headshots fail to load in Chromium.
+  // Prefer the user-supplied anonymous grey graphic for these identities.
+  const unavailablePlayerIds = new Set([2379, 6097, 31205, 43965, 63497, 2933, 3644]);
+  const noOfficialPhotoNames = new Set(["sam curran", "dasun shanaka"]);
+  if (unavailablePlayerIds.has(player.player_id) || noOfficialPhotoNames.has(norm(player.player_name)))
+    return undefined;
   if(norm(record.name)!==norm(player.player_name)) return undefined;
   if(!/^https:\/\/www\.iplt20\.com\/players\//.test(record.source)
     && !/^https:\/\/www\.iplt20\.com\/teams\//.test(record.source)) return undefined;
