@@ -63,7 +63,7 @@ export function playerImage(player: {
   portrait_url?: string;
 }) {
   return (
-    (publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)]?.name === player.player_name
+    ((publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)]?.name === player.player_name
       ? (publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)].src
       : undefined) ||
     approved.portraits[String(player.player_id)]?.src ||
