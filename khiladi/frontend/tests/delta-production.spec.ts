@@ -77,15 +77,21 @@ test("responsive 390, 768, 1440 and 1920 views have no document overflow",async(
   }
 });
 
-test("Vercel-safe public recommendation files are available without a backend",async({page})=>{
+test("all nine public quiz selections return real data without a backend",async({page})=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/#home");
-  const out=await page.evaluate(async()=>{
+  const results=await page.evaluate(async()=>{
     const {recommendPlayers}=await import("/src/utils/api.ts");
-    return await recommendPlayers({role_priority:"Batter",match_phase:"powerplay",risk_profile:"safe"})
-      .then((v:any)=>({ok:true,count:v.recommendations?.length||0}))
-      .catch((e:Error)=>({ok:false,message:e.message}));
+    const snapshots=await (await fetch(import.meta.env.BASE_URL+"data/quiz_recommendations.json")).json();
+    const out=[];
+    for(const key of Object.keys(snapshots)){
+      const [role_priority,match_phase,risk_profile]=JSON.parse(key) as [string,string,string];
+      const recommendation=await recommendPlayers({role_priority,match_phase,risk_profile});
+      out.push({key,count:recommendation.recommendations?.length||0,
+        matched:JSON.stringify(recommendation.query)===JSON.stringify(snapshots[key].query)});
+    }
+    return out;
   });
-  // A valid key must be present; the visual audit checks every picker combination.
-  expect(out).toHaveProperty("ok");
+  expect(results).toHaveLength(9);
+  expect(results.every(x=>x.count>0)).toBe(true);
 });
