@@ -261,3 +261,17 @@
   .memory-ribbon__fallback, .memory-ribbon__fallback.is-hidden { opacity: 1 !important; }
   .memory-ribbon__still, .memory-ribbon__controls button { transition: none !important; }
 }
+
+/* Main's typography stylesheet uses an ID-scoped h1 !important rule.
+   Reassert the specifically approved condensed hero + italic serif accent. */
+#main-content .cinematic-home .hero-copy h1 {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -.032em !important;
+  line-height: .94 !important;
+}
+#main-content .cinematic-home .hero-copy h1 em {
+  font-family: "Instrument Serif", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
