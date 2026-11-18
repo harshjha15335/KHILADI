@@ -91,3 +91,28 @@ test("public leaderboard and canonical player data load without private D20", as
   await expect(page.locator(".public-data-pulse__stat")).toHaveCount(4);
   await expect(page.locator(".public-data-pulse")).toContainText("Canonical player records");
 });
+
+test("real player profile exposes public statistics without D20 credential",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#database");
+  await page.getByRole("searchbox").fill("Jofra Archer");
+  await page.getByRole("button",{name:"Inspect Jofra Archer"}).first().click();
+  const dialog=page.locator(".royal-dialog[open]");
+  await expect(dialog).toBeVisible();
+  await expect(dialog.locator(".pc-profile-evidence")).toContainText("Recorded batting runs");
+  await expect(dialog.locator(".pc-profile-evidence")).toContainText("Pressure bowling deliveries");
+  await expect(dialog.locator("[data-testid=front-rating]")).not.toHaveText("—");
+  await dialog.getByRole("button",{name:"Flip to evidence"}).click();
+  await expect(dialog.locator(".rc-back")).toContainText("Recorded player performance");
+  await expect(dialog.locator(".rc-back")).toContainText("Pressure economy");
+  await page.keyboard.press("Escape");
+  await expect(dialog).toHaveCount(0);
+});
+test("homepage restores interactive bento and photo-led player cards",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#home");
+  await expect(page.locator(".khiladi-bento .kb-card")).toHaveCount(4);
+  await expect(page.locator(".home-player-item")).toHaveCount(8);
+  await page.getByRole("button",{name:/02 · COMPARE/}).click();
+  await expect(page).toHaveURL(/#comparison$/);
+});
