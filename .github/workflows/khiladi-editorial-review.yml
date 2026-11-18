@@ -1,0 +1,46 @@
+name: KHILADI Editorial Dock and Motion QA
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: khiladi/frontend/package-lock.json
+      - run: python -m pip install -r khiladi/backend/requirements.txt
+      - run: python scripts/export_pages_quiz.py
+      - run: npm ci --include=dev --no-audit --no-fund
+        working-directory: khiladi/frontend
+      - run: npm run build
+        working-directory: khiladi/frontend
+        env:
+          VITE_BASE_PATH: /KHILADI/
+          VITE_GITHUB_PAGES: 'true'
+          VITE_MEDIA_REVIEW: 'false'
+      - run: python scripts/check_pages_artifact.py
+      - name: Install browser runtime
+        run: npx playwright install --with-deps chromium
+        working-directory: khiladi/frontend
+      - name: Run editorial interaction smoke tests
+        working-directory: khiladi/frontend
+        env:
+          CHROMIUM_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/bin/chromium
+        run: |
+          export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux/chrome' -type f | head -1)"
+          if [ -z "$CHROMIUM_PATH" ]; then
+            export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux64/chrome' -type f | head -1)"
+          fi
+          npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-vite.log 2>&1 &
+          for i in $(seq 1 40); do curl -fsS http://127.0.0.1:3000/ >/dev/null && break; sleep 1; done
+          npx playwright test tests/glass-dock-scroll.spec.ts
