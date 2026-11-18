@@ -164,6 +164,7 @@ export function CinematicMemoryRibbon() {
       const rect = element.getBoundingClientRect();
       const viewport = Math.max(window.innerHeight, 1);
       velocities.scroll = THREE.MathUtils.clamp((viewport - rect.top) / (viewport + rect.height), 0, 1);
+      element.dataset.scrollProgress = velocities.scroll.toFixed(3);
     };
 
     const onVisibility = () => {
