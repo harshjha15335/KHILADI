@@ -10,6 +10,7 @@ import { loadPlayers } from "./utils/api";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { CrlPreloader } from "./components/CrlPreloader";
+import { MetricVortexScene } from "./components/MetricVortexScene";
 
 // Pages
 import { HomePage } from "./pages/HomePage";
@@ -229,6 +230,15 @@ export const App: React.FC = () => {
           tabIndex={-1}
           className={currentPage === "home" ? "" : "analytics-workspace"}
         >
+          {currentPage !== "home" && currentPage !== "methodology" && (
+            <MetricVortexScene
+              key={currentPage}
+              route={currentPage}
+              players={allPlayers}
+              planningBudget={planningBudget}
+              onNavigate={handleNavigate}
+            />
+          )}
           {currentPage === "home" && (
             <HomePage
               introComplete={preloaderComplete}
