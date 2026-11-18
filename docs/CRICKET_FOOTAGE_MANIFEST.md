@@ -37,3 +37,11 @@ supported, reachable official player is needed before processing footage.
 Both `heroClips` and `moments` are empty. No real match footage was found in local project/attachment inventories or Git LFS. FFmpeg/ffprobe are available and yt-dlp was installed in an isolated tools environment after inspecting the suggested skill. The official RR YouTube channel metadata request returned cloud proxy HTTP 403; no video was downloaded. The legitimate official RR Dailymotion embeds return player HTML but show “This video cannot be played on this site” inside localhost, with all three clocks at zero. No reuse/rehosting/editing permission has been established.
 
 Native playback, production-base-aware URLs, posters, crossfade, hidden/offscreen pause, reduced motion and failed-clip poster fallback were tested with explicitly synthetic QA patterns only. This is not RR footage verification. No portrait-card or external-link substitute is presented as a moments sequence. See `docs/qa/homepage-corrections/MEDIA_REQUIREMENTS.md` for evidence and the exact 3–6 authorized MP4 clips required.
+
+## 18 November 2026 — opt-in official video fallback
+
+The homepage's existing `RoyalsMoments` section now contains a **click-to-load embedded official Rajasthan Royals YouTube team film** when `approvedMoments` is empty. The source is [Class of '25: Signing Out](https://www.youtube.com/watch?v=kYym8oJ0Dvg), published as a Rajasthan Royals video. The embed is loaded from `youtube-nocookie.com` only after a visitor presses Play; a link to the original source is always visible.
+
+This does **not** clear or replace the requested three-to-six-clip match-highlights montage behind the homepage hero. `heroClips` and `moments` still contain no downloadable, rehostable licensed match video. The in-page YouTube embed may also be blocked if the rights owner disallows embedding in the visitor's region. Never mislabel the team film as live IPL highlights, extract its footage, strip logos, or use it in a self-hosted montage without separate permission.
+
+The approved-media manifest remains the publication authority for licensed local media. If valid footage is later supplied, the normal `CinematicVideo` scene takes precedence over the official-embed fallback.
