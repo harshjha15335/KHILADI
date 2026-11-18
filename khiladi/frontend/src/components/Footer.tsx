@@ -1,9 +1,15 @@
 import { KhiladiLogo } from "./KhiladiLogo";
 import React from "react";
+import { siteURL } from "../utils/urls";
 export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
   onNavigate,
 }) => (
-  <footer className="brand-footer" data-brand-tone="white" data-header-brand="hidden">
+  <footer
+    className="brand-footer khiladi-glass-footer"
+    data-brand-tone="white"
+    data-header-brand="hidden"
+    style={{ backgroundImage: `linear-gradient(110deg, rgba(19,34,57,.83), rgba(19,34,57,.60)), url("${siteURL("/assets/gallery/trophy-celebration.webp")}")` }}
+  >
     <div className="footer-top">
       <p>
         For the love
@@ -38,7 +44,7 @@ export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
       <span>
         Independent cricket research project. Not an official team website.
       </span>
-      <span>Designed for the love of cricket.</span>
+      <span>Design study: Delta-inspired editorial layout · Photos: supplied cricket images and official IPL source links.</span>
     </div>
   </footer>
 );

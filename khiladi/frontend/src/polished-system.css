@@ -1,0 +1,61 @@
+/* Cross-page editorial system: Apple restraint, Delta layering, Khiladi identity. */
+:root {
+ --kh-blue:#2453b7;--kh-deep:#192e72;--kh-pink:#e73589;--kh-lavender:#f0edff;
+ --kh-white:#fffdfb;--kh-text:#1d1d1f;--kh-muted:#62687b;
+ --kh-radius:26px;--kh-ease:cubic-bezier(.25,.1,.25,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--kh-white);color:var(--kh-text);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+#main-content.analytics-workspace{background:#fffdfb;color:#1d1d1f}
+.analytics-workspace>div{background-color:#fffdfb}
+.analytics-workspace h1{letter-spacing:-.045em;line-height:1.05}
+.analytics-workspace h2{letter-spacing:-.036em}
+.analytics-workspace input[type="search"],.analytics-workspace select,
+.analytics-workspace input[type="number"],.analytics-workspace input[type="text"]{
+ border-radius:14px;background:#fff;border:1px solid #e5e5ef;min-height:44px;
+ transition:border-color .2s,box-shadow .2s}
+.analytics-workspace input:focus-visible,.analytics-workspace select:focus-visible{
+ outline:2px solid #2453b7;outline-offset:2px;box-shadow:0 0 0 4px #2453b71a}
+.analytics-workspace button{transition:background-color .23s,transform .28s var(--kh-ease),box-shadow .23s}
+.analytics-workspace button:hover{transform:translateY(-1px)}
+.analytics-workspace button:active{transform:scale(.985)}
+.analytics-workspace button:focus-visible,.analytics-workspace a:focus-visible{
+ outline:3px solid #2453b7;outline-offset:3px}
+.analytics-workspace .pc-preview,.analytics-workspace .discovery-player,
+.analytics-workspace .public-ranking-player{
+ border-radius:var(--kh-radius);overflow:hidden;background:#fff;border:1px solid #e9e7f3;
+ box-shadow:0 9px 27px #273b7011;
+ transition:transform .35s var(--kh-ease),box-shadow .35s}
+.analytics-workspace .pc-preview:hover,.analytics-workspace .discovery-player:hover,
+.analytics-workspace .public-ranking-player:hover{
+ transform:translateY(-5px);box-shadow:0 17px 38px #273b701f}
+.analytics-workspace .pc-preview img,.home-player-item .pc-preview img{
+ object-fit:cover;object-position:center 18%;width:100%;height:100%}
+.analytics-workspace img{transition:transform .5s var(--kh-ease)}
+.analytics-workspace .pc-preview:hover img{transform:scale(1.045)}
+.analytics-workspace table{border-collapse:separate;border-spacing:0;width:100%;font-variant-numeric:tabular-nums}
+.analytics-workspace thead{background:#f5f5fb}
+.analytics-workspace tbody tr:hover{background:#f8f6ff}
+.analytics-workspace thead th{font-size:12px;letter-spacing:.02em;font-weight:700;color:#44506a}
+.analytics-workspace tbody td{border-bottom:1px solid #edecf3}
+.khiladi-glass-footer{background-position:center center!important;background-size:cover!important;background-repeat:no-repeat;
+ color:#fffdf8!important;position:relative;isolation:isolate;padding:55px 4vw 25px!important;min-height:620px}
+.khiladi-glass-footer .footer-top{
+ background:linear-gradient(115deg,rgba(22,31,39,.56),rgba(55,54,69,.32));
+ backdrop-filter:blur(26px) saturate(135%);-webkit-backdrop-filter:blur(26px) saturate(135%);
+ box-shadow:0 20px 60px rgba(0,0,0,.18),inset 0 1px 0 #ffffff55;
+ border:1px solid #ffffff55;border-radius:26px;padding:clamp(26px,5vw,64px);
+ min-height:290px}
+.khiladi-glass-footer .footer-top p{font:400 clamp(44px,6vw,90px)/1.03 Georgia,serif;letter-spacing:-.05em}
+.khiladi-glass-footer .footer-top nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 30px;align-content:start}
+.khiladi-glass-footer .footer-top a{font-size:14px;font-weight:600;color:white;white-space:normal}
+.khiladi-glass-footer .footer-wordmark{margin:38px auto 30px}
+.khiladi-glass-footer .footer-wordmark .khiladi-logo--footer{width:clamp(90px,10vw,150px)}
+.khiladi-glass-footer .footer-bottom{border-top:1px solid #ffffff55;line-height:1.6;color:#f6f3fa}
+@media(max-width:680px){.khiladi-glass-footer{padding:35px 16px 23px!important;min-height:520px}
+ .khiladi-glass-footer .footer-top{padding:24px;border-radius:20px}
+ .khiladi-glass-footer .footer-top p{font-size:44px}
+ .khiladi-glass-footer .footer-top nav{grid-template-columns:1fr 1fr;gap:15px}
+ .khiladi-glass-footer .footer-top a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+ .analytics-workspace button,.analytics-workspace img,.analytics-workspace .pc-preview{transition:none!important}}
