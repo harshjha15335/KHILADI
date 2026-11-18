@@ -96,23 +96,24 @@ test("all nine public quiz selections return real data without a backend",async(
   expect(results.every(x=>x.count>0)).toBe(true);
 });
 
-test("hero cinematic scroll visibly enlarges trophy and disperses supporting images",async({page})=>{
+test("memory ribbon stays composed while navigating and scrolling in both directions", async ({page}) => {
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/#home");
   await page.keyboard.press("Escape");
-  const centre=page.locator(".hero-photo-slot--centre");
-  const left=page.locator(".hero-photo-slot--left-top");
-  const before=await centre.evaluate(el=>el.getBoundingClientRect().width);
+  const gallery = page.getByTestId("cinematic-memory-ribbon");
+  await expect(gallery).toBeVisible();
+  const width = (await gallery.boundingBox())?.width ?? 0;
+  expect(width).toBeGreaterThan(400);
+  await gallery.getByRole("button",{name:"Next cricket photograph"}).click();
+  await expect(gallery.locator(".memory-ribbon__count")).toHaveText("02 / 05");
   await page.evaluate(()=>window.scrollTo(0,Math.floor(innerHeight*.78)));
-  await page.waitForTimeout(1050);
-  const after=await centre.evaluate(el=>el.getBoundingClientRect().width);
-  const otherOpacity=await left.evaluate(el=>parseFloat(getComputedStyle(el).opacity));
-  expect(after).toBeGreaterThan(before*1.35);
-  expect(otherOpacity).toBeLessThan(.9);
+  await page.waitForTimeout(450);
+  expect((await gallery.boundingBox())?.width).toBeCloseTo(width,0);
+  await page.evaluate(()=>window.scrollTo(0,0));
   await expect(page.getByRole("navigation",{name:"Primary navigation"})).toBeVisible();
+  await expect(page.getByRole("heading",{name:/Find the players/})).toBeVisible();
 });
-
 test("player gallery translates as the reader progresses but remains directly scrollable",async({page})=>{
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
