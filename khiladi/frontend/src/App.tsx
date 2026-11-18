@@ -8,6 +8,7 @@ import "./editorial-refinement.css";
 import "./typography-system.css";
 import "./portrait-fallbacks.css";
 import "./royal-editorial-global.css";
+import "./final-ux-polish.css";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
