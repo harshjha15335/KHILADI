@@ -31,6 +31,9 @@ jobs:
       - name: Typecheck
         run: ./node_modules/.bin/tsc --noEmit --incremental false
 
+      - name: Audit official IPL portrait identity and provenance
+        run: python3 ../../scripts/audit_official_ipl_portraits.py
+
       - name: Install browser
         run: |
           npx playwright install --with-deps chromium
