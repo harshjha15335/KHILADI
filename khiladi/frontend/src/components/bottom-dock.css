@@ -97,3 +97,23 @@ body {padding-bottom:0!important;}
 @media(prefers-reduced-motion:reduce){
  .khiladi-top-nav .dock-link::before,.khiladi-top-nav .dock-link::after{transition:none!important;animation:none!important}
 }
+
+/* Non-overlapping ten-link geometry. Each half has five stable cells; active
+   pill effects and the ThreeUI controller cannot move a neighbour's hitbox. */
+@media(min-width:761px){
+  .khiladi-top-nav .dock-group{
+    display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:clamp(5px,.6vw,11px);width:100%;align-items:center;
+    justify-items:stretch;
+  }
+  .khiladi-top-nav .dock-link{
+    min-width:0;width:100%;padding-inline:clamp(5px,.6vw,11px);
+    overflow:hidden;box-sizing:border-box;
+    transform-origin:center;
+  }
+  .khiladi-top-nav .dock-link__label{overflow:hidden;text-overflow:ellipsis}
+}
+@media(max-width:760px){
+  .khiladi-top-nav .dock-group{gap:5px;scroll-padding-inline:8px}
+  .khiladi-top-nav .dock-link{flex:0 0 auto;min-width:fit-content}
+}
