@@ -11,7 +11,7 @@ for(let batch=0;batch<Math.ceil(entries.length/20);batch++){
  const members=entries.slice(batch*20,batch*20+20);
  const page=await browser.newPage({viewport:{width:1440,height:1150},deviceScaleFactor:1});
  const cards=members.map((v)=>`<div class="card"><div class="id">${v.id} · ${v.name.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div>
- <img src="${v.url.replace(/&/g,"&amp;").replace(/"/g,"&quot;")}" crossorigin="anonymous"
+ <img src="${v.url.replace(/&/g,"&amp;").replace(/"/g,"&quot;")}"
  alt="${v.name.replace(/"/g,"&quot;")}"><small>${v.url.includes("fallback=")?"FALLBACK QUERY PARAM":"DIRECT URL"}</small></div>`).join("");
  await page.setContent(`<!doctype html><html><head><style>
  *{box-sizing:border-box}body{margin:0;background:#f4f5f8;font:15px Arial,sans-serif}
