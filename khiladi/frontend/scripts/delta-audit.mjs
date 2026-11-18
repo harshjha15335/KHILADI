@@ -218,3 +218,20 @@ await fs.writeFile(path.join(output,"SUMMARY.md"),[
  "Public D20 remains a separate protected dataset and must not be replaced with legacy statistics."
 ].join("\n"));
 await browser.close();
+// Fail CI on actual preview regressions, never on the separate reference site.
+const previewFailures=results.filter(entry=>entry.id.startsWith("khiladi-") &&
+  (entry.status!==200 ||
+   Boolean(entry.error) ||
+   (entry.errors?.length??0)>0 ||
+   entry.metrics?.nativeHorizontalOverflow===true ||
+   (entry.metrics?.brokenImages?.length??0)>0 ||
+   (entry.metrics?.contentCharacters??0)<130
+  )).map(entry=>({id:entry.id,status:entry.status,error:entry.error,issues:entry.errors,
+    broken:entry.metrics?.brokenImages,overflow:entry.metrics?.nativeHorizontalOverflow,
+    textLength:entry.metrics?.contentCharacters}));
+await fs.writeFile(path.join(output,"preview-qa-gate.json"),JSON.stringify({pass:previewFailures.length===0,failures:previewFailures},null,2));
+if(previewFailures.length) {
+  console.error("PREVIEW VISUAL QA GATE FAILED "+JSON.stringify(previewFailures));
+  process.exitCode=1;
+}
+
