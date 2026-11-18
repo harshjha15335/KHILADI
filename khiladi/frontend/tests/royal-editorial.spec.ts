@@ -43,7 +43,7 @@ test("mobile: gallery buttons remain usable without WebGL or hover", async ({ pa
   await page.goto("/#home");
   const ribbon = page.getByTestId("cinematic-memory-ribbon");
   await expect(ribbon).toBeVisible();
-  await expect(ribbon.locator(".memory-ribbon__still--1 img")).toHaveAttribute("src", /trophy-celebration\\.webp/);
+  await expect(ribbon.locator(".memory-ribbon__still--1 img")).toHaveAttribute("src", /trophy-celebration[.]webp/);
   await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("01 / 05");
   await ribbon.getByRole("button", { name: "Next cricket photograph" }).click();
   await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("02 / 05");
