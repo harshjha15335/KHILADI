@@ -1,5 +1,5 @@
-import { CinematicVideo } from "../components/CinematicVideo";
-import { RoyalsMoments } from "../components/RoyalsMoments";
+import { StudyAthlete } from "../components/player-cards/StudyAthlete";
+import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
 import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
 import { Player } from "../types";
@@ -10,7 +10,7 @@ import {
   requestJSON,
   recommendPlayers,
 } from "../utils/api";
-import { approvedHeroClips, archivalImages, playerImage } from "../utils/media";
+import { playerImage } from "../utils/media";
 import { KhiladiAnimatedButton as CTA } from "../components/KhiladiAnimatedButton";
 interface Props {
   onNavigate: (page: string) => void;
@@ -20,7 +20,6 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
   const root = useRef<HTMLDivElement>(null);
   const [squad, setSquad] = useState<Player[]>([]),
     [error, setError] = useState("");
-  const [activeClip, setActiveClip] = useState(0);
   const [journeyTopic, setJourneyTopic] = useState(0);
   const [quizStep, setQuizStep] = useState(0),
     [role, setRole] = useState("Batting"),
@@ -49,7 +48,8 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
       });
     return () => abort.abort();
   }, []);
-  const figures = squad.filter((player) => playerImage(player)).slice(0, 8);
+  const featured = [...squad].sort((a, b) => Number(Boolean(playerImage(b))) - Number(Boolean(playerImage(a)))).slice(0, 8);
+  const figures = featured;
   useGSAP(
     () => {
       const media = gsap.matchMedia();
@@ -219,76 +219,73 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           <span className="hero-field-line" />
           <span className="hero-field-line hero-field-line--two" />
         </div>
-        {approvedHeroClips.length > 0 && (
-          <CinematicVideo
-            className="hero-films"
-            clips={approvedHeroClips}
-            activeIndex={activeClip}
-            onNext={() =>
-              setActiveClip((i) => (i + 1) % approvedHeroClips.length)
-            }
-          />
-        )}
         <div className="hero-copy">
           <p className="eyebrow">A GAME OF MOMENTS</p>
           <h1
             id="hero-heading"
-            key={activeClip}
             className="hero-chapter-heading"
           >
-            {activeClip === 0 ? (
-              <>
-                Great players.
-                <br />
-                <em>Big moments.</em>
-                <br />
-                The right choice.
-              </>
-            ) : activeClip === 1 ? (
-              <>
-                One chance.
-                <br />
-                <em>Make it count.</em>
-                <br />
-                Back your player.
-              </>
-            ) : (
-              <>
-                Every ball.
-                <br />
-                <em>Every possibility.</em>
-                <br />
-                Find your moment.
-              </>
-            )}
+            Find the players.
+            <br />
+            <em>Feel the moment.</em>
+            <br />
+            Own the game.
           </h1>
           <p>Discover who delivers when the match is on the line.</p>
           <CTA onClick={scrollQuiz}>Find my player</CTA>
         </div>
-        {approvedHeroClips.length > 1 && (
-          <div className="hero-chapters" aria-label="Royals match scenes">
-            {approvedHeroClips.map((clip, i) => (
-              <button
-                key={clip.src}
-                aria-pressed={activeClip === i}
-                onClick={() => setActiveClip(i)}
-              >
-                <img
-                  className="chapter-thumbnail"
-                  src={clip.poster}
-                  alt=""
-                  width="70"
-                  height="54"
-                />
-                <span>0{i + 1}</span>
-                <span>{clip.caption}</span>
-                <span className="film-progress" />
-              </button>
-            ))}
-          </div>
-        )}
+        <div className="hero-collage" aria-label="Cricket celebration collage">
+          {[
+            ["moment-1.jpg", "A cricket moment", "left-top"],
+            ["moment-2.jpg", "Cricket fans and players", "left-bottom"],
+            ["trophy-celebration.jpg", "Trophy celebration", "centre"],
+            ["moment-3.jpg", "A memorable cricket moment", "right-top"],
+            ["moment-4.jpg", "Cricket players", "right-middle"],
+            ["moment-5.jpg", "Cricket celebrations", "right-bottom"],
+          ].map(([filename, alt, placement]) => (
+            <div className={`hero-photo-slot hero-photo-slot--${placement}`} key={filename}>
+              <img
+                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
+                alt={alt}
+                decoding="async"
+                loading={placement === "centre" ? "eager" : "lazy"}
+                onError={(event) => {
+                  event.currentTarget.style.display = "none";
+                  event.currentTarget.parentElement?.classList.add("awaiting-photo");
+                }}
+              />
+              <div className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></div>
+            </div>
+          ))}
+        </div>
+        <div className="hero-bottom-line">
+          <span>FOR THE LOVE OF THE GAME</span><span>SCROLL TO DISCOVER ↓</span>
+        </div>
       </section>
-      <RoyalsMoments />
+      <section className="home-player-showcase" aria-labelledby="home-player-heading" data-brand-tone="white" data-header-brand="compact">
+        <header className="home-showcase-intro">
+          <p className="eyebrow">PLAYERS IN FOCUS</p>
+          <h2 id="home-player-heading">More than a name. <em>A game changer.</em></h2>
+          <p>Discover players, explore the records, and open their interactive collector cards.</p>
+        </header>
+        <div className="home-player-grid">
+          {featured.map((player) => (
+            <button
+              type="button"
+              key={player.player_id}
+              className="home-player-item"
+              aria-label={`Open ${player.player_name}'s player card`}
+              onClick={() => onSelectPlayer(player)}
+            >
+              <RoyalIdentityPreview player={player} compact />
+            </button>
+          ))}
+        </div>
+        <div className="home-showcase-bottom">
+          <span>Original player records. Verifiable statistics. No invented photographs.</span>
+          <CTA variant="outline" onClick={() => onNavigate("database")}>Explore every player</CTA>
+        </div>
+      </section>
       <section
         className="editorial-chapter"
         aria-labelledby="story-heading"
@@ -332,39 +329,19 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             That spirit still belongs to every Royal.
           </p>
         </div>
-        {archivalImages.length > 0 ? (
-          <div className="heritage-composition">
-            {archivalImages.slice(0, 7).map((image, i) => (
-              <a
-                className={`archive-photo archive-photo--${i}`}
-                href={image.source}
-                key={image.src}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={image.src}
-                  alt={image.caption}
-                  width="720"
-                  height="540"
-                  loading="lazy"
-                />
-                <span>{image.caption} ↗</span>
-              </a>
-            ))}
-          </div>
-        ) : (
-          <div className="media-gap">
-            <p>The photographic archive awaits cleared imagery.</p>
-            <a
-              href="https://www.rajasthanroyals.com/photos/remembering-shane-warne-our-first-royal"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Explore the official Royals archive ↗
-            </a>
-          </div>
-        )}
+        <div className="heritage-photo-composition" aria-label="Cricket photographic collection">
+          {["moment-1.jpg", "moment-2.jpg", "trophy-celebration.jpg", "moment-3.jpg", "moment-4.jpg", "moment-5.jpg"].map((filename, i) => (
+            <div className={`heritage-shot heritage-shot--${i}`} key={filename}>
+              <img
+                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
+                alt={i === 2 ? "Trophy celebration" : "Cricket moments"}
+                loading="lazy"
+                onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.add("awaiting-photo"); }}
+              />
+              <span className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></span>
+            </div>
+          ))}
+        </div>
       </section>
       <section
         className="journey-chapter"
@@ -372,16 +349,6 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
         data-brand-tone="white"
         data-header-brand="hidden"
       >
-        {archivalImages[0] && (
-          <img
-            className="journey-image"
-            src={archivalImages[0].src}
-            alt="Shane Warne and Rajasthan Royals, from the official Royals archive"
-            width="1600"
-            height="1000"
-            loading="lazy"
-          />
-        )}
         <div className="journey-shade" />
         <div className="journey-copy">
           <p className="eyebrow">FROM A FIRST TITLE TO YOUR NEXT CHOICE</p>
@@ -437,14 +404,12 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
               key={player.player_id}
               aria-hidden="true"
             >
-              <img
-                className="quiz-figure-drift"
-                src={playerImage(player)}
-                alt=""
-                width="220"
-                height="270"
-                loading="lazy"
-              />
+              <div className="quiz-figure-drift">
+                {playerImage(player) ? (
+                  <img src={playerImage(player)} alt="" width="220" height="270" loading="lazy" />
+                ) : <StudyAthlete />}
+              </div>
+              <span className="quiz-figure-name">{player.player_name}</span>
             </div>
           ))}
           <div className="quiz-introduction">
