@@ -52,17 +52,20 @@ test("mobile: gallery buttons remain usable without WebGL or hover", async ({ pa
   await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("01 / 05");
   // Touch devices can swipe without requiring a hover target.
   const photo = ribbon.locator(".memory-ribbon__fallback");
-  const bounds = await photo.boundingBox();
-  if (bounds) {
-    await page.dispatchEvent(".memory-ribbon__fallback", "touchstart", {
-      touches: [{ identifier: 1, target: photo, clientX: bounds.x + bounds.width * .72, clientY: bounds.y + bounds.height * .45 }],
-    });
-    await page.dispatchEvent(".memory-ribbon__fallback", "touchend", {
-      changedTouches: [{ identifier: 1, target: photo, clientX: bounds.x + bounds.width * .25, clientY: bounds.y + bounds.height * .46 }],
-    });
-    await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("02 / 05");
-    await ribbon.getByRole("button", { name: "Previous cricket photograph" }).click();
-  }
+  await photo.evaluate(el => {
+    const bounds = el.getBoundingClientRect();
+    const dispatch = (name: string, property: string, x: number, y: number) => {
+      const event = new Event(name, { bubbles: true });
+      Object.defineProperty(event, property, {
+        value: [{ clientX: x, clientY: y }],
+      });
+      el.dispatchEvent(event);
+    };
+    dispatch("touchstart", "touches", bounds.x + bounds.width * .72, bounds.y + bounds.height * .45);
+    dispatch("touchend", "changedTouches", bounds.x + bounds.width * .25, bounds.y + bounds.height * .46);
+  });
+  await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("02 / 05");
+  await ribbon.getByRole("button", { name: "Previous cricket photograph" }).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 4)).toBe(true);
   await page.screenshot({ path: join(evidenceDir, "hero-mobile-390.png"), animations: "disabled" });
   await page.evaluate(() => scrollBy(0, 450));
