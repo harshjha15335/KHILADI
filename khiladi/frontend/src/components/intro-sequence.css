@@ -1,0 +1,19 @@
+.khiladi-intro .intro-curtain{background:#2453b7;color:#fffdf8}
+.khiladi-intro .intro-words{position:relative;z-index:2;display:grid;grid-template-columns:1fr 98px 1fr;
+ align-items:center;justify-content:center;gap:clamp(9px,2vw,38px);
+ width:min(90vw,1170px);transform-origin:center}
+.khiladi-intro .intro-side{display:flex;align-items:center;justify-content:center;font:900 clamp(56px,9vw,155px)/.98 Impact,"Arial Narrow",sans-serif;letter-spacing:-.052em}
+.khiladi-intro .intro-side--left{justify-content:flex-end}
+.khiladi-intro .intro-side--right{justify-content:flex-start}
+.khiladi-intro .intro-symbol{position:relative!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;
+ display:flex;align-items:center;justify-content:center;width:96px;height:140px;transform-origin:center;z-index:2}
+.khiladi-intro .intro-symbol .khiladi-logo{width:81px;height:auto}
+.khiladi-intro .intro-window{overflow:hidden;display:inline-block}
+.khiladi-intro .intro-glyph{display:block;will-change:transform,opacity,filter}
+.khiladi-intro .intro-rule{position:absolute;width:45%;height:2px;left:27.5%;top:65%;background:#e73589;transform-origin:center}
+.khiladi-intro .intro-skip{color:#fffdf8;bottom:28px}
+@media(max-width:680px){.khiladi-intro .intro-words{grid-template-columns:1fr 47px 1fr;gap:7px;width:96vw}
+ .khiladi-intro .intro-side{font-size:clamp(38px,11vw,76px)}
+ .khiladi-intro .intro-symbol{width:45px;height:80px}
+ .khiladi-intro .intro-symbol .khiladi-logo{width:40px}}
+@media(prefers-reduced-motion:reduce){.khiladi-intro{display:none!important}}
