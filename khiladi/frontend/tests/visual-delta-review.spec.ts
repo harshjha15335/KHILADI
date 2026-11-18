@@ -80,7 +80,20 @@ test("capture Delta reference viewports when accessible; record blockers honestl
       if (!response || !response.ok()) throw new Error(`HTTP ${response?.status() ?? "unknown"}`);
       // Delta also uses a branded preloader. Do not call its loading
       // curtain an inspected products page or make visual-parity claims.
-      await page.waitForTimeout(2200);
+      // Dismiss the actual Cookiebot consent layer when the public
+      // reference presents it; otherwise the screenshot is a cookie banner,
+      // not the Delta design being evaluated.
+      const reject = page
+        .getByRole("button", {
+          name: /Rejeitar todos|Reject all|Decline all/i,
+        })
+        .first();
+      if (await reject.isVisible().catch(() => false)) {
+        await reject.click({ timeout: 3500 }).catch(() => {});
+      }
+      // Delta's animated opening can remain onscreen after DOMContentLoaded.
+      // These captures are evidence for human review, not proof of parity.
+      await page.waitForTimeout(7000);
       const substantive = await page.locator("body").evaluate((body) => ({
         text: (body.innerText ?? "").trim().length,
         media: body.querySelectorAll("img,video,canvas").length,
