@@ -27,3 +27,7 @@
 .khiladi-intro .intro-symbol .khiladi-logo{width:clamp(38px,5.4vw,77px)!important;height:auto}
 .khiladi-intro .intro-window{display:inline-flex;overflow:hidden;line-height:1}
 @media(max-width:680px){.khiladi-intro .intro-words{max-width:96vw}.khiladi-intro .intro-side{font-size:clamp(38px,10.5vw,66px)}.khiladi-intro .intro-symbol{width:38px!important;height:63px!important;margin:0 -3px!important}.khiladi-intro .intro-symbol .khiladi-logo{width:34px!important}.khiladi-intro .intro-side--right{margin-left:-4px}}
+
+/* Optical kerning: the graphic's transparent right-side viewBox leaves visual whitespace. */
+.khiladi-intro .intro-side--right{margin-left:-40px!important}
+@media(max-width:680px){.khiladi-intro .intro-side--right{margin-left:-18px!important}}
