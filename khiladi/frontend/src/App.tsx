@@ -309,7 +309,7 @@ export const App: React.FC = () => {
         </main>
 
         {/* Footer */}
-        <Footer onNavigate={handleNavigate} onReplayIntro={() => { window.scrollTo({ top: 0, behavior: "instant" }); setPreloaderComplete(false); }} />
+        <Footer onNavigate={handleNavigate} />
 
         {/* One premium interactive player card everywhere, including the homepage. */}
         {selectedPlayer && (
