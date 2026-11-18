@@ -152,7 +152,7 @@ test("invalid imported plans do not replace the current squad", async ({
   await openWarRoom(page);
   await addPlayer(page);
   await page.getByLabel(`Planning bid for ${PLAYER}`).fill("3.25");
-  const input = page.locator('input[type="file"][accept*="json"]');
+  const input = page.locator('.pc-plan-import input[type="file"][accept*="json"]');
 
   await input.setInputFiles({
     name: "duplicate.json",
