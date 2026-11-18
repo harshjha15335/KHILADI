@@ -3,6 +3,7 @@ import {
   useRoyalResearch,
 } from "../components/player-cards/RoyalResearch";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
+import { PublicRankings } from "./PublicRankings";
 import React, { useState } from "react";
 import type { AnalyticalRole } from "../types/analytics";
 import { privateAnalyticsAvailable } from "../utils/analytics";
@@ -30,6 +31,9 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
   const selected =
     result?.rankings.find((row) => row.player_id === selectedId) ??
     result?.rankings[0];
+  if (!privateAnalyticsAvailable) {
+    return <PublicRankings onSelectPlayerById={onSelectPlayerById} />;
+  }
   return (
     <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">

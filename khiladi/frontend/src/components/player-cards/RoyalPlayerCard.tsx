@@ -4,7 +4,8 @@ import { useCardMotion } from "./useCardMotion";
 import type { SceneControl } from "./FoilScene";
 import { number, tierLabel, type CardData } from "./cardData";
 import type { D20Ranking, AnalyticalRole } from "../../types/analytics";
-import { officialPortrait, royalSymbol } from "./portraitSource";
+import { royalSymbol } from "./portraitSource";
+import { playerImage } from "../../utils/media";
 const FoilScene = lazy(() => import("./FoilScene"));
 export function RoyalPlayerCard({
   data,
@@ -34,7 +35,7 @@ export function RoyalPlayerCard({
     analytical_role: AnalyticalRole;
   } = data?.record ?? identity!;
   const m = data?.metadata;
-  const portrait = officialPortrait(r.player_id);
+  const portrait = playerImage({ player_id: r.player_id, player_name: r.player_name });
   const fullName = r.player_name.split(" "),
     last = fullName.pop(),
     first = fullName.join(" ");
@@ -97,9 +98,9 @@ export function RoyalPlayerCard({
             <div className="rc-study-caption">
               {portraitLoaded ? (
                 <>
-                  OFFICIAL IPL PORTRAIT
+                  PLAYER PORTRAIT
                   <br />
-                  PRIVATE DEVELOPMENT REVIEW
+                  SOURCE-VERIFIED IDENTITY
                 </>
               ) : (
                 <>
@@ -118,8 +119,8 @@ export function RoyalPlayerCard({
               {portrait && !portraitFailed && (
                 <img
                   className="rc-official-portrait"
-                  src={portrait.url}
-                  alt={`${r.player_name} — official IPL player portrait`}
+                  src={portrait}
+                  alt={`${r.player_name} — player portrait`}
                   width="1024"
                   height="1024"
                   decoding="async"

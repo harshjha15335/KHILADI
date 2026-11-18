@@ -1,4 +1,5 @@
 import reviewPortraits from "../config/review-portraits.json";
+import publicPortraits from "../config/public-portraits.json";
 import { officialPortrait } from "../components/player-cards/portraitSource";
 import { siteURL } from "./urls";
 import media from "../config/approved-media.json";
@@ -62,6 +63,9 @@ export function playerImage(player: {
   portrait_url?: string;
 }) {
   return (
+    ((publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)]?.name === player.player_name
+      ? (publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)].src
+      : undefined) ||
     approved.portraits[String(player.player_id)]?.src ||
     (reviewMedia
       ? (reviewPortraits as Record<string, string>)[String(player.player_id)]
