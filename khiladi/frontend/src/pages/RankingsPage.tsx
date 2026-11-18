@@ -156,7 +156,7 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
                                 aria-pressed={
                                   selected?.player_id === row.player_id
                                 }
-                                onClick={() => setSelectedId(row.player_id)}
+                                onClick={() => { setSelectedId(row.player_id); onSelectPlayerById(row.player_id, role); }}
                               >
                                 {row.player_name}
                               </button>
@@ -193,14 +193,18 @@ export const RankingsPage: React.FC<RankingsPageProps> = ({
                       className="pc-ranking-preview"
                       aria-label="Selected player card"
                     >
-                      <RoyalIdentityPreview
-                        key={`${selected.player_id}:${role}`}
-                        player={{
-                          player_id: selected.player_id,
-                          player_name: selected.player_name,
-                        }}
-                        role={role}
-                      />
+                      <button type="button" className="pc-preview-button"
+                        aria-label={`Open ${selected.player_name}'s full player card`}
+                        onClick={() => onSelectPlayerById(selected.player_id, role)}>
+                        <RoyalIdentityPreview
+                          key={`${selected.player_id}:${role}`}
+                          player={{
+                            player_id: selected.player_id,
+                            player_name: selected.player_name,
+                          }}
+                          role={role}
+                        />
+                      </button>
                       <button
                         type="button"
                         onClick={() =>
