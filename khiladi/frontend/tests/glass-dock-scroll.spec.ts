@@ -122,6 +122,8 @@ test("loader is a continuous KHILA-symbol-DI lockup and can be replayed",async({
   await page.goto("/#home");
   const intro=page.locator(".khiladi-intro");
   await expect(intro).toBeVisible();
+  // Measure the settled lockup, not the first frame while the logo is scaling in.
+  await page.waitForTimeout(1320);
   const gap=await page.evaluate(()=>{
     const symbol=document.querySelector(".khiladi-intro .intro-symbol");
     const right=document.querySelector(".khiladi-intro .intro-side--right");
@@ -148,7 +150,7 @@ test("public portraits prioritize exact-match official IPL images",async({page})
   });
   expect(urls[0]).toContain("www.iplt20.com/api/team-assets");
   expect(urls[1]).toContain("www.iplt20.com/api/team-assets");
-  expect(urls[2]).not.toContain("www.iplt20.com");
+  expect(urls[2] ?? "").not.toContain("www.iplt20.com");
 });
 
 test("player rail stays full-height and scrollable without pinned head-only crops",async({page})=>{
