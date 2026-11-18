@@ -1,6 +1,7 @@
 import React from "react";
 import { KhiladiKineticText } from "../components/KhiladiKineticText";
 import { AnalyticsIntro } from "../components/AnalyticsIntro";
+import { MethodologyConnectivityGraph } from "../components/MethodologyConnectivityGraph";
 import "./methodology-story.css";
 export const MethodologyPage: React.FC = () => (
   <div className="min-h-screen pt-32 pb-20 px-5">
@@ -41,6 +42,7 @@ export const MethodologyPage: React.FC = () => (
           ))}
         </ol>
       </section>
+      <MethodologyConnectivityGraph />
       <section
         className="space-y-5 rounded-3xl border border-[#cbd5e9] bg-white p-6 sm:p-8"
         aria-labelledby="accepted-d20-method"

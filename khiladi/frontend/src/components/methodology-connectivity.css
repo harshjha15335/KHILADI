@@ -1,0 +1,31 @@
+.method-connectivity{margin:50px 0;border-radius:28px;background:#fffdfa;
+ border:1px solid #e0e4f3;box-shadow:0 15px 55px #2a3f6a13;overflow:hidden}
+.method-connectivity header{padding:40px clamp(22px,4vw,55px) 24px}
+.method-connectivity .eyebrow{letter-spacing:.2em;color:#325cb7;font-size:11px;font-weight:700}
+.method-connectivity h2{font:400 clamp(41px,5vw,66px)/1.05 Georgia,serif;
+ letter-spacing:-.055em;color:#2752ae;margin:12px 0}
+.method-connectivity header>p:last-child{max-width:720px;font-size:14px;line-height:1.65;color:#67718a}
+.method-connectivity__field{position:relative;height:530px;background:#eff3fc;overflow:hidden}
+.method-connectivity__field canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.method-connectivity__node{position:absolute;z-index:1;transform:translate(-50%,20px);
+ border:1px solid #b6c5e5;border-radius:999px;background:#fffc;color:#263d82;
+ font-size:11px;font-weight:700;padding:9px 13px;
+ box-shadow:0 4px 16px #244d9b2b;white-space:nowrap;cursor:pointer;
+ transition:background .2s,box-shadow .2s,color .2s}
+.method-connectivity__node.is-active,.method-connectivity__node:hover{
+ background:#2454ad;color:#fff;box-shadow:0 8px 22px #244d9b50}
+.method-connectivity__node:focus-visible{outline:3px solid #e73589;outline-offset:3px}
+.method-connectivity__description{padding:23px clamp(22px,4vw,55px);
+ display:flex;gap:22px;align-items:baseline;background:#f8f3fb}
+.method-connectivity__description strong{font:500 24px Georgia,serif;color:#2a4fa8;min-width:180px}
+.method-connectivity__description p{color:#61708a;line-height:1.6;font-size:13px}
+.method-connectivity__legend{display:flex;flex-wrap:wrap;gap:20px;padding:16px 34px;
+ border-top:1px solid #ece6f2;font-size:10px;letter-spacing:.06em;color:#65708d}
+.method-connectivity__legend span:nth-child(1){color:#2756b4}
+.method-connectivity__legend span:nth-child(2){color:#7961c6}
+.method-connectivity__legend span:nth-child(3){color:#b04f91}
+@media(max-width:650px){.method-connectivity__field{height:490px}
+.method-connectivity__node{font-size:9px;padding:7px 8px;max-width:125px;white-space:normal;line-height:1.1}
+.method-connectivity__description{display:block}.method-connectivity__description p{margin-top:9px}
+.method-connectivity header{padding:26px 20px 17px}}
+@media(prefers-reduced-motion:reduce){.method-connectivity__node{transition:none}}
