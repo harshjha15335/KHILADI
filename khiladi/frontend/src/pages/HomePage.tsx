@@ -36,21 +36,10 @@ function QuizPlayerPhoto({player}:{player:Player}) {
 /** Gallery fallbacks render ONLY when the photographic asset genuinely fails.
  * This prevents duplicate hidden <img>s and preserves photo choreography.
  */
-function GalleryPhotograph({filename,alt,eager=false}:{
-  filename:string;alt:string;eager?:boolean;
-}) {
-  const [failed,setFailed]=useState(false);
-  if(failed)return <NeutralPlayerAvatar className="gallery-neutral-avatar"
-    label={`Photograph unavailable: ${alt}`} />;
-  return <img src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
-    alt={alt} decoding="async" loading={eager?"eager":"lazy"}
-    onError={()=>setFailed(true)} />;
-}
 export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, onSelectPlayer }) => {
   const root = useRef<HTMLDivElement>(null);
   const [squad, setSquad] = useState<Player[]>([]),
     [error, setError] = useState("");
-  const [journeyTopic, setJourneyTopic] = useState(0);
   const [quizStep, setQuizStep] = useState(0),
     [role, setRole] = useState("Batting"),
     [phase, setPhase] = useState("Death Overs");
@@ -136,29 +125,6 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           { y: 0, autoAlpha: 1, stagger: .07, ease: "none",
             scrollTrigger: { trigger: ".public-data-pulse",
               start: "top 85%", end: "top 44%", scrub: .6 } });
-
-        gsap.utils.toArray<HTMLElement>(".heritage-shot").forEach((shot, i) => {
-          gsap.fromTo(shot,
-            { y: i % 2 ? 85 : -85, scale: .85, opacity: .25 },
-            { y: 0, scale: 1, opacity: 1, ease: "none",
-              scrollTrigger: {
-                trigger: ".heritage-photo-composition",
-                start: "top 93%", end: "center 50%", scrub: .6,
-                invalidateOnRefresh: true,
-              },
-            });
-          if (i === 2) {
-            const img = shot.querySelector("img");
-            if (img) gsap.fromTo(img,
-              { scale: 1.16, filter: "grayscale(1)" },
-              { scale: 1, filter: "grayscale(0)", ease: "none",
-                scrollTrigger: {
-                  trigger: ".heritage-photo-composition",
-                  start: "top 90%", end: "bottom 40%", scrub: .65,
-                },
-              });
-          }
-        });
 
         gsap.from(".story-line", {
           yPercent: 80,
@@ -356,80 +322,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           Meet your match-winner
         </CTA>
       </section>
-      <section
-        className="heritage-chapter"
-        aria-labelledby="heritage-heading"
-        data-brand-tone="original"
-        data-header-brand="hidden"
-      >
-        <div className="heritage-title">
-          <p className="eyebrow">RAJASTHAN. ALWAYS.</p>
-          <h2 id="heritage-heading">
-            A first time.
-            <br />
-            <em>A forever feeling.</em>
-          </h2>
-          <p>
-            In 2008, a team of believers made history.
-            <br />
-            That spirit still belongs to every Royal.
-          </p>
-        </div>
-        <div className="heritage-photo-composition" aria-label="Cricket photographic collection">
-          {["moment-1.webp", "moment-2.webp", "trophy-celebration.webp", "moment-3.webp", "moment-4.webp"].map((filename, i) => (
-            <div className={`heritage-shot heritage-shot--${i}`} key={filename}>
-              <GalleryPhotograph filename={filename} alt={i===2?"Trophy celebration":"Cricket moments"}/>
-            </div>
-          ))}
-        </div>
-      </section>
       <EditorialMatteRise />
-      <section
-        className="journey-chapter"
-        aria-labelledby="journey-heading"
-        data-brand-tone="white"
-        data-header-brand="hidden"
-      >
-        <div className="journey-shade" />
-        <div className="journey-copy">
-          <p className="eyebrow">FROM A FIRST TITLE TO YOUR NEXT CHOICE</p>
-          <h2 id="journey-heading">
-            A Royal story.
-            <br />
-            <em>Still being written.</em>
-          </h2>
-          <p>
-            {
-              [
-                "A first title in 2008. A lasting belief in players who rise to the occasion.",
-                "Every player brings a different game. Look past the headline and get to know the person behind the performance.",
-                "Your next decision starts with the evidence. Explore the recorded performances and find a player who fits.",
-              ][journeyTopic]
-            }
-          </p>
-          <CTA
-            onClick={() =>
-              onNavigate(journeyTopic === 0 ? "methodology" : "database")
-            }
-          >
-            Explore the story
-          </CTA>
-        </div>
-        <div className="journey-hotspots" aria-label="Explore the Royals story">
-          {["The beginning", "The people", "Your next choice"].map(
-            (topic, i) => (
-              <button
-                key={topic}
-                aria-pressed={journeyTopic === i}
-                onClick={() => setJourneyTopic(i)}
-              >
-                <span aria-hidden="true">+</span>
-                <span>{topic}</span>
-              </button>
-            ),
-          )}
-        </div>
-      </section>
       <PublicDataPulse onNavigate={onNavigate} />
       <section
         id="discovery"
