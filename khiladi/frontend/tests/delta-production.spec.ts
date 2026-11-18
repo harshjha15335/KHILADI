@@ -95,3 +95,35 @@ test("all nine public quiz selections return real data without a backend",async(
   expect(results).toHaveLength(9);
   expect(results.every(x=>x.count>0)).toBe(true);
 });
+
+test("hero cinematic scroll visibly enlarges trophy and disperses supporting images",async({page})=>{
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/#home");
+  await page.keyboard.press("Escape");
+  const centre=page.locator(".hero-photo-slot--centre");
+  const left=page.locator(".hero-photo-slot--left-top");
+  const before=await centre.evaluate(el=>el.getBoundingClientRect().width);
+  await page.evaluate(()=>window.scrollTo(0,Math.floor(innerHeight*.78)));
+  await page.waitForTimeout(1050);
+  const after=await centre.evaluate(el=>el.getBoundingClientRect().width);
+  const otherOpacity=await left.evaluate(el=>parseFloat(getComputedStyle(el).opacity));
+  expect(after).toBeGreaterThan(before*1.35);
+  expect(otherOpacity).toBeLessThan(.9);
+  await expect(page.getByRole("navigation",{name:"Primary navigation"})).toBeVisible();
+});
+
+test("player gallery translates as the reader progresses but remains directly scrollable",async({page})=>{
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/#home");
+  await page.keyboard.press("Escape");
+  const rail=page.locator(".home-player-grid");
+  await rail.scrollIntoViewIfNeeded();
+  await page.evaluate(()=>scrollBy(0,290));
+  await page.waitForTimeout(700);
+  const pos=await rail.evaluate(el=>({left:el.scrollLeft,max:el.scrollWidth-el.clientWidth}));
+  expect(pos.max).toBeGreaterThan(100);
+  expect(pos.left).toBeGreaterThan(0);
+  await expect(rail.locator(".home-player-item").first()).toHaveCount(1);
+});
