@@ -1,0 +1,18 @@
+.official-royals-video{max-width:1440px;margin:0 auto;padding:clamp(4rem,9vw,9rem) clamp(1.25rem,5vw,5rem);display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,5rem);align-items:center;background:#fffdf8;color:#182643}
+.official-royals-video__copy{display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
+.official-royals-video__copy h2{font-size:clamp(3rem,5.8vw,6.5rem);line-height:0.98;letter-spacing:-.05em;font-weight:800}
+.official-royals-video__copy h2 em{font-family:Georgia,serif;color:#ed267b;font-weight:400}
+.official-royals-video__copy>p:not(.eyebrow){max-width:34rem;line-height:1.7;color:#536079}
+.official-royals-video__copy>a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:#2450b8;text-decoration:underline;text-underline-offset:5px}
+.official-royals-video__copy>a:focus-visible,.official-royals-video__play:focus-visible{outline:3px solid #2450b8;outline-offset:4px}
+.official-royals-video__stage{min-width:0;display:flex;flex-direction:column;gap:.8rem}
+.official-royals-video__stage iframe,.official-royals-video__play{width:100%;aspect-ratio:16/9;border:0;border-radius:clamp(1rem,2vw,2rem);overflow:hidden}
+.official-royals-video__stage iframe{display:block;background:#111e43}
+.official-royals-video__play{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;cursor:pointer;background:radial-gradient(circle at 75% 35%,#5769ad 0%,transparent 44%),linear-gradient(140deg,#17377d 0%,#17264e 55%,#93225d 100%);color:white;box-shadow:0 25px 80px #18264325;transition:transform .5s ease,box-shadow .5s ease}
+.official-royals-video__play:hover{transform:translateY(-6px);box-shadow:0 30px 85px #18264338}
+.official-royals-video__play span{width:70px;height:70px;border:2px solid #fff7;border-radius:50%;display:grid;place-items:center;background:#ed267b;font-size:1.5rem}
+.official-royals-video__play strong{font-size:clamp(1.4rem,2.5vw,2.1rem)}
+.official-royals-video__play small{color:#e4dcfa}
+.official-royals-video__credit{font-size:.75rem;color:#536079;line-height:1.5}
+@media(max-width:800px){.official-royals-video{grid-template-columns:1fr;padding-block:4rem}.official-royals-video__copy h2{font-size:clamp(2.7rem,10vw,5rem)}}
+@media(prefers-reduced-motion:reduce){.official-royals-video__play{transition:none}.official-royals-video__play:hover{transform:none}}

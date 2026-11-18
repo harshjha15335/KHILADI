@@ -1,286 +1,8 @@
 {
-  "3298": {
-    "name": "Jofra Archer",
-    "source": "https://www.iplt20.com/players/748cc426-3e63-409d-8965-2c90e93f73f3/jofra-archer",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7503": {
-    "name": "Ravi Bishnoi",
-    "source": "https://www.iplt20.com/players/8adfc8aa-d61a-4324-abcf-9e07052e1ec9/ravi-bishnoi",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F70430.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F70430.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7312": {
-    "name": "Nandre Burger",
-    "source": "https://www.iplt20.com/players/dcf7e515-d327-44d0-b9ba-d88f4fa28653/nandre-burger",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F52827.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F52827.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "8580": {
-    "name": "Yudhvir Singh",
-    "source": "https://www.iplt20.com/players/4b2a7361-7cdb-43fc-9692-f41284235064/yudhvir-singh-charak",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F72710.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "6423": {
-    "name": "Riyan Parag",
-    "source": "https://www.iplt20.com/players/4110ef80-2935-4035-81ba-0e7268f64175/riyan-parag",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F65476.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "6806": {
-    "name": "Tushar Deshpande",
-    "source": "https://www.iplt20.com/players/d038687d-1087-4f5d-947a-60c07442830e/tushar-deshpande",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F44044.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "25139": {
-    "name": "Shubham Dubey",
-    "source": "https://www.iplt20.com/players/8cf71e88-c634-4d40-93cf-0f68c50288f3/shubham-dubey",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F74047.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "8182": {
-    "name": "Donovan Ferreira",
-    "source": "https://www.iplt20.com/players/b43efb1e-d925-45c4-b1b4-1c28b51c377d/donovan-ferreira",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68473.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "3297": {
-    "name": "Shimron Hetmyer",
-    "source": "https://www.iplt20.com/players/c7f6b263-8041-461f-8b3a-82c070d68510/shimron-hetmyer",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F23713.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
   "152": {
     "name": "Ravindra Jadeja",
     "source": "https://www.iplt20.com/players/b2e76c0b-166c-4d7c-97df-a1503726e55c/ravindra-jadeja",
     "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F13143.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7260": {
-    "name": "Dhruv Jurel",
-    "source": "https://www.iplt20.com/players/9f342aec-ee47-48b1-b500-dc3f9757d28e/dhruv-jurel",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71456.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "26663": {
-    "name": "Kwena Maphaka",
-    "source": "https://www.iplt20.com/players/d2d60aff-246c-44fa-973f-e036b63071e2/kwena-maphaka",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F76217.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "1487": {
-    "name": "Adam Milne",
-    "source": "https://www.iplt20.com/players/13688f33-8fe1-4989-8dff-2124c28547e6/adam-milne",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F20007.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7269": {
-    "name": "Sushant Mishra",
-    "source": "https://www.iplt20.com/players/416c2cf1-335b-4242-8185-e5411ca7980f/sushant-mishra",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71452.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "41503": {
-    "name": "Yash Punja",
-    "source": "https://www.iplt20.com/players/64cded09-418c-4b39-a1bb-590d66032d45/yash-punja",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F92045.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "48557": {
-    "name": "Vignesh Puthur",
-    "source": "https://www.iplt20.com/players/b91c2efe-3c0b-4f84-b5aa-c3f628414481/vignesh-puthur",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87852.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7545": {
-    "name": "Kuldeep Sen",
-    "source": "https://www.iplt20.com/players/2781c422-4201-4d31-9042-f7f02e6c72bf/kuldeep-sen",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F69043.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "67036": {
-    "name": "Brijesh Sharma",
-    "source": "https://www.iplt20.com/players/718b6df9-e6c1-4c48-94e7-fbc4f32584ac/brijesh-sharma",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F90896.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "2411": {
-    "name": "Sandeep Sharma",
-    "source": "https://www.iplt20.com/players/dc7c68d4-19e4-459b-ae08-6f03b1ef8dd0/sandeep-sharma",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F15660.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "60700": {
-    "name": "Ravi Singh",
-    "source": "https://www.iplt20.com/players/48904fc9-0f07-4acd-8988-e83d6070dc97/ravi-singh",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F86608.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "50284": {
-    "name": "Vaibhav Sooryavanshi",
-    "source": "https://www.iplt20.com/players/01e5004b-fa01-4450-8903-5009dbf1787b/vaibhav-sooryavanshi",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F83313.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "6819": {
-    "name": "Yashasvi Jaiswal",
-    "source": "https://www.iplt20.com/players/786de32e-4a28-48d0-af87-775b1e4ce987/yashasvi-jaiswal",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68314.png&brand=ipl",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "43965": {
-    "name": "Emanjot Singh Chahal",
-    "source": "https://www.iplt20.com/players/02c3d48a-5f7d-4854-94c5-946bd48ea26b/emanjot-singh-chahal",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87006.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7250": {
-    "name": "Mukesh Choudhary",
-    "source": "https://www.iplt20.com/players/0705dc16-8938-4554-8b13-68e7a8fd6cac/mukesh-choudhary",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F70580.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1622%252F70580.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "25669": {
-    "name": "Priyansh Arya",
-    "source": "https://www.iplt20.com/players/0764b948-a2b4-4c82-9455-4fb2665e844b/priyansh-arya",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F75656.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2040%252F75656.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "6256": {
-    "name": "Varun Chakravarthy",
-    "source": "https://www.iplt20.com/players/089308be-b88e-487b-a1bc-dbc5b0ffdedd/varun-chakravarthy",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F68649.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F68649.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "23311": {
-    "name": "Jacob Bethell",
-    "source": "https://www.iplt20.com/players/14c3c843-ed5a-4e29-985b-d54e349bf411/jacob-bethell",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F73907.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2138%252F73907.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "4847": {
-    "name": "Finn Allen",
-    "source": "https://www.iplt20.com/players/1be100f0-4fa1-4264-81a6-097378c44f27/finn-allen",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F26170.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F26170.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "25213": {
-    "name": "Dewald Brevis",
-    "source": "https://www.iplt20.com/players/1f8498f3-a468-43f6-b7aa-33a8a5700440/dewald-brevis",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F75144.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1622%252F75144.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "3697": {
-    "name": "Kyle Jamieson",
-    "source": "https://www.iplt20.com/players/26e157d2-6e5f-4260-ac36-0759bbb00ea0/kyle-jamieson",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F33186.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1396%252F33186.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "58135": {
-    "name": "Tejasvi Dahiya",
-    "source": "https://www.iplt20.com/players/2a9353ee-f76e-445c-ad2f-5fdfc0444c7f/tejasvi-dahiya",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F86769.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F86769.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "6460": {
-    "name": "Ayush Badoni",
-    "source": "https://www.iplt20.com/players/333fe44e-741f-4249-ace2-5401a6e7ebf7/ayush-badoni",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F68296.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F68296.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "4824": {
-    "name": "Zeeshan Ansari",
-    "source": "https://www.iplt20.com/players/488fa07d-645e-4761-b5ca-00bd1bfcff2b/zeeshan-ansari",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F20236.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F20236.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "45749": {
-    "name": "Mukul Choudhary",
-    "source": "https://www.iplt20.com/players/54396700-51d6-44c3-896d-e9356d504507/mukul-choudhary",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F79805.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F79805.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "8746": {
-    "name": "Vaibhav Arora",
-    "source": "https://www.iplt20.com/players/57bf865d-08aa-4de5-a208-8a46c5079817/vaibhav-arora",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F72965.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F72965.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "7279": {
-    "name": "Atharva Ankolekar",
-    "source": "https://www.iplt20.com/players/5927d16d-7590-4198-b80e-d0a91688826d/atharva-ankolekar",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F72144.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1854%252F72144.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "5738": {
-    "name": "Xavier Bartlett",
-    "source": "https://www.iplt20.com/players/6196def3-41d8-4e52-867b-a0c8f0d70843/xavier-bartlett",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F55170.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2040%252F55170.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "2379": {
-    "name": "Ben Duckett",
-    "source": "https://www.iplt20.com/players/623e455d-76be-4cb0-8d59-ebf213e979c8/ben-duckett",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F17314.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1396%252F17314.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
@@ -292,35 +14,18 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "4900": {
-    "name": "Wanindu Hasaranga",
-    "source": "https://www.iplt20.com/players/76d02e46-ac83-4f34-80c3-20c0608e59c3/wanindu-hasaranga",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F26489.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F26489.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "1487": {
+    "name": "Adam Milne",
+    "source": "https://www.iplt20.com/players/13688f33-8fe1-4989-8dff-2124c28547e6/adam-milne",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F20007.png&brand=ipl",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "24475": {
-    "name": "Rehan Ahmed",
-    "source": "https://www.iplt20.com/players/7ea9d1e7-564d-4d8d-ab0a-fd0b4c8faa13/rehan-ahmed",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F74536.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1396%252F74536.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "20005": {
-    "name": "Arshad Khan",
-    "source": "https://www.iplt20.com/players/8a2833b0-63de-40e2-b6b9-d155205e232f/arshad-khan",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F74055.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2879%252F74055.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
-    "use": "private_development_only",
-    "redistribution_permission": "unverified"
-  },
-  "63497": {
-    "name": "RS Ambrish",
-    "source": "https://www.iplt20.com/players/8bbcc84c-f7cd-43ea-af3b-3ed0b400924d/rs-ambrish",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F90360.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F90360.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "2379": {
+    "name": "Ben Duckett",
+    "source": "https://www.iplt20.com/players/623e455d-76be-4cb0-8d59-ebf213e979c8/ben-duckett",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F17314.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1396%252F17314.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
@@ -332,35 +37,47 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "6273": {
-    "name": "Tom Banton",
-    "source": "https://www.iplt20.com/players/9a38f9bd-cde9-4a0c-8517-1bcea2fbbf85/tom-banton",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F65546.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2879%252F65546.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "2411": {
+    "name": "Sandeep Sharma",
+    "source": "https://www.iplt20.com/players/dc7c68d4-19e4-459b-ae08-6f03b1ef8dd0/sandeep-sharma",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F15660.png&brand=ipl",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "7744": {
-    "name": "Jordan Cox",
-    "source": "https://www.iplt20.com/players/9df2c53f-5eb8-43d3-b5bf-2bd1a7c87010/jordan-cox",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F69894.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2138%252F69894.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "2933": {
+    "name": "Jasprit Bumrah",
+    "source": "https://www.iplt20.com/players/jasprit-bumrah/1124",
+    "url": "https://documents.iplt20.com/ipl/IPLHeadshot2026/9.png",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "6097": {
-    "name": "Brydon Carse",
-    "source": "https://www.iplt20.com/players/9ee73a43-28c9-4fa2-8bc7-062b0babce50/brydon-carse",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F16178.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F16178.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "3297": {
+    "name": "Shimron Hetmyer",
+    "source": "https://www.iplt20.com/players/c7f6b263-8041-461f-8b3a-82c070d68510/shimron-hetmyer",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F23713.png&brand=ipl",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "6342": {
-    "name": "Matthew Breetzke",
-    "source": "https://www.iplt20.com/players/a6c1a92e-ca31-4213-af08-d501653636e9/matthew-breetzke",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F32332.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F32332.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "3298": {
+    "name": "Jofra Archer",
+    "source": "https://www.iplt20.com/players/748cc426-3e63-409d-8965-2c90e93f73f3/jofra-archer",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "3644": {
+    "name": "Kuldeep Yadav",
+    "source": "https://www.iplt20.com/teams/delhi-capitals/squad-details/261/2022/3",
+    "url": "https://documents.iplt20.com/ipl/IPLHeadshot2024/14.png",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "3697": {
+    "name": "Kyle Jamieson",
+    "source": "https://www.iplt20.com/players/26e157d2-6e5f-4260-ac36-0759bbb00ea0/kyle-jamieson",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F33186.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1396%252F33186.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
@@ -372,19 +89,43 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "25679": {
-    "name": "Salil Arora",
-    "source": "https://www.iplt20.com/players/ad11199e-4338-4465-9e80-695739df1bd9/salil-arora",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F72140.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F72140.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "4824": {
+    "name": "Zeeshan Ansari",
+    "source": "https://www.iplt20.com/players/488fa07d-645e-4761-b5ca-00bd1bfcff2b/zeeshan-ansari",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F20236.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F20236.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "66540": {
-    "name": "Kanishk Chouhan",
-    "source": "https://www.iplt20.com/players/b274321a-626c-42b4-bf21-f629c4a87a6c/kanishk-chouhan",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F91255.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2138%252F91255.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "4847": {
+    "name": "Finn Allen",
+    "source": "https://www.iplt20.com/players/1be100f0-4fa1-4264-81a6-097378c44f27/finn-allen",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F26170.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F26170.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "4900": {
+    "name": "Wanindu Hasaranga",
+    "source": "https://www.iplt20.com/players/76d02e46-ac83-4f34-80c3-20c0608e59c3/wanindu-hasaranga",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F26489.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F26489.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "5738": {
+    "name": "Xavier Bartlett",
+    "source": "https://www.iplt20.com/players/6196def3-41d8-4e52-867b-a0c8f0d70843/xavier-bartlett",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F55170.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2040%252F55170.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "6097": {
+    "name": "Brydon Carse",
+    "source": "https://www.iplt20.com/players/9ee73a43-28c9-4fa2-8bc7-062b0babce50/brydon-carse",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F16178.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F16178.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
@@ -396,11 +137,42 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "27970": {
-    "name": "Gurnoor Brar",
-    "source": "https://www.iplt20.com/players/d32a4110-c635-4f26-9388-b5391d8577da/gurnoor-brar",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F76164.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2879%252F76164.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "6256": {
+    "name": "Varun Chakravarthy",
+    "source": "https://www.iplt20.com/players/089308be-b88e-487b-a1bc-dbc5b0ffdedd/varun-chakravarthy",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F68649.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F68649.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "6273": {
+    "name": "Tom Banton",
+    "source": "https://www.iplt20.com/players/9a38f9bd-cde9-4a0c-8517-1bcea2fbbf85/tom-banton",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F65546.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2879%252F65546.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "6342": {
+    "name": "Matthew Breetzke",
+    "source": "https://www.iplt20.com/players/a6c1a92e-ca31-4213-af08-d501653636e9/matthew-breetzke",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F32332.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F32332.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "6423": {
+    "name": "Riyan Parag",
+    "source": "https://www.iplt20.com/players/4110ef80-2935-4035-81ba-0e7268f64175/riyan-parag",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F65476.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "6460": {
+    "name": "Ayush Badoni",
+    "source": "https://www.iplt20.com/players/333fe44e-741f-4249-ace2-5401a6e7ebf7/ayush-badoni",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F68296.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F68296.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
@@ -412,6 +184,173 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
+  "6806": {
+    "name": "Tushar Deshpande",
+    "source": "https://www.iplt20.com/players/d038687d-1087-4f5d-947a-60c07442830e/tushar-deshpande",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F44044.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "6819": {
+    "name": "Yashasvi Jaiswal",
+    "source": "https://www.iplt20.com/players/786de32e-4a28-48d0-af87-775b1e4ce987/yashasvi-jaiswal",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68314.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7250": {
+    "name": "Mukesh Choudhary",
+    "source": "https://www.iplt20.com/players/0705dc16-8938-4554-8b13-68e7a8fd6cac/mukesh-choudhary",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F70580.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1622%252F70580.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7260": {
+    "name": "Dhruv Jurel",
+    "source": "https://www.iplt20.com/players/9f342aec-ee47-48b1-b500-dc3f9757d28e/dhruv-jurel",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71456.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7269": {
+    "name": "Sushant Mishra",
+    "source": "https://www.iplt20.com/players/416c2cf1-335b-4242-8185-e5411ca7980f/sushant-mishra",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71452.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7279": {
+    "name": "Atharva Ankolekar",
+    "source": "https://www.iplt20.com/players/5927d16d-7590-4198-b80e-d0a91688826d/atharva-ankolekar",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F72144.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1854%252F72144.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7312": {
+    "name": "Nandre Burger",
+    "source": "https://www.iplt20.com/players/dcf7e515-d327-44d0-b9ba-d88f4fa28653/nandre-burger",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F52827.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F52827.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7325": {
+    "name": "Harpreet Brar",
+    "source": "https://www.iplt20.com/players/f949b20c-b97f-4924-8e2d-72befa24a2f4/harpreet-brar",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F69782.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2040%252F69782.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7503": {
+    "name": "Ravi Bishnoi",
+    "source": "https://www.iplt20.com/players/8adfc8aa-d61a-4324-abcf-9e07052e1ec9/ravi-bishnoi",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F70430.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F70430.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7545": {
+    "name": "Kuldeep Sen",
+    "source": "https://www.iplt20.com/players/2781c422-4201-4d31-9042-f7f02e6c72bf/kuldeep-sen",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F69043.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "7744": {
+    "name": "Jordan Cox",
+    "source": "https://www.iplt20.com/players/9df2c53f-5eb8-43d3-b5bf-2bd1a7c87010/jordan-cox",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F69894.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2138%252F69894.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "8182": {
+    "name": "Donovan Ferreira",
+    "source": "https://www.iplt20.com/players/b43efb1e-d925-45c4-b1b4-1c28b51c377d/donovan-ferreira",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68473.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "8580": {
+    "name": "Yudhvir Singh",
+    "source": "https://www.iplt20.com/players/4b2a7361-7cdb-43fc-9692-f41284235064/yudhvir-singh-charak",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F72710.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "8746": {
+    "name": "Vaibhav Arora",
+    "source": "https://www.iplt20.com/players/57bf865d-08aa-4de5-a208-8a46c5079817/vaibhav-arora",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F72965.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F72965.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "20005": {
+    "name": "Arshad Khan",
+    "source": "https://www.iplt20.com/players/8a2833b0-63de-40e2-b6b9-d155205e232f/arshad-khan",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F74055.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2879%252F74055.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "23311": {
+    "name": "Jacob Bethell",
+    "source": "https://www.iplt20.com/players/14c3c843-ed5a-4e29-985b-d54e349bf411/jacob-bethell",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F73907.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2138%252F73907.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "24475": {
+    "name": "Rehan Ahmed",
+    "source": "https://www.iplt20.com/players/7ea9d1e7-564d-4d8d-ab0a-fd0b4c8faa13/rehan-ahmed",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F74536.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1396%252F74536.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "25139": {
+    "name": "Shubham Dubey",
+    "source": "https://www.iplt20.com/players/8cf71e88-c634-4d40-93cf-0f68c50288f3/shubham-dubey",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F74047.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "25213": {
+    "name": "Dewald Brevis",
+    "source": "https://www.iplt20.com/players/1f8498f3-a468-43f6-b7aa-33a8a5700440/dewald-brevis",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F75144.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1622%252F75144.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "25669": {
+    "name": "Priyansh Arya",
+    "source": "https://www.iplt20.com/players/0764b948-a2b4-4c82-9455-4fb2665e844b/priyansh-arya",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F75656.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2040%252F75656.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "25679": {
+    "name": "Salil Arora",
+    "source": "https://www.iplt20.com/players/ad11199e-4338-4465-9e80-695739df1bd9/salil-arora",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F72140.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F72140.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "26663": {
+    "name": "Kwena Maphaka",
+    "source": "https://www.iplt20.com/players/d2d60aff-246c-44fa-973f-e036b63071e2/kwena-maphaka",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F76217.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
   "26834": {
     "name": "Raj Bawa",
     "source": "https://www.iplt20.com/players/e7643ddf-c3b3-4531-845e-3395b0243e9b/raj-bawa",
@@ -420,11 +359,11 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "43917": {
-    "name": "Krish Bhagat",
-    "source": "https://www.iplt20.com/players/ec280c77-b2ea-428a-9863-69f71c25e788/krish-bhagat",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F87066.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1854%252F87066.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "27970": {
+    "name": "Gurnoor Brar",
+    "source": "https://www.iplt20.com/players/d32a4110-c635-4f26-9388-b5391d8577da/gurnoor-brar",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F76164.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2879%252F76164.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
@@ -436,11 +375,86 @@
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   },
-  "7325": {
-    "name": "Harpreet Brar",
-    "source": "https://www.iplt20.com/players/f949b20c-b97f-4924-8e2d-72befa24a2f4/harpreet-brar",
-    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F69782.png&brand=ipl&fallback=fallback-player-men",
-    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2040%252F69782.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+  "41503": {
+    "name": "Yash Punja",
+    "source": "https://www.iplt20.com/players/64cded09-418c-4b39-a1bb-590d66032d45/yash-punja",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F92045.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "43917": {
+    "name": "Krish Bhagat",
+    "source": "https://www.iplt20.com/players/ec280c77-b2ea-428a-9863-69f71c25e788/krish-bhagat",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F87066.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1854%252F87066.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "43965": {
+    "name": "Emanjot Singh Chahal",
+    "source": "https://www.iplt20.com/players/02c3d48a-5f7d-4854-94c5-946bd48ea26b/emanjot-singh-chahal",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87006.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "45749": {
+    "name": "Mukul Choudhary",
+    "source": "https://www.iplt20.com/players/54396700-51d6-44c3-896d-e9356d504507/mukul-choudhary",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F79805.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2880%252F79805.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "48557": {
+    "name": "Vignesh Puthur",
+    "source": "https://www.iplt20.com/players/b91c2efe-3c0b-4f84-b5aa-c3f628414481/vignesh-puthur",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87852.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "50284": {
+    "name": "Vaibhav Sooryavanshi",
+    "source": "https://www.iplt20.com/players/01e5004b-fa01-4450-8903-5009dbf1787b/vaibhav-sooryavanshi",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F83313.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "58135": {
+    "name": "Tejasvi Dahiya",
+    "source": "https://www.iplt20.com/players/2a9353ee-f76e-445c-ad2f-5fdfc0444c7f/tejasvi-dahiya",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F86769.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1873%252F86769.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "60700": {
+    "name": "Ravi Singh",
+    "source": "https://www.iplt20.com/players/48904fc9-0f07-4acd-8988-e83d6070dc97/ravi-singh",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F86608.png&brand=ipl",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "63497": {
+    "name": "RS Ambrish",
+    "source": "https://www.iplt20.com/players/8bbcc84c-f7cd-43ea-af3b-3ed0b400924d/rs-ambrish",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F90360.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1153%252F90360.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "66540": {
+    "name": "Kanishk Chouhan",
+    "source": "https://www.iplt20.com/players/b274321a-626c-42b4-bf21-f629c4a87a6c/kanishk-chouhan",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F91255.png&brand=ipl&fallback=fallback-player-men",
+    "previewUrl": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F2138%252F91255.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+    "use": "private_development_only",
+    "redistribution_permission": "unverified"
+  },
+  "67036": {
+    "name": "Brijesh Sharma",
+    "source": "https://www.iplt20.com/players/718b6df9-e6c1-4c48-94e7-fbc4f32584ac/brijesh-sharma",
+    "url": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F90896.png&brand=ipl",
     "use": "private_development_only",
     "redistribution_permission": "unverified"
   }

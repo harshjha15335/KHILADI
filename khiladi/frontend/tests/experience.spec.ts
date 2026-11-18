@@ -162,8 +162,15 @@ test("rankings and analytic routes retain nonempty real records", async ({
     await expect(
       page.getByText("Something went wrong", { exact: true }),
     ).toHaveCount(0);
-    if (["rankings", "batting-intel", "bowling-intel"].includes(route))
+    if (route === "rankings") {
+      // Accepted D20 is private. A public-shell test must not demand or
+      // fabricate a public rankings table.
+      await expect(page.locator("main")).toContainText(
+        /private|Unlock the private service/i,
+      );
+    } else if (["batting-intel", "bowling-intel"].includes(route)) {
       await expect(page.locator("tbody tr").first()).toBeVisible();
+    }
   }
 });
 
@@ -204,15 +211,16 @@ test("route cleanup prevents duplicated cursors and scroll timelines", async ({
   await expect(page.locator("#khiladi-diamond-cursor")).toHaveCount(1);
 });
 
-test("ranked players can open and close profiles entirely by keyboard", async ({
+test("database players can open and close their Royal profile by keyboard", async ({
   page,
 }) => {
-  await page.goto("/#rankings");
-  const player = page.locator("tbody button").first();
+  await page.goto("/#database");
+  await page.getByRole("searchbox").fill("Jofra Archer");
+  const player = page.getByRole("button", { name: "Inspect Jofra Archer" });
   await player.focus();
   await page.keyboard.press("Enter");
-  await expect(page.locator(".profile-dialog")).toBeVisible();
+  await expect(page.locator(".royal-dialog[open]")).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page.locator(".profile-dialog")).not.toBeVisible();
+  await expect(page.locator(".royal-dialog")).toHaveCount(0);
   await expect(player).toBeFocused();
 });

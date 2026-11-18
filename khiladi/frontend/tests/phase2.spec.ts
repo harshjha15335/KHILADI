@@ -147,7 +147,7 @@ test("bowling and pressure labels match preserved data definitions", async ({
   ).toBeVisible();
   await page.goto("/#pressure-lab");
   await expect(page.getByText("Not estimated", { exact: true })).toBeVisible();
-  await expect(page.getByText("≥ 1.80 LI", { exact: true })).toBeVisible();
+  await expect(page.getByText("≥ 1.80 heuristic index", { exact: true })).toBeVisible();
   await expect(page.locator("main")).not.toContainText(
     /swings exponentially|Win Prob Swing/,
   );
@@ -165,7 +165,7 @@ for (const [width, height] of [
     await ready(page);
     for (const selector of [
       ".hero-chapter",
-      ".heritage-composition",
+      ".heritage-chapter",
       ".quiz-chapter",
     ]) {
       await page.locator(selector).scrollIntoViewIfNeeded();
@@ -181,26 +181,15 @@ for (const [width, height] of [
     await page.keyboard.press("Escape");
   });
 
-test("ranking downloads, replay and changed comparison remain functional", async ({
+test("private D20 rankings remain locked while legacy replay and comparison work", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/#rankings");
-  for (const tab of ["Batters", "Bowlers"]) {
-    await page
-      .getByRole("button", { name: `Top 10 ${tab} Under Pressure` })
-      .click();
-    const download = page.waitForEvent("download");
-    await page.getByRole("button", { name: `Export ${tab} CSV` }).click();
-    const file = await download;
-    expect(file.suggestedFilename()).toContain(tab.toLowerCase());
-    const stream = await file.createReadStream();
-    const chunks: Buffer[] = [];
-    for await (const chunk of stream!) chunks.push(chunk);
-    expect(Buffer.concat(chunks).toString().trim().split(/\r?\n/)).toHaveLength(
-      11,
-    );
-  }
+  await expect(page.locator("main")).toContainText(
+    /private|Unlock the private service/i,
+  );
+  await expect(page.locator("main tbody tr")).toHaveCount(0);
   await page.goto("/#pressure-lab");
   await page.getByRole("button", { name: "Reset to Ball 1" }).click();
   await page.getByRole("button", { name: "PLAY REPLAY", exact: true }).click();
@@ -218,10 +207,6 @@ test("ranking downloads, replay and changed comparison remain functional", async
   await page
     .getByRole("combobox", { name: "Select player B" })
     .selectOption("2411");
-  await expect(
-    page.getByRole("heading", { name: "Jofra Archer" }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("heading", { name: "Sandeep Sharma" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Jofra Archer" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Sandeep Sharma" })).toBeVisible();
 });

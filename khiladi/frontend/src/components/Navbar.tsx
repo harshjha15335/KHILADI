@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 const destinations = [
   ["home", "Home"],
   ["database", "Explore players"],
+  ["data-explorer", "Explore the data"],
   ["rankings", "The top ten"],
   ["pressure-lab", "Pressure Lab"],
   ["comparison", "Compare players"],

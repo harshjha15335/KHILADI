@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { approvedMoments } from "../utils/media";
 import { gsap, useGSAP } from "../utils/motion";
 import { CinematicVideo } from "./CinematicVideo";
+import { OfficialRoyalsVideo } from "./OfficialRoyalsVideo";
 export const RoyalsMoments: React.FC = () => {
   const root = useRef<HTMLElement>(null);
   const [active, setActive] = useState(0);
@@ -33,7 +34,7 @@ export const RoyalsMoments: React.FC = () => {
     { scope: root },
   );
   // A missing media package does not become another decorative or empty section.
-  if (!approvedMoments.length) return null;
+  if (!approvedMoments.length) return <OfficialRoyalsVideo />;
   return (
     <section
       ref={root}

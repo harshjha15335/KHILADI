@@ -61,8 +61,19 @@ test("image displacement responds to X and Y, keeps text stable and resets on ex
   await page.locator(".intro-root").waitFor();
   await page.keyboard.press("Escape");
   await page.getByRole("searchbox").fill("Jofra Archer");
-  const surface = page.locator(".discovery-photo");
-  await surface.scrollIntoViewIfNeeded();
+  // The editorial strip is intentionally a continuously moving marquee.
+  // Scroll the stable section into view, then focus the actual player to
+  // pause motion before measuring its responsive shader/warp surface.
+  await page.locator(".editorial-player-track").scrollIntoViewIfNeeded();
+  const player = page
+    .locator(".editorial-track-group")
+    .first()
+    .locator(".editorial-player:has(.warp-surface img)")
+    .first();
+  await expect(player).toBeVisible();
+  await player.focus();
+  const surface = player.locator(".warp-surface");
+  await expect(surface).toBeVisible();
   const bounds = await surface.boundingBox();
   const snapshot = () =>
     surface.evaluate((e) => ({
@@ -99,7 +110,7 @@ test("image displacement responds to X and Y, keeps text stable and resets on ex
   const diagonal = await snapshot();
   expect(Math.abs(diagonal.x - vertical.x)).toBeGreaterThan(30);
   expect(diagonal.filter).toContain("khiladi-warp");
-  await expect(page.locator(".discovery-open strong")).toHaveCSS(
+  await expect(page.locator(".discovery-player .pc-preview-name")).toHaveCSS(
     "filter",
     "none",
   );
