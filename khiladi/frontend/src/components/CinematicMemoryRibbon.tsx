@@ -84,7 +84,7 @@ export function CinematicMemoryRibbon() {
     const jobs = PHOTOS.map((photo, index) => new Promise<void>((resolve) => {
       const material = new THREE.MeshBasicMaterial({
         color: 0xffffff, transparent: true, opacity: 0, side: THREE.DoubleSide,
-        depthWrite: false, toneMapped: false,
+        depthWrite: true, toneMapped: false,
       });
       const mesh = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), material);
       mesh.userData.index = index;
@@ -126,7 +126,7 @@ export function CinematicMemoryRibbon() {
       velocities.y = THREE.MathUtils.clamp(pointer.y, -1, 1);
       if (event.pointerType === "touch") return;
       raycaster.setFromCamera(pointer, camera);
-      const hit = raycaster.intersectObjects(meshes, false)[0]?.object.userData.index ?? -1;
+      const hit = raycaster.intersectObjects(meshes.filter(mesh => mesh.visible), false)[0]?.object.userData.index ?? -1;
       if (hit !== lastHit) {
         lastHit = hit;
         setHovered(hit < 0 ? null : hit);
@@ -154,7 +154,7 @@ export function CinematicMemoryRibbon() {
         select(activeRef.current + (dx < 0 ? 1 : -1));
       } else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
         raycaster.setFromCamera(pointer, camera);
-        const hit = raycaster.intersectObjects(meshes, false)[0]?.object.userData.index;
+        const hit = raycaster.intersectObjects(meshes.filter(mesh => mesh.visible), false)[0]?.object.userData.index;
         if (typeof hit === "number") select(hit);
       }
     };
@@ -189,17 +189,18 @@ export function CinematicMemoryRibbon() {
         const relative = ((index - activeRef.current + total + 2) % total) - 2;
         const distance = Math.abs(relative);
         const focus = index === lastHit;
-        const maxWidth = distance === 0 ? 4.3 : distance === 1 ? 3.0 : 2.45;
-        const maxHeight = distance === 0 ? 3.2 : distance === 1 ? 2.75 : 2.05;
+        const maxWidth = distance === 0 ? 4.5 : distance === 1 ? 2.5 : 1.4;
+        const maxHeight = distance === 0 ? 3.15 : distance === 1 ? 3.5 : 1.95;
         const aspect = (mesh.userData.ratio as number | undefined) ?? 1.4;
         const width = Math.min(maxWidth, maxHeight * aspect);
         const height = width / aspect;
-        const depth = distance === 0 ? 0.9 : distance === 1 ? -0.12 : -0.85;
+        const depth = distance === 0 ? 1.05 : distance === 1 ? -0.52 : -1.15;
         const targetZ = depth + (focus ? 0.46 : 0);
-        const targetOpacity = mesh.material.map ? (distance === 2 ? 0.46 : 1) : 0;
+        // Only three clear photographs are shown, never semi-transparent ghost images.
+        const targetOpacity = mesh.material.map ? (distance === 2 ? 0 : 1) : 0;
         const damping = 6;
-        mesh.position.x = THREE.MathUtils.damp(mesh.position.x, relative * 2.68 + velocities.x * 0.07, damping, 1 / 60);
-        mesh.position.y = THREE.MathUtils.damp(mesh.position.y, (relative % 2 ? -0.08 : 0.12) - sceneShift + velocities.y * 0.055, damping, 1 / 60);
+        mesh.position.x = THREE.MathUtils.damp(mesh.position.x, relative * 2.98 + velocities.x * 0.07, damping, 1 / 60);
+        mesh.position.y = THREE.MathUtils.damp(mesh.position.y, (distance ? -0.02 : 0.02) - sceneShift + velocities.y * 0.055, damping, 1 / 60);
         mesh.position.z = THREE.MathUtils.damp(mesh.position.z, targetZ, damping, 1 / 60);
         mesh.rotation.y = THREE.MathUtils.damp(mesh.rotation.y, -relative * 0.17, damping, 1 / 60);
         mesh.rotation.z = THREE.MathUtils.damp(mesh.rotation.z, relative * -0.022, damping, 1 / 60);
@@ -207,6 +208,8 @@ export function CinematicMemoryRibbon() {
         mesh.scale.y = THREE.MathUtils.damp(mesh.scale.y, height * (focus ? 1.035 : 1), damping, 1 / 60);
         mesh.material.opacity = THREE.MathUtils.damp(mesh.material.opacity, targetOpacity, damping, 1 / 60);
         mesh.renderOrder = 10 - distance + (focus ? 10 : 0);
+        // Hidden panels must not intercept click/hover raycasts.
+        mesh.visible = mesh.material.opacity > 0.03;
       }
       renderer.render(scene, camera);
       frame = requestAnimationFrame(animate);
