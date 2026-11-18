@@ -24,7 +24,7 @@ export function CinematicMemoryRibbon() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [webglReady, setWebglReady] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const [compact, setCompact] = useState(() => window.matchMedia("(max-width: 760px)").matches);
+  const [compact, setCompact] = useState(() => window.matchMedia("(max-width: 899px)").matches);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
