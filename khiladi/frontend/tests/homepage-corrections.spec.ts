@@ -61,7 +61,7 @@ test("image displacement responds to X and Y, keeps text stable and resets on ex
   await page.locator(".intro-root").waitFor();
   await page.keyboard.press("Escape");
   await page.getByRole("searchbox").fill("Jofra Archer");
-  const surface = page.locator(".discovery-photo");
+  const surface = page.locator(".editorial-player .warp-surface:has(img)").first();
   await surface.scrollIntoViewIfNeeded();
   const bounds = await surface.boundingBox();
   const snapshot = () =>
@@ -99,7 +99,7 @@ test("image displacement responds to X and Y, keeps text stable and resets on ex
   const diagonal = await snapshot();
   expect(Math.abs(diagonal.x - vertical.x)).toBeGreaterThan(30);
   expect(diagonal.filter).toContain("khiladi-warp");
-  await expect(page.locator(".discovery-open strong")).toHaveCSS(
+  await expect(page.locator(".discovery-player .pc-preview-name")).toHaveCSS(
     "filter",
     "none",
   );
