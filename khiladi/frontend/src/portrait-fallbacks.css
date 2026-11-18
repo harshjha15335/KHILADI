@@ -28,3 +28,14 @@
 .pressure-duel>.pressure-duel__neutral{display:block;width:100px;height:125px;
  flex:0 0 100px;object-fit:cover;border-radius:12px}
 @media(max-width:650px){.pressure-duel>.pressure-duel__neutral{width:90px;flex-basis:90px}}
+
+/* Keep the user's exact square placeholder centered in all layouts. */
+.quiz-figure .quiz-neutral-player{display:block;width:100%;height:100%;object-fit:contain;
+ background:#DADDE2;border-radius:9px}
+.gallery-photo-backup .gallery-neutral-avatar{display:block;width:100%;height:100%;object-fit:contain;
+ background:#DADDE2}
+.editorial-track-neutral{width:100%;height:100%;object-fit:contain;display:block;background:#DADDE2}
+.kb-mini-portrait{position:relative;isolation:isolate}
+.kb-mini-portrait>.kb-neutral-avatar{display:block;z-index:-1}
+.kb-mini-portrait>img{z-index:2}
+.rank-filmstrip__portrait>.rank-neutral-avatar{object-fit:contain;background:#DADDE2}
