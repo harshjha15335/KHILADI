@@ -70,3 +70,11 @@ html{scroll-padding-top:var(--kh-fixed-nav-clearance);}
 @media(prefers-reduced-motion:reduce){
  .discovery-pagination button,.pc-ranking-preview>button,.pc-profile-actions button{transition:none!important}
 }
+
+/* Opal is the intentional light-glass variant: keep its legend readable. */
+.discovery-player .iridescent-glass--opal,
+.discovery-player .iridescent-glass--opal:hover,
+.discovery-player .iridescent-glass--opal .iridescent-glass__label{
+ color:#221b2b;
+ text-shadow:0 1px 0 #fff8;
+}
