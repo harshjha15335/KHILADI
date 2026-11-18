@@ -152,6 +152,44 @@ for(const [label,root] of [["preview",KHILADI_BASE_URL],["production",KHILADI_PR
 }
 await fs.writeFile(path.join(output,"motion-results.json"),JSON.stringify(motion,null,2));
 
+// Verify the scroll motion geometrically, not by counting animation hooks.
+const scrollProof=[];
+{
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ try{
+  await page.goto(KHILADI_BASE_URL+"home",{waitUntil:"domcontentloaded"});
+  await page.keyboard.press("Escape");
+  await page.waitForTimeout(1150);
+  for(const fraction of [0,.2,.4,.6,.8,.96]){
+   await page.evaluate(f=>scrollTo(0,Math.floor(innerHeight*f)),fraction);
+   await page.waitForTimeout(450);
+   const geometry=await page.evaluate(()=>{
+    const centre=document.querySelector(".hero-photo-slot--centre");
+    const outer=document.querySelector(".hero-photo-slot--left-top");
+    const rc=centre?.getBoundingClientRect();
+    return {y:scrollY,centreWidth:rc?.width,centreHeight:rc?.height,
+      centreTransform:centre?getComputedStyle(centre).transform:null,
+      satelliteOpacity:outer?getComputedStyle(outer).opacity:null,
+      satelliteTransform:outer?getComputedStyle(outer).transform:null};
+   });
+   const file=path.join(output,"hero-scroll-"+Math.round(fraction*100)+".png");
+   await page.screenshot({path:file});
+   scrollProof.push({...geometry,fraction,file});
+  }
+  const rail=page.locator(".home-player-grid");
+  await rail.scrollIntoViewIfNeeded();
+  for(const dy of [0,250,500]){
+   await page.evaluate(n=>scrollBy(0,n),dy);
+   await page.waitForTimeout(600);
+   const data=await rail.evaluate(el=>({left:el.scrollLeft,max:el.scrollWidth-el.clientWidth}));
+   const file=path.join(output,"player-rail-scroll-"+dy+".png");
+   await page.screenshot({path:file});
+   scrollProof.push({scene:"player-rail",dy,...data,file});
+  }
+ }catch(error){scrollProof.push({error:String(error)})}
+ await page.close();
+}
+await fs.writeFile(path.join(output,"scroll-motion-proof.json"),JSON.stringify(scrollProof,null,2));
 const urls=[
   "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl&fallback=fallback-player-men",
   "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68314.png&brand=ipl",
