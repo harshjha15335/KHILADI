@@ -55,21 +55,89 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
     () => {
       const media = gsap.matchMedia();
       media.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.fromTo(
-          ".journey-image",
-          { yPercent: -8, scale: 1.12 },
-          {
-            yPercent: 8,
-            scale: 1,
-            ease: "none",
+        const hero = root.current?.querySelector<HTMLElement>(".hero-chapter");
+        const centre = hero?.querySelector<HTMLElement>(".hero-photo-slot--centre");
+        if (hero && centre && window.innerWidth >= 900) {
+          const heroTimeline = gsap.timeline({
             scrollTrigger: {
-              trigger: ".journey-chapter",
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 0.5,
+              trigger: hero, start: "top top", end: "+=105%",
+              scrub: 0.8, pin: true, anticipatePin: 1, invalidateOnRefresh: true,
             },
-          },
-        );
+          });
+          heroTimeline
+            .to(".hero-copy", { yPercent: -43, autoAlpha: 0, duration: .38 }, 0)
+            .to(".hero-bottom-line", { opacity: 0, duration: .26 }, .04)
+            .to(".hero-photo-slot:not(.hero-photo-slot--centre)", {
+              x: (i: number) => (i % 2 ? 1 : -1) * (140 + i * 55),
+              y: (i: number) => (i < 2 ? -120 : 140),
+              autoAlpha: 0, scale: .7, duration: .58, ease: "power2.inOut",
+            }, .08)
+            .to(centre, {
+              x: () => {
+                const rect = centre.getBoundingClientRect();
+                return (window.innerWidth - rect.width) / 2 - rect.left;
+              },
+              y: () => {
+                const rect = centre.getBoundingClientRect();
+                return (window.innerHeight - rect.height) / 2 - rect.top;
+              },
+              scale: () => {
+                const rect = centre.getBoundingClientRect();
+                return Math.max(window.innerWidth / Math.max(1, rect.width),
+                  window.innerHeight / Math.max(1, rect.height)) * 1.12;
+              },
+              rotation: 0, borderRadius: 0, ease: "none", duration: .72,
+            }, .17)
+            .to(".hero-collage", { autoAlpha: 0, duration: .19 }, .82)
+            .to(".hero-chapter", { backgroundColor: "#fff0f6", duration: .3 }, .73);
+        }
+
+        const showcase = root.current?.querySelector<HTMLElement>(".home-player-showcase");
+        const track = showcase?.querySelector<HTMLElement>(".home-player-grid");
+        if (showcase && track && window.innerWidth >= 900) {
+          const distance = () => {
+            const style = getComputedStyle(showcase);
+            const usable = showcase.clientWidth -
+              parseFloat(style.paddingLeft || "0") -
+              parseFloat(style.paddingRight || "0");
+            return Math.max(0, track.scrollWidth - usable);
+          };
+          if (distance() > 50) {
+            gsap.to(track, {
+              x: () => -distance(), ease: "none",
+              scrollTrigger: {
+                trigger: showcase, start: "top top",
+                end: () => "+=" + Math.max(450, distance()),
+                scrub: .85, pin: true, anticipatePin: 1,
+                invalidateOnRefresh: true,
+              },
+            });
+          }
+        }
+
+        gsap.utils.toArray<HTMLElement>(".heritage-shot").forEach((shot, i) => {
+          gsap.fromTo(shot,
+            { y: i % 2 ? 85 : -85, scale: .85, opacity: .25 },
+            { y: 0, scale: 1, opacity: 1, ease: "none",
+              scrollTrigger: {
+                trigger: ".heritage-photo-composition",
+                start: "top 93%", end: "center 50%", scrub: .6,
+                invalidateOnRefresh: true,
+              },
+            });
+          if (i === 2) {
+            const img = shot.querySelector("img");
+            if (img) gsap.fromTo(img,
+              { scale: 1.16, filter: "grayscale(1)" },
+              { scale: 1, filter: "grayscale(0)", ease: "none",
+                scrollTrigger: {
+                  trigger: ".heritage-photo-composition",
+                  start: "top 90%", end: "bottom 40%", scrub: .65,
+                },
+              });
+          }
+        });
+
         gsap.from(".story-line", {
           yPercent: 80,
           opacity: 1,
@@ -82,29 +150,6 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             scrub: true,
           },
         });
-        gsap.utils.toArray<HTMLElement>(".archive-photo").forEach((photo, i) =>
-          gsap.fromTo(
-            photo,
-            {
-              y: 120 + (i % 3) * 65,
-              rotation: (i % 2 ? 1 : -1) * 10,
-              opacity: 0.2,
-            },
-            {
-              y: 0,
-              rotation: (i % 2 ? 1 : -1) * 3,
-              opacity: 1,
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".heritage-composition",
-                start: "top 85%",
-                end: "center 55%",
-                scrub: 0.45,
-                invalidateOnRefresh: true,
-              },
-            },
-          ),
-        );
         gsap.utils
           .toArray<HTMLElement>(".quiz-figure-drift")
           .forEach((figure, i) => {
