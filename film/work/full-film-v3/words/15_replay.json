@@ -1,0 +1,256 @@
+{
+  "segments": [
+    {
+      "start": 0.1,
+      "end": 5.685,
+      "text": "Finally, your report's replay reproduces all twenty rankings and passes forty-one checks.",
+      "words": [
+        {
+          "word": "Finally,",
+          "start": 0.1,
+          "end": 0.561,
+          "score": 0.882
+        },
+        {
+          "word": "your",
+          "start": 0.721,
+          "end": 0.881,
+          "score": 0.949
+        },
+        {
+          "word": "report's",
+          "start": 0.921,
+          "end": 1.341,
+          "score": 0.85
+        },
+        {
+          "word": "replay",
+          "start": 1.401,
+          "end": 1.842,
+          "score": 0.91
+        },
+        {
+          "word": "reproduces",
+          "start": 1.882,
+          "end": 2.522,
+          "score": 0.819
+        },
+        {
+          "word": "all",
+          "start": 2.763,
+          "end": 2.903,
+          "score": 0.99
+        },
+        {
+          "word": "twenty",
+          "start": 3.003,
+          "end": 3.303,
+          "score": 0.886
+        },
+        {
+          "word": "rankings",
+          "start": 3.363,
+          "end": 3.844,
+          "score": 0.829
+        },
+        {
+          "word": "and",
+          "start": 4.004,
+          "end": 4.104,
+          "score": 0.829
+        },
+        {
+          "word": "passes",
+          "start": 4.144,
+          "end": 4.564,
+          "score": 0.851
+        },
+        {
+          "word": "forty-one",
+          "start": 4.705,
+          "end": 5.245,
+          "score": 0.841
+        },
+        {
+          "word": "checks.",
+          "start": 5.345,
+          "end": 5.685,
+          "score": 0.963
+        }
+      ]
+    },
+    {
+      "start": 6.266,
+      "end": 7.367,
+      "text": "The code repeats.",
+      "words": [
+        {
+          "word": "The",
+          "start": 6.266,
+          "end": 6.366,
+          "score": 0.975
+        },
+        {
+          "word": "code",
+          "start": 6.426,
+          "end": 6.766,
+          "score": 0.773
+        },
+        {
+          "word": "repeats.",
+          "start": 6.847,
+          "end": 7.367,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 7.827,
+      "end": 9.669,
+      "text": "The statistical limitations stay.",
+      "words": [
+        {
+          "word": "The",
+          "start": 7.827,
+          "end": 7.908,
+          "score": 0.832
+        },
+        {
+          "word": "statistical",
+          "start": 7.928,
+          "end": 8.568,
+          "score": 0.877
+        },
+        {
+          "word": "limitations",
+          "start": 8.628,
+          "end": 9.289,
+          "score": 0.9
+        },
+        {
+          "word": "stay.",
+          "start": 9.349,
+          "end": 9.669,
+          "score": 0.994
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Finally,",
+      "start": 0.1,
+      "end": 0.561,
+      "score": 0.882
+    },
+    {
+      "word": "your",
+      "start": 0.721,
+      "end": 0.881,
+      "score": 0.949
+    },
+    {
+      "word": "report's",
+      "start": 0.921,
+      "end": 1.341,
+      "score": 0.85
+    },
+    {
+      "word": "replay",
+      "start": 1.401,
+      "end": 1.842,
+      "score": 0.91
+    },
+    {
+      "word": "reproduces",
+      "start": 1.882,
+      "end": 2.522,
+      "score": 0.819
+    },
+    {
+      "word": "all",
+      "start": 2.763,
+      "end": 2.903,
+      "score": 0.99
+    },
+    {
+      "word": "twenty",
+      "start": 3.003,
+      "end": 3.303,
+      "score": 0.886
+    },
+    {
+      "word": "rankings",
+      "start": 3.363,
+      "end": 3.844,
+      "score": 0.829
+    },
+    {
+      "word": "and",
+      "start": 4.004,
+      "end": 4.104,
+      "score": 0.829
+    },
+    {
+      "word": "passes",
+      "start": 4.144,
+      "end": 4.564,
+      "score": 0.851
+    },
+    {
+      "word": "forty-one",
+      "start": 4.705,
+      "end": 5.245,
+      "score": 0.841
+    },
+    {
+      "word": "checks.",
+      "start": 5.345,
+      "end": 5.685,
+      "score": 0.963
+    },
+    {
+      "word": "The",
+      "start": 6.266,
+      "end": 6.366,
+      "score": 0.975
+    },
+    {
+      "word": "code",
+      "start": 6.426,
+      "end": 6.766,
+      "score": 0.773
+    },
+    {
+      "word": "repeats.",
+      "start": 6.847,
+      "end": 7.367,
+      "score": 0.945
+    },
+    {
+      "word": "The",
+      "start": 7.827,
+      "end": 7.908,
+      "score": 0.832
+    },
+    {
+      "word": "statistical",
+      "start": 7.928,
+      "end": 8.568,
+      "score": 0.877
+    },
+    {
+      "word": "limitations",
+      "start": 8.628,
+      "end": 9.289,
+      "score": 0.9
+    },
+    {
+      "word": "stay.",
+      "start": 9.349,
+      "end": 9.669,
+      "score": 0.994
+    }
+  ],
+  "_source_audio_sha256": "a57a464f736af875369e0f276840be442daa75bdc2b7fbe2aba725864d1ceea2"
+}

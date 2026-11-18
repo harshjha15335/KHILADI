@@ -1,0 +1,162 @@
+[
+  {
+    "id": "01_notebook",
+    "frames": 360,
+    "duration": 12.0,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/01_notebook.wav",
+    "audio_duration": 10.709333333333333,
+    "lead_seconds": 0.1,
+    "start_frame": 0,
+    "start_seconds": 0.0
+  },
+  {
+    "id": "02_hackathon",
+    "frames": 382,
+    "duration": 12.733333333333333,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/02_hackathon.wav",
+    "audio_duration": 12.352,
+    "lead_seconds": 0.08,
+    "start_frame": 360,
+    "start_seconds": 12.0
+  },
+  {
+    "id": "03_clean",
+    "frames": 393,
+    "duration": 13.1,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/03_clean.wav",
+    "audio_duration": 12.714666666666666,
+    "lead_seconds": 0.08,
+    "start_frame": 742,
+    "start_seconds": 24.733333333333334
+  },
+  {
+    "id": "04_preball",
+    "frames": 308,
+    "duration": 10.266666666666667,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/04_preball.wav",
+    "audio_duration": 9.898666666666667,
+    "lead_seconds": 0.08,
+    "start_frame": 1135,
+    "start_seconds": 37.833333333333336
+  },
+  {
+    "id": "05_pressure",
+    "frames": 358,
+    "duration": 11.933333333333334,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/05_pressure.wav",
+    "audio_duration": 11.562666666666667,
+    "lead_seconds": 0.08,
+    "start_frame": 1443,
+    "start_seconds": 48.1
+  },
+  {
+    "id": "06_hybrid",
+    "frames": 434,
+    "duration": 14.466666666666667,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/06_hybrid.wav",
+    "audio_duration": 14.101333333333333,
+    "lead_seconds": 0.08,
+    "start_frame": 1801,
+    "start_seconds": 60.03333333333333
+  },
+  {
+    "id": "07_expected",
+    "frames": 385,
+    "duration": 12.833333333333334,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/07_expected.wav",
+    "audio_duration": 12.458666666666666,
+    "lead_seconds": 0.08,
+    "start_frame": 2235,
+    "start_seconds": 74.5
+  },
+  {
+    "id": "08_adjust",
+    "frames": 429,
+    "duration": 14.3,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/08_adjust.wav",
+    "audio_duration": 13.909333333333333,
+    "lead_seconds": 0.08,
+    "start_frame": 2620,
+    "start_seconds": 87.33333333333333
+  },
+  {
+    "id": "09_shrink",
+    "frames": 365,
+    "duration": 12.166666666666666,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/09_shrink.wav",
+    "audio_duration": 11.776,
+    "lead_seconds": 0.08,
+    "start_frame": 3049,
+    "start_seconds": 101.63333333333334
+  },
+  {
+    "id": "10_delta",
+    "frames": 435,
+    "duration": 14.5,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/10_delta.wav",
+    "audio_duration": 14.122666666666667,
+    "lead_seconds": 0.08,
+    "start_frame": 3414,
+    "start_seconds": 113.8
+  },
+  {
+    "id": "11_holdout",
+    "frames": 431,
+    "duration": 14.366666666666667,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/11_holdout.wav",
+    "audio_duration": 13.994666666666667,
+    "lead_seconds": 0.08,
+    "start_frame": 3849,
+    "start_seconds": 128.3
+  },
+  {
+    "id": "12_uncertainty",
+    "frames": 407,
+    "duration": 13.566666666666666,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/12_uncertainty.wav",
+    "audio_duration": 13.205333333333334,
+    "lead_seconds": 0.08,
+    "start_frame": 4280,
+    "start_seconds": 142.66666666666666
+  },
+  {
+    "id": "13_sensitivity",
+    "frames": 328,
+    "duration": 10.933333333333334,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/13_sensitivity.wav",
+    "audio_duration": 10.56,
+    "lead_seconds": 0.08,
+    "start_frame": 4687,
+    "start_seconds": 156.23333333333332
+  },
+  {
+    "id": "14_shortlist",
+    "frames": 418,
+    "duration": 13.933333333333334,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/14_shortlist.wav",
+    "audio_duration": 13.546666666666667,
+    "lead_seconds": 0.08,
+    "start_frame": 5015,
+    "start_seconds": 167.16666666666666
+  },
+  {
+    "id": "15_replay",
+    "frames": 304,
+    "duration": 10.133333333333333,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/15_replay.wav",
+    "audio_duration": 9.749333333333333,
+    "lead_seconds": 0.08,
+    "start_frame": 5433,
+    "start_seconds": 181.1
+  },
+  {
+    "id": "16_end",
+    "frames": 255,
+    "duration": 8.5,
+    "audio": "/workspace/KHILADI-film/film/work/full-film-v3/narration/16_end.wav",
+    "audio_duration": 8.128,
+    "lead_seconds": 0.08,
+    "start_frame": 5737,
+    "start_seconds": 191.23333333333332
+  }
+]

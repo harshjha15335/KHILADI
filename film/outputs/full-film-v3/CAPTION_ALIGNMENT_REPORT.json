@@ -1,0 +1,119 @@
+{
+  "method": "WhisperX forced alignment against known approved narration text; not independent ASR",
+  "scenes": [
+    {
+      "id": "01_notebook",
+      "words": 29,
+      "phrases": 9,
+      "minimum_word_score": 0.75,
+      "missing_word_times": 0
+    },
+    {
+      "id": "02_hackathon",
+      "words": 24,
+      "phrases": 9,
+      "minimum_word_score": 0.708,
+      "missing_word_times": 0
+    },
+    {
+      "id": "03_clean",
+      "words": 28,
+      "phrases": 10,
+      "minimum_word_score": 0.668,
+      "missing_word_times": 0
+    },
+    {
+      "id": "04_preball",
+      "words": 26,
+      "phrases": 8,
+      "minimum_word_score": 0.754,
+      "missing_word_times": 0
+    },
+    {
+      "id": "05_pressure",
+      "words": 25,
+      "phrases": 8,
+      "minimum_word_score": 0.737,
+      "missing_word_times": 0
+    },
+    {
+      "id": "06_hybrid",
+      "words": 26,
+      "phrases": 9,
+      "minimum_word_score": 0.743,
+      "missing_word_times": 0
+    },
+    {
+      "id": "07_expected",
+      "words": 27,
+      "phrases": 8,
+      "minimum_word_score": 0.64,
+      "missing_word_times": 0
+    },
+    {
+      "id": "08_adjust",
+      "words": 34,
+      "phrases": 9,
+      "minimum_word_score": 0.5,
+      "missing_word_times": 0
+    },
+    {
+      "id": "09_shrink",
+      "words": 24,
+      "phrases": 8,
+      "minimum_word_score": 0.668,
+      "missing_word_times": 0
+    },
+    {
+      "id": "10_delta",
+      "words": 32,
+      "phrases": 10,
+      "minimum_word_score": 0.564,
+      "missing_word_times": 0
+    },
+    {
+      "id": "11_holdout",
+      "words": 25,
+      "phrases": 8,
+      "minimum_word_score": 0.7,
+      "missing_word_times": 0
+    },
+    {
+      "id": "12_uncertainty",
+      "words": 26,
+      "phrases": 9,
+      "minimum_word_score": 0.739,
+      "missing_word_times": 0
+    },
+    {
+      "id": "13_sensitivity",
+      "words": 27,
+      "phrases": 8,
+      "minimum_word_score": 0.651,
+      "missing_word_times": 0
+    },
+    {
+      "id": "14_shortlist",
+      "words": 26,
+      "phrases": 9,
+      "minimum_word_score": 0.661,
+      "missing_word_times": 0
+    },
+    {
+      "id": "15_replay",
+      "words": 19,
+      "phrases": 6,
+      "minimum_word_score": 0.773,
+      "missing_word_times": 0
+    },
+    {
+      "id": "16_end",
+      "words": 25,
+      "phrases": 7,
+      "minimum_word_score": 0.513,
+      "missing_word_times": 0
+    }
+  ],
+  "events": 135,
+  "full_film_frames": 5992
+}

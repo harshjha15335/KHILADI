@@ -1,0 +1,20 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.27,Main,,0,0,0,,So you {\c&H00FFFF&}resample{\c&HFFFFFF&} whole
+Dialogue: 0,0:00:01.32,0:00:02.96,Main,,0,0,0,,{\c&H00FFFF&}matches,{\c&HFFFFFF&} seven hundred and
+Dialogue: 0,0:00:02.98,0:00:03.84,Main,,0,0,0,,fifty {\c&H00FFFF&}times.{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.34,0:00:05.50,Main,,0,0,0,,Confidence {\c&H00FFFF&}intervals.{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.98,0:00:07.10,Main,,0,0,0,,Rank {\c&H00FFFF&}distributions.{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.62,0:00:09.18,Main,,0,0,0,,A top-ten {\c&H00FFFF&}bootstrap{\c&HFFFFFF&} rate
+Dialogue: 0,0:00:09.24,0:00:10.32,Main,,0,0,0,,measures {\c&H00FFFF&}conditional{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.34,0:00:11.66,Main,,0,0,0,,historical {\c&H00FFFF&}stability.{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.08,0:00:13.22,Main,,0,0,0,,It isn't a {\c&H00FFFF&}prophecy.{\c&HFFFFFF&}

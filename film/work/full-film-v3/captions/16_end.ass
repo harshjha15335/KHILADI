@@ -1,0 +1,18 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.14,Main,,0,0,0,,Your {\c&H00FFFF&}notebook{\c&HFFFFFF&} used to
+Dialogue: 0,0:00:01.30,0:00:02.02,Main,,0,0,0,,ask, who {\c&H00FFFF&}would{\c&HFFFFFF&} you
+Dialogue: 0,0:00:02.04,0:00:03.86,Main,,0,0,0,,pick? {\c&H00FFFF&}Khiladi{\c&HFFFFFF&} asks a
+Dialogue: 0,0:00:03.86,0:00:04.64,Main,,0,0,0,,better {\c&H00FFFF&}question.{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.03,0:00:05.92,Main,,0,0,0,,What does the {\c&H00FFFF&}evidence{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.93,0:00:07.48,Main,,0,0,0,,{\c&H00FFFF&}support...{\c&HFFFFFF&} and how sure
+Dialogue: 0,0:00:07.49,0:00:08.02,Main,,0,0,0,,{\c&H00FFFF&}should{\c&HFFFFFF&} you be?

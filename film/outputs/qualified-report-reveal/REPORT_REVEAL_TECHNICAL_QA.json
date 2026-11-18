@@ -1,0 +1,61 @@
+{
+  "checks": {
+    "size": true,
+    "fps": true,
+    "frames": true,
+    "duration": true,
+    "h264": true,
+    "yuv420p": true,
+    "silent": true,
+    "full_decode": true
+  },
+  "sha256": "ee202778308c73a080bd89cc8092efdb4c80cdb27df45a823c4ed5805c0ed837",
+  "frames": 300,
+  "duration_seconds": 10.0,
+  "data_checks": {
+    "checks": {
+      "twenty_rows": true,
+      "source_csv_order_preserved": true,
+      "only_buttler_ci_supplied": true,
+      "no_inferred_player_ids": true,
+      "no_portraits": true,
+      "known_unrounded_daryl_fakhar_order_checked": true,
+      "other_exact_ratings_not_invented": true,
+      "svg_field_to_player_row_positions_checked": true
+    },
+    "source_csv": "/workspace/KHILADI-film/film/data/accepted_primary_rankings.csv",
+    "source_sha256": "dffbd0c7a124038cce623d4bb1b5514bd6c0ad8635f8496723eac30553153f3e",
+    "row_count": 20,
+    "batting_order": [
+      "Jos Buttler",
+      "Abhishek Sharma",
+      "Nicholas Pooran",
+      "Tim David",
+      "Yashasvi Jaiswal",
+      "David Miller",
+      "Shashank Singh",
+      "Mohammad Nabi",
+      "Daryl Mitchell",
+      "Fakhar Zaman"
+    ],
+    "bowling_order": [
+      "Jasprit Bumrah",
+      "Sunil Narine",
+      "Abrar Ahmed",
+      "Kuldeep Yadav",
+      "Blessing Muzarabani",
+      "Mohammed Siraj",
+      "Sandeep Sharma",
+      "Mitchell Santner",
+      "Mujeeb Ur Rahman",
+      "Mustafizur Rahman"
+    ],
+    "note": "CSV rank order is authoritative. Only the supplied Daryl/Fakhar near-tie can be checked against exact values here; no unavailable exact ratings, IDs or intervals are inferred. Bootstrap rates are conditional historical stability, not future IPL success."
+  },
+  "limits": [
+    "Technical decoding and source/row checks do not establish final perceived readability or motion approval.",
+    "All20 names and supplied fields are shown; viewers may pause to read every small value.",
+    "No independent analytical pipeline or41 replay checks were rerun.",
+    "No narrator/caption/foley sync is included in this silent insert."
+  ]
+}

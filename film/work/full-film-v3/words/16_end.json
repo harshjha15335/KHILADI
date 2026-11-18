@@ -1,0 +1,328 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 2.242,
+      "text": "Your notebook used to ask, who would you pick?",
+      "words": [
+        {
+          "word": "Your",
+          "start": 0.06,
+          "end": 0.2,
+          "score": 0.805
+        },
+        {
+          "word": "notebook",
+          "start": 0.26,
+          "end": 0.641,
+          "score": 0.817
+        },
+        {
+          "word": "used",
+          "start": 0.761,
+          "end": 0.921,
+          "score": 0.789
+        },
+        {
+          "word": "to",
+          "start": 0.961,
+          "end": 1.021,
+          "score": 0.77
+        },
+        {
+          "word": "ask,",
+          "start": 1.221,
+          "end": 1.421,
+          "score": 0.935
+        },
+        {
+          "word": "who",
+          "start": 1.461,
+          "end": 1.582,
+          "score": 0.824
+        },
+        {
+          "word": "would",
+          "start": 1.622,
+          "end": 1.782,
+          "score": 0.704
+        },
+        {
+          "word": "you",
+          "start": 1.802,
+          "end": 1.902,
+          "score": 0.978
+        },
+        {
+          "word": "pick?",
+          "start": 1.962,
+          "end": 2.242,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 2.703,
+      "end": 4.524,
+      "text": "Khiladi asks a better question.",
+      "words": [
+        {
+          "word": "Khiladi",
+          "start": 2.703,
+          "end": 3.163,
+          "score": 0.742
+        },
+        {
+          "word": "asks",
+          "start": 3.343,
+          "end": 3.624,
+          "score": 0.684
+        },
+        {
+          "word": "a",
+          "start": 3.704,
+          "end": 3.744,
+          "score": 0.513
+        },
+        {
+          "word": "better",
+          "start": 3.784,
+          "end": 4.004,
+          "score": 0.908
+        },
+        {
+          "word": "question.",
+          "start": 4.044,
+          "end": 4.524,
+          "score": 0.805
+        }
+      ]
+    },
+    {
+      "start": 4.945,
+      "end": 7.908,
+      "text": "What does the evidence support... and how sure should you be?",
+      "words": [
+        {
+          "word": "What",
+          "start": 4.945,
+          "end": 5.045,
+          "score": 1.0
+        },
+        {
+          "word": "does",
+          "start": 5.085,
+          "end": 5.225,
+          "score": 0.742
+        },
+        {
+          "word": "the",
+          "start": 5.245,
+          "end": 5.345,
+          "score": 0.773
+        },
+        {
+          "word": "evidence",
+          "start": 5.465,
+          "end": 5.806,
+          "score": 0.965
+        },
+        {
+          "word": "support...",
+          "start": 5.846,
+          "end": 6.346,
+          "score": 0.786
+        },
+        {
+          "word": "and",
+          "start": 6.747,
+          "end": 6.847,
+          "score": 0.973
+        },
+        {
+          "word": "how",
+          "start": 6.907,
+          "end": 7.047,
+          "score": 0.849
+        },
+        {
+          "word": "sure",
+          "start": 7.147,
+          "end": 7.367,
+          "score": 0.736
+        },
+        {
+          "word": "should",
+          "start": 7.407,
+          "end": 7.587,
+          "score": 0.766
+        },
+        {
+          "word": "you",
+          "start": 7.607,
+          "end": 7.728,
+          "score": 0.78
+        },
+        {
+          "word": "be?",
+          "start": 7.768,
+          "end": 7.908,
+          "score": 0.873
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Your",
+      "start": 0.06,
+      "end": 0.2,
+      "score": 0.805
+    },
+    {
+      "word": "notebook",
+      "start": 0.26,
+      "end": 0.641,
+      "score": 0.817
+    },
+    {
+      "word": "used",
+      "start": 0.761,
+      "end": 0.921,
+      "score": 0.789
+    },
+    {
+      "word": "to",
+      "start": 0.961,
+      "end": 1.021,
+      "score": 0.77
+    },
+    {
+      "word": "ask,",
+      "start": 1.221,
+      "end": 1.421,
+      "score": 0.935
+    },
+    {
+      "word": "who",
+      "start": 1.461,
+      "end": 1.582,
+      "score": 0.824
+    },
+    {
+      "word": "would",
+      "start": 1.622,
+      "end": 1.782,
+      "score": 0.704
+    },
+    {
+      "word": "you",
+      "start": 1.802,
+      "end": 1.902,
+      "score": 0.978
+    },
+    {
+      "word": "pick?",
+      "start": 1.962,
+      "end": 2.242,
+      "score": 0.942
+    },
+    {
+      "word": "Khiladi",
+      "start": 2.703,
+      "end": 3.163,
+      "score": 0.742
+    },
+    {
+      "word": "asks",
+      "start": 3.343,
+      "end": 3.624,
+      "score": 0.684
+    },
+    {
+      "word": "a",
+      "start": 3.704,
+      "end": 3.744,
+      "score": 0.513
+    },
+    {
+      "word": "better",
+      "start": 3.784,
+      "end": 4.004,
+      "score": 0.908
+    },
+    {
+      "word": "question.",
+      "start": 4.044,
+      "end": 4.524,
+      "score": 0.805
+    },
+    {
+      "word": "What",
+      "start": 4.945,
+      "end": 5.045,
+      "score": 1.0
+    },
+    {
+      "word": "does",
+      "start": 5.085,
+      "end": 5.225,
+      "score": 0.742
+    },
+    {
+      "word": "the",
+      "start": 5.245,
+      "end": 5.345,
+      "score": 0.773
+    },
+    {
+      "word": "evidence",
+      "start": 5.465,
+      "end": 5.806,
+      "score": 0.965
+    },
+    {
+      "word": "support...",
+      "start": 5.846,
+      "end": 6.346,
+      "score": 0.786
+    },
+    {
+      "word": "and",
+      "start": 6.747,
+      "end": 6.847,
+      "score": 0.973
+    },
+    {
+      "word": "how",
+      "start": 6.907,
+      "end": 7.047,
+      "score": 0.849
+    },
+    {
+      "word": "sure",
+      "start": 7.147,
+      "end": 7.367,
+      "score": 0.736
+    },
+    {
+      "word": "should",
+      "start": 7.407,
+      "end": 7.587,
+      "score": 0.766
+    },
+    {
+      "word": "you",
+      "start": 7.607,
+      "end": 7.728,
+      "score": 0.78
+    },
+    {
+      "word": "be?",
+      "start": 7.768,
+      "end": 7.908,
+      "score": 0.873
+    }
+  ],
+  "_source_audio_sha256": "8e697d66d127452256f74d979dfac89b7e23af8675a66eeb60b7ce04551ea931"
+}

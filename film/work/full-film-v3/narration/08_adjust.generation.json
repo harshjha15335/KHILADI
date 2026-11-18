@@ -1,0 +1,17 @@
+{
+  "signature": "cd4e17592776dcb480c27c0dacff20facf50e08533a8996ae2bec5e9c13e76e9",
+  "display_text": "You adjust for scoring eras and opposition. Then combine runs and wickets with a declared assumption: fifteen runs per wicket. You check ten and twenty too. An assumption deserves a test, not a disguise.",
+  "synthesis_text": "You adjust for scoring eras and opposition. Then combine runs and wickets with a declared assumption: fifteen runs per wicket. You check ten and twenty too. An assumption deserves a test, not a disguise.",
+  "phonemes": "ju\u02d0 \u0250d\u0292\u02c8\u028cst f\u0254\u02d0\u0279 sk\u02c8\u0254\u02d0\u0279\u026a\u014b \u02c8i\u0259\u0279\u0259z \u00e6nd \u02cc\u0251\u02d0p\u0259z\u02c8\u026a\u0283\u0259n. \u00f0\u02c8\u025bn k\u0259mb\u02c8a\u026an \u0279\u02c8\u028cnz \u00e6nd w\u02c8\u026ak\u026ats w\u026a\u00f0 \u0250 d\u1d7bkl\u02c8\u025b\u0279d \u0250s\u02c8\u028cmp\u0283\u0259n: f\u02c8\u026afti\u02d0n \u0279\u02c8\u028cnz p\u025c\u02d0 w\u02c8\u026ak\u026at. ju\u02d0 t\u0283\u02c8\u025bk t\u02c8\u025bn \u00e6nd tw\u02c8\u025bnti t\u02c8u\u02d0. \u0250n \u0250s\u02c8\u028cmp\u0283\u0259n d\u026az\u02c8\u025c\u02d0vz \u0250 t\u02c8\u025bst, n\u02cc\u0251\u02d0\u027e\u0259 d\u026as\u0261\u02c8a\u026az.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 13.909333333333333,
+  "sha256": "7127d7d6a56f099cd555b7dca9d072758e848f89fedad24b14e7d08b91474d0d"
+}

@@ -1,0 +1,443 @@
+{
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 2.562,
+      "text": "You adjust for scoring eras and opposition.",
+      "words": [
+        {
+          "word": "You",
+          "start": 0.04,
+          "end": 0.16,
+          "score": 0.916
+        },
+        {
+          "word": "adjust",
+          "start": 0.22,
+          "end": 0.62,
+          "score": 0.908
+        },
+        {
+          "word": "for",
+          "start": 0.66,
+          "end": 0.801,
+          "score": 0.791
+        },
+        {
+          "word": "scoring",
+          "start": 0.861,
+          "end": 1.321,
+          "score": 0.884
+        },
+        {
+          "word": "eras",
+          "start": 1.481,
+          "end": 1.761,
+          "score": 0.842
+        },
+        {
+          "word": "and",
+          "start": 1.841,
+          "end": 1.921,
+          "score": 0.77
+        },
+        {
+          "word": "opposition.",
+          "start": 2.001,
+          "end": 2.562,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 3.102,
+      "end": 8.065,
+      "text": "Then combine runs and wickets with a declared assumption: fifteen runs per wicket.",
+      "words": [
+        {
+          "word": "Then",
+          "start": 3.102,
+          "end": 3.282,
+          "score": 0.853
+        },
+        {
+          "word": "combine",
+          "start": 3.342,
+          "end": 3.843,
+          "score": 0.902
+        },
+        {
+          "word": "runs",
+          "start": 3.943,
+          "end": 4.323,
+          "score": 0.796
+        },
+        {
+          "word": "and",
+          "start": 4.403,
+          "end": 4.483,
+          "score": 0.885
+        },
+        {
+          "word": "wickets",
+          "start": 4.543,
+          "end": 4.923,
+          "score": 0.875
+        },
+        {
+          "word": "with",
+          "start": 4.983,
+          "end": 5.123,
+          "score": 0.896
+        },
+        {
+          "word": "a",
+          "start": 5.163,
+          "end": 5.183,
+          "score": 0.998
+        },
+        {
+          "word": "declared",
+          "start": 5.224,
+          "end": 5.684,
+          "score": 0.87
+        },
+        {
+          "word": "assumption:",
+          "start": 5.724,
+          "end": 6.224,
+          "score": 0.804
+        },
+        {
+          "word": "fifteen",
+          "start": 6.624,
+          "end": 7.085,
+          "score": 0.835
+        },
+        {
+          "word": "runs",
+          "start": 7.165,
+          "end": 7.465,
+          "score": 0.751
+        },
+        {
+          "word": "per",
+          "start": 7.545,
+          "end": 7.685,
+          "score": 0.688
+        },
+        {
+          "word": "wicket.",
+          "start": 7.725,
+          "end": 8.065,
+          "score": 0.989
+        }
+      ]
+    },
+    {
+      "start": 8.546,
+      "end": 10.227,
+      "text": "You check ten and twenty too.",
+      "words": [
+        {
+          "word": "You",
+          "start": 8.546,
+          "end": 8.666,
+          "score": 0.796
+        },
+        {
+          "word": "check",
+          "start": 8.686,
+          "end": 8.926,
+          "score": 0.825
+        },
+        {
+          "word": "ten",
+          "start": 8.986,
+          "end": 9.326,
+          "score": 0.721
+        },
+        {
+          "word": "and",
+          "start": 9.466,
+          "end": 9.566,
+          "score": 0.704
+        },
+        {
+          "word": "twenty",
+          "start": 9.606,
+          "end": 9.887,
+          "score": 0.848
+        },
+        {
+          "word": "too.",
+          "start": 9.947,
+          "end": 10.227,
+          "score": 0.625
+        }
+      ]
+    },
+    {
+      "start": 10.787,
+      "end": 13.709,
+      "text": "An assumption deserves a test, not a disguise.",
+      "words": [
+        {
+          "word": "An",
+          "start": 10.787,
+          "end": 10.887,
+          "score": 0.77
+        },
+        {
+          "word": "assumption",
+          "start": 10.927,
+          "end": 11.408,
+          "score": 0.758
+        },
+        {
+          "word": "deserves",
+          "start": 11.468,
+          "end": 11.928,
+          "score": 0.723
+        },
+        {
+          "word": "a",
+          "start": 11.988,
+          "end": 12.008,
+          "score": 1.0
+        },
+        {
+          "word": "test,",
+          "start": 12.088,
+          "end": 12.468,
+          "score": 0.867
+        },
+        {
+          "word": "not",
+          "start": 12.769,
+          "end": 12.949,
+          "score": 0.846
+        },
+        {
+          "word": "a",
+          "start": 12.989,
+          "end": 13.029,
+          "score": 0.5
+        },
+        {
+          "word": "disguise.",
+          "start": 13.069,
+          "end": 13.709,
+          "score": 0.905
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "You",
+      "start": 0.04,
+      "end": 0.16,
+      "score": 0.916
+    },
+    {
+      "word": "adjust",
+      "start": 0.22,
+      "end": 0.62,
+      "score": 0.908
+    },
+    {
+      "word": "for",
+      "start": 0.66,
+      "end": 0.801,
+      "score": 0.791
+    },
+    {
+      "word": "scoring",
+      "start": 0.861,
+      "end": 1.321,
+      "score": 0.884
+    },
+    {
+      "word": "eras",
+      "start": 1.481,
+      "end": 1.761,
+      "score": 0.842
+    },
+    {
+      "word": "and",
+      "start": 1.841,
+      "end": 1.921,
+      "score": 0.77
+    },
+    {
+      "word": "opposition.",
+      "start": 2.001,
+      "end": 2.562,
+      "score": 0.902
+    },
+    {
+      "word": "Then",
+      "start": 3.102,
+      "end": 3.282,
+      "score": 0.853
+    },
+    {
+      "word": "combine",
+      "start": 3.342,
+      "end": 3.843,
+      "score": 0.902
+    },
+    {
+      "word": "runs",
+      "start": 3.943,
+      "end": 4.323,
+      "score": 0.796
+    },
+    {
+      "word": "and",
+      "start": 4.403,
+      "end": 4.483,
+      "score": 0.885
+    },
+    {
+      "word": "wickets",
+      "start": 4.543,
+      "end": 4.923,
+      "score": 0.875
+    },
+    {
+      "word": "with",
+      "start": 4.983,
+      "end": 5.123,
+      "score": 0.896
+    },
+    {
+      "word": "a",
+      "start": 5.163,
+      "end": 5.183,
+      "score": 0.998
+    },
+    {
+      "word": "declared",
+      "start": 5.224,
+      "end": 5.684,
+      "score": 0.87
+    },
+    {
+      "word": "assumption:",
+      "start": 5.724,
+      "end": 6.224,
+      "score": 0.804
+    },
+    {
+      "word": "fifteen",
+      "start": 6.624,
+      "end": 7.085,
+      "score": 0.835
+    },
+    {
+      "word": "runs",
+      "start": 7.165,
+      "end": 7.465,
+      "score": 0.751
+    },
+    {
+      "word": "per",
+      "start": 7.545,
+      "end": 7.685,
+      "score": 0.688
+    },
+    {
+      "word": "wicket.",
+      "start": 7.725,
+      "end": 8.065,
+      "score": 0.989
+    },
+    {
+      "word": "You",
+      "start": 8.546,
+      "end": 8.666,
+      "score": 0.796
+    },
+    {
+      "word": "check",
+      "start": 8.686,
+      "end": 8.926,
+      "score": 0.825
+    },
+    {
+      "word": "ten",
+      "start": 8.986,
+      "end": 9.326,
+      "score": 0.721
+    },
+    {
+      "word": "and",
+      "start": 9.466,
+      "end": 9.566,
+      "score": 0.704
+    },
+    {
+      "word": "twenty",
+      "start": 9.606,
+      "end": 9.887,
+      "score": 0.848
+    },
+    {
+      "word": "too.",
+      "start": 9.947,
+      "end": 10.227,
+      "score": 0.625
+    },
+    {
+      "word": "An",
+      "start": 10.787,
+      "end": 10.887,
+      "score": 0.77
+    },
+    {
+      "word": "assumption",
+      "start": 10.927,
+      "end": 11.408,
+      "score": 0.758
+    },
+    {
+      "word": "deserves",
+      "start": 11.468,
+      "end": 11.928,
+      "score": 0.723
+    },
+    {
+      "word": "a",
+      "start": 11.988,
+      "end": 12.008,
+      "score": 1.0
+    },
+    {
+      "word": "test,",
+      "start": 12.088,
+      "end": 12.468,
+      "score": 0.867
+    },
+    {
+      "word": "not",
+      "start": 12.769,
+      "end": 12.949,
+      "score": 0.846
+    },
+    {
+      "word": "a",
+      "start": 12.989,
+      "end": 13.029,
+      "score": 0.5
+    },
+    {
+      "word": "disguise.",
+      "start": 13.069,
+      "end": 13.709,
+      "score": 0.905
+    }
+  ],
+  "_source_audio_sha256": "7127d7d6a56f099cd555b7dca9d072758e848f89fedad24b14e7d08b91474d0d"
+}

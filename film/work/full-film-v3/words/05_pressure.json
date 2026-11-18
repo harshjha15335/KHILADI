@@ -1,0 +1,349 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.505,
+      "text": "But difficult doesn't always mean consequential.",
+      "words": [
+        {
+          "word": "But",
+          "start": 0.0,
+          "end": 0.12,
+          "score": 0.837
+        },
+        {
+          "word": "difficult",
+          "start": 0.16,
+          "end": 0.561,
+          "score": 0.934
+        },
+        {
+          "word": "doesn't",
+          "start": 0.601,
+          "end": 0.862,
+          "score": 0.839
+        },
+        {
+          "word": "always",
+          "start": 1.002,
+          "end": 1.323,
+          "score": 0.747
+        },
+        {
+          "word": "mean",
+          "start": 1.383,
+          "end": 1.563,
+          "score": 0.834
+        },
+        {
+          "word": "consequential.",
+          "start": 1.643,
+          "end": 2.505,
+          "score": 0.855
+        }
+      ]
+    },
+    {
+      "start": 2.966,
+      "end": 4.569,
+      "text": "Thirty-nine runs an over?",
+      "words": [
+        {
+          "word": "Thirty-nine",
+          "start": 2.966,
+          "end": 3.667,
+          "score": 0.755
+        },
+        {
+          "word": "runs",
+          "start": 3.767,
+          "end": 4.008,
+          "score": 0.807
+        },
+        {
+          "word": "an",
+          "start": 4.048,
+          "end": 4.108,
+          "score": 0.835
+        },
+        {
+          "word": "over?",
+          "start": 4.288,
+          "end": 4.569,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 4.97,
+      "end": 5.711,
+      "text": "Terrifying.",
+      "words": [
+        {
+          "word": "Terrifying.",
+          "start": 4.97,
+          "end": 5.711,
+          "score": 0.863
+        }
+      ]
+    },
+    {
+      "start": 6.212,
+      "end": 7.515,
+      "text": "Also, probably over.",
+      "words": [
+        {
+          "word": "Also,",
+          "start": 6.212,
+          "end": 6.593,
+          "score": 0.891
+        },
+        {
+          "word": "probably",
+          "start": 6.693,
+          "end": 7.134,
+          "score": 0.905
+        },
+        {
+          "word": "over.",
+          "start": 7.274,
+          "end": 7.515,
+          "score": 0.93
+        }
+      ]
+    },
+    {
+      "start": 7.875,
+      "end": 8.877,
+      "text": "Two needed off one?",
+      "words": [
+        {
+          "word": "Two",
+          "start": 7.875,
+          "end": 8.056,
+          "score": 0.869
+        },
+        {
+          "word": "needed",
+          "start": 8.096,
+          "end": 8.356,
+          "score": 0.823
+        },
+        {
+          "word": "off",
+          "start": 8.457,
+          "end": 8.597,
+          "score": 0.999
+        },
+        {
+          "word": "one?",
+          "start": 8.757,
+          "end": 8.877,
+          "score": 0.956
+        }
+      ]
+    },
+    {
+      "start": 9.378,
+      "end": 11.483,
+      "text": "Now the next ball can change everything.",
+      "words": [
+        {
+          "word": "Now",
+          "start": 9.378,
+          "end": 9.599,
+          "score": 0.737
+        },
+        {
+          "word": "the",
+          "start": 9.659,
+          "end": 9.739,
+          "score": 0.993
+        },
+        {
+          "word": "next",
+          "start": 9.799,
+          "end": 10.0,
+          "score": 0.911
+        },
+        {
+          "word": "ball",
+          "start": 10.06,
+          "end": 10.32,
+          "score": 0.996
+        },
+        {
+          "word": "can",
+          "start": 10.36,
+          "end": 10.521,
+          "score": 0.971
+        },
+        {
+          "word": "change",
+          "start": 10.581,
+          "end": 10.921,
+          "score": 0.779
+        },
+        {
+          "word": "everything.",
+          "start": 11.062,
+          "end": 11.483,
+          "score": 0.894
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "But",
+      "start": 0.0,
+      "end": 0.12,
+      "score": 0.837
+    },
+    {
+      "word": "difficult",
+      "start": 0.16,
+      "end": 0.561,
+      "score": 0.934
+    },
+    {
+      "word": "doesn't",
+      "start": 0.601,
+      "end": 0.862,
+      "score": 0.839
+    },
+    {
+      "word": "always",
+      "start": 1.002,
+      "end": 1.323,
+      "score": 0.747
+    },
+    {
+      "word": "mean",
+      "start": 1.383,
+      "end": 1.563,
+      "score": 0.834
+    },
+    {
+      "word": "consequential.",
+      "start": 1.643,
+      "end": 2.505,
+      "score": 0.855
+    },
+    {
+      "word": "Thirty-nine",
+      "start": 2.966,
+      "end": 3.667,
+      "score": 0.755
+    },
+    {
+      "word": "runs",
+      "start": 3.767,
+      "end": 4.008,
+      "score": 0.807
+    },
+    {
+      "word": "an",
+      "start": 4.048,
+      "end": 4.108,
+      "score": 0.835
+    },
+    {
+      "word": "over?",
+      "start": 4.288,
+      "end": 4.569,
+      "score": 0.938
+    },
+    {
+      "word": "Terrifying.",
+      "start": 4.97,
+      "end": 5.711,
+      "score": 0.863
+    },
+    {
+      "word": "Also,",
+      "start": 6.212,
+      "end": 6.593,
+      "score": 0.891
+    },
+    {
+      "word": "probably",
+      "start": 6.693,
+      "end": 7.134,
+      "score": 0.905
+    },
+    {
+      "word": "over.",
+      "start": 7.274,
+      "end": 7.515,
+      "score": 0.93
+    },
+    {
+      "word": "Two",
+      "start": 7.875,
+      "end": 8.056,
+      "score": 0.869
+    },
+    {
+      "word": "needed",
+      "start": 8.096,
+      "end": 8.356,
+      "score": 0.823
+    },
+    {
+      "word": "off",
+      "start": 8.457,
+      "end": 8.597,
+      "score": 0.999
+    },
+    {
+      "word": "one?",
+      "start": 8.757,
+      "end": 8.877,
+      "score": 0.956
+    },
+    {
+      "word": "Now",
+      "start": 9.378,
+      "end": 9.599,
+      "score": 0.737
+    },
+    {
+      "word": "the",
+      "start": 9.659,
+      "end": 9.739,
+      "score": 0.993
+    },
+    {
+      "word": "next",
+      "start": 9.799,
+      "end": 10.0,
+      "score": 0.911
+    },
+    {
+      "word": "ball",
+      "start": 10.06,
+      "end": 10.32,
+      "score": 0.996
+    },
+    {
+      "word": "can",
+      "start": 10.36,
+      "end": 10.521,
+      "score": 0.971
+    },
+    {
+      "word": "change",
+      "start": 10.581,
+      "end": 10.921,
+      "score": 0.779
+    },
+    {
+      "word": "everything.",
+      "start": 11.062,
+      "end": 11.483,
+      "score": 0.894
+    }
+  ],
+  "_source_audio_sha256": "9cdef259df81b27e1a9004bf6ef7711785bf409c4ff6717b0125ba23479229df"
+}

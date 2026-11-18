@@ -1,0 +1,359 @@
+{
+  "segments": [
+    {
+      "start": 0.08,
+      "end": 1.903,
+      "text": "Next question: better than what?",
+      "words": [
+        {
+          "word": "Next",
+          "start": 0.08,
+          "end": 0.26,
+          "score": 0.879
+        },
+        {
+          "word": "question:",
+          "start": 0.341,
+          "end": 0.801,
+          "score": 0.835
+        },
+        {
+          "word": "better",
+          "start": 1.142,
+          "end": 1.382,
+          "score": 0.966
+        },
+        {
+          "word": "than",
+          "start": 1.422,
+          "end": 1.562,
+          "score": 0.916
+        },
+        {
+          "word": "what?",
+          "start": 1.662,
+          "end": 1.903,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 2.384,
+      "end": 5.228,
+      "text": "You estimate expected runs and dismissal risk.",
+      "words": [
+        {
+          "word": "You",
+          "start": 2.384,
+          "end": 2.524,
+          "score": 0.925
+        },
+        {
+          "word": "estimate",
+          "start": 2.604,
+          "end": 2.984,
+          "score": 0.763
+        },
+        {
+          "word": "expected",
+          "start": 3.025,
+          "end": 3.545,
+          "score": 0.88
+        },
+        {
+          "word": "runs",
+          "start": 3.645,
+          "end": 4.046,
+          "score": 0.686
+        },
+        {
+          "word": "and",
+          "start": 4.126,
+          "end": 4.226,
+          "score": 0.733
+        },
+        {
+          "word": "dismissal",
+          "start": 4.286,
+          "end": 4.827,
+          "score": 0.93
+        },
+        {
+          "word": "risk.",
+          "start": 4.887,
+          "end": 5.228,
+          "score": 0.64
+        }
+      ]
+    },
+    {
+      "start": 5.769,
+      "end": 8.713,
+      "text": "Batters earn credit for extra runs and survival.",
+      "words": [
+        {
+          "word": "Batters",
+          "start": 5.769,
+          "end": 6.169,
+          "score": 0.88
+        },
+        {
+          "word": "earn",
+          "start": 6.249,
+          "end": 6.45,
+          "score": 0.661
+        },
+        {
+          "word": "credit",
+          "start": 6.51,
+          "end": 6.85,
+          "score": 0.888
+        },
+        {
+          "word": "for",
+          "start": 6.89,
+          "end": 7.031,
+          "score": 0.881
+        },
+        {
+          "word": "extra",
+          "start": 7.171,
+          "end": 7.491,
+          "score": 0.866
+        },
+        {
+          "word": "runs",
+          "start": 7.571,
+          "end": 7.932,
+          "score": 0.784
+        },
+        {
+          "word": "and",
+          "start": 8.012,
+          "end": 8.092,
+          "score": 0.931
+        },
+        {
+          "word": "survival.",
+          "start": 8.132,
+          "end": 8.713,
+          "score": 0.869
+        }
+      ]
+    },
+    {
+      "start": 9.194,
+      "end": 12.298,
+      "text": "Bowlers, for runs prevented and credited wickets.",
+      "words": [
+        {
+          "word": "Bowlers,",
+          "start": 9.194,
+          "end": 9.755,
+          "score": 0.895
+        },
+        {
+          "word": "for",
+          "start": 10.075,
+          "end": 10.215,
+          "score": 0.816
+        },
+        {
+          "word": "runs",
+          "start": 10.295,
+          "end": 10.616,
+          "score": 0.816
+        },
+        {
+          "word": "prevented",
+          "start": 10.696,
+          "end": 11.237,
+          "score": 0.88
+        },
+        {
+          "word": "and",
+          "start": 11.317,
+          "end": 11.397,
+          "score": 0.845
+        },
+        {
+          "word": "credited",
+          "start": 11.477,
+          "end": 11.858,
+          "score": 0.853
+        },
+        {
+          "word": "wickets.",
+          "start": 11.918,
+          "end": 12.298,
+          "score": 0.993
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Next",
+      "start": 0.08,
+      "end": 0.26,
+      "score": 0.879
+    },
+    {
+      "word": "question:",
+      "start": 0.341,
+      "end": 0.801,
+      "score": 0.835
+    },
+    {
+      "word": "better",
+      "start": 1.142,
+      "end": 1.382,
+      "score": 0.966
+    },
+    {
+      "word": "than",
+      "start": 1.422,
+      "end": 1.562,
+      "score": 0.916
+    },
+    {
+      "word": "what?",
+      "start": 1.662,
+      "end": 1.903,
+      "score": 0.946
+    },
+    {
+      "word": "You",
+      "start": 2.384,
+      "end": 2.524,
+      "score": 0.925
+    },
+    {
+      "word": "estimate",
+      "start": 2.604,
+      "end": 2.984,
+      "score": 0.763
+    },
+    {
+      "word": "expected",
+      "start": 3.025,
+      "end": 3.545,
+      "score": 0.88
+    },
+    {
+      "word": "runs",
+      "start": 3.645,
+      "end": 4.046,
+      "score": 0.686
+    },
+    {
+      "word": "and",
+      "start": 4.126,
+      "end": 4.226,
+      "score": 0.733
+    },
+    {
+      "word": "dismissal",
+      "start": 4.286,
+      "end": 4.827,
+      "score": 0.93
+    },
+    {
+      "word": "risk.",
+      "start": 4.887,
+      "end": 5.228,
+      "score": 0.64
+    },
+    {
+      "word": "Batters",
+      "start": 5.769,
+      "end": 6.169,
+      "score": 0.88
+    },
+    {
+      "word": "earn",
+      "start": 6.249,
+      "end": 6.45,
+      "score": 0.661
+    },
+    {
+      "word": "credit",
+      "start": 6.51,
+      "end": 6.85,
+      "score": 0.888
+    },
+    {
+      "word": "for",
+      "start": 6.89,
+      "end": 7.031,
+      "score": 0.881
+    },
+    {
+      "word": "extra",
+      "start": 7.171,
+      "end": 7.491,
+      "score": 0.866
+    },
+    {
+      "word": "runs",
+      "start": 7.571,
+      "end": 7.932,
+      "score": 0.784
+    },
+    {
+      "word": "and",
+      "start": 8.012,
+      "end": 8.092,
+      "score": 0.931
+    },
+    {
+      "word": "survival.",
+      "start": 8.132,
+      "end": 8.713,
+      "score": 0.869
+    },
+    {
+      "word": "Bowlers,",
+      "start": 9.194,
+      "end": 9.755,
+      "score": 0.895
+    },
+    {
+      "word": "for",
+      "start": 10.075,
+      "end": 10.215,
+      "score": 0.816
+    },
+    {
+      "word": "runs",
+      "start": 10.295,
+      "end": 10.616,
+      "score": 0.816
+    },
+    {
+      "word": "prevented",
+      "start": 10.696,
+      "end": 11.237,
+      "score": 0.88
+    },
+    {
+      "word": "and",
+      "start": 11.317,
+      "end": 11.397,
+      "score": 0.845
+    },
+    {
+      "word": "credited",
+      "start": 11.477,
+      "end": 11.858,
+      "score": 0.853
+    },
+    {
+      "word": "wickets.",
+      "start": 11.918,
+      "end": 12.298,
+      "score": 0.993
+    }
+  ],
+  "_source_audio_sha256": "0d24014d5cf78a9ea9eef455556d45c34798911f438838fb83605813eb2da303"
+}

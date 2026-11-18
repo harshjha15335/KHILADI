@@ -1,0 +1,987 @@
+{
+  "description": "Public-safe final reel and editable inputs; original private sources excluded",
+  "frames": 5992,
+  "fps": 30,
+  "files": [
+    {
+      "path": "CODEX_HANDOFF.md",
+      "bytes": 47947,
+      "sha256": "5734ccd40384e6ad89e1ff114301a30380e0c760d103a73091f2c5faf81d6770"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2464,
+      "sha256": "0a938e276f0a873cae7a69e9a0f9830b8406e4d0951f0c9615ae168f28dbe98f"
+    },
+    {
+      "path": "film/.gitignore",
+      "bytes": 738,
+      "sha256": "9a430aa08f7bfc6bbd69a9d20c62949ac3831bab5075e76655da7b558e83212f"
+    },
+    {
+      "path": "film/FINAL_DELIVERY.md",
+      "bytes": 5862,
+      "sha256": "06aa6db248543f7d3c5063ed99f8473561bcb3ccce0d2a411bda8056cdacee95"
+    },
+    {
+      "path": "film/data/accepted_primary_rankings.csv",
+      "bytes": 1607,
+      "sha256": "dffbd0c7a124038cce623d4bb1b5514bd6c0ad8635f8496723eac30553153f3e"
+    },
+    {
+      "path": "film/delivery/CONTACT_SHEET.png",
+      "bytes": 2664846,
+      "sha256": "11b563c66a4c1e1a6d7ff5a7d2a9465fe7569869d1b6282bbd4c18f6daa336db"
+    },
+    {
+      "path": "film/delivery/KHILADI_CAPTIONS.srt",
+      "bytes": 7505,
+      "sha256": "1ebaf4d60c933981bdd26a35424c122cad4637b397abfd8ba1664167dae453a8"
+    },
+    {
+      "path": "film/delivery/KHILADI_FINAL_REEL.mp4",
+      "bytes": 41006380,
+      "sha256": "c944fb5962487fe6f0ed00c9637e5d57ff0cb7e0e9edaa1efbbf26eeb4316d3d"
+    },
+    {
+      "path": "film/delivery/Kokoro-APACHE-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "film/delivery/PUBLIC_FILE_LIST.txt",
+      "bytes": 9197,
+      "sha256": "3c87d766dd7b718bcafbeed44e53b4215b7d95ac8b03d3a1235472dda4db0091"
+    },
+    {
+      "path": "film/delivery/TECHNICAL_QA.json",
+      "bytes": 7087,
+      "sha256": "bbbfd703da2b4d79e364f61ac9200aff67d762196e2a41deaa4cba0b63c2ca50"
+    },
+    {
+      "path": "film/delivery/VISUAL_REVIEW.md",
+      "bytes": 9345,
+      "sha256": "27735a167a6112e7aa5b49e29e59f318864d1dbf9500b3695c3f7f33efdc1304"
+    },
+    {
+      "path": "film/delivery/requirements-render.txt",
+      "bytes": 36,
+      "sha256": "b00cea3a81b35b67c1703b5e20cb971db4939faf94ada16ff25b1c75eaf748fe"
+    },
+    {
+      "path": "film/docs/METHODOLOGY_FOR_FILM.md",
+      "bytes": 4728,
+      "sha256": "d97d81bdcdf2db69188bf668329d6f2bf2c3bd970e80447bb3f02d1a24b22a3d"
+    },
+    {
+      "path": "film/outputs/film-v3-assembly/KHILADI_OPENING_V3_SILENT.mp4",
+      "bytes": 5465377,
+      "sha256": "60c0cb72a193a508971150f152e8a7acc03a5790ce545bc3e3ed1732211a148f"
+    },
+    {
+      "path": "film/outputs/film-v3-assembly/OPENING_EDIT_DECISIONS.json",
+      "bytes": 5236,
+      "sha256": "3b89e1108ff84e2c41a89b33f24a538f6490d0fe3f54e12935e15afd89f90199"
+    },
+    {
+      "path": "film/outputs/film-v3-assembly/render-manifest.json",
+      "bytes": 7440,
+      "sha256": "accec2311e86e1545abc8525bd9ed38e0da4560e263cee385cf40e519035349a"
+    },
+    {
+      "path": "film/outputs/final-review/review.md",
+      "bytes": 9345,
+      "sha256": "27735a167a6112e7aa5b49e29e59f318864d1dbf9500b3695c3f7f33efdc1304"
+    },
+    {
+      "path": "film/outputs/full-film-v3/AUDIO_MIX_NOTES.json",
+      "bytes": 541,
+      "sha256": "127bc91db49c7b8096f738fd85b9f71a93573eed6c0c6e8976ad06dddd6a6da8"
+    },
+    {
+      "path": "film/outputs/full-film-v3/CAPTION_ALIGNMENT_REPORT.json",
+      "bytes": 2452,
+      "sha256": "810e9ec7f3f35e752aca14099caab1b62454fbe7907e2040d075bcc5055b8140"
+    },
+    {
+      "path": "film/outputs/full-film-v3/FULL_CAPTIONS.ass",
+      "bytes": 13298,
+      "sha256": "71a2d66dfc78d9c5f48b18c3baadc6403c6359d6087b14cb9925701f6c5bb05f"
+    },
+    {
+      "path": "film/outputs/full-film-v3/FULL_CAPTIONS.srt",
+      "bytes": 7505,
+      "sha256": "1ebaf4d60c933981bdd26a35424c122cad4637b397abfd8ba1664167dae453a8"
+    },
+    {
+      "path": "film/outputs/full-film-v3/MICHAEL_FULL_MIX.wav",
+      "bytes": 28761644,
+      "sha256": "ed3eb10aaac42b283c6e509ff5b342511b3b98ebb5134d66d62281fdd86cd97e"
+    },
+    {
+      "path": "film/outputs/full-film-v3/MICHAEL_FULL_NARRATION.wav",
+      "bytes": 9587244,
+      "sha256": "e029513fdd36a0fba03dfc5ace450f632be392ac1b512413fef1cd8c59a2c0ee"
+    },
+    {
+      "path": "film/outputs/full-film-v3/NARRATION_STATUS.json",
+      "bytes": 268,
+      "sha256": "6483cd5dc000600b21de21ddfbe88c3574372697bbc481bb9616785355d21052"
+    },
+    {
+      "path": "film/outputs/geography-review/CLASSROOM_LAYOUT.svg",
+      "bytes": 13544,
+      "sha256": "20df705de92131a7086cf01bbfeedabd745047de7d2e03354e2cdb0637477c38"
+    },
+    {
+      "path": "film/outputs/geography-review/GEOGRAPHY_REVIEW.md",
+      "bytes": 3620,
+      "sha256": "351dbfad1f2f7ca164500d10bae2fbc1c0f598e61465cd45327a91cab6953494"
+    },
+    {
+      "path": "film/outputs/khiladi-environments.blend",
+      "bytes": 1941536,
+      "sha256": "d1f631e0f2743965f40bb50de08647a1d193d2bfeba93efe1cef559f9749e40c"
+    },
+    {
+      "path": "film/outputs/khiladi-master-v3.blend",
+      "bytes": 669318,
+      "sha256": "35544207b72040d5768bddd6e8590f15c7e85c465fc0a277e900ac132bf98201"
+    },
+    {
+      "path": "film/outputs/michael-refinement/MICHAEL_REFINED.wav",
+      "bytes": 514092,
+      "sha256": "d5cd6fac861f8a42b7577b9a131c2bd7c299f56b9f120d09f779b3896d9059b1"
+    },
+    {
+      "path": "film/outputs/michael-refinement/MICHAEL_REFINEMENT.json",
+      "bytes": 1852,
+      "sha256": "764ecb693732225d44d2f0eacb88f290772c369b9ac5100501204b32e3a2d3e7"
+    },
+    {
+      "path": "film/outputs/opening-v2/SECOND_PERSON_NARRATION_DRAFT.md",
+      "bytes": 4062,
+      "sha256": "c79d7187d7629588c40ccc47ffd9aedfc936fae000b02642dbf21068321fcfb1"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/A_seated_writing.mp4",
+      "bytes": 808420,
+      "sha256": "4fc94e84c2bf8787696be1f47ae5e6bde192443a2d71e8fbf52bf382e1bf4b11"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/B_reverse_classroom_context.mp4",
+      "bytes": 726519,
+      "sha256": "e33493d14ba24d88387c20ab671d4f61cfb06c76495e542cdfb105d0d93aa371"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/F_front_teacher_glance_conceal.mp4",
+      "bytes": 880364,
+      "sha256": "d08ec9652031352519ea66e44054c045fffc10de39c37b251a2e049238a2329d"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/HERO_METADATA.json",
+      "bytes": 4078,
+      "sha256": "e32f3f845446b263af9b2d227dc95f481cc6b29347e78eea59d96a6c16dbda24"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/HERO_TECHNICAL_QA.json",
+      "bytes": 678,
+      "sha256": "033cf74c1a71a52838a300129d229f45f21d32701906ea340215f18b724f3fc2"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/I_wry_recovery.mp4",
+      "bytes": 695640,
+      "sha256": "ec35b97b27a440f2e396a2e5db3a861fbe2bde35d156d9aa0c679e4ca7845e09"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/README.md",
+      "bytes": 3355,
+      "sha256": "989dcf8a4fab38843a13fc4f7b76af3b33d3b84b10a2c7221fbffa0f2844aa6d"
+    },
+    {
+      "path": "film/outputs/opening-v3-hero/khiladi-opening-v3-hero.blend",
+      "bytes": 653227,
+      "sha256": "adb220a72d36ccc2d8adaf15df76dbf1087e6f55161c5e6ab4975f0a4991d12b"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/C_maths_hesitation.mp4",
+      "bytes": 215073,
+      "sha256": "06064f99ce63e572fd7d5fb28670b9c6221c0dcbdffd20d85cd514497192a0ce"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/D_page_turn_reveal.mp4",
+      "bytes": 629465,
+      "sha256": "d1936269882076e0634b7f19817d2104daad6dafa60525ce9abe7a9cad652ef6"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/E_cross_out_selection.mp4",
+      "bytes": 362988,
+      "sha256": "f72d6724865e5f8232d96751ad258240915fad359ad3b0c95916f442dd9c938b"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/G_sparse_maths.mp4",
+      "bytes": 196870,
+      "sha256": "2a8c97913d0dcec60d4529928afa7c8cbd9bc4fa2c73252a5f7792b97cab8122"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/H_dense_cricket.mp4",
+      "bytes": 253239,
+      "sha256": "b4415658a0e969117ad38abbe596cfaf2be687d41c692f5c895b1d9bf7460f7c"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/J_notebook_close.mp4",
+      "bytes": 643341,
+      "sha256": "8bdfe8b020177d904ea3b514bd2ca9179912116fcfa2f531256d3e79c477248e"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/NOTEBOOK_CRICKET_CLEAN.png",
+      "bytes": 100911,
+      "sha256": "cf01067a16311f2134279b2f1c0b7c078c0055de879afb0a47057b8acb53c6d3"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/NOTEBOOK_CRICKET_SELECTED.png",
+      "bytes": 105399,
+      "sha256": "4842f02126925b4d6165be719aea7b8e14d9846062c9e68fa5ed0618c02b0013"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/NOTEBOOK_MATHS.png",
+      "bytes": 45599,
+      "sha256": "a10bf7e89171bf81fda06d2dc209aa968925e75e3aca17c50c8b99861b2835f4"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/NOTEBOOK_METADATA.json",
+      "bytes": 3626,
+      "sha256": "6844c5a5ea418b507ec1cdb2ef8695617b5287bc9dca045dfb375bd2e9726ebc"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/NOTEBOOK_TECHNICAL_QA.json",
+      "bytes": 2030,
+      "sha256": "766337749afd3812a99d341b9476baf8fdb7c0581a6f4963b77ee56c44cdc1fa"
+    },
+    {
+      "path": "film/outputs/opening-v3-notebook/README.md",
+      "bytes": 3357,
+      "sha256": "5f01f49bb15650490e5bdaaf52a396b64419844786e76b22c20e33590ee1545f"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/ARTIFACT_MANIFEST.json",
+      "bytes": 4208,
+      "sha256": "1b2fe2be4e162c0f40250e8ab6e752c50c8dd4e602debb884fa1a6423ebd51e5"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/QUALIFIED_REPORT_REVEAL.mp4",
+      "bytes": 1624802,
+      "sha256": "ee202778308c73a080bd89cc8092efdb4c80cdb27df45a823c4ed5805c0ed837"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/README.md",
+      "bytes": 3200,
+      "sha256": "6644cccaba4b1bcf5c48efe4e499a8dbde50be122980611a1085ad0f1dcdff1a"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/REPORT_DATA_CHECKS.json",
+      "bytes": 1285,
+      "sha256": "18286be1d01a9ab5b7730acb6a9bc171b403720d3c68b437eb76bd9780b91406"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/REPORT_REVEAL_METADATA.json",
+      "bytes": 1245,
+      "sha256": "41b1fd2206084bdd28e45fdf1bfd2cb4d614cbbcbc6e13326988508b79ab7642"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/REPORT_REVEAL_TECHNICAL_QA.json",
+      "bytes": 2060,
+      "sha256": "40804c1314619a75bd3641e94ea7a80b675906ac3ca972bbbafe84d787c189b4"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/qualified-batter-page.png",
+      "bytes": 220512,
+      "sha256": "1a20dd1a1cbf4e58313e904643b06121f4b6804735aca52f1a4d55f6727878bc"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/qualified-batter-page.svg",
+      "bytes": 8773,
+      "sha256": "946410df0a71c297d47bf5d9b439b4b700135c6ebe6ed8647379c321621466f2"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/qualified-bowler-page.png",
+      "bytes": 224411,
+      "sha256": "be2d883a7d47631b1eacb90f357b76a83cc771ef8189e618f07668a61d73ef8f"
+    },
+    {
+      "path": "film/outputs/qualified-report-reveal/qualified-bowler-page.svg",
+      "bytes": 8659,
+      "sha256": "ae5aaa2b50a372a5e673aec37416d338e7a2ca2de2770f1ac579fe601b19f71d"
+    },
+    {
+      "path": "film/outputs/report-batter-top10.png",
+      "bytes": 217608,
+      "sha256": "0a4a00318aabebe9c00f874ae813b8017182bdf827f06b85f5761a8e07d3e8d7"
+    },
+    {
+      "path": "film/outputs/report-batter-top10.svg",
+      "bytes": 8007,
+      "sha256": "f9d0f4f5ce75d3b1b61c7fa4737e0d69a18d0c3f57f186fce40cb97cd181064e"
+    },
+    {
+      "path": "film/outputs/report-bowler-top10.png",
+      "bytes": 221606,
+      "sha256": "ea2a9f6e94380af0d15bcbe4cf6d524006538358bb3debca6d0e8da05279b564"
+    },
+    {
+      "path": "film/outputs/report-bowler-top10.svg",
+      "bytes": 7901,
+      "sha256": "898adccb769441f8c88a467f60f0cc1a26fbad537b4f1b7314684ebb13c40ed5"
+    },
+    {
+      "path": "film/outputs/website-capture/CAPTURE_METADATA.json",
+      "bytes": 1892,
+      "sha256": "614fef8086167a36c3130345c0873d5aec70cc4279aabb972e5647442a8e8423"
+    },
+    {
+      "path": "film/outputs/website-capture/FFPROBE.json",
+      "bytes": 3018,
+      "sha256": "b251da95287a88427d7621891e759d9860879d2d6b5e9896e92fc685c7dd9c94"
+    },
+    {
+      "path": "film/outputs/website-capture/KHILADI_WEBSITE_INSERT_4S.mp4",
+      "bytes": 323792,
+      "sha256": "f6399774f41994ad60afc6c6a2095029e3aba8605d51dca6eed985b98dc1b469"
+    },
+    {
+      "path": "film/outputs/website-capture/SOURCE_HASHES.json",
+      "bytes": 1349,
+      "sha256": "7ae990cf8dfcd45e9657e16fba3b8c2f757d13c3708edafcb293af7189044d31"
+    },
+    {
+      "path": "film/outputs/website-capture/WEBSITE_CAPTURE_NOTES.md",
+      "bytes": 3976,
+      "sha256": "221dbc25653478c90b5d799f93da04eb6aa7a44f06e1a49311be8f8ef7d5b15b"
+    },
+    {
+      "path": "film/scripts/build_final_manifest.py",
+      "bytes": 4896,
+      "sha256": "018227b7b1c488bcc793e5ff06c4e7f142e8a36b444af487bb29d734e2c23374"
+    },
+    {
+      "path": "film/scripts/rebase_final_paths.py",
+      "bytes": 844,
+      "sha256": "4d9e72c5b044dd9602513f94399ad4db4a73bdb445c070b3e6eab19c147c2c33"
+    },
+    {
+      "path": "film/scripts/verify_final_delivery.py",
+      "bytes": 700,
+      "sha256": "8c43a2e7d217db87ca953c66fff15f3242d081f7d80a3b9ae05e08a0b8badfd0"
+    },
+    {
+      "path": "film/work/film-v3-assembly/README.md",
+      "bytes": 3340,
+      "sha256": "5d4f0de8287130ffcdeb4db63b62655eb8d75b1c6f9350c4d7a682739b097843"
+    },
+    {
+      "path": "film/work/film-v3-assembly/assemble_opening.py",
+      "bytes": 4074,
+      "sha256": "6277c52ce24283132f48c5ff0a0d8d0af44b649f64d34f9166faf8ada6bedbc7"
+    },
+    {
+      "path": "film/work/film-v3-assembly/composite_film.py",
+      "bytes": 21587,
+      "sha256": "b2c3e08c869ad963e256edbd73188e352ad4e37d387255eeccd16ac43dd61cba"
+    },
+    {
+      "path": "film/work/film-v3-assembly/inserts.json",
+      "bytes": 347,
+      "sha256": "35d07f4e5a74f989d9fd6dd612bd1299f3659e6c431a4ad1153ed20f39d4f225"
+    },
+    {
+      "path": "film/work/film-v3-assembly/verify_visual.py",
+      "bytes": 3533,
+      "sha256": "9130fd121a1fd1bfe731c5f9b89f109e2eab2e46ee45429b55080855394c78eb"
+    },
+    {
+      "path": "film/work/film-v3-assembly/visual-plan.json",
+      "bytes": 17759,
+      "sha256": "674ca6847c23a208d1bace06261e27795633d5b30e781bc85b10e37627caa408"
+    },
+    {
+      "path": "film/work/film-v3-assembly/visual_plan.py",
+      "bytes": 5743,
+      "sha256": "e26c51d8d43b852a9e257a31cc691e374d3db1549b2f4f9d36009c87e3b1e4c9"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/01_notebook.ass",
+      "bytes": 1379,
+      "sha256": "4c26efbdf6bcc13fd8f38c6e1b02587c44895faa21b3d8ab4ff53046cbb3b56a"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/02_hackathon.ass",
+      "bytes": 1396,
+      "sha256": "90ab9e1f11168f59c968d76ebbba461526239aab87ec3eae952e2f6def7d4d72"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/03_clean.ass",
+      "bytes": 1478,
+      "sha256": "a13d9861c6c0c3d4d577588512f6e17c7b34844c5cd2780af833bc7e2cb619ff"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/04_preball.ass",
+      "bytes": 1294,
+      "sha256": "2c90307b1555914960dd7df34da48056b7f518728d51ef9e95018cfd22065473"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/05_pressure.ass",
+      "bytes": 1307,
+      "sha256": "a830091b9a8f23afadf2cd773488c97c01153126babf5fe63f2b2c9cbf4041bb"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/06_hybrid.ass",
+      "bytes": 1421,
+      "sha256": "10d788daa281bdf58f16f0ea5a6ab847c4485209a2000af253dd9671ce312e81"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/07_expected.ass",
+      "bytes": 1317,
+      "sha256": "ceac218e42507884b12853b4a11c6efec013d017f0f19d605ff52a559c65f64d"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/08_adjust.ass",
+      "bytes": 1415,
+      "sha256": "6c333a69bb39ceb5274ca9a50a1dc226304a8acf0f3e3e6b9710c3f537bd51f9"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/09_shrink.ass",
+      "bytes": 1317,
+      "sha256": "da554d9b2727b1ef637c4b23d8eda5809f6446f962a839d55dc6e83c106f666b"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/10_delta.ass",
+      "bytes": 1502,
+      "sha256": "dc5783db32e272225aeea5f02d78fd6d8a4e97bd6d96e816a3f8b3746b02b52f"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/11_holdout.ass",
+      "bytes": 1339,
+      "sha256": "83be93a29cf7e32b3f1827d3476c643ddf3617d8b1f6d0da3121f6816639dc3b"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/12_uncertainty.ass",
+      "bytes": 1404,
+      "sha256": "a3fe52827cf06698a579759727569cfd2d5a6fcd6a5d106dc819372bb1b2c0ba"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/13_sensitivity.ass",
+      "bytes": 1302,
+      "sha256": "1abfa5a9127aa7afa51b89469a16839dee2bef50e3495d3b409d654cc01ed99e"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/14_shortlist.ass",
+      "bytes": 1397,
+      "sha256": "b2ba43a9f30210076d41cf6899dfe6788bdd78cb399a4b79c1415ef1d172f6f0"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/15_replay.ass",
+      "bytes": 1134,
+      "sha256": "cbfe317856a5b5b9d2a54577ecd25a806191cbe70ddba78d1c1183aa73d5d65f"
+    },
+    {
+      "path": "film/work/full-film-v3/captions/16_end.ass",
+      "bytes": 1206,
+      "sha256": "a57b0f650ff6ff33f6470db3611832b51a90dae19d3f5a48a982d0dbbe472bec"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/01_notebook.generation.json",
+      "bytes": 1363,
+      "sha256": "127f09a430c087311b8551b0e939982b48d0e6908cb06948d03fbb2c8500b809"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/01_notebook.wav",
+      "bytes": 514092,
+      "sha256": "d5cd6fac861f8a42b7577b9a131c2bd7c299f56b9f120d09f779b3896d9059b1"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/02_hackathon.generation.json",
+      "bytes": 1488,
+      "sha256": "ef6fb29cca6e5be92953943e3664f5c63c54fd119a381c1d5cf1d3bb1bc307b8"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/02_hackathon.wav",
+      "bytes": 592940,
+      "sha256": "5bd3427ba4ec1df7d7b11604107a42ee4adee921a4239ba9b23717095e6797ca"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/03_clean.generation.json",
+      "bytes": 1508,
+      "sha256": "a0887b20f8230daa05eee9a3ccebbd81b0f3be89299d79f9e4a6e0cc94f63699"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/03_clean.wav",
+      "bytes": 610348,
+      "sha256": "0be395905f526722b14b1272f9116c62109b21be639a2ef5c46b7e672d47dd11"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/04_preball.generation.json",
+      "bytes": 1303,
+      "sha256": "814c5d6e987af7a8177bfb667915e1c79a71f93ffa5b242ad4a0f464ca75b58d"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/04_preball.wav",
+      "bytes": 475180,
+      "sha256": "0e69c8c66fbd5e8d202c9528c437d8db67cb3e3fd92707542cfa9b7d0ae36b73"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/05_pressure.generation.json",
+      "bytes": 1438,
+      "sha256": "6549f160c3c46a5487ad2dc23e31253cf2a55a8961d3acba0729c68e2cc21cd7"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/05_pressure.wav",
+      "bytes": 555052,
+      "sha256": "9cdef259df81b27e1a9004bf6ef7711785bf409c4ff6717b0125ba23479229df"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/06_hybrid.generation.json",
+      "bytes": 1661,
+      "sha256": "a7aeada455bf487045ce1f4b5dbed81b2123f111971e220e937545e6e21dba15"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/06_hybrid.wav",
+      "bytes": 676908,
+      "sha256": "778711f36a000b03c9ca3d600c6993d97732e92f107e978c255c4dc09ece1cba"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/07_expected.generation.json",
+      "bytes": 1452,
+      "sha256": "f29e648076a33c2c6c1fb17fd337780f2d9d7b9d602525ae78e7a52808aea8d8"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/07_expected.wav",
+      "bytes": 598060,
+      "sha256": "0d24014d5cf78a9ea9eef455556d45c34798911f438838fb83605813eb2da303"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/08_adjust.generation.json",
+      "bytes": 1578,
+      "sha256": "ee9b2916295d9100d83e166052c6cb6f747bc48d1c94dba23e8735f94f50d10d"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/08_adjust.wav",
+      "bytes": 667692,
+      "sha256": "7127d7d6a56f099cd555b7dca9d072758e848f89fedad24b14e7d08b91474d0d"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/09_shrink.generation.json",
+      "bytes": 1475,
+      "sha256": "4957caea557e170d2e351d75fb8010f0cc09269c7cec0664383099aae9de0710"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/09_shrink.wav",
+      "bytes": 565292,
+      "sha256": "8e695d3ac7daa36a13e2d8e477f277b9e7dbc862fd3ab8f20d7243a6a82e6903"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/10_delta.generation.json",
+      "bytes": 1711,
+      "sha256": "324bde06c45dd18a9a8d16eed5caa30484dbe58a2d74e0960f5413edcd73f3f3"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/10_delta.wav",
+      "bytes": 677932,
+      "sha256": "5d981f32028fa9cdc0c83be7563729a056a76dd8d4f575e70275115141cb38de"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/11_holdout.generation.json",
+      "bytes": 1627,
+      "sha256": "13a25a53d8c010350a4ad7d59d0a71910cf07307423a739581c0a41622bda0b1"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/11_holdout.wav",
+      "bytes": 671788,
+      "sha256": "1cdfc19be4470f6d318644ffcedcacaaffa90d3a63c988917984945507d59c08"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/12_uncertainty.generation.json",
+      "bytes": 1537,
+      "sha256": "01fd7108c7ab10a9e15306c9f602d0b4bb3f7953b45b46e4689d2f1025df56a2"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/12_uncertainty.wav",
+      "bytes": 633900,
+      "sha256": "4369810da5d78835c6e689f281e8967cdf83a334073f9ce1613a0211fa97353d"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/13_sensitivity.generation.json",
+      "bytes": 1341,
+      "sha256": "367f2781b1c754c317a9ac2dffbd4e9d22e380b51aacb4f078738b399f7ecbd1"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/13_sensitivity.wav",
+      "bytes": 506924,
+      "sha256": "45253037906d630855bdb8a57ed4ccbeff99c99328c4ab979fc3c40944fe4a28"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/14_shortlist.generation.json",
+      "bytes": 1537,
+      "sha256": "d807aa54cbd38ccb382fef8e2b53037e19e842d051788c5be034dfee46a5ba0a"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/14_shortlist.wav",
+      "bytes": 650284,
+      "sha256": "2e66e735cd57801e7a1543bfee4f47afc9c511d4c36967e3d467b7ccb90b274d"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/15_replay.generation.json",
+      "bytes": 1267,
+      "sha256": "525b5a821ee612db6932305ff8fe1a7409557b413a9855256728675b788b9b2b"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/15_replay.wav",
+      "bytes": 468012,
+      "sha256": "a57a464f736af875369e0f276840be442daa75bdc2b7fbe2aba725864d1ceea2"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/16_end.generation.json",
+      "bytes": 1177,
+      "sha256": "9576f7b1e71285d5380ca714454ff412135bf09a36cceb2729762da24427c3bd"
+    },
+    {
+      "path": "film/work/full-film-v3/narration/16_end.wav",
+      "bytes": 390188,
+      "sha256": "8e697d66d127452256f74d979dfac89b7e23af8675a66eeb60b7ce04551ea931"
+    },
+    {
+      "path": "film/work/full-film-v3/story.json",
+      "bytes": 5834,
+      "sha256": "118bdfa33a7a1f2c1acb7a3150e83fc9230f949b056d23c8a160b9f6bf12e73b"
+    },
+    {
+      "path": "film/work/full-film-v3/timing.json",
+      "bytes": 4725,
+      "sha256": "208283325e99745dd43e05b86565e4dc7d43e6f3921a558e9606de866bb1111c"
+    },
+    {
+      "path": "film/work/full-film-v3/tools/build_film_captions.py",
+      "bytes": 4029,
+      "sha256": "7a17eee36531bec1b7491ae8cd07d3aac62f4984563a235706f84d977bd5da93"
+    },
+    {
+      "path": "film/work/full-film-v3/tools/generate_film_narration.py",
+      "bytes": 4046,
+      "sha256": "a43ef286a7fcc2005c4af2e1e1da05c535f65f9275eac782b0ed15899851439d"
+    },
+    {
+      "path": "film/work/full-film-v3/tools/mix_film_audio.py",
+      "bytes": 3469,
+      "sha256": "56cc2f241ed487d142160a1050f13a8a944b5e55144064bcd3a10dbcc30956f1"
+    },
+    {
+      "path": "film/work/full-film-v3/tools/refine_michael.py",
+      "bytes": 2603,
+      "sha256": "71f6a56e3ff40d85437d3b39390519fb956fd414ca816d8410dbddaa32938dbf"
+    },
+    {
+      "path": "film/work/full-film-v3/tools/verify_final_reel.py",
+      "bytes": 4531,
+      "sha256": "3d5415741d3e5e3deeaa171fd9575d2b82172ccb708197f592768cc946aa428c"
+    },
+    {
+      "path": "film/work/full-film-v3/words/01_notebook.json",
+      "bytes": 7301,
+      "sha256": "bf9ec31ada1924f5337ef49bf4e664ee97486b89e631f1159dd095decb86f3c0"
+    },
+    {
+      "path": "film/work/full-film-v3/words/02_hackathon.json",
+      "bytes": 6214,
+      "sha256": "160a1dc155c89cdba4d752e6eb7da6eaadc99382ef0345ce9b4cfb7c73781308"
+    },
+    {
+      "path": "film/work/full-film-v3/words/03_clean.json",
+      "bytes": 7189,
+      "sha256": "b39c48ca1cacaad562eed67ecba1a8711175eefbd92bfbcb3100872e4565c0db"
+    },
+    {
+      "path": "film/work/full-film-v3/words/04_preball.json",
+      "bytes": 6622,
+      "sha256": "7050acf7c3ceba5c65b19abc9409d16951ea49132e5516191de967c2799067a5"
+    },
+    {
+      "path": "film/work/full-film-v3/words/05_pressure.json",
+      "bytes": 6468,
+      "sha256": "1f033df35cd9a4a4a15442b17bb980c25268332ead65eb588f708306f9269e24"
+    },
+    {
+      "path": "film/work/full-film-v3/words/06_hybrid.json",
+      "bytes": 6528,
+      "sha256": "52016ae5fdbd0b1b1205a0e56b860cb415158861444ea6c1eec2e22b91f38348"
+    },
+    {
+      "path": "film/work/full-film-v3/words/07_expected.json",
+      "bytes": 6734,
+      "sha256": "9069658a75b98f193f69049f98cea27a940618b1dc9eb7f45e5cc0484507fe94"
+    },
+    {
+      "path": "film/work/full-film-v3/words/08_adjust.json",
+      "bytes": 8289,
+      "sha256": "a7fc6027f2b06b61063f8807690b6d70f7e5877a6770a89f237610b62d43ff4f"
+    },
+    {
+      "path": "film/work/full-film-v3/words/09_shrink.json",
+      "bytes": 5999,
+      "sha256": "bf674af831c5bf703e8255254315e48fad13616522881771c1037148952df228"
+    },
+    {
+      "path": "film/work/full-film-v3/words/10_delta.json",
+      "bytes": 7917,
+      "sha256": "b73d935e04cfb32ac412133a9b40c5afe7990df028f038b9fe76516867557f49"
+    },
+    {
+      "path": "film/work/full-film-v3/words/11_holdout.json",
+      "bytes": 6290,
+      "sha256": "57bbec7e98101a4cea39311621accc8fa5d99a2cfd6581e1db6be9c27c116ca0"
+    },
+    {
+      "path": "film/work/full-film-v3/words/12_uncertainty.json",
+      "bytes": 6668,
+      "sha256": "9889b6068b9b1bec0ece010dcfa8e26cbce8351e6d8419fdba479577f3a088ae"
+    },
+    {
+      "path": "film/work/full-film-v3/words/13_sensitivity.json",
+      "bytes": 6576,
+      "sha256": "2208e7d5df14a4d96278c4a118a728aa97fc53afc6c5a9f0313f3e7c2cb2890d"
+    },
+    {
+      "path": "film/work/full-film-v3/words/14_shortlist.json",
+      "bytes": 6447,
+      "sha256": "f61a0cd23bafb528925d9bc3b2c0be6df00284f045b0e3841df0bed323877ac2"
+    },
+    {
+      "path": "film/work/full-film-v3/words/15_replay.json",
+      "bytes": 4829,
+      "sha256": "ebffbb459a45feac3195ad8e509593ec78df11b87f6beb8d57f23f4d76e35d9e"
+    },
+    {
+      "path": "film/work/full-film-v3/words/16_end.json",
+      "bytes": 6085,
+      "sha256": "aa655d2f9badd250497ba74de3bf030a605c1aedcbb2872bbc30a7438c05f9ba"
+    },
+    {
+      "path": "film/work/geography-review/classroom-reverse-background.png",
+      "bytes": 2608898,
+      "sha256": "b1ac1eca7e4af79b3701ba4d16f6fd32567f2eeb315b0719efea5a6a03afaab5"
+    },
+    {
+      "path": "film/work/opening-v3-hero/finalize_hero_delivery.py",
+      "bytes": 4406,
+      "sha256": "b0d130e3fd0122dba49cc254131572815f8c8ef063c542e1ed0cfc9b80e004b0"
+    },
+    {
+      "path": "film/work/opening-v3-hero/puppet/front_left_far.png",
+      "bytes": 739651,
+      "sha256": "504dee52dfcedb41cc2f9ab8d2cd3b3531726826fec6219aeac37856ed8fe795"
+    },
+    {
+      "path": "film/work/opening-v3-hero/puppet/front_left_near.png",
+      "bytes": 755144,
+      "sha256": "e2bde652e1aa8cb54d3ba063c9771384cf4a30d4675b4bd67241a3558bec31c0"
+    },
+    {
+      "path": "film/work/opening-v3-hero/puppet/states.json",
+      "bytes": 1150,
+      "sha256": "af50f240f9237812f630e85e79434943a81d3fc8d2e3348e0c909f463bc535d6"
+    },
+    {
+      "path": "film/work/opening-v3-hero/puppet/wry_neutral.png",
+      "bytes": 758120,
+      "sha256": "096a2d838837cba634931daae8b8f811e8c6009e574aa9b86727acd8c4927ab5"
+    },
+    {
+      "path": "film/work/opening-v3-hero/render_hero_poses.py",
+      "bytes": 3078,
+      "sha256": "aeba3fc4d64e0e78ea724ed4a7865439893a7fd3e5c3c053e2da908fb5b1c00e"
+    },
+    {
+      "path": "film/work/opening-v3-hero/render_silent_hero.py",
+      "bytes": 8398,
+      "sha256": "855bdb4acac6fd2278ba663c945fb005520e189cf5e43cebd32c19ac90b083c9"
+    },
+    {
+      "path": "film/work/opening-v3-notebook/render_notebook.py",
+      "bytes": 14278,
+      "sha256": "d4aca2b0e15ed8b25e3f29c9a33e1d22f5c2de013b5fcdd3c160ccd4ee3fa4ae"
+    },
+    {
+      "path": "film/work/opening-v3-notebook/verify_notebook.py",
+      "bytes": 2167,
+      "sha256": "406fe9f993e491c66241476c1ffdd7ebb00f197737ee9665e4118c4c7df75ee0"
+    },
+    {
+      "path": "film/work/opening_v2/DejaVu-LICENSE.txt",
+      "bytes": 3859,
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+    },
+    {
+      "path": "film/work/opening_v2/DejaVuSans-Bold.ttf",
+      "bytes": 708920,
+      "sha256": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890"
+    },
+    {
+      "path": "film/work/opening_v2/Kalam-OFL.txt",
+      "bytes": 4373,
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+    },
+    {
+      "path": "film/work/opening_v2/Kalam-Regular.ttf",
+      "bytes": 427360,
+      "sha256": "57cecb63d4608019371954274ae1d8c397764debd5b19d4a33c1efa4dc923c0b"
+    },
+    {
+      "path": "film/work/opening_v2/build_opening.py",
+      "bytes": 15179,
+      "sha256": "7439a075092b50175ecf9830220c7d397b6a5943e6dcad1cc8ebe05999cdce62"
+    },
+    {
+      "path": "film/work/opening_v2/classroom-master.png",
+      "bytes": 2891564,
+      "sha256": "f21a7349b8429380a9c44f72d06ca5398d056136a7fa3a14a215fbf46b012312"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/grin.png",
+      "bytes": 751240,
+      "sha256": "cb0aa9a783e4c338277a3b02275f43867e19db4baf39043d84da9c7ccf8811ab"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/hesitate.png",
+      "bytes": 758323,
+      "sha256": "118b42bc65023ec4845fd512d9fae5a4c9b5b12bea9d445b09fb633079c97e47"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/recover.png",
+      "bytes": 756389,
+      "sha256": "c9456b14bf6a5b027d98aa4b1590e65a17dc4aec7a8a223eb0a99da294417eb3"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/settle.png",
+      "bytes": 753912,
+      "sha256": "ae11feca997f68944d1a951c454b9aab1394f26d93808499a51e742174722dfd"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/startle.png",
+      "bytes": 737787,
+      "sha256": "7553c62a18e4e80409a2e089bf7cb04f9babbc6d9a1c5a187dd39d86b7d7928a"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/states.json",
+      "bytes": 3114,
+      "sha256": "ddda5ce1dbfbdda657ef9a99e98a07850944db148c3f35f88538d21a9c80eecd"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/turn1.png",
+      "bytes": 755474,
+      "sha256": "5d09a40fb487a16718f3410659c2ae90adbde766164fb29823b1d190b47bc60c"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/turn2.png",
+      "bytes": 741454,
+      "sha256": "d99711ba7dc534d2a0c25b3e0cb8a3a0370fb53680bc3bc616972910e8dcf8c2"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/write1.png",
+      "bytes": 748914,
+      "sha256": "1121144f3a22fadc89a49638babc2597aaba1d7f793434c44f5e131b458d0b2a"
+    },
+    {
+      "path": "film/work/opening_v2/puppet/write2.png",
+      "bytes": 744547,
+      "sha256": "142d7eb6c10ac0faf70132f836bdd9909a70a90c6e1bc1f6b716fb240e3abfa9"
+    },
+    {
+      "path": "film/work/qualified-report-reveal/render_report_reveal.py",
+      "bytes": 13088,
+      "sha256": "5acd2178f4b14bae5dc57d22a2797cdc3f1b35e45db4a4069d279f519338b44d"
+    },
+    {
+      "path": "film/work/qualified-report-reveal/verify_report_reveal.py",
+      "bytes": 2421,
+      "sha256": "4d55b847b1b8fae61ddb10b0fc2e4bb387668014c7999b9a484d852226897271"
+    },
+    {
+      "path": "film/work/reel/plates/02_hackathon_1.png",
+      "bytes": 2344035,
+      "sha256": "74e497b428d785f47e30ea3710c93d0ebe39c66ce4b2a681d913d517f4becddf"
+    },
+    {
+      "path": "film/work/reel/plates/03_clean_1.png",
+      "bytes": 2374736,
+      "sha256": "8c49d755239f9ff862e196bfc0fd8fa73f4ff780c0d49d9fe92b2d1f51c6acac"
+    },
+    {
+      "path": "film/work/reel/plates/04_preball_1.png",
+      "bytes": 2089189,
+      "sha256": "ee11bf06c3ddc775c357b8afbe3f68e97dcc4cf72ed6050a32009986394870a5"
+    },
+    {
+      "path": "film/work/reel/plates/05_pressure_1.png",
+      "bytes": 2087862,
+      "sha256": "9bab6b70ecc30ea3538fd23135a35ada0c5f477f5e1e9300b429233ae8ae336e"
+    },
+    {
+      "path": "film/work/reel/plates/06_hybrid_1.png",
+      "bytes": 2375213,
+      "sha256": "65846cb50c20201ca28f72192543384a6b06083ec8606680333b40e21c31d9b6"
+    },
+    {
+      "path": "film/work/reel/plates/07_expected_1.png",
+      "bytes": 2362659,
+      "sha256": "7a2915827f33f25b79abbc943631c96f3be7d0f6bc1066b5297bf2b723c4dfb9"
+    },
+    {
+      "path": "film/work/reel/plates/08_adjust_1.png",
+      "bytes": 2360091,
+      "sha256": "1662abfde521889cb69bbc0b363f4cdfa9dbfbafe562c295e53a51183f913347"
+    },
+    {
+      "path": "film/work/reel/plates/09_shrink_1.png",
+      "bytes": 2534004,
+      "sha256": "263b44eb70b93089579a47d10e6629c828ffc7112fe4a9c13e41da5686abdacb"
+    },
+    {
+      "path": "film/work/reel/plates/10_delta_1.png",
+      "bytes": 2502678,
+      "sha256": "168fb78875208240fd8cb73e335f3843e2df76be402e78779747715e34a84671"
+    },
+    {
+      "path": "film/work/reel/plates/11_holdout_1.png",
+      "bytes": 2500749,
+      "sha256": "5082b4d80f06095b76b49c9e16cfae10e61ec843c3c3b0d3ab1a5b7a04d6efc2"
+    },
+    {
+      "path": "film/work/reel/plates/12_uncertainty_1.png",
+      "bytes": 2518763,
+      "sha256": "9acffd177c5df6de8c6259085350e3080e389e19c9d39d66676514b82e21efe7"
+    },
+    {
+      "path": "film/work/reel/plates/13_sensitivity_1.png",
+      "bytes": 2470801,
+      "sha256": "1e87e7e848682ba2feaded89238ffdb658fdc6b972050124bb0bd361331c83c9"
+    },
+    {
+      "path": "film/work/reel/plates/14_shortlist_1.png",
+      "bytes": 2563161,
+      "sha256": "79098036ff3e0e6730d46c4b4362701f0397166fcf645cbcdea96b17f594857b"
+    },
+    {
+      "path": "film/work/reel/plates/15_replay_1.png",
+      "bytes": 2502559,
+      "sha256": "e084150f5d3d4c7454b25b1e34d60a442b007597ab8943d4d7b53f54ed99325f"
+    },
+    {
+      "path": "film/work/reel_sets.py",
+      "bytes": 26295,
+      "sha256": "e59d871d5d414726715b3b96718636e9b04927ee06f4bdae3213652328e97a99"
+    },
+    {
+      "path": "film/work/v4_debug.blend",
+      "bytes": 975701,
+      "sha256": "a29f780661a39239b34e3d95e914a1bf575360f1b2b71d1d70de2f884036b50e"
+    }
+  ]
+}

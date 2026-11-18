@@ -1,0 +1,122 @@
+[
+  {
+    "path": "film/outputs/qualified-report-reveal/QUALIFIED_REPORT_REVEAL.mp4",
+    "bytes": 1624802,
+    "sha256": "ee202778308c73a080bd89cc8092efdb4c80cdb27df45a823c4ed5805c0ed837"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/REPORT_REVEAL_METADATA.json",
+    "bytes": 1245,
+    "sha256": "41b1fd2206084bdd28e45fdf1bfd2cb4d614cbbcbc6e13326988508b79ab7642"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/REPORT_DATA_CHECKS.json",
+    "bytes": 1285,
+    "sha256": "18286be1d01a9ab5b7730acb6a9bc171b403720d3c68b437eb76bd9780b91406"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/REPORT_REVEAL_TECHNICAL_QA.json",
+    "bytes": 2060,
+    "sha256": "40804c1314619a75bd3641e94ea7a80b675906ac3ca972bbbafe84d787c189b4"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/REPORT_REVEAL_CONTACT.png",
+    "bytes": 453501,
+    "sha256": "e3b34ddc557e562f06fd6797f2265e71118b2c5cf52c3040a9703cb17e3d704f"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/README.md",
+    "bytes": 3200,
+    "sha256": "6644cccaba4b1bcf5c48efe4e499a8dbde50be122980611a1085ad0f1dcdff1a"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/requirements.txt",
+    "bytes": 44,
+    "sha256": "b616116496c687d6b09f4cdee8b210799212dcee78f68c602365c4dde30a34f1"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/qualified-batter-page.png",
+    "bytes": 220512,
+    "sha256": "1a20dd1a1cbf4e58313e904643b06121f4b6804735aca52f1a4d55f6727878bc"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/qualified-batter-page.svg",
+    "bytes": 8773,
+    "sha256": "946410df0a71c297d47bf5d9b439b4b700135c6ebe6ed8647379c321621466f2"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/qualified-bowler-page.png",
+    "bytes": 224411,
+    "sha256": "be2d883a7d47631b1eacb90f357b76a83cc771ef8189e618f07668a61d73ef8f"
+  },
+  {
+    "path": "film/outputs/qualified-report-reveal/qualified-bowler-page.svg",
+    "bytes": 8659,
+    "sha256": "ae5aaa2b50a372a5e673aec37416d338e7a2ca2de2770f1ac579fe601b19f71d"
+  },
+  {
+    "path": "film/work/qualified-report-reveal/render_report_reveal.py",
+    "bytes": 13088,
+    "sha256": "5acd2178f4b14bae5dc57d22a2797cdc3f1b35e45db4a4069d279f519338b44d"
+  },
+  {
+    "path": "film/work/qualified-report-reveal/verify_report_reveal.py",
+    "bytes": 2421,
+    "sha256": "4d55b847b1b8fae61ddb10b0fc2e4bb387668014c7999b9a484d852226897271"
+  },
+  {
+    "path": "film/data/accepted_primary_rankings.csv",
+    "bytes": 1607,
+    "sha256": "dffbd0c7a124038cce623d4bb1b5514bd6c0ad8635f8496723eac30553153f3e"
+  },
+  {
+    "path": "film/docs/METHODOLOGY_FOR_FILM.md",
+    "bytes": 4728,
+    "sha256": "d97d81bdcdf2db69188bf668329d6f2bf2c3bd970e80447bb3f02d1a24b22a3d"
+  },
+  {
+    "path": "film/work/opening_v2/classroom-master.png",
+    "bytes": 2891564,
+    "sha256": "f21a7349b8429380a9c44f72d06ca5398d056136a7fa3a14a215fbf46b012312"
+  },
+  {
+    "path": "film/work/opening_v2/Kalam-Regular.ttf",
+    "bytes": 427360,
+    "sha256": "57cecb63d4608019371954274ae1d8c397764debd5b19d4a33c1efa4dc923c0b"
+  },
+  {
+    "path": "film/work/opening_v2/Kalam-OFL.txt",
+    "bytes": 4373,
+    "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+  },
+  {
+    "path": "film/work/opening_v2/DejaVuSans-Bold.ttf",
+    "bytes": 708920,
+    "sha256": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890"
+  },
+  {
+    "path": "film/work/opening_v2/DejaVu-LICENSE.txt",
+    "bytes": 3859,
+    "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+  },
+  {
+    "path": "film/outputs/report-batter-top10.png",
+    "bytes": 217608,
+    "sha256": "0a4a00318aabebe9c00f874ae813b8017182bdf827f06b85f5761a8e07d3e8d7"
+  },
+  {
+    "path": "film/outputs/report-batter-top10.svg",
+    "bytes": 8007,
+    "sha256": "f9d0f4f5ce75d3b1b61c7fa4737e0d69a18d0c3f57f186fce40cb97cd181064e"
+  },
+  {
+    "path": "film/outputs/report-bowler-top10.png",
+    "bytes": 221606,
+    "sha256": "ea2a9f6e94380af0d15bcbe4cf6d524006538358bb3debca6d0e8da05279b564"
+  },
+  {
+    "path": "film/outputs/report-bowler-top10.svg",
+    "bytes": 7901,
+    "sha256": "898adccb769441f8c88a467f60f0cc1a26fbad537b4f1b7314684ebb13c40ed5"
+  }
+]

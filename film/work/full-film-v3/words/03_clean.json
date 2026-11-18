@@ -1,0 +1,385 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 4.966,
+      "text": "Your first obstacle: two hundred thousand, nine hundred and ninety-nine delivery events.",
+      "words": [
+        {
+          "word": "Your",
+          "start": 0.06,
+          "end": 0.22,
+          "score": 0.844
+        },
+        {
+          "word": "first",
+          "start": 0.28,
+          "end": 0.541,
+          "score": 0.788
+        },
+        {
+          "word": "obstacle:",
+          "start": 0.741,
+          "end": 1.161,
+          "score": 0.8
+        },
+        {
+          "word": "two",
+          "start": 1.522,
+          "end": 1.682,
+          "score": 0.901
+        },
+        {
+          "word": "hundred",
+          "start": 1.742,
+          "end": 2.022,
+          "score": 0.815
+        },
+        {
+          "word": "thousand,",
+          "start": 2.082,
+          "end": 2.623,
+          "score": 0.801
+        },
+        {
+          "word": "nine",
+          "start": 2.703,
+          "end": 2.963,
+          "score": 0.778
+        },
+        {
+          "word": "hundred",
+          "start": 3.023,
+          "end": 3.364,
+          "score": 0.806
+        },
+        {
+          "word": "and",
+          "start": 3.404,
+          "end": 3.464,
+          "score": 0.995
+        },
+        {
+          "word": "ninety-nine",
+          "start": 3.524,
+          "end": 4.125,
+          "score": 0.775
+        },
+        {
+          "word": "delivery",
+          "start": 4.165,
+          "end": 4.565,
+          "score": 0.823
+        },
+        {
+          "word": "events.",
+          "start": 4.605,
+          "end": 4.966,
+          "score": 0.827
+        }
+      ]
+    },
+    {
+      "start": 5.626,
+      "end": 6.107,
+      "text": "Wides.",
+      "words": [
+        {
+          "word": "Wides.",
+          "start": 5.626,
+          "end": 6.107,
+          "score": 0.897
+        }
+      ]
+    },
+    {
+      "start": 6.508,
+      "end": 7.168,
+      "text": "No-balls.",
+      "words": [
+        {
+          "word": "No-balls.",
+          "start": 6.508,
+          "end": 7.168,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 7.348,
+      "end": 7.889,
+      "text": "Run-outs.",
+      "words": [
+        {
+          "word": "Run-outs.",
+          "start": 7.348,
+          "end": 7.889,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 8.39,
+      "end": 8.77,
+      "text": "Rain.",
+      "words": [
+        {
+          "word": "Rain.",
+          "start": 8.39,
+          "end": 8.77,
+          "score": 0.813
+        }
+      ]
+    },
+    {
+      "start": 9.171,
+      "end": 12.595,
+      "text": "Before you judge a player, you have to reconstruct the match correctly.",
+      "words": [
+        {
+          "word": "Before",
+          "start": 9.171,
+          "end": 9.431,
+          "score": 0.799
+        },
+        {
+          "word": "you",
+          "start": 9.451,
+          "end": 9.591,
+          "score": 0.756
+        },
+        {
+          "word": "judge",
+          "start": 9.651,
+          "end": 9.911,
+          "score": 0.757
+        },
+        {
+          "word": "a",
+          "start": 9.951,
+          "end": 9.972,
+          "score": 1.0
+        },
+        {
+          "word": "player,",
+          "start": 10.012,
+          "end": 10.392,
+          "score": 0.816
+        },
+        {
+          "word": "you",
+          "start": 10.492,
+          "end": 10.632,
+          "score": 0.753
+        },
+        {
+          "word": "have",
+          "start": 10.672,
+          "end": 10.812,
+          "score": 0.885
+        },
+        {
+          "word": "to",
+          "start": 10.853,
+          "end": 10.933,
+          "score": 0.694
+        },
+        {
+          "word": "reconstruct",
+          "start": 10.993,
+          "end": 11.633,
+          "score": 0.823
+        },
+        {
+          "word": "the",
+          "start": 11.653,
+          "end": 11.754,
+          "score": 0.668
+        },
+        {
+          "word": "match",
+          "start": 11.794,
+          "end": 12.054,
+          "score": 0.849
+        },
+        {
+          "word": "correctly.",
+          "start": 12.114,
+          "end": 12.595,
+          "score": 0.921
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Your",
+      "start": 0.06,
+      "end": 0.22,
+      "score": 0.844
+    },
+    {
+      "word": "first",
+      "start": 0.28,
+      "end": 0.541,
+      "score": 0.788
+    },
+    {
+      "word": "obstacle:",
+      "start": 0.741,
+      "end": 1.161,
+      "score": 0.8
+    },
+    {
+      "word": "two",
+      "start": 1.522,
+      "end": 1.682,
+      "score": 0.901
+    },
+    {
+      "word": "hundred",
+      "start": 1.742,
+      "end": 2.022,
+      "score": 0.815
+    },
+    {
+      "word": "thousand,",
+      "start": 2.082,
+      "end": 2.623,
+      "score": 0.801
+    },
+    {
+      "word": "nine",
+      "start": 2.703,
+      "end": 2.963,
+      "score": 0.778
+    },
+    {
+      "word": "hundred",
+      "start": 3.023,
+      "end": 3.364,
+      "score": 0.806
+    },
+    {
+      "word": "and",
+      "start": 3.404,
+      "end": 3.464,
+      "score": 0.995
+    },
+    {
+      "word": "ninety-nine",
+      "start": 3.524,
+      "end": 4.125,
+      "score": 0.775
+    },
+    {
+      "word": "delivery",
+      "start": 4.165,
+      "end": 4.565,
+      "score": 0.823
+    },
+    {
+      "word": "events.",
+      "start": 4.605,
+      "end": 4.966,
+      "score": 0.827
+    },
+    {
+      "word": "Wides.",
+      "start": 5.626,
+      "end": 6.107,
+      "score": 0.897
+    },
+    {
+      "word": "No-balls.",
+      "start": 6.508,
+      "end": 7.168,
+      "score": 0.94
+    },
+    {
+      "word": "Run-outs.",
+      "start": 7.348,
+      "end": 7.889,
+      "score": 0.894
+    },
+    {
+      "word": "Rain.",
+      "start": 8.39,
+      "end": 8.77,
+      "score": 0.813
+    },
+    {
+      "word": "Before",
+      "start": 9.171,
+      "end": 9.431,
+      "score": 0.799
+    },
+    {
+      "word": "you",
+      "start": 9.451,
+      "end": 9.591,
+      "score": 0.756
+    },
+    {
+      "word": "judge",
+      "start": 9.651,
+      "end": 9.911,
+      "score": 0.757
+    },
+    {
+      "word": "a",
+      "start": 9.951,
+      "end": 9.972,
+      "score": 1.0
+    },
+    {
+      "word": "player,",
+      "start": 10.012,
+      "end": 10.392,
+      "score": 0.816
+    },
+    {
+      "word": "you",
+      "start": 10.492,
+      "end": 10.632,
+      "score": 0.753
+    },
+    {
+      "word": "have",
+      "start": 10.672,
+      "end": 10.812,
+      "score": 0.885
+    },
+    {
+      "word": "to",
+      "start": 10.853,
+      "end": 10.933,
+      "score": 0.694
+    },
+    {
+      "word": "reconstruct",
+      "start": 10.993,
+      "end": 11.633,
+      "score": 0.823
+    },
+    {
+      "word": "the",
+      "start": 11.653,
+      "end": 11.754,
+      "score": 0.668
+    },
+    {
+      "word": "match",
+      "start": 11.794,
+      "end": 12.054,
+      "score": 0.849
+    },
+    {
+      "word": "correctly.",
+      "start": 12.114,
+      "end": 12.595,
+      "score": 0.921
+    }
+  ],
+  "_source_audio_sha256": "0be395905f526722b14b1272f9116c62109b21be639a2ef5c46b7e672d47dd11"
+}

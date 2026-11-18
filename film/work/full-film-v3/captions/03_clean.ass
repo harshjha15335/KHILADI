@@ -1,0 +1,21 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.28,Main,,0,0,0,,Your first {\c&H00FFFF&}obstacle:{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.60,0:00:02.74,Main,,0,0,0,,two hundred {\c&H00FFFF&}thousand,{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.78,0:00:04.24,Main,,0,0,0,,nine hundred and {\c&H00FFFF&}ninety-nine{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.24,0:00:05.08,Main,,0,0,0,,{\c&H00FFFF&}delivery{\c&HFFFFFF&} events.
+Dialogue: 0,0:00:05.71,0:00:07.28,Main,,0,0,0,,Wides. {\c&H00FFFF&}No-balls.{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.43,0:00:08.88,Main,,0,0,0,,{\c&H00FFFF&}Run-outs.{\c&HFFFFFF&} Rain.
+Dialogue: 0,0:00:09.25,0:00:10.09,Main,,0,0,0,,{\c&H00FFFF&}Before{\c&HFFFFFF&} you judge a
+Dialogue: 0,0:00:10.09,0:00:11.05,Main,,0,0,0,,{\c&H00FFFF&}player,{\c&HFFFFFF&} you have to
+Dialogue: 0,0:00:11.07,0:00:12.17,Main,,0,0,0,,{\c&H00FFFF&}reconstruct{\c&HFFFFFF&} the match
+Dialogue: 0,0:00:12.19,0:00:12.71,Main,,0,0,0,,{\c&H00FFFF&}correctly.{\c&HFFFFFF&}

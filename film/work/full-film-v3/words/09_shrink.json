@@ -1,0 +1,316 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 3.925,
+      "text": "Then the small samples arrive, wearing enormous confidence.",
+      "words": [
+        {
+          "word": "Then",
+          "start": 0.06,
+          "end": 0.2,
+          "score": 0.92
+        },
+        {
+          "word": "the",
+          "start": 0.24,
+          "end": 0.3,
+          "score": 0.998
+        },
+        {
+          "word": "small",
+          "start": 0.36,
+          "end": 0.701,
+          "score": 0.837
+        },
+        {
+          "word": "samples",
+          "start": 0.761,
+          "end": 1.202,
+          "score": 0.775
+        },
+        {
+          "word": "arrive,",
+          "start": 1.262,
+          "end": 1.782,
+          "score": 0.866
+        },
+        {
+          "word": "wearing",
+          "start": 2.183,
+          "end": 2.523,
+          "score": 0.854
+        },
+        {
+          "word": "enormous",
+          "start": 2.744,
+          "end": 3.264,
+          "score": 0.756
+        },
+        {
+          "word": "confidence.",
+          "start": 3.325,
+          "end": 3.925,
+          "score": 0.869
+        }
+      ]
+    },
+    {
+      "start": 4.546,
+      "end": 7.29,
+      "text": "Twenty-five pressure events are not four hundred.",
+      "words": [
+        {
+          "word": "Twenty-five",
+          "start": 4.546,
+          "end": 5.187,
+          "score": 0.88
+        },
+        {
+          "word": "pressure",
+          "start": 5.287,
+          "end": 5.628,
+          "score": 0.901
+        },
+        {
+          "word": "events",
+          "start": 5.688,
+          "end": 6.008,
+          "score": 0.866
+        },
+        {
+          "word": "are",
+          "start": 6.148,
+          "end": 6.248,
+          "score": 0.719
+        },
+        {
+          "word": "not",
+          "start": 6.309,
+          "end": 6.509,
+          "score": 0.833
+        },
+        {
+          "word": "four",
+          "start": 6.589,
+          "end": 6.829,
+          "score": 0.762
+        },
+        {
+          "word": "hundred.",
+          "start": 6.909,
+          "end": 7.29,
+          "score": 0.822
+        }
+      ]
+    },
+    {
+      "start": 7.771,
+      "end": 11.636,
+      "text": "Empirical Bayes pulls weakly supported estimates toward the average.",
+      "words": [
+        {
+          "word": "Empirical",
+          "start": 7.771,
+          "end": 8.291,
+          "score": 0.879
+        },
+        {
+          "word": "Bayes",
+          "start": 8.351,
+          "end": 8.732,
+          "score": 0.771
+        },
+        {
+          "word": "pulls",
+          "start": 8.832,
+          "end": 9.152,
+          "score": 0.857
+        },
+        {
+          "word": "weakly",
+          "start": 9.253,
+          "end": 9.613,
+          "score": 0.916
+        },
+        {
+          "word": "supported",
+          "start": 9.673,
+          "end": 10.134,
+          "score": 0.869
+        },
+        {
+          "word": "estimates",
+          "start": 10.274,
+          "end": 10.675,
+          "score": 0.835
+        },
+        {
+          "word": "toward",
+          "start": 10.735,
+          "end": 11.035,
+          "score": 0.952
+        },
+        {
+          "word": "the",
+          "start": 11.055,
+          "end": 11.155,
+          "score": 0.668
+        },
+        {
+          "word": "average.",
+          "start": 11.295,
+          "end": 11.636,
+          "score": 0.8
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Then",
+      "start": 0.06,
+      "end": 0.2,
+      "score": 0.92
+    },
+    {
+      "word": "the",
+      "start": 0.24,
+      "end": 0.3,
+      "score": 0.998
+    },
+    {
+      "word": "small",
+      "start": 0.36,
+      "end": 0.701,
+      "score": 0.837
+    },
+    {
+      "word": "samples",
+      "start": 0.761,
+      "end": 1.202,
+      "score": 0.775
+    },
+    {
+      "word": "arrive,",
+      "start": 1.262,
+      "end": 1.782,
+      "score": 0.866
+    },
+    {
+      "word": "wearing",
+      "start": 2.183,
+      "end": 2.523,
+      "score": 0.854
+    },
+    {
+      "word": "enormous",
+      "start": 2.744,
+      "end": 3.264,
+      "score": 0.756
+    },
+    {
+      "word": "confidence.",
+      "start": 3.325,
+      "end": 3.925,
+      "score": 0.869
+    },
+    {
+      "word": "Twenty-five",
+      "start": 4.546,
+      "end": 5.187,
+      "score": 0.88
+    },
+    {
+      "word": "pressure",
+      "start": 5.287,
+      "end": 5.628,
+      "score": 0.901
+    },
+    {
+      "word": "events",
+      "start": 5.688,
+      "end": 6.008,
+      "score": 0.866
+    },
+    {
+      "word": "are",
+      "start": 6.148,
+      "end": 6.248,
+      "score": 0.719
+    },
+    {
+      "word": "not",
+      "start": 6.309,
+      "end": 6.509,
+      "score": 0.833
+    },
+    {
+      "word": "four",
+      "start": 6.589,
+      "end": 6.829,
+      "score": 0.762
+    },
+    {
+      "word": "hundred.",
+      "start": 6.909,
+      "end": 7.29,
+      "score": 0.822
+    },
+    {
+      "word": "Empirical",
+      "start": 7.771,
+      "end": 8.291,
+      "score": 0.879
+    },
+    {
+      "word": "Bayes",
+      "start": 8.351,
+      "end": 8.732,
+      "score": 0.771
+    },
+    {
+      "word": "pulls",
+      "start": 8.832,
+      "end": 9.152,
+      "score": 0.857
+    },
+    {
+      "word": "weakly",
+      "start": 9.253,
+      "end": 9.613,
+      "score": 0.916
+    },
+    {
+      "word": "supported",
+      "start": 9.673,
+      "end": 10.134,
+      "score": 0.869
+    },
+    {
+      "word": "estimates",
+      "start": 10.274,
+      "end": 10.675,
+      "score": 0.835
+    },
+    {
+      "word": "toward",
+      "start": 10.735,
+      "end": 11.035,
+      "score": 0.952
+    },
+    {
+      "word": "the",
+      "start": 11.055,
+      "end": 11.155,
+      "score": 0.668
+    },
+    {
+      "word": "average.",
+      "start": 11.295,
+      "end": 11.636,
+      "score": 0.8
+    }
+  ],
+  "_source_audio_sha256": "8e695d3ac7daa36a13e2d8e477f277b9e7dbc862fd3ab8f20d7243a6a82e6903"
+}

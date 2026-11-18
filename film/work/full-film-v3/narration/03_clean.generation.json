@@ -1,0 +1,17 @@
+{
+  "signature": "58e0a196a98ce87a17c5ab1bc8e7fe56d9b4e0c14cad3cbf464203b97738eb33",
+  "display_text": "Your first obstacle: two hundred thousand, nine hundred and ninety-nine delivery events. Wides. No-balls. Run-outs. Rain. Before you judge a player, you have to reconstruct the match correctly.",
+  "synthesis_text": "Your first obstacle: two hundred thousand, nine hundred and ninety-nine delivery events. Wides. No-balls. Run-outs. Rain. Before you judge a player, you have to reconstruct the match correctly.",
+  "phonemes": "j\u028a\u0279 f\u02c8\u025c\u02d0st \u02c8\u0251\u02d0bst\u0259k\u0259l: t\u02c8u\u02d0 h\u02c8\u028cnd\u0279\u026ad \u03b8\u02c8a\u028az\u0259nd, n\u02c8a\u026an h\u02c8\u028cnd\u0279\u026ad \u00e6nd n\u02c8a\u026antin\u02c8a\u026an d\u1d7bl\u02c8\u026av\u025a\u0279i \u1d7bv\u02c8\u025bnts. w\u02c8a\u026adz. n\u02c8o\u028ab\u02c8\u0254\u02d0lz. \u0279\u02c8\u028cn\u02c8a\u028ats. \u0279\u02c8e\u026an. b\u1d7bf\u02cc\u0254\u02d0\u0279 ju\u02d0 d\u0292\u02c8\u028cd\u0292 \u0250 pl\u02c8e\u026a\u025a, ju\u02d0 h\u00e6v t\u0259 \u0279\u02cci\u02d0k\u0259nst\u0279\u02c8\u028ckt \u00f0\u0259 m\u02c8\u00e6t\u0283 k\u025a\u0279\u02c8\u025bktli.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 12.714666666666666,
+  "sha256": "0be395905f526722b14b1272f9116c62109b21be639a2ef5c46b7e672d47dd11"
+}

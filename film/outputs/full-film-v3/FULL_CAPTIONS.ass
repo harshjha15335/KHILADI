@@ -1,0 +1,146 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.00,Main,,0,0,0,,You're in {\c&H00FFFF&}school.{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.02,0:00:01.94,Main,,0,0,0,,You're {\c&H00FFFF&}supposed{\c&HFFFFFF&} to be
+Dialogue: 0,0:00:01.96,0:00:02.78,Main,,0,0,0,,doing {\c&H00FFFF&}maths.{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.24,0:00:04.18,Main,,0,0,0,,But you've got {\c&H00FFFF&}something{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.20,0:00:05.34,Main,,0,0,0,,way more {\c&H00FFFF&}important{\c&HFFFFFF&} to
+Dialogue: 0,0:00:05.36,0:00:05.96,Main,,0,0,0,,{\c&H00FFFF&}figure{\c&HFFFFFF&} out.
+Dialogue: 0,0:00:06.36,0:00:08.10,Main,,0,0,0,,Your {\c&H00FFFF&}IPL{\c&HFFFFFF&} best eleven.
+Dialogue: 0,0:00:08.47,0:00:09.30,Main,,0,0,0,,And {\c&H00FFFF&}honestly?{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.65,0:00:10.70,Main,,0,0,0,,The maths can {\c&H00FFFF&}wait.{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.14,0:00:12.94,Main,,0,0,0,,Years {\c&H00FFFF&}pass.{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.38,0:00:14.28,Main,,0,0,0,,The cricket {\c&H00FFFF&}notebook{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.28,0:00:15.94,Main,,0,0,0,,{\c&H00FFFF&}survives.{\c&HFFFFFF&} Then you see
+Dialogue: 0,0:00:15.94,0:00:17.84,Main,,0,0,0,,the {\c&H00FFFF&}Rajasthan{\c&HFFFFFF&} Royals SupeRR
+Dialogue: 0,0:00:17.87,0:00:18.86,Main,,0,0,0,,Selector {\c&H00FFFF&}challenge.{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.31,0:00:20.88,Main,,0,0,0,,Your imaginary {\c&H00FFFF&}selections{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.97,0:00:22.10,Main,,0,0,0,,suddenly need {\c&H00FFFF&}something{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.13,0:00:23.37,Main,,0,0,0,,rather {\c&H00FFFF&}inconvenient.{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.87,0:00:24.33,Main,,0,0,0,,{\c&H00FFFF&}Evidence.{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.87,0:00:26.01,Main,,0,0,0,,Your first {\c&H00FFFF&}obstacle:{\c&HFFFFFF&}
+Dialogue: 0,0:00:26.34,0:00:27.47,Main,,0,0,0,,two hundred {\c&H00FFFF&}thousand,{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.52,0:00:28.97,Main,,0,0,0,,nine hundred and {\c&H00FFFF&}ninety-nine{\c&HFFFFFF&}
+Dialogue: 0,0:00:28.98,0:00:29.81,Main,,0,0,0,,{\c&H00FFFF&}delivery{\c&HFFFFFF&} events.
+Dialogue: 0,0:00:30.44,0:00:32.02,Main,,0,0,0,,Wides. {\c&H00FFFF&}No-balls.{\c&HFFFFFF&}
+Dialogue: 0,0:00:32.16,0:00:33.62,Main,,0,0,0,,{\c&H00FFFF&}Run-outs.{\c&HFFFFFF&} Rain.
+Dialogue: 0,0:00:33.98,0:00:34.82,Main,,0,0,0,,{\c&H00FFFF&}Before{\c&HFFFFFF&} you judge a
+Dialogue: 0,0:00:34.83,0:00:35.78,Main,,0,0,0,,{\c&H00FFFF&}player,{\c&HFFFFFF&} you have to
+Dialogue: 0,0:00:35.81,0:00:36.90,Main,,0,0,0,,{\c&H00FFFF&}reconstruct{\c&HFFFFFF&} the match
+Dialogue: 0,0:00:36.93,0:00:37.44,Main,,0,0,0,,{\c&H00FFFF&}correctly.{\c&HFFFFFF&}
+Dialogue: 0,0:00:37.97,0:00:39.01,Main,,0,0,0,,So you {\c&H00FFFF&}freeze{\c&HFFFFFF&} time
+Dialogue: 0,0:00:39.04,0:00:40.01,Main,,0,0,0,,{\c&H00FFFF&}before{\c&HFFFFFF&} every ball.
+Dialogue: 0,0:00:40.32,0:00:41.68,Main,,0,0,0,,Score. {\c&H00FFFF&}Wickets.{\c&HFFFFFF&}
+Dialogue: 0,0:00:42.04,0:00:43.02,Main,,0,0,0,,Balls {\c&H00FFFF&}remaining.{\c&HFFFFFF&}
+Dialogue: 0,0:00:43.42,0:00:44.24,Main,,0,0,0,,No {\c&H00FFFF&}peeking{\c&HFFFFFF&} at the
+Dialogue: 0,0:00:44.29,0:00:45.58,Main,,0,0,0,,six that {\c&H00FFFF&}happens{\c&HFFFFFF&} next.
+Dialogue: 0,0:00:45.97,0:00:46.93,Main,,0,0,0,,That would be {\c&H00FFFF&}cheating,{\c&HFFFFFF&}
+Dialogue: 0,0:00:46.91,0:00:47.75,Main,,0,0,0,,with a {\c&H00FFFF&}spreadsheet.{\c&HFFFFFF&}
+Dialogue: 0,0:00:48.18,0:00:49.54,Main,,0,0,0,,But {\c&H00FFFF&}difficult{\c&HFFFFFF&} doesn't always
+Dialogue: 0,0:00:49.56,0:00:50.72,Main,,0,0,0,,mean {\c&H00FFFF&}consequential.{\c&HFFFFFF&}
+Dialogue: 0,0:00:51.15,0:00:52.78,Main,,0,0,0,,{\c&H00FFFF&}Thirty-nine{\c&HFFFFFF&} runs an over?
+Dialogue: 0,0:00:53.15,0:00:54.81,Main,,0,0,0,,{\c&H00FFFF&}Terrifying.{\c&HFFFFFF&} Also,
+Dialogue: 0,0:00:54.87,0:00:55.73,Main,,0,0,0,,{\c&H00FFFF&}probably{\c&HFFFFFF&} over.
+Dialogue: 0,0:00:56.06,0:00:57.09,Main,,0,0,0,,Two {\c&H00FFFF&}needed{\c&HFFFFFF&} off one?
+Dialogue: 0,0:00:57.56,0:00:58.54,Main,,0,0,0,,Now the next {\c&H00FFFF&}ball{\c&HFFFFFF&}
+Dialogue: 0,0:00:58.54,0:00:59.70,Main,,0,0,0,,can change {\c&H00FFFF&}everything.{\c&HFFFFFF&}
+Dialogue: 0,0:01:00.15,0:01:01.55,Main,,0,0,0,,You combine {\c&H00FFFF&}scoreboard{\c&HFFFFFF&}
+Dialogue: 0,0:01:01.56,0:01:02.35,Main,,0,0,0,,{\c&H00FFFF&}difficulty{\c&HFFFFFF&} with
+Dialogue: 0,0:01:02.38,0:01:03.89,Main,,0,0,0,,win-probability {\c&H00FFFF&}leverage,{\c&HFFFFFF&}
+Dialogue: 0,0:01:04.42,0:01:05.82,Main,,0,0,0,,using {\c&H00FFFF&}context-relative{\c&HFFFFFF&}
+Dialogue: 0,0:01:05.82,0:01:07.98,Main,,0,0,0,,{\c&H00FFFF&}percentiles.{\c&HFFFFFF&} Your primary
+Dialogue: 0,0:01:08.03,0:01:09.58,Main,,0,0,0,,pressure {\c&H00FFFF&}definition{\c&HFFFFFF&} selects
+Dialogue: 0,0:01:09.59,0:01:10.90,Main,,0,0,0,,the top twenty {\c&H00FFFF&}percent{\c&HFFFFFF&}
+Dialogue: 0,0:01:10.93,0:01:12.13,Main,,0,0,0,,within each {\c&H00FFFF&}innings.{\c&HFFFFFF&}
+Dialogue: 0,0:01:12.65,0:01:14.05,Main,,0,0,0,,Not within every {\c&H00FFFF&}phase.{\c&HFFFFFF&}
+Dialogue: 0,0:01:14.66,0:01:15.42,Main,,0,0,0,,Next {\c&H00FFFF&}question:{\c&HFFFFFF&}
+Dialogue: 0,0:01:15.72,0:01:16.52,Main,,0,0,0,,{\c&H00FFFF&}better{\c&HFFFFFF&} than what?
+Dialogue: 0,0:01:16.96,0:01:18.66,Main,,0,0,0,,You estimate {\c&H00FFFF&}expected{\c&HFFFFFF&} runs
+Dialogue: 0,0:01:18.71,0:01:19.84,Main,,0,0,0,,and {\c&H00FFFF&}dismissal{\c&HFFFFFF&} risk.
+Dialogue: 0,0:01:20.35,0:01:21.65,Main,,0,0,0,,{\c&H00FFFF&}Batters{\c&HFFFFFF&} earn credit for
+Dialogue: 0,0:01:21.75,0:01:23.33,Main,,0,0,0,,extra runs and {\c&H00FFFF&}survival.{\c&HFFFFFF&}
+Dialogue: 0,0:01:23.77,0:01:25.85,Main,,0,0,0,,Bowlers, for runs {\c&H00FFFF&}prevented{\c&HFFFFFF&}
+Dialogue: 0,0:01:25.90,0:01:26.91,Main,,0,0,0,,and credited {\c&H00FFFF&}wickets.{\c&HFFFFFF&}
+Dialogue: 0,0:01:27.45,0:01:28.77,Main,,0,0,0,,You adjust for {\c&H00FFFF&}scoring{\c&HFFFFFF&}
+Dialogue: 0,0:01:28.89,0:01:30.01,Main,,0,0,0,,eras and {\c&H00FFFF&}opposition.{\c&HFFFFFF&}
+Dialogue: 0,0:01:30.52,0:01:31.93,Main,,0,0,0,,Then {\c&H00FFFF&}combine{\c&HFFFFFF&} runs and
+Dialogue: 0,0:01:31.96,0:01:33.13,Main,,0,0,0,,wickets with a {\c&H00FFFF&}declared{\c&HFFFFFF&}
+Dialogue: 0,0:01:33.14,0:01:35.13,Main,,0,0,0,,{\c&H00FFFF&}assumption:{\c&HFFFFFF&} fifteen runs per
+Dialogue: 0,0:01:35.14,0:01:36.77,Main,,0,0,0,,{\c&H00FFFF&}wicket.{\c&HFFFFFF&} You check ten
+Dialogue: 0,0:01:36.88,0:01:37.68,Main,,0,0,0,,and {\c&H00FFFF&}twenty{\c&HFFFFFF&} too.
+Dialogue: 0,0:01:38.20,0:01:39.46,Main,,0,0,0,,An {\c&H00FFFF&}assumption{\c&HFFFFFF&} deserves a
+Dialogue: 0,0:01:39.50,0:01:41.16,Main,,0,0,0,,test, not a {\c&H00FFFF&}disguise.{\c&HFFFFFF&}
+Dialogue: 0,0:01:41.77,0:01:42.95,Main,,0,0,0,,Then the small {\c&H00FFFF&}samples{\c&HFFFFFF&}
+Dialogue: 0,0:01:42.98,0:01:45.01,Main,,0,0,0,,arrive, wearing {\c&H00FFFF&}enormous{\c&HFFFFFF&}
+Dialogue: 0,0:01:45.04,0:01:46.94,Main,,0,0,0,,confidence. {\c&H00FFFF&}Twenty-five{\c&HFFFFFF&}
+Dialogue: 0,0:01:47.00,0:01:48.26,Main,,0,0,0,,{\c&H00FFFF&}pressure{\c&HFFFFFF&} events are not
+Dialogue: 0,0:01:48.30,0:01:49.04,Main,,0,0,0,,four {\c&H00FFFF&}hundred.{\c&HFFFFFF&}
+Dialogue: 0,0:01:49.48,0:01:51.36,Main,,0,0,0,,{\c&H00FFFF&}Empirical{\c&HFFFFFF&} Bayes pulls weakly
+Dialogue: 0,0:01:51.39,0:01:52.78,Main,,0,0,0,,supported {\c&H00FFFF&}estimates{\c&HFFFFFF&} toward
+Dialogue: 0,0:01:52.77,0:01:53.38,Main,,0,0,0,,the {\c&H00FFFF&}average.{\c&HFFFFFF&}
+Dialogue: 0,0:01:53.92,0:01:54.96,Main,,0,0,0,,{\c&H00FFFF&}Performing{\c&HFFFFFF&} well under
+Dialogue: 0,0:01:54.98,0:01:56.38,Main,,0,0,0,,{\c&H00FFFF&}pressure{\c&HFFFFFF&} isn't the same
+Dialogue: 0,0:01:56.44,0:01:57.72,Main,,0,0,0,,as {\c&H00FFFF&}improving{\c&HFFFFFF&} because of
+Dialogue: 0,0:01:57.79,0:01:59.44,Main,,0,0,0,,{\c&H00FFFF&}pressure.{\c&HFFFFFF&} You find no
+Dialogue: 0,0:01:59.51,0:02:01.29,Main,,0,0,0,,validated {\c&H00FFFF&}repeatable{\c&HFFFFFF&} bowling
+Dialogue: 0,0:02:01.33,0:02:02.09,Main,,0,0,0,,pressure {\c&H00FFFF&}delta.{\c&HFFFFFF&}
+Dialogue: 0,0:02:02.59,0:02:03.95,Main,,0,0,0,,The batting {\c&H00FFFF&}delta{\c&HFFFFFF&} gains
+Dialogue: 0,0:02:04.00,0:02:04.65,Main,,0,0,0,,are {\c&H00FFFF&}tiny.{\c&HFFFFFF&}
+Dialogue: 0,0:02:05.14,0:02:06.76,Main,,0,0,0,,A {\c&H00FFFF&}psychological{\c&HFFFFFF&} clutch trait
+Dialogue: 0,0:02:06.78,0:02:07.96,Main,,0,0,0,,remains {\c&H00FFFF&}unproven.{\c&HFFFFFF&}
+Dialogue: 0,0:02:08.40,0:02:10.28,Main,,0,0,0,,The unseen {\c&H00FFFF&}twenty-twenty-six{\c&HFFFFFF&}
+Dialogue: 0,0:02:10.28,0:02:12.16,Main,,0,0,0,,season {\c&H00FFFF&}challenges{\c&HFFFFFF&} your story.
+Dialogue: 0,0:02:12.68,0:02:14.26,Main,,0,0,0,,Batting {\c&H00FFFF&}quality{\c&HFFFFFF&} shows no
+Dialogue: 0,0:02:14.35,0:02:15.58,Main,,0,0,0,,positive {\c&H00FFFF&}predictive{\c&HFFFFFF&}
+Dialogue: 0,0:02:15.59,0:02:17.67,Main,,0,0,0,,{\c&H00FFFF&}relationship.{\c&HFFFFFF&} Bowling looks
+Dialogue: 0,0:02:17.71,0:02:19.53,Main,,0,0,0,,{\c&H00FFFF&}promising,{\c&HFFFFFF&} but an advantage
+Dialogue: 0,0:02:19.59,0:02:21.55,Main,,0,0,0,,over {\c&H00FFFF&}ordinary{\c&HFFFFFF&} economy isn't
+Dialogue: 0,0:02:21.55,0:02:22.29,Main,,0,0,0,,{\c&H00FFFF&}established.{\c&HFFFFFF&}
+Dialogue: 0,0:02:22.81,0:02:23.94,Main,,0,0,0,,So you {\c&H00FFFF&}resample{\c&HFFFFFF&} whole
+Dialogue: 0,0:02:23.99,0:02:25.62,Main,,0,0,0,,{\c&H00FFFF&}matches,{\c&HFFFFFF&} seven hundred and
+Dialogue: 0,0:02:25.65,0:02:26.50,Main,,0,0,0,,fifty {\c&H00FFFF&}times.{\c&HFFFFFF&}
+Dialogue: 0,0:02:27.01,0:02:28.16,Main,,0,0,0,,Confidence {\c&H00FFFF&}intervals.{\c&HFFFFFF&}
+Dialogue: 0,0:02:28.65,0:02:29.76,Main,,0,0,0,,Rank {\c&H00FFFF&}distributions.{\c&HFFFFFF&}
+Dialogue: 0,0:02:30.29,0:02:31.85,Main,,0,0,0,,A top-ten {\c&H00FFFF&}bootstrap{\c&HFFFFFF&} rate
+Dialogue: 0,0:02:31.91,0:02:32.99,Main,,0,0,0,,measures {\c&H00FFFF&}conditional{\c&HFFFFFF&}
+Dialogue: 0,0:02:33.01,0:02:34.33,Main,,0,0,0,,historical {\c&H00FFFF&}stability.{\c&HFFFFFF&}
+Dialogue: 0,0:02:34.75,0:02:35.89,Main,,0,0,0,,It isn't a {\c&H00FFFF&}prophecy.{\c&HFFFFFF&}
+Dialogue: 0,0:02:36.37,0:02:37.29,Main,,0,0,0,,Change the {\c&H00FFFF&}pressure{\c&HFFFFFF&}
+Dialogue: 0,0:02:37.30,0:02:38.39,Main,,0,0,0,,{\c&H00FFFF&}definition,{\c&HFFFFFF&} and your
+Dialogue: 0,0:02:38.44,0:02:39.55,Main,,0,0,0,,{\c&H00FFFF&}shortlist{\c&HFFFFFF&} changes.
+Dialogue: 0,0:02:40.16,0:02:41.32,Main,,0,0,0,,{\c&H00FFFF&}Remove{\c&HFFFFFF&} a player's best
+Dialogue: 0,0:02:41.34,0:02:43.00,Main,,0,0,0,,{\c&H00FFFF&}season,{\c&HFFFFFF&} and nine names
+Dialogue: 0,0:02:43.03,0:02:44.26,Main,,0,0,0,,{\c&H00FFFF&}leave{\c&HFFFFFF&} each top ten.
+Dialogue: 0,0:02:44.75,0:02:46.07,Main,,0,0,0,,Those aren't {\c&H00FFFF&}details{\c&HFFFFFF&} you
+Dialogue: 0,0:02:46.05,0:02:46.77,Main,,0,0,0,,get to {\c&H00FFFF&}hide.{\c&HFFFFFF&}
+Dialogue: 0,0:02:47.29,0:02:48.52,Main,,0,0,0,,Your {\c&H00FFFF&}primary{\c&HFFFFFF&} lists put
+Dialogue: 0,0:02:48.55,0:02:50.08,Main,,0,0,0,,Jos Buttler and {\c&H00FFFF&}Jasprit{\c&HFFFFFF&}
+Dialogue: 0,0:02:50.09,0:02:50.90,Main,,0,0,0,,Bumrah {\c&H00FFFF&}first.{\c&HFFFFFF&}
+Dialogue: 0,0:02:51.41,0:02:52.54,Main,,0,0,0,,But every name {\c&H00FFFF&}needs{\c&HFFFFFF&}
+Dialogue: 0,0:02:52.57,0:02:54.63,Main,,0,0,0,,exposure, {\c&H00FFFF&}uncertainty{\c&HFFFFFF&} and
+Dialogue: 0,0:02:54.67,0:02:55.43,Main,,0,0,0,,{\c&H00FFFF&}format{\c&HFFFFFF&} mix.
+Dialogue: 0,0:02:55.99,0:02:57.31,Main,,0,0,0,,T-twenty {\c&H00FFFF&}international{\c&HFFFFFF&}
+Dialogue: 0,0:02:57.41,0:02:59.11,Main,,0,0,0,,{\c&H00FFFF&}evidence{\c&HFFFFFF&} isn't automatically
+Dialogue: 0,0:02:59.37,0:03:00.69,Main,,0,0,0,,IPL {\c&H00FFFF&}evidence.{\c&HFFFFFF&}
+Dialogue: 0,0:03:01.28,0:03:03.06,Main,,0,0,0,,Finally, your {\c&H00FFFF&}report's{\c&HFFFFFF&} replay
+Dialogue: 0,0:03:03.06,0:03:04.52,Main,,0,0,0,,{\c&H00FFFF&}reproduces{\c&HFFFFFF&} all twenty
+Dialogue: 0,0:03:04.54,0:03:06.46,Main,,0,0,0,,rankings and passes {\c&H00FFFF&}forty-one{\c&HFFFFFF&}
+Dialogue: 0,0:03:06.52,0:03:08.58,Main,,0,0,0,,checks. The code {\c&H00FFFF&}repeats.{\c&HFFFFFF&}
+Dialogue: 0,0:03:09.01,0:03:10.50,Main,,0,0,0,,The statistical {\c&H00FFFF&}limitations{\c&HFFFFFF&}
+Dialogue: 0,0:03:10.53,0:03:10.88,Main,,0,0,0,,{\c&H00FFFF&}stay.{\c&HFFFFFF&}
+Dialogue: 0,0:03:11.37,0:03:12.37,Main,,0,0,0,,Your {\c&H00FFFF&}notebook{\c&HFFFFFF&} used to
+Dialogue: 0,0:03:12.53,0:03:13.25,Main,,0,0,0,,ask, who {\c&H00FFFF&}would{\c&HFFFFFF&} you
+Dialogue: 0,0:03:13.28,0:03:15.09,Main,,0,0,0,,pick? {\c&H00FFFF&}Khiladi{\c&HFFFFFF&} asks a
+Dialogue: 0,0:03:15.10,0:03:15.87,Main,,0,0,0,,better {\c&H00FFFF&}question.{\c&HFFFFFF&}
+Dialogue: 0,0:03:16.26,0:03:17.15,Main,,0,0,0,,What does the {\c&H00FFFF&}evidence{\c&HFFFFFF&}
+Dialogue: 0,0:03:17.16,0:03:18.72,Main,,0,0,0,,{\c&H00FFFF&}support...{\c&HFFFFFF&} and how sure
+Dialogue: 0,0:03:18.72,0:03:19.26,Main,,0,0,0,,{\c&H00FFFF&}should{\c&HFFFFFF&} you be?

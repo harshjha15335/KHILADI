@@ -1,0 +1,303 @@
+{
+  "checks": {
+    "portrait1080": true,
+    "fps30": true,
+    "all_frames": true,
+    "h264": true,
+    "pixel_format": true,
+    "aac": true,
+    "audio48k": true,
+    "duration": true,
+    "sync": true,
+    "full_decode": true,
+    "no_clipping": true,
+    "voice_level": true,
+    "report_and_website_insert_identity": true
+  },
+  "expected_frames": 5992,
+  "duration_seconds": 199.733333,
+  "video": {
+    "codec_name": "h264",
+    "width": 1080,
+    "height": 1920,
+    "avg_frame_rate": "30/1",
+    "nb_read_frames": "5992",
+    "pix_fmt": "yuv420p"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "duration": "199.733000"
+  },
+  "audio_levels": {
+    "input_i": "-16.40",
+    "input_tp": "-1.34",
+    "input_lra": "2.40",
+    "input_thresh": "-26.91",
+    "output_i": "-16.16",
+    "output_tp": "-1.50",
+    "output_lra": "2.20",
+    "output_thresh": "-26.67",
+    "normalization_type": "dynamic",
+    "target_offset": "0.16"
+  },
+  "scenes": [
+    {
+      "id": "01_notebook",
+      "start": 0.0,
+      "end": 12.0,
+      "frames": 360,
+      "sample_time": 5.5200000000000005
+    },
+    {
+      "id": "02_hackathon",
+      "start": 12.0,
+      "end": 24.733333333333334,
+      "frames": 382,
+      "sample_time": 17.857333333333333
+    },
+    {
+      "id": "03_clean",
+      "start": 24.733333333333334,
+      "end": 37.833333333333336,
+      "frames": 393,
+      "sample_time": 30.759333333333334
+    },
+    {
+      "id": "04_preball",
+      "start": 37.833333333333336,
+      "end": 48.1,
+      "frames": 308,
+      "sample_time": 42.556000000000004
+    },
+    {
+      "id": "05_pressure",
+      "start": 48.1,
+      "end": 60.03333333333333,
+      "frames": 358,
+      "sample_time": 53.589333333333336
+    },
+    {
+      "id": "06_hybrid",
+      "start": 60.03333333333333,
+      "end": 74.5,
+      "frames": 434,
+      "sample_time": 66.688
+    },
+    {
+      "id": "07_expected",
+      "start": 74.5,
+      "end": 87.33333333333333,
+      "frames": 385,
+      "sample_time": 80.40333333333334
+    },
+    {
+      "id": "08_adjust",
+      "start": 87.33333333333333,
+      "end": 101.63333333333333,
+      "frames": 429,
+      "sample_time": 93.91133333333333
+    },
+    {
+      "id": "09_shrink",
+      "start": 101.63333333333334,
+      "end": 113.80000000000001,
+      "frames": 365,
+      "sample_time": 107.23
+    },
+    {
+      "id": "10_delta",
+      "start": 113.8,
+      "end": 128.3,
+      "frames": 435,
+      "sample_time": 120.47
+    },
+    {
+      "id": "11_holdout",
+      "start": 128.3,
+      "end": 142.66666666666669,
+      "frames": 431,
+      "sample_time": 134.90866666666668
+    },
+    {
+      "id": "12_uncertainty",
+      "start": 142.66666666666666,
+      "end": 156.23333333333332,
+      "frames": 407,
+      "sample_time": 148.90733333333333
+    },
+    {
+      "id": "13_sensitivity",
+      "start": 156.23333333333332,
+      "end": 167.16666666666666,
+      "frames": 328,
+      "sample_time": 161.26266666666666
+    },
+    {
+      "id": "14_shortlist",
+      "start": 167.16666666666666,
+      "end": 181.1,
+      "frames": 418,
+      "sample_time": 173.576
+    },
+    {
+      "id": "15_replay",
+      "start": 181.1,
+      "end": 191.23333333333332,
+      "frames": 304,
+      "sample_time": 185.76133333333334
+    },
+    {
+      "id": "16_end",
+      "start": 191.23333333333332,
+      "end": 199.73333333333332,
+      "frames": 255,
+      "sample_time": 195.14333333333332
+    }
+  ],
+  "inserts": [
+    {
+      "label": "batting",
+      "global_time": 171.66666666666666,
+      "mean_absolute_rgb_difference": 0.6032621641249092,
+      "consistent_with_expected_insert": true
+    },
+    {
+      "label": "bowling",
+      "global_time": 176.66666666666666,
+      "mean_absolute_rgb_difference": 0.5602846768336964,
+      "consistent_with_expected_insert": true
+    },
+    {
+      "label": "website",
+      "global_time": 190.73333333333332,
+      "mean_absolute_rgb_difference": 0.2564560639070443,
+      "consistent_with_expected_insert": true
+    }
+  ],
+  "caption_alignment": {
+    "method": "WhisperX forced alignment against known approved narration text; not independent ASR",
+    "scenes": [
+      {
+        "id": "01_notebook",
+        "words": 29,
+        "phrases": 9,
+        "minimum_word_score": 0.75,
+        "missing_word_times": 0
+      },
+      {
+        "id": "02_hackathon",
+        "words": 24,
+        "phrases": 9,
+        "minimum_word_score": 0.708,
+        "missing_word_times": 0
+      },
+      {
+        "id": "03_clean",
+        "words": 28,
+        "phrases": 10,
+        "minimum_word_score": 0.668,
+        "missing_word_times": 0
+      },
+      {
+        "id": "04_preball",
+        "words": 26,
+        "phrases": 8,
+        "minimum_word_score": 0.754,
+        "missing_word_times": 0
+      },
+      {
+        "id": "05_pressure",
+        "words": 25,
+        "phrases": 8,
+        "minimum_word_score": 0.737,
+        "missing_word_times": 0
+      },
+      {
+        "id": "06_hybrid",
+        "words": 26,
+        "phrases": 9,
+        "minimum_word_score": 0.743,
+        "missing_word_times": 0
+      },
+      {
+        "id": "07_expected",
+        "words": 27,
+        "phrases": 8,
+        "minimum_word_score": 0.64,
+        "missing_word_times": 0
+      },
+      {
+        "id": "08_adjust",
+        "words": 34,
+        "phrases": 9,
+        "minimum_word_score": 0.5,
+        "missing_word_times": 0
+      },
+      {
+        "id": "09_shrink",
+        "words": 24,
+        "phrases": 8,
+        "minimum_word_score": 0.668,
+        "missing_word_times": 0
+      },
+      {
+        "id": "10_delta",
+        "words": 32,
+        "phrases": 10,
+        "minimum_word_score": 0.564,
+        "missing_word_times": 0
+      },
+      {
+        "id": "11_holdout",
+        "words": 25,
+        "phrases": 8,
+        "minimum_word_score": 0.7,
+        "missing_word_times": 0
+      },
+      {
+        "id": "12_uncertainty",
+        "words": 26,
+        "phrases": 9,
+        "minimum_word_score": 0.739,
+        "missing_word_times": 0
+      },
+      {
+        "id": "13_sensitivity",
+        "words": 27,
+        "phrases": 8,
+        "minimum_word_score": 0.651,
+        "missing_word_times": 0
+      },
+      {
+        "id": "14_shortlist",
+        "words": 26,
+        "phrases": 9,
+        "minimum_word_score": 0.661,
+        "missing_word_times": 0
+      },
+      {
+        "id": "15_replay",
+        "words": 19,
+        "phrases": 6,
+        "minimum_word_score": 0.773,
+        "missing_word_times": 0
+      },
+      {
+        "id": "16_end",
+        "words": 25,
+        "phrases": 7,
+        "minimum_word_score": 0.513,
+        "missing_word_times": 0
+      }
+    ],
+    "events": 135,
+    "full_film_frames": 5992
+  },
+  "limits": [
+    "Encoded technical checks do not establish exact reference likeness or subjective sound quality.",
+    "Approved Michael voice was used; no source narrator/audio cloned or reused.",
+    "Classmates remain mostly still artwork; foreground is articulated2.5D performance, not fully simulated3D acting."
+  ]
+}

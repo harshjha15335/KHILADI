@@ -1,0 +1,46 @@
+# Independent review — current encoded evidence
+
+Status: actual final master sampled and factual source audit passed. Specific arm/table/caveat defects are fixed in final encoded samples. No new blocking defect found in inspected final frames. General limited 2.5D acting/style remains a disclosed limitation; this is not a normal-speed playback/listening pass. Earlier sections retain the chronological defect evidence and are superseded by final-master findings below.
+
+## Authority and scope
+Read repository AGENTS.md, film/AGENTS.md, repository CODEX_HANDOFF.md (absolute /CODEX_HANDOFF.md does not exist), film/docs/METHODOLOGY_FOR_FILM.md, film/data/accepted_primary_rankings.csv. Current root instructions establish production resume and approved Michael narration. No narration was generated; no private reference footage was copied into these outputs; no audio listening quality claim is made.
+
+Reviewed source: film/work/full-film-v3/story.json and timing.json (16 scenes, 5992 frames, 199.733333 seconds); film/work/film-v3-assembly/composite_film.py, visual_plan.py, inserts.json; final caption source outputs/full-film-v3/FULL_CAPTIONS.ass. Preview contact PRELIMINARY_SCENE_CONTACT.png is provisional and contains DRAFT plate labels, so is not accepted as encoded final evidence.
+
+## Actual encoded frames inspected
+Contact image encoded-scenes-contact.jpg contains three decoded frames at 14%,46%,82% of each available complete native cache movie: 02_hackathon,03_clean,04_preball,05_pressure,06_hybrid,07_expected,08_adjust,09_shrink. Original extraction PNGs are retained beside this document. No DRAFT labels or missing plates in those sampled encoded frames. No cropped main letters were observed in those samples. Frames are sampled, not a continuous playback or every-frame defect scan.
+
+Concrete timestamps: scene03 1.83/6.03/10.74 seconds (global26.57/30.76/35.48); scene04 1.44/4.72/8.42; scene05 1.67/5.49/9.79; scene06 2.03/6.65/11.86; scene07 1.80/5.90/10.52; scene08 2.00/6.58/11.73; scene09 1.70/5.60/9.98. Source full-page qualified-batter-page.png and qualified-bowler-page.png also visually inspected. Both full top-ten orders, ratings, exposure counts, rates, tiers and format shares match the supplied CSV, including Daryl Mitchell ahead of Fakhar Zaman despite rounded rating tie.
+
+## Findings requiring honest delivery description
+1. Visual style/acting concern: encoded scenes02–09 use near-identical seated bust framing, flat adjacent explanation cards, then an oversized blurred tabletop macro, then return to seated bust. At scene03 1.83 and10.74, pose and expression are effectively identical. This is limited puppet presentation with cards, rather than evidence of rich physical research acting. It remains close to the explainer style the user rejects. Do not describe this as full expressive character animation or assert reference-equivalent acting.
+2. Hand continuity: at scene03 1.83 seconds, the left black arm begins on the lower torso around1080-source coordinate245,1290 and terminates at410,1505, visibly separate from the shoulder. The right arm is largely behind the explanation card. Similar limb placement is repeated in other sampled native research shots. Arms are drawn by the compositor rather than rigged contact with cards; no actual grasp is established.
+3. Readability limit: page sources are accurate and fully legible at1080x1920, but ten detailed rows plus caveats on a five-second half of the ten-second report insert cannot all be read at normal playback. This supports pause-to-inspect delivery, not a claim every statistic can be absorbed in motion.
+4. Caption/prop overlap cannot be cleared until actual burned-in master exists. ASS source MarginV90 is known; silent clips do not establish caption collision safety.
+
+## Scientific audit
+Pressure is pre-event; illustrative state28 from12 yields required rate14. Top20% is within each innings, not phase. Difficult versus consequential distinction is explicit. Runs/wickets remain assumption15 with10/20 sensitivity. Small-sample exposure illustrations are unnamed, and actual/expected bars are explicitly illustrative. Quality differs from delta; no validated bowling delta or proven psychological clutch trait asserted.2026 batting rho−0.043 and bowling+0.304 are qualified; economy advantage unestablished; first-innings WP Brier worse than baseline.750 whole-match resamples are historical stability, not future probability. D10 retains5/10 batting4/10 bowling; D25 retains6/10,7/10; best-season removal9 names each are correct. Full report source states only Buttler CI1.064–4.562; none fabricated. Replay narrative says report replay; compositor states report-supplied claim, not rerun here. No scientific blocker found in audited sources.
+
+## Remaining limits
+Need actual final master check, actual final opening classroom orientation, actual scenes10–16 encoded frames, report insert as encoded in master, actual website four-second placement and captions over all critical props. Current story metadata still says website deferred, while inserts.json schedules actual website; metadata is stale relative to planned final assembly. No subjective audio quality or listening pass was performed.
+
+## Encoded insert supplement
+Inspected report insert actual decoded frames at0.5,2.5,4.9,5.1,7.5,9.5 seconds: complete batting/bowling pages and physical page-turn visible, no wrong order or invented interval. Inspected real website insert at0.5,2.0,3.5 seconds: logo loader, intentional oversized KHILADI logo zoom, then intact pink homepage. Contact encoded-inserts-contact.jpg records these public-site/report frames. Report bottom caveats remain a caption-overlay check for master.
+
+## Later native encode supplement
+Decoded and inspected 14%,46%,82% frames of scenes10_delta,11_holdout,12_uncertainty,13_sensitivity, recorded in encoded-later-contact.jpg. No DRAFT labels or factual errors seen. A readability concern is now confirmed: pink/teal caveats directly over the orange textured desk have weak contrast, especially scene11 first-innings Brier comparison, scene12 historical-stability warning and scene13 best-season removal result. Main pale cards are clearer. Prefer pale backing behind caveat lines if revised. Repeated seated/card/macro and lower-torso arm concerns persist. Final master captions are still unreviewed.
+
+## Caption report spot check
+Independently viewed root-generated report-caption-check-batting.png and report-caption-check-bowling.png with final ASS styling. Captions appear below the report footer, with no overlap with its last source line in those two examples. These are spot composites, not proof of the pending full master.
+
+## Corrected sample review
+Independently inspected outputs/film-v3-assembly/FIXED_ARMS_03.png and FIXED_WOOD_CAVEAT_11.png. The former shows continuous arm from bean exterior through elbow to hand and clearer tabletop grain without the previous stretch. The latter puts the accurate Brier comparison/worse warning on opaque pale paper, materially improving contrast. Specific defects are cleared in these shown stills, pending verification of replacement encoded master. The general 2.5D seated/cards presentation limitation remains. Superseded old cache frame evidence must not be treated as final output.
+
+## Actual final master review
+Reviewed actual outputs/full-film-v3/KHILADI_FINAL_REEL.mp4 after root ready notification. ffprobe confirms1080x1920 video,5992 frames,199.733333 seconds and audio stream199.733 seconds. FINAL_ENCODED_CONTACT.jpg contains decoded frames at0.5,2.5,4.5,6.5,8.5,10.5,11.95,12.05,26.57,30.76,134.9,148.9,161.3,169.7,174.7,179.9,187.1,187.3,189.8,191.15,191.3,195,199.5 seconds.
+
+Corrected arm/table present at26.57/30.76; no detached lower-torso wrist. Opaque caveat panels visible at134.9,148.9,161.3, numbers and methodological qualifications correct. Full report insert shows both roles at169.7/174.7; footer/source clear of captions. The following normal-scene report frame at179.9 shows correct bowling order; detailed report text still requires pause to inspect. Replay at187.1 shows20/20 and41 with report-supplied/not-rerun qualification. Website at187.3 begins actual blue loader,189.8 and191.15 show pink actual homepage;191.3 returns to classroom. This matches4-second planned placement187.233–191.233. Website bottom caption crosses the visual button region but does not obscure essential scientific content; website is footage, not an interactive control in this reel. Ending at199.5 remains intact, not a black/blank truncation.
+
+Opening samples show the retained hero in classroom, maths notebook and imaginary school XI, then closed book before scene02. No wrong-facing teacher was observed in sampled frames. Main captions are clear of notebook and report text in inspected frames. No missing-plate/DRAFT banner, cropped main letters or obvious hero identity drift in final samples. General repeated seated/adjacent-card/macro presentation remains the meaningful visual limit; do not claim highly varied physical acting or reference-perfect animation.
+
+Verification limits: sample-based decoded-frame visual review, not all-frame playback. No normal-speed audio listening or subjective narrator/audio quality pass. Analytical pipeline was not rerun. Root technical full-file QA is separate.

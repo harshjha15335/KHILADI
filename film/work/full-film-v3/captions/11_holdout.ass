@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.10,0:00:01.98,Main,,0,0,0,,The unseen {\c&H00FFFF&}twenty-twenty-six{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.98,0:00:03.86,Main,,0,0,0,,season {\c&H00FFFF&}challenges{\c&HFFFFFF&} your story.
+Dialogue: 0,0:00:04.38,0:00:05.96,Main,,0,0,0,,Batting {\c&H00FFFF&}quality{\c&HFFFFFF&} shows no
+Dialogue: 0,0:00:06.05,0:00:07.28,Main,,0,0,0,,positive {\c&H00FFFF&}predictive{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.29,0:00:09.36,Main,,0,0,0,,{\c&H00FFFF&}relationship.{\c&HFFFFFF&} Bowling looks
+Dialogue: 0,0:00:09.41,0:00:11.23,Main,,0,0,0,,{\c&H00FFFF&}promising,{\c&HFFFFFF&} but an advantage
+Dialogue: 0,0:00:11.29,0:00:13.25,Main,,0,0,0,,over {\c&H00FFFF&}ordinary{\c&HFFFFFF&} economy isn't
+Dialogue: 0,0:00:13.25,0:00:13.99,Main,,0,0,0,,{\c&H00FFFF&}established.{\c&HFFFFFF&}

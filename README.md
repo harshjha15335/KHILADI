@@ -1,3 +1,7 @@
+## Completed KHILADI animated reel
+
+The complete 3:19.733 reel, approved Michael narration, captions, real 4-second Khiladi website insert and editable production are available in [film/FINAL_DELIVERY.md](film/FINAL_DELIVERY.md). [Download the MP4](film/delivery/KHILADI_FINAL_REEL.mp4?raw=1). Use this branch's **Code → Download ZIP** or the documented clone/rebuild commands.
+
 ## Run or view the preserved project
 
 - Windows / Codex Local: [LOCAL_WINDOWS_SETUP.md](LOCAL_WINDOWS_SETUP.md).

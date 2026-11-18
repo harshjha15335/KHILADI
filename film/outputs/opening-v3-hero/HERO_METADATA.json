@@ -1,0 +1,107 @@
+{
+  "scope": "Opening silent hero shots only; user authorized ongoing rendering. No later-film/native-plate render performed here.",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "clips": [
+    {
+      "shot": "A",
+      "name": "A_seated_writing",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-hero/A_seated_writing.mp4",
+      "frames": 42,
+      "duration": 1.4,
+      "sha256": "4fc94e84c2bf8787696be1f47ae5e6bde192443a2d71e8fbf52bf382e1bf4b11",
+      "audio": false
+    },
+    {
+      "shot": "B",
+      "name": "B_reverse_classroom_context",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-hero/B_reverse_classroom_context.mp4",
+      "frames": 27,
+      "duration": 0.9,
+      "sha256": "e33493d14ba24d88387c20ab671d4f61cfb06c76495e542cdfb105d0d93aa371",
+      "audio": false
+    },
+    {
+      "shot": "F",
+      "name": "F_front_teacher_glance_conceal",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-hero/F_front_teacher_glance_conceal.mp4",
+      "frames": 48,
+      "duration": 1.6,
+      "sha256": "d08ec9652031352519ea66e44054c045fffc10de39c37b251a2e049238a2329d",
+      "audio": false
+    },
+    {
+      "shot": "I",
+      "name": "I_wry_recovery",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-hero/I_wry_recovery.mp4",
+      "frames": 30,
+      "duration": 1.0,
+      "sha256": "ec35b97b27a440f2e396a2e5db3a861fbe2bde35d156d9aa0c679e4ca7845e09",
+      "audio": false
+    }
+  ],
+  "camera_geography": {
+    "C1": "Near front board, looks toward rear cupboards. Teacher/board are offscreen behind/near camera.",
+    "teacher_eyeline": "Camera-left / near the frontal lens, toward room FRONT. Not toward rear wall.",
+    "B_limitation": "Wider C1 reverse context only; not a teacher-board view."
+  },
+  "handedness": {
+    "writing_hand": "anatomical RIGHT",
+    "C1_pencil_side": "screen-LEFT",
+    "C3_notebook_pencil_side": "screen-RIGHT",
+    "anchor_hand": "opposite side in each view"
+  },
+  "notebook": {
+    "shared_texture_source": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook",
+    "C1_transform": "rotate exact pupil-readable texture 180 degrees; never mirror",
+    "C1_cricket_page": "screen-LEFT",
+    "F_end_state": "open maths spread covers cricket notebook; pencil parked to screen-left",
+    "I_start_state": "cricket spread already revealed; place after H dense-cricket insert, not directly after F covered end-state"
+  },
+  "caption_clearance": {
+    "suggested_box": {
+      "x": 80,
+      "y": 1730,
+      "width": 920,
+      "height": 150
+    },
+    "max_main_notebook_y": 1712.2622950819673,
+    "main_notebook_gap_before_caption_box": 17.737704918032705,
+    "caption_burn_in": false
+  },
+  "flexible_anchors": {
+    "A": {
+      "write_start": 0,
+      "one_stroke_finished": 1.4,
+      "hold_or_extend": "brief first/last pose holds; do not reverse pencil/ink contact"
+    },
+    "B": {
+      "context_reveal": 0,
+      "flexibility": "24 of the 27 frames may be used without changing action identity"
+    },
+    "F": {
+      "pencil_freeze": 0.17,
+      "eyes_head_attention_begin": 0.17,
+      "near_left_pose": 0.25,
+      "far_left_pose": 0.34,
+      "park_begin": 0.52,
+      "pencil_release_cover_begin": 0.72,
+      "maths_cover_landed": 1.12,
+      "tail_hold": "1.12\u20131.60s; extend this settled hold rather than stretching concealment gesture"
+    },
+    "I": {
+      "neutral_recover": 0,
+      "wry_head_tilt": 0.16,
+      "resume_writing": 0.65,
+      "tail_hold": "settled writing after .65s may be extended briefly"
+    }
+  },
+  "performance": "Small retained-geometry key-pose snaps bracketed by continuous torso/hand/pen movement, not lip sync. Restrained original neutral/crooked mouth rather than the V2 broad laugh.",
+  "limitations": [
+    "Mostly still approved background artwork.",
+    "Lower seated anatomy is desk-occluded; no full seated-rig audit.",
+    "2.5D hand/page contact is not simulated 3D paper physics.",
+    "These are silent source clips; Michael timing, captions and sound design belong to final assembly."
+  ]
+}

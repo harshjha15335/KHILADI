@@ -1,0 +1,17 @@
+{
+  "signature": "00e976e89506c242bc657f96064e91b15462bbe4a59c9744d41909351f6b5c10",
+  "display_text": "Performing well under pressure isn't the same as improving because of pressure. You find no validated repeatable bowling pressure delta. The batting delta gains are tiny. A psychological clutch trait remains unproven.",
+  "synthesis_text": "Performing well under pressure isn't the same as improving because of pressure. You find no validated repeatable bowling pressure delta. The batting delta gains are tiny. A psychological clutch trait remains unproven.",
+  "phonemes": "p\u025af\u02c8\u0254\u02d0\u0279m\u026a\u014b w\u02c8\u025bl \u02cc\u028cnd\u025a p\u0279\u02c8\u025b\u0283\u025a\u0279 \u02cc\u026az\u0259nt \u00f0\u0259 s\u02c8e\u026am \u00e6z \u026amp\u0279\u02c8u\u02d0v\u026a\u014b b\u026ak\u02c8\u028cz \u028cv p\u0279\u02c8\u025b\u0283\u025a. ju\u02d0 f\u02c8a\u026and n\u02c8o\u028a v\u02c8\u00e6l\u1d7bd\u02cce\u026a\u027e\u1d7bd \u0279\u1d7bp\u02c8i\u02d0\u027e\u0259b\u0259l b\u02c8o\u028al\u026a\u014b p\u0279\u02c8\u025b\u0283\u025a d\u02c8\u025blt\u0259. \u00f0\u0259 b\u02c8\u00e6\u027e\u026a\u014b d\u02c8\u025blt\u0259 \u0261\u02c8e\u026anz \u0251\u02d0\u0279 t\u02c8a\u026ani. \u0250 sa\u026ak\u0259l\u02c8\u0251\u02d0d\u0292\u026ak\u0259l kl\u02c8\u028ct\u0283 t\u0279\u02c8e\u026at \u0279\u1d7bm\u02c8e\u026anz \u028cnp\u0279\u02c8u\u02d0v\u0259n.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 14.122666666666667,
+  "sha256": "5d981f32028fa9cdc0c83be7563729a056a76dd8d4f575e70275115141cb38de"
+}

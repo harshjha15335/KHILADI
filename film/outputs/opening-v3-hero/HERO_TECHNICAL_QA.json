@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "A": {
+      "1080x1920": true,
+      "30fps": true,
+      "frame_count": true,
+      "H264": true,
+      "silent": true,
+      "full_decode": true
+    },
+    "B": {
+      "1080x1920": true,
+      "30fps": true,
+      "frame_count": true,
+      "H264": true,
+      "silent": true,
+      "full_decode": true
+    },
+    "F": {
+      "1080x1920": true,
+      "30fps": true,
+      "frame_count": true,
+      "H264": true,
+      "silent": true,
+      "full_decode": true
+    },
+    "I": {
+      "1080x1920": true,
+      "30fps": true,
+      "frame_count": true,
+      "H264": true,
+      "silent": true,
+      "full_decode": true
+    }
+  },
+  "all_passed": true
+}

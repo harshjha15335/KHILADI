@@ -1,0 +1,17 @@
+{
+  "signature": "8437f13b50c593a9ad1999de6f18f4bf682c4c1f73e8dfae9b173250c0568bfb",
+  "display_text": "You combine scoreboard difficulty with win-probability leverage, using context-relative percentiles. Your primary pressure definition selects the top twenty percent within each innings. Not within every phase.",
+  "synthesis_text": "You combine scoreboard difficulty with win-probability leverage, using context-relative percentiles. Your primary pressure definition selects the top twenty percent within each innings. Not within every phase.",
+  "phonemes": "ju\u02d0 k\u0259mb\u02c8a\u026an sk\u02c8\u0254\u02d0\u0279b\u0254\u02d0\u0279d d\u02c8\u026af\u026ak\u02cc\u028clti w\u026a\u00f0 w\u02c8\u026anp\u0279\u02cc\u0251\u02d0b\u0259b\u02c8\u026al\u1d7b\u027ei l\u02c8\u025bv\u025a\u0279\u026ad\u0292, j\u02c8u\u02d0z\u026a\u014b k\u02c8\u0251\u02d0nt\u025bkst\u0279\u02c8\u025bl\u0259t\u02cc\u026av p\u025as\u02c8\u025bnta\u026alz. j\u028a\u0279 p\u0279\u02c8a\u026am\u025a\u0279i p\u0279\u02c8\u025b\u0283\u025a d\u02cc\u025bf\u026an\u02c8\u026a\u0283\u0259n s\u1d7bl\u02c8\u025bkts \u00f0\u0259 t\u02c8\u0251\u02d0p tw\u02c8\u025bnti p\u025as\u02c8\u025bnt w\u026a\u00f0\u02cc\u026an \u02c8i\u02d0t\u0283 \u026ann\u02c8\u026a\u014bz. n\u02cc\u0251\u02d0t w\u026a\u00f0\u02cc\u026an \u02c8\u025bv\u0279i f\u02c8e\u026az.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 14.101333333333333,
+  "sha256": "778711f36a000b03c9ca3d600c6993d97732e92f107e978c255c4dc09ece1cba"
+}

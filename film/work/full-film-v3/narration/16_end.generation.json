@@ -1,0 +1,17 @@
+{
+  "signature": "adb937e9a65cc5195376f76d99bba38ba8c5066433a8ecdf3e17d004e5b580ac",
+  "display_text": "Your notebook used to ask, who would you pick? Khiladi asks a better question. What does the evidence support... and how sure should you be?",
+  "synthesis_text": "Your notebook used to ask, who would you pick? Khiladi asks a better question. What does the evidence support... and how sure should you be?",
+  "phonemes": "j\u028a\u0279 n\u02c8o\u028atb\u028ak j\u02c8u\u02d0zd t\u028a \u02c8\u00e6sk, h\u02ccu\u02d0 w\u028ad ju\u02d0 p\u02c8\u026ak? k\u026al\u02c8\u00e6di \u02c8\u00e6sks \u0250 b\u02c8\u025b\u027e\u025a kw\u02c8\u025bst\u0283\u0259n. w\u02cc\u028ct d\u02c8\u028cz \u00f0\u026a \u02c8\u025bv\u026ad\u0259ns s\u0259p\u02c8\u0254\u02d0\u0279t... \u00e6nd h\u02cca\u028a \u0283\u02c8\u028a\u0279 \u0283\u02cc\u028ad ju\u02d0 b\u02c8i\u02d0?",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 8.128,
+  "sha256": "8e697d66d127452256f74d979dfac89b7e23af8675a66eeb60b7ce04551ea931"
+}

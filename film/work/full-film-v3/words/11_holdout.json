@@ -1,0 +1,328 @@
+{
+  "segments": [
+    {
+      "start": 0.02,
+      "end": 3.744,
+      "text": "The unseen twenty-twenty-six season challenges your story.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.02,
+          "end": 0.1,
+          "score": 0.946
+        },
+        {
+          "word": "unseen",
+          "start": 0.24,
+          "end": 0.781,
+          "score": 0.898
+        },
+        {
+          "word": "twenty-twenty-six",
+          "start": 0.921,
+          "end": 1.862,
+          "score": 0.84
+        },
+        {
+          "word": "season",
+          "start": 1.902,
+          "end": 2.342,
+          "score": 0.804
+        },
+        {
+          "word": "challenges",
+          "start": 2.483,
+          "end": 3.023,
+          "score": 0.78
+        },
+        {
+          "word": "your",
+          "start": 3.063,
+          "end": 3.223,
+          "score": 0.777
+        },
+        {
+          "word": "story.",
+          "start": 3.263,
+          "end": 3.744,
+          "score": 0.895
+        }
+      ]
+    },
+    {
+      "start": 4.305,
+      "end": 7.928,
+      "text": "Batting quality shows no positive predictive relationship.",
+      "words": [
+        {
+          "word": "Batting",
+          "start": 4.305,
+          "end": 4.625,
+          "score": 0.908
+        },
+        {
+          "word": "quality",
+          "start": 4.685,
+          "end": 5.185,
+          "score": 0.784
+        },
+        {
+          "word": "shows",
+          "start": 5.245,
+          "end": 5.526,
+          "score": 0.885
+        },
+        {
+          "word": "no",
+          "start": 5.646,
+          "end": 5.846,
+          "score": 0.852
+        },
+        {
+          "word": "positive",
+          "start": 5.966,
+          "end": 6.607,
+          "score": 0.81
+        },
+        {
+          "word": "predictive",
+          "start": 6.667,
+          "end": 7.168,
+          "score": 0.839
+        },
+        {
+          "word": "relationship.",
+          "start": 7.208,
+          "end": 7.928,
+          "score": 0.808
+        }
+      ]
+    },
+    {
+      "start": 8.569,
+      "end": 13.875,
+      "text": "Bowling looks promising, but an advantage over ordinary economy isn't established.",
+      "words": [
+        {
+          "word": "Bowling",
+          "start": 8.569,
+          "end": 8.989,
+          "score": 0.907
+        },
+        {
+          "word": "looks",
+          "start": 9.029,
+          "end": 9.25,
+          "score": 0.889
+        },
+        {
+          "word": "promising,",
+          "start": 9.33,
+          "end": 9.89,
+          "score": 0.859
+        },
+        {
+          "word": "but",
+          "start": 10.211,
+          "end": 10.331,
+          "score": 0.834
+        },
+        {
+          "word": "an",
+          "start": 10.411,
+          "end": 10.471,
+          "score": 0.995
+        },
+        {
+          "word": "advantage",
+          "start": 10.531,
+          "end": 11.112,
+          "score": 0.841
+        },
+        {
+          "word": "over",
+          "start": 11.212,
+          "end": 11.392,
+          "score": 0.836
+        },
+        {
+          "word": "ordinary",
+          "start": 11.612,
+          "end": 12.113,
+          "score": 0.7
+        },
+        {
+          "word": "economy",
+          "start": 12.193,
+          "end": 12.753,
+          "score": 0.835
+        },
+        {
+          "word": "isn't",
+          "start": 12.934,
+          "end": 13.134,
+          "score": 0.824
+        },
+        {
+          "word": "established.",
+          "start": 13.174,
+          "end": 13.875,
+          "score": 0.851
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "The",
+      "start": 0.02,
+      "end": 0.1,
+      "score": 0.946
+    },
+    {
+      "word": "unseen",
+      "start": 0.24,
+      "end": 0.781,
+      "score": 0.898
+    },
+    {
+      "word": "twenty-twenty-six",
+      "start": 0.921,
+      "end": 1.862,
+      "score": 0.84
+    },
+    {
+      "word": "season",
+      "start": 1.902,
+      "end": 2.342,
+      "score": 0.804
+    },
+    {
+      "word": "challenges",
+      "start": 2.483,
+      "end": 3.023,
+      "score": 0.78
+    },
+    {
+      "word": "your",
+      "start": 3.063,
+      "end": 3.223,
+      "score": 0.777
+    },
+    {
+      "word": "story.",
+      "start": 3.263,
+      "end": 3.744,
+      "score": 0.895
+    },
+    {
+      "word": "Batting",
+      "start": 4.305,
+      "end": 4.625,
+      "score": 0.908
+    },
+    {
+      "word": "quality",
+      "start": 4.685,
+      "end": 5.185,
+      "score": 0.784
+    },
+    {
+      "word": "shows",
+      "start": 5.245,
+      "end": 5.526,
+      "score": 0.885
+    },
+    {
+      "word": "no",
+      "start": 5.646,
+      "end": 5.846,
+      "score": 0.852
+    },
+    {
+      "word": "positive",
+      "start": 5.966,
+      "end": 6.607,
+      "score": 0.81
+    },
+    {
+      "word": "predictive",
+      "start": 6.667,
+      "end": 7.168,
+      "score": 0.839
+    },
+    {
+      "word": "relationship.",
+      "start": 7.208,
+      "end": 7.928,
+      "score": 0.808
+    },
+    {
+      "word": "Bowling",
+      "start": 8.569,
+      "end": 8.989,
+      "score": 0.907
+    },
+    {
+      "word": "looks",
+      "start": 9.029,
+      "end": 9.25,
+      "score": 0.889
+    },
+    {
+      "word": "promising,",
+      "start": 9.33,
+      "end": 9.89,
+      "score": 0.859
+    },
+    {
+      "word": "but",
+      "start": 10.211,
+      "end": 10.331,
+      "score": 0.834
+    },
+    {
+      "word": "an",
+      "start": 10.411,
+      "end": 10.471,
+      "score": 0.995
+    },
+    {
+      "word": "advantage",
+      "start": 10.531,
+      "end": 11.112,
+      "score": 0.841
+    },
+    {
+      "word": "over",
+      "start": 11.212,
+      "end": 11.392,
+      "score": 0.836
+    },
+    {
+      "word": "ordinary",
+      "start": 11.612,
+      "end": 12.113,
+      "score": 0.7
+    },
+    {
+      "word": "economy",
+      "start": 12.193,
+      "end": 12.753,
+      "score": 0.835
+    },
+    {
+      "word": "isn't",
+      "start": 12.934,
+      "end": 13.134,
+      "score": 0.824
+    },
+    {
+      "word": "established.",
+      "start": 13.174,
+      "end": 13.875,
+      "score": 0.851
+    }
+  ],
+  "_source_audio_sha256": "1cdfc19be4470f6d318644ffcedcacaaffa90d3a63c988917984945507d59c08"
+}

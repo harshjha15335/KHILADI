@@ -1,3 +1,5 @@
+> **Final delivery update —18 November2026:** Production resumed and the complete reel is now available. Read [film/FINAL_DELIVERY.md](film/FINAL_DELIVERY.md) for the MP4, editable sources, checksums and rebuild instructions. The pause/status text below is the preserved historical checkpoint.
+
 # CODEX HANDOFF — KHILADI animated research film
 
 Prepared 2026-11-17 from the available conversation, local sources, logs, media, and target repository history. **PRODUCTION IS PAUSED at the user's explicit request.** This handoff and Git push are authorized; rendering, voice regeneration, and film assembly are not resumed. The full reel is NOT finished.

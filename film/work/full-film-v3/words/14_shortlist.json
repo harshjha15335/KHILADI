@@ -1,0 +1,340 @@
+{
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 3.622,
+      "text": "Your primary lists put Jos Buttler and Jasprit Bumrah first.",
+      "words": [
+        {
+          "word": "Your",
+          "start": 0.04,
+          "end": 0.2,
+          "score": 0.835
+        },
+        {
+          "word": "primary",
+          "start": 0.26,
+          "end": 0.68,
+          "score": 0.809
+        },
+        {
+          "word": "lists",
+          "start": 0.74,
+          "end": 1.0,
+          "score": 0.876
+        },
+        {
+          "word": "put",
+          "start": 1.061,
+          "end": 1.241,
+          "score": 0.972
+        },
+        {
+          "word": "Jos",
+          "start": 1.301,
+          "end": 1.641,
+          "score": 0.898
+        },
+        {
+          "word": "Buttler",
+          "start": 1.701,
+          "end": 2.081,
+          "score": 0.835
+        },
+        {
+          "word": "and",
+          "start": 2.161,
+          "end": 2.241,
+          "score": 0.91
+        },
+        {
+          "word": "Jasprit",
+          "start": 2.301,
+          "end": 2.801,
+          "score": 0.677
+        },
+        {
+          "word": "Bumrah",
+          "start": 2.841,
+          "end": 3.202,
+          "score": 0.801
+        },
+        {
+          "word": "first.",
+          "start": 3.242,
+          "end": 3.622,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 4.162,
+      "end": 8.144,
+      "text": "But every name needs exposure, uncertainty and format mix.",
+      "words": [
+        {
+          "word": "But",
+          "start": 4.162,
+          "end": 4.262,
+          "score": 0.899
+        },
+        {
+          "word": "every",
+          "start": 4.382,
+          "end": 4.582,
+          "score": 0.769
+        },
+        {
+          "word": "name",
+          "start": 4.642,
+          "end": 4.942,
+          "score": 0.721
+        },
+        {
+          "word": "needs",
+          "start": 5.002,
+          "end": 5.263,
+          "score": 0.831
+        },
+        {
+          "word": "exposure,",
+          "start": 5.323,
+          "end": 6.003,
+          "score": 0.879
+        },
+        {
+          "word": "uncertainty",
+          "start": 6.443,
+          "end": 7.184,
+          "score": 0.85
+        },
+        {
+          "word": "and",
+          "start": 7.264,
+          "end": 7.344,
+          "score": 0.749
+        },
+        {
+          "word": "format",
+          "start": 7.424,
+          "end": 7.844,
+          "score": 0.758
+        },
+        {
+          "word": "mix.",
+          "start": 7.884,
+          "end": 8.144,
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "start": 8.744,
+      "end": 13.407,
+      "text": "T-twenty international evidence isn't automatically IPL evidence.",
+      "words": [
+        {
+          "word": "T-twenty",
+          "start": 8.744,
+          "end": 9.345,
+          "score": 0.82
+        },
+        {
+          "word": "international",
+          "start": 9.405,
+          "end": 10.025,
+          "score": 0.859
+        },
+        {
+          "word": "evidence",
+          "start": 10.165,
+          "end": 10.545,
+          "score": 0.933
+        },
+        {
+          "word": "isn't",
+          "start": 10.705,
+          "end": 10.905,
+          "score": 0.661
+        },
+        {
+          "word": "automatically",
+          "start": 11.105,
+          "end": 11.826,
+          "score": 0.896
+        },
+        {
+          "word": "IPL",
+          "start": 12.126,
+          "end": 12.846,
+          "score": 0.769
+        },
+        {
+          "word": "evidence.",
+          "start": 12.986,
+          "end": 13.407,
+          "score": 0.959
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Your",
+      "start": 0.04,
+      "end": 0.2,
+      "score": 0.835
+    },
+    {
+      "word": "primary",
+      "start": 0.26,
+      "end": 0.68,
+      "score": 0.809
+    },
+    {
+      "word": "lists",
+      "start": 0.74,
+      "end": 1.0,
+      "score": 0.876
+    },
+    {
+      "word": "put",
+      "start": 1.061,
+      "end": 1.241,
+      "score": 0.972
+    },
+    {
+      "word": "Jos",
+      "start": 1.301,
+      "end": 1.641,
+      "score": 0.898
+    },
+    {
+      "word": "Buttler",
+      "start": 1.701,
+      "end": 2.081,
+      "score": 0.835
+    },
+    {
+      "word": "and",
+      "start": 2.161,
+      "end": 2.241,
+      "score": 0.91
+    },
+    {
+      "word": "Jasprit",
+      "start": 2.301,
+      "end": 2.801,
+      "score": 0.677
+    },
+    {
+      "word": "Bumrah",
+      "start": 2.841,
+      "end": 3.202,
+      "score": 0.801
+    },
+    {
+      "word": "first.",
+      "start": 3.242,
+      "end": 3.622,
+      "score": 0.865
+    },
+    {
+      "word": "But",
+      "start": 4.162,
+      "end": 4.262,
+      "score": 0.899
+    },
+    {
+      "word": "every",
+      "start": 4.382,
+      "end": 4.582,
+      "score": 0.769
+    },
+    {
+      "word": "name",
+      "start": 4.642,
+      "end": 4.942,
+      "score": 0.721
+    },
+    {
+      "word": "needs",
+      "start": 5.002,
+      "end": 5.263,
+      "score": 0.831
+    },
+    {
+      "word": "exposure,",
+      "start": 5.323,
+      "end": 6.003,
+      "score": 0.879
+    },
+    {
+      "word": "uncertainty",
+      "start": 6.443,
+      "end": 7.184,
+      "score": 0.85
+    },
+    {
+      "word": "and",
+      "start": 7.264,
+      "end": 7.344,
+      "score": 0.749
+    },
+    {
+      "word": "format",
+      "start": 7.424,
+      "end": 7.844,
+      "score": 0.758
+    },
+    {
+      "word": "mix.",
+      "start": 7.884,
+      "end": 8.144,
+      "score": 0.995
+    },
+    {
+      "word": "T-twenty",
+      "start": 8.744,
+      "end": 9.345,
+      "score": 0.82
+    },
+    {
+      "word": "international",
+      "start": 9.405,
+      "end": 10.025,
+      "score": 0.859
+    },
+    {
+      "word": "evidence",
+      "start": 10.165,
+      "end": 10.545,
+      "score": 0.933
+    },
+    {
+      "word": "isn't",
+      "start": 10.705,
+      "end": 10.905,
+      "score": 0.661
+    },
+    {
+      "word": "automatically",
+      "start": 11.105,
+      "end": 11.826,
+      "score": 0.896
+    },
+    {
+      "word": "IPL",
+      "start": 12.126,
+      "end": 12.846,
+      "score": 0.769
+    },
+    {
+      "word": "evidence.",
+      "start": 12.986,
+      "end": 13.407,
+      "score": 0.959
+    }
+  ],
+  "_source_audio_sha256": "2e66e735cd57801e7a1543bfee4f47afc9c511d4c36967e3d467b7ccb90b274d"
+}

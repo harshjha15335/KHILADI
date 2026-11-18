@@ -1,0 +1,17 @@
+{
+  "signature": "c870a9a97d80f0edb4a8a4b86acd1b1bbeb2d54e5536812f729725612fac4743",
+  "display_text": "So you freeze time before every ball. Score. Wickets. Balls remaining. No peeking at the six that happens next. That would be cheating, with a spreadsheet.",
+  "synthesis_text": "So you freeze time before every ball. Score. Wickets. Balls remaining. No peeking at the six that happens next. That would be cheating, with a spreadsheet.",
+  "phonemes": "s\u02cco\u028a ju\u02d0 f\u0279\u02c8i\u02d0z t\u02c8a\u026am b\u1d7bf\u02cc\u0254\u02d0\u0279 \u02c8\u025bv\u0279i b\u02c8\u0254\u02d0l. sk\u02c8\u0254\u02d0\u0279. w\u02c8\u026ak\u026ats. b\u02c8\u0254\u02d0lz \u0279\u1d7bm\u02c8e\u026an\u026a\u014b. n\u02c8o\u028a p\u02c8i\u02d0k\u026a\u014b \u00e6t \u00f0\u0259 s\u02c8\u026aks \u00f0\u00e6t h\u02c8\u00e6p\u0259nz n\u02c8\u025bkst. \u00f0\u00e6t w\u028ad bi\u02d0 t\u0283\u02c8i\u02d0\u027e\u026a\u014b, w\u026a\u00f0 \u0250 sp\u0279\u02c8\u025bd\u0283i\u02d0t.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 9.898666666666667,
+  "sha256": "0e69c8c66fbd5e8d202c9528c437d8db67cb3e3fd92707542cfa9b7d0ae36b73"
+}

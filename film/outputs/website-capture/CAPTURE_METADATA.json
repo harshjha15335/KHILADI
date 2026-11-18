@@ -1,0 +1,62 @@
+{
+  "artifact": "KHILADI_WEBSITE_INSERT_4S.mp4",
+  "source_url": "http://127.0.0.1:3317/",
+  "source_kind": "Actual unchanged local repository frontend, public-safe static/fallback mode",
+  "page_title": "KHILADI | Cricket Intelligence",
+  "viewport_css": {
+    "width": 390,
+    "height": 693
+  },
+  "device_scale_factor": 3,
+  "captured_frame_pixels": {
+    "width": 1170,
+    "height": 2079
+  },
+  "output": {
+    "width": 1080,
+    "height": 1920,
+    "fps": "30/1",
+    "frames": 120,
+    "duration_seconds": 4.0,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio": false,
+    "color_range": "tv"
+  },
+  "capture_method": "Actual Chromium DOM screenshots, virtual browser clock stepped1/30s; no DOM/CSS rewriting",
+  "virtual_window": {
+    "start": 0.3,
+    "end": 4.3
+  },
+  "protected_video_elements": 0,
+  "page_errors": [],
+  "network_failures": [
+    {
+      "url": "http://127.0.0.1:3317/data/rr_squad_2026.json",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "data_responses": [
+    {
+      "url": "http://127.0.0.1:3317/data/rr_squad_2026.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3317/data/player_database.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3317/data/rr_squad_2026.json",
+      "status": 200
+    }
+  ],
+  "source_files_unchanged": true,
+  "public_deployment_performed": false,
+  "sha256": "f6399774f41994ad60afc6c6a2095029e3aba8605d51dca6eed985b98dc1b469",
+  "limits": [
+    "Real website branding/hero only; no navigation, rankings or forms tested.",
+    "Website uses preserved legacy application copy/model context; this clip does not prove accepted film methodology is implemented there.",
+    "Private review insertion only; not a public publication or general asset-rights clearance."
+  ],
+  "placement": "Scene15, four seconds after report/reproducibility evidence; report remains climax"
+}

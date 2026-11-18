@@ -1,0 +1,354 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 3.722,
+      "text": "So you resample whole matches, seven hundred and fifty times.",
+      "words": [
+        {
+          "word": "So",
+          "start": 0.06,
+          "end": 0.18,
+          "score": 0.914
+        },
+        {
+          "word": "you",
+          "start": 0.2,
+          "end": 0.32,
+          "score": 0.915
+        },
+        {
+          "word": "resample",
+          "start": 0.36,
+          "end": 0.86,
+          "score": 0.948
+        },
+        {
+          "word": "whole",
+          "start": 0.92,
+          "end": 1.16,
+          "score": 0.935
+        },
+        {
+          "word": "matches,",
+          "start": 1.241,
+          "end": 1.741,
+          "score": 0.918
+        },
+        {
+          "word": "seven",
+          "start": 2.021,
+          "end": 2.321,
+          "score": 0.739
+        },
+        {
+          "word": "hundred",
+          "start": 2.401,
+          "end": 2.721,
+          "score": 0.943
+        },
+        {
+          "word": "and",
+          "start": 2.761,
+          "end": 2.841,
+          "score": 0.835
+        },
+        {
+          "word": "fifty",
+          "start": 2.901,
+          "end": 3.201,
+          "score": 0.995
+        },
+        {
+          "word": "times.",
+          "start": 3.281,
+          "end": 3.722,
+          "score": 0.795
+        }
+      ]
+    },
+    {
+      "start": 4.262,
+      "end": 5.382,
+      "text": "Confidence intervals.",
+      "words": [
+        {
+          "word": "Confidence",
+          "start": 4.262,
+          "end": 4.842,
+          "score": 0.897
+        },
+        {
+          "word": "intervals.",
+          "start": 4.922,
+          "end": 5.382,
+          "score": 0.878
+        }
+      ]
+    },
+    {
+      "start": 5.902,
+      "end": 6.983,
+      "text": "Rank distributions.",
+      "words": [
+        {
+          "word": "Rank",
+          "start": 5.902,
+          "end": 6.182,
+          "score": 0.875
+        },
+        {
+          "word": "distributions.",
+          "start": 6.223,
+          "end": 6.983,
+          "score": 0.888
+        }
+      ]
+    },
+    {
+      "start": 7.543,
+      "end": 11.545,
+      "text": "A top-ten bootstrap rate measures conditional historical stability.",
+      "words": [
+        {
+          "word": "A",
+          "start": 7.543,
+          "end": 7.583,
+          "score": 0.748
+        },
+        {
+          "word": "top-ten",
+          "start": 7.643,
+          "end": 8.243,
+          "score": 0.896
+        },
+        {
+          "word": "bootstrap",
+          "start": 8.283,
+          "end": 8.804,
+          "score": 0.897
+        },
+        {
+          "word": "rate",
+          "start": 8.864,
+          "end": 9.064,
+          "score": 0.799
+        },
+        {
+          "word": "measures",
+          "start": 9.164,
+          "end": 9.524,
+          "score": 0.905
+        },
+        {
+          "word": "conditional",
+          "start": 9.584,
+          "end": 10.204,
+          "score": 0.843
+        },
+        {
+          "word": "historical",
+          "start": 10.264,
+          "end": 10.924,
+          "score": 0.812
+        },
+        {
+          "word": "stability.",
+          "start": 10.984,
+          "end": 11.545,
+          "score": 0.95
+        }
+      ]
+    },
+    {
+      "start": 12.005,
+      "end": 13.105,
+      "text": "It isn't a prophecy.",
+      "words": [
+        {
+          "word": "It",
+          "start": 12.005,
+          "end": 12.065,
+          "score": 0.988
+        },
+        {
+          "word": "isn't",
+          "start": 12.145,
+          "end": 12.345,
+          "score": 0.845
+        },
+        {
+          "word": "a",
+          "start": 12.365,
+          "end": 12.385,
+          "score": 0.998
+        },
+        {
+          "word": "prophecy.",
+          "start": 12.445,
+          "end": 13.105,
+          "score": 0.904
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "So",
+      "start": 0.06,
+      "end": 0.18,
+      "score": 0.914
+    },
+    {
+      "word": "you",
+      "start": 0.2,
+      "end": 0.32,
+      "score": 0.915
+    },
+    {
+      "word": "resample",
+      "start": 0.36,
+      "end": 0.86,
+      "score": 0.948
+    },
+    {
+      "word": "whole",
+      "start": 0.92,
+      "end": 1.16,
+      "score": 0.935
+    },
+    {
+      "word": "matches,",
+      "start": 1.241,
+      "end": 1.741,
+      "score": 0.918
+    },
+    {
+      "word": "seven",
+      "start": 2.021,
+      "end": 2.321,
+      "score": 0.739
+    },
+    {
+      "word": "hundred",
+      "start": 2.401,
+      "end": 2.721,
+      "score": 0.943
+    },
+    {
+      "word": "and",
+      "start": 2.761,
+      "end": 2.841,
+      "score": 0.835
+    },
+    {
+      "word": "fifty",
+      "start": 2.901,
+      "end": 3.201,
+      "score": 0.995
+    },
+    {
+      "word": "times.",
+      "start": 3.281,
+      "end": 3.722,
+      "score": 0.795
+    },
+    {
+      "word": "Confidence",
+      "start": 4.262,
+      "end": 4.842,
+      "score": 0.897
+    },
+    {
+      "word": "intervals.",
+      "start": 4.922,
+      "end": 5.382,
+      "score": 0.878
+    },
+    {
+      "word": "Rank",
+      "start": 5.902,
+      "end": 6.182,
+      "score": 0.875
+    },
+    {
+      "word": "distributions.",
+      "start": 6.223,
+      "end": 6.983,
+      "score": 0.888
+    },
+    {
+      "word": "A",
+      "start": 7.543,
+      "end": 7.583,
+      "score": 0.748
+    },
+    {
+      "word": "top-ten",
+      "start": 7.643,
+      "end": 8.243,
+      "score": 0.896
+    },
+    {
+      "word": "bootstrap",
+      "start": 8.283,
+      "end": 8.804,
+      "score": 0.897
+    },
+    {
+      "word": "rate",
+      "start": 8.864,
+      "end": 9.064,
+      "score": 0.799
+    },
+    {
+      "word": "measures",
+      "start": 9.164,
+      "end": 9.524,
+      "score": 0.905
+    },
+    {
+      "word": "conditional",
+      "start": 9.584,
+      "end": 10.204,
+      "score": 0.843
+    },
+    {
+      "word": "historical",
+      "start": 10.264,
+      "end": 10.924,
+      "score": 0.812
+    },
+    {
+      "word": "stability.",
+      "start": 10.984,
+      "end": 11.545,
+      "score": 0.95
+    },
+    {
+      "word": "It",
+      "start": 12.005,
+      "end": 12.065,
+      "score": 0.988
+    },
+    {
+      "word": "isn't",
+      "start": 12.145,
+      "end": 12.345,
+      "score": 0.845
+    },
+    {
+      "word": "a",
+      "start": 12.365,
+      "end": 12.385,
+      "score": 0.998
+    },
+    {
+      "word": "prophecy.",
+      "start": 12.445,
+      "end": 13.105,
+      "score": 0.904
+    }
+  ],
+  "_source_audio_sha256": "4369810da5d78835c6e689f281e8967cdf83a334073f9ce1613a0211fa97353d"
+}

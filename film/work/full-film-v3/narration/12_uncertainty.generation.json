@@ -1,0 +1,17 @@
+{
+  "signature": "d8c83affb31c5e6da383f4bba88e34f898de5b1242aebfecdd2c6a6c31b1d07d",
+  "display_text": "So you resample whole matches, seven hundred and fifty times. Confidence intervals. Rank distributions. A top-ten bootstrap rate measures conditional historical stability. It isn't a prophecy.",
+  "synthesis_text": "So you resample whole matches, seven hundred and fifty times. Confidence intervals. Rank distributions. A top-ten bootstrap rate measures conditional historical stability. It isn't a prophecy.",
+  "phonemes": "s\u02cco\u028a ju\u02d0 \u0279\u1d7bs\u02c8\u00e6mp\u0259l h\u02c8o\u028al m\u02c8\u00e6t\u0283\u1d7bz, s\u02c8\u025bv\u0259n h\u02c8\u028cnd\u0279\u026ad \u00e6nd f\u02c8\u026afti t\u02c8a\u026amz. k\u02c8\u0251\u02d0nf\u026ad\u0259ns \u02c8\u026ant\u025av\u0259lz. \u0279\u02c8\u00e6\u014bk d\u02cc\u026ast\u0279\u026abj\u02c8u\u02d0\u0283\u0259nz. \u0250 t\u02c8\u0251\u02d0pt\u02c8\u025bn b\u02c8u\u02d0tst\u0279\u00e6p \u0279\u02c8e\u026at m\u02c8\u025b\u0292\u025az k\u0259nd\u02c8\u026a\u0283\u0259n\u0259l h\u026ast\u02c8\u0254\u02d0\u0279\u026ak\u0259l st\u0259b\u02c8\u026al\u1d7b\u027ei. \u026a\u027e \u02cc\u026az\u0259nt \u0250 p\u0279\u02c8\u0251\u02d0f\u0259si.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 13.205333333333334,
+  "sha256": "4369810da5d78835c6e689f281e8967cdf83a334073f9ce1613a0211fa97353d"
+}

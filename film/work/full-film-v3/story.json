@@ -1,0 +1,120 @@
+{
+  "title": "KHILADI \u2014 What the evidence supports",
+  "source": "User-supplied accepted methodology; analytical pipeline not rerun in this animation workspace.",
+  "website": "Deferred by user; no invented website footage.",
+  "scenes": [
+    {
+      "id": "01_notebook",
+      "set": "classroom",
+      "caption": "My first IPL team.",
+      "highlight": "IPL",
+      "narration": "You're in school. You're supposed to be doing maths. But you've got something way more important to figure out. Your IPL best eleven. And honestly? The maths can wait."
+    },
+    {
+      "id": "02_hackathon",
+      "set": "desk",
+      "caption": "Then came the hackathon.",
+      "highlight": "hackathon",
+      "narration": "Years pass. The cricket notebook survives. Then you see the Rajasthan Royals SupeRR Selector challenge. Your imaginary selections suddenly need something rather inconvenient. Evidence."
+    },
+    {
+      "id": "03_clean",
+      "set": "lab",
+      "caption": "200,999 events. First: clean.",
+      "highlight": "clean",
+      "narration": "Your first obstacle: two hundred thousand, nine hundred and ninety-nine delivery events. Wides. No-balls. Run-outs. Rain. Before you judge a player, you have to reconstruct the match correctly."
+    },
+    {
+      "id": "04_preball",
+      "set": "stadium",
+      "caption": "Judge the situation BEFORE the ball.",
+      "highlight": "BEFORE",
+      "narration": "So you freeze time before every ball. Score. Wickets. Balls remaining. No peeking at the six that happens next. That would be cheating, with a spreadsheet."
+    },
+    {
+      "id": "05_pressure",
+      "set": "stadium",
+      "caption": "Difficult \u2260 consequential.",
+      "highlight": "consequential",
+      "narration": "But difficult doesn't always mean consequential. Thirty-nine runs an over? Terrifying. Also, probably over. Two needed off one? Now the next ball can change everything."
+    },
+    {
+      "id": "06_hybrid",
+      "set": "lab",
+      "caption": "Difficulty + win-probability leverage.",
+      "highlight": "leverage",
+      "narration": "You combine scoreboard difficulty with win-probability leverage, using context-relative percentiles. Your primary pressure definition selects the top twenty percent within each innings. Not within every phase."
+    },
+    {
+      "id": "07_expected",
+      "set": "lab",
+      "caption": "Performance against expectation.",
+      "highlight": "expectation",
+      "narration": "Next question: better than what? You estimate expected runs and dismissal risk. Batters earn credit for extra runs and survival. Bowlers, for runs prevented and credited wickets."
+    },
+    {
+      "id": "08_adjust",
+      "set": "desk",
+      "caption": "Context. Era. Opposition.",
+      "highlight": "Opposition",
+      "narration": "You adjust for scoring eras and opposition. Then combine runs and wickets with a declared assumption: fifteen runs per wicket. You check ten and twenty too. An assumption deserves a test, not a disguise."
+    },
+    {
+      "id": "09_shrink",
+      "set": "lab",
+      "caption": "Small sample? Shrink the claim.",
+      "highlight": "Shrink",
+      "narration": "Then the small samples arrive, wearing enormous confidence. Twenty-five pressure events are not four hundred. Empirical Bayes pulls weakly supported estimates toward the average."
+    },
+    {
+      "id": "10_delta",
+      "set": "desk",
+      "caption": "Pressure quality \u2260 pressure delta.",
+      "highlight": "delta",
+      "narration": "Performing well under pressure isn't the same as improving because of pressure. You find no validated repeatable bowling pressure delta. The batting delta gains are tiny. A psychological clutch trait remains unproven."
+    },
+    {
+      "id": "11_holdout",
+      "set": "lab",
+      "caption": "The holdout challenged the story.",
+      "highlight": "holdout",
+      "narration": "The unseen twenty-twenty-six season challenges your story. Batting quality shows no positive predictive relationship. Bowling looks promising, but an advantage over ordinary economy isn't established."
+    },
+    {
+      "id": "12_uncertainty",
+      "set": "lab",
+      "caption": "750 match bootstraps.",
+      "highlight": "750",
+      "narration": "So you resample whole matches, seven hundred and fifty times. Confidence intervals. Rank distributions. A top-ten bootstrap rate measures conditional historical stability. It isn't a prophecy."
+    },
+    {
+      "id": "13_sensitivity",
+      "set": "desk",
+      "caption": "Change assumptions. Watch ranks move.",
+      "highlight": "move",
+      "narration": "Change the pressure definition, and your shortlist changes. Remove a player's best season, and nine names leave each top ten. Those aren't details you get to hide."
+    },
+    {
+      "id": "14_shortlist",
+      "set": "warroom",
+      "caption": "A shortlist, with evidence attached.",
+      "highlight": "evidence",
+      "narration": "Your primary lists put Jos Buttler and Jasprit Bumrah first. But every name needs exposure, uncertainty and format mix. T-twenty international evidence isn't automatically IPL evidence."
+    },
+    {
+      "id": "15_replay",
+      "set": "desk",
+      "caption": "20 / 20 rankings reproduced.",
+      "highlight": "reproduced",
+      "narration": "Finally, your report's replay reproduces all twenty rankings and passes forty-one checks. The code repeats. The statistical limitations stay."
+    },
+    {
+      "id": "16_end",
+      "set": "classroom",
+      "caption": "Better questions. Honest answers.",
+      "highlight": "Honest",
+      "narration": "Your notebook used to ask, who would you pick? Khiladi asks a better question. What does the evidence support... and how sure should you be?"
+    }
+  ],
+  "voice_status": "User approved revised Michael for remaining narration"
+}

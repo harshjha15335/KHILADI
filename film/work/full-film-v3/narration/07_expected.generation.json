@@ -1,0 +1,17 @@
+{
+  "signature": "7afd2cf8b5d7860096a684880067603fefe18ae95ff8ec6aa169e9521f7f8f7a",
+  "display_text": "Next question: better than what? You estimate expected runs and dismissal risk. Batters earn credit for extra runs and survival. Bowlers, for runs prevented and credited wickets.",
+  "synthesis_text": "Next question: better than what? You estimate expected runs and dismissal risk. Batters earn credit for extra runs and survival. Bowlers, for runs prevented and credited wickets.",
+  "phonemes": "n\u02c8\u025bkst kw\u02c8\u025bst\u0283\u0259n: b\u02c8\u025b\u027e\u025a \u00f0\u0250n w\u02c8\u028ct? ju\u02d0 \u02c8\u025bst\u1d7bm\u02cce\u026at \u025bksp\u02c8\u025bkt\u1d7bd \u0279\u02c8\u028cnz \u00e6nd d\u026asm\u02c8\u026as\u0259l \u0279\u02c8\u026ask. b\u02c8\u00e6\u027e\u025az \u02c8\u025c\u02d0n k\u0279\u02c8\u025bd\u026at f\u0254\u02d0\u0279 \u02c8\u025bkst\u0279\u025a \u0279\u02c8\u028cnz \u00e6nd s\u025av\u02c8a\u026av\u0259l. b\u02c8o\u028al\u025az, f\u0254\u02d0\u0279 \u0279\u02c8\u028cnz p\u0279\u026av\u02c8\u025bnt\u1d7bd \u00e6nd k\u0279\u02c8\u025bd\u026a\u027e\u1d7bd w\u02c8\u026ak\u026ats.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 12.458666666666666,
+  "sha256": "0d24014d5cf78a9ea9eef455556d45c34798911f438838fb83605813eb2da303"
+}

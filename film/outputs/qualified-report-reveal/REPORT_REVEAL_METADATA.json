@@ -1,0 +1,45 @@
+{
+  "scene": "14_shortlist",
+  "scope": "qualified report insert only",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 300,
+  "duration_seconds": 10,
+  "path": "/workspace/KHILADI-film/film/outputs/qualified-report-reveal/QUALIFIED_REPORT_REVEAL.mp4",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.75,
+      "action": "bound cover opens"
+    },
+    {
+      "start": 0.75,
+      "end": 4.7,
+      "action": "complete accepted batting top10 visible"
+    },
+    {
+      "start": 4.7,
+      "end": 5.55,
+      "action": "physical bound leaf turns"
+    },
+    {
+      "start": 5.55,
+      "end": 10,
+      "action": "complete accepted bowling top10 visible"
+    }
+  ],
+  "caption_safe_band": {
+    "x": 50,
+    "y": 1750,
+    "width": 980,
+    "height": 150
+  },
+  "source": "accepted_primary_rankings.csv and existing authored report SVG/PNG",
+  "limits": [
+    "All20 rows are visually present, but10s does not allow reading every field aloud; pause may be needed.",
+    "2.5D bound-page/hand perspective composites, not a simulated Blender paper mesh.",
+    "Input pages preserve supplied rank order; no unavailable IDs/ratings/intervals inferred.",
+    "This asset is silent and has no final narrator/caption/foley sync."
+  ]
+}

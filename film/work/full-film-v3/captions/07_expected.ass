@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.16,0:00:00.92,Main,,0,0,0,,Next {\c&H00FFFF&}question:{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.22,0:00:02.02,Main,,0,0,0,,{\c&H00FFFF&}better{\c&HFFFFFF&} than what?
+Dialogue: 0,0:00:02.46,0:00:04.16,Main,,0,0,0,,You estimate {\c&H00FFFF&}expected{\c&HFFFFFF&} runs
+Dialogue: 0,0:00:04.21,0:00:05.34,Main,,0,0,0,,and {\c&H00FFFF&}dismissal{\c&HFFFFFF&} risk.
+Dialogue: 0,0:00:05.85,0:00:07.15,Main,,0,0,0,,{\c&H00FFFF&}Batters{\c&HFFFFFF&} earn credit for
+Dialogue: 0,0:00:07.25,0:00:08.83,Main,,0,0,0,,extra runs and {\c&H00FFFF&}survival.{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.27,0:00:11.35,Main,,0,0,0,,Bowlers, for runs {\c&H00FFFF&}prevented{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.40,0:00:12.41,Main,,0,0,0,,and credited {\c&H00FFFF&}wickets.{\c&HFFFFFF&}

@@ -1,0 +1,151 @@
+{
+  "source": "V3 geometry/materials retained in V4 rig; no geometry rebuilt",
+  "states": {
+    "write1": {
+      "expression": "neutral",
+      "head_pitch": 20,
+      "head_roll": 0,
+      "head_yaw": -8,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "write2": {
+      "expression": "neutral",
+      "head_pitch": 26,
+      "head_roll": -3,
+      "head_yaw": -4,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "hesitate": {
+      "expression": "confused",
+      "head_pitch": 12,
+      "head_roll": 0,
+      "head_yaw": -3,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "turn1": {
+      "expression": "confused",
+      "head_pitch": 7,
+      "head_roll": -2,
+      "head_yaw": 16,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "turn2": {
+      "expression": "confused",
+      "head_pitch": 2,
+      "head_roll": -3,
+      "head_yaw": 32,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "startle": {
+      "expression": "realization",
+      "head_pitch": -4,
+      "head_roll": 0,
+      "head_yaw": 23,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "recover": {
+      "expression": "neutral",
+      "head_pitch": 11,
+      "head_roll": 0,
+      "head_yaw": -9,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "grin": {
+      "expression": "laugh",
+      "head_pitch": -3,
+      "head_roll": 4,
+      "head_yaw": 7,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    },
+    "settle": {
+      "expression": "neutral",
+      "head_pitch": 18,
+      "head_roll": 0,
+      "head_yaw": 0,
+      "anchors": {
+        "shoulderL": [
+          353.45471799373627,
+          706.4619898796082
+        ],
+        "shoulderR": [
+          546.5452551841736,
+          706.4619898796082
+        ]
+      }
+    }
+  },
+  "width": 900,
+  "height": 1200
+}

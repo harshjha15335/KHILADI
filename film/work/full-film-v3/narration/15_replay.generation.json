@@ -1,0 +1,17 @@
+{
+  "signature": "2c81d2cac5966c2fab2fa3a2bf407d9e4b6502f42b511b951da1336f3afaccfd",
+  "display_text": "Finally, your report's replay reproduces all twenty rankings and passes forty-one checks. The code repeats. The statistical limitations stay.",
+  "synthesis_text": "Finally, your report's replay reproduces all twenty rankings and passes forty-one checks. The code repeats. The statistical limitations stay.",
+  "phonemes": "f\u02c8a\u026an\u0259li, j\u028a\u0279 \u0279\u1d7bp\u02c8\u0254\u02d0\u0279ts \u0279\u02c8i\u02d0ple\u026a \u0279\u1d7bp\u0279\u0259d\u02c8u\u02d0s\u1d7bz \u02c8\u0254\u02d0l tw\u02c8\u025bnti \u0279\u02c8\u00e6\u014bk\u026a\u014bz \u00e6nd p\u02c8\u00e6s\u1d7bz f\u02c8\u0254\u02d0\u0279\u027eiw\u02c8\u028cn t\u0283\u02c8\u025bks. \u00f0\u0259 k\u02c8o\u028ad \u0279\u1d7bp\u02c8i\u02d0ts. \u00f0\u0259 st\u0250t\u02c8\u026ast\u026ak\u0259l l\u02cc\u026am\u026at\u02c8e\u026a\u0283\u0259nz st\u02c8e\u026a.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 9.749333333333333,
+  "sha256": "a57a464f736af875369e0f276840be442daa75bdc2b7fbe2aba725864d1ceea2"
+}

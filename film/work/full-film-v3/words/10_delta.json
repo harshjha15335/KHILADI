@@ -1,0 +1,419 @@
+{
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 4.327,
+      "text": "Performing well under pressure isn't the same as improving because of pressure.",
+      "words": [
+        {
+          "word": "Performing",
+          "start": 0.04,
+          "end": 0.521,
+          "score": 0.876
+        },
+        {
+          "word": "well",
+          "start": 0.581,
+          "end": 0.801,
+          "score": 0.884
+        },
+        {
+          "word": "under",
+          "start": 0.861,
+          "end": 1.042,
+          "score": 0.805
+        },
+        {
+          "word": "pressure",
+          "start": 1.102,
+          "end": 1.502,
+          "score": 0.809
+        },
+        {
+          "word": "isn't",
+          "start": 1.723,
+          "end": 1.923,
+          "score": 0.793
+        },
+        {
+          "word": "the",
+          "start": 1.983,
+          "end": 2.083,
+          "score": 0.834
+        },
+        {
+          "word": "same",
+          "start": 2.143,
+          "end": 2.464,
+          "score": 0.838
+        },
+        {
+          "word": "as",
+          "start": 2.564,
+          "end": 2.644,
+          "score": 0.668
+        },
+        {
+          "word": "improving",
+          "start": 2.724,
+          "end": 3.305,
+          "score": 0.802
+        },
+        {
+          "word": "because",
+          "start": 3.385,
+          "end": 3.686,
+          "score": 0.89
+        },
+        {
+          "word": "of",
+          "start": 3.726,
+          "end": 3.806,
+          "score": 0.789
+        },
+        {
+          "word": "pressure.",
+          "start": 3.906,
+          "end": 4.327,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 4.868,
+      "end": 8.173,
+      "text": "You find no validated repeatable bowling pressure delta.",
+      "words": [
+        {
+          "word": "You",
+          "start": 4.868,
+          "end": 4.988,
+          "score": 0.846
+        },
+        {
+          "word": "find",
+          "start": 5.028,
+          "end": 5.268,
+          "score": 0.632
+        },
+        {
+          "word": "no",
+          "start": 5.329,
+          "end": 5.529,
+          "score": 0.865
+        },
+        {
+          "word": "validated",
+          "start": 5.629,
+          "end": 6.27,
+          "score": 0.942
+        },
+        {
+          "word": "repeatable",
+          "start": 6.35,
+          "end": 6.911,
+          "score": 0.757
+        },
+        {
+          "word": "bowling",
+          "start": 6.991,
+          "end": 7.372,
+          "score": 0.901
+        },
+        {
+          "word": "pressure",
+          "start": 7.452,
+          "end": 7.772,
+          "score": 0.844
+        },
+        {
+          "word": "delta.",
+          "start": 7.793,
+          "end": 8.173,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 8.714,
+      "end": 10.737,
+      "text": "The batting delta gains are tiny.",
+      "words": [
+        {
+          "word": "The",
+          "start": 8.714,
+          "end": 8.794,
+          "score": 0.986
+        },
+        {
+          "word": "batting",
+          "start": 8.834,
+          "end": 9.175,
+          "score": 0.843
+        },
+        {
+          "word": "delta",
+          "start": 9.195,
+          "end": 9.555,
+          "score": 0.801
+        },
+        {
+          "word": "gains",
+          "start": 9.595,
+          "end": 10.036,
+          "score": 0.715
+        },
+        {
+          "word": "are",
+          "start": 10.116,
+          "end": 10.216,
+          "score": 0.761
+        },
+        {
+          "word": "tiny.",
+          "start": 10.297,
+          "end": 10.737,
+          "score": 0.999
+        }
+      ]
+    },
+    {
+      "start": 11.258,
+      "end": 14.043,
+      "text": "A psychological clutch trait remains unproven.",
+      "words": [
+        {
+          "word": "A",
+          "start": 11.258,
+          "end": 11.298,
+          "score": 0.564
+        },
+        {
+          "word": "psychological",
+          "start": 11.338,
+          "end": 12.139,
+          "score": 0.802
+        },
+        {
+          "word": "clutch",
+          "start": 12.2,
+          "end": 12.5,
+          "score": 0.916
+        },
+        {
+          "word": "trait",
+          "start": 12.56,
+          "end": 12.841,
+          "score": 0.921
+        },
+        {
+          "word": "remains",
+          "start": 12.901,
+          "end": 13.301,
+          "score": 0.761
+        },
+        {
+          "word": "unproven.",
+          "start": 13.442,
+          "end": 14.043,
+          "score": 0.875
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Performing",
+      "start": 0.04,
+      "end": 0.521,
+      "score": 0.876
+    },
+    {
+      "word": "well",
+      "start": 0.581,
+      "end": 0.801,
+      "score": 0.884
+    },
+    {
+      "word": "under",
+      "start": 0.861,
+      "end": 1.042,
+      "score": 0.805
+    },
+    {
+      "word": "pressure",
+      "start": 1.102,
+      "end": 1.502,
+      "score": 0.809
+    },
+    {
+      "word": "isn't",
+      "start": 1.723,
+      "end": 1.923,
+      "score": 0.793
+    },
+    {
+      "word": "the",
+      "start": 1.983,
+      "end": 2.083,
+      "score": 0.834
+    },
+    {
+      "word": "same",
+      "start": 2.143,
+      "end": 2.464,
+      "score": 0.838
+    },
+    {
+      "word": "as",
+      "start": 2.564,
+      "end": 2.644,
+      "score": 0.668
+    },
+    {
+      "word": "improving",
+      "start": 2.724,
+      "end": 3.305,
+      "score": 0.802
+    },
+    {
+      "word": "because",
+      "start": 3.385,
+      "end": 3.686,
+      "score": 0.89
+    },
+    {
+      "word": "of",
+      "start": 3.726,
+      "end": 3.806,
+      "score": 0.789
+    },
+    {
+      "word": "pressure.",
+      "start": 3.906,
+      "end": 4.327,
+      "score": 0.885
+    },
+    {
+      "word": "You",
+      "start": 4.868,
+      "end": 4.988,
+      "score": 0.846
+    },
+    {
+      "word": "find",
+      "start": 5.028,
+      "end": 5.268,
+      "score": 0.632
+    },
+    {
+      "word": "no",
+      "start": 5.329,
+      "end": 5.529,
+      "score": 0.865
+    },
+    {
+      "word": "validated",
+      "start": 5.629,
+      "end": 6.27,
+      "score": 0.942
+    },
+    {
+      "word": "repeatable",
+      "start": 6.35,
+      "end": 6.911,
+      "score": 0.757
+    },
+    {
+      "word": "bowling",
+      "start": 6.991,
+      "end": 7.372,
+      "score": 0.901
+    },
+    {
+      "word": "pressure",
+      "start": 7.452,
+      "end": 7.772,
+      "score": 0.844
+    },
+    {
+      "word": "delta.",
+      "start": 7.793,
+      "end": 8.173,
+      "score": 0.906
+    },
+    {
+      "word": "The",
+      "start": 8.714,
+      "end": 8.794,
+      "score": 0.986
+    },
+    {
+      "word": "batting",
+      "start": 8.834,
+      "end": 9.175,
+      "score": 0.843
+    },
+    {
+      "word": "delta",
+      "start": 9.195,
+      "end": 9.555,
+      "score": 0.801
+    },
+    {
+      "word": "gains",
+      "start": 9.595,
+      "end": 10.036,
+      "score": 0.715
+    },
+    {
+      "word": "are",
+      "start": 10.116,
+      "end": 10.216,
+      "score": 0.761
+    },
+    {
+      "word": "tiny.",
+      "start": 10.297,
+      "end": 10.737,
+      "score": 0.999
+    },
+    {
+      "word": "A",
+      "start": 11.258,
+      "end": 11.298,
+      "score": 0.564
+    },
+    {
+      "word": "psychological",
+      "start": 11.338,
+      "end": 12.139,
+      "score": 0.802
+    },
+    {
+      "word": "clutch",
+      "start": 12.2,
+      "end": 12.5,
+      "score": 0.916
+    },
+    {
+      "word": "trait",
+      "start": 12.56,
+      "end": 12.841,
+      "score": 0.921
+    },
+    {
+      "word": "remains",
+      "start": 12.901,
+      "end": 13.301,
+      "score": 0.761
+    },
+    {
+      "word": "unproven.",
+      "start": 13.442,
+      "end": 14.043,
+      "score": 0.875
+    }
+  ],
+  "_source_audio_sha256": "5d981f32028fa9cdc0c83be7563729a056a76dd8d4f575e70275115141cb38de"
+}

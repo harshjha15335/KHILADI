@@ -1,0 +1,446 @@
+{
+  "version": 3,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "source": "User-supplied methodology and retained V3/V4 geometry; no raw competition data.",
+  "timing_status": "Inject new Michael timing; legacy timing is provisional only.",
+  "voice_owned_by": "root",
+  "website": {
+    "status": "Requires actual website footage",
+    "seconds": 4,
+    "allow_fake_interface": false
+  },
+  "scenes": [
+    {
+      "id": "01_notebook",
+      "location": "classroom",
+      "action": "secret-writing",
+      "beats": "Concentrate \u2192 teacher context \u2192 sparse maths \u2192 XI reveal \u2192 concealment \u2192 wry return.",
+      "purpose": "Opening uses separately rendered hero/notebook clips when supplied.",
+      "caveats": [
+        "Schoolbook XI is imaginary, not final report."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/01_notebook_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/01_notebook_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/01_notebook_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "In school, the back of my notebook had an IPL team. The front had mathematics. The team got considerably more attention."
+    },
+    {
+      "id": "02_hackathon",
+      "location": "desk",
+      "action": "opportunity",
+      "beats": "Old notebook \u2192 challenge card arrives \u2192 snap attention \u2192 paper investigation.",
+      "purpose": "Rajasthan Royals challenge is an opportunity, not employment.",
+      "caveats": [
+        "No claim of official team membership."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/02_hackathon_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/02_hackathon_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/02_hackathon_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "Years later, the Rajasthan Royals hackathon brought that notebook back. This time, I wanted evidence. Who actually performs when the game gets difficult?"
+    },
+    {
+      "id": "03_clean",
+      "location": "lab",
+      "action": "sorting",
+      "beats": "Messy event cards \u2192 reject incorrect wicket attribution \u2192 sort \u2192 eligible evidence stack.",
+      "purpose": "200,999 raw \u2192 194,509 eligible events.",
+      "caveats": [
+        "Wides/no-balls retained in bowling exposure.",
+        "Run-outs are not bowler-credited wickets."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/03_clean_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/03_clean_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/03_clean_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "First obstacle: two hundred thousand delivery events. Wides. No-balls. Run-outs. Rain. Before judging a player, I had to reconstruct the match correctly."
+    },
+    {
+      "id": "04_preball",
+      "location": "stadium",
+      "action": "freeze",
+      "beats": "Ball about to be delivered \u2192 freeze hand \u2192 inspect state \u2192 release without showing future outcome.",
+      "purpose": "Pressure uses only BEFORE-ball state.",
+      "caveats": [
+        "Illustrative 28 from12, required rate14.",
+        "No current ball outcome in its pressure label."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/04_preball_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/04_preball_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/04_preball_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "Then I froze time before every ball. Score. Wickets. Balls remaining. No peeking at the six that happened next. That would be cheating, with a spreadsheet."
+    },
+    {
+      "id": "05_pressure",
+      "location": "stadium",
+      "action": "leverage",
+      "beats": "Impossible chase looks frightening \u2192 consequential last ball reverses interpretation \u2192 skeptical reaction.",
+      "purpose": "Difficulty and consequence differ.",
+      "caveats": [
+        "39 RPO and2 off1 are illustrative states, not player evidence."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/05_pressure_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/05_pressure_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/05_pressure_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "But difficult doesn't always mean consequential. Thirty-nine runs an over? Terrifying. Also, probably over. Two needed off one? Now the next ball can change everything."
+    },
+    {
+      "id": "06_hybrid",
+      "location": "lab",
+      "action": "balance",
+      "beats": "A pan loaded \u2192 B pan loaded \u2192 combined percentile disc \u2192 select primary pressure set.",
+      "purpose": "Difficulty + WP leverage, context-relative percentile combination.",
+      "caveats": [
+        "Top20% within innings, not each phase."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/06_hybrid_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/06_hybrid_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/06_hybrid_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "So I combined scoreboard difficulty with win-probability leverage, using context-relative percentiles. The primary definition selected the top twenty percent within each innings."
+    },
+    {
+      "id": "07_expected",
+      "location": "lab",
+      "action": "expectation",
+      "beats": "Celebrate raw performance \u2192 contextual expectation card arrives \u2192 compare \u2192 amend claim.",
+      "purpose": "Positive residual means better than contextual expectation.",
+      "caveats": [
+        "Runs/survival and runs prevented/credited wickets distinct.",
+        "Any bars are illustrative, not player estimates."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/07_expected_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/07_expected_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/07_expected_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "Next question: better than what? I estimated expected runs and dismissal risk. Batters earned credit for extra runs and survival. Bowlers, for runs prevented and credited wickets."
+    },
+    {
+      "id": "08_adjust",
+      "location": "desk",
+      "action": "assumptions",
+      "beats": "Pick15 chip \u2192 pause \u2192 compare10/20 alternatives \u2192 leave assumption visible.",
+      "purpose": "15 runs per wicket is a declared assumption.",
+      "caveats": [
+        "Era/opposition adjustment",
+        "Sensitivity10 and20, no universal wicket value claim."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/08_adjust_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/08_adjust_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/08_adjust_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "I adjusted for scoring eras and opposition. Then combined runs and wickets with a declared assumption: fifteen runs per wicket. And checked ten and twenty too."
+    },
+    {
+      "id": "09_shrink",
+      "location": "lab",
+      "action": "shrinkage",
+      "beats": "Huge trophy on25-event stack \u2192 400-event evidence arrives \u2192 suspicious glance \u2192 estimate shrinks toward mean.",
+      "purpose": "Empirical Bayes corrects weakly supported estimates.",
+      "caveats": [
+        "25/400 are unnamed illustrative exposures.",
+        "No invented fitted shrinkage values."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/09_shrink_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/09_shrink_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/09_shrink_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "Then the small samples arrived, wearing enormous confidence. Twenty-five pressure events are not four hundred. Empirical Bayes pulled weakly supported estimates toward the average."
+    },
+    {
+      "id": "10_delta",
+      "location": "desk",
+      "action": "folders",
+      "beats": "Quality folder seems convincing \u2192 delta folder differs \u2192 failed bowling repeatability stamp \u2192 qualified claim.",
+      "purpose": "Pressure quality \u2260 pressure-related improvement.",
+      "caveats": [
+        "No validated repeatable bowling delta.",
+        "Batting delta CV gains only about0.03\u20130.11%."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/10_delta_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/10_delta_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/10_delta_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "And performing well under pressure isn't the same as improving because of pressure. Bowling showed no validated repeatable pressure delta. The batting delta gains were tiny."
+    },
+    {
+      "id": "11_holdout",
+      "location": "lab",
+      "action": "validation",
+      "beats": "Confident report \u2192 sealed2026 envelope \u2192 actual weak results emerge \u2192 crestfallen \u2192 study evidence.",
+      "purpose": "Held-out test challenges the hypothesis.",
+      "caveats": [
+        "Batting Spearman-0.043, no positive forward signal.",
+        "Bowling+0.304 suggestive; advantage over ordinary economy not established.",
+        "First-innings WP Brier0.2559 vs0.2524 baseline, worse."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/11_holdout_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/11_holdout_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/11_holdout_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "The unseen twenty-twenty-six season challenged my story. Batting quality showed no positive predictive relationship. Bowling looked promising, but an advantage over ordinary economy wasn't established."
+    },
+    {
+      "id": "12_uncertainty",
+      "location": "lab",
+      "action": "resample",
+      "beats": "Pick whole match cards \u2192 resample stack \u2192 uncertainty paper \u2192 caution rather than prophecy.",
+      "purpose": "750 match-level resamples.",
+      "caveats": [
+        "Conditional historical stability, not future success probability.",
+        "Illustrative distribution has no invented player CI."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/12_uncertainty_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/12_uncertainty_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/12_uncertainty_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "So I resampled whole matches, seven hundred and fifty times. Confidence intervals. Rank distributions. A top-ten bootstrap rate measures historical stability. It isn't a prophecy."
+    },
+    {
+      "id": "13_sensitivity",
+      "location": "desk",
+      "action": "sensitivity",
+      "beats": "D20 stack \u2192 D10/D25 cards \u2192 shortlist tips \u2192 best-season removal reveals fragility.",
+      "purpose": "Model choices and influential seasons move the answer.",
+      "caveats": [
+        "D10 retains5/10 batting,4/10 bowling.",
+        "D25 retains6/10 batting,7/10 bowling.",
+        "Removing best season drops9 names in each top10."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/13_sensitivity_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/13_sensitivity_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/13_sensitivity_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "Change the pressure definition, and the shortlist changes. Remove a player's best season, and nine names leave each top ten. Those weren't details to hide."
+    },
+    {
+      "id": "14_shortlist",
+      "location": "warroom",
+      "action": "report",
+      "beats": "Report folio opens \u2192 full batting page \u2192 full bowling page \u2192 restrained qualified reaction.",
+      "purpose": "Full accepted primary top20, exposure, stability and format mix.",
+      "caveats": [
+        "No new IDs/intervals.",
+        "T20I evidence not automatically IPL evidence."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/14_shortlist_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/14_shortlist_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/14_shortlist_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "The primary lists put Jos Buttler and Jasprit Bumrah first. But every name needs its exposure, uncertainty and format mix. T-twenty international evidence isn't automatically IPL evidence."
+    },
+    {
+      "id": "15_replay",
+      "location": "desk",
+      "action": "replay",
+      "beats": "Replay papers \u219220/20 ranking check \u219241 checks \u2192 limitations remain attached.",
+      "purpose": "Reproducibility is not predictive validation.",
+      "caveats": [
+        "Report-supplied claim; analytics not rerun here."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/15_replay_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/15_replay_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/15_replay_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "Finally, the replay reproduced all twenty rankings and passed forty-one checks. The code repeated. The statistical limitations stayed."
+    },
+    {
+      "id": "16_end",
+      "location": "classroom",
+      "action": "bookend",
+      "beats": "Old notebook beside qualified report \u2192 reflect \u2192 small satisfied settle \u2192 evidence question.",
+      "purpose": "What does the evidence support, and how sure should you be?",
+      "caveats": [
+        "Corrected classroom reverse geography.",
+        "Real website only if supplied/captured; no fake screen."
+      ],
+      "plates": [
+        "/workspace/KHILADI-film/film/work/reel/plates/16_end_1.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/16_end_2.png",
+        "/workspace/KHILADI-film/film/work/reel/plates/16_end_3.png"
+      ],
+      "cut_fractions": [
+        0.28,
+        0.36,
+        0.36
+      ],
+      "safe_captions_y": [
+        1720,
+        1840
+      ],
+      "hero_source": "Retained V3/V4 head/torso sprites; no redesign",
+      "narration_reference": "That notebook used to ask, who would I pick? Khiladi asks a better question. What does the evidence support... and how sure should I be?"
+    }
+  ],
+  "native_plate_policy": "Only cut1 context per research scene is required; cutaways are independently articulated physical props."
+}

@@ -1,0 +1,20 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.00,Main,,0,0,0,,You're in {\c&H00FFFF&}school.{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.02,0:00:01.94,Main,,0,0,0,,You're {\c&H00FFFF&}supposed{\c&HFFFFFF&} to be
+Dialogue: 0,0:00:01.96,0:00:02.78,Main,,0,0,0,,doing {\c&H00FFFF&}maths.{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.24,0:00:04.18,Main,,0,0,0,,But you've got {\c&H00FFFF&}something{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.20,0:00:05.34,Main,,0,0,0,,way more {\c&H00FFFF&}important{\c&HFFFFFF&} to
+Dialogue: 0,0:00:05.36,0:00:05.96,Main,,0,0,0,,{\c&H00FFFF&}figure{\c&HFFFFFF&} out.
+Dialogue: 0,0:00:06.36,0:00:08.10,Main,,0,0,0,,Your {\c&H00FFFF&}IPL{\c&HFFFFFF&} best eleven.
+Dialogue: 0,0:00:08.47,0:00:09.30,Main,,0,0,0,,And {\c&H00FFFF&}honestly?{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.65,0:00:10.70,Main,,0,0,0,,The maths can {\c&H00FFFF&}wait.{\c&HFFFFFF&}

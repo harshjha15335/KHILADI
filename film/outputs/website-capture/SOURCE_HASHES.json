@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/App.tsx",
+    "sha256": "40f4b4f16887be7fd8cd11456441af25b182cc9f970d65da30de83aff5cf8ce2",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "src/pages/HomePage.tsx",
+    "sha256": "4c64fd9740d0f287c8c4943624f0a874069f039402e0491bd98faff2c4fe6195",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "src/components/CrlPreloader.tsx",
+    "sha256": "e0c55b14ebc6778d70a2764a4f1e81e73a749d542616d6f29aa1df562362a4bb",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "src/utils/media.ts",
+    "sha256": "53eed8fb6e95b6c8e8edc0e0e989ed4ac1d44a6b2000eec770f24bba3c06dcd1",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "src/config/approved-media.json",
+    "sha256": "0a112d4b3990df19dd1de0d58510868c1302eb4ead3e8f8ad46105a260996fb3",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "src/index.css",
+    "sha256": "9a93db8e8532503735146d7b97d1ff2cd2dadfcc5693d349b97e54b8de8493b0",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "src/experience.css",
+    "sha256": "57df5fcddf1ec33252e4105c90f9f8b3d78156ad0c70dc27a6d884baf134bb55",
+    "snapshot_equals_repository": true
+  },
+  {
+    "file": "public/assets/brand/khiladi-logo.png",
+    "sha256": "5b25a9a7c2b5828ab33c8dbc32a7f555066653c2b0c96f53eb9a660f5c76de54",
+    "snapshot_equals_repository": true
+  }
+]

@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parent.parent
 WORK=ROOT/'work'; OUT=ROOT/'outputs'; REEL=WORK/'reel'
 DRAFT=os.getenv('REEL_DRAFT','0')=='1'
 SELECT=os.getenv('REEL_SCENES','').split(',')
+REQUEST_CUTS={int(x) for x in os.getenv('REEL_CUTS','1,2,3').split(',')}
 W,H=(540,960) if DRAFT else (1080,1920)
 FOLDER=REEL/('previews' if DRAFT else 'plates')
 FOLDER.mkdir(parents=True,exist_ok=True)
@@ -73,7 +74,7 @@ def light(name,p,target,energy,size,col):
 
 def make_materials():
  global M
- colors={'ink':(.025,.033,.041),'navy':(.021,.054,.10),'blue':(.036,.22,.45),'teal':(.045,.36,.36),'pink':(.65,.12,.26),'gold':(.88,.49,.07),'red':(.66,.055,.035),'paper':(.90,.84,.66),'white':(.93,.92,.85),'wood':(.30,.105,.035),'woodlight':(.51,.27,.105),'plaster':(.63,.57,.43),'floor':(.35,.32,.25),'metal':(.12,.15,.17),'green':(.025,.105,.075),'grass':(.055,.20,.045),'pitch':(.42,.29,.12),'glass':(.19,.43,.50),'sky':(.73,.68,.49),'coffee':(.075,.028,.012),'mint':(.27,.66,.47)}
+ colors={'ink':(.025,.033,.041),'navy':(.021,.054,.10),'blue':(.036,.22,.45),'teal':(.045,.36,.36),'pink':(.65,.12,.26),'gold':(.88,.49,.07),'red':(.66,.055,.035),'notebookgrey':(.20,.18,.16),'paper':(.90,.84,.66),'white':(.93,.92,.85),'wood':(.30,.105,.035),'woodlight':(.51,.27,.105),'plaster':(.63,.57,.43),'floor':(.35,.32,.25),'metal':(.12,.15,.17),'green':(.025,.105,.075),'grass':(.055,.20,.045),'pitch':(.42,.29,.12),'glass':(.19,.43,.50),'sky':(.73,.68,.49),'coffee':(.075,.028,.012),'mint':(.27,.66,.47)}
  M={k:material('Reel | '+k,v,emission=(.7 if k=='sky' else 0),grain=(110 if k in ['wood','floor','plaster','grass'] else 0)) for k,v in colors.items()}
 
 def desk(x,y,z=1.5,width=2.5,depth=1.25):
@@ -189,7 +190,7 @@ def room(classroom=False,warroom=False):
 def notebook():
  # Open notebook spans the front school desk; actual handwriting is geometry.
  desk(.7,.20,1.55,2.9,1.6)
- cube('Open notebook cover',(.7,.05,1.65),(1.75,1.18,.055),'blue',.018)
+ cube('Open notebook cover',(.7,.05,1.65),(1.75,1.18,.055),'notebookgrey',.018)
  cube('Left notebook page',(.26,.05,1.687),(.84,1.10,.025),'paper',.008)
  cube('Right notebook page',(1.13,.05,1.69),(.84,1.10,.025),'paper',.008)
  for k in range(8):cube('Notebook ruling',(.7,-.38+k*.12,1.708),(1.60,.005,.001),'glass',0)
@@ -343,7 +344,7 @@ def build(shot):
  global S
  bpy.ops.wm.read_factory_settings(use_empty=True);CUBES.clear();SPHERES.clear();S=bpy.context.scene;make_materials()
  S.name=shot['id'];S.render.engine='BLENDER_EEVEE';S.eevee.taa_render_samples=16;S.eevee.use_raytracing=False
- S.eevee.taa_render_samples=16 if DRAFT else 24
+ S.eevee.taa_render_samples=int(os.getenv('REEL_SAMPLES',str(16 if DRAFT else 24)))
  S.render.resolution_x=W;S.render.resolution_y=H;S.render.resolution_percentage=100;S.render.fps=30
  S.render.image_settings.file_format='PNG';S.render.image_settings.color_mode='RGB';S.render.film_transparent=False
  S.world=bpy.data.worlds.new('Warm ambient world');S.world.use_nodes=True
@@ -363,8 +364,9 @@ def build(shot):
   center=evidence_props(sid)
   # Wide and medium reserve the lower-left for the separate, fixed V3 hero.
   cams=[camera('Wide dimensional room',(5.5,-9.5,6.5),(.0,1.7,2.3),36),camera('Physical evidence closeup',(center.x+1.7,center.y-3.4,center.z+4.1),center,51),camera('Medium working desk',(3.2,-6.5,4.7),(.55,1.5,2.3),42)]
+  if sid=='06_hybrid':cams[1]=camera('Both balance pans',(3.0,-5.8,4.6),center,42)
   if sid=='09_shrink':cams[1]=camera('Sample size comparison',(2.6,-3.2,3.9),center,52)
-  if sid in ['06_hybrid','11_holdout','13_sensitivity']:cams[1]=camera('Evidence prop closeup',(2.6,-3.5,3.4),center,52)
+  if sid in ['11_holdout','13_sensitivity']:cams[1]=camera('Evidence prop closeup',(2.6,-3.5,3.4),center,52)
   if sid=='16_end':
    # Close the loop with a real research report beside the old school notebook.
    cube('Bound final research report',(1.95,.05,1.74),(.85,1.05,.09),'paper')
@@ -396,6 +398,7 @@ def main():
   if all(p.exists() and p.stat().st_size>1000 for p in paths) and (DRAFT or sid in saved_ids) and os.getenv('REEL_FORCE')!='1':continue
   t=time.time();cams=build(shot)
   for cut,p in enumerate(paths):
+   if cut+1 not in REQUEST_CUTS:continue
    if p.exists() and os.getenv('REEL_FORCE')!='1':continue
    S.camera=cams[cut];S.render.filepath=str(p);bpy.ops.render.render(write_still=True)
    print('REEL_PLATE_READY',sid,cut+1,str(p),'seconds',round(time.time()-t,1),flush=True)
@@ -413,6 +416,6 @@ def main():
    staging=REEL/'plates'/'environments-staging.blend'
    bpy.ops.wm.save_as_mainfile(filepath=str(staging))
    os.replace(staging,target);saved_ids.add(sid)
-  print('REEL_SCENE_COMPLETE',sid,flush=True)
+  print('REEL_SCENE_COMPLETE',sid,'requested_cuts',sorted(REQUEST_CUTS),'samples',S.eevee.taa_render_samples,flush=True)
 
 if __name__=='__main__':main()

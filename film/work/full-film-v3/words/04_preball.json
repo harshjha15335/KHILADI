@@ -1,0 +1,361 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 2.064,
+      "text": "So you freeze time before every ball.",
+      "words": [
+        {
+          "word": "So",
+          "start": 0.06,
+          "end": 0.16,
+          "score": 0.996
+        },
+        {
+          "word": "you",
+          "start": 0.2,
+          "end": 0.361,
+          "score": 0.891
+        },
+        {
+          "word": "freeze",
+          "start": 0.381,
+          "end": 0.641,
+          "score": 0.994
+        },
+        {
+          "word": "time",
+          "start": 0.721,
+          "end": 1.062,
+          "score": 0.918
+        },
+        {
+          "word": "before",
+          "start": 1.122,
+          "end": 1.383,
+          "score": 0.85
+        },
+        {
+          "word": "every",
+          "start": 1.483,
+          "end": 1.683,
+          "score": 0.894
+        },
+        {
+          "word": "ball.",
+          "start": 1.723,
+          "end": 2.064,
+          "score": 0.87
+        }
+      ]
+    },
+    {
+      "start": 2.405,
+      "end": 2.825,
+      "text": "Score.",
+      "words": [
+        {
+          "word": "Score.",
+          "start": 2.405,
+          "end": 2.825,
+          "score": 0.928
+        }
+      ]
+    },
+    {
+      "start": 3.286,
+      "end": 3.727,
+      "text": "Wickets.",
+      "words": [
+        {
+          "word": "Wickets.",
+          "start": 3.286,
+          "end": 3.727,
+          "score": 0.903
+        }
+      ]
+    },
+    {
+      "start": 4.128,
+      "end": 5.07,
+      "text": "Balls remaining.",
+      "words": [
+        {
+          "word": "Balls",
+          "start": 4.128,
+          "end": 4.488,
+          "score": 0.84
+        },
+        {
+          "word": "remaining.",
+          "start": 4.569,
+          "end": 5.07,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 5.51,
+      "end": 7.634,
+      "text": "No peeking at the six that happens next.",
+      "words": [
+        {
+          "word": "No",
+          "start": 5.51,
+          "end": 5.671,
+          "score": 0.976
+        },
+        {
+          "word": "peeking",
+          "start": 5.751,
+          "end": 6.071,
+          "score": 0.901
+        },
+        {
+          "word": "at",
+          "start": 6.112,
+          "end": 6.192,
+          "score": 0.773
+        },
+        {
+          "word": "the",
+          "start": 6.212,
+          "end": 6.292,
+          "score": 0.857
+        },
+        {
+          "word": "six",
+          "start": 6.372,
+          "end": 6.633,
+          "score": 0.965
+        },
+        {
+          "word": "that",
+          "start": 6.673,
+          "end": 6.813,
+          "score": 0.917
+        },
+        {
+          "word": "happens",
+          "start": 6.853,
+          "end": 7.194,
+          "score": 0.828
+        },
+        {
+          "word": "next.",
+          "start": 7.294,
+          "end": 7.634,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 8.055,
+      "end": 9.798,
+      "text": "That would be cheating, with a spreadsheet.",
+      "words": [
+        {
+          "word": "That",
+          "start": 8.055,
+          "end": 8.195,
+          "score": 0.754
+        },
+        {
+          "word": "would",
+          "start": 8.215,
+          "end": 8.356,
+          "score": 0.807
+        },
+        {
+          "word": "be",
+          "start": 8.376,
+          "end": 8.456,
+          "score": 0.828
+        },
+        {
+          "word": "cheating,",
+          "start": 8.536,
+          "end": 8.977,
+          "score": 0.816
+        },
+        {
+          "word": "with",
+          "start": 8.997,
+          "end": 9.117,
+          "score": 0.88
+        },
+        {
+          "word": "a",
+          "start": 9.157,
+          "end": 9.177,
+          "score": 0.994
+        },
+        {
+          "word": "spreadsheet.",
+          "start": 9.217,
+          "end": 9.798,
+          "score": 0.812
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "So",
+      "start": 0.06,
+      "end": 0.16,
+      "score": 0.996
+    },
+    {
+      "word": "you",
+      "start": 0.2,
+      "end": 0.361,
+      "score": 0.891
+    },
+    {
+      "word": "freeze",
+      "start": 0.381,
+      "end": 0.641,
+      "score": 0.994
+    },
+    {
+      "word": "time",
+      "start": 0.721,
+      "end": 1.062,
+      "score": 0.918
+    },
+    {
+      "word": "before",
+      "start": 1.122,
+      "end": 1.383,
+      "score": 0.85
+    },
+    {
+      "word": "every",
+      "start": 1.483,
+      "end": 1.683,
+      "score": 0.894
+    },
+    {
+      "word": "ball.",
+      "start": 1.723,
+      "end": 2.064,
+      "score": 0.87
+    },
+    {
+      "word": "Score.",
+      "start": 2.405,
+      "end": 2.825,
+      "score": 0.928
+    },
+    {
+      "word": "Wickets.",
+      "start": 3.286,
+      "end": 3.727,
+      "score": 0.903
+    },
+    {
+      "word": "Balls",
+      "start": 4.128,
+      "end": 4.488,
+      "score": 0.84
+    },
+    {
+      "word": "remaining.",
+      "start": 4.569,
+      "end": 5.07,
+      "score": 0.901
+    },
+    {
+      "word": "No",
+      "start": 5.51,
+      "end": 5.671,
+      "score": 0.976
+    },
+    {
+      "word": "peeking",
+      "start": 5.751,
+      "end": 6.071,
+      "score": 0.901
+    },
+    {
+      "word": "at",
+      "start": 6.112,
+      "end": 6.192,
+      "score": 0.773
+    },
+    {
+      "word": "the",
+      "start": 6.212,
+      "end": 6.292,
+      "score": 0.857
+    },
+    {
+      "word": "six",
+      "start": 6.372,
+      "end": 6.633,
+      "score": 0.965
+    },
+    {
+      "word": "that",
+      "start": 6.673,
+      "end": 6.813,
+      "score": 0.917
+    },
+    {
+      "word": "happens",
+      "start": 6.853,
+      "end": 7.194,
+      "score": 0.828
+    },
+    {
+      "word": "next.",
+      "start": 7.294,
+      "end": 7.634,
+      "score": 0.946
+    },
+    {
+      "word": "That",
+      "start": 8.055,
+      "end": 8.195,
+      "score": 0.754
+    },
+    {
+      "word": "would",
+      "start": 8.215,
+      "end": 8.356,
+      "score": 0.807
+    },
+    {
+      "word": "be",
+      "start": 8.376,
+      "end": 8.456,
+      "score": 0.828
+    },
+    {
+      "word": "cheating,",
+      "start": 8.536,
+      "end": 8.977,
+      "score": 0.816
+    },
+    {
+      "word": "with",
+      "start": 8.997,
+      "end": 9.117,
+      "score": 0.88
+    },
+    {
+      "word": "a",
+      "start": 9.157,
+      "end": 9.177,
+      "score": 0.994
+    },
+    {
+      "word": "spreadsheet.",
+      "start": 9.217,
+      "end": 9.798,
+      "score": 0.812
+    }
+  ],
+  "_source_audio_sha256": "0e69c8c66fbd5e8d202c9528c437d8db67cb3e3fd92707542cfa9b7d0ae36b73"
+}

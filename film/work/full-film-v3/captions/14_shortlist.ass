@@ -1,0 +1,20 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:01.36,Main,,0,0,0,,Your {\c&H00FFFF&}primary{\c&HFFFFFF&} lists put
+Dialogue: 0,0:00:01.38,0:00:02.92,Main,,0,0,0,,Jos Buttler and {\c&H00FFFF&}Jasprit{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.92,0:00:03.74,Main,,0,0,0,,Bumrah {\c&H00FFFF&}first.{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.24,0:00:05.38,Main,,0,0,0,,But every name {\c&H00FFFF&}needs{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.40,0:00:07.46,Main,,0,0,0,,exposure, {\c&H00FFFF&}uncertainty{\c&HFFFFFF&} and
+Dialogue: 0,0:00:07.50,0:00:08.26,Main,,0,0,0,,{\c&H00FFFF&}format{\c&HFFFFFF&} mix.
+Dialogue: 0,0:00:08.82,0:00:10.14,Main,,0,0,0,,T-twenty {\c&H00FFFF&}international{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.24,0:00:11.94,Main,,0,0,0,,{\c&H00FFFF&}evidence{\c&HFFFFFF&} isn't automatically
+Dialogue: 0,0:00:12.21,0:00:13.52,Main,,0,0,0,,IPL {\c&H00FFFF&}evidence.{\c&HFFFFFF&}

@@ -1,0 +1,397 @@
+{
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 0.861,
+      "text": "You're in school.",
+      "words": [
+        {
+          "word": "You're",
+          "start": 0.04,
+          "end": 0.22,
+          "score": 0.854
+        },
+        {
+          "word": "in",
+          "start": 0.26,
+          "end": 0.36,
+          "score": 0.93
+        },
+        {
+          "word": "school.",
+          "start": 0.46,
+          "end": 0.861,
+          "score": 0.842
+        }
+      ]
+    },
+    {
+      "start": 0.921,
+      "end": 2.642,
+      "text": "You're supposed to be doing maths.",
+      "words": [
+        {
+          "word": "You're",
+          "start": 0.921,
+          "end": 1.101,
+          "score": 0.897
+        },
+        {
+          "word": "supposed",
+          "start": 1.141,
+          "end": 1.541,
+          "score": 0.882
+        },
+        {
+          "word": "to",
+          "start": 1.581,
+          "end": 1.641,
+          "score": 0.75
+        },
+        {
+          "word": "be",
+          "start": 1.681,
+          "end": 1.802,
+          "score": 0.965
+        },
+        {
+          "word": "doing",
+          "start": 1.862,
+          "end": 2.182,
+          "score": 0.815
+        },
+        {
+          "word": "maths.",
+          "start": 2.262,
+          "end": 2.642,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 3.143,
+      "end": 5.825,
+      "text": "But you've got something way more important to figure out.",
+      "words": [
+        {
+          "word": "But",
+          "start": 3.143,
+          "end": 3.243,
+          "score": 0.999
+        },
+        {
+          "word": "you've",
+          "start": 3.283,
+          "end": 3.463,
+          "score": 0.759
+        },
+        {
+          "word": "got",
+          "start": 3.503,
+          "end": 3.663,
+          "score": 0.915
+        },
+        {
+          "word": "something",
+          "start": 3.723,
+          "end": 4.044,
+          "score": 0.889
+        },
+        {
+          "word": "way",
+          "start": 4.104,
+          "end": 4.304,
+          "score": 0.975
+        },
+        {
+          "word": "more",
+          "start": 4.364,
+          "end": 4.564,
+          "score": 0.834
+        },
+        {
+          "word": "important",
+          "start": 4.644,
+          "end": 5.104,
+          "score": 0.889
+        },
+        {
+          "word": "to",
+          "start": 5.144,
+          "end": 5.205,
+          "score": 0.924
+        },
+        {
+          "word": "figure",
+          "start": 5.265,
+          "end": 5.565,
+          "score": 0.91
+        },
+        {
+          "word": "out.",
+          "start": 5.685,
+          "end": 5.825,
+          "score": 0.874
+        }
+      ]
+    },
+    {
+      "start": 6.265,
+      "end": 7.967,
+      "text": "Your IPL best eleven.",
+      "words": [
+        {
+          "word": "Your",
+          "start": 6.265,
+          "end": 6.446,
+          "score": 0.837
+        },
+        {
+          "word": "IPL",
+          "start": 6.566,
+          "end": 7.186,
+          "score": 0.81
+        },
+        {
+          "word": "best",
+          "start": 7.246,
+          "end": 7.487,
+          "score": 0.951
+        },
+        {
+          "word": "eleven.",
+          "start": 7.547,
+          "end": 7.967,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 8.367,
+      "end": 9.168,
+      "text": "And honestly?",
+      "words": [
+        {
+          "word": "And",
+          "start": 8.367,
+          "end": 8.447,
+          "score": 0.99
+        },
+        {
+          "word": "honestly?",
+          "start": 8.567,
+          "end": 9.168,
+          "score": 0.917
+        }
+      ]
+    },
+    {
+      "start": 9.548,
+      "end": 10.569,
+      "text": "The maths can wait.",
+      "words": [
+        {
+          "word": "The",
+          "start": 9.548,
+          "end": 9.628,
+          "score": 0.994
+        },
+        {
+          "word": "maths",
+          "start": 9.688,
+          "end": 10.049,
+          "score": 0.927
+        },
+        {
+          "word": "can",
+          "start": 10.089,
+          "end": 10.269,
+          "score": 0.851
+        },
+        {
+          "word": "wait.",
+          "start": 10.309,
+          "end": 10.569,
+          "score": 0.955
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "You're",
+      "start": 0.04,
+      "end": 0.22,
+      "score": 0.854
+    },
+    {
+      "word": "in",
+      "start": 0.26,
+      "end": 0.36,
+      "score": 0.93
+    },
+    {
+      "word": "school.",
+      "start": 0.46,
+      "end": 0.861,
+      "score": 0.842
+    },
+    {
+      "word": "You're",
+      "start": 0.921,
+      "end": 1.101,
+      "score": 0.897
+    },
+    {
+      "word": "supposed",
+      "start": 1.141,
+      "end": 1.541,
+      "score": 0.882
+    },
+    {
+      "word": "to",
+      "start": 1.581,
+      "end": 1.641,
+      "score": 0.75
+    },
+    {
+      "word": "be",
+      "start": 1.681,
+      "end": 1.802,
+      "score": 0.965
+    },
+    {
+      "word": "doing",
+      "start": 1.862,
+      "end": 2.182,
+      "score": 0.815
+    },
+    {
+      "word": "maths.",
+      "start": 2.262,
+      "end": 2.642,
+      "score": 0.938
+    },
+    {
+      "word": "But",
+      "start": 3.143,
+      "end": 3.243,
+      "score": 0.999
+    },
+    {
+      "word": "you've",
+      "start": 3.283,
+      "end": 3.463,
+      "score": 0.759
+    },
+    {
+      "word": "got",
+      "start": 3.503,
+      "end": 3.663,
+      "score": 0.915
+    },
+    {
+      "word": "something",
+      "start": 3.723,
+      "end": 4.044,
+      "score": 0.889
+    },
+    {
+      "word": "way",
+      "start": 4.104,
+      "end": 4.304,
+      "score": 0.975
+    },
+    {
+      "word": "more",
+      "start": 4.364,
+      "end": 4.564,
+      "score": 0.834
+    },
+    {
+      "word": "important",
+      "start": 4.644,
+      "end": 5.104,
+      "score": 0.889
+    },
+    {
+      "word": "to",
+      "start": 5.144,
+      "end": 5.205,
+      "score": 0.924
+    },
+    {
+      "word": "figure",
+      "start": 5.265,
+      "end": 5.565,
+      "score": 0.91
+    },
+    {
+      "word": "out.",
+      "start": 5.685,
+      "end": 5.825,
+      "score": 0.874
+    },
+    {
+      "word": "Your",
+      "start": 6.265,
+      "end": 6.446,
+      "score": 0.837
+    },
+    {
+      "word": "IPL",
+      "start": 6.566,
+      "end": 7.186,
+      "score": 0.81
+    },
+    {
+      "word": "best",
+      "start": 7.246,
+      "end": 7.487,
+      "score": 0.951
+    },
+    {
+      "word": "eleven.",
+      "start": 7.547,
+      "end": 7.967,
+      "score": 0.942
+    },
+    {
+      "word": "And",
+      "start": 8.367,
+      "end": 8.447,
+      "score": 0.99
+    },
+    {
+      "word": "honestly?",
+      "start": 8.567,
+      "end": 9.168,
+      "score": 0.917
+    },
+    {
+      "word": "The",
+      "start": 9.548,
+      "end": 9.628,
+      "score": 0.994
+    },
+    {
+      "word": "maths",
+      "start": 9.688,
+      "end": 10.049,
+      "score": 0.927
+    },
+    {
+      "word": "can",
+      "start": 10.089,
+      "end": 10.269,
+      "score": 0.851
+    },
+    {
+      "word": "wait.",
+      "start": 10.309,
+      "end": 10.569,
+      "score": 0.955
+    }
+  ],
+  "_source_audio_sha256": "d5cd6fac861f8a42b7577b9a131c2bd7c299f56b9f120d09f779b3896d9059b1"
+}

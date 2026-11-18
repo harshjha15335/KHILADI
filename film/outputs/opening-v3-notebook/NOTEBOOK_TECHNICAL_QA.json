@@ -1,0 +1,92 @@
+[
+  {
+    "clip": "C_maths_hesitation",
+    "checks": {
+      "size": true,
+      "fps": true,
+      "frames": true,
+      "silent": true,
+      "h264": true,
+      "duration": true,
+      "full_decode": true
+    },
+    "frames": 42,
+    "sha256": "06064f99ce63e572fd7d5fb28670b9c6221c0dcbdffd20d85cd514497192a0ce",
+    "duration": 1.4
+  },
+  {
+    "clip": "D_page_turn_reveal",
+    "checks": {
+      "size": true,
+      "fps": true,
+      "frames": true,
+      "silent": true,
+      "h264": true,
+      "duration": true,
+      "full_decode": true
+    },
+    "frames": 30,
+    "sha256": "d1936269882076e0634b7f19817d2104daad6dafa60525ce9abe7a9cad652ef6",
+    "duration": 1.0
+  },
+  {
+    "clip": "E_cross_out_selection",
+    "checks": {
+      "size": true,
+      "fps": true,
+      "frames": true,
+      "silent": true,
+      "h264": true,
+      "duration": true,
+      "full_decode": true
+    },
+    "frames": 54,
+    "sha256": "f72d6724865e5f8232d96751ad258240915fad359ad3b0c95916f442dd9c938b",
+    "duration": 1.8
+  },
+  {
+    "clip": "G_sparse_maths",
+    "checks": {
+      "size": true,
+      "fps": true,
+      "frames": true,
+      "silent": true,
+      "h264": true,
+      "duration": true,
+      "full_decode": true
+    },
+    "frames": 21,
+    "sha256": "2a8c97913d0dcec60d4529928afa7c8cbd9bc4fa2c73252a5f7792b97cab8122",
+    "duration": 0.7
+  },
+  {
+    "clip": "H_dense_cricket",
+    "checks": {
+      "size": true,
+      "fps": true,
+      "frames": true,
+      "silent": true,
+      "h264": true,
+      "duration": true,
+      "full_decode": true
+    },
+    "frames": 24,
+    "sha256": "b4415658a0e969117ad38abbe596cfaf2be687d41c692f5c895b1d9bf7460f7c",
+    "duration": 0.8
+  },
+  {
+    "clip": "J_notebook_close",
+    "checks": {
+      "size": true,
+      "fps": true,
+      "frames": true,
+      "silent": true,
+      "h264": true,
+      "duration": true,
+      "full_decode": true
+    },
+    "frames": 27,
+    "sha256": "8bdfe8b020177d904ea3b514bd2ca9179912116fcfa2f531256d3e79c477248e",
+    "duration": 0.9
+  }
+]

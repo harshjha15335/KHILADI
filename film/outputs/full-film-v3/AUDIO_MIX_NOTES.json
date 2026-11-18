@@ -1,0 +1,11 @@
+{
+  "voice": "Approved revised Michael",
+  "sample_rate": 24000,
+  "duration_seconds": 199.73333333333332,
+  "pre_master_peak": 0.8469705667017846,
+  "source_reference_audio_used": false,
+  "score": "Original mathematical pluck/percussion composition; sparse96BPM; speech-ducked",
+  "foley": "Original synthesized pencil, paper, tap, book close and low room tone",
+  "final_master_target": "-16LUFS / -1.5dBTP in final mux",
+  "final_audio_listening_review": "Not independently auditioned by an audio-capable model; voice approved by user"
+}

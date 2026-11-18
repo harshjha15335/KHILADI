@@ -1,0 +1,17 @@
+{
+  "signature": "3b993461c364ef37d1e2a15b96845b6b5004cd270a9c198bab37150774569468",
+  "display_text": "But difficult doesn't always mean consequential. Thirty-nine runs an over? Terrifying. Also, probably over. Two needed off one? Now the next ball can change everything.",
+  "synthesis_text": "But difficult doesn't always mean consequential. Thirty-nine runs an over? Terrifying. Also, probably over. Two needed off one? Now the next ball can change everything.",
+  "phonemes": "b\u02cc\u028ct d\u02c8\u026af\u026ak\u0259lt d\u02c8\u028cz\u0259nt \u02c8\u0254\u02d0lwe\u026az m\u02c8i\u02d0n k\u02cc\u0251\u02d0ns\u026akw\u02c8\u025bn\u0283\u0259l. \u03b8\u02c8\u025c\u02d0tin\u02c8a\u026an \u0279\u02c8\u028cnz \u0250n \u02c8o\u028av\u025a? t\u02c8\u025b\u0279\u1d7bf\u02cca\u026a\u026a\u014b. \u02c8\u0254\u02d0lso\u028a, p\u0279\u02c8\u0251\u02d0b\u0259bli \u02c8o\u028av\u025a. t\u02c8u\u02d0 n\u02c8i\u02d0d\u1d7bd \u02c8\u0254f w\u02cc\u028cn? n\u02c8a\u028a \u00f0\u0259 n\u02c8\u025bkst b\u02c8\u0254\u02d0l k\u00e6n t\u0283\u02c8e\u026and\u0292 \u02c8\u025bv\u0279\u026a\u03b8\u02cc\u026a\u014b.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 11.562666666666667,
+  "sha256": "9cdef259df81b27e1a9004bf6ef7711785bf409c4ff6717b0125ba23479229df"
+}

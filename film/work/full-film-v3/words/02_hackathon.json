@@ -1,0 +1,330 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 0.821,
+      "text": "Years pass.",
+      "words": [
+        {
+          "word": "Years",
+          "start": 0.06,
+          "end": 0.34,
+          "score": 0.708
+        },
+        {
+          "word": "pass.",
+          "start": 0.42,
+          "end": 0.821,
+          "score": 0.934
+        }
+      ]
+    },
+    {
+      "start": 1.301,
+      "end": 2.863,
+      "text": "The cricket notebook survives.",
+      "words": [
+        {
+          "word": "The",
+          "start": 1.301,
+          "end": 1.381,
+          "score": 0.836
+        },
+        {
+          "word": "cricket",
+          "start": 1.421,
+          "end": 1.722,
+          "score": 0.838
+        },
+        {
+          "word": "notebook",
+          "start": 1.762,
+          "end": 2.162,
+          "score": 0.851
+        },
+        {
+          "word": "survives.",
+          "start": 2.202,
+          "end": 2.863,
+          "score": 0.907
+        }
+      ]
+    },
+    {
+      "start": 3.323,
+      "end": 6.747,
+      "text": "Then you see the Rajasthan Royals SupeRR Selector challenge.",
+      "words": [
+        {
+          "word": "Then",
+          "start": 3.323,
+          "end": 3.483,
+          "score": 0.833
+        },
+        {
+          "word": "you",
+          "start": 3.523,
+          "end": 3.624,
+          "score": 0.911
+        },
+        {
+          "word": "see",
+          "start": 3.664,
+          "end": 3.824,
+          "score": 0.846
+        },
+        {
+          "word": "the",
+          "start": 3.864,
+          "end": 3.944,
+          "score": 0.833
+        },
+        {
+          "word": "Rajasthan",
+          "start": 4.024,
+          "end": 4.785,
+          "score": 0.848
+        },
+        {
+          "word": "Royals",
+          "start": 4.865,
+          "end": 5.305,
+          "score": 0.903
+        },
+        {
+          "word": "SupeRR",
+          "start": 5.405,
+          "end": 5.726,
+          "score": 0.887
+        },
+        {
+          "word": "Selector",
+          "start": 5.786,
+          "end": 6.226,
+          "score": 0.835
+        },
+        {
+          "word": "challenge.",
+          "start": 6.266,
+          "end": 6.747,
+          "score": 0.859
+        }
+      ]
+    },
+    {
+      "start": 7.227,
+      "end": 11.251,
+      "text": "Your imaginary selections suddenly need something rather inconvenient.",
+      "words": [
+        {
+          "word": "Your",
+          "start": 7.227,
+          "end": 7.387,
+          "score": 0.874
+        },
+        {
+          "word": "imaginary",
+          "start": 7.467,
+          "end": 8.148,
+          "score": 0.88
+        },
+        {
+          "word": "selections",
+          "start": 8.208,
+          "end": 8.769,
+          "score": 0.859
+        },
+        {
+          "word": "suddenly",
+          "start": 8.889,
+          "end": 9.289,
+          "score": 0.873
+        },
+        {
+          "word": "need",
+          "start": 9.369,
+          "end": 9.589,
+          "score": 0.951
+        },
+        {
+          "word": "something",
+          "start": 9.649,
+          "end": 9.99,
+          "score": 0.906
+        },
+        {
+          "word": "rather",
+          "start": 10.05,
+          "end": 10.35,
+          "score": 0.787
+        },
+        {
+          "word": "inconvenient.",
+          "start": 10.47,
+          "end": 11.251,
+          "score": 0.876
+        }
+      ]
+    },
+    {
+      "start": 11.791,
+      "end": 12.212,
+      "text": "Evidence.",
+      "words": [
+        {
+          "word": "Evidence.",
+          "start": 11.791,
+          "end": 12.212,
+          "score": 0.971
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Years",
+      "start": 0.06,
+      "end": 0.34,
+      "score": 0.708
+    },
+    {
+      "word": "pass.",
+      "start": 0.42,
+      "end": 0.821,
+      "score": 0.934
+    },
+    {
+      "word": "The",
+      "start": 1.301,
+      "end": 1.381,
+      "score": 0.836
+    },
+    {
+      "word": "cricket",
+      "start": 1.421,
+      "end": 1.722,
+      "score": 0.838
+    },
+    {
+      "word": "notebook",
+      "start": 1.762,
+      "end": 2.162,
+      "score": 0.851
+    },
+    {
+      "word": "survives.",
+      "start": 2.202,
+      "end": 2.863,
+      "score": 0.907
+    },
+    {
+      "word": "Then",
+      "start": 3.323,
+      "end": 3.483,
+      "score": 0.833
+    },
+    {
+      "word": "you",
+      "start": 3.523,
+      "end": 3.624,
+      "score": 0.911
+    },
+    {
+      "word": "see",
+      "start": 3.664,
+      "end": 3.824,
+      "score": 0.846
+    },
+    {
+      "word": "the",
+      "start": 3.864,
+      "end": 3.944,
+      "score": 0.833
+    },
+    {
+      "word": "Rajasthan",
+      "start": 4.024,
+      "end": 4.785,
+      "score": 0.848
+    },
+    {
+      "word": "Royals",
+      "start": 4.865,
+      "end": 5.305,
+      "score": 0.903
+    },
+    {
+      "word": "SupeRR",
+      "start": 5.405,
+      "end": 5.726,
+      "score": 0.887
+    },
+    {
+      "word": "Selector",
+      "start": 5.786,
+      "end": 6.226,
+      "score": 0.835
+    },
+    {
+      "word": "challenge.",
+      "start": 6.266,
+      "end": 6.747,
+      "score": 0.859
+    },
+    {
+      "word": "Your",
+      "start": 7.227,
+      "end": 7.387,
+      "score": 0.874
+    },
+    {
+      "word": "imaginary",
+      "start": 7.467,
+      "end": 8.148,
+      "score": 0.88
+    },
+    {
+      "word": "selections",
+      "start": 8.208,
+      "end": 8.769,
+      "score": 0.859
+    },
+    {
+      "word": "suddenly",
+      "start": 8.889,
+      "end": 9.289,
+      "score": 0.873
+    },
+    {
+      "word": "need",
+      "start": 9.369,
+      "end": 9.589,
+      "score": 0.951
+    },
+    {
+      "word": "something",
+      "start": 9.649,
+      "end": 9.99,
+      "score": 0.906
+    },
+    {
+      "word": "rather",
+      "start": 10.05,
+      "end": 10.35,
+      "score": 0.787
+    },
+    {
+      "word": "inconvenient.",
+      "start": 10.47,
+      "end": 11.251,
+      "score": 0.876
+    },
+    {
+      "word": "Evidence.",
+      "start": 11.791,
+      "end": 12.212,
+      "score": 0.971
+    }
+  ],
+  "_source_audio_sha256": "5bd3427ba4ec1df7d7b11604107a42ee4adee921a4239ba9b23717095e6797ca"
+}

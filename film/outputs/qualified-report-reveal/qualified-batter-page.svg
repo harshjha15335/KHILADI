@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+<ns0:rect width="1080" height="1920" fill="#eee1c3" />
+<ns0:text x="65" y="100" font-family="DejaVu Sans,sans-serif" font-size="28" fill="#142333">KHILADI / RESEARCH REPORT</ns0:text>
+<ns0:text x="65" y="170" font-family="DejaVu Sans,sans-serif" font-size="42" fill="#142333">BATTING — PRIMARY TOP TEN</ns0:text>
+<ns0:text x="65" y="220" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Historical pressure quality; future IPL transfer is unestablished.</ns0:text>
+<ns0:text x="65" y="285" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#142333">PLAYER / RATING</ns0:text>
+<ns0:text x="570" y="285" font-family="DejaVu Sans,sans-serif" font-size="22" fill="#142333">EVENTS / MATCHES</ns0:text>
+<ns0:text x="835" y="285" font-family="DejaVu Sans,sans-serif" font-size="22" fill="#142333">TOP-10 RATE</ns0:text>
+<ns0:path d="M65 426 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="350" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">1. Jos Buttler</ns0:text>
+<ns0:text x="65" y="390" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 2.871 · Robust</ns0:text>
+<ns0:text x="580" y="350" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">268 / 44</ns0:text>
+<ns0:text x="855" y="350" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">83.9%</ns0:text>
+<ns0:text x="580" y="390" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 54.5% · T20I 45.5%</ns0:text>
+<ns0:path d="M65 548 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="472" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">2. Abhishek Sharma</ns0:text>
+<ns0:text x="65" y="512" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 2.733 · Robust</ns0:text>
+<ns0:text x="580" y="472" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">335 / 58</ns0:text>
+<ns0:text x="855" y="472" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">78.0%</ns0:text>
+<ns0:text x="580" y="512" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 57.6% · T20I 42.1%</ns0:text>
+<ns0:text x="580" y="540" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#142333">Other T20 0.3%</ns0:text>
+<ns0:path d="M65 670 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="594" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">3. Nicholas Pooran</ns0:text>
+<ns0:text x="65" y="634" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 2.588 · Robust</ns0:text>
+<ns0:text x="580" y="594" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">476 / 64</ns0:text>
+<ns0:text x="855" y="594" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">77.1%</ns0:text>
+<ns0:text x="580" y="634" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 58.8% · T20I 41.2%</ns0:text>
+<ns0:path d="M65 792 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="716" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">4. Tim David</ns0:text>
+<ns0:text x="65" y="756" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 2.097 · Probable</ns0:text>
+<ns0:text x="580" y="716" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">304 / 45</ns0:text>
+<ns0:text x="855" y="716" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">52.7%</ns0:text>
+<ns0:text x="580" y="756" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 38.8% · T20I 61.2%</ns0:text>
+<ns0:path d="M65 914 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="838" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">5. Yashasvi Jaiswal</ns0:text>
+<ns0:text x="65" y="878" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 1.913 · Probable</ns0:text>
+<ns0:text x="580" y="838" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">232 / 36</ns0:text>
+<ns0:text x="855" y="838" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">45.6%</ns0:text>
+<ns0:text x="580" y="878" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 87.9% · T20I 12.1%</ns0:text>
+<ns0:path d="M65 1036 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="960" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">6. David Miller</ns0:text>
+<ns0:text x="65" y="1000" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 1.791 · Borderline</ns0:text>
+<ns0:text x="580" y="960" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">279 / 44</ns0:text>
+<ns0:text x="855" y="960" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">38.4%</ns0:text>
+<ns0:text x="580" y="1000" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 68.8% · T20I 31.2%</ns0:text>
+<ns0:path d="M65 1158 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="1082" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">7. Shashank Singh</ns0:text>
+<ns0:text x="65" y="1122" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 1.672 · Borderline</ns0:text>
+<ns0:text x="580" y="1082" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">123 / 21</ns0:text>
+<ns0:text x="855" y="1082" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">32.4%</ns0:text>
+<ns0:text x="580" y="1122" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 100% · T20I 0%</ns0:text>
+<ns0:path d="M65 1280 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="1204" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">8. Mohammad Nabi</ns0:text>
+<ns0:text x="65" y="1244" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 1.595 · Borderline</ns0:text>
+<ns0:text x="580" y="1204" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">185 / 30</ns0:text>
+<ns0:text x="855" y="1204" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">30.7%</ns0:text>
+<ns0:text x="580" y="1244" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 10.8% · T20I 89.2%</ns0:text>
+<ns0:path d="M65 1402 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="1326" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">9. Daryl Mitchell</ns0:text>
+<ns0:text x="65" y="1366" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 1.571 · Borderline</ns0:text>
+<ns0:text x="580" y="1326" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">237 / 37</ns0:text>
+<ns0:text x="855" y="1326" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">33.5%</ns0:text>
+<ns0:text x="580" y="1366" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 14.3% · T20I 85.7%</ns0:text>
+<ns0:path d="M65 1524 H1015" stroke="#c5b99f" />
+<ns0:text x="65" y="1448" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#142333">10. Fakhar Zaman</ns0:text>
+<ns0:text x="65" y="1488" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">Rating 1.571 · Borderline</ns0:text>
+<ns0:text x="580" y="1448" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">205 / 33</ns0:text>
+<ns0:text x="855" y="1448" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#142333">30.9%</ns0:text>
+<ns0:text x="580" y="1488" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">IPL 0% · T20I 100%</ns0:text>
+<ns0:text x="65" y="1607" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#142333">TOP-10 RATE: CONDITIONAL HISTORICAL STABILITY</ns0:text><ns0:text x="65" y="1644" font-family="DejaVu Sans,sans-serif" font-size="22" fill="#142333">750 whole-match resamples; not future IPL success probability.</ns0:text><ns0:text x="65" y="1681" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#142333">Format shares describe pressure-event exposure; IPL transfer unestablished.</ns0:text><ns0:text x="65" y="1718" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">Only supplied individual CI: Buttler 1.064–4.562. Others unavailable.</ns0:text><ns0:text x="65" y="1755" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#142333">Batting forward signal absent; bowling advantage over economy unproven.</ns0:text><ns0:text x="65" y="1816" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">Source: supplied methodology and accepted primary rankings.</ns0:text><ns0:text x="65" y="1853" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#142333">Analytical pipeline not independently rerun for this film.</ns0:text></ns0:svg>

@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.18,Main,,0,0,0,,So you {\c&H00FFFF&}freeze{\c&HFFFFFF&} time
+Dialogue: 0,0:00:01.20,0:00:02.18,Main,,0,0,0,,{\c&H00FFFF&}before{\c&HFFFFFF&} every ball.
+Dialogue: 0,0:00:02.48,0:00:03.84,Main,,0,0,0,,Score. {\c&H00FFFF&}Wickets.{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.21,0:00:05.18,Main,,0,0,0,,Balls {\c&H00FFFF&}remaining.{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.59,0:00:06.41,Main,,0,0,0,,No {\c&H00FFFF&}peeking{\c&HFFFFFF&} at the
+Dialogue: 0,0:00:06.45,0:00:07.75,Main,,0,0,0,,six that {\c&H00FFFF&}happens{\c&HFFFFFF&} next.
+Dialogue: 0,0:00:08.14,0:00:09.09,Main,,0,0,0,,That would be {\c&H00FFFF&}cheating,{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.08,0:00:09.91,Main,,0,0,0,,with a {\c&H00FFFF&}spreadsheet.{\c&HFFFFFF&}

@@ -1,0 +1,110 @@
+{
+  "scope": "Opening-only silent notebook cutaways",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "anatomical_writing_hand": "RIGHT",
+  "C3_writing_screen_side": "RIGHT",
+  "C1_frontal_writing_screen_side": "LEFT",
+  "notebook_texture_size": [
+    1200,
+    900
+  ],
+  "pupil_view_notebook_top": "toward board / C3 screen-TOP",
+  "pupil_view_left_page": "maths",
+  "pupil_view_right_page": "cricket",
+  "C1_texture_transform": "rotate 180 degrees, never mirror",
+  "caption_safe_area_proposal": {
+    "x": 80,
+    "y": 1730,
+    "width": 920,
+    "height": 150
+  },
+  "classroom_axis": "C3 behind/beside pupil, looks toward room front",
+  "source_assets": [
+    "Original generated classroom wood patch",
+    "Existing authored schoolboy notebook content",
+    "Kalam OFL font"
+  ],
+  "limitations": [
+    "2.5D articulated page/hand composites, not a simulated paper mesh.",
+    "Clip timing is provisional pending final synchronization against the approved Michael refinement.",
+    "Background room/teacher are outside the macro framing.",
+    "Silent clips have no narration, foley or captions."
+  ],
+  "clips": [
+    {
+      "name": "C_maths_hesitation",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook/C_maths_hesitation.mp4",
+      "duration": 1.4,
+      "frames": 42,
+      "action": "maths_hesitation",
+      "flexible_handles": "First/last pose may be held briefly; do not time-stretch pencil contact independently."
+    },
+    {
+      "name": "D_page_turn_reveal",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook/D_page_turn_reveal.mp4",
+      "duration": 1.0,
+      "frames": 30,
+      "action": "page_turn_reveal",
+      "flexible_handles": "First/last pose may be held briefly; do not time-stretch pencil contact independently."
+    },
+    {
+      "name": "E_cross_out_selection",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook/E_cross_out_selection.mp4",
+      "duration": 1.8,
+      "frames": 54,
+      "action": "cross_out_selection",
+      "flexible_handles": "First/last pose may be held briefly; do not time-stretch pencil contact independently."
+    },
+    {
+      "name": "G_sparse_maths",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook/G_sparse_maths.mp4",
+      "duration": 0.7,
+      "frames": 21,
+      "action": "sparse_maths",
+      "flexible_handles": "First/last pose may be held briefly; do not time-stretch pencil contact independently."
+    },
+    {
+      "name": "H_dense_cricket",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook/H_dense_cricket.mp4",
+      "duration": 0.8,
+      "frames": 24,
+      "action": "dense_cricket",
+      "flexible_handles": "First/last pose may be held briefly; do not time-stretch pencil contact independently."
+    },
+    {
+      "name": "J_notebook_close",
+      "path": "/workspace/KHILADI-film/film/outputs/opening-v3-notebook/J_notebook_close.mp4",
+      "duration": 0.9,
+      "frames": 27,
+      "action": "notebook_close",
+      "flexible_handles": "First/last pose may be held briefly; do not time-stretch pencil contact independently."
+    }
+  ],
+  "narration_cue_source": "outputs/michael-refinement/pronunciation-check/words.json",
+  "narration_lead_seconds": 0.1,
+  "approved_opening_target_seconds": 12,
+  "cue_suggestions_video_seconds": {
+    "maths": [
+      2.34,
+      3.14
+    ],
+    "way_more_important": [
+      4.26,
+      5.14
+    ],
+    "Your_IPL_best_eleven": [
+      6.26,
+      8.42
+    ],
+    "And_honestly": [
+      8.42,
+      9.54
+    ],
+    "the_maths_can_wait": [
+      9.54,
+      10.81
+    ]
+  }
+}

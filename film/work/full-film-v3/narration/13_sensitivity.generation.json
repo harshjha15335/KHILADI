@@ -1,0 +1,17 @@
+{
+  "signature": "279f9c65fcfe2f8a7f80a0e466c2dffd945fe05bddcee6776ed201d9d5ca2828",
+  "display_text": "Change the pressure definition, and your shortlist changes. Remove a player's best season, and nine names leave each top ten. Those aren't details you get to hide.",
+  "synthesis_text": "Change the pressure definition, and your shortlist changes. Remove a player's best season, and nine names leave each top ten. Those aren't details you get to hide.",
+  "phonemes": "t\u0283\u02c8e\u026and\u0292 \u00f0\u0259 p\u0279\u02c8\u025b\u0283\u025a d\u02cc\u025bf\u026an\u02c8\u026a\u0283\u0259n, \u00e6nd j\u028a\u0279 \u0283\u02c8\u0254\u02d0\u0279tl\u026ast t\u0283\u02c8e\u026and\u0292\u1d7bz. \u0279\u1d7bm\u02c8u\u02d0v \u0250 pl\u02c8e\u026a\u025az b\u02c8\u025bst s\u02c8i\u02d0z\u0259n, \u00e6nd n\u02c8a\u026an n\u02c8e\u026amz l\u02c8i\u02d0v \u02c8i\u02d0t\u0283 t\u02c8\u0251\u02d0p t\u02c8\u025bn. \u00f0o\u028az \u02cc\u0251\u02d0\u0279nt di\u02d0t\u02c8e\u026alz ju\u02d0 \u0261\u025bt t\u0259 h\u02c8a\u026ad.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 10.56,
+  "sha256": "45253037906d630855bdb8a57ed4ccbeff99c99328c4ab979fc3c40944fe4a28"
+}

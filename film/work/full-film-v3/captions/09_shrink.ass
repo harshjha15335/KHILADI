@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.14,0:00:01.32,Main,,0,0,0,,Then the small {\c&H00FFFF&}samples{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.34,0:00:03.38,Main,,0,0,0,,arrive, wearing {\c&H00FFFF&}enormous{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.40,0:00:05.30,Main,,0,0,0,,confidence. {\c&H00FFFF&}Twenty-five{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.37,0:00:06.62,Main,,0,0,0,,{\c&H00FFFF&}pressure{\c&HFFFFFF&} events are not
+Dialogue: 0,0:00:06.67,0:00:07.40,Main,,0,0,0,,four {\c&H00FFFF&}hundred.{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.85,0:00:09.73,Main,,0,0,0,,{\c&H00FFFF&}Empirical{\c&HFFFFFF&} Bayes pulls weakly
+Dialogue: 0,0:00:09.75,0:00:11.15,Main,,0,0,0,,supported {\c&H00FFFF&}estimates{\c&HFFFFFF&} toward
+Dialogue: 0,0:00:11.14,0:00:11.75,Main,,0,0,0,,the {\c&H00FFFF&}average.{\c&HFFFFFF&}

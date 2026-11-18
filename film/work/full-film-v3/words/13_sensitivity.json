@@ -1,0 +1,352 @@
+{
+  "segments": [
+    {
+      "start": 0.06,
+      "end": 3.206,
+      "text": "Change the pressure definition, and your shortlist changes.",
+      "words": [
+        {
+          "word": "Change",
+          "start": 0.06,
+          "end": 0.421,
+          "score": 0.764
+        },
+        {
+          "word": "the",
+          "start": 0.461,
+          "end": 0.561,
+          "score": 0.831
+        },
+        {
+          "word": "pressure",
+          "start": 0.601,
+          "end": 0.942,
+          "score": 0.927
+        },
+        {
+          "word": "definition,",
+          "start": 0.982,
+          "end": 1.563,
+          "score": 0.86
+        },
+        {
+          "word": "and",
+          "start": 1.703,
+          "end": 1.803,
+          "score": 0.677
+        },
+        {
+          "word": "your",
+          "start": 1.843,
+          "end": 2.044,
+          "score": 0.809
+        },
+        {
+          "word": "shortlist",
+          "start": 2.124,
+          "end": 2.605,
+          "score": 0.651
+        },
+        {
+          "word": "changes.",
+          "start": 2.665,
+          "end": 3.206,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 3.847,
+      "end": 7.915,
+      "text": "Remove a player's best season, and nine names leave each top ten.",
+      "words": [
+        {
+          "word": "Remove",
+          "start": 3.847,
+          "end": 4.148,
+          "score": 0.838
+        },
+        {
+          "word": "a",
+          "start": 4.208,
+          "end": 4.228,
+          "score": 0.999
+        },
+        {
+          "word": "player's",
+          "start": 4.268,
+          "end": 4.649,
+          "score": 0.737
+        },
+        {
+          "word": "best",
+          "start": 4.709,
+          "end": 4.969,
+          "score": 0.869
+        },
+        {
+          "word": "season,",
+          "start": 5.03,
+          "end": 5.45,
+          "score": 0.955
+        },
+        {
+          "word": "and",
+          "start": 5.811,
+          "end": 5.911,
+          "score": 0.833
+        },
+        {
+          "word": "nine",
+          "start": 5.991,
+          "end": 6.272,
+          "score": 0.839
+        },
+        {
+          "word": "names",
+          "start": 6.332,
+          "end": 6.653,
+          "score": 0.744
+        },
+        {
+          "word": "leave",
+          "start": 6.713,
+          "end": 6.953,
+          "score": 0.807
+        },
+        {
+          "word": "each",
+          "start": 7.053,
+          "end": 7.214,
+          "score": 0.808
+        },
+        {
+          "word": "top",
+          "start": 7.274,
+          "end": 7.554,
+          "score": 0.93
+        },
+        {
+          "word": "ten.",
+          "start": 7.614,
+          "end": 7.915,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 8.436,
+      "end": 10.42,
+      "text": "Those aren't details you get to hide.",
+      "words": [
+        {
+          "word": "Those",
+          "start": 8.436,
+          "end": 8.676,
+          "score": 0.783
+        },
+        {
+          "word": "aren't",
+          "start": 8.757,
+          "end": 8.937,
+          "score": 0.761
+        },
+        {
+          "word": "details",
+          "start": 8.997,
+          "end": 9.538,
+          "score": 0.783
+        },
+        {
+          "word": "you",
+          "start": 9.578,
+          "end": 9.718,
+          "score": 0.782
+        },
+        {
+          "word": "get",
+          "start": 9.738,
+          "end": 9.879,
+          "score": 0.809
+        },
+        {
+          "word": "to",
+          "start": 9.919,
+          "end": 9.979,
+          "score": 1.0
+        },
+        {
+          "word": "hide.",
+          "start": 10.039,
+          "end": 10.42,
+          "score": 0.906
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Change",
+      "start": 0.06,
+      "end": 0.421,
+      "score": 0.764
+    },
+    {
+      "word": "the",
+      "start": 0.461,
+      "end": 0.561,
+      "score": 0.831
+    },
+    {
+      "word": "pressure",
+      "start": 0.601,
+      "end": 0.942,
+      "score": 0.927
+    },
+    {
+      "word": "definition,",
+      "start": 0.982,
+      "end": 1.563,
+      "score": 0.86
+    },
+    {
+      "word": "and",
+      "start": 1.703,
+      "end": 1.803,
+      "score": 0.677
+    },
+    {
+      "word": "your",
+      "start": 1.843,
+      "end": 2.044,
+      "score": 0.809
+    },
+    {
+      "word": "shortlist",
+      "start": 2.124,
+      "end": 2.605,
+      "score": 0.651
+    },
+    {
+      "word": "changes.",
+      "start": 2.665,
+      "end": 3.206,
+      "score": 0.918
+    },
+    {
+      "word": "Remove",
+      "start": 3.847,
+      "end": 4.148,
+      "score": 0.838
+    },
+    {
+      "word": "a",
+      "start": 4.208,
+      "end": 4.228,
+      "score": 0.999
+    },
+    {
+      "word": "player's",
+      "start": 4.268,
+      "end": 4.649,
+      "score": 0.737
+    },
+    {
+      "word": "best",
+      "start": 4.709,
+      "end": 4.969,
+      "score": 0.869
+    },
+    {
+      "word": "season,",
+      "start": 5.03,
+      "end": 5.45,
+      "score": 0.955
+    },
+    {
+      "word": "and",
+      "start": 5.811,
+      "end": 5.911,
+      "score": 0.833
+    },
+    {
+      "word": "nine",
+      "start": 5.991,
+      "end": 6.272,
+      "score": 0.839
+    },
+    {
+      "word": "names",
+      "start": 6.332,
+      "end": 6.653,
+      "score": 0.744
+    },
+    {
+      "word": "leave",
+      "start": 6.713,
+      "end": 6.953,
+      "score": 0.807
+    },
+    {
+      "word": "each",
+      "start": 7.053,
+      "end": 7.214,
+      "score": 0.808
+    },
+    {
+      "word": "top",
+      "start": 7.274,
+      "end": 7.554,
+      "score": 0.93
+    },
+    {
+      "word": "ten.",
+      "start": 7.614,
+      "end": 7.915,
+      "score": 0.86
+    },
+    {
+      "word": "Those",
+      "start": 8.436,
+      "end": 8.676,
+      "score": 0.783
+    },
+    {
+      "word": "aren't",
+      "start": 8.757,
+      "end": 8.937,
+      "score": 0.761
+    },
+    {
+      "word": "details",
+      "start": 8.997,
+      "end": 9.538,
+      "score": 0.783
+    },
+    {
+      "word": "you",
+      "start": 9.578,
+      "end": 9.718,
+      "score": 0.782
+    },
+    {
+      "word": "get",
+      "start": 9.738,
+      "end": 9.879,
+      "score": 0.809
+    },
+    {
+      "word": "to",
+      "start": 9.919,
+      "end": 9.979,
+      "score": 1.0
+    },
+    {
+      "word": "hide.",
+      "start": 10.039,
+      "end": 10.42,
+      "score": 0.906
+    }
+  ],
+  "_source_audio_sha256": "45253037906d630855bdb8a57ed4ccbeff99c99328c4ab979fc3c40944fe4a28"
+}

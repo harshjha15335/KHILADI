@@ -1,0 +1,17 @@
+{
+  "signature": "2034e423edbce596545aa2d7b77a10d8b5ed117ec1686fb9b6c94a78db301a91",
+  "display_text": "You're in school. You're supposed to be doing maths. But you've got something way more important to figure out. Your IPL best eleven. And honestly? The maths can wait.",
+  "synthesis_text": "You're in school, you're supposed to be doing maths. But you've got something way more important to figure out: your I P L best eleven. And honestly? The maths can wait.",
+  "phonemes": "j\u028a\u0279 \u026an sk\u02c8u\u02d0l, j\u028a\u0279 s\u0259p\u02c8o\u028azd t\u0259bi d\u02ccu\u02d0\u026a\u014b m\u02c8\u00e6\u03b8s. b\u02cc\u028ct ju\u02d0v \u0261\u0251\u02d0t s\u02c8\u028cm\u03b8\u026a\u014b w\u02c8e\u026a m\u02c8\u0254\u02d0\u0279 \u026amp\u02c8\u0254\u02d0\u0279t\u0259nt t\u0259 f\u02c8\u026a\u0261j\u025a\u0279 \u02c8a\u028at: j\u028a\u0279 a\u026a p\u02c8i\u02d0 \u02c8\u025bl b\u02c8\u025bst \u1d7bl\u02c8\u025bv\u0259n. \u00e6nd \u02c8\u0251\u02d0n\u026astli? \u00f0\u0259 m\u02c8\u00e6\u03b8s k\u00e6n w\u02c8e\u026at.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 10.709333333333333,
+  "sha256": "d5cd6fac861f8a42b7577b9a131c2bd7c299f56b9f120d09f779b3896d9059b1"
+}

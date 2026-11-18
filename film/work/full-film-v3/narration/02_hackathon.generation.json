@@ -1,0 +1,17 @@
+{
+  "signature": "3668a4e99e58a39143084236535d55f1c49b8e75329cec8a9371b25fbce6c23e",
+  "display_text": "Years pass. The cricket notebook survives. Then you see the Rajasthan Royals SupeRR Selector challenge. Your imaginary selections suddenly need something rather inconvenient. Evidence.",
+  "synthesis_text": "Years pass. The cricket notebook survives. Then you see the Rajasthan Royals Super Selector challenge. Your imaginary selections suddenly need something rather inconvenient. Evidence.",
+  "phonemes": "j\u02c8\u026a\u0279z p\u02c8\u00e6s. \u00f0\u0259 k\u0279\u02c8\u026ak\u026at n\u02c8o\u028atb\u028ak s\u025av\u02c8a\u026avz. \u00f0\u02c8\u025bn ju\u02d0 s\u02c8i\u02d0 \u00f0\u0259 \u0279\u02cc\u0251\u02d0d\u0292\u0259st\u02c8\u0251\u02d0n \u0279\u02c8\u0254\u026a\u0259lz s\u02c8u\u02d0p\u025a s\u1d7bl\u02c8\u025bkt\u025a t\u0283\u02c8\u00e6l\u026and\u0292. j\u028a\u0279 \u026am\u02c8\u00e6d\u0292\u026an\u02cc\u025b\u0279i s\u1d7bl\u02c8\u025bk\u0283\u0259nz s\u02c8\u028cd\u0259nli n\u02c8i\u02d0d s\u02c8\u028cm\u03b8\u026a\u014b \u0279\u02c8\u00e6\u00f0\u025a\u0279 \u026a\u014bk\u0259nv\u02c8i\u02d0n\u026a\u0259nt. \u02c8\u025bv\u026ad\u0259ns.",
+  "settings": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us",
+    "sentence_pause": 0.08,
+    "clause_pause": 0.04
+  },
+  "voice_approval": "Use revised Michael",
+  "sample_rate": 24000,
+  "audio_duration": 12.352,
+  "sha256": "5bd3427ba4ec1df7d7b11604107a42ee4adee921a4239ba9b23717095e6797ca"
+}

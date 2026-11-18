@@ -1,0 +1,20 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,DejaVu Sans,60,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,6,1,2,85,85,90,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:01.52,Main,,0,0,0,,You combine {\c&H00FFFF&}scoreboard{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.52,0:00:02.32,Main,,0,0,0,,{\c&H00FFFF&}difficulty{\c&HFFFFFF&} with
+Dialogue: 0,0:00:02.34,0:00:03.86,Main,,0,0,0,,win-probability {\c&H00FFFF&}leverage,{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.39,0:00:05.78,Main,,0,0,0,,using {\c&H00FFFF&}context-relative{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.79,0:00:07.95,Main,,0,0,0,,{\c&H00FFFF&}percentiles.{\c&HFFFFFF&} Your primary
+Dialogue: 0,0:00:07.99,0:00:09.55,Main,,0,0,0,,pressure {\c&H00FFFF&}definition{\c&HFFFFFF&} selects
+Dialogue: 0,0:00:09.55,0:00:10.87,Main,,0,0,0,,the top twenty {\c&H00FFFF&}percent{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.90,0:00:12.09,Main,,0,0,0,,within each {\c&H00FFFF&}innings.{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.62,0:00:14.02,Main,,0,0,0,,Not within every {\c&H00FFFF&}phase.{\c&HFFFFFF&}

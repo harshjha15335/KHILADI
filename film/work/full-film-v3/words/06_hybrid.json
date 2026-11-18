@@ -1,0 +1,340 @@
+{
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 6.51,
+      "text": "You combine scoreboard difficulty with win-probability leverage, using context-relative percentiles.",
+      "words": [
+        {
+          "word": "You",
+          "start": 0.04,
+          "end": 0.16,
+          "score": 0.906
+        },
+        {
+          "word": "combine",
+          "start": 0.2,
+          "end": 0.681,
+          "score": 0.887
+        },
+        {
+          "word": "scoreboard",
+          "start": 0.761,
+          "end": 1.402,
+          "score": 0.851
+        },
+        {
+          "word": "difficulty",
+          "start": 1.442,
+          "end": 2.023,
+          "score": 0.911
+        },
+        {
+          "word": "with",
+          "start": 2.063,
+          "end": 2.203,
+          "score": 0.801
+        },
+        {
+          "word": "win-probability",
+          "start": 2.263,
+          "end": 3.225,
+          "score": 0.872
+        },
+        {
+          "word": "leverage,",
+          "start": 3.265,
+          "end": 3.746,
+          "score": 0.866
+        },
+        {
+          "word": "using",
+          "start": 4.307,
+          "end": 4.547,
+          "score": 0.855
+        },
+        {
+          "word": "context-relative",
+          "start": 4.627,
+          "end": 5.669,
+          "score": 0.871
+        },
+        {
+          "word": "percentiles.",
+          "start": 5.709,
+          "end": 6.51,
+          "score": 0.844
+        }
+      ]
+    },
+    {
+      "start": 7.131,
+      "end": 11.978,
+      "text": "Your primary pressure definition selects the top twenty percent within each innings.",
+      "words": [
+        {
+          "word": "Your",
+          "start": 7.131,
+          "end": 7.291,
+          "score": 0.848
+        },
+        {
+          "word": "primary",
+          "start": 7.371,
+          "end": 7.832,
+          "score": 0.751
+        },
+        {
+          "word": "pressure",
+          "start": 7.912,
+          "end": 8.252,
+          "score": 0.965
+        },
+        {
+          "word": "definition",
+          "start": 8.293,
+          "end": 8.873,
+          "score": 0.863
+        },
+        {
+          "word": "selects",
+          "start": 9.054,
+          "end": 9.434,
+          "score": 0.832
+        },
+        {
+          "word": "the",
+          "start": 9.474,
+          "end": 9.574,
+          "score": 0.743
+        },
+        {
+          "word": "top",
+          "start": 9.615,
+          "end": 9.895,
+          "score": 0.998
+        },
+        {
+          "word": "twenty",
+          "start": 9.975,
+          "end": 10.276,
+          "score": 0.86
+        },
+        {
+          "word": "percent",
+          "start": 10.336,
+          "end": 10.756,
+          "score": 0.911
+        },
+        {
+          "word": "within",
+          "start": 10.816,
+          "end": 11.057,
+          "score": 0.852
+        },
+        {
+          "word": "each",
+          "start": 11.177,
+          "end": 11.357,
+          "score": 0.865
+        },
+        {
+          "word": "innings.",
+          "start": 11.417,
+          "end": 11.978,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 12.539,
+      "end": 13.901,
+      "text": "Not within every phase.",
+      "words": [
+        {
+          "word": "Not",
+          "start": 12.539,
+          "end": 12.719,
+          "score": 0.969
+        },
+        {
+          "word": "within",
+          "start": 12.759,
+          "end": 13.04,
+          "score": 0.795
+        },
+        {
+          "word": "every",
+          "start": 13.2,
+          "end": 13.4,
+          "score": 0.954
+        },
+        {
+          "word": "phase.",
+          "start": 13.48,
+          "end": 13.901,
+          "score": 0.958
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "You",
+      "start": 0.04,
+      "end": 0.16,
+      "score": 0.906
+    },
+    {
+      "word": "combine",
+      "start": 0.2,
+      "end": 0.681,
+      "score": 0.887
+    },
+    {
+      "word": "scoreboard",
+      "start": 0.761,
+      "end": 1.402,
+      "score": 0.851
+    },
+    {
+      "word": "difficulty",
+      "start": 1.442,
+      "end": 2.023,
+      "score": 0.911
+    },
+    {
+      "word": "with",
+      "start": 2.063,
+      "end": 2.203,
+      "score": 0.801
+    },
+    {
+      "word": "win-probability",
+      "start": 2.263,
+      "end": 3.225,
+      "score": 0.872
+    },
+    {
+      "word": "leverage,",
+      "start": 3.265,
+      "end": 3.746,
+      "score": 0.866
+    },
+    {
+      "word": "using",
+      "start": 4.307,
+      "end": 4.547,
+      "score": 0.855
+    },
+    {
+      "word": "context-relative",
+      "start": 4.627,
+      "end": 5.669,
+      "score": 0.871
+    },
+    {
+      "word": "percentiles.",
+      "start": 5.709,
+      "end": 6.51,
+      "score": 0.844
+    },
+    {
+      "word": "Your",
+      "start": 7.131,
+      "end": 7.291,
+      "score": 0.848
+    },
+    {
+      "word": "primary",
+      "start": 7.371,
+      "end": 7.832,
+      "score": 0.751
+    },
+    {
+      "word": "pressure",
+      "start": 7.912,
+      "end": 8.252,
+      "score": 0.965
+    },
+    {
+      "word": "definition",
+      "start": 8.293,
+      "end": 8.873,
+      "score": 0.863
+    },
+    {
+      "word": "selects",
+      "start": 9.054,
+      "end": 9.434,
+      "score": 0.832
+    },
+    {
+      "word": "the",
+      "start": 9.474,
+      "end": 9.574,
+      "score": 0.743
+    },
+    {
+      "word": "top",
+      "start": 9.615,
+      "end": 9.895,
+      "score": 0.998
+    },
+    {
+      "word": "twenty",
+      "start": 9.975,
+      "end": 10.276,
+      "score": 0.86
+    },
+    {
+      "word": "percent",
+      "start": 10.336,
+      "end": 10.756,
+      "score": 0.911
+    },
+    {
+      "word": "within",
+      "start": 10.816,
+      "end": 11.057,
+      "score": 0.852
+    },
+    {
+      "word": "each",
+      "start": 11.177,
+      "end": 11.357,
+      "score": 0.865
+    },
+    {
+      "word": "innings.",
+      "start": 11.417,
+      "end": 11.978,
+      "score": 0.91
+    },
+    {
+      "word": "Not",
+      "start": 12.539,
+      "end": 12.719,
+      "score": 0.969
+    },
+    {
+      "word": "within",
+      "start": 12.759,
+      "end": 13.04,
+      "score": 0.795
+    },
+    {
+      "word": "every",
+      "start": 13.2,
+      "end": 13.4,
+      "score": 0.954
+    },
+    {
+      "word": "phase.",
+      "start": 13.48,
+      "end": 13.901,
+      "score": 0.958
+    }
+  ],
+  "_source_audio_sha256": "778711f36a000b03c9ca3d600c6993d97732e92f107e978c255c4dc09ece1cba"
+}
