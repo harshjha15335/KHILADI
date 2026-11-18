@@ -29,11 +29,16 @@ test("capture public KHILADI routes for human Delta reference comparison", async
   for (const { route, reference, section } of PAGES) {
     await page.goto(`/#${route}`);
     await expect(page.locator("#main-content")).toBeVisible();
-    await page.screenshot({
+    const image = await page.screenshot({
       path: join(OUTPUT, `khiladi-${route}.png`),
       animations: "disabled",
       fullPage: false,
     });
+    // Public-shell visual evidence for source-review in a text-only connector.
+    // Deliberately limited to one route; no private D20 access is used.
+    if (route === "database") {
+      console.log("KHILADI_DATABASE_CAPTURE_BASE64 " + image.toString("base64"));
+    }
     const details = await page.locator("#main-content").evaluate((root) => ({
       heading: root.querySelector("h1")?.textContent?.trim() ?? null,
       textLength: (root.textContent ?? "").trim().length,
@@ -64,11 +69,14 @@ test("capture Delta reference viewports when accessible; record blockers honestl
       });
       if (!response || !response.ok()) throw new Error(`HTTP ${response?.status() ?? "unknown"}`);
       await page.waitForTimeout(800);
-      await page.screenshot({
+      const image = await page.screenshot({
         path: join(OUTPUT, `${name}.png`),
         animations: "disabled",
         fullPage: false,
       });
+      if (reference === "https://deltacafes.com/en/products") {
+        console.log("DELTA_PRODUCTS_CAPTURE_BASE64 " + image.toString("base64"));
+      }
       statuses.push({ reference, screenshot: `${name}.png`, status: "captured" });
     } catch (error) {
       statuses.push({
