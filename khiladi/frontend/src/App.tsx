@@ -5,6 +5,7 @@ import { apiURL } from "./utils/urls";
 import { gsap, ScrollTrigger } from "./utils/motion";
 import "./polished-system.css";
 import "./editorial-refinement.css";
+import "./royal-editorial-global.css";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
@@ -200,7 +201,7 @@ export const App: React.FC = () => {
   }, [selectedPlayer, currentPage]);
   return (
     <RoyalResearchProvider active={currentPage !== "home"}>
-      <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] relative selection:bg-[#F22E83] selection:text-white">
+      <div className="royal-editorial-app min-h-screen bg-[#FAF8F5] text-[#17171B] relative selection:bg-[#C43670] selection:text-white">
         <a
           className="skip-link"
           href="#main-content"
