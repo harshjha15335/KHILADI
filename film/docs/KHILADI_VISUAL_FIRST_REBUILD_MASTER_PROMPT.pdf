@@ -1,0 +1,768 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R] /Count 14 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5760 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 1) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 765.0 Td (KHILADI - VISUAL-FIRST CINEMATIC REBUILD MASTER BRIEF) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 740.0 Td (Version: 18 November 2026 | Production target: the existing 16-scene, 199.733-second film | Audience:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 726.5 Td (Codex and its parallel visual-production agents | Source branch: codex/khiladi-cloud-handoff.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 705.0 Td (PRIMARY DIRECTIVE: Replace the current seated-character / text-card explanation format with literal,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 691.5 Td (narratively motivated visual action for EVERY meaningful spoken beat. Preserve the approved story and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 678.0 Td (narration. Only repair robotically spoken abbreviations such as RR and IPL. Build expressive) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 664.5 Td (performance driven by narration, with the hero absent whenever full cricket action is the better) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 651.0 Td (visual. The final film must feel like a fully animated cricket documentary, not a presentation.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 617.5 Td (1. INPUTS, PRIORITIES, AND HARD BOUNDARIES) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 588.5 Td (Use these exact source assets, with no new script invention:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 571.5 Td (- film/delivery/KHILADI_FINAL_REEL.mp4; film/work/full-film-v3/story.json;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 558.0 Td (film/work/full-film-v3/timing.json; film/outputs/full-film-v3/MICHAEL_FULL_NARRATION.wav;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 544.5 Td (film/outputs/full-film-v3/MICHAEL_FULL_MIX.wav; film/outputs/full-film-v3/FULL_CAPTIONS.ass;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 531.0 Td (film/data/accepted_primary_rankings.csv; film/docs/METHODOLOGY_FOR_FILM.md;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 517.5 Td (film/outputs/khiladi-master-v3.blend; film/outputs/geography-review/GEOGRAPHY_REVIEW.md;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 504.0 Td (film/outputs/website-capture/KHILADI_WEBSITE_INSERT_4S.mp4; film/delivery/VISUAL_REVIEW.md.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 487.5 Td (The original Brawn GP reel is NOT public on GitHub. Its manifest says it is in the separate private) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 474.0 Td (reference archive under film/private/. Locate the authorized local archive; if absent, report missing) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 460.5 Td (reference and use the user-supplied local reference. Do NOT download an unrelated Brawn video and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 447.0 Td (pretend it is the same source. Never push the original reference video or its audio publicly.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 421.5 Td (Do not reinterpret 'fix the visuals' as authorization to rewrite the whole voiceover.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 404.5 Td (The approved Michael voice and approximately 3:19.733 narration should remain. The source script is) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 391.0 Td (authoritative; only spoken pronunciation of abbreviations needs surgical changes, ideally to the tiny) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 377.5 Td (affected segments. Keep the rest of the audio, phrasing, tone, timing and caption text.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 356.0 Td (Do not introduce false cricket results, fabricated historical shots attributed to named players,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 342.5 Td (made-up rankings, unlicensed footage, exposed competition dataset rows, or claims of) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 329.0 Td (selection/employment by Rajasthan Royals.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 295.5 Td (2. REWATCH THE BRAWN GP REEL AS A VISUAL LANGUAGE STUDY) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 266.5 Td (FIRST: do not isolate/extract the narrator as the starting point.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 249.5 Td (Watch the ORIGINAL reel normally at 1x, listening to the spoken sentences while seeing their exact) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 236.0 Td (concurrent imagery. It is essential to map WHAT THE NARRATOR IS SAYING to WHAT THE VIEWER SEES. The) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 222.5 Td (Brawn reel visualizes racing wins, engineering work, car development, team difficulties and decisions) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 209.0 Td (as animated events. Our cricket film must use the same cause-and-effect, speech-to-action mapping) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 195.5 Td (principle, not reproduce the source footage or characters.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 174.0 Td (- A. View the source in its original synced state at full length; replay the first 32 seconds and at) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 160.5 Td (least one engineering/race-development sequence in detail.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 144.0 Td (- B. For each clause/short phrase in the reference: log IN/OUT time, exact idea spoken \(paraphrase) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 130.5 Td (permitted\), current shot, objects/actions, camera angle, duration, music cue, character reaction,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 117.0 Td (WHY this visual clarifies the idea.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 100.5 Td (- C. Classify every source moment: character acting, event/action, location/establishing, prop) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 87.0 Td (consequence, literal demonstration, visual gag, chart/diagram, reveal, or emotional beat.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5621 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 2) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- D. Report how often the source cuts AWAY from the protagonist to live action. Observe racing cars) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (moving, mechanics engineering, factory workers reacting, score/result indicators changing and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 750.0 Td (spatially convincing environments.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 733.5 Td (- E. Save BRAWN_SPEECH_TO_VISUAL_MAP.csv and annotated montage screenshots. These are internal) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 720.0 Td (working reference outputs, not public redistribution of the original reel.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 703.5 Td (- F. Build KHILADI_SPEECH_TO_VISUAL_MAP.csv with one row for every meaningful Khiladi speech beat;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 690.0 Td (source word timestamps, on-screen action, agent assignment, assets, QA status, and explicit proof) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 676.5 Td (frame. No beat may default to a generic face or text card.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 656.0 Td (Success condition: the narrator could be muted and a viewer could still broadly follow the) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 642.0 Td (cricket discovery, pressure examples, testing setback and report completion. Captions are) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 628.0 Td (support, not a substitute for visual storytelling.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 599.0 Td (3. WHAT MUST CHANGE FROM THE CURRENT FILM) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 574.0 Td (The repository's own VISUAL_REVIEW.md admits that research scenes repeatedly show almost identical) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 560.5 Td (seated bust shots, adjacent explanation cards, blurred tabletop macro inserts and largely static) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 547.0 Td (background classmates. This is exactly the rejected behavior. Replace these sequences rather than) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 533.5 Td (polishing their captions. Preserve genuinely useful V3 character assets, opening geography, physical) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 520.0 Td (notebook, report art and actual site capture.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 494.5 Td (Visual-only frame is prohibited unless intentionally brief and transitional.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 477.5 Td (- Do not use an unmoving protagonist with random eyebrows and smiles while narration explains) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 464.0 Td (cleaning, cricket pressure, expected value, shrinkage or validation.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 447.5 Td (- If the voice mentions a match situation, switch to a populated cricket stadium with credible) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 434.0 Td (players, crowd, umpire, wicketkeeper, field placements and scoreboards. The screen must show a match) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 420.5 Td (situation unfolding.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 404.0 Td (- If the voice mentions discovering the hackathon, show a real browser search, click, competition) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 390.5 Td (result and page; no floating 'RR Hackathon' placard.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 374.0 Td (- If the voice mentions reconstruction, wides, no-balls or rain, show the actual cricket actions and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 360.5 Td (their consequences, THEN abstract them into data.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 344.0 Td (- If the voice mentions uncertainty, physically shuffle/rerank evidence, don't simply write) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 330.5 Td ('bootstrap' on a card.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 314.0 Td (- If the voice mentions a failed holdout, stage the emotional setback and result consequences rather) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 300.5 Td (than a celebratory 'VALIDATION PASSED' graphic.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 272.0 Td (4. ACTING RULES FOR THE HERO) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 247.0 Td (The V3 hero identity is locked: oversized rounded dimensional head, compact white bean torso, thin) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 233.5 Td (stick limbs, bold outline and expressive irregular scribble features. Retain exact design and classroom) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 220.0 Td (geography. Do not rebuild the character or use arbitrary AI-generated replacements.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 194.5 Td (Acting must be MOTIVATED and TIMED to the spoken beat.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 177.5 Td (- Require a per-shot acting sheet: trigger word; hero objective; incoming stimulus; direction of) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 164.0 Td (eyeline; head/body anticipation; action/prop contact; reaction type; timing offset; follow-through;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 150.5 Td (final pose.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 134.0 Td (- A smiling mouth is not an 'aha' unless the character just witnessed the relevant discovery. Anger) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 120.5 Td (is not an appropriate response to a neutral statistic. Emotion must progress across story:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 107.0 Td (mischievous -> surprise -> effort -> skepticism -> setback -> intellectual humility -> measured) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 93.5 Td (completion.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6027 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 3) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- Hands must touch or plausibly hold pencils, mouse, notebook pages, rank cards or doors, with body) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (contact physically connected; no detached arms, sliding props or unmatched eyes.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 747.0 Td (- Never require hero in every shot. He can be absent for stadium, ball action, crowd, browser) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 733.5 Td (close-ups, player montage, resampling and report pages. Hero is connective tissue, not a presenter.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 717.0 Td (- Reactions should be useful: teacher noticed notebook -> sudden conceal; hackathon discovered ->) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 703.5 Td (lean in; misleading leaderboard -> recoil; holdout failure -> freeze/sag; credible report -> quiet) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 690.0 Td (relief.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 661.5 Td (5. CRICKET SCENE ENGINE AND VISUAL TRUTH) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 636.5 Td (Create a reusable stylized dimensional cricket stadium with crowd depth and subtle crowd motion,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 623.0 Td (animated batter, bowler, nonstriker, wicketkeeper, fielders, boundary, scoreboard, umpire and ball. A) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 609.5 Td (2.5D/3D hybrid is acceptable only if the shots depict actual action and camera-dependent changes. A) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 596.0 Td (still stadium JPEG with text floating over it is NOT acceptable.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 570.5 Td (Worked scene example: narrator says a match state such as 30 runs needed from 12 balls.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 553.5 Td (- Show a stadium establishing shot, two legitimate teams represented by original generic uniforms,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 540.0 Td (scoreboard '30 NEEDED / 12 BALLS', bowler run-up, batter adjusting grip, fielders setting field,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 526.5 Td (spectators reacting, and a freeze just before a ball. Use slow tracking camera and cutaways; make) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 513.0 Td (the scoreboard change only after an illustrative delivered ball has occurred. Label scenario as) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 499.5 Td (illustrative, not a real IPL historical highlight.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 483.0 Td (IMPORTANT: the CURRENT approved narration does not actually say 30 from 12: scene05 says 'thirty-nine) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 469.5 Td (runs an over' and 'two needed off one', scene04 may use an illustrative 28 from 12. Preserve spoken) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 456.0 Td (facts and show the correct scenario for each exact line. Do not change it to 30 from 12 merely because) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 442.5 Td (the user gave that as a hypothetical example.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 421.0 Td (Cricket rules must be credible: scoreboard arithmetic, legal balls count, umpire signals, run-out) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 407.5 Td (attribution, bowling credits, striker/nonstriker orientation, pitch/crease positions and field) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 394.0 Td (direction. Ask the cricket specialist agent to check these BEFORE rendering.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 360.5 Td (6. VOICE: SURGICAL RR / IPL REPAIR ONLY) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 335.5 Td (Keep Kokoro Michael / am_michael and the already approved spoken narration. User says the rest of the) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 322.0 Td (narration is good. Affected tokens RR and IPL sound disjointed, with unnatural pauses or robotic) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 308.5 Td (spelled letters. Do not re-cast, re-time or re-record the entire voiceover.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 287.0 Td (- Identify EXACT occurrences using story.json, narration WAVs and word timing. Verify acoustic) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 273.5 Td (problem by playback; note that the actual narration often says 'Rajasthan Royals', not standalone) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 260.0 Td ('RR'. Only fix things actually heard as awkward.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 243.5 Td (- Run controlled alternatives: natural pronunciation of 'IPL' as one fluent acronym /ai pi el/ with) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 230.0 Td (connected transitions; for 'RR', use the spoken expansion 'Rajasthan Royals' where semantically) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 216.5 Td (suitable, or a fluent two-letter abbreviation only where it really appears.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 200.0 Td (- Use small SSML/phoneme or re-synthesis patches supported by the chosen TTS system. DO NOT) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 186.5 Td (literally insert spaces 'I P L' unless measured results prove it necessary; it can create robotic) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 173.0 Td (letter spacing.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 156.5 Td (- Generate 2-3 short phonetic auditions for affected phrases only, splice with matched EQ, loudness,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 143.0 Td (room tone and short crossfades, preserve neighboring voice; adjust word alignment for local phrases,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 129.5 Td (not the entire film.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 113.0 Td (- Document timecodes and before/after pronunciation. Keep narration written wording and narrative) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 99.5 Td (intent unchanged. If available engine cannot produce a natural patch, report limitation rather than) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 86.0 Td (silently replacing the complete narrator.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5405 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 4) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 765.0 Td (7. PRODUCTION TEAM: USE PARALLEL SUBAGENTS) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 740.0 Td (- Lead director/producer: verifies source materials, owns entire visual map, decisions, shot rhythm) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 726.5 Td (and approvals.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 710.0 Td (- Brawn reference forensic agent: watches ORIGINAL synced video and outputs speech-to-visual) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 696.5 Td (taxonomy + shot references, not just subtitles.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 680.0 Td (- Cricket simulator/rules agent: designs realistic stadium states, actions, scoreboard math, umpire) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 666.5 Td (signals and match plausibility.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 650.0 Td (- Art/environment agent: consistent classroom, college Google discovery, stadium day/night, research) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 636.5 Td (lab, auction warroom and finale, using shared V3 style guide.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 620.0 Td (- Character acting agent: generates goal-driven V3 poses, real prop contact, shot-level eye-lines) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 606.5 Td (and emotional continuity, with no fake face loops.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 590.0 Td (- Statistics/methodology agent: audits every illustration against accepted report facts, labels) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 576.5 Td (hypothetical examples, verifies 2026 holdout limitations and protected-data compliance.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 560.0 Td (- Audio agent: narrow RR/IPL pronunciation repairs; preserve approved Michael rest; verifies voice) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 546.5 Td (continuity, no full narration replacement.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 530.0 Td (- Motion/compositing agent: assembles clips and character layers, overlays report excerpts and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 516.5 Td (website capture, handles captions and transitions.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 500.0 Td (- Independent QA reviewer: watches FULL RENDER in normal-speed sound + vision, checks every) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 486.5 Td (line/visual match, not only sampled stills or ffprobe.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 470.0 Td (Subagents may work in parallel only after the reference style lock and shot map are agreed. Give each a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 456.5 Td (scene brief with exact narration span, story goal, visual deliverable, negative constraints and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 443.0 Td (evidence source; merge through one director so style and timeline remain continuous.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 409.5 Td (8. SCENE-BY-SCENE TIMECODE, EXACT NARRATION, AND REQUIRED VISUALS) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 384.5 Td (The following 16 entries are authoritative for the current 199.733-second version. The voice text is) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 371.0 Td (copied directly from the existing repo. Scene timings are from timing.json. A multi-shot section is not) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 357.5 Td (permission to freeze the hero in front of a static background: use at least 3 distinct causally related) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 344.0 Td (visual states per scene, more when needed.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 310.5 Td (01 | SCHOOL / THE IPL NOTEBOOK | 0.00-12.00s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 281.5 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 264.5 Td ("You're in school. You're supposed to be doing maths. But you've got something way more important to) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 251.0 Td (figure out. Your IPL best eleven. And honestly? The maths can wait.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 225.5 Td (VISUAL DRAMA: The protagonist is doing cricket selection while pretending to study) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 211.5 Td (mathematics.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 194.5 Td (- 1. Classroom geography establishing shot: front board and teacher ahead of every seated student;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 181.0 Td (camera from rear/side behind the protagonist. Room is populated and lived-in, never a near-empty) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 167.5 Td (studio.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 151.0 Td (- 2. Side view of the retained V3 hero writing at a desk, not looking into the camera; he tracks the) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 137.5 Td (page and secretly writes an IPL XI.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 121.0 Td (- 3. Insert of ordinary maths exercise, pencil barely moving. Abrupt page-turn into overworked IPL) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 107.5 Td (XI with batting slots, crossed-out names, captaincy arrows and scratched substitutions.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 91.0 Td (- 4. An approaching teacher's shoes/shadow or teacher glance creates suspense. Hero freezes, covers) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 77.5 Td (the cricket side, then steals a quick mischievous glance and keeps selecting.) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5039 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 5) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- 5. Punchline lands on the nearly blank mathematics side against overflowing cricket notes. End) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (with the notebook as an object for the next scene's time-jump.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 747.0 Td (ACTING/SCREEN PRESENCE: Concentration -> secrecy -> quick fear -> sly satisfaction. Arm/pencil/eye) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 733.5 Td (motion MUST causally track each action. Back or three-quarter view whenever needed; no random) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 720.0 Td (facial-loop acting.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 698.5 Td (NO-GO: No students facing away from teacher; no podium-like paper holding; no classroom text slides; no) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 685.0 Td (fake school-year claim.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 651.5 Td (02 | SEARCH / REAL OPPORTUNITY | 12.00-24.73s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 622.5 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 605.5 Td ("Years pass. The cricket notebook survives. Then you see the Rajasthan Royals SupeRR Selector) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 592.0 Td (challenge. Your imaginary selections suddenly need something rather inconvenient. Evidence.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 566.5 Td (VISUAL DRAMA: A cricket hobby meets the Rajasthan Royals SupeRR Selector opportunity in an) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 552.5 Td (authentic web-discovery sequence.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 535.5 Td (- 1. Match-cut school notebook into older notebook on a college desk; season/calendar pages flip and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 522.0 Td (subtle visual changes establish years passing.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 505.5 Td (- 2. Hero opens a desktop browser, types a natural search such as 'Rajasthan Royals SupeRR Selector) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 492.0 Td (hackathon' into Google or a faithful clearly branded browser capture; show typed search, search) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 478.5 Td (loading, and a legitimate result/page selection.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 462.0 Td (- 3. Close-up of the actual competition page or accurate recreation grounded in verifiable public) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 448.5 Td (screenshots. Highlight the competition title and what entrants are being asked to do, avoiding any) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 435.0 Td (invented recruiting promise.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 418.5 Td (- 4. Click through to the challenge details. Hero leans in, eyes widen, quickly searches for) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 405.0 Td (notebooks, draws a line between childhood selection and evidence.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 388.5 Td (- 5. Switch from physical cricket notebook to analysis desk: the new obstacle is that) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 375.0 Td (favourite-player picks must be defended with evidence.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 358.5 Td (ACTING/SCREEN PRESENCE: Casual browsing -> surprised double-take -> curious reading -> energized) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 345.0 Td (purposeful action, tied exactly to reveal timing.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 323.5 Td (NO-GO: No disconnected floating RR card on a wooden table; no text-only hackathon panel; no claim of) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 310.0 Td (joining or employment by the franchise.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 276.5 Td (03 | DATA CLEANING AS CRICKET ACTION | 24.73-37.83s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 247.5 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 230.5 Td ("Your first obstacle: two hundred thousand, nine hundred and ninety-nine delivery events. Wides.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 217.0 Td (No-balls. Run-outs. Rain. Before you judge a player, you have to reconstruct the match correctly.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 191.5 Td (VISUAL DRAMA: Explain why 200,999 delivery events demand reconstruction, without exposing) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 177.5 Td (proprietary raw rows.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 160.5 Td (- 1. Cricket stadium becomes an animated ball-by-ball timeline with many cricket balls entering a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 147.0 Td (data-processing corridor, not an analyst reading a wall card.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 130.5 Td (- 2. Visualize a legal delivery, then a wide called by umpire, then a no-ball signal, then an) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 117.0 Td (attempted run-out with throw, stumps and umpire decision; each example is simplified but) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 103.5 Td (cricket-legible.) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 5223 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 6) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- 3. Represent a rain interruption through dark clouds, covers rushing onto pitch, halted overs and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (match clock; show why the innings context needs reconstruction.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 747.0 Td (- 4. Sort the event tokens into clearly labeled buckets and overlay the verified raw total 200,999) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 733.5 Td (and source-approved eligible total 194,509 only where methodology permits.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 717.0 Td (- 5. Hero appears briefly at a side console physically sorting conflicting match-event tokens, then) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 703.5 Td (disappears for more pitch action and an accurate result.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 687.0 Td (ACTING/SCREEN PRESENCE: Confusion at messy input -> physically sorting -> checking wicket attribution) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 673.5 Td (-> relieved clarity; character on screen for 20-30% only.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 652.0 Td (NO-GO: No original restricted delivery records; no incorrect claim that every wide/no-ball is simply) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 638.5 Td (removed; no invented dismissal credits.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 605.0 Td (04 | FREEZE THE BALL BEFORE IT HAPPENS | 37.83-48.10s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 576.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 559.0 Td ("So you freeze time before every ball. Score. Wickets. Balls remaining. No peeking at the six that) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 545.5 Td (happens next. That would be cheating, with a spreadsheet.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 520.0 Td (VISUAL DRAMA: Show pre-ball state is the only input to pressure labeling.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 503.0 Td (- 1. Wide aerial shot of a crowded night stadium; floodlights, field placements, scoreboard, batter) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 489.5 Td (in stance, bowler preparing run-up.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 473.0 Td (- 2. Move behind bowler, then batter close-up and giant ground scoreboard: score, wickets and balls) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 459.5 Td (remaining are clear; optional illustrative 28 from 12 with required run rate 14 ONLY if clearly) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 446.0 Td (tagged illustrative.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 429.5 Td (- 3. Bowler begins delivery. Freeze entire scene just before release/impact; animated time-freeze) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 416.0 Td (ripples through stadium and a timeline stops at PRE-BALL.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 399.5 Td (- 4. Camera orbits frozen batter, ball, fielders and scoreboard; floating minimalist indicators) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 386.0 Td (point to score/wickets/balls, not future outcomes.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 369.5 Td (- 5. Hero's hand or cursor tries to pull the next frame containing a six. Humorous slap or 'NO) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 356.0 Td (PEEKING' stamp snaps future outcome out of view; return to frozen moment.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 339.5 Td (ACTING/SCREEN PRESENCE: Short skeptical cameo on the no-peeking gag; absent for most stadium shots.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 318.0 Td (NO-GO: Do not use six outcome to label the current ball's pressure; no unmoving infographic replacing) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 304.5 Td (actual cricket atmosphere.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 271.0 Td (05 | DIFFICULT VERSUS CONSEQUENTIAL | 48.10-60.03s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 242.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 225.0 Td ("But difficult doesn't always mean consequential. Thirty-nine runs an over? Terrifying. Also, probably) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 211.5 Td (over. Two needed off one? Now the next ball can change everything.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 186.0 Td (VISUAL DRAMA: Actually stage two contrasting cricket match situations.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 169.0 Td (- 1. Stadium A: lively cricket scene with crowd and players, hopeless scoreboard showing 39 runs per) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 155.5 Td (over needed; batter tries to hit but odds already near gone. Keep labeled illustrative, no) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 142.0 Td (real-player attribution.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 125.5 Td (- 2. Cut to a closer scoreboard/wide shot of Stadium B: 2 runs needed from 1 ball, close fielders,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 112.0 Td (batsman readies, tense crowd leans forward.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 95.5 Td (- 3. Insert micro-shots: anxious fan, bowler approaching crease, wicketkeeper crouching, umpire,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 82.0 Td (boundary rope, changing crowd energy.) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 4842 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 7) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- 4. Time stops just before the last delivery; small clean leverage dial illustrates how the next) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (ball can swing the outcome.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 747.0 Td (- 5. Do not show a definitive scored outcome unless narration requires it; hang on suspense and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 733.5 Td (match-cut into analytic model.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 717.0 Td (ACTING/SCREEN PRESENCE: Optional 0.6-second comic reaction between examples; otherwise NO protagonist:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 703.5 Td (players, umpire and crowd carry the scene.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 682.0 Td (NO-GO: Do not silently change narrator's 'thirty-nine runs an over' into 30 from 12. If using 30 runs) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 668.5 Td (from 12 as a supplementary demo, label it separately and never contradict the voice.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 635.0 Td (06 | WHAT PRESSURE MEANS | 60.03-74.50s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 606.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 589.0 Td ("You combine scoreboard difficulty with win-probability leverage, using context-relative percentiles.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 575.5 Td (Your primary pressure definition selects the top twenty percent within each innings. Not within every) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 562.0 Td (phase.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 536.5 Td (VISUAL DRAMA: Difficulty plus win-probability leverage; context-relative percentiles; top) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 522.5 Td (20 percent within each innings.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 505.5 Td (- 1. Replay two short actual-looking but illustrative cricket states: scoreboard difficulty rises in) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 492.0 Td (one, leverage spikes on a close finish in another.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 475.5 Td (- 2. Visually encode difficulty as a physical slope/weight on a stadium-side display and leverage as) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 462.0 Td (a moving win-probability line tied to the field scene.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 445.5 Td (- 3. Animate both signals converging into a single pressure meter over the stadium, not a static bar) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 432.0 Td (chart on a tabletop.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 415.5 Td (- 4. An innings timeline of legal event tokens lights up, with the top 20% of that innings) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 402.0 Td (highlighted under the declared hybrid definition.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 385.5 Td (- 5. Pull back to separate phases of the same innings and show they do not each automatically) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 372.0 Td (contain 20% pressure events.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 355.5 Td (ACTING/SCREEN PRESENCE: Hero can sketch or adjust model once with a clear aha moment; return to action) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 342.0 Td (on field.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 320.5 Td (NO-GO: No phase-level 20% claim, no visually implied psychological mind-reading metric.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 287.0 Td (07 | ACTUAL VERSUS EXPECTED | 74.50-87.33s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 258.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 241.0 Td ("Next question: better than what? You estimate expected runs and dismissal risk. Batters earn credit) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 227.5 Td (for extra runs and survival. Bowlers, for runs prevented and credited wickets.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 202.0 Td (VISUAL DRAMA: Cricket performance only makes sense relative to expectations and match) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 188.0 Td (context.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 171.0 Td (- 1. Show a batter scoring a boundary in a stylized packed ground. Scoreboard updates; crowds cheer;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 157.5 Td (show why raw runs seem impressive.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 141.0 Td (- 2. Rewind to the before-ball context and animate a contextual expected-run indicator; reveal) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 127.5 Td (actual versus expected as an in-stadium overlay.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 111.0 Td (- 3. Separate batting survival: the batter defends a difficult delivery, wicket risk and survival) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 97.5 Td (shown as a distinct symbolic channel.) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 5101 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 8) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- 4. Cut to bowler: good length draws a dot ball and a wicket chance; overlay runs prevented and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (bowler-credited wickets as distinct outcomes.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 747.0 Td (- 5. Bring comparison from stadium into a live decision notebook: only at the end a tiny model panel) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 733.5 Td (settles.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 717.0 Td (ACTING/SCREEN PRESENCE: Brief curiosity when expected value contradicts naive applause; otherwise) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 703.5 Td (cricketers convey the action.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 682.0 Td (NO-GO: All hypothetical numeric bars marked ILLUSTRATIVE; no fictional named-player estimates or) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 668.5 Td (conflation of runs/wickets.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 635.0 Td (08 | ERA, OPPOSITION, AND WICKET ASSUMPTION | 87.33-101.63s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 606.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 589.0 Td ("You adjust for scoring eras and opposition. Then combine runs and wickets with a declared assumption:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 575.5 Td (fifteen runs per wicket. You check ten and twenty too. An assumption deserves a test, not a disguise.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 550.0 Td (VISUAL DRAMA: Context changes baselines; 15 runs per wicket is declared and stress-tested) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 536.0 Td (at 10 and 20.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 519.0 Td (- 1. Match-cut same batting action across two visually different cricket eras/grounds/scoreboard) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 505.5 Td (climates to show why raw comparisons mislead.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 489.0 Td (- 2. Split opposition field plans: a high-quality bowling attack versus weaker opposition through) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 475.5 Td (visual tactics, not unsupported named teams.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 459.0 Td (- 3. Hero studies a selection board with distinct RUNS and WICKETS tracks, then physically selects a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 445.5 Td (clearly labeled 15-runs-per-wicket assumption.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 429.0 Td (- 4. Three fast alternate simulations labeled 10 / 15 / 20 show how relative ratings can change) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 415.5 Td (while the narration says the choice deserves testing.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 399.0 Td (- 5. Finish on the model notebook with the selected primary assumption visibly documented.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 382.5 Td (ACTING/SCREEN PRESENCE: Thoughtful evaluation -> tries alternatives -> cautious acceptance, each) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 369.0 Td (physical gesture matched to change.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 347.5 Td (NO-GO: No claim that 15 is a universal true value; do not present invented future performance.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 314.0 Td (09 | SMALL SAMPLES / SHRINKAGE | 101.63-113.80s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 285.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 268.0 Td ("Then the small samples arrive, wearing enormous confidence. Twenty-five pressure events are not four) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 254.5 Td (hundred. Empirical Bayes pulls weakly supported estimates toward the average.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 229.0 Td (VISUAL DRAMA: Expose overconfidence when samples are tiny and dramatize empirical Bayes.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 212.0 Td (- 1. Two cricket players, anonymized stylized figures, each face game-action montage: 25) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 198.5 Td (pressure-event clips versus an accumulating wall of 400 event clips.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 182.0 Td (- 2. First sample player is awarded an absurd giant trophy, much larger than evidence warrants; hero) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 168.5 Td (celebrates for 0.5 second.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 152.0 Td (- 3. Camera widens to reveal the 400-event comparison. Hero halts celebration, scrutinizes the tiny) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 138.5 Td (pile and winces.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 122.0 Td (- 4. Visualize posterior estimate pulled toward an average rail; trophy shrinks proportionally,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 108.5 Td (without invented fitted numerical shrinkage values.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 92.0 Td (- 5. Hero writes 'uncertainty matters' and moves on.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 75.5 Td (ACTING/SCREEN PRESENCE: Overconfident smile -> disbelief -> skeptical thinking -> correction, never) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 4956 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 9) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 777.0 Td (randomly cycle a smile/angry/laughing face.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 755.5 Td (NO-GO: 25 and 400 must be anonymous examples of exposure, not made-up real player history.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 722.0 Td (10 | PRESSURE QUALITY IS NOT PRESSURE DELTA | 113.80-128.30s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 693.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 676.0 Td ("Performing well under pressure isn't the same as improving because of pressure. You find no validated) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 662.5 Td (repeatable bowling pressure delta. The batting delta gains are tiny. A psychological clutch trait) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 649.0 Td (remains unproven.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 623.5 Td (VISUAL DRAMA: Separate good pressure performance from proven improvement caused by) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 609.5 Td (pressure.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 592.5 Td (- 1. Create an on-field two-context experiment: the same representative batter/bowler in ordinary) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 579.0 Td (match states versus pressure states, with same character identity but different scoreboard setting.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 562.5 Td (- 2. Show one performance can be strong in pressure without exceeding its non-pressure baseline:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 549.0 Td (side-by-side action illustrates the difference.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 532.5 Td (- 3. Two trajectories labeled QUALITY and DELTA split apart and refuse to merge, while physical) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 519.0 Td (scoreboards continue play.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 502.5 Td (- 4. On-screen findings: no validated repeatable bowling pressure delta, batting delta gains tiny,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 489.0 Td (psychological clutch trait unproven.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 472.5 Td (- 5. Hero sees these findings and removes a premature claim sticker rather than celebrating a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 459.0 Td (supposed clutch discovery.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 442.5 Td (ACTING/SCREEN PRESENCE: Discovery -> momentary pride -> sees contradiction -> retracts unsupported) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 429.0 Td (claim.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 407.5 Td (NO-GO: No dramatized evidence pretending a measurable psychological trait was proven.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 374.0 Td (11 | 2026 HOLDOUT IS THE STORY'S SETBACK | 128.30-142.67s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 345.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 328.0 Td ("The unseen twenty-twenty-six season challenges your story. Batting quality shows no positive) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 314.5 Td (predictive relationship. Bowling looks promising, but an advantage over ordinary economy isn't) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 301.0 Td (established.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 275.5 Td (VISUAL DRAMA: Genuine research failure/reality check, not an inspirational) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 261.5 Td (validation-victory montage.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 244.5 Td (- 1. Hero confidently locks a prediction board, then slides a sealed 2026 season folder/locked) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 231.0 Td (calendar into the test apparatus.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 214.5 Td (- 2. Visualize separate training and unseen-season stadium reels, with an unmistakable visual) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 201.0 Td (boundary; scoreboards illustrate forward-looking evaluation.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 184.5 Td (- 3. The test produces a visibly disappointing batting signal; bowling seems promising but a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 171.0 Td (baseline economy comparison does not establish advantage.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 154.5 Td (- 4. Physical metaphor: big trophy falls or scoreboard celebration cuts to silence; hero slowly) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 141.0 Td (slumps, reopens notebook and starts checking assumptions.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 124.5 Td (- 5. A concise readable pale-backed result panel records the real qualified findings, without) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 111.0 Td (fabricating positive predictive accuracy.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 94.5 Td (ACTING/SCREEN PRESENCE: Hope -> anticipation -> visible setback -> skepticism -> renewed checking. This) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 81.0 Td (is the major emotional turning point.) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 4534 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 10) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 777.0 Td (NO-GO: No positive batting predictive claim or proven bowling advantage; no green 'model validated') Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 763.5 Td (confetti.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 730.0 Td (12 | UNCERTAINTY AND 750 WHOLE-MATCH BOOTSTRAPS | 142.67-156.23s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 701.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 684.0 Td ("So you resample whole matches, seven hundred and fifty times. Confidence intervals. Rank) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 670.5 Td (distributions. A top-ten bootstrap rate measures conditional historical stability. It isn't a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 657.0 Td (prophecy.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 631.5 Td (VISUAL DRAMA: Show historical ranking stability, not odds of future IPL success.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 614.5 Td (- 1. A stadium replay breaks into actual match cards \(not deliveries\) and feeds a physical) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 601.0 Td (resampling machine; camera is dynamic.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 584.5 Td (- 2. Machine shuffles and draws WHOLE MATCH cards 750 times via accelerated montage, with a '750') Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 571.0 Td (count indicator.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 554.5 Td (- 3. Each resample produces a differently ordered shortlist wall that visibly shuffles; a player's) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 541.0 Td (rank moves across trials.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 524.5 Td (- 4. Visualize the resulting rank histogram or interval as a short floating graphic above the action) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 511.0 Td (desk, visibly labeled illustrative where appropriate.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 494.5 Td (- 5. Hero looks at spread and changes a bold promise into a careful historical stability statement.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 478.0 Td (ACTING/SCREEN PRESENCE: Curiosity -> surprise at ranking variability -> careful conclusion.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 456.5 Td (NO-GO: Never sample independent balls for this visualization; never label bootstrap top-ten rate as a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 443.0 Td (future success probability.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 409.5 Td (13 | SENSITIVITY / RANKINGS CHANGE | 156.23-167.17s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 380.5 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 363.5 Td ("Change the pressure definition, and your shortlist changes. Remove a player's best season, and nine) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 350.0 Td (names leave each top ten. Those aren't details you get to hide.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 324.5 Td (VISUAL DRAMA: Assumption fragility needs cinematic consequences.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 307.5 Td (- 1. Build a real auction-shortlist wall with removable player cards, not a fixed panel of text.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 291.0 Td (- 2. Switch pressure definitions D10 -> D20 -> D25 with each click; the physical player cards detach) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 277.5 Td (and move to new positions.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 261.0 Td (- 3. Remove a highlighted player's strongest season from evidence reel; show nine names leave each) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 247.5 Td (top ten under the supplied best-season-removal test.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 231.0 Td (- 4. Character urgently catches falling or moving rank cards and realizes model choices matter.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 214.5 Td (- 5. Show the conclusion with a limited transparent table, then return to character acceptance of) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 201.0 Td (uncertainty.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 184.5 Td (ACTING/SCREEN PRESENCE: Surprised -> tries to rescue list -> acknowledges uncertainty and fixes) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 171.0 Td (documentation.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 149.5 Td (NO-GO: No invented alternate player ordering; only source-confirmed retention and removal counts.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 116.0 Td (14 | SHORTLIST / REPORT AS THE PAYOFF | 167.17-181.10s) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 4999 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 11) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 773.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 756.0 Td ("Your primary lists put Jos Buttler and Jasprit Bumrah first. But every name needs exposure,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 742.5 Td (uncertainty and format mix. T-twenty international evidence isn't automatically IPL evidence.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 717.0 Td (VISUAL DRAMA: A report emerges from defended data rather than an unqualified trophy) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 703.0 Td (montage.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 686.0 Td (- 1. Big stylized auction decision room; players appear as cricket action silhouettes/scenes rather) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 672.5 Td (than static information cards.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 656.0 Td (- 2. Bring forward exactly the accepted top batting and bowling rankings from the CSV, keeping) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 642.5 Td (player IDs/order untouched.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 626.0 Td (- 3. For Jos Buttler, illustrate batting with a neutral action montage; for Jasprit Bumrah,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 612.5 Td (illustrate bowling action. Do not present simulated scenes as actual historical plays.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 596.0 Td (- 4. Rotate top-ten report pages as polished physical folios, briefly zooming into exposure,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 582.5 Td (historical bootstrap uncertainty and format mix.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 566.0 Td (- 5. T20I versus IPL visual split: two different match environments with clear format labels; show) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 552.5 Td (why evidence is not identical.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 536.0 Td (ACTING/SCREEN PRESENCE: Calm completion, measured satisfaction; appears sparingly rather than) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 522.5 Td (dominating the player-action visuals.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 501.0 Td (NO-GO: No unsupported future performance guarantee, fabricated real footage, new scores, missing) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 487.5 Td (intervals or player-order changes.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 454.0 Td (15 | REPLAY, CHECKS, AND WEBSITE SPACE | 181.10-191.23s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 425.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 408.0 Td ("Finally, your report's replay reproduces all twenty rankings and passes forty-one checks. The code) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 394.5 Td (repeats. The statistical limitations stay.") Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 369.0 Td (VISUAL DRAMA: Demonstrate reproducibility and provide a natural four-second genuine) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 355.0 Td (Khiladi website insert.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 338.0 Td (- 1. Rapid code/report replay: physical sheets or console checks reproduce all 20 rankings; 41) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 324.5 Td (checks visibly tick in a concise fast montage.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 308.0 Td (- 2. Maintain a visual distinction between code reproducibility and statistical prediction:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 294.5 Td (reproducible sheets still carry caveat tags.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 278.0 Td (- 3. Reserve exactly 4 seconds in scene15 for EXISTING TRUE Khiladi site capture, currently) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 264.5 Td (3:07.233-3:11.233. Allow 3-5 seconds if timings change after phonetic repair.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 248.0 Td (- 4. Use a deliberate match-cut from report evidence to the real website screen with readable UI;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 234.5 Td (don't waste the whole four seconds on loading or giant logo.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 218.0 Td (- 5. Return immediately to notebook motif; site is a supporting tool, not the subject of the video.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 201.5 Td (ACTING/SCREEN PRESENCE: One restrained checking-and-relief gesture; no endless seated analyst loop.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 180.0 Td (NO-GO: No fabricated website functionality; never claim the website itself independently reran the) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 166.5 Td (report calculations.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 133.0 Td (16 | FULL CIRCLE ENDING | 191.23-199.73s) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 104.0 Td (EXACT APPROVED NARRATION:) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 87.0 Td ("Your notebook used to ask, who would you pick? Khiladi asks a better question. What does the evidence) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 73.5 Td (support... and how sure should you be?") Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 5679 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 12) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 773.0 Td (VISUAL DRAMA: Return to the childhood notebook and close on a more defensible question.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 756.0 Td (- 1. Match cut the child's packed handwritten IPL XI to a grown-up desk with accepted qualified) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 742.5 Td (report beside the same notebook.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 726.0 Td (- 2. Close-up of old crossed-out names, then report's evidence/uncertainty footnotes. Subtle) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 712.5 Td (daylight/time shift connects past and present.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 696.0 Td (- 3. Hero is seen from behind or three-quarter, looks thoughtfully between notebook and report, not) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 682.5 Td (directly at camera delivering voiceover.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 666.0 Td (- 4. Final comedic small nod, close notebook, leave report clearly visible, original branded title) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 652.5 Td (card.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 636.0 Td (- 5. Maintain visual echo of shot 01; one final punchline and clean end on 'what the evidence) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 622.5 Td (supports and how sure'.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 606.0 Td (ACTING/SCREEN PRESENCE: Reflective -> calm -> earned confidence, small purposeful movement.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 584.5 Td (NO-GO: No victory implying official RR employment, no fanfare claiming certain IPL success.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 551.0 Td (9. WEBSITE SLOT / NARRATIVE INTEGRATION) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 526.0 Td (Reserve a short 3-5 second moment in scene15, currently 187.233-191.233 seconds. It should show actual) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 512.5 Td (working Khiladi site footage from film/outputs/website-capture/KHILADI_WEBSITE_INSERT_4S.mp4 or a new) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 499.0 Td (verified real browser capture, not fabricated mockups. The report remains the climax; the site appears) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 485.5 Td (as a supportive culmination. Front-load recognizable app UI instead of spending all four seconds on) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 472.0 Td (loading animation. If a demo highlight is requested, use subtle cursor/scroll/pointer movement on real) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 458.5 Td (features, and don't pretend features exist if they don't.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 425.0 Td (10. CAPTIONS, EDITING, SHOT COVERAGE) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 400.0 Td (- Stay portrait 1080x1920, 30fps, around existing 199.733 seconds unless small phonetic retiming is) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 386.5 Td (genuinely necessary. Preserve white heavy-outline subtitles with occasional yellow highlighted words) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 373.0 Td (and mobile-safe placement.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 356.5 Td (- Create a real 65-100 shot editorial sequence if justified by narration and visuals, not 16 long) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 343.0 Td (featureless plates; pace with narration and story, not an artificial fixed seconds-per-shot rule.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 326.5 Td (- Treat every meaningful clause as an image/action assignment. Estimated narration-visual coverage) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 313.0 Td (threshold: 95% of meaningful beats showing a direct, causally relevant visual or deliberate) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 299.5 Td (motivated transition.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 283.0 Td (- Use active montage and distinct perspectives: wide stadium -> bowler -> batter -> scoreboard ->) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 269.5 Td (fan -> freeze; for data: pitch action -> event token -> model consequence -> character realization.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 253.0 Td (- Use a visual action budget: no unmotivated card-on-table insert lasting >1 second in research) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 239.5 Td (scenes; no static protagonist reaction hold >1.5 seconds unless dramatic storytelling explicitly) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 226.0 Td (needs it.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 209.5 Td (- Audio includes credible crowd/stadium sound, page turn, pencil, mouse click, browser UI activity,) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 196.0 Td (cricket bat impact, umpire call and restrained score; don't swamp Michael's voice.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 167.5 Td (11. TECHNICAL BUILD AND REAL ASSET GENERATION) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 142.5 Td (Use dedicated subagents and toolchain suited to each shot: AI video for visually complex stadium/crowd) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 129.0 Td (sequences with consistent style references; Blender/rigged 2D-3D puppet for recurrent hero acting;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 115.5 Td (generated high-quality background plate + parallax for sets; native compositing/Remotion/FFmpeg for) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 102.0 Td (motivated motion graphics and edit. If AI-generated clips are used, insist on character/style) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 88.5 Td (continuity and validate frame-by-frame artifacts. Avoid making every shot one Blender procedural) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 75.0 Td (cardboard-room scene.) Tj ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 5649 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 13) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 777.0 Td (- Generate shots with audio OFF; original Michael narration remains master timeline. Add crowd/SFX) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 763.5 Td (and captions during final edit.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 747.0 Td (- If provider has 6-8 second clip length limits, break action into overlapping image/shot) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 733.5 Td (transitions with continuity handles. Do not stretch a single synthetic scene into 13 static seconds.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 717.0 Td (- For every shot produce source prompt, reference still, duration, output path, metadata, agent) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 703.5 Td (owner, timecode and rejected-take log.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 687.0 Td (- No uploading private user-provided reference, IPL competition raw data or restricted historical) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 673.5 Td (rows into public repositories or external generation services without rights/clearance.) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 645.0 Td (12. DELIVERABLES, GATES, AND REVIEW) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 616.0 Td (Gate A: REFERENCE LANGUAGE STUDY \(before render\)) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 599.0 Td (- A1. BRAWN_SPEECH_TO_VISUAL_MAP.csv with individual spoken visual beats, camera and activity;) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 585.5 Td (source shots used only internally.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 569.0 Td (- A2. KHILADI_NARRATION_VISUAL_COVERAGE.csv with one line per speaking beat including timecode and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 555.5 Td (proposed concrete visual action, labeled real/illustrative/reconstructed.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 539.0 Td (- A3. Complete 16-scene boards and a timecoded animatic, including a four-second reserved website) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 525.5 Td (slot.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 505.0 Td (Gate B: PROOF OF REAL ACTION - three representative upgraded scenes) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 488.0 Td (- B1. Scene02 Google discover/select/hero reaction; actual grounded competition page, not a floating) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 474.5 Td (card.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 458.0 Td (- B2. Scene05 full illustrated stadium comparison with realistic teams, fielding, fans, match) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 444.5 Td (scoreboard, leverage and pre-ball suspension.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 428.0 Td (- B3. Scene11 unseen 2026 holdout setback with emotional hero acting and accurate limitations.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 411.5 Td (Render and internally QA these three first. User can review whether the new language matches reference.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 398.0 Td (Do NOT bulk-render all sixteen before this style test passes.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 372.5 Td (Gate C: ALL-SCENE EXECUTION) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 355.5 Td (- Agent outputs for scenes 01-16, verified facts and action shots, revised complete edit, coherent) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 342.0 Td (emotional progression, real website capture in approved slot.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 321.5 Td (Gate D: INDEPENDENT FULL-RUNTIME QA) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 304.5 Td (- Watch every second and listen to every line at normal speed: not just metadata, frame samples or) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 291.0 Td (screenshots. Check beat matching, character eyelines, match rules, scoreboard math, action-to-voice) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 277.5 Td (timing, scene continuity, caption collisions, audio cut quality, website visibility, privacy and) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 264.0 Td (scientific caveats.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 247.5 Td (- Log each mismatch with timecode, narration, visible action, severity and fix. Reject if 3) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 234.0 Td (consecutive lines show only generic faces/static cards or if an illustrative cricket sequence) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 220.5 Td (contradicts the spoken words.) Tj ET
+0.15 0.18 0.3 rg BT /F2 9.5 Tf 50 200.0 Td (Gate E: DELIVERY) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 183.0 Td (- Publish a new full rendered film under a clearly new version \(e.g. KHILADI_VISUAL_FIRST_V4.mp4\),) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 169.5 Td (plus production manifest, beat-by-beat coverage report, voice patch notes, cinematic contact sheet) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 59 156.0 Td (and updated technical plus creative QA. Never overwrite the old final before the new output passes.) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 139.5 Td (FINAL ACCEPTANCE: When the narrator says cricket, we SEE a cricket game; when the narrator says) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 126.0 Td (pressure, we SEE a tense scoreboard and players; when he discovers Rajasthan Royals, we SEE a search) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 112.5 Td (and click; when results fail holdout, we SEE disappointment and the test; when uncertainty moves the) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 99.0 Td (top ten, the cards PHYSICALLY MOVE. The character must react to the meaning of the moment or leave the) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 85.5 Td (frame. The entire story, not just its captions, is visualized.) Tj ET
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 1392 >>
+stream
+0.15 0.19 0.29 rg 50 805 495 3 re f
+BT /F2 10 Tf 0.13 0.16 0.24 rg 50 816 Td (KHILADI  |  VISUAL-FIRST REBUILD) Tj ET
+0.43 0.47 0.55 rg
+BT /F1 8 Tf 50 34 Td (Production brief  |  page 14) Tj ET
+0.11 0.16 0.32 rg BT /F2 12 Tf 50 765.0 Td (13. EXECUTION PROMPT FOR CODEX) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 740.0 Td (Start by reading this entire document and inspecting the latest film on the branch. Restore the private) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 726.5 Td (Brawn reference locally if authorized. Complete Gate A and build the shot-to-speech map before) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 713.0 Td (generating anything. Use subagents for reference forensics, cricket action, cinematography, hero) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 699.5 Td (acting, stats fidelity, audio repair and full-film QC. Preserve all approved narration except verified) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 686.0 Td (RR/IPL pronunciation errors. Produce Gate B samples and a realistic asset/render budget. Then expand to) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 672.5 Td (all 16 scenes once the new visual language meets the standard. Do not return another slideshow with a) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 659.0 Td (character making random faces. Deliver a full story in which meaningful events actually happen in every) Tj ET
+0.18 0.19 0.23 rg BT /F1 9 Tf 50 645.5 Td (scene.) Tj ET
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 31 0 R >>
+endobj
+xref
+0 33
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000351 00000 n 
+0000006162 00000 n 
+0000006298 00000 n 
+0000011970 00000 n 
+0000012106 00000 n 
+0000018184 00000 n 
+0000018321 00000 n 
+0000023778 00000 n 
+0000023916 00000 n 
+0000029007 00000 n 
+0000029145 00000 n 
+0000034420 00000 n 
+0000034558 00000 n 
+0000039452 00000 n 
+0000039590 00000 n 
+0000044743 00000 n 
+0000044881 00000 n 
+0000049889 00000 n 
+0000050027 00000 n 
+0000054613 00000 n 
+0000054751 00000 n 
+0000059802 00000 n 
+0000059940 00000 n 
+0000065671 00000 n 
+0000065809 00000 n 
+0000071510 00000 n 
+0000071648 00000 n 
+0000073092 00000 n 
+trailer
+<< /Size 33 /Root 1 0 R >>
+startxref
+73230
+%%EOF
