@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { KhiladiLogo } from "./KhiladiLogo";
 import { gsap } from "../utils/motion";
 import "./bottom-dock.css";
+import { createTopDockController } from "../vendor/threeui/topDockController";
 
 const leftLinks = [["database","Players"],["rankings","Rankings"],["pressure-lab","Pressure"],["comparison","Compare"],["war-room","Squad"]] as const;
 const rightLinks = [["data-explorer","Data"],["batting-intel","Batting"],["bowling-intel","Bowling"],["command-centre","Overview"],["methodology","Method"]] as const;
@@ -34,9 +35,17 @@ export const Navbar: React.FC<{
         { autoAlpha: 1, y: 0, x: 0, filter: "blur(0px)", duration: .55, stagger: .09 }, .85);
     return () => { timeline.kill(); gsap.set([scope, ...Array.from(left), ...Array.from(right), centre].filter(Boolean), { clearProps: "all" }); };
   }, [introComplete]);
+  useEffect(() => {
+    if (!root.current || !introComplete) return;
+    const controller = createTopDockController(root.current, () => ({
+      proximity: 122, spring: .19, damping: .70, widthGrowth: 0,
+      heightGrowth: 0, drop: -5.2, distribute: false,
+    }));
+    return () => controller();
+  }, [introComplete]);
   function renderLink(entry: readonly [string, string], side: "left" | "right") {
     const [page, label] = entry;
-    return <a key={page} href={`#${page}`}
+    return <a key={page} data-dock-item href={`#${page}`}
       className={`dock-link dock-link--${side}`}
       title={label} aria-label={label}
       aria-current={currentPage === page ? "page" : undefined}
