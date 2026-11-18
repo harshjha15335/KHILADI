@@ -1,5 +1,7 @@
 import { requestJSON } from "../utils/api";
 import { apiURL, siteURL } from "../utils/urls";
+import { playerImage } from "../utils/media";
+import "./pressure-theatre.css";
 import React, { useState, useEffect } from "react";
 import {
   Flame,
@@ -14,6 +16,19 @@ import {
   Zap,
   Target,
 } from "lucide-react";
+
+function DeliveryPortrait({id,name}:{id:number;name:string}) {
+  const [failed,setFailed]=useState(false);
+  const image=playerImage({player_id:id,player_name:name});
+  if(!image||failed) return (
+    <span className="pressure-duel__initials" aria-hidden="true">
+      {name.split(/\s+/).slice(0,2).map(x=>x[0]).join("")}
+    </span>
+  );
+  return <img className="pressure-duel__portrait" src={image} alt=""
+    width="160" height="170" loading="lazy" decoding="async" referrerPolicy="no-referrer"
+    onError={()=>setFailed(true)} />;
+}
 
 interface Delivery {
   innings: number;
@@ -157,6 +172,24 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
           </div>
         </div>
 
+        <section className="pressure-photo-theatre" aria-label="Pressure match story">
+          <div className="pressure-photo-theatre__image">
+            <img src={siteURL("/assets/gallery/moment-1.webp")} alt="Cricket batter celebrating on the field"
+              width="1260" height="760" loading="lazy" />
+          </div>
+          <div className="pressure-photo-theatre__story">
+            <span>THE MATCH TELLS THE STORY</span>
+            <h2>One ball can change everything.</h2>
+            <p>The photograph is an editorial cricket moment. The scoreboard below shows
+              the separate recorded sample match, not the photographed delivery.</p>
+            <div className="pressure-photo-theatre__score">
+              <strong>{currentDelivery.cum_score}</strong>
+              <span>{replay.home_team} vs {replay.away_team}
+                <small>OVER {currentDelivery.over}.{currentDelivery.ball} · {replay.total_deliveries} BALLS RECORDED</small>
+              </span>
+            </div>
+          </div>
+        </section>
         {/* Central Cockpit / Live Ball Display (Light Theme) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Delivery Screen (2 cols) */}
@@ -187,12 +220,11 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
             {/* Duel Presentation: Striker vs Bowler */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
               {/* Batter */}
-              <div
-                onClick={() => {
-                  onSelectPlayerById(currentDelivery.striker_id);
-                }}
-                className="p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group shadow-sm"
+              <button type="button"
+                onClick={() => onSelectPlayerById(currentDelivery.striker_id)}
+                className="pressure-duel p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#F22E83] transition-all cursor-pointer group shadow-sm text-left"
               >
+                <DeliveryPortrait id={currentDelivery.striker_id} name={currentDelivery.striker} />
                 <div className="text-[10px] font-mono uppercase text-[#F22E83] font-bold mb-1">
                   Striker
                 </div>
@@ -202,15 +234,14 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 <div className="text-xs font-mono text-[#68738A] mt-1">
                   ID #{currentDelivery.striker_id} • Click for Bio
                 </div>
-              </div>
+              </button>
 
               {/* Bowler */}
-              <div
-                onClick={() => {
-                  onSelectPlayerById(currentDelivery.bowler_id);
-                }}
-                className="p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group shadow-sm"
+              <button type="button"
+                onClick={() => onSelectPlayerById(currentDelivery.bowler_id)}
+                className="pressure-duel p-4 rounded-2xl bg-[#FFFDF8] border border-[#E8E6ED] hover:border-[#2549BD] transition-all cursor-pointer group shadow-sm text-left"
               >
+                <DeliveryPortrait id={currentDelivery.bowler_id} name={currentDelivery.bowler} />
                 <div className="text-[10px] font-mono uppercase text-[#2549BD] font-bold mb-1">
                   Bowler
                 </div>
@@ -220,7 +251,7 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 <div className="text-xs font-mono text-[#68738A] mt-1">
                   ID #{currentDelivery.bowler_id} • Click for Bio
                 </div>
-              </div>
+              </button>
             </div>
 
             {/* Ball Outcome Stage */}
