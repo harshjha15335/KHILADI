@@ -82,7 +82,7 @@ test("all nine public quiz selections return real data without a backend",async(
   await page.goto("/#home");
   const results=await page.evaluate(async()=>{
     const {recommendPlayers}=await import("/src/utils/api.ts");
-    const snapshots=await (await fetch(import.meta.env.BASE_URL+"data/quiz_recommendations.json")).json();
+    const snapshots=await (await fetch("/data/quiz_recommendations.json")).json();
     const out=[];
     for(const key of Object.keys(snapshots)){
       const [role_priority,match_phase,risk_profile]=JSON.parse(key) as [string,string,string];
