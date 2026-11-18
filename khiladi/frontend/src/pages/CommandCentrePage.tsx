@@ -14,6 +14,8 @@ interface CommandCentrePageProps {
 export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
   onNavigate,
   rrPurseCr = 120.0,
+  players = [],
+  onSelectPlayer,
 }) => {
   return (
     <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
