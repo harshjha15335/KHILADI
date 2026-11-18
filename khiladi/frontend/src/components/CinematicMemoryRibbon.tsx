@@ -18,6 +18,7 @@ const wrap = (index: number, length: number) => ((index % length) + length) % le
 export function CinematicMemoryRibbon() {
   const host = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   const activeRef = useRef(0);
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState<number | null>(null);
@@ -260,7 +261,20 @@ export function CinematicMemoryRibbon() {
       <canvas ref={canvas} className={`memory-ribbon__canvas ${webglReady && !reducedMotion ? "is-ready" : ""}`}
         aria-hidden="true" />
       <div className={`memory-ribbon__fallback ${webglReady && !reducedMotion ? "is-hidden" : ""}`}
-        aria-hidden="true">
+        aria-hidden="true"
+        onTouchStart={event => {
+          const t = event.touches[0];
+          if (t) touchStart.current = { x: t.clientX, y: t.clientY };
+        }}
+        onTouchEnd={event => {
+          const origin = touchStart.current;
+          const t = event.changedTouches[0];
+          touchStart.current = null;
+          if (!origin || !t) return;
+          const dx = t.clientX - origin.x, dy = t.clientY - origin.y;
+          if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy) * 1.4)
+            select(activeRef.current + (dx < 0 ? 1 : -1));
+        }}>
         {[-1, 0, 1].map((offset) => {
           const i = wrap(active + offset, PHOTOS.length);
           return <div className={`memory-ribbon__still memory-ribbon__still--${offset + 1}`} key={`${i}:${offset}`}>
