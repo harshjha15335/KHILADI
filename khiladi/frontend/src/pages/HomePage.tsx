@@ -1,5 +1,6 @@
 import { CinematicVideo } from "../components/CinematicVideo";
 import { RoyalsMoments } from "../components/RoyalsMoments";
+import { OfficialRoyalsVideo } from "../components/OfficialRoyalsVideo";
 import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
 import { Player } from "../types";
@@ -288,6 +289,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           </div>
         )}
       </section>
+      {approvedHeroClips.length === 0 && <OfficialRoyalsVideo />}
       <RoyalsMoments />
       <section
         className="editorial-chapter"
