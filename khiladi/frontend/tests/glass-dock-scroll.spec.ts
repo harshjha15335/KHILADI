@@ -20,6 +20,8 @@ test("all routes expose a fixed frosted-glass dock with logo in the middle", asy
       return { position: style.position, blur: style.backdropFilter || style.webkitBackdropFilter };
     });
     expect(props.position).toBe("fixed");
+    const rect = await dock.boundingBox();
+    expect(rect?.y ?? 9999).toBeLessThan(100);
     expect(props.blur).toMatch(/blur\(/);
   }
 });
@@ -38,11 +40,11 @@ test("glass dock links navigate and reflect the current page", async ({ page }) 
   await expect(page).toHaveURL(/#home$/);
 });
 
-test("desktop builds the scroll-triggered hero portal and player parade", async ({ page }) => {
+test("desktop builds the scroll-triggered trophy portal and player parade", async ({ page }) => {
   await page.goto("/");
   await page.keyboard.press("Escape");
   await expect(page.locator(".intro-root")).toHaveCount(0);
-  await expect(page.locator(".hero-photo-slot")).toHaveCount(6);
+  await expect(page.locator(".hero-photo-slot")).toHaveCount(5);
   await expect(page.locator(".hero-photo-slot--centre")).toHaveCount(1);
   await expect(page.locator(".home-player-item")).toHaveCount(8);
   const count = await page.evaluate(async () => {
@@ -68,4 +70,24 @@ test("narrow touch screens retain scrollable left and right dock groups", async 
   expect(result.within).toBe(true);
   expect(result.leftScroll).toBeGreaterThan(0);
   expect(result.rightScroll).toBeGreaterThan(0);
+});
+
+test("public build renders uploaded trophy and four other real cricket photos", async ({page}) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/");
+  const photos=page.locator(".hero-collage img");
+  await expect(photos).toHaveCount(5);
+  await expect.poll(async()=>photos.evaluateAll(imgs=>imgs.filter(i=>(i as HTMLImageElement).naturalWidth>0).length)).toBe(5);
+  await expect(photos.nth(2)).toHaveAttribute("src",/trophy-celebration\.webp/);
+});
+test("public leaderboard and canonical player data load without private D20", async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#rankings");
+  await expect(page.locator(".public-ranking-player")).toHaveCount(10);
+  await expect(page.locator("main")).toContainText("Pressure index");
+  await page.goto("/#database");
+  await expect(page.locator(".discovery-player").first()).toBeVisible();
+  await page.goto("/#home");
+  await expect(page.locator(".public-data-pulse__stat")).toHaveCount(4);
+  await expect(page.locator(".public-data-pulse")).toContainText("Canonical player records");
 });

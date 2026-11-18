@@ -4,12 +4,13 @@ import path from "node:path";
 const output = process.env.AUDIT_OUTPUT || "../../docs/qa/delta-live";
 await fs.mkdir(output,{recursive:true});
 const browser = await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||"/usr/bin/chromium",args:["--no-sandbox"]});
+const KHILADI_BASE_URL=process.env.KHILADI_BASE_URL || "https://harshjha15335.github.io/KHILADI/#";
 const targets=[
   ["delta-desktop","https://deltacafes.com/en",1440,900],
-  ["khiladi-desktop","https://harshjha15335.github.io/KHILADI/#home",1440,900],
+  ["khiladi-desktop",KHILADI_BASE_URL+"home",1440,900],
   ["delta-mobile","https://deltacafes.com/en",390,844],
-  ["khiladi-mobile","https://harshjha15335.github.io/KHILADI/#home",390,844],
-  ...["database","rankings","data-explorer","pressure-lab","comparison","war-room","batting-intel","bowling-intel","command-centre","methodology"].map(r=>[r,"https://harshjha15335.github.io/KHILADI/#"+r,1440,900])
+  ["khiladi-mobile",KHILADI_BASE_URL+"home",390,844],
+  ...["database","rankings","data-explorer","pressure-lab","comparison","war-room","batting-intel","bowling-intel","command-centre","methodology"].map(r=>[r,KHILADI_BASE_URL+r,1440,900])
 ];
 const results=[];
 for(const [id,url,width,height] of targets){
@@ -58,7 +59,7 @@ const urls=[
   "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
 ];
 const probe=await browser.newPage({viewport:{width:1440,height:900}});
-await probe.goto("https://harshjha15335.github.io/KHILADI/",{waitUntil:"domcontentloaded"}).catch(()=>{});
+await probe.goto(KHILADI_BASE_URL+"home",{waitUntil:"domcontentloaded"}).catch(()=>{});
 const imageTests=await probe.evaluate(async urls=>Promise.all(urls.map(url=>new Promise(resolve=>{
   const img=new Image();img.referrerPolicy="no-referrer";let finished=false;
   const done=(state)=>{if(finished)return;finished=true;resolve({url,state,width:img.naturalWidth,height:img.naturalHeight})};

@@ -20,8 +20,15 @@ jobs:
         working-directory: khiladi/frontend
       - run: npx playwright install --with-deps chromium
         working-directory: khiladi/frontend
-      - name: Capture live Khiladi and Delta across viewports
+      - name: Start built-branch browser preview
         working-directory: khiladi/frontend
+        run: |
+          VITE_GITHUB_PAGES=true VITE_MEDIA_REVIEW=false npm run dev -- --host 127.0.0.1 --port 3000 >/tmp/khiladi-audit-preview.log 2>&1 &
+          for i in $(seq 1 45); do curl -fsS http://127.0.0.1:3000/ >/dev/null && break; sleep 1; done
+      - name: Capture live Delta and current Khiladi PR across viewports
+        working-directory: khiladi/frontend
+        env:
+          KHILADI_BASE_URL: "http://127.0.0.1:3000/#"
         run: |
           export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux64/chrome' -type f | head -1)"
           if [ -z "$CHROMIUM_PATH" ]; then export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux/chrome' -type f | head -1)"; fi
