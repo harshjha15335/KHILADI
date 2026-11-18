@@ -116,3 +116,78 @@ test("homepage restores interactive bento and photo-led player cards",async({pag
   await page.getByRole("button",{name:/02 · COMPARE/}).click();
   await expect(page).toHaveURL(/#comparison$/);
 });
+
+test("loader is a continuous KHILA-symbol-DI lockup and can be replayed",async({page})=>{
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/#home");
+  const intro=page.locator(".khiladi-intro");
+  await expect(intro).toBeVisible();
+  const gap=await page.evaluate(()=>{
+    const symbol=document.querySelector(".khiladi-intro .intro-symbol");
+    const right=document.querySelector(".khiladi-intro .intro-side--right");
+    if(!symbol||!right)return null;
+    return right.getBoundingClientRect().left-symbol.getBoundingClientRect().right;
+  });
+  expect(gap).not.toBeNull();
+  expect(Math.abs(gap??999)).toBeLessThan(16);
+  await expect(intro).toHaveCount(0,{timeout:8500});
+  await page.locator(".footer-replay").click();
+  await expect(intro).toBeVisible();
+  await page.getByRole("button",{name:/Skip intro/}).click();
+  await expect(intro).toHaveCount(0);
+});
+
+test("public portraits prioritize exact-match official IPL images",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#home");
+  const urls=await page.evaluate(async()=>{
+    const {playerImage}=await import("/src/utils/media.ts");
+    return [playerImage({player_id:3298,player_name:"Jofra Archer"}),
+      playerImage({player_id:6819,player_name:"Yashasvi Jaiswal"}),
+      playerImage({player_id:3298,player_name:"Wrong Identity"})];
+  });
+  expect(urls[0]).toContain("www.iplt20.com/api/team-assets");
+  expect(urls[1]).toContain("www.iplt20.com/api/team-assets");
+  expect(urls[2]).not.toContain("www.iplt20.com");
+});
+
+test("player rail stays full-height and scrollable without pinned head-only crops",async({page})=>{
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/#home");
+  await page.keyboard.press("Escape");
+  const showcase=page.locator(".home-player-showcase");
+  await showcase.scrollIntoViewIfNeeded();
+  const grid=page.locator(".home-player-grid");
+  await expect(grid.locator(".home-player-item")).toHaveCount(8);
+  const metrics=await page.evaluate(()=>{
+    const rail=document.querySelector(".home-player-grid") as HTMLElement;
+    const card=document.querySelector(".home-player-item") as HTMLElement;
+    const image=card?.querySelector(".pc-preview-visual > img") as HTMLElement|null;
+    const host=document.querySelector(".home-player-showcase") as HTMLElement;
+    return {overflowX:getComputedStyle(rail).overflowX,
+      fullCardHeight:card.getBoundingClientRect().height,
+      visualHeight:card.querySelector(".pc-preview-visual")?.getBoundingClientRect().height,
+      hostHeight:host.getBoundingClientRect().height,
+      imageFit:image?getComputedStyle(image).objectFit:null};
+  });
+  expect(metrics.overflowX).toBe("auto");
+  expect(metrics.fullCardHeight).toBeGreaterThan(330);
+  expect(metrics.visualHeight).toBeGreaterThan(200);
+  expect(metrics.hostHeight).toBeLessThan(1100);
+  if(metrics.imageFit) expect(metrics.imageFit).toBe("contain");
+});
+
+test("footer is light frosted glass with no trophy image or design-study credit",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#command-centre");
+  const footer=page.locator(".khiladi-glass-footer");
+  await expect(footer).toBeVisible();
+  const style=await footer.evaluate(el=>({image:getComputedStyle(el).backgroundImage,
+    glass:getComputedStyle(el.querySelector(".footer-top")!).backdropFilter}));
+  expect(style.image).not.toContain("url(");
+  expect(style.glass).toMatch(/blur\(/);
+  await expect(footer).not.toContainText("Design study:");
+  const topCards=page.locator(".grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-4 > button");
+  if(await topCards.count()===4) await expect(topCards.locator("svg")).toHaveCount(0);
+  await expect(page.locator("#khiladi-diamond-cursor")).toHaveCount(0);
+});
