@@ -54,20 +54,40 @@ export const PlayerEditorialTrack: React.FC<{
           });
           const element = root.current!;
           let visible = true;
+          let pointerInside = false;
           const pause = () => tween.pause();
           const resume = () => {
-            if (visible && !element.contains(document.activeElement))
+            // Do not move a card while someone is hovering or keyboard
+            // interacting with it. Moving targets are hard to click and
+            // cannot be reliably inspected by automated accessibility tests.
+            if (
+              visible &&
+              !pointerInside &&
+              !element.contains(document.activeElement)
+            )
               tween.resume();
+          };
+          const onPointerEnter = () => {
+            pointerInside = true;
+            pause();
+          };
+          const onPointerLeave = () => {
+            pointerInside = false;
+            resume();
           };
           const observer = new IntersectionObserver(([entry]) => {
             visible = entry.isIntersecting;
             visible ? resume() : pause();
           });
           observer.observe(element);
+          element.addEventListener("pointerenter", onPointerEnter);
+          element.addEventListener("pointerleave", onPointerLeave);
           element.addEventListener("focusin", pause);
           element.addEventListener("focusout", resume);
           return () => {
             observer.disconnect();
+            element.removeEventListener("pointerenter", onPointerEnter);
+            element.removeEventListener("pointerleave", onPointerLeave);
             element.removeEventListener("focusin", pause);
             element.removeEventListener("focusout", resume);
           };
