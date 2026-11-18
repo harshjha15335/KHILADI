@@ -49,3 +49,10 @@
 .khiladi-intro .intro-words{position:relative;isolation:isolate}
 .intro-particle-wordmark{position:absolute;inset:-25% -8%;width:116%;height:150%;z-index:9;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.intro-particle-wordmark{display:none}}
+
+/* Triangle-fold reveal matching the motion reference without altering the approved logo. */
+.khiladi-intro .intro-curtain{
+ clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+ will-change:clip-path;
+}
+@media(prefers-reduced-motion:reduce){.khiladi-intro .intro-curtain{clip-path:none;will-change:auto}}

@@ -45,3 +45,14 @@
 .kb-portrait-stack .kb-mini-portrait{height:145px}.kb-portrait-stack{height:140px}
 .kb-head-to-head .kb-mini-portrait{height:100px;width:90px}.kb-squad-total b{font-size:68px}}
 @media(prefers-reduced-motion:reduce){.kb-card{transition:none}}
+
+/* Player portraits have independent, keyboard-accessible actions; navigation CTAs
+   use the same 3D glass treatment as the rest of the site. */
+.kb-card:focus-within {box-shadow:0 20px 50px #29416924;}
+.kb-card-link.iridescent-glass{margin-top:auto;align-self:flex-start;padding-top:0;color:#fff;font-size:13px;min-width:0}
+.kb-card-link.iridescent-glass .iridescent-glass__label{color:inherit}
+.kb-mini-portrait:is(button){padding:0;cursor:pointer;appearance:none;transition:transform .32s ease,box-shadow .32s ease}
+.kb-mini-portrait:is(button):hover{transform:translateY(-6px) rotate(0deg);box-shadow:0 14px 32px #233c7640}
+.kb-mini-portrait:is(button):focus-visible{outline:3px solid #234aa4;outline-offset:4px}
+.kb-portrait-stack .kb-mini-portrait:is(button):hover{transform:translateY(-7px) rotate(0deg)}
+@media(prefers-reduced-motion:reduce){.kb-mini-portrait:is(button){transition:none}}

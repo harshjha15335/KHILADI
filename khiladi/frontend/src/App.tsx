@@ -8,6 +8,7 @@ import "./editorial-refinement.css";
 import "./typography-system.css";
 import "./portrait-fallbacks.css";
 import "./royal-editorial-global.css";
+import "./final-ux-polish.css";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
@@ -66,8 +67,23 @@ export const App: React.FC = () => {
     useState<AnalyticalRole>("batting");
   const selectPlayer = (player: Player) => {
     selectedTrigger.current = document.activeElement as HTMLElement;
-    setSelectedRole(player.role === "Bowler" ? "bowling" : "batting");
-    setSelectedPlayer(player);
+    const showPlayer = (record: Player) => {
+      setSelectedRole(record.role === "Bowler" ? "bowling" : "batting");
+      setSelectedPlayer(record);
+    };
+    // The homepage squad export only contains identity, role and a portrait.
+    // Never send that lightweight object into RoyalPlayerDialog, which requires
+    // the canonical batting, bowling and exposure records.
+    const complete = allPlayers.find((candidate) => candidate.player_id === player.player_id);
+    if (complete) { showPlayer(complete); return; }
+    if (player.batting && player.bowling) { showPlayer(player); return; }
+    loadPlayers()
+      .then((players) => {
+        const canonical = players.find((candidate) => candidate.player_id === player.player_id);
+        if (canonical) showPlayer(canonical);
+        else console.error("Canonical player record missing", player.player_id);
+      })
+      .catch((error) => console.error("Cannot open player without canonical record", error));
   };
 
   // Load all players for fast lookups
@@ -309,7 +325,7 @@ export const App: React.FC = () => {
         </main>
 
         {/* Footer */}
-        <Footer onNavigate={handleNavigate} onReplayIntro={() => { window.scrollTo({ top: 0, behavior: "instant" }); setPreloaderComplete(false); }} />
+        <Footer onNavigate={handleNavigate} />
 
         {/* One premium interactive player card everywhere, including the homepage. */}
         {selectedPlayer && (

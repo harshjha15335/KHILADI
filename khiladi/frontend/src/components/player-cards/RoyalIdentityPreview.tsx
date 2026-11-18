@@ -25,8 +25,7 @@ export function RoyalIdentityPreview({
     data = research.lookup(player.player_id, selectedRole);
   const source = playerImage(player);
   const publicIndex = Number.isFinite(player.pressure_impact_index) ? player.pressure_impact_index : undefined;
-  const [failed, setFailed] = useState(false),
-    [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
   return (
     <div
       className={`pc-preview ${compact ? "pc-preview-compact" : ""}`}
@@ -48,17 +47,12 @@ export function RoyalIdentityPreview({
             loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
-            onLoad={() => setLoaded(true)}
-            style={{ opacity: loaded ? 1 : 0, position: "absolute", inset: 0 }}
+            style={{ position: "absolute", inset: 0 }}
             onError={() => setFailed(true)}
           />
         ) : (
           <NeutralPlayerAvatar className="pc-neutral-avatar"
             label={`No verified IPL portrait for ${player.player_name}`} />
-        )}
-        {source && !failed && !loaded && (
-          <NeutralPlayerAvatar className="pc-neutral-avatar pc-neutral-avatar--loading"
-            label={`Loading official IPL portrait for ${player.player_name}`} />
         )}
         <span className="pc-preview-role">
           {selectedRole === "batting" ? "BATTING" : "BOWLING"} ANALYSIS

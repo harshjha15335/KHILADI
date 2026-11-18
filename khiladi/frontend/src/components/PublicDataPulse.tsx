@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { KhiladiAnimatedButton } from "./KhiladiAnimatedButton";
 import { loadPlayers, requestJSON } from "../utils/api";
 import type { Player, TopBatter, TopBowler } from "../types";
 import "./public-data-pulse.css";
@@ -51,8 +52,9 @@ export const PublicDataPulse: React.FC<{
         <div className="public-data-pulse__stat"><strong>{snapshot.bowlingExposure.toLocaleString("en-IN")}</strong><span>Players with recorded pressure bowling deliveries</span></div>
       </div>}
     <footer className="public-data-pulse__actions">
-      <button type="button" onClick={()=>onNavigate("data-explorer")}>Browse complete dataset <span aria-hidden="true">↗</span></button>
-      <button type="button" onClick={()=>onNavigate("rankings")}>View the public top ten <span aria-hidden="true">↗</span></button>
+      <KhiladiAnimatedButton variant="secondary" onClick={()=>onNavigate("data-explorer")}>
+        Browse complete dataset
+      </KhiladiAnimatedButton>
     </footer>
   </section>;
 };

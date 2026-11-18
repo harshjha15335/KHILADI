@@ -1,7 +1,7 @@
 import React,{useEffect,useRef} from "react";
 import {gsap,ScrollTrigger,useGSAP} from "../utils/motion";
 import "./editorial-matte-rise.css";
-/** A single photographic editorial matte-rise chapter; no page-wide pinning. */
+/** Typographic editorial chapter; intentional absence of decorative player images. */
 export function EditorialMatteRise(){
  const root=useRef<HTMLElement>(null),canvas=useRef<HTMLCanvasElement>(null);
  useGSAP(()=>{
@@ -11,10 +11,6 @@ export function EditorialMatteRise(){
        scrub:.8,invalidateOnRefresh:true}})
     .fromTo(".matte-rise__line",{yPercent:125,opacity:0,rotate:-5,filter:"blur(12px)"},
      {yPercent:0,opacity:1,rotate:0,filter:"blur(0px)",stagger:.14,ease:"power2.out"},0)
-    .fromTo(".matte-rise__photo--left",{xPercent:-50,yPercent:28,rotation:-17,opacity:.15},
-     {xPercent:0,yPercent:0,rotation:-7,opacity:1,ease:"power2.out"},.12)
-    .fromTo(".matte-rise__photo--right",{xPercent:50,yPercent:-18,rotation:14,opacity:.1},
-     {xPercent:0,yPercent:0,rotation:7,opacity:1,ease:"power2.out"},.16)
     .fromTo(".matte-rise__copy",{y:60,opacity:0},{y:0,opacity:1,ease:"power2.out"},.29);
   });
   return ()=>media.revert();
@@ -50,14 +46,6 @@ export function EditorialMatteRise(){
  },[]);
  return <section ref={root} className="matte-rise" aria-labelledby="matte-rise-title">
   <canvas ref={canvas} className="matte-rise__orbit" aria-hidden="true"/>
-  <div className="matte-rise__photo matte-rise__photo--left">
-   <img src={import.meta.env.BASE_URL+"assets/gallery/moment-1.webp"} alt="A batter celebrates a significant cricket moment"
-    loading="lazy" decoding="async"/>
-  </div>
-  <div className="matte-rise__photo matte-rise__photo--right">
-   <img src={import.meta.env.BASE_URL+"assets/gallery/moment-3.webp"} alt="A bowler celebrates during an IPL cricket match"
-    loading="lazy" decoding="async"/>
-  </div>
   <div className="matte-rise__heading">
    <p>CRICKET IS MORE THAN A NUMBER</p>
    <h2 id="matte-rise-title"><span><span className="matte-rise__line">BEYOND THE</span></span>

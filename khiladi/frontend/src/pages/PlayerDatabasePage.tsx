@@ -1,4 +1,5 @@
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
+import { KhiladiAnimatedButton } from "../components/KhiladiAnimatedButton";
 import { ResearchAccess, useRoyalResearch } from "../components/player-cards/RoyalResearch";
 import React, { useEffect, useMemo, useState } from "react";
 import { Player } from "../types";
@@ -92,9 +93,6 @@ export const PlayerDatabasePage: React.FC<{
           onSelectPlayer={onSelectPlayer}
         />
         <ResearchAccess />
-        <p className="pc-identity-scope">
-          Public canonical player identities and recorded pressure metrics are searchable below. Player images come from matched official IPL profile sources where available; otherwise a branded fallback is shown.
-        </p>
         <div className="discovery-controls">
           <label>
             Find a player
@@ -204,18 +202,12 @@ export const PlayerDatabasePage: React.FC<{
                   </div>
                 </dl>
               )}
-              <button
-                type="button"
-                className="text-link"
-                onClick={() =>
-                  onComparePlayer?.(
-                    player.player_id,
-                    player.role === "Bowler" ? "bowling" : "batting",
-                  )
-                }
-              >
-                Compare players ↗
-              </button>
+              {onComparePlayer && <KhiladiAnimatedButton
+                variant="outline" size="sm" className="discovery-compare-glass"
+                onClick={() => onComparePlayer(player.player_id,
+                  player.role === "Bowler" ? "bowling" : "batting")}>
+                Compare players
+              </KhiladiAnimatedButton>}
             </article>
           ))}
         </div>

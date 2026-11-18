@@ -1,10 +1,8 @@
-/* One neutral, anonymous silhouette on ALL missing-photo surfaces. */
-.pc-preview-visual>.pc-neutral-avatar,
-.pc-preview-visual>.pc-neutral-avatar--loading{
+/* Exact user-approved neutral silhouette appears only when an official portrait is absent or fails. */
+.pc-preview-visual>.pc-neutral-avatar{
  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
 }
 .pc-preview-visual>img{object-fit:contain!important;object-position:center bottom!important;z-index:1}
-.pc-preview-visual>.pc-neutral-avatar--loading{opacity:1}
 .pc-preview-visual .pc-preview-rank,.pc-preview-visual .pc-preview-role{z-index:3}
 .pc-preview-visual .pc-preview-rank{background:#213d7aab;border-radius:6px;padding:2px 7px;color:#fff}
 .pc-preview-visual>.pc-neutral-avatar{background:#dadde2}
@@ -39,3 +37,7 @@
 .kb-mini-portrait>.kb-neutral-avatar{display:block;z-index:0}
 .kb-mini-portrait>img{z-index:2}
 .rank-filmstrip__portrait>.rank-neutral-avatar{object-fit:contain;background:#DADDE2}
+
+/* Never layer the neutral player behind a valid official portrait. */
+.kb-mini-portrait > img + .kb-neutral-avatar { display:none !important; }
+.pc-preview-visual > img + .pc-neutral-avatar { display:none !important; }

@@ -121,11 +121,11 @@ test("homepage restores interactive bento and photo-led player cards",async({pag
   await page.goto("/#home");
   await expect(page.locator(".khiladi-bento .kb-card")).toHaveCount(4);
   await expect(page.locator(".home-player-item")).toHaveCount(8);
-  await page.getByRole("button",{name:/02 · COMPARE/}).click();
+  await page.getByRole("button",{name:/Start comparison/}).click();
   await expect(page).toHaveURL(/#comparison$/);
 });
 
-test("loader is a continuous KHILA-symbol-DI lockup and can be replayed",async({page})=>{
+test("loader uses continuous KHILA-symbol-DI lockup without an obsolete replay control",async({page})=>{
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/#home");
   const intro=page.locator(".khiladi-intro");
@@ -145,10 +145,9 @@ test("loader is a continuous KHILA-symbol-DI lockup and can be replayed",async({
   expect(assembly.symbol).toBeLessThan(assembly.right);
   expect(assembly.logo).toContain("khiladi-symbol.svg");
   await expect(intro).toHaveCount(0,{timeout:8500});
-  await page.locator(".footer-replay").click();
-  await expect(intro).toBeVisible();
-  await page.getByRole("button",{name:/Skip intro/}).click();
-  await expect(intro).toHaveCount(0);
+  await expect(page.locator(".footer-replay")).toHaveCount(0);
+   // The overlay is a one-shot animation; replay is intentionally removed.
+  expect(await page.locator("footer").last().getByRole("button").count()).toBe(0);
 });
 
 test("public portraits prioritize exact-match official IPL images",async({page})=>{

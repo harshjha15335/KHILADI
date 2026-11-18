@@ -119,3 +119,46 @@ test("six viewport widths: no hero document overflow or missing navigation", asy
     await page.screenshot({ path: join(evidenceDir, `hero-${width}x${height}.png`), animations: "disabled" });
   }
 });
+
+
+test("final polish: nav halves use distinct motion and deleted sections remain absent", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/#home");
+  const nav = page.getByRole("navigation", { name: "Primary navigation" });
+  await expect(nav.locator('[data-nav-motion="sweep"]')).toHaveCount(5);
+  await expect(nav.locator('[data-nav-motion="ripple"]')).toHaveCount(5);
+  await expect(page.locator(".heritage-chapter, .journey-chapter")).toHaveCount(0);
+  await expect(page.locator(".matte-rise__photo")).toHaveCount(0);
+  await expect(page.locator(".footer-replay")).toHaveCount(0);
+  const publicActions = page.locator(".public-data-pulse__actions");
+  await expect(publicActions.locator(".iridescent-glass")).toHaveCount(1);
+  await expect(publicActions).not.toContainText("View the public top ten");
+});
+
+test("bento portraits open actual player cards, without layered silhouette imagery", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/#home");
+  const stack = page.locator(".kb-card--discover .kb-portrait-stack");
+  const portrait = stack.locator('button[data-player-id]').first();
+  await expect(portrait).toBeVisible();
+  await expect(portrait.locator("img")).toHaveCount(1);
+  await portrait.click();
+  await expect(page.locator("dialog.royal-dialog[open]")).toBeVisible();
+});
+
+test("Method heading clears the fixed dock at desktop and mobile sizes", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  for (const [width, height] of [[1440, 900], [390, 844]]) {
+    await page.setViewportSize({ width, height });
+    await page.goto("/#methodology");
+    const heading = page.getByRole("heading", { name: "Behind the big moments." });
+    await expect(heading).toBeVisible();
+    const dock = page.getByRole("navigation", { name: "Primary navigation" });
+    const metrics = await page.evaluate(() => {
+      const nav = document.querySelector(".khiladi-top-nav")!.getBoundingClientRect();
+      const h = document.querySelector(".methodology-page h1")!.getBoundingClientRect();
+      return { navBottom: nav.bottom, headingTop: h.top };
+    });
+    expect(metrics.headingTop, `heading under dock at ${width}`).toBeGreaterThan(metrics.navBottom + 8);
+  }
+});

@@ -1,0 +1,80 @@
+/* KHILADI final interaction polish, applied after the legacy style layers.
+   Primary CTAs share optical glass; selection controls remain semantic. */
+:root{--kh-glass-ivory:#faf8f5;--kh-fixed-nav-clearance:190px;}
+html{scroll-padding-top:var(--kh-fixed-nav-clearance);}
+#main-content [id]{scroll-margin-top:var(--kh-fixed-nav-clearance);}
+#main-content.analytics-workspace > :is(.pc-inner-catalogue,.public-rankings,.methodology-page,.min-h-screen.pt-28,.min-h-screen.pt-32){
+ padding-top:var(--kh-fixed-nav-clearance)!important;
+}
+#main-content.analytics-workspace > .methodology-page h1{
+ margin-top:0;scroll-margin-top:var(--kh-fixed-nav-clearance);
+}
+/* Existing custom glass renderer keeps its sheen and border when embedded in
+   formerly flat CTA containers. */
+.public-data-pulse__actions .iridescent-glass,
+.kb-card .iridescent-glass,
+.discovery-player .iridescent-glass{
+ border:1px solid #ffffffbf;
+ color:#fff;
+ background:linear-gradient(115deg,var(--glass-from),var(--glass-middle) 51%,var(--glass-to));
+ box-shadow:inset 0 1px 3px #fff, inset 0 -3px 9px #1411255e,0 12px 30px var(--glass-shadow);
+ padding:0 22px;
+ text-shadow:0 1px 3px #170a2252;
+}
+.public-data-pulse__actions .iridescent-glass:hover,
+.kb-card .iridescent-glass:hover,
+.discovery-player .iridescent-glass:hover{
+ background:linear-gradient(115deg,var(--glass-from),var(--glass-middle) 51%,var(--glass-to));
+ color:#fff;
+ transform:translateY(-2px);
+ box-shadow:inset 0 2px 4px #fff9, 0 16px 34px var(--glass-shadow);
+}
+.discovery-player > .discovery-compare-glass{width:max-content;max-width:100%;margin:16px 0 12px 14px;}
+.discovery-open{cursor:pointer;width:100%;}
+.discovery-open:focus-visible{outline:3px solid #234aa4;outline-offset:5px;border-radius:20px}
+.pc-preview-button{cursor:pointer;}
+.pc-preview-button:focus-visible{outline:3px solid #234aa4;outline-offset:4px}
+.discovery-pagination button,
+.pc-ranking-preview > button,
+.pc-profile-actions button{
+ position:relative;overflow:hidden;isolation:isolate;
+ color:#fff;border:1px solid #ffffffc8;border-radius:999px;
+ background:linear-gradient(112deg,#132b69,#3157bb 52%,#172c72);
+ box-shadow:inset 0 2px 3px #fff9,inset 0 -3px 8px #111c4c6e,0 9px 23px #192f7360;
+ text-shadow:0 1px 2px #131d4c77;
+ padding:12px 24px;min-height:45px;font-weight:650;
+ transition:transform .25s ease,box-shadow .25s ease;
+}
+.discovery-pagination button::before,
+.pc-ranking-preview > button::before,
+.pc-profile-actions button::before{
+ content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+ background:linear-gradient(170deg,#fffc,#ffffff25 28%,transparent 65%);
+ opacity:.55;
+}
+.discovery-pagination button:is(:hover,:focus-visible):not(:disabled),
+.pc-ranking-preview > button:is(:hover,:focus-visible):not(:disabled),
+.pc-profile-actions button:is(:hover,:focus-visible):not(:disabled){
+ transform:translateY(-2px);
+ box-shadow:inset 0 2px 4px #fff,0 14px 34px #192f7366;
+}
+.discovery-pagination button:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+/* Decorative bento tiles are interactive surfaces but have separate internal
+   player actions, so do not masquerade as a single oversized button. */
+.kb-card{border:1px solid #fff;box-shadow:inset 0 1px 1px #fffc,0 12px 34px #192f7324;}
+.kb-card:focus-within{box-shadow:inset 0 1px 2px #fff,0 19px 46px #192f7338;}
+@media(max-width:760px){:root{--kh-fixed-nav-clearance:174px}
+ #main-content.analytics-workspace > :is(.pc-inner-catalogue,.public-rankings,.methodology-page,.min-h-screen.pt-28,.min-h-screen.pt-32){padding-top:174px!important}
+ .discovery-player > .discovery-compare-glass{margin-left:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ .discovery-pagination button,.pc-ranking-preview>button,.pc-profile-actions button{transition:none!important}
+}
+
+/* Opal is the intentional light-glass variant: keep its legend readable. */
+.discovery-player .iridescent-glass--opal,
+.discovery-player .iridescent-glass--opal:hover,
+.discovery-player .iridescent-glass--opal .iridescent-glass__label{
+ color:#221b2b;
+ text-shadow:0 1px 0 #fff8;
+}

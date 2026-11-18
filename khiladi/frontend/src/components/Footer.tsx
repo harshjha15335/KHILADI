@@ -1,6 +1,6 @@
 import React from "react";
-export const Footer: React.FC<{ onNavigate: (page: string) => void; onReplayIntro?: () => void }> = ({
-  onNavigate, onReplayIntro,
+export const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({
+  onNavigate,
 }) => (
   <footer
     className="brand-footer khiladi-glass-footer"
@@ -38,7 +38,7 @@ export const Footer: React.FC<{ onNavigate: (page: string) => void; onReplayIntr
       <span>
         Independent cricket research project. Not an official team website.
       </span>
-      {onReplayIntro && <button className="footer-replay" type="button" onClick={onReplayIntro}>Replay introduction ↻</button>}
+
     </div>
   </footer>
 );

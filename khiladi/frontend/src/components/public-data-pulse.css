@@ -23,3 +23,16 @@
 @media(max-width:500px){.public-data-pulse__grid{gap:10px}.public-data-pulse__stat{padding:18px;border-radius:18px}
 .public-data-pulse__stat strong{font-size:34px}.public-data-pulse__stat span{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.public-data-pulse__stat{transition:none}}
+
+/* Legacy flat CTA styling must never override the unified 3D glass component. */
+.public-data-pulse__actions .iridescent-glass{
+ border:1px solid #ffffffbf;
+ background:linear-gradient(115deg,var(--glass-from),var(--glass-middle) 51%,var(--glass-to));
+ min-height:54px; padding-inline:25px;
+ box-shadow:inset 0 1px 3px #fff, inset 0 -3px 9px #1411255e, 0 12px 30px var(--glass-shadow);
+ color:#fff;
+}
+.public-data-pulse__actions .iridescent-glass:hover{
+ background:linear-gradient(115deg,var(--glass-from),var(--glass-middle) 51%,var(--glass-to));
+ color:#fff;
+}
