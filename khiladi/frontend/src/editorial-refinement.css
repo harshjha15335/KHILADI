@@ -1,0 +1,93 @@
+/* Khiladi editorial refinement — intentionally light-first, not neon-dashboard UI. */
+:root{--editorial-paper:#fcfaf7;--editorial-blue:#2757b4;--editorial-ink:#1e305a;
+--editorial-pink:#d93b8d;--editorial-lavender:#f2f0fc;--editorial-gold:#c6a86d}
+#main-content.analytics-workspace{background:var(--editorial-paper)}
+#main-content.analytics-workspace>div[class*="min-h-screen"]{
+  background:var(--editorial-paper)!important;color:var(--editorial-ink)!important}
+#main-content.analytics-workspace>div>div[class*="max-w"]{max-width:1320px}
+#main-content.analytics-workspace .editorial-spotlight + .overflow-x-auto{margin-top:45px}
+#main-content.analytics-workspace .analytics-intro{font-size:15px;line-height:1.75;color:#4b5b7c}
+#main-content.analytics-workspace .analytics-intro details{border:1px solid #e6e3f1;border-radius:15px;
+ padding:12px 17px;margin-top:14px;background:#fffefdf2}
+#main-content.analytics-workspace .analytics-intro details summary{cursor:pointer;color:#224ba8;font-weight:690}
+#main-content.analytics-workspace .rounded-3xl.bg-white{
+  border-color:#e9e6f0!important;box-shadow:0 8px 30px #233e7920}
+#main-content.analytics-workspace table{font-size:13px;line-height:1.65}
+#main-content.analytics-workspace thead th{padding-top:16px;padding-bottom:16px;letter-spacing:.07em;
+ color:#485678;font-size:11px;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+#main-content.analytics-workspace tbody td{padding-top:16px;padding-bottom:16px}
+#main-content.analytics-workspace tr:hover td{background:#f9f4fb}
+#main-content.analytics-workspace input[type="text"],
+#main-content.analytics-workspace input[type="search"],
+#main-content.analytics-workspace select{background:#fffdfb!important;border-color:#dcdfe9!important;color:#21345c}
+#main-content.analytics-workspace button:not(.iridescent-glass):focus-visible{
+ outline:3px solid var(--editorial-blue);outline-offset:3px}
+#main-content.analytics-workspace .text-emerald-600{color:#26577c}
+#main-content.analytics-workspace .bg-\[\#FFEAF2\]{background-color:#faf0f6}
+#main-content.analytics-workspace .pc-comparison-previews{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(15px,2.5vw,36px);
+ align-items:stretch;padding:22px;border-radius:30px;
+ background:linear-gradient(115deg,#f7e6f2,#e9edff);
+ border:1px solid #fff;box-shadow:0 16px 42px #2c3f7a13}
+#main-content.analytics-workspace .pc-comparison-previews .pc-preview-button{width:100%;min-width:0}
+#main-content.analytics-workspace .pc-comparison-previews .pc-preview{width:100%;height:100%}
+#main-content.analytics-workspace .pc-comparison-previews .pc-preview-visual{
+ height:clamp(280px,31vw,420px)!important;background:#e8edfc!important}
+#main-content.analytics-workspace .pc-comparison-previews .pc-preview-visual>img{
+ width:100%;height:100%;object-fit:contain!important;object-position:center bottom!important}
+#main-content.analytics-workspace .pc-comparison-previews .pc-preview-name{
+ font:500 clamp(23px,3vw,36px)/1.04 Georgia,serif;color:var(--editorial-blue)}
+#main-content.analytics-workspace .public-ranking-grid{
+ grid-template-columns:repeat(4,minmax(0,1fr));gap:23px}
+#main-content.analytics-workspace .public-ranking-player .pc-preview-visual{
+ height:260px!important;object-fit:contain!important}
+#main-content.analytics-workspace .public-ranking-player-stats{
+ padding:17px 4px 9px;gap:8px}
+#main-content.analytics-workspace .public-ranking-player-stats span{
+ background:#f5eff9;border:1px solid #efe4f1;color:#314978;font-size:11px}
+#main-content.analytics-workspace:has(.metric-vortex-scene--pressure-lab) .lg\:col-span-2.rounded-3xl{
+ border:1px solid #d6d9eb!important;
+ background:linear-gradient(140deg,#fffdfb,#f5f3ff 72%)!important}
+#main-content.analytics-workspace:has(.metric-vortex-scene--pressure-lab) input[type="range"]{
+ accent-color:var(--editorial-pink)}
+#main-content.analytics-workspace .pc-inner-catalogue .discovery-controls{
+ background:linear-gradient(130deg,#fff,#f4f0fc);padding:19px 22px;border-radius:23px;
+ border:1px solid #e5e3f0}
+#main-content.analytics-workspace .pc-inner-catalogue .discovery-controls input,
+#main-content.analytics-workspace .pc-inner-catalogue .discovery-controls select{
+ background:#fff;border-radius:12px}
+#main-content.analytics-workspace .pc-inner-catalogue .editorial-track-heading p:last-child{
+ font:400 clamp(28px,4vw,52px)/1.06 Georgia,serif;letter-spacing:-.05em;
+ color:var(--editorial-blue)}
+#main-content.analytics-workspace .pc-inner-catalogue .editorial-player img{
+ object-fit:contain;object-position:center bottom}
+#main-content.analytics-workspace:has(.metric-vortex-scene--command-centre) .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>button{
+ min-height:170px;border:1px solid #e7e2ef!important;box-shadow:0 7px 25px #2642850f!important;
+ border-radius:26px!important;transition:transform .3s,box-shadow .3s}
+#main-content.analytics-workspace:has(.metric-vortex-scene--command-centre) .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>button:hover{
+ transform:translateY(-6px);box-shadow:0 20px 40px #2642851f!important}
+#main-content.analytics-workspace:has(.metric-vortex-scene--command-centre) .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>button .font-mono{
+ font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif!important}
+#main-content.analytics-workspace:has(.metric-vortex-scene--command-centre) .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>button .text-3xl{
+ font-family:Georgia,serif;font-size:36px;letter-spacing:-.04em;color:var(--editorial-blue)}
+/* Methodology behaves like a magazine article, not a code listing. */
+#main-content.analytics-workspace:has(a[href="#accepted-d20-method"]) section,
+#main-content.analytics-workspace:has(#accepted-d20-method) section{
+ scroll-margin-top:125px}
+#main-content.analytics-workspace:has(#accepted-d20-method) .max-w-4xl{
+ max-width:930px!important}
+#main-content.analytics-workspace:has(#accepted-d20-method) h2{
+ font:500 clamp(26px,3.3vw,39px)/1.13 Georgia,serif;letter-spacing:-.035em;
+ color:var(--editorial-blue);margin-bottom:22px}
+#main-content.analytics-workspace:has(#accepted-d20-method) section{
+ border-top:1px solid #dce0ef;padding-top:35px;margin-top:42px}
+@media(max-width:900px){
+ #main-content.analytics-workspace .public-ranking-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+ #main-content.analytics-workspace .pc-comparison-previews{grid-template-columns:1fr;padding:14px;border-radius:22px}
+ #main-content.analytics-workspace .pc-comparison-previews .pc-preview-visual{height:270px!important}
+ #main-content.analytics-workspace .public-ranking-grid{gap:12px}
+ #main-content.analytics-workspace .public-ranking-player .pc-preview-visual{height:210px!important}
+ #main-content.analytics-workspace .pc-inner-catalogue .discovery-controls{padding:15px}
+}

@@ -4,6 +4,7 @@ import "./components/player-cards/player-cards.css";
 import { apiURL } from "./utils/urls";
 import { gsap, ScrollTrigger } from "./utils/motion";
 import "./polished-system.css";
+import "./editorial-refinement.css";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
