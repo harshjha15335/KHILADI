@@ -1,0 +1,62 @@
+name: KHILADI Scenario Review QA
+
+on:
+  pull_request:
+    branches:
+      - feat/private-d20-contracts
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scenario-build-and-privacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: khiladi/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: khiladi/frontend/package-lock.json
+      - name: Install locked dependencies
+        run: npm ci --include=dev --no-audit --no-fund
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit --incremental false
+      - name: Install Chromium
+        run: |
+          npx playwright install --with-deps chromium
+          BIN="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux*/chrome' | head -n 1)"
+          test -n "$BIN"
+          echo "CHROMIUM_PATH=$BIN" >> "$GITHUB_ENV"
+      - name: Start local review server
+        run: |
+          nohup npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-scenario-vite.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl --silent --fail http://127.0.0.1:3000/ >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/khiladi-scenario-vite.log
+          exit 1
+      - name: Run new scenario browser tests
+        run: npx playwright test tests/auction-scenario-comparison.spec.ts --reporter=list
+      - name: Production build without review media
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /KHILADI/
+          VITE_GITHUB_PAGES: "true"
+          VITE_MEDIA_REVIEW: "false"
+      - name: Audit static output for restricted files
+        run: |
+          if find dist -type f | grep -Ei '(private[_-]?d20|serving[_-]?bundle|raw[_-]?competition|\.env|token[_-]?file)'; then
+            echo "Potential restricted file in public build" >&2
+            exit 1
+          fi
+          echo "No forbidden filename patterns detected"
+      - name: Show server logs on failure
+        if: failure()
+        run: cat /tmp/khiladi-scenario-vite.log || true
