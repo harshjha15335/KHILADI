@@ -1,0 +1,110 @@
+/* KHILADI type system: legal, open-web editorial substitutes for Delta's commercial fonts.
+   Display: Instrument Serif; compact data: Barlow Condensed; readable UI: Inter. */
+:root{
+ --font-editorial:"Instrument Serif",Georgia,"Times New Roman",serif;
+ --font-condensed:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+ --font-body:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+html{font-family:var(--font-body);font-synthesis:none}
+body,#root{font-family:var(--font-body)!important}
+button,input,select,textarea,option{font-family:var(--font-body)}
+#main-content{font-family:var(--font-body)}
+#main-content h1,#main-content h2,#main-content h3,
+.khiladi-glass-footer .footer-top p{
+ font-family:var(--font-editorial)!important;font-weight:400!important;
+ letter-spacing:-.047em!important;line-height:1.04;
+}
+#main-content h1{font-size:clamp(3.25rem,6.6vw,6.9rem);line-height:.99}
+#main-content h2{font-size:clamp(2.5rem,4.5vw,5.3rem)}
+#main-content h3{font-size:clamp(1.5rem,2.6vw,2.6rem)}
+#main-content p,#main-content li{font-family:var(--font-body)}
+#main-content p{line-height:1.6}
+#main-content .editorial-spotlight__name,#main-content .pc-preview-name,
+#main-content .public-ranking-player-name,#main-content .rc-player-name span,
+#main-content .rc-player-name strong,#main-content .rank-filmstrip__footer strong,
+#main-content .kh-gauge__player h3{
+ font-family:var(--font-editorial)!important;font-weight:400!important;
+ letter-spacing:-.035em!important;
+}
+#main-content .rc-player-name strong{font-size:clamp(40px,6vw,55px)}
+#main-content .pc-preview-name{font-size:clamp(25px,2.3vw,34px)!important;line-height:1.05}
+#main-content .rank-filmstrip__footer strong{font-size:19px!important}
+#main-content .eyebrow,#main-content [class*="kicker"],#main-content .kb-kicker,
+#main-content .rc-topline,#main-content .rc-role,#main-content .rc-stage-label,
+#main-content .pc-preview-role,#main-content .pc-preview-inspect,
+#main-content table thead th,.khiladi-top-nav .dock-link,
+.khiladi-top-nav .dock-brand-name,.khiladi-glass-footer nav a{
+ font-family:var(--font-condensed)!important;font-weight:650;
+ letter-spacing:.075em!important;
+}
+#main-content .font-mono:not(code):not(pre),
+#main-content [class*="stat-value"],
+#main-content .rc-rank strong,
+#main-content .rc-back-ledger dd,
+#main-content .pc-preview-rating b,
+#main-content .kh-gauge__display strong,
+#main-content .kh-gauge__details dd,
+#main-content .kb-squad-total b,
+#main-content .public-data-pulse strong{
+ font-family:var(--font-condensed)!important;font-weight:650!important;
+ font-variant-numeric:tabular-nums;
+ letter-spacing:-.025em!important;
+}
+#main-content table td,#main-content table th,#main-content input,
+#main-content select,#main-content textarea{font-family:var(--font-body)!important;letter-spacing:normal}
+#main-content code,#main-content pre{font-family:"JetBrains Mono",ui-monospace,monospace!important}
+/* The hero uses Delta's editorial rhythm instead of the previous Impact/dashboard feel. */
+.cinematic-home .hero-copy h1{
+ font-family:var(--font-editorial)!important;
+ font-weight:400!important;font-size:clamp(58px,6.4vw,114px)!important;
+ line-height:.92!important;letter-spacing:-.047em!important;
+ text-wrap:balance;
+}
+.cinematic-home .hero-copy h1 em{
+ font-family:var(--font-editorial)!important;font-weight:400!important;
+ font-style:italic!important;font-size:.91em!important;line-height:1!important;
+}
+.cinematic-home .editorial-chapter h2,
+.cinematic-home .editorial-chapter h2 .story-line:not(:last-child),
+.cinematic-home .matte-rise h2,
+.cinematic-home .matte-rise h2 em,
+.cinematic-home .home-showcase-intro h2,
+.cinematic-home .heritage-chapter h2,
+.cinematic-home .khiladi-bento__title h2{
+ font-family:var(--font-editorial)!important;font-weight:400!important;
+ letter-spacing:-.05em!important;line-height:.98!important;
+}
+.cinematic-home .matte-rise h2{font-size:clamp(68px,9vw,145px)!important}
+.cinematic-home .matte-rise h2 em{font-size:1em!important}
+.cinematic-home .home-showcase-intro h2{font-size:clamp(56px,7vw,105px)!important}
+.cinematic-home .editorial-chapter h2{font-size:clamp(54px,7.8vw,125px)!important}
+.khiladi-top-nav .dock-link{font-size:clamp(13px,1vw,16px)!important;line-height:1}
+.khiladi-top-nav .dock-brand-name{font-family:var(--font-condensed)!important;
+ font-size:19px!important;font-weight:750!important;letter-spacing:.075em!important}
+#main-content.analytics-workspace .analytics-intro h1{
+ font-family:var(--font-editorial)!important;font-weight:400!important;
+ font-size:clamp(52px,6.3vw,94px)!important;line-height:.98;
+ letter-spacing:-.045em!important;
+}
+#main-content.analytics-workspace .metric-vortex-scene h2{font-family:var(--font-editorial)!important}
+#main-content.analytics-workspace .metric-vortex-scene__kicker{
+ font-family:var(--font-condensed);font-size:16px!important;
+}
+#main-content .chapter-button,#main-content .iridescent-glass{
+ font-family:var(--font-condensed)!important;font-size:clamp(15px,1.35vw,20px)!important;
+ font-weight:650!important;letter-spacing:.01em!important;
+}
+@media(max-width:900px){
+ .cinematic-home .hero-copy h1{font-size:clamp(51px,10vw,82px)!important}
+ #main-content h1{font-size:clamp(42px,9vw,74px)}
+ #main-content h2{font-size:clamp(34px,7vw,65px)}
+}
+@media(max-width:760px){
+ .khiladi-top-nav .dock-link{font-size:14px!important;padding-inline:10px!important}
+ .khiladi-top-nav .dock-brand-name{font-size:17px!important}
+ .cinematic-home .matte-rise h2{font-size:clamp(44px,12vw,70px)!important}
+ .cinematic-home .editorial-chapter h2{font-size:clamp(50px,12vw,80px)!important}
+ .cinematic-home .hero-copy h1{font-size:clamp(48px,10.8vw,69px)!important}
+ .cinematic-home .home-showcase-intro h2{font-size:clamp(49px,11vw,77px)!important}
+ #main-content.analytics-workspace .analytics-intro h1{font-size:clamp(43px,11vw,69px)!important}
+}

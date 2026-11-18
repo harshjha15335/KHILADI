@@ -1,5 +1,5 @@
 import "./home-editorial.css";
-import { StudyAthlete } from "../components/player-cards/StudyAthlete";
+import { NeutralPlayerAvatar } from "../components/NeutralPlayerAvatar";
 import { PublicDataPulse } from "../components/PublicDataPulse";
 import { KhiladiBento } from "../components/KhiladiBento";
 import { EditorialMatteRise } from "../components/EditorialMatteRise";
@@ -20,6 +20,30 @@ interface Props {
   introComplete?: boolean;
   onNavigate: (page: string) => void;
   onSelectPlayer: (player: Player) => void;
+}
+function QuizPlayerPhoto({player}:{player:Player}) {
+  const [failed,setFailed]=useState(false);
+  const src=playerImage(player);
+  return src&&!failed ? (
+    <img src={src} alt="" width="220" height="270" loading="lazy"
+      decoding="async" referrerPolicy="no-referrer" onError={()=>setFailed(true)} />
+  ) : (
+    <NeutralPlayerAvatar className="quiz-neutral-player"
+      label={`No verified IPL portrait for ${player.player_name}`} />
+  );
+}
+/** Gallery fallbacks render ONLY when the photographic asset genuinely fails.
+ * This prevents duplicate hidden <img>s and preserves photo choreography.
+ */
+function GalleryPhotograph({filename,alt,eager=false}:{
+  filename:string;alt:string;eager?:boolean;
+}) {
+  const [failed,setFailed]=useState(false);
+  if(failed)return <NeutralPlayerAvatar className="gallery-neutral-avatar"
+    label={`Photograph unavailable: ${alt}`} />;
+  return <img src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
+    alt={alt} decoding="async" loading={eager?"eager":"lazy"}
+    onError={()=>setFailed(true)} />;
 }
 export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, onSelectPlayer }) => {
   const root = useRef<HTMLDivElement>(null);
@@ -84,8 +108,13 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
         const centre = hero?.querySelector<HTMLElement>(".hero-photo-slot--centre");
         if (hero && centre && window.innerWidth >= 900) {
           const timeline = gsap.timeline({
-            scrollTrigger: { trigger: hero, start: "top top", end: "bottom top",
-              scrub: .65, invalidateOnRefresh: true },
+            scrollTrigger: {
+              trigger: hero, start: "top top",
+              end:()=>"+="+Math.round(Math.min(window.innerHeight,930)*.72),
+              pin:true, pinSpacing:true, anticipatePin:1,
+              scrub:.68, invalidateOnRefresh:true,
+              onUpdate:(self)=>{hero.dataset.scrollProgress=self.progress.toFixed(2);}
+            },
           });
           timeline
             .to(".hero-copy", { y: -112, opacity: .10, ease: "none" }, 0)
@@ -113,6 +142,14 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
             },
           });
         }
+        // Explicit, measurable scroll-driven text reveals for the full editorial journey.
+        gsap.utils.toArray<HTMLElement>(
+          ".home-showcase-intro h2, .khiladi-bento__title h2, .heritage-chapter h2, .quiz-introduction h2"
+        ).forEach(title=>{
+          gsap.fromTo(title,{clipPath:"inset(0 0 95% 0)",opacity:.2},
+            {clipPath:"inset(0 0 0% 0)",opacity:1,ease:"none",
+              scrollTrigger:{trigger:title,start:"top 92%",end:"top 42%",scrub:.65}});
+        });
         gsap.fromTo(".home-player-item",
           { y: 48, autoAlpha: .25 },
           { y: 0, autoAlpha: 1, ease: "none", stagger: .045,
@@ -307,17 +344,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
 
           ].map(([filename, alt, placement]) => (
             <div className={`hero-photo-slot hero-photo-slot--${placement}`} key={filename}>
-              <img
-                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
-                alt={alt}
-                decoding="async"
-                loading={placement === "centre" ? "eager" : "lazy"}
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                  event.currentTarget.parentElement?.classList.add("awaiting-photo");
-                }}
-              />
-              <div className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></div>
+              <GalleryPhotograph filename={filename} alt={alt} eager={placement==="centre"}/>
             </div>
           ))}
         </div>
@@ -396,13 +423,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
         <div className="heritage-photo-composition" aria-label="Cricket photographic collection">
           {["moment-1.webp", "moment-2.webp", "trophy-celebration.webp", "moment-3.webp", "moment-4.webp"].map((filename, i) => (
             <div className={`heritage-shot heritage-shot--${i}`} key={filename}>
-              <img
-                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
-                alt={i === 2 ? "Trophy celebration" : "Cricket moments"}
-                loading="lazy"
-                onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.add("awaiting-photo"); }}
-              />
-              <span className="gallery-photo-backup" aria-hidden="true"><StudyAthlete /></span>
+              <GalleryPhotograph filename={filename} alt={i===2?"Trophy celebration":"Cricket moments"}/>
             </div>
           ))}
         </div>
@@ -471,9 +492,8 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
               aria-hidden="true"
             >
               <div className="quiz-figure-drift">
-                {playerImage(player) ? (
-                  <img src={playerImage(player)} alt="" width="220" height="270" loading="lazy" />
-                ) : <StudyAthlete />}
+                <QuizPlayerPhoto player={player} />
+
               </div>
               <span className="quiz-figure-name">{player.player_name}</span>
             </div>

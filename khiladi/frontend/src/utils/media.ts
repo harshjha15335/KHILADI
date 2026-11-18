@@ -1,7 +1,4 @@
-import reviewPortraits from "../config/review-portraits.json";
-import publicPortraits from "../config/public-portraits.json";
 import officialIPLPortraits from "../components/player-cards/official-portraits.json";
-import { officialPortrait } from "../components/player-cards/portraitSource";
 import { siteURL } from "./urls";
 import media from "../config/approved-media.json";
 interface ApprovedAsset {
@@ -52,54 +49,33 @@ export const archivalImages = approved.archive.length
         })),
       ].map((image) => ({ ...image, src: `/__review-media/${image.src}.jpg` }))
     : [];
-// Four inherited jersey graphics were presented as photos. Never use them as portraits.
-const sourceVerifiedIDs = new Set([
-  3298, 7503, 7312, 8580, 6423, 6806, 25139, 8182, 3297, 152, 7260, 26663, 1487,
-  7269, 47523, 43798, 41503, 48557, 7545, 67036, 2411, 60700, 50284,
-]);
+/** Only exact-identity IPL profile images are eligible for public player photos.
+ *  Do not substitute Wikipedia photos, another player, kit artwork or guessed IDs.
+ *  We hotlink original source URLs; image rights still require separate review.
+ */
 export function playerImage(player: {
-  player_id: number;
-  player_name?: string;
-  cutout_url?: string;
-  portrait_url?: string;
-}) {
-  const ipl = (officialIPLPortraits as Record<string, {
-    name: string; source: string; url: string; previewUrl?: string;
+  player_id:number;
+  player_name?:string;
+  cutout_url?:string;
+  portrait_url?:string;
+}):string|undefined {
+  const record=(officialIPLPortraits as Record<string,{
+    name:string;source:string;url:string;previewUrl?:string;
   }>)[String(player.player_id)];
-  // Use only exact identity matches from publicly visible IPL player profiles.
-  // We link to official image endpoints; do not copy or claim ownership.
-  const officialIPLImage =
-    player.player_name && ipl?.url?.startsWith("https://www.iplt20.com/api/team-assets") &&
-    ipl?.name?.trim().toLocaleLowerCase("en") ===
-      player.player_name.trim().toLocaleLowerCase("en")
-      ? ipl.url
-      : undefined;
-  return (
-    officialIPLImage ||
-    ((publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)]?.name === player.player_name
-      ? (publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)].src
-      : undefined) ||
-    approved.portraits[String(player.player_id)]?.src ||
-    (reviewMedia
-      ? (reviewPortraits as Record<string, string>)[String(player.player_id)]
-      : undefined) ||
-    (reviewMedia
-      ? (() => {
-          const portrait = officialPortrait(player.player_id);
-          // A canonical player ID must never display a portrait assigned to a
-          // different cricket identity, even if a manifest entry is wrong.
-          if (
-            !portrait ||
-            (player.player_name &&
-              portrait.name.trim().toLocaleLowerCase("en") !==
-                player.player_name.trim().toLocaleLowerCase("en"))
-          )
-            return undefined;
-          return portrait.previewUrl ?? portrait.url;
-        })()
-      : undefined) ||
-    (reviewMedia && sourceVerifiedIDs.has(player.player_id)
-      ? player.cutout_url || player.portrait_url
-      : undefined)
-  );
+  if (!record || !player.player_name) return undefined;
+  const norm=(v:string)=>v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
+  // Visually audited on a 60-player contact sheet (3 sheets, November 2026):
+  // five IPL URLs return a generic human silhouette instead of the player's face.
+  // Two historical documents.iplt20.com headshots fail to load in Chromium.
+  // Prefer the user-supplied anonymous grey graphic for these identities.
+  const unavailablePlayerIds = new Set([2379, 6097, 31205, 43965, 63497, 2933, 3644]);
+  const noOfficialPhotoNames = new Set(["sam curran", "dasun shanaka"]);
+  if (unavailablePlayerIds.has(player.player_id) || noOfficialPhotoNames.has(norm(player.player_name)))
+    return undefined;
+  if(norm(record.name)!==norm(player.player_name)) return undefined;
+  if(!/^https:\/\/www\.iplt20\.com\/players\//.test(record.source)
+    && !/^https:\/\/www\.iplt20\.com\/teams\//.test(record.source)) return undefined;
+  if(!/^https:\/\/(?:www|documents)\.iplt20\.com\//.test(record.url))return undefined;
+  return record.url;
 }
+export const officialPortraitCount=Object.keys(officialIPLPortraits).length;
