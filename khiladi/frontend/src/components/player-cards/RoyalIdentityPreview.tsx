@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NeutralPlayerAvatar } from "../NeutralPlayerAvatar";
 import type { AnalyticalRole } from "../../types/analytics";
 import { playerImage } from "../../utils/media";
 import { number, tierLabel } from "./cardData";
@@ -52,24 +53,12 @@ export function RoyalIdentityPreview({
             onError={() => setFailed(true)}
           />
         ) : (
-          <div className="pc-typographic-fallback" role="img"
-             aria-label={`Photograph unavailable for ${player.player_name}`}>
-            <span className="pc-typographic-fallback__mark" aria-hidden="true">
-              {player.player_name.split(/\s+/).slice(0,2).map(w=>w[0]).join("")}
-            </span>
-            <span className="pc-typographic-fallback__caption" aria-hidden="true">
-              KHILADI / PLAYER ARCHIVE
-            </span>
-          </div>
+          <NeutralPlayerAvatar className="pc-neutral-avatar"
+            label={`No verified IPL portrait for ${player.player_name}`} />
         )}
         {source && !failed && !loaded && (
-          <span className="pc-initials" aria-label="Portrait loading">
-            {player.player_name
-              .split(/\s+/)
-              .slice(0, 2)
-              .map((w) => w[0])
-              .join("")}
-          </span>
+          <NeutralPlayerAvatar className="pc-neutral-avatar pc-neutral-avatar--loading"
+            label={`Loading official IPL portrait for ${player.player_name}`} />
         )}
         <span className="pc-preview-role">
           {selectedRole === "batting" ? "BATTING" : "BOWLING"} ANALYSIS

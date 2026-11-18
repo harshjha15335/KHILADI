@@ -1,6 +1,7 @@
 import React,{useEffect,useRef,useState} from "react";
 import type {Player} from "../types";
 import {playerImage} from "../utils/media";
+import { NeutralPlayerAvatar } from "./NeutralPlayerAvatar";
 import "./cricket-performance-gauge.css";
 const clamp=(x:number)=>Math.max(0,Math.min(1,x));
 export function CricketPerformanceGauge({players,mode,onInspect}:{
@@ -70,6 +71,7 @@ export function CricketPerformanceGauge({players,mode,onInspect}:{
     <div className="kh-gauge__player">
      {src&&<img src={src} width="100" height="125" loading="lazy" alt="" referrerPolicy="no-referrer"
       onError={e=>{e.currentTarget.style.display="none"}}/>}
+     <NeutralPlayerAvatar className="kh-gauge__neutral" label={`No verified IPL portrait for ${p.player_name}`} />
      <div><small>PLAYER ID {p.player_id}</small><h3>{p.player_name}</h3></div>
     </div>
     <dl>{stats.map(([name,n])=><div key={name}><dt>{name}</dt><dd>{n}</dd></div>)}</dl>

@@ -1,5 +1,6 @@
 import React,{useEffect,useRef,useState} from "react";
 import { playerImage } from "../utils/media";
+import { NeutralPlayerAvatar } from "./NeutralPlayerAvatar";
 import "./ranking-filmstrip.css";
 export type FilmstripRank = {
   player_id:number;player_name:string;rank:number;pressure_impact_index:number;
@@ -12,9 +13,8 @@ function Portrait({p}:{p:FilmstripRank}) {
   return <span className="rank-filmstrip__portrait">
     {image&&!failed?<img src={image} alt="" width="370" height="450" decoding="async"
       loading="lazy" referrerPolicy="no-referrer" onError={()=>setFailed(true)}/>:
-      <span className="rank-filmstrip__initials" aria-hidden="true">
-       {p.player_name.split(" ").slice(0,2).map(x=>x[0]).join("")}
-      </span>}
+      <NeutralPlayerAvatar className="rank-neutral-avatar"
+        label={`No verified IPL portrait for ${p.player_name}`} />
   </span>;
 }
 const wrap=(n:number,total:number)=>((n%total)+total)%total;

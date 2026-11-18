@@ -1,17 +1,16 @@
 import React from "react";
 import type { Player } from "../types";
 import { playerImage } from "../utils/media";
+import { NeutralPlayerAvatar } from "./NeutralPlayerAvatar";
 import "./khiladi-bento.css";
 
 const Portrait: React.FC<{player?:Player}> = ({player}) => {
-  if(!player)return <span className="kb-empty-player">KH</span>;
+  if(!player)return <NeutralPlayerAvatar className="kb-empty-player" />;
   const src=playerImage(player);
   return <span className="kb-mini-portrait">
-    {src ? <img src={src} alt="" loading="lazy" referrerPolicy="no-referrer"
+    {src ? <img src={src} alt="" loading="lazy" decoding="async" referrerPolicy="no-referrer"
       onError={e=>{e.currentTarget.style.display="none"}}/> : null}
-    <span className="kb-player-initials" aria-hidden="true">
-      {player.player_name.split(" ").map(s=>s[0]).slice(0,2).join("")}
-    </span>
+    <NeutralPlayerAvatar className="kb-neutral-avatar" label={`No verified IPL portrait for ${player.player_name}`} />
   </span>;
 };
 export const KhiladiBento:React.FC<{featured:Player[];onNavigate:(page:string)=>void}> = ({featured,onNavigate}) => {

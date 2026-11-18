@@ -1,6 +1,7 @@
 import { requestJSON } from "../utils/api";
 import { apiURL, siteURL } from "../utils/urls";
 import { playerImage } from "../utils/media";
+import { NeutralPlayerAvatar } from "../components/NeutralPlayerAvatar";
 import "./pressure-theatre.css";
 import React, { useState, useEffect } from "react";
 import {
@@ -20,11 +21,8 @@ import {
 function DeliveryPortrait({id,name}:{id:number;name:string}) {
   const [failed,setFailed]=useState(false);
   const image=playerImage({player_id:id,player_name:name});
-  if(!image||failed) return (
-    <span className="pressure-duel__initials" aria-hidden="true">
-      {name.split(/\s+/).slice(0,2).map(x=>x[0]).join("")}
-    </span>
-  );
+  if(!image||failed) return <NeutralPlayerAvatar className="pressure-duel__neutral"
+    label={`No verified IPL portrait for ${name}`} />;
   return <img className="pressure-duel__portrait" src={image} alt=""
     width="160" height="170" loading="lazy" decoding="async" referrerPolicy="no-referrer"
     onError={()=>setFailed(true)} />;
@@ -172,24 +170,6 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
           </div>
         </div>
 
-        <section className="pressure-photo-theatre" aria-label="Pressure match story">
-          <div className="pressure-photo-theatre__image">
-            <img src={siteURL("/assets/gallery/moment-1.webp")} alt="Cricket batter celebrating on the field"
-              width="1260" height="760" loading="lazy" />
-          </div>
-          <div className="pressure-photo-theatre__story">
-            <span>THE MATCH TELLS THE STORY</span>
-            <h2>One ball can change everything.</h2>
-            <p>The photograph is an editorial cricket moment. The scoreboard below shows
-              the separate recorded sample match, not the photographed delivery.</p>
-            <div className="pressure-photo-theatre__score">
-              <strong>{currentDelivery.cum_score}</strong>
-              <span>{replay.home_team} vs {replay.away_team}
-                <small>OVER {currentDelivery.over}.{currentDelivery.ball} · {replay.total_deliveries} BALLS RECORDED</small>
-              </span>
-            </div>
-          </div>
-        </section>
         {/* Central Cockpit / Live Ball Display (Light Theme) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Delivery Screen (2 cols) */}
