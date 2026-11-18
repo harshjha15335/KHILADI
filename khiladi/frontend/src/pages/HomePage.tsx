@@ -297,7 +297,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           <CTA variant="outline" onClick={() => onNavigate("database")}>Explore every player</CTA>
         </div>
       </section>
-      <KhiladiBento featured={featured} onNavigate={onNavigate} />
+      <KhiladiBento featured={featured} onNavigate={onNavigate} onSelectPlayer={onSelectPlayer} />
       <section
         className="editorial-chapter"
         aria-labelledby="story-heading"
