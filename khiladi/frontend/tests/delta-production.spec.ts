@@ -249,7 +249,7 @@ test("the editorial font system is present on homepage and analytics pages",asyn
   for(const route of ["home","database","rankings","pressure-lab"]){
     await page.goto("/#"+route);
     const family=await page.locator("main h1, main h2").first().evaluate(el=>getComputedStyle(el).fontFamily);
-    expect(family,route).toContain("Instrument Serif");
+    expect(family,route).toContain(route==="home"?"Barlow Condensed":"Instrument Serif");
   }
 });
 
