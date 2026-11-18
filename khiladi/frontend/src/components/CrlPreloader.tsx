@@ -56,7 +56,7 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({ onComplete 
           <span className="intro-side intro-side--left">
             {[..."KHILA"].map((char,i)=><span className="intro-window" key={i}><span className="intro-glyph intro-glyph--left">{char}</span></span>)}
           </span>
-          <span className="intro-symbol"><KhiladiLogo variant="loader" tone="white" /></span>
+          <span className="intro-symbol"><KhiladiLogo variant="loader" tone="original" /></span>
           <span className="intro-side intro-side--right">
             {[..."DI"].map((char,i)=><span className="intro-window" key={i}><span className="intro-glyph intro-glyph--right">{char}</span></span>)}
           </span>

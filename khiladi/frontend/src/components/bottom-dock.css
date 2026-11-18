@@ -48,3 +48,22 @@ body {padding-bottom:0!important;}
 .khiladi-top-nav .dock-home::before,.khiladi-top-nav .dock-home::after{content:none!important;display:none!important;clip-path:none!important}
 .khiladi-top-nav .dock-home{background:transparent!important;border:0!important;box-shadow:none!important;gap:5px}
 .khiladi-top-nav .dock-home:hover{transform:translateY(-2px) scale(1.025)}
+
+/* Clear mobile hierarchy: logo alone on the top row, readable side groups
+   on the second, not ten 9px links squeezed into one line. No menu button. */
+@media (max-width:760px) {
+ .khiladi-top-nav { grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+   grid-template-rows:48px 40px !important; height:102px !important;
+   min-height:102px !important; top:7px; padding:5px 9px !important;
+   border-radius:24px !important; row-gap:0; }
+ .khiladi-top-nav .dock-home { grid-row:1; grid-column:1 / -1;
+   min-height:43px; flex-direction:row; gap:9px; justify-self:center; }
+ .khiladi-top-nav .dock-home .khiladi-logo { width:25px; height:39px; }
+ .khiladi-top-nav .dock-brand-name { font-size:14px; letter-spacing:.075em }
+ .khiladi-top-nav .dock-group { grid-row:2; min-width:0; height:39px;
+   overflow-x:auto !important; scrollbar-width:none; }
+ .khiladi-top-nav .dock-group--left { grid-column:1; }
+ .khiladi-top-nav .dock-group--right { grid-column:2; border-left:1px solid #2549bd26; }
+ .khiladi-top-nav .dock-link { font-size:12px !important;
+   font-weight:700; padding:9px 10px; min-height:36px; }
+}
