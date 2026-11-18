@@ -1,6 +1,7 @@
 import React from "react";
 import { KhiladiKineticText } from "../components/KhiladiKineticText";
 import { AnalyticsIntro } from "../components/AnalyticsIntro";
+import "./methodology-story.css";
 export const MethodologyPage: React.FC = () => (
   <div className="min-h-screen pt-32 pb-20 px-5">
     <div className="max-w-4xl mx-auto space-y-10">
@@ -13,6 +14,33 @@ export const MethodologyPage: React.FC = () => (
         The numbers help you ask better questions about a player. They describe
         recorded performance, and cannot promise what happens next.
       </AnalyticsIntro>
+      <section className="methodology-story" aria-labelledby="methodology-story-title">
+        <header>
+          <p className="eyebrow">FROM MATCH TO MEANING</p>
+          <h2 id="methodology-story-title">Every number has a journey.</h2>
+          <p>Follow the public evidence through four readable stages. The private
+          accepted D20 pipeline is documented separately below.</p>
+        </header>
+        <ol className="methodology-story__steps">
+          {[
+            ["01","Collect","Recorded balls, player identities and match states",
+             "The competition pack is historical, not a live auction feed."],
+            ["02","Context","Situations described by the inherited match-state heuristic",
+             "The public 1.8 threshold is not D20's hybrid definition."],
+            ["03","Measure","Pressure runs, balls, wickets, strike rate and economy",
+             "Stored aggregates and exposure limits accompany every comparison."],
+            ["04","Interpret","Explore rankings, profiles, comparisons and squad scenarios",
+             "Legacy indices are descriptive, not win probabilities or future forecasts."],
+          ].map(([number,title,summary,caveat])=>(
+            <li className="methodology-story__step" key={number}>
+              <span className="methodology-story__number">{number}</span>
+              <strong>{title}</strong>
+              <p>{summary}</p>
+              <details><summary>What this means</summary><p>{caveat}</p></details>
+            </li>
+          ))}
+        </ol>
+      </section>
       <section
         className="space-y-5 rounded-3xl border border-[#cbd5e9] bg-white p-6 sm:p-8"
         aria-labelledby="accepted-d20-method"
