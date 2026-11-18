@@ -15,7 +15,7 @@ function EditorialPlayerPortrait({ player }: { player: Player }) {
         className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#F0E8FF] via-[#E8F1FF] to-[#FFE5F0] text-[#2450B8]"
       >
         <span className="text-6xl font-bold tracking-[-.08em] opacity-80" aria-hidden="true">
-          {player.player_name.split(/\\s+/).slice(0, 2).map((part) => part[0]).join("")}
+          {player.player_name.split(/\s+/).slice(0, 2).map((part) => part[0]).join("")}
         </span>
       </div>
     );
