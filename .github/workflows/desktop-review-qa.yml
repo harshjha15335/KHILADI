@@ -55,7 +55,7 @@ jobs:
           exit 1
 
       - name: Browser-check planner persistence and safe JSON transfer
-        run: npx playwright test tests/desktop-planner-release.spec.ts --reporter=list
+        run: npx playwright test tests/desktop-planner-release.spec.ts tests/desktop-routes-release.spec.ts --reporter=list
         env:
           KHILADI_TEST_TOKEN_FILE: ""
 
