@@ -21,13 +21,10 @@ test("homepage and player dialog have no serious accessibility violations", asyn
   await page.goto("/#database");
   await page.getByRole("searchbox").fill("Jofra Archer");
   await page.locator(".discovery-open").click();
-  await expect(page.locator(".profile-dialog")).toBeVisible();
-  await expect(page.locator(".profile-reveal-item").last()).toHaveCSS(
-    "opacity",
-    "1",
-  );
+  await expect(page.locator(".royal-dialog[open]")).toBeVisible();
+  await expect(page.locator(".pc-profile-evidence")).toBeVisible();
   const dialog = await new AxeBuilder({ page })
-    .include(".profile-dialog")
+    .include(".royal-dialog")
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
   expect(
