@@ -43,6 +43,7 @@ test("capture public KHILADI routes for human Delta reference comparison", async
       background: getComputedStyle(root).backgroundColor,
     }));
     snapshots.push({ route, reference, section, ...details });
+    console.log(`KHILADI_VISUAL_REVIEW ${JSON.stringify({ route, reference, section, ...details })}`);
     expect(details.textLength).toBeGreaterThan(60);
   }
   writeFileSync(join(OUTPUT, "khiladi-page-inventory.json"), JSON.stringify(snapshots, null, 2));
@@ -78,6 +79,7 @@ test("capture Delta reference viewports when accessible; record blockers honestl
     }
   }
   writeFileSync(join(OUTPUT, "delta-reference-access.json"), JSON.stringify(statuses, null, 2));
+  console.log(`DELTA_REFERENCE_ACCESS ${JSON.stringify(statuses)}`);
   // The reference is external and may refuse automated access. Never turn
   // that blocker into a false KHILADI failure or visual-fidelity claim.
   expect(statuses).toHaveLength(references.length);
