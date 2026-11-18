@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useRef, useState, useCallback } from "react";
-import { StudyAthlete } from "./StudyAthlete";
+import { NeutralPlayerAvatar } from "../NeutralPlayerAvatar";
 import { useCardMotion } from "./useCardMotion";
 import type { SceneControl } from "./FoilScene";
 import { number, tierLabel, type CardData } from "./cardData";
@@ -98,27 +98,16 @@ export function RoyalPlayerCard({
                 {r.rank ? `#${String(r.rank).padStart(2, "0")}` : "—"}
               </strong>
             </div>
-            <div className="rc-study-caption">
-              {portraitLoaded ? (
-                <>
-                  PLAYER PORTRAIT
-                  <br />
-                  SOURCE-VERIFIED IDENTITY
-                </>
-              ) : (
-                <>
-                  PORTRAIT{" "}
-                  {portraitFailed || !portrait ? "UNAVAILABLE" : "LOADING"}
-                  <br />
-                  NON-PLAYER ARTWORK FALLBACK
-                </>
-              )}
-            </div>
+            {portraitLoaded && (
+              <div className="rc-study-caption">OFFICIAL IPL PORTRAIT</div>
+            )}
             <div className="rc-portrait-halo" aria-hidden="true" />
             <div
               className={`rc-portrait ${portraitLoaded ? "rc-portrait-photo" : ""}`}
             >
-              {!portraitLoaded && <StudyAthlete />}
+              {!portraitLoaded && (
+                <NeutralPlayerAvatar className="rc-neutral-avatar" label={`No verified IPL portrait for ${r.player_name}`} />
+              )}
               {portrait && !portraitFailed && (
                 <img
                   className="rc-official-portrait"

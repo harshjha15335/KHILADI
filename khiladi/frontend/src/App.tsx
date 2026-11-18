@@ -5,6 +5,8 @@ import { apiURL } from "./utils/urls";
 import { gsap, ScrollTrigger } from "./utils/motion";
 import "./polished-system.css";
 import "./editorial-refinement.css";
+import "./typography-system.css";
+import "./portrait-fallbacks.css";
 import "./royal-editorial-global.css";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";

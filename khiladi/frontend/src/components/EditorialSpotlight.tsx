@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { playerImage } from "../utils/media";
+import { NeutralPlayerAvatar } from "./NeutralPlayerAvatar";
 import "./editorial-spotlight.css";
 
 export type SpotlightEntry = {
@@ -9,10 +10,9 @@ export type SpotlightEntry = {
 function Portrait({entry}:{entry:SpotlightEntry}) {
   const [failed,setFailed]=useState(false);
   const src=playerImage(entry);
-  if (!src||failed) return <span className="editorial-spotlight__fallback" aria-hidden="true">
-    {entry.player_name.split(" ").map(x=>x[0]).slice(0,2).join("")}
-  </span>;
-  return <img src={src} alt="" decoding="async" loading="lazy" referrerPolicy="no-referrer"
+  if (!src||failed) return <NeutralPlayerAvatar className="editorial-spotlight__neutral"
+    label={`No verified IPL portrait for ${entry.player_name}`} />;
+    return <img src={src} alt="" decoding="async" loading="lazy" referrerPolicy="no-referrer"
     width="400" height="470" onError={()=>setFailed(true)} />;
 }
 /** Source-linked player photography in a deliberately asymmetric editorial composition.

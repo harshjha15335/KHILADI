@@ -1,0 +1,33 @@
+name: KHILADI IPL portrait contact sheet
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: khiladi-portrait-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+jobs:
+  visual-catalogue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: khiladi/frontend/package-lock.json
+      - run: npm ci --include=dev --no-audit --no-fund
+        working-directory: khiladi/frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: khiladi/frontend
+      - run: node scripts/audit-ipl-portraits.mjs
+        working-directory: khiladi/frontend
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: khiladi-ipl-portrait-sheet
+          path: docs/qa/portrait-identity-audit
+          if-no-files-found: warn

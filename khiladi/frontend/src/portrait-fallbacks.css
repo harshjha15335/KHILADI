@@ -1,0 +1,41 @@
+/* One neutral, anonymous silhouette on ALL missing-photo surfaces. */
+.pc-preview-visual>.pc-neutral-avatar,
+.pc-preview-visual>.pc-neutral-avatar--loading{
+ position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+}
+.pc-preview-visual>img{object-fit:contain!important;object-position:center bottom!important;z-index:1}
+.pc-preview-visual>.pc-neutral-avatar--loading{opacity:1}
+.pc-preview-visual .pc-preview-rank,.pc-preview-visual .pc-preview-role{z-index:3}
+.pc-preview-visual .pc-preview-rank{background:#213d7aab;border-radius:6px;padding:2px 7px;color:#fff}
+.pc-preview-visual>.pc-neutral-avatar{background:#dadde2}
+.rc-portrait .rc-neutral-avatar{height:100%;width:100%;display:block;object-fit:contain;
+ position:absolute;inset:0;filter:none;box-shadow:none;transform:none}
+.rc-portrait:not(.rc-portrait-photo){left:35px;top:48px;width:350px;height:350px;
+ filter:none;overflow:hidden;border-radius:16px}
+.rc-portrait:not(.rc-portrait-photo) .rc-neutral-avatar{width:100%;height:100%}
+.rc-portrait-photo .rc-neutral-avatar{display:none}
+.rc-portrait-photo .rc-official-portrait{object-fit:contain;object-position:center bottom}
+.rc-study-caption{font-family:var(--font-condensed)!important;font-weight:600}
+.rank-filmstrip__portrait>.rank-neutral-avatar{display:block;width:100%;height:100%}
+.editorial-spotlight__visual>.editorial-spotlight__neutral{display:block;width:100%;height:100%;object-fit:cover}
+.kb-mini-portrait>.kb-neutral-avatar{position:absolute;inset:0;width:100%;height:100%;z-index:0;object-fit:cover}
+.kb-mini-portrait>img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.kb-empty-player{display:block;width:100%;height:100%}
+.kh-gauge__player .kh-gauge__neutral{width:100px;height:120px;flex:none;object-fit:cover;border-radius:9px}
+.kh-gauge__player img+.kh-gauge__neutral{position:absolute;visibility:hidden}
+.kh-gauge__player img{position:relative;z-index:1}
+.kh-gauge__player img:is([style*="display: none"])+.kh-gauge__neutral{position:static;visibility:visible}
+.pressure-duel>.pressure-duel__neutral{display:block;width:100px;height:125px;
+ flex:0 0 100px;object-fit:cover;border-radius:12px}
+@media(max-width:650px){.pressure-duel>.pressure-duel__neutral{width:90px;flex-basis:90px}}
+
+/* Keep the user's exact square placeholder centered in all layouts. */
+.quiz-figure .quiz-neutral-player{display:block;width:100%;height:100%;object-fit:contain;
+ background:#DADDE2;border-radius:9px}
+.gallery-photo-backup .gallery-neutral-avatar{display:block;width:100%;height:100%;object-fit:contain;
+ background:#DADDE2}
+.editorial-track-neutral{width:100%;height:100%;object-fit:contain;display:block;background:#DADDE2}
+.kb-mini-portrait{position:relative;isolation:isolate}
+.kb-mini-portrait>.kb-neutral-avatar{display:block;z-index:0}
+.kb-mini-portrait>img{z-index:2}
+.rank-filmstrip__portrait>.rank-neutral-avatar{object-fit:contain;background:#DADDE2}

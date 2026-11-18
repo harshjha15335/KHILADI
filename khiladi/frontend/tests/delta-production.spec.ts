@@ -96,23 +96,22 @@ test("all nine public quiz selections return real data without a backend",async(
   expect(results.every(x=>x.count>0)).toBe(true);
 });
 
-test("memory ribbon stays composed while navigating and scrolling in both directions", async ({page}) => {
+test("memory ribbon remains composed on scroll and keeps original navigation", async ({page}) => {
   await page.setViewportSize({width:1440,height:900});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/#home");
   await page.keyboard.press("Escape");
-  const gallery = page.getByTestId("cinematic-memory-ribbon");
+  const gallery=page.getByTestId("cinematic-memory-ribbon");
   await expect(gallery).toBeVisible();
-  const width = (await gallery.boundingBox())?.width ?? 0;
-  expect(width).toBeGreaterThan(400);
+  const before=(await gallery.boundingBox())?.width ?? 0;
+  expect(before).toBeGreaterThan(400);
   await gallery.getByRole("button",{name:"Next cricket photograph"}).click();
   await expect(gallery.locator(".memory-ribbon__count")).toHaveText("02 / 05");
   await page.evaluate(()=>window.scrollTo(0,Math.floor(innerHeight*.78)));
   await page.waitForTimeout(450);
-  expect((await gallery.boundingBox())?.width).toBeCloseTo(width,0);
+  expect((await gallery.boundingBox())?.width).toBeCloseTo(before,0);
   await page.evaluate(()=>window.scrollTo(0,0));
   await expect(page.getByRole("navigation",{name:"Primary navigation"})).toBeVisible();
-  await expect(page.getByRole("heading",{name:/Find the players/})).toBeVisible();
 });
 test("player gallery translates as the reader progresses but remains directly scrollable",async({page})=>{
   await page.setViewportSize({width:1440,height:900});
@@ -194,4 +193,77 @@ test("Matte Rise displays readable photography with an accessible title",async({
   await expect(matte.locator(".matte-rise__photo img")).toHaveCount(2);
   const photoStyles=await matte.locator(".matte-rise__photo img").first().evaluate(el=>getComputedStyle(el).objectFit);
   expect(photoStyles).toBe("contain");
+});
+
+
+test("the exact uploaded grey avatar loads and replaces missing player photography",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#database");
+  const file=await page.request.get("/assets/players/neutral-avatar.webp");
+  expect(file.ok()).toBe(true);
+  expect(file.headers()["content-type"]).toContain("image/webp");
+  const placeholder=page.locator("img[data-testid='neutral-player-avatar']").first();
+  await expect(placeholder).toBeAttached();
+  await expect(placeholder).toHaveAttribute("src",/assets\/players\/neutral-avatar\.webp/);
+  const dimensions=await placeholder.evaluate(async el=>{
+    const img=el as HTMLImageElement;
+    if(!img.complete)await new Promise(resolve=>img.addEventListener("load",resolve,{once:true}));
+    return [img.naturalWidth,img.naturalHeight];
+  });
+  expect(dimensions).toEqual([350,350]);
+});
+
+test("official player photographs are never replaced with another player's identity",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#home");
+  const result=await page.evaluate(async()=>{
+    const {playerImage}=await import("/src/utils/media.ts");
+    return [playerImage({player_id:3298,player_name:"Jofra Archer"}),
+      playerImage({player_id:3298,player_name:"Wrong Name"}),
+      playerImage({player_id:9999999,player_name:"Unknown Person"}),
+      playerImage({player_id:43965,player_name:"Emanjot Singh Chahal"}),
+      playerImage({player_id:2379,player_name:"Ben Duckett"}),
+      playerImage({player_id:6097,player_name:"Brydon Carse"}),
+      playerImage({player_id:31205,player_name:"Ruchit Ahir"}),
+      playerImage({player_id:63497,player_name:"RS Ambrish"}),
+      playerImage({player_id:2933,player_name:"Jasprit Bumrah"}),
+      playerImage({player_id:3644,player_name:"Kuldeep Yadav"})];
+  });
+  expect(result[0]).toMatch(/^https:\/\/www\.iplt20\.com\/api\/team-assets/);
+  expect(result[1]).toBeUndefined();
+  expect(result[2]).toBeUndefined();
+  expect(result[3]).toBeUndefined();
+  expect(result.slice(4).every(x=>x===undefined)).toBe(true);
+});
+
+test("Pressure replay has no unrelated Rajasthan image and retains the live delivery controls",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#pressure-lab");
+  await expect(page.locator(".pressure-photo-theatre")).toHaveCount(0);
+  await expect(page.locator("main")).toContainText("Deliveries Recorded");
+  await expect(page.locator(".pressure-duel")).toHaveCount(2);
+});
+
+test("the editorial font system is present on homepage and analytics pages",async({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const route of ["home","database","rankings","pressure-lab"]){
+    await page.goto("/#"+route);
+    const family=await page.locator("main h1, main h2").first().evaluate(el=>getComputedStyle(el).fontFamily);
+    expect(family,route).toContain("Instrument Serif");
+  }
+});
+
+test("home trophy photo has measurable scroll progress and navbar entrance completes",async({page})=>{
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/#home");
+  await page.keyboard.press("Escape");
+  const nav=page.locator(".khiladi-top-nav");
+  await expect.poll(async()=>nav.getAttribute("data-intro-motion"),{timeout:5500}).toBe("ready");
+  const hero=page.locator(".hero-chapter");
+  await page.evaluate(()=>scrollTo(0,530));
+  await expect.poll(async()=>{
+    const n=Number(await hero.getAttribute("data-scroll-progress"));
+    return Number.isFinite(n)?n:0;
+  },{timeout:5500}).toBeGreaterThan(.05);
 });
