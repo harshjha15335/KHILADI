@@ -1,89 +1,49 @@
-/* Floating, optically layered glass navigation across every route. */
-.khiladi-bottom-dock{
-  --dock-ink:#23479c;
-  position:fixed;
-  z-index:900;
-  left:50%;
-  bottom:calc(20px + env(safe-area-inset-bottom, 0px));
-  transform:translateX(-50%);
-  width:min(calc(100% - 32px),1360px);
-  min-height:76px;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 136px minmax(0,1fr);
-  gap:8px;
-  align-items:center;
-  padding:8px 12px;
-  border-radius:100px;
-  border:1px solid rgba(255,255,255,.82);
-  background:linear-gradient(115deg,rgba(255,255,255,.73),rgba(245,236,255,.61) 48%,rgba(255,242,249,.74));
-  -webkit-backdrop-filter:blur(26px) saturate(170%);
-  backdrop-filter:blur(26px) saturate(170%);
-  box-shadow:0 20px 56px rgba(28,46,108,.19),0 3px 10px rgba(57,31,115,.07),inset 0 1px 0 #fff,inset 0 -1px 0 rgba(255,255,255,.45);
-  isolation:isolate;
-  color:var(--dock-ink);
+/* Delta geometry + restrained Apple-inspired Liquid Glass. Top navigation on every page. */
+.khiladi-top-nav {
+ --nav-ink:#1d2750;
+ position:fixed;z-index:950;top:18px;left:50%;transform:translateX(-50%);
+ width:min(calc(100vw - 38px),1450px);height:65px;min-height:65px;
+ display:grid;grid-template-columns:minmax(0,1fr) 154px minmax(0,1fr);align-items:center;
+ gap:4px;padding:5px 16px;border-radius:999px;isolation:isolate;
+ background:linear-gradient(110deg,rgba(253,248,252,.83),rgba(255,255,255,.77),rgba(240,238,255,.82));
+ border:1px solid rgba(255,255,255,.88);
+ -webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);
+ box-shadow:0 8px 28px rgba(27,35,83,.13),inset 0 1px 0 rgba(255,255,255,.94);
+ color:var(--nav-ink);
 }
-.khiladi-bottom-dock::before{
-  content:"";position:absolute;inset:1px;border-radius:inherit;pointer-events:none;
-  border:1px solid rgba(255,255,255,.45);
-  background:linear-gradient(140deg,rgba(255,255,255,.42),rgba(255,255,255,0) 50%,rgba(255,255,255,.12));
-  z-index:-1;
-}
-.dock-ambient{
-  position:absolute;inset:6px;border-radius:inherit;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.58),transparent 60%);z-index:-1;
-}
-.dock-group{min-width:0;display:flex;align-items:center;justify-content:space-around;gap:3px}
-.dock-link{
-  position:relative;display:flex;min-width:0;min-height:46px;align-items:center;justify-content:center;
-  padding:10px clamp(5px,.9vw,14px);border-radius:999px;
-  color:var(--dock-ink);font-size:clamp(10px,.91vw,13px);font-weight:650;letter-spacing:-.015em;
-  text-decoration:none;white-space:nowrap;outline-offset:3px;
-  transition:transform .35s cubic-bezier(.22,1,.36,1),color .25s,background .25s,box-shadow .25s;
-}
-.dock-link:after{
-  content:"";position:absolute;bottom:3px;left:35%;right:35%;height:3px;border-radius:99px;
-  background:#e51673;transform:scaleX(0);transition:transform .3s;
-}
-.dock-link:hover,.dock-link:focus-visible{
-  color:#cb1268;transform:translateY(-3px);
-  background:rgba(255,255,255,.67);
-}
-.dock-link[data-active="true"]{
-  color:#fff;background:linear-gradient(135deg,#2549bd,#e51673);
-  box-shadow:0 6px 17px rgba(229,22,115,.24);
-}
-.dock-link[data-active="true"]:after{display:none}
-.dock-home{
-  position:relative;min-width:0;min-height:59px;display:flex;gap:8px;align-items:center;justify-content:center;
-  text-decoration:none;border-radius:100px;color:#2149ae;
-  background:rgba(255,255,255,.67);border:1px solid rgba(255,255,255,.88);
-  box-shadow:0 5px 22px rgba(36,73,174,.10),inset 0 1px 0 rgba(255,255,255,.95);
-  transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s;
-}
-.dock-home:hover,.dock-home:focus-visible{transform:translateY(-3px) scale(1.025);box-shadow:0 11px 25px rgba(36,73,174,.20)}
-.dock-home[aria-current="page"]{box-shadow:0 0 0 1px rgba(230,23,113,.25),0 8px 27px rgba(230,23,113,.17)}
-.dock-home .khiladi-logo{width:25px;max-height:45px}
-.dock-brand-name{font-size:13px;font-weight:950;letter-spacing:.04em;color:#2549bd}
-body{padding-bottom:108px}
-#main-content{isolation:isolate}
-@media (max-width:1080px){
-  .khiladi-bottom-dock{grid-template-columns:minmax(0,1fr) 112px minmax(0,1fr);padding:8px 7px;gap:2px}
-  .dock-link{font-size:10px;padding-inline:5px}
-  .dock-brand-name{font-size:11px}
-}
-@media (max-width:730px){
-  .khiladi-bottom-dock{width:calc(100% - 16px);bottom:calc(8px + env(safe-area-inset-bottom,0px));min-height:67px;border-radius:25px;grid-template-columns:minmax(0,1fr) 74px minmax(0,1fr);padding:6px;gap:3px}
-  .dock-group{overflow-x:auto;justify-content:flex-start;scrollbar-width:none;overscroll-behavior-x:contain;padding:3px}
-  .dock-group::-webkit-scrollbar{display:none}
-  .dock-link{font-size:10px;min-height:44px;flex:0 0 auto;padding:9px 9px}
-  .dock-home{min-height:52px;flex-direction:column;gap:0;border-radius:18px}
-  .dock-home .khiladi-logo{width:18px;height:28px}
-  .dock-brand-name{font-size:9px}
-  body{padding-bottom:92px}
-}
-@media (prefers-reduced-transparency:reduce){
-  .khiladi-bottom-dock{background:rgba(255,253,248,.98)}
-}
-@media(prefers-reduced-motion:reduce){
-  .dock-link,.dock-home{transition:none!important;transform:none!important}
-}
+.khiladi-top-nav:before { content:"";position:absolute;inset:1px;border-radius:inherit;pointer-events:none;
+ border:1px solid rgba(255,255,255,.27); }
+.khiladi-top-nav .dock-ambient { position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
+ background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.35),transparent 70%); }
+.khiladi-top-nav .dock-group { display:flex;align-items:center;min-width:0;justify-content:space-around;gap:3px }
+.khiladi-top-nav .dock-link {color:#1c2856;min-height:43px;min-width:0;display:flex;align-items:center;
+ justify-content:center;padding:9px clamp(6px,.85vw,16px);border-radius:999px;text-decoration:none;
+ white-space:nowrap;font-size:clamp(10px,.84vw,13px);font-weight:650;letter-spacing:-.012em;
+ transition:background .24s ease,color .24s ease,transform .3s cubic-bezier(.2,.8,.2,1)}
+.khiladi-top-nav .dock-link:hover,.khiladi-top-nav .dock-link:focus-visible{
+ background:rgba(255,255,255,.72);color:#d91d78;transform:translateY(-2px);}
+.khiladi-top-nav .dock-link[data-active="true"]{background:rgba(36,83,183,.12);color:#2453b7}
+.khiladi-top-nav .dock-home{position:relative;min-height:55px;display:flex;justify-content:center;align-items:center;gap:9px;
+ border-radius:0;text-decoration:none;outline-offset:4px;transform:translateY(-2px);
+ background:transparent;}
+.khiladi-top-nav .dock-home:before{content:"";position:absolute;inset:0 7px;z-index:-1;
+ background:linear-gradient(165deg,#f6e4f4,#f0eaff);border-radius:8px 8px 18px 18px;
+ clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.75;}
+.khiladi-top-nav .dock-home .khiladi-logo {width:29px;height:44px;aspect-ratio:496/748;}
+.khiladi-top-nav .dock-brand-name {font-size:15px;font-weight:850;letter-spacing:.08em;color:#2453b7}
+.khiladi-top-nav .dock-link:focus-visible,.khiladi-top-nav .dock-home:focus-visible{outline:3px solid #2453b7}
+body {padding-bottom:0!important;}
+@media(max-width:1100px){.khiladi-top-nav{width:calc(100vw - 24px);grid-template-columns:minmax(0,1fr) 116px minmax(0,1fr);gap:2px;padding:5px 7px}
+ .khiladi-top-nav .dock-link{font-size:10px;padding-inline:5px}.khiladi-top-nav .dock-brand-name{font-size:11px}
+ .khiladi-top-nav .dock-home .khiladi-logo{width:22px;height:35px}}
+@media(max-width:760px){.khiladi-top-nav{top:8px;width:calc(100vw - 14px);height:64px;min-height:64px;
+ grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr);padding:4px;gap:2px;border-radius:23px}
+ .khiladi-top-nav .dock-group{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;scroll-snap-type:x mandatory}
+ .khiladi-top-nav .dock-group::-webkit-scrollbar{display:none}
+ .khiladi-top-nav .dock-link{flex:0 0 auto;padding:9px 8px;font-size:10px;min-height:43px;scroll-snap-align:center}
+ .khiladi-top-nav .dock-home{flex-direction:column;gap:0;min-height:56px}
+ .khiladi-top-nav .dock-home:before{inset:0 1px}
+ .khiladi-top-nav .dock-home .khiladi-logo{width:17px;height:28px}
+ .khiladi-top-nav .dock-brand-name{font-size:8px}}
+@media(prefers-reduced-transparency:reduce){.khiladi-top-nav{background:#fffdfb}}
+@media(prefers-reduced-motion:reduce){.khiladi-top-nav *{transition:none!important}}

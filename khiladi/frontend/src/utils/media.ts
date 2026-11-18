@@ -1,5 +1,6 @@
 import reviewPortraits from "../config/review-portraits.json";
 import publicPortraits from "../config/public-portraits.json";
+import officialIPLPortraits from "../components/player-cards/official-portraits.json";
 import { officialPortrait } from "../components/player-cards/portraitSource";
 import { siteURL } from "./urls";
 import media from "../config/approved-media.json";
@@ -62,11 +63,22 @@ export function playerImage(player: {
   cutout_url?: string;
   portrait_url?: string;
 }) {
+  const ipl = (officialIPLPortraits as Record<string, {
+    name: string; source: string; url: string; previewUrl?: string;
+  }>)[String(player.player_id)];
+  // Use only exact identity matches from publicly visible IPL player profiles.
+  // We link to official image endpoints; do not copy or claim ownership.
+  const officialIPLImage =
+    player.player_name && ipl?.name?.trim().toLocaleLowerCase("en") ===
+      player.player_name.trim().toLocaleLowerCase("en")
+      ? ipl.previewUrl ?? ipl.url
+      : undefined;
   return (
     ((publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)]?.name === player.player_name
       ? (publicPortraits as Record<string, { name: string; src: string }>)[String(player.player_id)].src
       : undefined) ||
     approved.portraits[String(player.player_id)]?.src ||
+    officialIPLImage ||
     (reviewMedia
       ? (reviewPortraits as Record<string, string>)[String(player.player_id)]
       : undefined) ||

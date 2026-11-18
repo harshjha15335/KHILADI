@@ -56,6 +56,7 @@ export function RoyalComparisonEvidence({
         `${d.record.format_exposure.ipl} / ${d.record.format_exposure.t20i} / ${d.record.format_exposure.other_t20}`,
     ],
   ];
+  if (!research.available) return null;
   return (
     <section
       className="pc-comparison-evidence"

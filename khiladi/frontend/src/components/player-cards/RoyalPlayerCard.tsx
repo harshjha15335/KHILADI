@@ -4,16 +4,19 @@ import { useCardMotion } from "./useCardMotion";
 import type { SceneControl } from "./FoilScene";
 import { number, tierLabel, type CardData } from "./cardData";
 import type { D20Ranking, AnalyticalRole } from "../../types/analytics";
+import type { Player } from "../../types";
 import { royalSymbol } from "./portraitSource";
 import { playerImage } from "../../utils/media";
 const FoilScene = lazy(() => import("./FoilScene"));
 export function RoyalPlayerCard({
   data,
   identity,
+  publicPlayer,
   analysisTarget = "#accepted-evidence",
   onAnalysis,
 }: {
   data?: CardData | null;
+  publicPlayer?: Player;
   identity?: {
     player_id: number;
     player_name: string;
@@ -48,7 +51,7 @@ export function RoyalPlayerCard({
     >
       <p className="rc-stage-label">
         <span className="rc-live-dot" />
-        PLAYER COLLECTION <span>{data ? "PRIVATE D20" : "IDENTITY"}</span>
+        PLAYER COLLECTION <span>{data ? "ACCEPTED D20" : "PUBLIC RECORD"}</span>
       </p>
       <div
         ref={motion.surface}
@@ -161,36 +164,38 @@ export function RoyalPlayerCard({
             <div className="rc-stat-face">
               <div className="rc-main-rating">
                 <div>
-                  <span>D20 RATING</span>
+                  <span>{data ? "D20 RATING" : "LEGACY PRESSURE INDEX"}</span>
                   <strong data-testid="front-rating">
-                    {data ? number(r.rating) : "—"}
+                    {data ? number(r.rating) : publicPlayer ? number(publicPlayer.pressure_impact_index,2) : "—"}
                   </strong>
                 </div>
                 <div className="rc-tier">
-                  <span>EVIDENCE TIER</span>
-                  <b>{data ? tierLabel(r.evidence_tier) : "Unavailable"}</b>
-                  <small>Historical evidence</small>
+                  <span>{data ? "EVIDENCE TIER" : "PLAYING ROLE"}</span>
+                  <b>{data ? tierLabel(r.evidence_tier) : publicPlayer?.role ?? "—"}</b>
+                  <small>{data ? "Historical evidence" : "Recorded sample / legacy model"}</small>
                 </div>
               </div>
               <dl className="rc-front-stats">
                 <div>
                   <dd data-testid="front-events">
-                    {r.exposure?.pressure_events ?? "—"}
+                    {data ? r.exposure?.pressure_events ?? "—" : (r.analytical_role === "batting" ? publicPlayer?.batting.press_balls : publicPlayer?.bowling.press_balls) ?? "—"}
                   </dd>
-                  <dt>Pressure events</dt>
+                  <dt>{data ? "Pressure events" : "Pressure deliveries"}</dt>
                 </div>
                 <div>
                   <dd data-testid="front-matches">
-                    {r.exposure?.pressure_matches ?? "—"}
+                    {data ? r.exposure?.pressure_matches ?? "—" : (r.analytical_role === "batting" ? publicPlayer?.batting.total_runs : publicPlayer?.bowling.wickets) ?? "—"}
                   </dd>
-                  <dt>Pressure matches</dt>
+                  <dt>{data ? "Pressure matches" : r.analytical_role === "batting" ? "Recorded runs" : "Recorded wickets"}</dt>
                 </div>
                 <div>
                   <dd data-testid="front-stability">
-                    {data ? number(r.probability_top10 * 100, 1) : "—"}
+                    {data ? number(r.probability_top10 * 100, 1) : publicPlayer
+                      ? number(r.analytical_role === "batting" ? publicPlayer.batting.press_sr : publicPlayer.bowling.press_econ, 1)
+                      : "—"}
                     {data && <i>%</i>}
                   </dd>
-                  <dt>Historical P(top 10)</dt>
+                  <dt>{data ? "Historical P(top 10)" : r.analytical_role === "batting" ? "Pressure strike rate" : "Pressure economy"}</dt>
                 </div>
               </dl>
               <div className="rc-card-bottom">
@@ -199,7 +204,7 @@ export function RoyalPlayerCard({
                   {r.analytical_role.toUpperCase()}
                 </span>
                 <span>
-                  {data ? "DIMENSIONLESS RATING" : "D20 EVIDENCE UNAVAILABLE"}
+                  {data ? "DIMENSIONLESS RATING" : "RECORDED SAMPLE · NOT D20"}
                 </span>
               </div>
             </div>
@@ -305,17 +310,20 @@ export function RoyalPlayerCard({
                 </p>
               </>
             ) : (
-              <div className="pc-card-unavailable">
-                <h3>D20 evidence unavailable</h3>
-                <p>
-                  This canonical identity is discoverable. No accepted record
-                  for this analytical role is available in the current private
-                  serving scope.
-                </p>
-                <p>
-                  Missing evidence is not a zero rating or a finding of
-                  ineligibility. Legacy metrics have not been substituted.
-                </p>
+              <div className="pc-card-public-stats">
+                <h3>Recorded player performance</h3>
+                {publicPlayer ? (
+                  <dl className="rc-back-ledger">
+                    <div><dt>Legacy pressure impact index</dt><dd>{number(publicPlayer.pressure_impact_index,2)}</dd></div>
+                    <div><dt>Recorded batting runs</dt><dd>{publicPlayer.batting.total_runs}</dd></div>
+                    <div><dt>Pressure batting balls</dt><dd>{publicPlayer.batting.press_balls}</dd></div>
+                    <div><dt>Pressure strike rate</dt><dd>{number(publicPlayer.batting.press_sr,1)}</dd></div>
+                    <div><dt>Recorded wickets</dt><dd>{publicPlayer.bowling.wickets}</dd></div>
+                    <div><dt>Pressure bowling balls</dt><dd>{publicPlayer.bowling.press_balls}</dd></div>
+                    <div><dt>Pressure economy</dt><dd>{number(publicPlayer.bowling.press_econ,2)}</dd></div>
+                  </dl>
+                ) : <p>Public player details are not available for this identity.</p>}
+                <p className="rc-back-note">Observed legacy sample only, not D20. No forecast or private-model score is implied.</p>
               </div>
             )}
           </article>

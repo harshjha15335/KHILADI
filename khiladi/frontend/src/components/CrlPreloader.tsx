@@ -1,109 +1,69 @@
-import { KhiladiLogo } from "./KhiladiLogo";
 import React, { useCallback, useEffect, useRef } from "react";
+import { KhiladiLogo } from "./KhiladiLogo";
 import { gsap, useGSAP } from "../utils/motion";
-export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
-  onComplete,
-}) => {
-  const root = useRef<HTMLDivElement>(null),
-    finished = useRef(false),
-    complete = useRef(onComplete);
-  complete.current = onComplete;
+import "./intro-sequence.css";
+
+export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
+  const root = useRef<HTMLDivElement>(null);
+  const done = useRef(false);
+  const callback = useRef(onComplete);
+  callback.current = onComplete;
   const finish = useCallback(() => {
-    if (finished.current) return;
-    finished.current = true;
-    complete.current();
+    if (done.current) return;
+    done.current = true;
+    callback.current();
   }, []);
-  useGSAP(
-    () => {
-      if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        finish();
-        return;
-      }
-      const old = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
-      const tl = gsap.timeline({
-        defaults: { ease: "power3.inOut" },
-        onComplete: finish,
-      });
-      tl.fromTo(
-        ".intro-glyph",
-        { yPercent: 108, opacity: 0 },
-        { yPercent: 0, opacity: 1, duration: 0.65, stagger: 0.045 },
-        0.12,
-      )
-        .fromTo(
-          ".intro-type",
-          { gap: "7vw" },
-          { gap: "0.04em", duration: 0.7 },
-          0.85,
-        )
-        .to(
-          ".intro-type",
-          { rotationX: -30, rotationZ: -8, duration: 0.5 },
-          1.55,
-        )
-        .to(
-          ".intro-type",
-          {
-            scale: 20,
-            rotationX: 0,
-            rotationZ: -15,
-            duration: 1.05,
-            ease: "expo.in",
-          },
-          2.05,
-        )
-        .to(
-          ".intro-curtain",
-          { backgroundColor: "#ED267B", duration: 0.65 },
-          2.0,
-        )
-        .to(".intro-symbol", { opacity: 0, duration: 0.2 }, 1.8)
-        .to(
-          ".intro-curtain",
-          { yPercent: -100, duration: 0.8, ease: "power4.inOut" },
-          2.65,
-        );
-      return () => {
-        tl.kill();
-        document.body.style.overflow = old;
-      };
-    },
-    { scope: root },
-  );
+  useGSAP(() => {
+    const previous = document.body.style.overflow;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      finish();
+      return;
+    }
+    document.body.style.overflow = "hidden";
+    const tl = gsap.timeline({ onComplete: finish });
+    tl.fromTo(".intro-glyph--left",
+      { yPercent: 120, opacity: 0, filter: "blur(12px)" },
+      { yPercent: 0, opacity: 1, filter: "blur(0px)", stagger: .065, duration: .58, ease: "power4.out" }, 0)
+      .fromTo(".intro-symbol",
+        { opacity: 0, scale: .5, rotation: -12 },
+        { opacity: 1, scale: 1, rotation: 0, duration: .62, ease: "power4.out" }, .43)
+      .fromTo(".intro-glyph--right",
+        { yPercent: 120, opacity: 0, filter: "blur(12px)" },
+        { yPercent: 0, opacity: 1, filter: "blur(0px)", stagger: .065, duration: .6, ease: "power4.out" }, .72)
+      .fromTo(".intro-rule",
+        { scaleX: 0 },
+        { scaleX: 1, duration: .6, ease: "power3.out" }, .9)
+      .to(".intro-words", { scale: 1.12, opacity: 0, duration: .65, ease: "power3.in" }, 1.57)
+      .to(".intro-symbol", { scale: 5, opacity: 0, duration: .7, ease: "power3.in" }, 1.65)
+      .to(".intro-curtain", { yPercent: -101, duration: .76, ease: "power4.inOut" }, 1.93);
+    return () => { tl.kill(); document.body.style.overflow = previous; };
+  }, { scope: root });
   useEffect(() => {
-    const key = (e: KeyboardEvent) => {
-      if (e.key === "Escape") finish();
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") finish();
     };
-    window.addEventListener("keydown", key);
-    return () => window.removeEventListener("keydown", key);
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
   }, [finish]);
   return (
-    <div
-      ref={root}
-      className="intro-root"
-      role="status"
-      aria-label="Introducing KHILADI"
-    >
+    <div ref={root} className="intro-root khiladi-intro" role="status" aria-label="Introducing Khiladi">
       <div className="intro-curtain">
         <div className="intro-meta">
-          <span>A GAME OF MOMENTS</span>
-          <span>KHILADI / RAJASTHAN</span>
+          <span>MADE FOR THE MOMENT.</span>
+          <span>KHILADI / CRICKET INTELLIGENCE</span>
         </div>
-        <div className="intro-symbol" aria-hidden="true">
-          <KhiladiLogo variant="loader" tone="white" />
+        <div className="intro-words" aria-hidden="true">
+          <span className="intro-side intro-side--left">
+            {[..."KHILA"].map((char,i)=><span className="intro-window" key={i}><span className="intro-glyph intro-glyph--left">{char}</span></span>)}
+          </span>
+          <span className="intro-symbol"><KhiladiLogo variant="loader" tone="white" /></span>
+          <span className="intro-side intro-side--right">
+            {[..."DI"].map((char,i)=><span className="intro-window" key={i}><span className="intro-glyph intro-glyph--right">{char}</span></span>)}
+          </span>
         </div>
-        <div className="intro-type intro-type--letters" aria-hidden="true">
-          {[..."KHILADI"].map((letter, i) => (
-            <span className="intro-window" key={i}>
-              <span className="intro-glyph">{letter}</span>
-            </span>
-          ))}
-        </div>
-        <button className="intro-skip" onClick={finish}>
-          Skip introduction ↗
-        </button>
-        <span className="intro-foot">GREAT PLAYERS. BIG MOMENTS.</span>
+        <span className="intro-rule" aria-hidden="true" />
+        <button type="button" className="intro-skip" onClick={finish}>Skip intro ↗</button>
+        <span className="intro-foot">YOUR TEAM. YOUR MOMENT.</span>
       </div>
     </div>
   );

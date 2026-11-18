@@ -78,6 +78,7 @@ export default function RoyalPlayerDialog({
           <RoyalPlayerCard
             key={`${player.player_id}:${role}:${data?.identity ?? "unavailable"}`}
             data={data}
+            publicPlayer={player}
             identity={{
               player_id: player.player_id,
               player_name: player.player_name,
@@ -97,7 +98,27 @@ export default function RoyalPlayerDialog({
           tabIndex={-1}
           aria-labelledby="royal-evidence-heading"
         >
-          <h3 id="royal-evidence-heading">The evidence behind the card.</h3>
+          <h3 id="royal-evidence-heading">Recorded performance and source evidence.</h3>
+          <p>These historical competition aggregates are public recorded samples, not the accepted private D20 model.</p>
+          <dl className="pc-evidence-ledger">
+            {[
+              ["Recorded batting runs", player.batting.total_runs],
+              ["Pressure batting deliveries", player.batting.press_balls],
+              ["Pressure strike rate", player.batting.press_sr],
+              ["Recorded wickets", player.bowling.wickets],
+              ["Pressure bowling deliveries", player.bowling.press_balls],
+              ["Pressure economy", player.bowling.press_econ],
+              ["Legacy pressure impact index", player.pressure_impact_index],
+            ].map(([label, value]) => (
+              <div key={label}><dt>{label}</dt><dd>{
+                typeof value === "number" ?
+                  number(value, String(label).includes("deliveries") ||
+                    String(label).includes("runs") ||
+                    String(label).includes("wickets") ? 0 : 2)
+                : "Unavailable"
+              }</dd></div>
+            ))}
+          </dl>
           <div
             className="pc-role-switch"
             role="group"
@@ -171,11 +192,12 @@ export default function RoyalPlayerDialog({
               </details>
             </>
           ) : (
-            <p role="status">
-              {research.loading
-                ? "Loading accepted D20 evidence…"
-                : "Accepted D20 evidence is unavailable for this analytical role in the current serving scope. Missing is not zero or a finding of ineligibility. No legacy score has been substituted."}
-            </p>
+            <details>
+              <summary>About the additional D20 research model</summary>
+              <p>The accepted D20 model is access-controlled. The public recorded
+              data above are still available and have not been substituted
+              for restricted scores.</p>
+            </details>
           )}
           <p className="pc-portrait-credit">
             {portrait ? "Player photo sourced for this identity; photo credits are in the site footer." : "Original cricket illustration is shown when a reusable player photo is unavailable."}
@@ -196,7 +218,7 @@ export default function RoyalPlayerDialog({
             </button>
           </div>
           <details>
-            <summary>Legacy recorded statistics — separate model</summary>
+            <summary>More recorded statistics — separate model</summary>
             <dl className="pc-evidence-ledger">
               {[
                 ["Recorded batting runs", player.batting?.total_runs],

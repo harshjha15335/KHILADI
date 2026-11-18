@@ -2,6 +2,8 @@ import { RoyalResearchProvider } from "./components/player-cards/RoyalResearch";
 import type { AnalyticalRole } from "./types/analytics";
 import "./components/player-cards/player-cards.css";
 import { apiURL } from "./utils/urls";
+import { gsap, ScrollTrigger } from "./utils/motion";
+import "./polished-system.css";
 import React, { useState, useEffect } from "react";
 import { Player } from "./types";
 import { loadPlayers } from "./utils/api";
@@ -124,6 +126,46 @@ export const App: React.FC = () => {
       return next;
     });
   };
+
+  // Shared route-enter and scroll choreography for every analytics screen.
+  // The homepage has its own dedicated pinned visual story, so this remains
+  // deliberately scoped to the inner application pages.
+  useEffect(() => {
+    if (!preloaderComplete || currentPage === "home") return;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let context: ReturnType<typeof gsap.context> | null = null;
+    const frame = requestAnimationFrame(() => {
+      const main = document.getElementById("main-content");
+      if (!main) return;
+      context = gsap.context(() => {
+        const heading = main.querySelector("h1");
+        if (heading) gsap.fromTo(heading,
+          { autoAlpha: 0, y: 24 },
+          { autoAlpha: 1, y: 0, duration: .68, ease: "power3.out" });
+        const panels = gsap.utils.toArray<HTMLElement>(
+          main.querySelectorAll(".pc-preview, .public-ranking-player, .discovery-player, .analytics-intro, .grid > button")
+        ).slice(0, 28);
+        panels.forEach((panel, index) => {
+          gsap.fromTo(panel,
+            { autoAlpha: .72, y: 22, scale: .985 },
+            { autoAlpha: 1, y: 0, scale: 1, duration: .5,
+              delay: Math.min(index * .022, .18),
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: panel, start: "top 95%",
+                toggleActions: "play none none none",
+                once: true,
+              },
+            });
+        });
+        ScrollTrigger.refresh();
+      }, main);
+    });
+    return () => {
+      cancelAnimationFrame(frame);
+      context?.revert();
+    };
+  }, [currentPage, preloaderComplete]);
 
   // Scroll to top on page change
   const handleNavigate = (page: string) => {

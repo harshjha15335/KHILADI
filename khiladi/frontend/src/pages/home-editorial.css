@@ -80,3 +80,29 @@
   .home-player-item{flex:0 0 min(65vw,285px);scroll-snap-align:center}
 }
 @media(prefers-reduced-motion:reduce){.home-player-grid{scroll-behavior:auto}}
+
+/* Five authentic uploaded photos, with central 2008 trophy and four satellite moments. */
+.hero-photo-slot--centre > img,.heritage-shot--2 > img{object-position:center center}
+.hero-photo-slot--left-top > img{object-position:50% 18%}
+.hero-photo-slot--left-bottom > img{object-position:50% 20%}
+.hero-photo-slot--right-middle > img{object-position:center 20%}
+.heritage-shot--5,.hero-photo-slot--right-bottom{display:none}
+.hero-collage,.heritage-photo-composition{filter:none}
+.hero-photo-slot>img{transition:filter .7s ease,transform .7s ease}
+.hero-photo-slot:hover>img{transform:scale(1.055)}
+
+/* Deliberate light-first override: later global legacy CSS used to recolor the hero neon-pink. */
+.cinematic-home .hero-chapter{background:#fffdfb!important;background-color:#fffdfb!important;color:#2453b7!important}
+.cinematic-home .hero-scene{background:radial-gradient(ellipse at 75% 38%,#f8d9e9 0%,#f3e9f9 45%,transparent 77%),linear-gradient(120deg,#fffdfb 20%,#fbf2f9 70%,#f2efff)!important}
+.cinematic-home .hero-copy{top:25%!important;bottom:auto!important;left:clamp(28px,5vw,85px)!important;max-width:44%!important}
+.cinematic-home .hero-copy h1{color:#2453b7!important;font-family:Georgia,"Times New Roman",serif;line-height:1;letter-spacing:-.065em}
+.cinematic-home .hero-copy h1 em{color:#e73589!important;opacity:1!important}
+.cinematic-home .hero-copy>p:not(.eyebrow){color:#42516c!important}
+.cinematic-home .hero-copy .eyebrow{color:#2453b7!important}
+.cinematic-home .hero-bottom-line{color:#2453b7!important}
+.cinematic-home .hero-scene .hero-field-line{border-color:#2453b722!important}
+@media(max-width:899px){
+ .cinematic-home .hero-copy{top:106px!important;left:6%!important;max-width:92%!important}
+ .cinematic-home .hero-copy h1{font-size:clamp(43px,9vw,70px)}
+ .cinematic-home .hero-collage{top:425px!important}
+}

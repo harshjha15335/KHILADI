@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Player } from "../types";
 import { loadPlayers, describePlayer, metric } from "../utils/api";
 import { playerImage } from "../utils/media";
+import { privateAnalyticsAvailable } from "../utils/analytics";
 import { AugeWarpSurface } from "../components/AugeWarpSurface";
 import { KhiladiKineticText } from "../components/KhiladiKineticText";
 import { PlayerEditorialTrack } from "../components/PlayerEditorialTrack";
@@ -34,7 +35,7 @@ export const PlayerDatabasePage: React.FC<{
   }, []);
   const research = useRoyalResearch();
   const acceptedRole =
-    sortMode === "d20-batting"
+    !privateAnalyticsAvailable ? null : sortMode === "d20-batting"
       ? "batting"
       : sortMode === "d20-bowling"
         ? "bowling"
@@ -81,10 +82,7 @@ export const PlayerDatabasePage: React.FC<{
         />
         <ResearchAccess />
         <p className="pc-identity-scope">
-          1,217 canonical identities. Official photographs are used where
-          source-verified for private review; other identities have a labelled
-          initials fallback. D20 evidence is available only for matching records
-          in the private serving scope.
+          Public canonical player identities and recorded pressure metrics are searchable below. Player images come from matched official IPL profile sources where available; otherwise a branded fallback is shown.
         </p>
         <div className="discovery-controls">
           <label>
@@ -126,8 +124,12 @@ export const PlayerDatabasePage: React.FC<{
               }}
             >
               <option value="name">Player name (A–Z)</option>
-              <option value="d20-batting">Accepted D20 batting (served records)</option>
-              <option value="d20-bowling">Accepted D20 bowling (served records)</option>
+              {privateAnalyticsAvailable && (
+                <>
+                  <option value="d20-batting">Accepted D20 batting (served records)</option>
+                  <option value="d20-bowling">Accepted D20 bowling (served records)</option>
+                </>
+              )}
               <option value="legacy">Legacy heuristic index (separate model)</option>
             </select>
           </label>
