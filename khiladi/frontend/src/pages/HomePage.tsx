@@ -84,17 +84,31 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
               scrub: .65, invalidateOnRefresh: true },
           });
           timeline
-            .to(".hero-copy", { y: -68, opacity: .18, ease: "none" }, 0)
-            .to(".hero-photo-slot--left-top, .hero-photo-slot--right-middle",
-              { y: -44, x: -28, rotation: -3, ease: "none" }, 0)
-            .to(".hero-photo-slot--left-bottom, .hero-photo-slot--right-top",
-              { y: 35, x: 20, rotation: 3, ease: "none" }, 0)
-            .to(centre, { scale: 1.08, rotation: 0, ease: "none" }, 0)
-            .to(".hero-bottom-line", { opacity: .18, ease: "none" }, 0);
+            .to(".hero-copy", { y: -112, opacity: .10, ease: "none" }, 0)
+            .to(".hero-photo-slot--left-top, .hero-photo-slot--left-bottom",
+              { x: -185, y: (i:number)=>i ? 100 : -130, scale:.68, opacity:.06, rotation:-16,ease:"none" }, 0)
+            .to(".hero-photo-slot--right-top, .hero-photo-slot--right-middle",
+              { x: 190, y: (i:number)=>i ? 115 : -105, scale:.68, opacity:.06, rotation:16,ease:"none" }, 0)
+            .to(centre, { scale: 2.15, yPercent:-5, rotation: 0,
+              borderRadius:0, ease: "none" }, 0)
+            .to(".hero-bottom-line", { opacity: 0, ease: "none" }, 0);
         }
 
         // A horizontally scrollable rail remains usable without vertical
         // scroll hijacking. Its reveal is tied to ordinary vertical scrolling.
+        // Vertical scrolling advances the player gallery without clipping or pinning cards.
+        const playerRail = root.current?.querySelector<HTMLElement>(".home-player-grid");
+        const playerSection = root.current?.querySelector<HTMLElement>(".home-player-showcase");
+        if (playerRail && playerSection && window.innerWidth >= 900) {
+          gsap.to(playerRail, {
+            scrollLeft: () => Math.max(0,playerRail.scrollWidth - playerRail.clientWidth),
+            ease:"none",
+            scrollTrigger:{
+              trigger:playerSection,start:"top 92%",end:"bottom 24%",
+              scrub:1,invalidateOnRefresh:true,
+            },
+          });
+        }
         gsap.fromTo(".home-player-item",
           { y: 48, autoAlpha: .25 },
           { y: 0, autoAlpha: 1, ease: "none", stagger: .045,
@@ -307,7 +321,6 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           <span>FOR THE LOVE OF THE GAME</span><span>SCROLL TO DISCOVER ↓</span>
         </div>
       </section>
-      <PublicDataPulse onNavigate={onNavigate} />
       <section className="home-player-showcase" aria-labelledby="home-player-heading" data-brand-tone="white" data-header-brand="compact">
         <header className="home-showcase-intro">
           <p className="eyebrow">PLAYERS IN FOCUS</p>
@@ -436,6 +449,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
           )}
         </div>
       </section>
+      <PublicDataPulse onNavigate={onNavigate} />
       <section
         id="discovery"
         className="quiz-chapter"
