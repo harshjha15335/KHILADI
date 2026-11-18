@@ -19,7 +19,14 @@ for(const [id,url,width,height] of targets){
  let response=null;let error=null;
  try{
    response=await page.goto(url,{waitUntil:"domcontentloaded",timeout:25000});
-   await page.waitForTimeout(id.startsWith("delta")?2000:4400);
+   if(id.startsWith("delta")){
+     // Delta currently shows a real consent banner that otherwise hides the reference.
+     for(const label of [/Rejeitar todos/i,/Reject all/i,/Recusar todos/i]){
+       const button=page.getByRole("button",{name:label}).first();
+       if(await button.isVisible().catch(()=>false)){await button.click({timeout:3000}).catch(()=>{});break;}
+     }
+     await page.waitForTimeout(4400);
+   }else await page.waitForTimeout(3100);
    if(!id.startsWith("delta")){await page.keyboard.press("Escape");await page.waitForTimeout(600)}
  }catch(e){error=String(e)}
  const metrics=await page.evaluate(()=>{
@@ -44,6 +51,25 @@ for(const [id,url,width,height] of targets){
  results.push(record);console.log("AUDIT "+JSON.stringify(record));
  await page.close();
 }
+const urls=[
+  "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl&fallback=fallback-player-men",
+  "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68314.png&brand=ipl",
+  "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F83313.png&brand=ipl",
+  "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl%26fallback%3Dfallback-player-men&w=1080&q=75",
+];
+const probe=await browser.newPage({viewport:{width:1440,height:900}});
+await probe.goto("https://harshjha15335.github.io/KHILADI/",{waitUntil:"domcontentloaded"}).catch(()=>{});
+const imageTests=await probe.evaluate(async urls=>Promise.all(urls.map(url=>new Promise(resolve=>{
+  const img=new Image();img.referrerPolicy="no-referrer";let finished=false;
+  const done=(state)=>{if(finished)return;finished=true;resolve({url,state,width:img.naturalWidth,height:img.naturalHeight})};
+  const timeout=setTimeout(()=>done("timeout"),12000);
+  img.onload=()=>{clearTimeout(timeout);done("loaded")};
+  img.onerror=()=>{clearTimeout(timeout);done("error")};
+  img.src=url;
+}))),urls);
+console.log("IPL_IMAGE_TEST "+JSON.stringify(imageTests));
+await probe.close();
+await fs.writeFile(path.join(output,"ipl-image-checks.json"),JSON.stringify(imageTests,null,2));
 await fs.writeFile(path.join(output,"metrics.json"),JSON.stringify(results,null,2));
 await fs.writeFile(path.join(output,"SUMMARY.md"),[
  "# Khiladi vs Delta live screenshot audit",
