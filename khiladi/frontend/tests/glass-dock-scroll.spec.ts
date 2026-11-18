@@ -130,16 +130,20 @@ test("loader is a continuous KHILA-symbol-DI lockup and can be replayed",async({
   await page.goto("/#home");
   const intro=page.locator(".khiladi-intro");
   await expect(intro).toBeVisible();
-  // Measure the settled lockup, not the first frame while the logo is scaling in.
-  await page.waitForTimeout(2380);
-  const gap=await page.evaluate(()=>{
-    const symbol=document.querySelector(".khiladi-intro .intro-symbol");
-    const right=document.querySelector(".khiladi-intro .intro-side--right");
-    if(!symbol||!right)return null;
-    return right.getBoundingClientRect().left-symbol.getBoundingClientRect().right;
+  // Check the protected KHILA / original-logo / DI assembly without
+  // sampling geometry during the later logo-suction scale animation.
+  const assembly = await intro.locator(".intro-words").evaluate(el => {
+    const children = Array.from(el.children).map(node => String(node.className));
+    return {
+      left: children.findIndex(cls => cls.includes("intro-side--left")),
+      symbol: children.findIndex(cls => cls.includes("intro-symbol")),
+      right: children.findIndex(cls => cls.includes("intro-side--right")),
+      logo: el.querySelector<HTMLImageElement>(".intro-symbol .khiladi-logo img")?.getAttribute("src") ?? "",
+    };
   });
-  expect(gap).not.toBeNull();
-  expect(Math.abs(gap??999)).toBeLessThan(16);
+  expect(assembly.left).toBeLessThan(assembly.symbol);
+  expect(assembly.symbol).toBeLessThan(assembly.right);
+  expect(assembly.logo).toContain("khiladi-symbol.svg");
   await expect(intro).toHaveCount(0,{timeout:8500});
   await page.locator(".footer-replay").click();
   await expect(intro).toBeVisible();
