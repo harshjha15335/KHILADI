@@ -1,0 +1,12 @@
+# Verification results
+
+- **37 frontend tests passed**, 0 failed, 0 flaky, 0 skipped; 154.8s. Includes actual quiz API, profiles, rankings, exports, replay, planning, comparison, removed-band acceptance, full reloads, brand lifecycle, X/Y image displacement/reset, accessibility and reduced motion.
+- **6 backend integrity tests passed**. All 17 tracked backend/data files are byte-identical to checkpoint `5829093`; canonical population 1,217 and source-season RR count 27 preserved.
+- **TypeScript/Vite production build passed**, including Pages mode with `/KHILADI/` base, static saved-model quiz and media review disabled. Artifact audit passed: raw pack, private media, reports and secrets excluded; future permitted match media must be explicitly allowlisted by a complete source/permission/poster manifest entry.
+- **Existing cloud site smoke test passed**, HTTP 200, no observed asset failures/page exceptions, three saved-model quiz results. This is the old `523d77e` deployment. **Corrected Pages-mode preview also passed** the same asset/quiz checks. The current Pages environment permits only `main`; this task did not change that setting or merge into `main`. No corrected public deployment is claimed.
+- **Three synthetic native video tests passed**, readyState 4, advancing currentTime, muted/inline, viewport pause, reduced-motion pause, deliberate 404 poster fallback. They are QA patterns, not actual RR footage, and are absent from production and Git.
+- **63 captured states**, zero page exceptions. Six exact viewports: 1920×1080, 1440×900, 1366×768, 768×1024, 390×844, 360×800. All checked sections have no horizontal overflow.
+- Pointer-displacement cloud timing: mean **17.24ms**, p95 **17.30ms**. Raw intervals in `warp-performance.json`. Headless/cloud sampling is not hardware-independent FPS or proof of exact AUGE fidelity.
+- **Real RR film playback is blocked**: three official players report a domain restriction with clocks at zero; the official YouTube channel request returns proxy HTTP 403; no reuse rights have been documented. No montage success recording or precise video-frame contrast/cropping claim is fabricated.
+
+The before-walkthrough storyboard covers the full 46.16-second recorded implementation. Main edited source files and removed sections are listed in `CHANGES.md`; source/rights requirements and the incomplete AUGE fidelity verdict have separate documents.

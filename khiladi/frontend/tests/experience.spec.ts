@@ -14,19 +14,18 @@ test.beforeEach(async ({ page }, info) => {
       });
     });
 });
-test("homepage uses restrained navigation, names-only parade and settled quiz figures", async ({
+test("homepage keeps restrained navigation and settled quiz without portrait bands", async ({
   page,
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
-  await expect(
-    page.locator(".squad-group").first().locator("button"),
-  ).toHaveCount(27);
-  await expect(page.locator(".site-header nav")).toHaveCount(0);
-  await expect(page.locator(".squad-chapter")).not.toContainText(
-    /Pressure Score|Canonical|Governance/,
+  await expect(page.locator(".quiz-figure")).toHaveCount(8);
+  await expect(page.locator(".squad-chapter, .portrait-chapter")).toHaveCount(
+    0,
   );
+  await expect(page.locator(".site-header nav")).toHaveCount(0);
+
   await expect(page.locator("[class*=animate-orbit]")).toHaveCount(0);
   await page.locator(".quiz-chapter").scrollIntoViewIfNeeded();
   await expect(page.locator(".quiz-introduction")).toBeVisible();
@@ -117,9 +116,7 @@ for (const width of [360, 390, 768, 1024, 1440, 1920])
   }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/");
-    await expect(
-      page.locator(".squad-group").first().locator("button"),
-    ).toHaveCount(27);
+    await expect(page.locator(".quiz-figure")).toHaveCount(8);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth + 1,
@@ -133,7 +130,7 @@ for (const width of [360, 390, 768, 1024, 1440, 1920])
       ),
     ).toBeTruthy();
   });
-test("reduced motion bypasses intro, cursor and moving parade without hiding quiz", async ({
+test("reduced motion bypasses intro and cursor without hiding the quiz", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -143,7 +140,8 @@ test("reduced motion bypasses intro, cursor and moving parade without hiding qui
   await expect(page.locator(".quiz-introduction")).toBeVisible();
   expect(
     await page
-      .locator(".squad-track")
+      .locator(".quiz-figure-drift")
+      .first()
       .evaluate((el) => getComputedStyle(el).transform),
   ).toBe("none");
 });
@@ -164,8 +162,15 @@ test("rankings and analytic routes retain nonempty real records", async ({
     await expect(
       page.getByText("Something went wrong", { exact: true }),
     ).toHaveCount(0);
-    if (["rankings", "batting-intel", "bowling-intel"].includes(route))
+    if (route === "rankings") {
+      // Accepted D20 is private. A public-shell test must not demand or
+      // fabricate a public rankings table.
+      await expect(page.locator("main")).toContainText(
+        /private|Unlock the private service/i,
+      );
+    } else if (["batting-intel", "bowling-intel"].includes(route)) {
       await expect(page.locator("tbody tr").first()).toBeVisible();
+    }
   }
 });
 
@@ -187,7 +192,7 @@ test("route cleanup prevents duplicated cursors and scroll timelines", async ({
   page,
 }) => {
   await page.goto("/");
-  await expect(page.locator(".squad-player").first()).toBeVisible();
+  await expect(page.locator(".quiz-figure").first()).toBeVisible();
   const count = () =>
     page.evaluate(async () => {
       const motion = await import("/src/utils/motion.ts");
@@ -200,21 +205,22 @@ test("route cleanup prevents duplicated cursors and scroll timelines", async ({
     await expect(page.locator(".discovery-player").first()).toBeVisible();
     expect(await count()).toBe(0);
     await page.goto("/#home");
-    await expect(page.locator(".squad-player").first()).toBeVisible();
+    await expect(page.locator(".quiz-figure").first()).toBeVisible();
     expect(await count()).toBe(initial);
   }
   await expect(page.locator("#khiladi-diamond-cursor")).toHaveCount(1);
 });
 
-test("ranked players can open and close profiles entirely by keyboard", async ({
+test("database players can open and close their Royal profile by keyboard", async ({
   page,
 }) => {
-  await page.goto("/#rankings");
-  const player = page.locator("tbody button").first();
+  await page.goto("/#database");
+  await page.getByRole("searchbox").fill("Jofra Archer");
+  const player = page.getByRole("button", { name: "Inspect Jofra Archer" });
   await player.focus();
   await page.keyboard.press("Enter");
-  await expect(page.locator(".profile-dialog")).toBeVisible();
+  await expect(page.locator(".royal-dialog[open]")).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page.locator(".profile-dialog")).not.toBeVisible();
+  await expect(page.locator(".royal-dialog")).toHaveCount(0);
   await expect(player).toBeFocused();
 });

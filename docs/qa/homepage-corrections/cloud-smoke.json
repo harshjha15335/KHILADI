@@ -1,0 +1,24 @@
+[
+  {
+    "label": "existing-live",
+    "url": "https://harshjha15335.github.io/KHILADI/",
+    "HTTP": 200,
+    "js": "/KHILADI/assets/index-rjlT4_No.js",
+    "staticQuizResults": 3,
+    "errors": [],
+    "failedResponses": [],
+    "navigation": "quiz flow works",
+    "publicDeployment": "existing live is base 523d77e; corrected build is preview only"
+  },
+  {
+    "label": "corrected-pages-build",
+    "url": "http://127.0.0.1:4176/KHILADI/",
+    "HTTP": 200,
+    "js": "/KHILADI/assets/index-BkzBwfby.js",
+    "staticQuizResults": 3,
+    "errors": [],
+    "failedResponses": [],
+    "navigation": "quiz flow works",
+    "publicDeployment": "existing live is base 523d77e; corrected build is preview only"
+  }
+]

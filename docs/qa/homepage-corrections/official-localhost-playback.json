@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://geo.dailymotion.com/player/x10gio.html?video=k1pWUJWruYRVIHCZFBA",
+    "parentOrigin": "http://127.0.0.1:3000",
+    "body": "Speed 2x\n\nClick and hold to fast-forward\n\nVideo paused\nUnable to play video\n\nThis video cannot be played on this site\n\nWatch on Dailymotion",
+    "videos": [
+      {
+        "currentTime": 0,
+        "readyState": 0,
+        "paused": true
+      }
+    ]
+  },
+  {
+    "url": "https://geo.dailymotion.com/player/x10gio.html?video=k4Jj96j3Jaw4F0CSyii",
+    "parentOrigin": "http://127.0.0.1:3000",
+    "body": "Speed 2x\n\nClick and hold to fast-forward\n\nVideo paused\nUnable to play video\n\nThis video cannot be played on this site\n\nWatch on Dailymotion",
+    "videos": [
+      {
+        "currentTime": 0,
+        "readyState": 0,
+        "paused": true
+      }
+    ]
+  },
+  {
+    "url": "https://geo.dailymotion.com/player/x10gio.html?video=kI6FgNQzdoBt1hCSy0o",
+    "parentOrigin": "http://127.0.0.1:3000",
+    "body": "Speed 2x\n\nClick and hold to fast-forward\n\nVideo paused\nUnable to play video\n\nThis video cannot be played on this site\n\nWatch on Dailymotion",
+    "videos": [
+      {
+        "currentTime": 0,
+        "readyState": 0,
+        "paused": true
+      }
+    ]
+  }
+]

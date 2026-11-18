@@ -1,0 +1,696 @@
+/* Measured reference interactions; shared data/analytics styles remain in experience.css. */
+.site-header--home .site-wordmark {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+.site-header--home .khiladi-logo {
+  width: clamp(44px, 4.4vw, 72px);
+}
+.site-header--home .site-header-tools {
+  margin-left: auto;
+}
+.intro-curtain {
+  background: #2450b8;
+  color: #ffffff;
+  perspective: 900px;
+}
+.intro-type--letters {
+  width: auto;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: clamp(36px, 10vw, 180px);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  transform-style: preserve-3d;
+}
+.intro-symbol {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.intro-symbol .khiladi-logo {
+  width: 36px;
+}
+.intro-skip {
+  border-bottom-color: currentColor;
+}
+.hero-chapter-heading {
+  animation: chapter-copy-in 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes chapter-copy-in {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+    transform: none;
+  }
+}
+.hero-chapters {
+  right: 30px;
+  gap: 28px;
+}
+.hero-chapters button {
+  max-width: 360px;
+  gap: 16px;
+}
+.chapter-thumbnail {
+  width: 70px;
+  height: 54px;
+  object-fit: contain;
+  background: #ffffff20;
+}
+.hero-chapters .film-progress {
+  animation-play-state: paused;
+}
+.journey-chapter {
+  position: relative;
+  min-height: 850px;
+  min-height: 100svh;
+  background: #2549bd;
+  color: #fffdf8;
+  overflow: hidden;
+  isolation: isolate;
+}
+.journey-image,
+.journey-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.journey-image {
+  object-fit: cover;
+  z-index: -2;
+}
+.journey-shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #182643c0, #2549bd20 90%),
+    linear-gradient(0deg, #18264375, transparent 70%);
+}
+.journey-copy {
+  position: relative;
+  padding: 20vh 5vw 100px;
+  max-width: 690px;
+}
+.journey-copy h2 {
+  font:
+    400 clamp(48px, 5.7vw, 90px)/1.02 Georgia,
+    serif;
+  letter-spacing: -0.06em;
+  margin: 22px 0;
+}
+.journey-copy > p:not(.eyebrow) {
+  max-width: 420px;
+  min-height: 100px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.journey-hotspots {
+  position: absolute;
+  top: 30%;
+  right: 8%;
+  width: 34%;
+  height: 52%;
+}
+.journey-hotspots button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  text-align: left;
+}
+.journey-hotspots button:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.journey-hotspots button:nth-child(2) {
+  top: 35%;
+  left: 45%;
+}
+.journey-hotspots button:nth-child(3) {
+  top: 75%;
+  left: 12%;
+}
+.journey-hotspots button > span:first-child {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.journey-hotspots button[aria-pressed="true"] > span:first-child,
+.journey-hotspots button:hover > span:first-child {
+  background: #fff3;
+  transform: scale(1.08);
+}
+/* Tall Cyera information surface, with actual content kept at full size during clipping. */
+.profile-dialog {
+  width: 420px;
+  max-width: calc(100vw - 32px);
+  max-height: 92dvh;
+  margin: auto;
+}
+.profile-dialog::backdrop {
+  background: #e8edf2b8;
+  backdrop-filter: blur(7px);
+}
+.profile-is-open #main-content {
+  filter: saturate(0.65);
+  transition: filter 0.3s;
+}
+.profile-sheet {
+  max-height: 90dvh;
+  min-height: min(720px, 90dvh);
+  background: #fffdf8;
+  box-shadow: 0 15px 80px #18264328;
+  transform-origin: center;
+  overscroll-behavior: contain;
+}
+.profile-toolbar {
+  padding: 10px 20px;
+  font-size: 9px;
+  min-height: 50px;
+}
+.profile-toolbar button {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+}
+.profile-main {
+  display: flex;
+  flex-direction: column;
+}
+.profile-visual {
+  min-height: 0;
+  height: 205px;
+  padding: 10px 20px 0;
+  background:
+    radial-gradient(ellipse at 30% 15%, #e5d9ff, transparent 65%),
+    linear-gradient(135deg, #e4eeff, #f8dbe9);
+  overflow: hidden;
+}
+.profile-visual > div {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.profile-visual img {
+  height: 195px;
+  max-height: 195px;
+  width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.profile-summary {
+  padding: 25px 26px 28px;
+}
+.profile-summary h2 {
+  font-size: clamp(34px, 4vw, 45px);
+  letter-spacing: -2px;
+  margin: 15px 0;
+}
+.profile-summary > p {
+  font-size: 13px;
+  line-height: 1.75;
+}
+.profile-summary .eyebrow {
+  font-size: 9px;
+}
+.profile-summary .chapter-button {
+  margin-top: 18px;
+}
+.profile-evidence {
+  padding: 18px 26px;
+}
+.profile-evidence > summary {
+  font-size: 13px;
+}
+.profile-metrics {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.profile-plain-fallback {
+  display: grid;
+  place-items: center;
+  height: 195px;
+  font-size: 75px;
+}
+.kinetic-text {
+  position: relative;
+  isolation: isolate;
+}
+.kinetic-word--serif {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.kinetic-preview {
+  position: absolute;
+  width: 110px;
+  height: 145px;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: #e9d8ff;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 0.25s,
+    transform 0.2s ease-out;
+  box-shadow: 0 8px 24px #18264320;
+}
+.kinetic-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.warp-surface {
+  overflow: hidden;
+}
+.warp-surface img {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.editorial-player-track {
+  margin: 30px -20px 45px;
+  overflow: hidden;
+}
+.editorial-track-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 0 20px 28px;
+  font-size: 12px;
+}
+.editorial-track-viewport {
+  overflow: hidden;
+  padding: 8px 0;
+}
+.editorial-track-moving {
+  display: flex;
+  width: max-content;
+}
+.editorial-track-group {
+  display: flex;
+  gap: 24px;
+  padding-right: 24px;
+  align-items: flex-start;
+}
+.editorial-player {
+  display: block;
+  width: 230px;
+  text-align: left;
+  flex: none;
+}
+.editorial-player--1 {
+  margin-top: 35px;
+}
+.editorial-player--2 {
+  margin-top: 15px;
+}
+.editorial-player .warp-surface {
+  height: 260px;
+  background: #ed267b;
+}
+.editorial-player--1 .warp-surface {
+  background: #cfdcff;
+  height: 290px;
+}
+.editorial-player--2 .warp-surface {
+  background: #f3d879;
+  height: 235px;
+}
+.editorial-player img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.editorial-player > span {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+}
+.brand-footer {
+  position: relative;
+  background: linear-gradient(135deg, #2549bd, #6150b4);
+}
+.footer-top {
+  background: #fffdf81a;
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border: 1px solid #fff3;
+  border-radius: 4px;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .kinetic-text:hover .kinetic-preview {
+    opacity: 1;
+  }
+  .kinetic-text:hover .kinetic-char {
+    transform: translate3d(
+      calc(var(--char-offset) * 2.2px),
+      calc(var(--char-wave) * 1.5px),
+      0
+    );
+  }
+}
+@media (max-width: 900px) {
+  .hero-chapters button {
+    gap: 8px;
+  }
+  .chapter-thumbnail {
+    width: 48px;
+  }
+  .journey-hotspots {
+    right: 4%;
+    width: 28%;
+  }
+  .journey-hotspots button:nth-child(2) {
+    left: 0;
+  }
+  .journey-copy {
+    max-width: 65%;
+  }
+}
+@media (max-width: 600px) {
+  .site-header--home .site-wordmark {
+    top: -4px;
+  }
+  .site-header--home .khiladi-logo {
+    width: 36px;
+  }
+  .intro-meta {
+    font-size: 8px;
+    letter-spacing: 0.7px;
+  }
+  .intro-foot {
+    max-width: 140px;
+    font-size: 8px;
+  }
+  .intro-skip {
+    right: 12px;
+    font-size: 11px;
+  }
+  .hero-chapter {
+    height: 1080px;
+  }
+  .hero-copy {
+    top: 145px;
+    bottom: auto;
+  }
+  .hero-copy h1 {
+    font-size: 13.5vw;
+  }
+  .hero-chapters {
+    gap: 12px;
+  }
+  .hero-chapters button {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    padding-top: 10px;
+    font-size: 9px;
+  }
+  .chapter-thumbnail {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 35px;
+  }
+  .journey-chapter {
+    min-height: 820px;
+  }
+  .journey-copy {
+    padding: 100px 22px 0;
+    max-width: 100%;
+  }
+  .journey-copy h2 {
+    font-size: 48px;
+  }
+  .journey-copy > p:not(.eyebrow) {
+    font-size: 15px;
+    min-height: 125px;
+  }
+  .journey-hotspots {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: auto;
+    margin: 50px 22px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+  .journey-hotspots button,
+  .journey-hotspots button:nth-child(n) {
+    position: static;
+    font-size: 10px;
+  }
+  .journey-hotspots button > span:first-child {
+    width: 40px;
+    height: 40px;
+  }
+  .profile-dialog {
+    max-width: calc(100vw - 24px);
+  }
+  .profile-summary {
+    padding: 20px 22px;
+  }
+  .profile-visual {
+    height: 185px;
+  }
+  .profile-visual img {
+    height: 175px;
+    max-height: 175px;
+  }
+  .profile-toolbar {
+    padding: 8px 16px;
+  }
+  .profile-evidence {
+    padding: 16px 22px;
+  }
+  .editorial-track-heading {
+    align-items: flex-start;
+  }
+  .editorial-track-heading > p:last-child {
+    max-width: 140px;
+  }
+  .editorial-track-viewport {
+    overflow-x: auto;
+  }
+  .editorial-track-group:nth-child(2) {
+    display: none;
+  }
+  .editorial-player {
+    width: 190px;
+  }
+  .footer-top {
+    padding: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-chapter-heading {
+    animation: none;
+  }
+  .kinetic-preview {
+    display: none;
+  }
+  .warp-surface img {
+    transition: none;
+  }
+  .editorial-track-viewport {
+    overflow-x: auto;
+  }
+  .editorial-track-group:nth-child(2) {
+    display: none;
+  }
+}
+/* Delta's human portrait row has a common baseline; stagger belongs to the non-home AUGE track. */
+
+/* Intentional brand lifecycle: hero centre → small navigation mark → exit before heritage. */
+.site-header--home .site-wordmark {
+  transition:
+    left 0.45s var(--ease),
+    transform 0.45s var(--ease),
+    opacity 0.25s,
+    visibility 0.25s;
+}
+.site-header--home[data-brand-placement="compact"] .site-wordmark {
+  left: 0;
+  top: 0;
+  transform: none;
+}
+.site-header--home[data-brand-placement="compact"] .khiladi-logo {
+  width: 40px;
+}
+.site-header--home[data-brand-placement="hidden"] .site-wordmark {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.intro-meta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 24px;
+  height: 3px;
+  background: #ed267b;
+}
+.hero-chapter:not(:has(.hero-chapters)) .hero-copy {
+  bottom: clamp(90px, 16vh, 160px);
+}
+.cinematic-films {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #2450b8;
+}
+.film-poster,
+.cinematic-film {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cinematic-film {
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  pointer-events: none;
+}
+.cinematic-film--visible {
+  opacity: 1;
+}
+.hero-films {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero-films::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #182643a8, transparent 85%);
+  pointer-events: none;
+}
+.film-play-control {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  padding: 10px 15px;
+  background: #fffdf8;
+  color: #182643;
+  font-size: 11px;
+  border-radius: 30px;
+}
+.royals-moments {
+  position: relative;
+  height: 230svh;
+  color: white;
+}
+.royals-moments-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 600px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.moments-films {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.royals-moments-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #182643b0, transparent 80%);
+  pointer-events: none;
+}
+.moments-caption {
+  position: absolute;
+  left: 5vw;
+  bottom: 15%;
+  max-width: 620px;
+}
+.moments-caption h2 {
+  font:
+    400 clamp(56px, 7vw, 110px)/0.98 Georgia,
+    serif;
+  letter-spacing: -0.06em;
+  margin: 25px 0;
+}
+.moments-caption > p:last-child {
+  font-size: 14px;
+}
+.moment-selectors {
+  position: absolute;
+  left: 5vw;
+  bottom: 35px;
+  display: flex;
+  gap: 12px;
+}
+.moment-selectors button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.moment-selectors button[aria-pressed="true"] {
+  background: #fffdf8;
+  color: #2450b8;
+}
+@media (max-width: 600px) {
+  .hero-chapter {
+    height: max(760px, 100svh);
+  }
+  .hero-chapter:not(:has(.hero-chapters)) .hero-copy {
+    top: 170px;
+    bottom: auto;
+  }
+  .site-header--home[data-brand-placement="compact"] .khiladi-logo {
+    width: 32px;
+  }
+  .film-play-control {
+    right: 16px;
+    bottom: 16px;
+  }
+  .moments-caption {
+    left: 22px;
+    right: 22px;
+    bottom: 20%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header--home .site-wordmark,
+  .cinematic-film {
+    transition: none;
+  }
+  .royals-moments {
+    height: auto;
+  }
+  .royals-moments-stage {
+    position: relative;
+    height: 85svh;
+  }
+}

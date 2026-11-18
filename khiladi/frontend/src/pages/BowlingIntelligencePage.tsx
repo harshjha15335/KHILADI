@@ -1,3 +1,4 @@
+import { loadPlayers, metric } from "../utils/api";
 import { siteURL } from "../utils/urls";
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
@@ -12,10 +13,15 @@ export const BowlingIntelligencePage: React.FC<
 > = ({ onSelectPlayer }) => {
   const [players, setPlayers] = useState<Player[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [error, setError] = useState(""),
+    [loading, setLoading] = useState(true),
+    [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
-    fetch(siteURL("/data/player_database.json"))
-      .then((r) => r.json())
+    let active = true;
+    setLoading(true);
+    setError("");
+    loadPlayers()
       .then((data: Player[]) => {
         const filtered = data
           .filter(
@@ -28,9 +34,18 @@ export const BowlingIntelligencePage: React.FC<
             (a, b) =>
               (a.bowling.press_econ || 99) - (b.bowling.press_econ || 99),
           );
-        setPlayers(filtered);
+        if (active) setPlayers(filtered);
+      })
+      .catch(() => {
+        if (active) setError("Recorded player data could not be loaded.");
+      })
+      .finally(() => {
+        if (active) setLoading(false);
       });
-  }, []);
+    return () => {
+      active = false;
+    };
+  }, [attempt]);
 
   const displayed = players
     .filter((p) =>
@@ -41,6 +56,11 @@ export const BowlingIntelligencePage: React.FC<
   return (
     <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
+        <p className="rounded-xl bg-[#e8f1ff] p-4 text-sm text-[#163a94]">
+          Legacy recorded bowling aggregates. Accepted D20 ratings and
+          conditional intervals are separate; open Rankings or an available
+          private player record to inspect them.
+        </p>
         <div className="border-b border-[#E8E6ED] pb-8 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF5FF] border border-[#B3D4FF] text-xs font-mono uppercase text-[#2549BD] font-bold">
             <ShieldCheck className="w-3.5 h-3.5" />
@@ -66,6 +86,18 @@ export const BowlingIntelligencePage: React.FC<
           />
         </div>
 
+        {loading && <p role="status">Loading recorded players…</p>}
+        {error && (
+          <div role="alert">
+            <p>{error}</p>
+            <button type="button" onClick={() => setAttempt((v) => v + 1)}>
+              Retry player data
+            </button>
+          </div>
+        )}
+        {!loading && !error && !displayed.length && (
+          <p role="status">No recorded players match this search.</p>
+        )}
         {/* Table */}
         <div className="overflow-x-auto rounded-3xl border border-[#E8E6ED] bg-white shadow-sm">
           <table className="w-full text-left text-sm">
@@ -76,7 +108,7 @@ export const BowlingIntelligencePage: React.FC<
                 <th className="py-4 px-6 text-right">Pressure Econ</th>
                 <th className="py-4 px-6 text-right">Overall Econ</th>
                 <th className="py-4 px-6 text-right">Econ Delta</th>
-                <th className="py-4 px-6 text-right">Pressure Score</th>
+                <th className="py-4 px-6 text-right">Legacy index</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E8E6ED]">
@@ -106,16 +138,16 @@ export const BowlingIntelligencePage: React.FC<
                     {p.bowling.press_balls || 0}
                   </td>
                   <td className="py-4 px-6 text-right font-mono font-bold text-[#2549BD]">
-                    {(p.bowling.press_econ || 0).toFixed(2)}
+                    {metric(p.bowling.press_econ, 2)}
                   </td>
                   <td className="py-4 px-6 text-right font-mono text-[#505A70]">
-                    {(p.bowling.overall_econ || 0).toFixed(2)}
+                    {metric(p.bowling.overall_econ, 2)}
                   </td>
                   <td className="py-4 px-6 text-right font-mono font-bold text-emerald-600">
-                    {(p.bowling.econ_delta || 0).toFixed(2)}
+                    {metric(p.bowling.econ_delta, 2)}
                   </td>
                   <td className="py-4 px-6 text-right font-mono font-black text-[#22263C]">
-                    {(p.pressure_impact_index || 0).toFixed(1)}
+                    {metric(p.pressure_impact_index, 1)}
                   </td>
                 </tr>
               ))}

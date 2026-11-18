@@ -1,0 +1,92 @@
+{
+  "canonicalPlayers": 1217,
+  "rrPlayers": 27,
+  "backendIntegrityTests": 6,
+  "files": [
+    {
+      "file": "khiladi/backend/main.py",
+      "sha256": "9e183dc47a5be9a8c463eb68ed895088136f11edd7b45f0e9a390b6235153dfc",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/backend/requirements.txt",
+      "sha256": "b6d52b41a5f984fb885ee73e97a92b7c639f3f6fa36be2e2506f71c5c1e1eaf2",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/player_database.json",
+      "sha256": "b02359d9cac31ceaf3da651dd81166973baa735dac83eee08df0f2765cc91a5b",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/rr_squad_2026.json",
+      "sha256": "51b284563b39dc48d54ce54754e8048196ef482a006e8d4dfda1574693a97ca2",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/sample_match_replay.json",
+      "sha256": "5efd1c10445caf65861f96f0b247fd0277e9a39423ee6a986c02e2d951559273",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/top_10_batters.csv",
+      "sha256": "59be2197bcdeefa24910b80020fe6448c784e1a174e9e888e4f1c54cbe7ddd20",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/top_10_batters.json",
+      "sha256": "aaa47b30d3907b3f691f72efd4ef37dd946ae33c1c3f5e961d4602d9d524eb6f",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/top_10_bowlers.csv",
+      "sha256": "8711b969772b2b8256fee8d1558a89bdfa6c1f4a58544d7fa1740ac1171855e9",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/data/top_10_bowlers.json",
+      "sha256": "e43518161d226cbb59539739311aad43fad6b891a821b97b530d317b2d2796e0",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/player_database.json",
+      "sha256": "53885e2d2dd21a8668008e2ed4720046b37aaa696dc65203facf8a5924511490",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/quiz_recommendations.json",
+      "sha256": "01b4fecb9d906394f6fef83ccdf23f0e54b34a97d03771706d2cae4f2a768bf9",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/rr_squad_2026.json",
+      "sha256": "c40f2d9f84b8d27c935c99473aabff6a3931a954a259095f9090461b5ae6aca0",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/sample_match_replay.json",
+      "sha256": "5efd1c10445caf65861f96f0b247fd0277e9a39423ee6a986c02e2d951559273",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/top_10_batters.csv",
+      "sha256": "59be2197bcdeefa24910b80020fe6448c784e1a174e9e888e4f1c54cbe7ddd20",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/top_10_batters.json",
+      "sha256": "aaa47b30d3907b3f691f72efd4ef37dd946ae33c1c3f5e961d4602d9d524eb6f",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/top_10_bowlers.csv",
+      "sha256": "8711b969772b2b8256fee8d1558a89bdfa6c1f4a58544d7fa1740ac1171855e9",
+      "identicalToCheckpoint": true
+    },
+    {
+      "file": "khiladi/frontend/public/data/top_10_bowlers.json",
+      "sha256": "e43518161d226cbb59539739311aad43fad6b891a821b97b530d317b2d2796e0",
+      "identicalToCheckpoint": true
+    }
+  ]
+}

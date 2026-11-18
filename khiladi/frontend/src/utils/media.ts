@@ -1,4 +1,6 @@
 import reviewPortraits from "../config/review-portraits.json";
+import { officialPortrait } from "../components/player-cards/portraitSource";
+import { siteURL } from "./urls";
 import media from "../config/approved-media.json";
 interface ApprovedAsset {
   src: string;
@@ -6,22 +8,30 @@ interface ApprovedAsset {
   permission: string;
   caption: string;
 }
+export interface ApprovedClip extends ApprovedAsset {
+  poster: string;
+}
 const approved = media as {
   crest: string;
-  heroClips: ApprovedAsset[];
+  heroClips: ApprovedClip[];
+  moments?: ApprovedClip[];
   archive: ApprovedAsset[];
   portraits: Record<string, ApprovedAsset>;
 };
-export const approvedHeroClips = approved.heroClips;
+const playable = (clips: ApprovedClip[]) =>
+  clips
+    .filter((clip) => clip.src && clip.poster && clip.source && clip.permission)
+    .map((clip) => ({
+      ...clip,
+      src: siteURL(clip.src),
+      poster: siteURL(clip.poster),
+    }));
+export const approvedHeroClips = playable(approved.heroClips);
+export const approvedMoments = playable(approved.moments || []);
 // Existing protected assets are available only for local review until permission is documented.
 // Production defaults to no protected media; approved paths can be supplied with Vite variables.
 export const reviewMedia =
   import.meta.env.DEV && import.meta.env.VITE_MEDIA_REVIEW !== "false";
-export const crestURL =
-  approved.crest ||
-  (reviewMedia
-    ? "https://www.rajasthanroyals.com/static-assets/images/svg/logo.svg?v=5.14"
-    : "");
 export const archivalImages = approved.archive.length
   ? approved.archive
   : reviewMedia && __ARCHIVE_REVIEW_AVAILABLE__
@@ -40,29 +50,6 @@ export const archivalImages = approved.archive.length
         })),
       ].map((image) => ({ ...image, src: `/__review-media/${image.src}.jpg` }))
     : [];
-export const rrClips = [
-  {
-    id: "x9j1xrq",
-    title: "First ball. No problem.",
-    caption: "Yashasvi Jaiswal · RCB v RR, 2025",
-    source:
-      "https://www.rajasthanroyals.com/royals-tv/ipl-2025-rcb-vs-rr-first-ball-no-problem-jaiswal-launches-it-x9j1xrq",
-  },
-  {
-    id: "x9i1kti",
-    title: "Make your moment.",
-    caption: "Jofra Archer · PBKS v RR, 2025",
-    source:
-      "https://www.rajasthanroyals.com/royals-tv/ipl-2025-pbks-vs-rr-archer-strikes-first-ball-x9i1kti",
-  },
-  {
-    id: "x9i1jyo",
-    title: "Every chance matters.",
-    caption: "Riyan Parag · RR v CSK, 2025",
-    source:
-      "https://www.rajasthanroyals.com/royals-tv/ipl-2025-rr-vs-csk-parags-stunning-catch-to-dismiss-dube-x9i1jyo",
-  },
-];
 // Four inherited jersey graphics were presented as photos. Never use them as portraits.
 const sourceVerifiedIDs = new Set([
   3298, 7503, 7312, 8580, 6423, 6806, 25139, 8182, 3297, 152, 7260, 26663, 1487,
@@ -70,6 +57,7 @@ const sourceVerifiedIDs = new Set([
 ]);
 export function playerImage(player: {
   player_id: number;
+  player_name?: string;
   cutout_url?: string;
   portrait_url?: string;
 }) {
@@ -77,6 +65,21 @@ export function playerImage(player: {
     approved.portraits[String(player.player_id)]?.src ||
     (reviewMedia
       ? (reviewPortraits as Record<string, string>)[String(player.player_id)]
+      : undefined) ||
+    (reviewMedia
+      ? (() => {
+          const portrait = officialPortrait(player.player_id);
+          // A canonical player ID must never display a portrait assigned to a
+          // different cricket identity, even if a manifest entry is wrong.
+          if (
+            !portrait ||
+            (player.player_name &&
+              portrait.name.trim().toLocaleLowerCase("en") !==
+                player.player_name.trim().toLocaleLowerCase("en"))
+          )
+            return undefined;
+          return portrait.previewUrl ?? portrait.url;
+        })()
       : undefined) ||
     (reviewMedia && sourceVerifiedIDs.has(player.player_id)
       ? player.cutout_url || player.portrait_url

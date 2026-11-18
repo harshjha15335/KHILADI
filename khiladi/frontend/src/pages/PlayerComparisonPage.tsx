@@ -1,26 +1,58 @@
+import { RoyalComparisonEvidence } from "../components/player-cards/RoyalComparisonEvidence";
+import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
+import { ResearchAccess } from "../components/player-cards/RoyalResearch";
+import type { AnalyticalRole } from "../types/analytics";
 import { siteURL } from "../utils/urls";
-import { metric } from "../utils/api";
+import { loadPlayers, metric } from "../utils/api";
 import { playerImage } from "../utils/media";
 import React, { useState, useEffect } from "react";
 import { Player } from "../types";
 import { SlidersHorizontal, Flame, Shield, ArrowRight } from "lucide-react";
 
+const signedMetric = (value: number | undefined) =>
+  typeof value === "number" && Number.isFinite(value)
+    ? `${value > 0 ? "+" : ""}${value.toFixed(1)}`
+    : "Unavailable";
+
 interface PlayerComparisonPageProps {
   onSelectPlayer: (player: Player) => void;
+  selectedIds?: number[];
+  initialAnalyticalRole?: AnalyticalRole;
 }
 
 export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
   onSelectPlayer,
+  selectedIds,
+  initialAnalyticalRole = "batting",
 }) => {
   const [players, setPlayers] = useState<Player[]>([]);
+  const [error, setError] = useState(""),
+    [attempt, setAttempt] = useState(0);
+  const [analyticalRole, setAnalyticalRole] = useState<AnalyticalRole>(
+    initialAnalyticalRole,
+  );
+  useEffect(() => {
+    if (selectedIds?.[0]) setPlayerAId(selectedIds[0]);
+    if (selectedIds?.[1]) setPlayerBId(selectedIds[1]);
+    setAnalyticalRole(initialAnalyticalRole);
+  }, [selectedIds, initialAnalyticalRole]);
   const [playerAId, setPlayerAId] = useState<number>(3297); // Shimron Hetmyer
   const [playerBId, setPlayerBId] = useState<number>(6423); // Riyan Parag
 
   useEffect(() => {
-    fetch(siteURL("/data/player_database.json"))
-      .then((r) => r.json())
-      .then((data: Player[]) => setPlayers(data));
-  }, []);
+    let active = true;
+    setError("");
+    loadPlayers()
+      .then((data) => {
+        if (active) setPlayers(data);
+      })
+      .catch(() => {
+        if (active) setError("Comparison player data could not be loaded.");
+      });
+    return () => {
+      active = false;
+    };
+  }, [attempt]);
 
   const playerA = players.find((p) => p.player_id === playerAId) || players[0];
   const playerB = players.find((p) => p.player_id === playerBId) || players[1];
@@ -44,6 +76,54 @@ export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
           </p>
         </div>
 
+        {error && (
+          <div role="alert">
+            <p>{error}</p>
+            <button type="button" onClick={() => setAttempt((v) => v + 1)}>
+              Retry comparison data
+            </button>
+          </div>
+        )}
+        <ResearchAccess />
+        <div
+          className="pc-role-switch"
+          role="group"
+          aria-label="Comparison analytical role"
+        >
+          {(["batting", "bowling"] as const).map((role) => (
+            <button
+              type="button"
+              key={role}
+              aria-pressed={analyticalRole === role}
+              onClick={() => setAnalyticalRole(role)}
+            >
+              {role === "batting" ? "Batting analysis" : "Bowling analysis"}
+            </button>
+          ))}
+        </div>
+        <div className="pc-comparison-previews">
+          {[playerA, playerB].filter(Boolean).map((p, i) => (
+            <button
+              type="button"
+              className="pc-preview-button"
+              key={`${i}:${p.player_id}`}
+              onClick={() => onSelectPlayer(p)}
+              aria-label={`Inspect ${p.player_name}`}
+            >
+              <RoyalIdentityPreview player={p} role={analyticalRole} compact />
+            </button>
+          ))}
+        </div>
+        <RoyalComparisonEvidence
+          players={[playerA, playerB]}
+          role={analyticalRole}
+        />
+        <p className="pc-identity-scope">
+          Card evidence uses the selected analytical role and accepted private
+          model. The recorded strike-rate/economy comparison below remains a
+          separate legacy model; marginal intervals do not establish a pairwise
+          winner.
+        </p>
         {/* Player Selectors */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 rounded-3xl bg-white border border-[#E8E6ED] shadow-sm space-y-4">
@@ -89,10 +169,7 @@ export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
                       {playerA.player_name}
                     </h3>
                     <div className="text-xs font-mono text-[#F22E83]">
-                      Score:{" "}
-                      {playerA.pressure_impact_index
-                        ? playerA.pressure_impact_index.toFixed(1)
-                        : "Unavailable"}
+                      Legacy index: {metric(playerA.pressure_impact_index, 1)}
                     </div>
                   </div>
                 </div>
@@ -111,7 +188,11 @@ export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
                   <div className="flex justify-between py-1.5 border-b border-[#E8E6ED]">
                     <span>SR Delta</span>
                     <strong className="text-emerald-600">
-                      +{(playerA.batting.sr_delta || 0).toFixed(1)}
+                      {signedMetric(
+                        playerA.batting.press_balls
+                          ? playerA.batting.sr_delta
+                          : undefined,
+                      )}
                     </strong>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-[#E8E6ED]">
@@ -173,10 +254,7 @@ export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
                       {playerB.player_name}
                     </h3>
                     <div className="text-xs font-mono text-[#2549BD]">
-                      Score:{" "}
-                      {playerB.pressure_impact_index
-                        ? playerB.pressure_impact_index.toFixed(1)
-                        : "Unavailable"}
+                      Legacy index: {metric(playerB.pressure_impact_index, 1)}
                     </div>
                   </div>
                 </div>
@@ -195,7 +273,11 @@ export const PlayerComparisonPage: React.FC<PlayerComparisonPageProps> = ({
                   <div className="flex justify-between py-1.5 border-b border-[#E8E6ED]">
                     <span>SR Delta</span>
                     <strong className="text-emerald-600">
-                      +{(playerB.batting.sr_delta || 0).toFixed(1)}
+                      {signedMetric(
+                        playerB.batting.press_balls
+                          ? playerB.batting.sr_delta
+                          : undefined,
+                      )}
                     </strong>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-[#E8E6ED]">

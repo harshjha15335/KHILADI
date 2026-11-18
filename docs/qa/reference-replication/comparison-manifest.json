@@ -1,0 +1,52 @@
+[
+  {
+    "reference": "Recording_153838_part_00.mp4",
+    "sourceStartSeconds": 0,
+    "capture": "matched-delta.webm",
+    "captureStartSeconds": 1.3162697719999414,
+    "durationSeconds": 17.0,
+    "comparison": "delta-comparison.mp4",
+    "note": "Media blocked; compare composition and chronology",
+    "viewportHandling": "Matched native viewport sizes: 1900\u00d7828 for Delta/CRL/Extrafazant/Cyera; 1918\u00d7896 for AUGE short clip. Source and original cricket content differ; timing alignment is approximate. No pixel parity score is meaningful with distinct content."
+  },
+  {
+    "reference": "Recording_153838_part_06.mp4",
+    "sourceStartSeconds": 0,
+    "capture": "matched-crl.webm",
+    "captureStartSeconds": 0,
+    "durationSeconds": 4.4,
+    "comparison": "crl-comparison.mp4",
+    "note": "Sequence comparison; timings are not source-confirmed",
+    "viewportHandling": "Matched native viewport sizes: 1900\u00d7828 for Delta/CRL/Extrafazant/Cyera; 1918\u00d7896 for AUGE short clip. Source and original cricket content differ; timing alignment is approximate. No pixel parity score is meaningful with distinct content."
+  },
+  {
+    "reference": "Recording_153838_part_05.mp4",
+    "sourceStartSeconds": 0,
+    "capture": "matched-extrafazant.webm",
+    "captureStartSeconds": 1.3373198929994032,
+    "durationSeconds": 6.0,
+    "comparison": "extrafazant-comparison.mp4",
+    "note": "Mixed type and pointer image; different original content",
+    "viewportHandling": "Matched native viewport sizes: 1900\u00d7828 for Delta/CRL/Extrafazant/Cyera; 1918\u00d7896 for AUGE short clip. Source and original cricket content differ; timing alignment is approximate. No pixel parity score is meaningful with distinct content."
+  },
+  {
+    "reference": "Recording_153838_part_11.mp4",
+    "sourceStartSeconds": 8.5,
+    "capture": "matched-cyera.webm",
+    "captureStartSeconds": 1.7999914549996903,
+    "durationSeconds": 5.5,
+    "comparison": "cyera-comparison.mp4",
+    "note": "Thin surface to tall card; original player content",
+    "viewportHandling": "Matched native viewport sizes: 1900\u00d7828 for Delta/CRL/Extrafazant/Cyera; 1918\u00d7896 for AUGE short clip. Source and original cricket content differ; timing alignment is approximate. No pixel parity score is meaningful with distinct content."
+  },
+  {
+    "reference": "Recording_154049_part_00.mp4",
+    "sourceStartSeconds": 0,
+    "capture": "matched-auge.webm",
+    "captureStartSeconds": 1.112943021999854,
+    "durationSeconds": 6.4,
+    "comparison": "auge-comparison.mp4",
+    "note": "Moving image strip and context label; no shader claim",
+    "viewportHandling": "Matched native viewport sizes: 1900\u00d7828 for Delta/CRL/Extrafazant/Cyera; 1918\u00d7896 for AUGE short clip. Source and original cricket content differ; timing alignment is approximate. No pixel parity score is meaningful with distinct content."
+  }
+]

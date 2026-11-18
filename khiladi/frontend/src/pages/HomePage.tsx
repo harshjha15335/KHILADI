@@ -1,3 +1,5 @@
+import { CinematicVideo } from "../components/CinematicVideo";
+import { RoyalsMoments } from "../components/RoyalsMoments";
 import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
 import { Player } from "../types";
@@ -8,30 +10,18 @@ import {
   requestJSON,
   recommendPlayers,
 } from "../utils/api";
-import {
-  approvedHeroClips,
-  archivalImages,
-  crestURL,
-  playerImage,
-  reviewMedia,
-  rrClips,
-} from "../utils/media";
+import { approvedHeroClips, archivalImages, playerImage } from "../utils/media";
 import { KhiladiAnimatedButton as CTA } from "../components/KhiladiAnimatedButton";
 interface Props {
   onNavigate: (page: string) => void;
   onSelectPlayer: (player: Player) => void;
 }
 export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
-  const root = useRef<HTMLDivElement>(null),
-    hero = useRef<HTMLElement>(null),
-    belt = useRef<HTMLDivElement>(null),
-    beltTween = useRef<gsap.core.Tween | null>(null),
-    beltVisible = useRef(true);
+  const root = useRef<HTMLDivElement>(null);
   const [squad, setSquad] = useState<Player[]>([]),
     [error, setError] = useState("");
-  const [activeClip, setActiveClip] = useState(0),
-    [videoEnabled, setVideoEnabled] = useState(approvedHeroClips.length > 1),
-    [heroVisible, setHeroVisible] = useState(true);
+  const [activeClip, setActiveClip] = useState(0);
+  const [journeyTopic, setJourneyTopic] = useState(0);
   const [quizStep, setQuizStep] = useState(0),
     [role, setRole] = useState("Batting"),
     [phase, setPhase] = useState("Death Overs");
@@ -59,54 +49,26 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
       });
     return () => abort.abort();
   }, []);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setHeroVisible(entry.isIntersecting),
-      { threshold: 0.05 },
-    );
-    if (hero.current) observer.observe(hero.current);
-    return () => observer.disconnect();
-  }, []);
-  useEffect(() => {
-    if (!videoEnabled || !heroVisible || reduced) return;
-    const id = window.setInterval(
-      () =>
-        setActiveClip((i) => (i + 1) % Math.max(1, approvedHeroClips.length)),
-      16000,
-    );
-    return () => clearInterval(id);
-  }, [videoEnabled, heroVisible, reduced]);
   const figures = squad.filter((player) => playerImage(player)).slice(0, 8);
   useGSAP(
     () => {
       const media = gsap.matchMedia();
       media.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.to(".persistent-crest", {
-          scale: () => (innerWidth < 600 ? 0.32 : 0.25),
-          y: () => {
-            const el = root.current?.querySelector(".persistent-crest");
-            return 28 - (el ? parseFloat(getComputedStyle(el).top) : 0);
+        gsap.fromTo(
+          ".journey-image",
+          { yPercent: -8, scale: 1.12 },
+          {
+            yPercent: 8,
+            scale: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".journey-chapter",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.5,
+            },
           },
-          x: () => (innerWidth < 600 ? -(innerWidth / 2 - 90) : 0),
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".hero-chapter",
-            start: "top top",
-            end: "bottom 15%",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        });
-        gsap.to(".persistent-crest", {
-          autoAlpha: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".editorial-chapter",
-            start: "top 30%",
-            end: "top top",
-            scrub: true,
-          },
-        });
+        );
         gsap.from(".story-line", {
           yPercent: 80,
           opacity: 1,
@@ -208,44 +170,6 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
     },
     { scope: root, dependencies: [squad.length], revertOnUpdate: true },
   );
-  useGSAP(
-    () => {
-      if (!belt.current || !squad.length || reduced) return;
-      const track = belt.current;
-      // Two identical groups; exactly one group's width is travelled before repetition.
-      const tween = gsap.to(track, {
-        xPercent: -50,
-        duration: squad.length * 9,
-        repeat: -1,
-        ease: "none",
-      });
-      beltTween.current = tween;
-      const observer = new IntersectionObserver(([e]) => {
-        beltVisible.current = e.isIntersecting;
-        tween.paused(
-          !e.isIntersecting || track.contains(document.activeElement),
-        );
-      });
-      observer.observe(track);
-      const focus = () => tween.pause(),
-        blur = () => {
-          if (beltVisible.current) tween.resume();
-        };
-      track.addEventListener("focusin", focus);
-      track.addEventListener("focusout", blur);
-      return () => {
-        beltTween.current = null;
-        observer.disconnect();
-        track.removeEventListener("focusin", focus);
-        track.removeEventListener("focusout", blur);
-      };
-    },
-    {
-      scope: root,
-      dependencies: [squad.length, reduced],
-      revertOnUpdate: true,
-    },
-  );
   useEffect(() => {
     if (quizStep > 0) {
       const panel = root.current?.querySelector<HTMLElement>(".quiz-panel");
@@ -283,166 +207,94 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
     document
       .getElementById("discovery")
       ?.scrollIntoView({ behavior: reduced ? "instant" : "smooth" });
-  const choose = (id: number) =>
-    loadPlayers()
-      .then((players) => {
-        const p = players.find((p) => p.player_id === id);
-        if (p) onSelectPlayer(p);
-      })
-      .catch(() =>
-        setError("Player details are unavailable. Please try again."),
-      );
   return (
     <div ref={root} className="cinematic-home">
       <section
-        ref={hero}
         className="hero-chapter"
+        data-brand-tone="white"
+        data-header-brand="hero"
         aria-labelledby="hero-heading"
       >
         <div className="hero-scene" aria-hidden="true">
           <span className="hero-field-line" />
           <span className="hero-field-line hero-field-line--two" />
         </div>
-        {approvedHeroClips.length > 0 &&
-          videoEnabled &&
-          heroVisible &&
-          !reduced && (
-            <video
-              key={activeClip}
-              className="hero-film"
-              src={approvedHeroClips[activeClip % approvedHeroClips.length].src}
-              aria-label={
-                approvedHeroClips[activeClip % approvedHeroClips.length].caption
-              }
-              autoPlay
-              muted
-              playsInline
-              onEnded={() =>
-                setActiveClip((i) => (i + 1) % approvedHeroClips.length)
-              }
-              onError={() => setVideoEnabled(false)}
-            />
-          )}
-
-        {crestURL && (
-          <div className="persistent-crest">
-            <img
-              src={crestURL}
-              alt="Rajasthan Royals"
-              width="320"
-              height="320"
-            />
-          </div>
+        {approvedHeroClips.length > 0 && (
+          <CinematicVideo
+            className="hero-films"
+            clips={approvedHeroClips}
+            activeIndex={activeClip}
+            onNext={() =>
+              setActiveClip((i) => (i + 1) % approvedHeroClips.length)
+            }
+          />
         )}
         <div className="hero-copy">
           <p className="eyebrow">A GAME OF MOMENTS</p>
-          <h1 id="hero-heading">
-            Great players.
-            <br />
-            <em>Big moments.</em>
-            <br />
-            The right choice.
+          <h1
+            id="hero-heading"
+            key={activeClip}
+            className="hero-chapter-heading"
+          >
+            {activeClip === 0 ? (
+              <>
+                Great players.
+                <br />
+                <em>Big moments.</em>
+                <br />
+                The right choice.
+              </>
+            ) : activeClip === 1 ? (
+              <>
+                One chance.
+                <br />
+                <em>Make it count.</em>
+                <br />
+                Back your player.
+              </>
+            ) : (
+              <>
+                Every ball.
+                <br />
+                <em>Every possibility.</em>
+                <br />
+                Find your moment.
+              </>
+            )}
           </h1>
           <p>Discover who delivers when the match is on the line.</p>
           <CTA onClick={scrollQuiz}>Find my player</CTA>
         </div>
-        <div className="hero-side">
-          <span>HALLA BOL.</span>
-          {approvedHeroClips.length > 0 ? (
-            <button
-              onClick={() => setVideoEnabled((v) => !v)}
-              aria-pressed={videoEnabled}
-            >
-              {videoEnabled ? "Pause films" : "Play films"} ↗
-            </button>
-          ) : (
-            <a
-              className="official-film-link"
-              href={rrClips[activeClip % rrClips.length].source}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Watch official Royals clips ↗
-            </a>
-          )}
-          <a
-            href={rrClips[activeClip % rrClips.length].source}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {rrClips[activeClip % rrClips.length].caption} ↗
-          </a>
-          {approvedHeroClips.length === 0 && (
-            <p className="hero-media-status">
-              On-page match footage awaits reuse permission.
-            </p>
-          )}
-        </div>
-        <div className="hero-chapters" aria-label="Royals films">
-          {rrClips.map((clip, i) => (
-            <button
-              key={clip.id}
-              aria-pressed={activeClip === i}
-              onClick={() => {
-                setActiveClip(i);
-                if (approvedHeroClips.length) setVideoEnabled(true);
-              }}
-            >
-              <span>0{i + 1}</span>
-              <span>{clip.title}</span>
-              <span className="film-progress" />
-            </button>
-          ))}
-        </div>
-      </section>
-      <section
-        className="squad-chapter"
-        aria-label="Rajasthan Royals players from the supplied IPL 2026 data"
-      >
-        {error && <p role="alert">{error}</p>}
-        <div
-          className={`squad-viewport ${reduced ? "squad-viewport--static" : ""}`}
-        >
-          <div ref={belt} className="squad-track">
-            {[0, 1].map((copy) => (
-              <div
-                className="squad-group"
-                key={copy}
-                aria-hidden={copy === 1 ? true : undefined}
+        {approvedHeroClips.length > 1 && (
+          <div className="hero-chapters" aria-label="Royals match scenes">
+            {approvedHeroClips.map((clip, i) => (
+              <button
+                key={clip.src}
+                aria-pressed={activeClip === i}
+                onClick={() => setActiveClip(i)}
               >
-                {squad.map((player, i) => (
-                  <button
-                    className={`squad-player squad-colour-${i % 4}`}
-                    key={player.player_id}
-                    onClick={() => choose(player.player_id)}
-                    tabIndex={copy === 1 ? -1 : 0}
-                  >
-                    {playerImage(player) ? (
-                      <img
-                        src={playerImage(player)}
-                        alt=""
-                        width="200"
-                        height="220"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span className="player-initials" aria-hidden="true">
-                        {player.player_name
-                          .split(" ")
-                          .map((w) => w[0])
-                          .slice(0, 2)
-                          .join("")}
-                      </span>
-                    )}
-                    <span>{player.player_name}</span>
-                  </button>
-                ))}
-              </div>
+                <img
+                  className="chapter-thumbnail"
+                  src={clip.poster}
+                  alt=""
+                  width="70"
+                  height="54"
+                />
+                <span>0{i + 1}</span>
+                <span>{clip.caption}</span>
+                <span className="film-progress" />
+              </button>
             ))}
           </div>
-        </div>
+        )}
       </section>
-      <section className="editorial-chapter" aria-labelledby="story-heading">
+      <RoyalsMoments />
+      <section
+        className="editorial-chapter"
+        aria-labelledby="story-heading"
+        data-brand-tone="white"
+        data-header-brand="compact"
+      >
         <p className="eyebrow">IT’S MORE THAN A GAME.</p>
         <h2 id="story-heading">
           <span className="story-line">Some play</span>
@@ -461,7 +313,12 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           Meet your match-winner
         </CTA>
       </section>
-      <section className="heritage-chapter" aria-labelledby="heritage-heading">
+      <section
+        className="heritage-chapter"
+        aria-labelledby="heritage-heading"
+        data-brand-tone="original"
+        data-header-brand="hidden"
+      >
         <div className="heritage-title">
           <p className="eyebrow">RAJASTHAN. ALWAYS.</p>
           <h2 id="heritage-heading">
@@ -508,18 +365,71 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
             </a>
           </div>
         )}
-        {reviewMedia && (
-          <p className="media-review-note">
-            Official-source photographs shown for private review. The requested
-            2008 trophy photograph and public-use permissions are still pending.
-          </p>
+      </section>
+      <section
+        className="journey-chapter"
+        aria-labelledby="journey-heading"
+        data-brand-tone="white"
+        data-header-brand="hidden"
+      >
+        {archivalImages[0] && (
+          <img
+            className="journey-image"
+            src={archivalImages[0].src}
+            alt="Shane Warne and Rajasthan Royals, from the official Royals archive"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
         )}
+        <div className="journey-shade" />
+        <div className="journey-copy">
+          <p className="eyebrow">FROM A FIRST TITLE TO YOUR NEXT CHOICE</p>
+          <h2 id="journey-heading">
+            A Royal story.
+            <br />
+            <em>Still being written.</em>
+          </h2>
+          <p>
+            {
+              [
+                "A first title in 2008. A lasting belief in players who rise to the occasion.",
+                "Every player brings a different game. Look past the headline and get to know the person behind the performance.",
+                "Your next decision starts with the evidence. Explore the recorded performances and find a player who fits.",
+              ][journeyTopic]
+            }
+          </p>
+          <CTA
+            onClick={() =>
+              onNavigate(journeyTopic === 0 ? "methodology" : "database")
+            }
+          >
+            Explore the story
+          </CTA>
+        </div>
+        <div className="journey-hotspots" aria-label="Explore the Royals story">
+          {["The beginning", "The people", "Your next choice"].map(
+            (topic, i) => (
+              <button
+                key={topic}
+                aria-pressed={journeyTopic === i}
+                onClick={() => setJourneyTopic(i)}
+              >
+                <span aria-hidden="true">+</span>
+                <span>{topic}</span>
+              </button>
+            ),
+          )}
+        </div>
       </section>
       <section
         id="discovery"
         className="quiz-chapter"
+        data-brand-tone="original"
+        data-header-brand="hidden"
         aria-labelledby="quiz-heading"
       >
+        {error && <p role="alert">{error}</p>}
         <div className="quiz-scene">
           {figures.map((player, i) => (
             <div
@@ -682,7 +592,11 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           </div>
         )}
       </section>
-      <section className="closing-chapter">
+      <section
+        className="closing-chapter"
+        data-brand-tone="white"
+        data-header-brand="hidden"
+      >
         <p className="eyebrow">BACK YOUR INSTINCT. KNOW YOUR PLAYER.</p>
         <h2>
           Ready to find

@@ -1,8 +1,9 @@
 import { KhiladiLogo } from "./KhiladiLogo";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 const destinations = [
   ["home", "Home"],
   ["database", "Explore players"],
+  ["data-explorer", "Explore the data"],
   ["rankings", "The top ten"],
   ["pressure-lab", "Pressure Lab"],
   ["comparison", "Compare players"],
@@ -20,6 +21,50 @@ export const Navbar: React.FC<{
   const dialog = useRef<HTMLDialogElement>(null),
     trigger = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
+  const [brand, setBrand] = useState<{
+    tone: "original" | "white";
+    placement: "hero" | "compact" | "hidden";
+  }>({ tone: "white", placement: "hero" });
+  useEffect(() => {
+    if (currentPage !== "home") {
+      setBrand({ tone: "original", placement: "compact" });
+      return;
+    }
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const section = Array.from(
+        document.querySelectorAll<HTMLElement>("[data-brand-tone]"),
+      ).find((element) => {
+        const bounds = element.getBoundingClientRect();
+        return bounds.top <= 70 && bounds.bottom > 70;
+      });
+      const tone =
+        section?.dataset.brandTone === "white" ? "white" : "original";
+      const value = section?.dataset.headerBrand;
+      const placement =
+        value === "hero" ? "hero" : value === "compact" ? "compact" : "hidden";
+      setBrand((old) =>
+        old.tone === tone && old.placement === placement
+          ? old
+          : { tone, placement },
+      );
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    const observer = new ResizeObserver(schedule);
+    observer.observe(document.body);
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    update();
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+    };
+  }, [currentPage]);
   const close = () => {
     dialog.current?.close();
     setOpen(false);
@@ -33,16 +78,25 @@ export const Navbar: React.FC<{
     <>
       <header
         className={`site-header ${currentPage === "home" ? "site-header--home" : ""}`}
+        data-brand-placement={brand.placement}
       >
         <a
           href="#home"
           className="site-wordmark"
+          aria-hidden={
+            currentPage === "home" && brand.placement === "hidden"
+              ? true
+              : undefined
+          }
+          tabIndex={
+            currentPage === "home" && brand.placement === "hidden" ? -1 : 0
+          }
           onClick={(e) => {
             e.preventDefault();
             onNavigate("home");
           }}
         >
-          <KhiladiLogo />
+          <KhiladiLogo tone={brand.tone} />
         </a>
         <div className="site-header-tools">
           <button

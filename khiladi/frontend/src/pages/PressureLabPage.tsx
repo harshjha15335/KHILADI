@@ -1,3 +1,4 @@
+import { requestJSON } from "../utils/api";
 import { apiURL, siteURL } from "../utils/urls";
 import React, { useState, useEffect } from "react";
 import {
@@ -47,25 +48,38 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
   onSelectPlayerById,
 }) => {
   const [replay, setReplay] = useState<ReplayData | null>(null);
+  const [error, setError] = useState(""),
+    [attempt, setAttempt] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(600); // ms per ball
 
   useEffect(() => {
-    fetch(siteURL("/data/sample_match_replay.json"))
-      .then((res) => res.json())
-      .then((data: ReplayData) => {
-        setReplay(data);
-        const firstHp = data.deliveries.findIndex((d) => d.is_high_pressure);
-        if (firstHp !== -1) setCurrentIndex(firstHp);
+    let active = true;
+    setError("");
+    setReplay(null);
+    setIsPlaying(false);
+    requestJSON<ReplayData>("/data/sample_match_replay.json")
+      .catch(() => requestJSON<ReplayData>("/api/match-replay"))
+      .then((data) => {
+        if (!Array.isArray(data.deliveries) || !data.deliveries.length)
+          throw new Error("No recorded deliveries are available.");
+        if (active) {
+          setReplay(data);
+          const first = data.deliveries.findIndex((d) => d.is_high_pressure);
+          setCurrentIndex(first < 0 ? 0 : first);
+        }
       })
       .catch(() => {
-        fetch(apiURL("/api/match-replay"))
-          .then((res) => res.json())
-          .then((data: ReplayData) => setReplay(data))
-          .catch((err) => console.error("Failed to load match replay:", err));
+        if (active)
+          setError(
+            "The legacy sample replay is unavailable. No D20 event trace has been substituted.",
+          );
       });
-  }, []);
+    return () => {
+      active = false;
+    };
+  }, [attempt]);
 
   // Auto-play timer
   useEffect(() => {
@@ -86,7 +100,16 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
   if (!replay || replay.deliveries.length === 0) {
     return (
       <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-32 text-center font-mono">
-        Loading the match replay…
+        {error ? (
+          <div role="alert">
+            <p>{error}</p>
+            <button type="button" onClick={() => setAttempt((v) => v + 1)}>
+              Retry replay
+            </button>
+          </div>
+        ) : (
+          <p role="status">Loading the match replay…</p>
+        )}
       </div>
     );
   }
@@ -99,6 +122,11 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
   return (
     <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
+        <p className="rounded-xl bg-[#e8f1ff] p-4 text-sm text-[#163a94]">
+          Legacy sample replay, not accepted D20 telemetry. Its pressure index
+          is an inherited match-state heuristic; original D20 event-level A/B/D
+          features are unavailable.
+        </p>
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E8E6ED] pb-8">
           <div className="space-y-3">
@@ -330,7 +358,9 @@ export const PressureLabPage: React.FC<PressureLabPageProps> = ({
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#E8E6ED]">
                   <span>Threshold</span>
-                  <strong className="text-[#2549BD]">≥ 1.80 LI</strong>
+                  <strong className="text-[#2549BD]">
+                    ≥ 1.80 heuristic index
+                  </strong>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#E8E6ED]">
                   <span>Ranking prior</span>

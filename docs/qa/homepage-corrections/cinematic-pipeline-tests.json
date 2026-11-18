@@ -1,0 +1,34 @@
+{
+  "fixtureType": "Synthetic FFmpeg test patterns outside repository; NOT actual RR footage",
+  "clips": [
+    {
+      "readyState": 4,
+      "currentTime": 0.1363,
+      "paused": false,
+      "error": null,
+      "muted": true,
+      "playsInline": true
+    },
+    {
+      "readyState": 4,
+      "currentTime": 0.1372,
+      "paused": false,
+      "error": null,
+      "muted": true,
+      "playsInline": true
+    },
+    {
+      "readyState": 4,
+      "currentTime": 0.1291,
+      "paused": false,
+      "error": null,
+      "muted": true,
+      "playsInline": true
+    }
+  ],
+  "offscreenPauses": true,
+  "reducedMotionPauses": true,
+  "failedClipPosterFallback": true,
+  "errors": [],
+  "actualRRPlayback": "Blocked; no authorized source clips configured"
+}

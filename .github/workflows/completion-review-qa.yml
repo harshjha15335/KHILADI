@@ -1,0 +1,134 @@
+name: KHILADI Completion Review
+
+on:
+  pull_request:
+    branches:
+      - feat/private-d20-contracts
+  workflow_dispatch:
+
+concurrency:
+  group: completion-review-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  frontend-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: khiladi/frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install backend requirements for original publication checks
+        run: python -m pip install -r khiladi/backend/requirements.txt
+        working-directory: .
+
+      - name: Prepare static recommendation export
+        run: python scripts/export_pages_quiz.py
+        working-directory: .
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: khiladi/frontend/package-lock.json
+
+      - name: Install exact dependencies
+        run: npm ci --include=dev --no-audit --no-fund
+
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit --incremental false
+
+      - name: Audit official IPL portrait identity and provenance
+        run: python3 ../../scripts/audit_official_ipl_portraits.py
+
+      - name: Install browser
+        run: |
+          npx playwright install --with-deps chromium
+          BIN="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux*/chrome' | head -n 1)"
+          if [ -z "$BIN" ]; then
+            echo "Chromium executable not found" >&2
+            exit 1
+          fi
+          echo "CHROMIUM_PATH=$BIN" >> "$GITHUB_ENV"
+
+      - name: Start development server for non-private browser smoke
+        run: |
+          nohup npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-completion-vite.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -sf http://127.0.0.1:3000/ >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/khiladi-completion-vite.log
+          exit 1
+
+      - name: Review new scenario comparison and official media
+        run: npx playwright test tests/auction-scenario-comparison.spec.ts tests/official-media-integration.spec.ts tests/catalogue-order.spec.ts tests/data-explorer.spec.ts tests/visual-delta-review.spec.ts --reporter=list
+        env:
+          KHILADI_TEST_TOKEN_FILE: ""
+
+      - name: Start test-only non-private FastAPI backend for legacy API journeys
+        run: |
+          nohup python -m uvicorn main:app --app-dir khiladi/backend --host 127.0.0.1 --port 8010 > /tmp/khiladi-completion-api.log 2>&1 &
+          for attempt in $(seq 1 45); do
+            if curl --silent --fail http://127.0.0.1:8010/api/health >/dev/null; then
+              echo "Legacy test backend ready without private D20 bundle"
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/khiladi-completion-api.log
+          exit 1
+        working-directory: .
+
+      - name: Regression-check existing public site interactions
+        run: npx playwright test tests/phase2.spec.ts tests/homepage-corrections.spec.ts tests/accessibility.spec.ts tests/experience.spec.ts tests/reference-replication.spec.ts --reporter=list
+        env:
+          KHILADI_TEST_TOKEN_FILE: ""
+
+      - name: Upload KHILADI and Delta visual review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: khiladi-delta-visual-review
+          path: khiladi/frontend/visual-review-output
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Build static release candidate without publishing
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /KHILADI/
+          VITE_GITHUB_PAGES: "true"
+          VITE_MEDIA_REVIEW: "false"
+
+      - name: Full original GitHub Pages publication artifact audit
+        run: python3 ../../scripts/check_pages_artifact.py
+
+      - name: Ensure review-only portrait metadata is not bundled for visitors
+        run: |
+          if grep -R -E -q 'private_development_only|redistribution_permission|review-portraits' dist; then
+            echo "Review-only portrait metadata leaked into public build" >&2
+            exit 1
+          fi
+          echo "No review-only portrait metadata found in static build"
+
+      - name: Guard against obviously restricted build artifacts
+        run: |
+          if find dist -type f | grep -Ei '(private[_-]?d20|serving[_-]?bundle|raw[_-]?competition|\\.env|token[_-]?file)'; then
+            echo "Forbidden file name detected in public artifact"
+            exit 1
+          fi
+          echo "No forbidden file name patterns found"
+
+      - name: Show server log on failure
+        if: failure()
+        run: cat /tmp/khiladi-completion-vite.log || true

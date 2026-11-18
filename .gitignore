@@ -54,3 +54,6 @@ khiladi/frontend/public/*.pdf
 .env.*
 !.env.example
 .DS_Store
+
+# Explicitly permitted match clips are audited against approved-media.json before deployment.
+!khiladi/frontend/public/assets/match-moments/*.mp4

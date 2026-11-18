@@ -27,28 +27,42 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
       });
       tl.fromTo(
         ".intro-glyph",
-        { yPercent: 105 },
-        { yPercent: 0, duration: 0.75, stagger: 0.09 },
+        { yPercent: 108, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.65, stagger: 0.045 },
         0.12,
       )
-        .to(
-          ".intro-glyph",
-          {
-            x: 0,
-            rotation: 0,
-            duration: 0.65,
-          },
-          1.05,
+        .fromTo(
+          ".intro-type",
+          { gap: "7vw" },
+          { gap: "0.04em", duration: 0.7 },
+          0.85,
         )
         .to(
           ".intro-type",
-          { scale: 16, rotation: -12, duration: 1.15, ease: "expo.in" },
+          { rotationX: -30, rotationZ: -8, duration: 0.5 },
           1.55,
         )
         .to(
+          ".intro-type",
+          {
+            scale: 20,
+            rotationX: 0,
+            rotationZ: -15,
+            duration: 1.05,
+            ease: "expo.in",
+          },
+          2.05,
+        )
+        .to(
+          ".intro-curtain",
+          { backgroundColor: "#ED267B", duration: 0.65 },
+          2.0,
+        )
+        .to(".intro-symbol", { opacity: 0, duration: 0.2 }, 1.8)
+        .to(
           ".intro-curtain",
           { yPercent: -100, duration: 0.8, ease: "power4.inOut" },
-          2.2,
+          2.65,
         );
       return () => {
         tl.kill();
@@ -76,12 +90,15 @@ export const CrlPreloader: React.FC<{ onComplete: () => void }> = ({
           <span>A GAME OF MOMENTS</span>
           <span>KHILADI / RAJASTHAN</span>
         </div>
-        <div className="intro-type intro-type--logo" aria-hidden="true">
-          <span className="intro-window intro-logo-window">
-            <span className="intro-glyph">
-              <KhiladiLogo variant="loader" />
+        <div className="intro-symbol" aria-hidden="true">
+          <KhiladiLogo variant="loader" tone="white" />
+        </div>
+        <div className="intro-type intro-type--letters" aria-hidden="true">
+          {[..."KHILADI"].map((letter, i) => (
+            <span className="intro-window" key={i}>
+              <span className="intro-glyph">{letter}</span>
             </span>
-          </span>
+          ))}
         </div>
         <button className="intro-skip" onClick={finish}>
           Skip introduction ↗
