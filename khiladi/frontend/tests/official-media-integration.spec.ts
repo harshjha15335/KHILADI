@@ -4,6 +4,22 @@ test("homepage shows an official click-to-play Royals video when no cleared mont
   page,
 }) => {
   await page.goto("/#home");
+  const count = await page.locator(".official-royals-video").count();
+  if (count !== 1) {
+    const parents = await page.locator(".official-royals-video").evaluateAll(
+      (elements) => elements.map((node) => {
+        let current: Element | null = node;
+        const names: string[] = [];
+        for (let index = 0; index < 7 && current; index++) {
+          names.push(current.tagName.toLowerCase() + "#" + current.id + "." + current.className);
+          current = current.parentElement;
+        }
+        return names.join(" > ");
+      }),
+    );
+    console.log("KHILADI_DUPLICATE_VIDEO_DEBUG " + JSON.stringify({ count, parents }));
+  }
+  expect(count).toBe(1);
   const button = page.getByRole("button", {
     name: "Play Rajasthan Royals official team video",
   });
