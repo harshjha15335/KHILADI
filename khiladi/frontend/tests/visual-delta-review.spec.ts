@@ -1,0 +1,84 @@
+import { test, expect } from "@playwright/test";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
+/**
+ * Captures real public-shell screenshots for an explicit human visual
+ * comparison. A screenshot passing is NOT a visual-parity verdict.
+ * Do not add private D20 tokens or protected research response bodies.
+ */
+const OUTPUT = "visual-review-output";
+const PAGES = [
+  { route: "home", reference: "https://deltacafes.com/en", section: "Storytelling/hero" },
+  { route: "database", reference: "https://deltacafes.com/en/products", section: "Catalogue and filtering" },
+  { route: "rankings", reference: "https://deltacafes.com/en/products", section: "Catalogue/evidence selection" },
+  { route: "pressure-lab", reference: "https://deltacafes.com/en/coffee-cycle/roast", section: "Process narrative" },
+  { route: "batting-intel", reference: "https://deltacafes.com/en/coffee-cycle/blend", section: "Deep explanatory content" },
+  { route: "bowling-intel", reference: "https://deltacafes.com/en/coffee-cycle/blend", section: "Deep explanatory content" },
+  { route: "comparison", reference: "https://deltacafes.com/en/products/bean/signature/signature-crema", section: "Split detail composition" },
+  { route: "war-room", reference: "https://deltacafes.com/en/about", section: "Editorial content hierarchy" },
+  { route: "command-centre", reference: "https://deltacafes.com/en/about", section: "Overview/editorial hierarchy" },
+  { route: "methodology", reference: "https://deltacafes.com/en/coffee-cycle", section: "Step-by-step story" },
+] as const;
+
+test("capture public KHILADI routes for human Delta reference comparison", async ({
+  page,
+}) => {
+  mkdirSync(OUTPUT, { recursive: true });
+  const snapshots = [];
+  for (const { route, reference, section } of PAGES) {
+    await page.goto(`/#${route}`);
+    await expect(page.locator("#main-content")).toBeVisible();
+    await page.screenshot({
+      path: join(OUTPUT, `khiladi-${route}.png`),
+      animations: "disabled",
+      fullPage: false,
+    });
+    const details = await page.locator("#main-content").evaluate((root) => ({
+      heading: root.querySelector("h1")?.textContent?.trim() ?? null,
+      textLength: (root.textContent ?? "").trim().length,
+      imageCount: root.querySelectorAll("img").length,
+      videoCount: root.querySelectorAll("video,iframe").length,
+      buttonCount: root.querySelectorAll("button").length,
+      background: getComputedStyle(root).backgroundColor,
+    }));
+    snapshots.push({ route, reference, section, ...details });
+    expect(details.textLength).toBeGreaterThan(60);
+  }
+  writeFileSync(join(OUTPUT, "khiladi-page-inventory.json"), JSON.stringify(snapshots, null, 2));
+});
+
+test("capture Delta reference viewports when accessible; record blockers honestly", async ({
+  page,
+}) => {
+  mkdirSync(OUTPUT, { recursive: true });
+  const references = [...new Set(PAGES.map((entry) => entry.reference))];
+  const statuses = [];
+  for (const [index, reference] of references.entries()) {
+    const name = `delta-${index + 1}`;
+    try {
+      const response = await page.goto(reference, {
+        timeout: 20000,
+        waitUntil: "domcontentloaded",
+      });
+      if (!response || !response.ok()) throw new Error(`HTTP ${response?.status() ?? "unknown"}`);
+      await page.waitForTimeout(800);
+      await page.screenshot({
+        path: join(OUTPUT, `${name}.png`),
+        animations: "disabled",
+        fullPage: false,
+      });
+      statuses.push({ reference, screenshot: `${name}.png`, status: "captured" });
+    } catch (error) {
+      statuses.push({
+        reference,
+        status: "unavailable",
+        reason: error instanceof Error ? error.message.slice(0, 400) : String(error),
+      });
+    }
+  }
+  writeFileSync(join(OUTPUT, "delta-reference-access.json"), JSON.stringify(statuses, null, 2));
+  // The reference is external and may refuse automated access. Never turn
+  // that blocker into a false KHILADI failure or visual-fidelity claim.
+  expect(statuses).toHaveLength(references.length);
+});
