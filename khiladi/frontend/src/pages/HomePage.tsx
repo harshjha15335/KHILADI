@@ -1,6 +1,7 @@
 import "./home-editorial.css";
 import { StudyAthlete } from "../components/player-cards/StudyAthlete";
 import { PublicDataPulse } from "../components/PublicDataPulse";
+import { KhiladiBento } from "../components/KhiladiBento";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
 import { staticPages } from "../utils/urls";
 import React, { useEffect, useRef, useState } from "react";
@@ -334,6 +335,7 @@ export const HomePage: React.FC<Props> = ({ onNavigate, onSelectPlayer }) => {
           <CTA variant="outline" onClick={() => onNavigate("database")}>Explore every player</CTA>
         </div>
       </section>
+      <KhiladiBento featured={featured} onNavigate={onNavigate} />
       <section
         className="editorial-chapter"
         aria-labelledby="story-heading"
