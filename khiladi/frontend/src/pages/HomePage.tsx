@@ -32,6 +32,19 @@ function QuizPlayerPhoto({player}:{player:Player}) {
       label={`No verified IPL portrait for ${player.player_name}`} />
   );
 }
+/** Gallery fallbacks render ONLY when the photographic asset genuinely fails.
+ * This prevents duplicate hidden <img>s and preserves photo choreography.
+ */
+function GalleryPhotograph({filename,alt,eager=false}:{
+  filename:string;alt:string;eager?:boolean;
+}) {
+  const [failed,setFailed]=useState(false);
+  if(failed)return <NeutralPlayerAvatar className="gallery-neutral-avatar"
+    label={`Photograph unavailable: ${alt}`} />;
+  return <img src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
+    alt={alt} decoding="async" loading={eager?"eager":"lazy"}
+    onError={()=>setFailed(true)} />;
+}
 export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, onSelectPlayer }) => {
   const root = useRef<HTMLDivElement>(null);
   const [squad, setSquad] = useState<Player[]>([]),
@@ -331,17 +344,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
 
           ].map(([filename, alt, placement]) => (
             <div className={`hero-photo-slot hero-photo-slot--${placement}`} key={filename}>
-              <img
-                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
-                alt={alt}
-                decoding="async"
-                loading={placement === "centre" ? "eager" : "lazy"}
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                  event.currentTarget.parentElement?.classList.add("awaiting-photo");
-                }}
-              />
-              <div className="gallery-photo-backup" aria-hidden="true"><NeutralPlayerAvatar className="gallery-neutral-avatar" label="Photograph unavailable" /></div>
+              <GalleryPhotograph filename={filename} alt={alt} eager={placement==="centre"}/>
             </div>
           ))}
         </div>
@@ -420,13 +423,7 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
         <div className="heritage-photo-composition" aria-label="Cricket photographic collection">
           {["moment-1.webp", "moment-2.webp", "trophy-celebration.webp", "moment-3.webp", "moment-4.webp"].map((filename, i) => (
             <div className={`heritage-shot heritage-shot--${i}`} key={filename}>
-              <img
-                src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`}
-                alt={i === 2 ? "Trophy celebration" : "Cricket moments"}
-                loading="lazy"
-                onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.add("awaiting-photo"); }}
-              />
-              <span className="gallery-photo-backup" aria-hidden="true"><NeutralPlayerAvatar className="gallery-neutral-avatar" label="Photograph unavailable" /></span>
+              <GalleryPhotograph filename={filename} alt={i===2?"Trophy celebration":"Cricket moments"}/>
             </div>
           ))}
         </div>
