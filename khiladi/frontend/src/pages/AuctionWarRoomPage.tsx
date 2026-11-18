@@ -3,6 +3,7 @@ import {
   createSquadPlan,
   validateSquadPlan,
 } from "../utils/planner";
+import { AuctionScenarioComparison } from "../components/AuctionScenarioComparison";
 import { RoyalIdentityPreview } from "../components/player-cards/RoyalIdentityPreview";
 import { ResearchAccess } from "../components/player-cards/RoyalResearch";
 import React, { useEffect, useState } from "react";
@@ -209,6 +210,12 @@ export const AuctionWarRoomPage: React.FC<Props> = ({
           </p>
           {notice && <p role="status">{notice}</p>}
         </section>
+        <AuctionScenarioComparison
+          players={players}
+          squadIds={warRoomSquad.map((player) => player.player_id)}
+          budget={budget}
+          bids={bids}
+        />
         <div className="discovery-controls">
           <label>
             Your planning budget (₹ crore)
