@@ -1,4 +1,5 @@
 import reviewPortraits from "../config/review-portraits.json";
+import { officialPortrait } from "../components/player-cards/portraitSource";
 import { siteURL } from "./urls";
 import media from "../config/approved-media.json";
 interface ApprovedAsset {
@@ -56,6 +57,7 @@ const sourceVerifiedIDs = new Set([
 ]);
 export function playerImage(player: {
   player_id: number;
+  player_name?: string;
   cutout_url?: string;
   portrait_url?: string;
 }) {
@@ -63,6 +65,21 @@ export function playerImage(player: {
     approved.portraits[String(player.player_id)]?.src ||
     (reviewMedia
       ? (reviewPortraits as Record<string, string>)[String(player.player_id)]
+      : undefined) ||
+    (reviewMedia
+      ? (() => {
+          const portrait = officialPortrait(player.player_id);
+          // A canonical player ID must never display a portrait assigned to a
+          // different cricket identity, even if a manifest entry is wrong.
+          if (
+            !portrait ||
+            (player.player_name &&
+              portrait.name.trim().toLocaleLowerCase("en") !==
+                player.player_name.trim().toLocaleLowerCase("en"))
+          )
+            return undefined;
+          return portrait.previewUrl ?? portrait.url;
+        })()
       : undefined) ||
     (reviewMedia && sourceVerifiedIDs.has(player.player_id)
       ? player.cutout_url || player.portrait_url
