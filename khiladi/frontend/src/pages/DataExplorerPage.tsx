@@ -212,7 +212,7 @@ export function DataExplorerPage({
             </div>
           </div>
           <p role="status" className="text-sm text-[#536079]">
-            {matching.length} matching canonical identities · sorted by name
+            {matching.length.toLocaleString("en-IN")} matching canonical identities · sorted by name
           </p>
           {matching.length === 0 && players.length > 0 ? (
             <p>No identities match these source filters. Adjust your search or role.</p>
