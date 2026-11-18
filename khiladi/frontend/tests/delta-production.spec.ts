@@ -184,15 +184,14 @@ test("particle loader hands off to the branded intro without a second loader",as
   await expect(intro).toHaveCount(0);
 });
 
-test("Matte Rise displays readable photography with an accessible title",async({page})=>{
+test("Matte Rise remains legible with no unwanted decorative photographs",async({page})=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/#home");
   const matte=page.locator(".matte-rise");
   await matte.scrollIntoViewIfNeeded();
   await expect(matte.getByRole("heading",{name:/BEYOND THE SCORECARD/})).toBeVisible();
-  await expect(matte.locator(".matte-rise__photo img")).toHaveCount(2);
-  const photoStyles=await matte.locator(".matte-rise__photo img").first().evaluate(el=>getComputedStyle(el).objectFit);
-  expect(photoStyles).toBe("contain");
+  await expect(matte.locator(".matte-rise__photo img")).toHaveCount(0);
+  await expect(page.locator(".heritage-chapter, .journey-chapter")).toHaveCount(0);
 });
 
 
