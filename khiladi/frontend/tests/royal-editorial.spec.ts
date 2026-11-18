@@ -18,6 +18,7 @@ test("1440 desktop: accessible memory ribbon, real photography and scroll-safe h
   await expect(ribbon).toBeVisible();
   await expect(page.getByRole("heading", { name: /Find the players/ })).toBeVisible();
   await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("01 / 05");
+  await page.waitForTimeout(1650); // Capture the settled GSAP heading and glass material, not a blur-in frame.
   await page.screenshot({ path: join(evidenceDir, "hero-desktop-1440.png"), animations: "disabled" });
 
   const canvas = ribbon.locator("canvas");
@@ -49,6 +50,19 @@ test("mobile: gallery buttons remain usable without WebGL or hover", async ({ pa
   await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("02 / 05");
   await ribbon.getByRole("button", { name: "Previous cricket photograph" }).click();
   await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("01 / 05");
+  // Touch devices can swipe without requiring a hover target.
+  const photo = ribbon.locator(".memory-ribbon__fallback");
+  const bounds = await photo.boundingBox();
+  if (bounds) {
+    await page.dispatchEvent(".memory-ribbon__fallback", "touchstart", {
+      touches: [{ identifier: 1, target: photo, clientX: bounds.x + bounds.width * .72, clientY: bounds.y + bounds.height * .45 }],
+    });
+    await page.dispatchEvent(".memory-ribbon__fallback", "touchend", {
+      changedTouches: [{ identifier: 1, target: photo, clientX: bounds.x + bounds.width * .25, clientY: bounds.y + bounds.height * .46 }],
+    });
+    await expect(ribbon.locator(".memory-ribbon__count")).toHaveText("02 / 05");
+    await ribbon.getByRole("button", { name: "Previous cricket photograph" }).click();
+  }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 4)).toBe(true);
   await page.screenshot({ path: join(evidenceDir, "hero-mobile-390.png"), animations: "disabled" });
   await page.evaluate(() => scrollBy(0, 450));
