@@ -181,6 +181,7 @@ export const App: React.FC = () => {
           currentPage={currentPage}
           onNavigate={handleNavigate}
           rrPurseCr={120.0}
+          introComplete={preloaderComplete}
         />
 
         {/* Page Routing */}

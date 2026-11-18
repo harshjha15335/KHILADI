@@ -1,163 +1,87 @@
+import React, { useEffect, useRef } from "react";
 import { KhiladiLogo } from "./KhiladiLogo";
-import React, { useEffect, useRef, useState } from "react";
-const destinations = [
-  ["home", "Home"],
-  ["database", "Explore players"],
-  ["data-explorer", "Explore the data"],
-  ["rankings", "The top ten"],
-  ["pressure-lab", "Pressure Lab"],
-  ["comparison", "Compare players"],
-  ["war-room", "Build your squad"],
-  ["batting-intel", "Batting insights"],
-  ["bowling-intel", "Bowling insights"],
-  ["command-centre", "Overview"],
-  ["methodology", "How it works"],
-];
+import { gsap } from "../utils/motion";
+import "./bottom-dock.css";
+
+const leftLinks = [["database","Players"],["rankings","Rankings"],["pressure-lab","Pressure"],["comparison","Compare"],["war-room","Auction"]] as const;
+const rightLinks = [["data-explorer","Data"],["batting-intel","Batting"],["bowling-intel","Bowling"],["command-centre","Overview"],["methodology","Method"]] as const;
+
+/** One always-available dock for all KHILADI screens. No hidden menu or off-site links. */
 export const Navbar: React.FC<{
   currentPage: string;
   onNavigate: (page: string) => void;
   rrPurseCr?: number;
-}> = ({ currentPage, onNavigate }) => {
-  const dialog = useRef<HTMLDialogElement>(null),
-    trigger = useRef<HTMLButtonElement>(null);
-  const [open, setOpen] = useState(false);
-  const [brand, setBrand] = useState<{
-    tone: "original" | "white";
-    placement: "hero" | "compact" | "hidden";
-  }>({ tone: "white", placement: "hero" });
+  introComplete?: boolean;
+}> = ({ currentPage, onNavigate, introComplete = true }) => {
+  const root = useRef<HTMLElement>(null);
+  const hasPlayed = useRef(false);
+
   useEffect(() => {
-    if (currentPage !== "home") {
-      setBrand({ tone: "original", placement: "compact" });
-      return;
-    }
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const section = Array.from(
-        document.querySelectorAll<HTMLElement>("[data-brand-tone]"),
-      ).find((element) => {
-        const bounds = element.getBoundingClientRect();
-        return bounds.top <= 70 && bounds.bottom > 70;
-      });
-      const tone =
-        section?.dataset.brandTone === "white" ? "white" : "original";
-      const value = section?.dataset.headerBrand;
-      const placement =
-        value === "hero" ? "hero" : value === "compact" ? "compact" : "hidden";
-      setBrand((old) =>
-        old.tone === tone && old.placement === placement
-          ? old
-          : { tone, placement },
-      );
-    };
-    const schedule = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    const observer = new ResizeObserver(schedule);
-    observer.observe(document.body);
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    update();
+    if (!introComplete || !root.current || hasPlayed.current) return;
+    hasPlayed.current = true;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const scope = root.current;
+    const left = Array.from(scope.querySelectorAll<HTMLElement>(".dock-link--left"));
+    const right = Array.from(scope.querySelectorAll<HTMLElement>(".dock-link--right"));
+    const logo = scope.querySelector<HTMLElement>(".dock-home");
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    // Choreography requested: left of the logo is first, right is second.
+    tl.fromTo(scope, { y: 54, opacity: 0, scale: 0.96 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.78 }, 0)
+      .fromTo(left, { x: -30, opacity: 0, filter: "blur(9px)" },
+        { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.66, stagger: 0.075 }, 0.18)
+      .fromTo(logo, { y: 16, scale: 0.65, opacity: 0 },
+        { y: 0, scale: 1, opacity: 1, duration: 0.68, ease: "back.out(1.4)" }, 0.55)
+      .fromTo(right, { x: 30, opacity: 0, filter: "blur(9px)" },
+        { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.66, stagger: 0.075 }, 0.80);
     return () => {
-      cancelAnimationFrame(frame);
-      observer.disconnect();
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
+      tl.kill();
+      gsap.set([scope, ...left, ...right, logo].filter(Boolean), { clearProps: "all" });
     };
-  }, [currentPage]);
-  const close = () => {
-    dialog.current?.close();
-    setOpen(false);
-    trigger.current?.focus();
-  };
-  const navigate = (id: string) => {
-    close();
-    onNavigate(id);
+  }, [introComplete]);
+
+  const renderLink = (entry: readonly [string, string], side: "left" | "right") => {
+    const [page, title] = entry;
+    return (
+      <a
+        key={page}
+        href={`#${page}`}
+        className={`dock-link dock-link--${side}`}
+        aria-current={currentPage === page ? "page" : undefined}
+        data-active={currentPage === page}
+        title={title}
+        onClick={(event) => {
+          event.preventDefault();
+          onNavigate(page);
+        }}
+      >
+        <span>{title}</span>
+      </a>
+    );
   };
   return (
-    <>
-      <header
-        className={`site-header ${currentPage === "home" ? "site-header--home" : ""}`}
-        data-brand-placement={brand.placement}
-      >
-        <a
-          href="#home"
-          className="site-wordmark"
-          aria-hidden={
-            currentPage === "home" && brand.placement === "hidden"
-              ? true
-              : undefined
-          }
-          tabIndex={
-            currentPage === "home" && brand.placement === "hidden" ? -1 : 0
-          }
-          onClick={(e) => {
-            e.preventDefault();
-            onNavigate("home");
-          }}
-        >
-          <KhiladiLogo tone={brand.tone} />
-        </a>
-        <div className="site-header-tools">
-          <button
-            ref={trigger}
-            className="menu-trigger"
-            aria-haspopup="dialog"
-            aria-expanded={open}
-            onClick={() => {
-              dialog.current?.showModal();
-              setOpen(true);
-            }}
-          >
-            Menu <span aria-hidden="true">{open ? "−" : "+"}</span>
-          </button>
-        </div>
-      </header>
-      <dialog
-        ref={dialog}
-        className="navigation-dialog"
-        aria-labelledby="menu-title"
-        onCancel={(e) => {
-          e.preventDefault();
-          close();
+    <nav ref={root} className="khiladi-bottom-dock" aria-label="Primary navigation">
+      <div className="dock-ambient" aria-hidden="true" />
+      <div className="dock-group dock-group--left" aria-label="Player tools">
+        {leftLinks.map((entry) => renderLink(entry, "left"))}
+      </div>
+      <a
+        className="dock-home"
+        href="#home"
+        aria-label="KHILADI — Home"
+        aria-current={currentPage === "home" ? "page" : undefined}
+        onClick={(event) => {
+          event.preventDefault();
+          onNavigate("home");
         }}
-        onClick={(e) => {
-          if (e.target === dialog.current) close();
-        }}
-        onClose={() => setOpen(false)}
       >
-        <div className="navigation-inner">
-          <div className="navigation-top">
-            <div>
-              <KhiladiLogo />
-              <span id="menu-title" className="sr-only">
-                THE GAME STARTS HERE
-              </span>
-            </div>
-            <button onClick={close} aria-label="Close menu">
-              Close ×
-            </button>
-          </div>
-          <nav aria-label="Main navigation">
-            {destinations.map(([id, label], i) => (
-              <a
-                href={`#${id}`}
-                key={id}
-                aria-current={currentPage === id ? "page" : undefined}
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate(id);
-                }}
-              >
-                <small>{String(i + 1).padStart(2, "0")}</small>
-                <span>{label}</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            ))}
-          </nav>
-          <p>Find the player. Feel the game.</p>
-        </div>
-      </dialog>
-    </>
+        <KhiladiLogo />
+        <span className="dock-brand-name">KHILADI</span>
+      </a>
+      <div className="dock-group dock-group--right" aria-label="Analysis tools">
+        {rightLinks.map((entry) => renderLink(entry, "right"))}
+      </div>
+    </nav>
   );
 };
