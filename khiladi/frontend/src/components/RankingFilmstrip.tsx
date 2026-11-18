@@ -14,7 +14,7 @@ function Portrait({p}:{p:FilmstripRank}) {
     {image&&!failed?<img src={image} alt="" width="370" height="450" decoding="async"
       loading="lazy" referrerPolicy="no-referrer" onError={()=>setFailed(true)}/>:
       <NeutralPlayerAvatar className="rank-neutral-avatar"
-        label={`No verified IPL portrait for ${p.player_name}`} />
+        label={`No verified IPL portrait for ${p.player_name}`} />}
   </span>;
 }
 const wrap=(n:number,total:number)=>((n%total)+total)%total;

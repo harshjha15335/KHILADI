@@ -49,11 +49,6 @@ export const archivalImages = approved.archive.length
         })),
       ].map((image) => ({ ...image, src: `/__review-media/${image.src}.jpg` }))
     : [];
-// Four inherited jersey graphics were presented as photos. Never use them as portraits.
-const sourceVerifiedIDs = new Set([
-  3298, 7503, 7312, 8580, 6423, 6806, 25139, 8182, 3297, 152, 7260, 26663, 1487,
-  7269, 47523, 43798, 41503, 48557, 7545, 67036, 2411, 60700, 50284,
-]);
 /** Only exact-identity IPL profile images are eligible for public player photos.
  *  Do not substitute Wikipedia photos, another player, kit artwork or guessed IDs.
  *  We hotlink original source URLs; image rights still require separate review.
@@ -68,7 +63,7 @@ export function playerImage(player: {
     name:string;source:string;url:string;previewUrl?:string;
   }>)[String(player.player_id)];
   if (!record || !player.player_name) return undefined;
-  const norm=(v:string)=>v.trim().replace(/\\s+/g," ").toLocaleLowerCase("en");
+  const norm=(v:string)=>v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
   if(norm(record.name)!==norm(player.player_name)) return undefined;
   if(!/^https:\/\/www\.iplt20\.com\/players\//.test(record.source)
     && !/^https:\/\/www\.iplt20\.com\/teams\//.test(record.source)) return undefined;
