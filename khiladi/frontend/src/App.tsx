@@ -139,6 +139,23 @@ export const App: React.FC = () => {
     setSelectedPlayer(null);
     handleNavigate("comparison");
   };
+  React.useLayoutEffect(() => {
+    if (!selectedPlayer || currentPage === "home") return;
+    const closePendingProfile = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || event.defaultPrevented) return;
+      // RoyalPlayerDialog is split into a lazy JS chunk. Escape must work
+      // even while that chunk is loading or before its showModal effect runs.
+      // Once the native dialog is open, its own cancel handler owns Escape.
+      if (document.querySelector("dialog.royal-dialog[open]")) return;
+      event.preventDefault();
+      setSelectedPlayer(null);
+      const trigger = selectedTrigger.current;
+      if (trigger?.isConnected) trigger.focus({ preventScroll: true });
+    };
+    document.addEventListener("keydown", closePendingProfile, true);
+    return () =>
+      document.removeEventListener("keydown", closePendingProfile, true);
+  }, [selectedPlayer, currentPage]);
   return (
     <RoyalResearchProvider active={currentPage !== "home"}>
       <div className="min-h-screen bg-[#FFFDF8] text-[#22263C] relative selection:bg-[#F22E83] selection:text-white">

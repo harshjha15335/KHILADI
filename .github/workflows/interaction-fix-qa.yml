@@ -1,0 +1,60 @@
+name: KHILADI Interaction Fix QA
+
+on:
+  pull_request:
+    branches:
+      - feat/auction-scenario-comparison
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-royal-dialog-and-editorial-warp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: khiladi/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: khiladi/frontend/package-lock.json
+      - name: Install pinned dependencies
+        run: npm ci --include=dev --no-audit --no-fund
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit --incremental false
+      - name: Install Chromium
+        run: |
+          npx playwright install --with-deps chromium
+          BIN="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux*/chrome' | head -n 1)"
+          if [ -z "$BIN" ]; then
+            echo "Missing Playwright Chromium browser" >&2
+            exit 1
+          fi
+          echo "CHROMIUM_PATH=$BIN" >> "$GITHUB_ENV"
+      - name: Start local web app
+        run: |
+          nohup npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-interaction-vite.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl -sSf http://127.0.0.1:3000/ >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/khiladi-interaction-vite.log
+          exit 1
+      - name: Browser regressions - animated card and rapid modal close
+        run: npx playwright test tests/homepage-corrections.spec.ts tests/reference-replication.spec.ts --grep "image displacement|rapid close" --reporter=list --retries=0
+      - name: Upload failure traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: khiladi-interaction-regression
+          path: docs/qa/reference-fidelity/test-artifacts
+          if-no-files-found: warn
+          retention-days: 3
+      - name: Show server errors on failure
+        if: failure()
+        run: tail -n 120 /tmp/khiladi-interaction-vite.log || true
