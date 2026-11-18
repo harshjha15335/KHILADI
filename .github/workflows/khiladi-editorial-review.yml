@@ -41,6 +41,6 @@ jobs:
           if [ -z "$CHROMIUM_PATH" ]; then
             export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux64/chrome' -type f | head -1)"
           fi
-          npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-vite.log 2>&1 &
+          VITE_GITHUB_PAGES=true VITE_MEDIA_REVIEW=false npm run dev -- --host 127.0.0.1 --port 3000 > /tmp/khiladi-vite.log 2>&1 &
           for i in $(seq 1 40); do curl -fsS http://127.0.0.1:3000/ >/dev/null && break; sleep 1; done
           npx playwright test tests/glass-dock-scroll.spec.ts
