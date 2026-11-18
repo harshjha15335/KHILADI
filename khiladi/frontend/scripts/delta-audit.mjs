@@ -32,7 +32,7 @@ for(const [id,url,width,height] of targets){
    response=await page.goto(url,{waitUntil:"domcontentloaded",timeout:25000});
    if(id.startsWith("delta")){
      // Delta currently shows a real consent banner that otherwise hides the reference.
-     for(const label of [/Rejeitar todos/i,/Reject all/i,/Recusar todos/i]){
+     for(const label of [/Rejeitar todos/i,/Negar cookies/i,/Recusar cookies/i,/Reject all/i,/Deny cookies/i,/Recusar todos/i]){
        const button=page.getByRole("button",{name:label}).first();
        if(await button.isVisible().catch(()=>false)){await button.click({timeout:3000}).catch(()=>{});break;}
      }
@@ -42,6 +42,23 @@ for(const [id,url,width,height] of targets){
      for(const sel of ["#CybotCookiebotDialog","#CybotCookiebotDialogBodyUnderlay",
        "#CookiebotWidget","#CookiebotWidget-widgetContent"]){
        document.querySelectorAll(sel).forEach(el=>{el.style.setProperty("display","none","important")});
+     }
+   }).catch(()=>{});
+   // Preserve an authentic visitor decision first. In the screenshot-only
+   // reference we can then dismiss any remaining fixed cookie overlay so the
+   // underlying page composition is actually comparable.
+   await page.evaluate(()=>{
+     const candidates=[...document.querySelectorAll("iframe,dialog,aside,section,div")];
+     for(const el of candidates){
+       const node=el;
+       const cs=getComputedStyle(node);
+       const rect=node.getBoundingClientRect();
+       const isCookieFrame=node.tagName==="IFRAME"&&/cookiebot|usercentrics/i.test(node.getAttribute("src")||"");
+       const fixedCookieBanner=(cs.position==="fixed"||cs.position==="sticky")&&
+         rect.width>=innerWidth*.65&&rect.height>=80&&
+         rect.top>=innerHeight*.2&&
+         /cookiebot|utilizamos cookies|we use cookies|consentimento de cookies/i.test((node.textContent||"").slice(0,7000));
+       if(isCookieFrame||fixedCookieBanner) node.style.setProperty("display","none","important");
      }
    }).catch(()=>{});
    await page.waitForTimeout(4400);
