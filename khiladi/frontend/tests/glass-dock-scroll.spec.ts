@@ -245,3 +245,16 @@ test("reduced motion keeps direct navigation without a wipe or loader replay", a
   await expect(page.getByTestId("khiladi-route-transition")).toHaveCount(0);
   await expect(page.locator(".khiladi-intro")).toHaveCount(0);
 });
+
+
+test("analytics navigation keeps the existing vortex canvas instead of rebuilding it", async ({page}) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#pressure-lab");
+  const vortex=page.locator(".metric-vortex-scene .typography-vortex-component");
+  await expect(vortex.locator("canvas")).toHaveCount(1);
+  await vortex.evaluate(el=>el.setAttribute("data-renderer-probe","preserved"));
+  await page.getByRole("navigation",{name:"Primary navigation"})
+    .getByRole("link",{name:"Data"}).click();
+  await expect(page).toHaveURL(/#data-explorer$/);
+  await expect(vortex).toHaveAttribute("data-renderer-probe","preserved");
+});
