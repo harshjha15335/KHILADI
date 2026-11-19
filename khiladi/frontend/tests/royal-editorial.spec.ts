@@ -162,3 +162,28 @@ test("Method heading clears the fixed dock at desktop and mobile sizes", async (
     expect(metrics.headingTop, `heading under dock at ${width}`).toBeGreaterThan(metrics.navBottom + 8);
   }
 });
+
+
+test("licensed portrait fallback uses only exact RR player IDs and preserves credits", async ({ page }) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#database");
+  const results=await page.evaluate(async()=>{
+    const {playerImage}=await import("/src/utils/media.ts");
+    return {
+      dinesh:playerImage({player_id:143,player_name:"Dinesh Karthik"}),
+      surya:playerImage({player_id:1699,player_name:"Suryakumar Yadav"}),
+      wrongId:playerImage({player_id:999999,player_name:"Dinesh Karthik"}),
+      wrongName:playerImage({player_id:143,player_name:"Another Cricketer"}),
+    };
+  });
+  expect(results.dinesh).toContain("upload.wikimedia.org/wikipedia/commons/");
+  expect(results.surya).toContain("upload.wikimedia.org/wikipedia/commons/");
+  expect(results.wrongId).toBeUndefined();
+  expect(results.wrongName).toBeUndefined();
+  const credits=page.locator(".khiladi-photo-credits");
+  await expect(credits).toBeVisible();
+  await credits.locator("summary").click();
+  await expect(credits).toContainText("Dinesh Karthik");
+  await expect(credits).toContainText("Suryakumar Yadav");
+  await expect(credits.locator('a[href^="https://creativecommons.org/licenses/"]')).toHaveCount(2);
+});
