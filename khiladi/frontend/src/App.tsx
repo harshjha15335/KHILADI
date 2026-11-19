@@ -294,7 +294,6 @@ export const App: React.FC = () => {
         >
           {currentPage !== "home" && currentPage !== "methodology" && (
             <MetricVortexScene
-              key={currentPage}
               route={currentPage}
               players={allPlayers}
               planningBudget={planningBudget}

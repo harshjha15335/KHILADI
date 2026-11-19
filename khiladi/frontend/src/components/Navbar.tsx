@@ -29,21 +29,28 @@ export const Navbar: React.FC<{
     timeline
       .fromTo(scope, { autoAlpha: 0, y: -20, scale: .985 },
         { autoAlpha: 1, y: 0, scale: 1, duration: .55 }, 0)
-      .fromTo(left, { autoAlpha: 0, y: -18, x: -45, filter: "blur(10px)" },
-        { autoAlpha: 1, y: 0, x: 0, filter: "blur(0px)", duration: .72, stagger: .085 }, .14)
+      .fromTo(left, { autoAlpha: 0, y: -18, x: -45 },
+        { autoAlpha: 1, y: 0, x: 0, duration: .72, stagger: .085 }, .14)
       .fromTo(centre, { autoAlpha: 0, y: -26, scale: .72 },
         { autoAlpha: 1, y: 0, scale: 1, duration: .65, ease: "back.out(1.55)" }, .52)
-      .fromTo(right, { autoAlpha: 0, y: 16, x: 36, scale: .9, filter: "blur(9px)" },
-        { autoAlpha: 1, y: 0, x: 0, scale: 1, filter: "blur(0px)", duration: .66, stagger: .08, ease:"back.out(1.25)" }, .78);
+      .fromTo(right, { autoAlpha: 0, y: 16, x: 36, scale: .9 },
+        { autoAlpha: 1, y: 0, x: 0, scale: 1, duration: .66, stagger: .08, ease:"back.out(1.25)" }, .78);
     return () => { timeline.kill(); if(scope.dataset.introMotion!=="ready")scope.dataset.introMotion="idle"; gsap.set([scope, ...Array.from(left), ...Array.from(right), centre].filter(Boolean), { clearProps: "all" }); };
   }, [introComplete]);
   useEffect(() => {
-    if (!root.current || !introComplete) return;
-    const controller = createTopDockController(root.current, () => ({
-      proximity: 122, spring: .19, damping: .70, widthGrowth: 0,
-      heightGrowth: 0, drop: -5.2, distribute: false,
-    }));
-    return () => controller();
+    if (!introComplete) return;
+    // Do not initialise the pointer/magnetic spring controller in the same
+    // frame as the closing startup curtain and navbar entrance. The normal
+    // CSS hover/focus states remain available throughout this short delay.
+    let dispose: (() => void) | undefined;
+    const id = window.setTimeout(() => {
+      if (!root.current) return;
+      dispose = createTopDockController(root.current, () => ({
+        proximity: 122, spring: .19, damping: .70, widthGrowth: 0,
+        heightGrowth: 0, drop: -5.2, distribute: false,
+      }));
+    }, 950);
+    return () => { window.clearTimeout(id); dispose?.(); };
   }, [introComplete]);
   function renderLink(entry: readonly [string, string], side: "left" | "right") {
     const [page, label] = entry;

@@ -71,18 +71,15 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
   const figures = featured;
   useGSAP(
     () => {
+      // Wait for the small squad JSON to populate before creating target-based
+      // scroll animations; otherwise empty targets cause duplicate geometry
+      // refreshes when the list arrives.
+      if (!squad.length) return;
       const media = gsap.matchMedia();
-      if (!introComplete) return () => media.revert();
+      // Set up expensive scroll geometry while the first-load curtain still
+      // covers the page, rather than running ScrollTrigger.refresh at the
+      // exact frame the user first sees the homepage.
       media.add("(prefers-reduced-motion: no-preference)", () => {
-
-        // Entrance begins only AFTER the preloader clears. These animations
-        // are observable on replay and never leave half-hidden static content.
-        gsap.fromTo(
-          ".hero-copy > .eyebrow, .hero-copy > h1, .hero-copy > p:not(.eyebrow), .hero-copy > button",
-          { autoAlpha: 0, y: 38, filter: "blur(9px)" },
-          { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: .9,
-            ease: "power3.out", stagger: .12, clearProps: "transform,filter,opacity,visibility" }
-        );
         // Memory ribbon owns its scroll and pointer motion. Do not add a second pin.
         // A horizontally scrollable rail remains usable without vertical
         // scroll hijacking. Its reveal is tied to ordinary vertical scrolling.
@@ -202,8 +199,24 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
       ScrollTrigger.refresh();
       return () => media.revert();
     },
-    { scope: root, dependencies: [squad.length, introComplete], revertOnUpdate: true },
+    { scope: root, dependencies: [squad.length], revertOnUpdate: true },
   );
+  // The visible headline is the only post-intro entrance. Keep this
+  // compositor-only (opacity + translate): large CSS blurs at handoff used
+  // to contend with WebGL rendering and cause a short hitch.
+  useGSAP(() => {
+    if (!introComplete) return;
+    const media = gsap.matchMedia();
+    media.add("(prefers-reduced-motion: no-preference)", () => {
+      gsap.fromTo(
+        ".hero-copy > .eyebrow, .hero-copy > h1, .hero-copy > p:not(.eyebrow), .hero-copy > button",
+        { autoAlpha: 0, y: 26 },
+        { autoAlpha: 1, y: 0, duration: .72, stagger: .09,
+          ease: "power3.out", clearProps: "transform,opacity,visibility" },
+      );
+    });
+    return () => media.revert();
+  }, { scope: root, dependencies: [introComplete], revertOnUpdate: true });
   useEffect(() => {
     if (quizStep > 0) {
       const panel = root.current?.querySelector<HTMLElement>(".quiz-panel");
