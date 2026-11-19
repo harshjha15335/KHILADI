@@ -78,3 +78,17 @@ html{scroll-padding-top:var(--kh-fixed-nav-clearance);}
  color:#221b2b;
  text-shadow:0 1px 0 #fff8;
 }
+
+/* Compact attribution for explicitly CC-licensed fallback player photography.
+   Official IPL source credits are tracked separately because their permission
+   status is still unverified; do not label them CC licensed. */
+.brand-footer .footer-bottom{flex-wrap:wrap}
+.khiladi-photo-credits{
+ order:3;flex:0 0 100%;font-size:12px;line-height:1.6;
+ color:inherit;opacity:.85;margin-top:8px;
+}
+.khiladi-photo-credits summary{cursor:pointer;width:max-content;max-width:100%;text-decoration:underline;text-underline-offset:3px}
+.khiladi-photo-credits summary:focus-visible{outline:2px solid #3157bb;outline-offset:3px}
+.khiladi-photo-credits ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:4px}
+.khiladi-photo-credits a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.khiladi-photo-credits a:hover{color:#3157bb}

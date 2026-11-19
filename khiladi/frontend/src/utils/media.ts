@@ -1,4 +1,5 @@
 import officialIPLPortraits from "../components/player-cards/official-portraits.json";
+import licensedPortraits from "../components/player-cards/licensed-portraits.json";
 import { siteURL } from "./urls";
 import media from "../config/approved-media.json";
 interface ApprovedAsset {
@@ -49,33 +50,49 @@ export const archivalImages = approved.archive.length
         })),
       ].map((image) => ({ ...image, src: `/__review-media/${image.src}.jpg` }))
     : [];
-/** Only exact-identity IPL profile images are eligible for public player photos.
- *  Do not substitute Wikipedia photos, another player, kit artwork or guessed IDs.
- *  We hotlink original source URLs; image rights still require separate review.
+/** The dataset decides which players exist. External photography can only
+ * decorate an existing, exactly matching player_id + player_name.
+ * Previously verified IPL studio portraits remain first preference. A
+ * separately cleared Commons asset is used only when no IPL image is valid.
+ * Neither official profile links nor unreviewed source candidates automatically
+ * grant KHILADI permission to redistribute an image.
  */
-export function playerImage(player: {
+type OfficialRecord = {name:string;source:string;url:string;previewUrl?:string};
+type LicensedRecord = {
+  name:string;source:string;url:string;author:string;license:string;
+  license_url:string;identity_verified:boolean;rights_status:string;
+};
+const normalizePlayerName = (v:string) =>
+  v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
+const unavailablePlayerIds = new Set([2379,6097,31205,43965,63497,2933,3644]);
+const noOfficialPhotoNames = new Set(["sam curran","dasun shanaka"]);
+export function playerImage(player:{
   player_id:number;
   player_name?:string;
   cutout_url?:string;
   portrait_url?:string;
 }):string|undefined {
-  const record=(officialIPLPortraits as Record<string,{
-    name:string;source:string;url:string;previewUrl?:string;
-  }>)[String(player.player_id)];
-  if (!record || !player.player_name) return undefined;
-  const norm=(v:string)=>v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
-  // Visually audited on a 60-player contact sheet (3 sheets, November 2026):
-  // five IPL URLs return a generic human silhouette instead of the player's face.
-  // Two historical documents.iplt20.com headshots fail to load in Chromium.
-  // Prefer the user-supplied anonymous grey graphic for these identities.
-  const unavailablePlayerIds = new Set([2379, 6097, 31205, 43965, 63497, 2933, 3644]);
-  const noOfficialPhotoNames = new Set(["sam curran", "dasun shanaka"]);
-  if (unavailablePlayerIds.has(player.player_id) || noOfficialPhotoNames.has(norm(player.player_name)))
-    return undefined;
-  if(norm(record.name)!==norm(player.player_name)) return undefined;
-  if(!/^https:\/\/www\.iplt20\.com\/players\//.test(record.source)
-    && !/^https:\/\/www\.iplt20\.com\/teams\//.test(record.source)) return undefined;
-  if(!/^https:\/\/(?:www|documents)\.iplt20\.com\//.test(record.url))return undefined;
-  return record.url;
+  if(!player.player_name || !Number.isInteger(player.player_id)) return undefined;
+  const name = normalizePlayerName(player.player_name);
+  const record = (officialIPLPortraits as Record<string,OfficialRecord>)[String(player.player_id)];
+  if(record && normalizePlayerName(record.name)===name
+      && !unavailablePlayerIds.has(player.player_id)
+      && !noOfficialPhotoNames.has(name)
+      && /^https:\/\/www\.iplt20\.com\/(?:players|teams)\//.test(record.source)
+      && /^https:\/\/(?:www|documents)\.iplt20\.com\//.test(record.url))
+    return record.url;
+
+  const licensed = (licensedPortraits as Record<string,LicensedRecord>)[String(player.player_id)];
+  if(licensed && normalizePlayerName(licensed.name)===name
+      && licensed.identity_verified === true
+      && licensed.rights_status === "licensed"
+      && /^CC-BY(?:-SA)?-(?:3\.0|4\.0)$/.test(licensed.license)
+      && /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(licensed.source)
+      && /^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\//.test(licensed.url)
+      && /^https:\/\/creativecommons\.org\/licenses\//.test(licensed.license_url)
+      && licensed.author.trim().length>1)
+    return licensed.url;
+  return undefined;
 }
 export const officialPortraitCount=Object.keys(officialIPLPortraits).length;
+export const licensedPortraitCount=Object.keys(licensedPortraits).length;
