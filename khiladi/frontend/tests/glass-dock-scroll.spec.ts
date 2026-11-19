@@ -204,3 +204,44 @@ test("footer is light frosted glass with no trophy image or design-study credit"
   if(await topCards.count()===4) await expect(topCards.locator("svg")).toHaveCount(0);
   await expect(page.locator("#khiladi-diamond-cursor")).toHaveCount(0);
 });
+
+
+test("left and right navigation wipes fully cover before switching routes", async ({page}) => {
+  // Skip the separate startup loader, then enable full motion for route clicks.
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#data-explorer");
+  await expect(page.locator(".khiladi-intro")).toHaveCount(0);
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  const nav=page.getByRole("navigation",{name:"Primary navigation"});
+
+  await nav.getByRole("link",{name:"Pressure"}).click();
+  const wipe=page.getByTestId("khiladi-route-transition");
+  await expect(wipe).toHaveAttribute("data-transition-mode","left");
+  await expect.poll(()=>wipe.getAttribute("data-phase"),{timeout:2500}).toBe("covered");
+  const firstClip=await wipe.evaluate(el=>getComputedStyle(el).clipPath);
+  expect(firstClip).toMatch(/^polygon\(/);
+  expect(firstClip.split(",")).toHaveLength(4);
+  await expect(page).toHaveURL(/#pressure-lab$/);
+  await expect(wipe).toHaveCount(0,{timeout:4000});
+  await expect.poll(()=>page.evaluate(()=>document.body.style.overflow)).not.toBe("hidden");
+
+  await nav.getByRole("link",{name:"Data"}).click();
+  await expect(wipe).toHaveAttribute("data-transition-mode","right");
+  await expect.poll(()=>wipe.getAttribute("data-phase"),{timeout:2500}).toBe("covered");
+  const secondClip=await wipe.evaluate(el=>getComputedStyle(el).clipPath);
+  expect(secondClip).toMatch(/^polygon\(/);
+  expect(secondClip.split(",")).toHaveLength(4);
+  await expect(page).toHaveURL(/#data-explorer$/);
+  await expect(wipe).toHaveCount(0,{timeout:4000});
+  await expect(page.locator(".khiladi-intro")).toHaveCount(0);
+});
+
+test("reduced motion keeps direct navigation without a wipe or loader replay", async ({page}) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/#rankings");
+  const nav=page.getByRole("navigation",{name:"Primary navigation"});
+  await nav.getByRole("link",{name:"Bowling"}).click();
+  await expect(page).toHaveURL(/#bowling-intel$/);
+  await expect(page.getByTestId("khiladi-route-transition")).toHaveCount(0);
+  await expect(page.locator(".khiladi-intro")).toHaveCount(0);
+});
