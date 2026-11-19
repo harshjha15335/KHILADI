@@ -15,6 +15,7 @@ import { loadPlayers } from "./utils/api";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { CrlPreloader } from "./components/CrlPreloader";
+import { KhiladiRouteTransition, type NavigationSide } from "./components/KhiladiRouteTransition";
 import { MetricVortexScene } from "./components/MetricVortexScene";
 
 // Pages
@@ -55,6 +56,10 @@ const readRoute = () => {
 export const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(() => readRoute());
   const [preloaderComplete, setPreloaderComplete] = useState(false);
+  const [routeTransition, setRouteTransition] = useState<{
+    page: string; side: NavigationSide; destination: string;
+  } | null>(null);
+  const navigationInFlight = React.useRef(false);
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [allPlayers, setAllPlayers] = useState<Player[]>([]);
   const [warRoomSquad, setWarRoomSquad] = useState<Player[]>([]);
@@ -187,8 +192,28 @@ export const App: React.FC = () => {
     };
   }, [currentPage, preloaderComplete]);
 
-  // Scroll to top on page change
-  const handleNavigate = (page: string) => {
+  // The initial page-load animation is intentionally independent of
+  // navigation animations. Only primary dock links opt into the two
+  // video-matched transitions; all other actions navigate immediately.
+  const handleNavigate = (page: string, side?: NavigationSide) => {
+    if (!routeNames.has(page)) return;
+    if (navigationInFlight.current) return;
+    if (page === currentPage) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+      return;
+    }
+    if (side && preloaderComplete &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const destinations: Record<string, string> = {
+        database: "Players", rankings: "Rankings", "pressure-lab": "Pressure",
+        comparison: "Compare", "war-room": "Squad", "data-explorer": "Data",
+        "batting-intel": "Batting", "bowling-intel": "Bowling",
+        "command-centre": "Overview", methodology: "Method",
+      };
+      navigationInFlight.current = true;
+      setRouteTransition({ page, side, destination: destinations[page] || "KHILADI" });
+      return;
+    }
     window.location.hash = page;
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -243,6 +268,23 @@ export const App: React.FC = () => {
           rrPurseCr={120.0}
           introComplete={preloaderComplete}
         />
+        {routeTransition && (
+          <KhiladiRouteTransition
+            key={routeTransition.page + routeTransition.side}
+            side={routeTransition.side}
+            destination={routeTransition.destination}
+            onSwitch={() => {
+              window.location.hash = routeTransition.page;
+              setCurrentPage(routeTransition.page);
+              setSelectedPlayer(null);
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }}
+            onFinish={() => {
+              navigationInFlight.current = false;
+              setRouteTransition(null);
+            }}
+          />
+        )}
 
         {/* Page Routing */}
         <main

@@ -9,7 +9,7 @@ const rightLinks = [["data-explorer","Data"],["batting-intel","Batting"],["bowli
 
 export const Navbar: React.FC<{
   currentPage: string;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: string, side?: "left" | "right") => void;
   rrPurseCr?: number;
   introComplete?: boolean;
 }> = ({ currentPage, onNavigate, introComplete = true }) => {
@@ -52,7 +52,7 @@ export const Navbar: React.FC<{
       title={label} aria-label={label}
       aria-current={currentPage === page ? "page" : undefined}
       data-active={currentPage === page}
-      onClick={e => { e.preventDefault(); onNavigate(page); }}>
+      onClick={e => { e.preventDefault(); onNavigate(page, side); }}>
       <span className="dock-link__label">{label}</span>
     </a>;
   }
