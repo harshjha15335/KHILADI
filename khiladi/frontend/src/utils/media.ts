@@ -61,6 +61,7 @@ type OfficialRecord = {name:string;source:string;url:string;previewUrl?:string};
 type LicensedRecord = {
   name:string;source:string;url:string;author:string;license:string;
   license_url:string;identity_verified:boolean;rights_status:string;
+  portrait_style?:string;visual_style_approved?:boolean;
 };
 const normalizePlayerName = (v:string) =>
   v.trim().replace(/\s+/g," ").toLocaleLowerCase("en");
@@ -83,7 +84,12 @@ export function playerImage(player:{
     return record.url;
 
   const licensed = (licensedPortraits as Record<string,LicensedRecord>)[String(player.player_id)];
+  // Identity and licensing are necessary, but not sufficient.
+  // KHILADI cards accept only an explicitly reviewed, studio-style portrait.
+  // Outdoor/training/event shots must not replace the user-approved fallback.
   if(licensed && normalizePlayerName(licensed.name)===name
+      && licensed.visual_style_approved === true
+      && (licensed.portrait_style === "studio_cutout" || licensed.portrait_style === "studio_portrait")
       && licensed.identity_verified === true
       && licensed.rights_status === "licensed"
       && /^CC-BY(?:-SA)?-(?:3\.0|4\.0)$/.test(licensed.license)
