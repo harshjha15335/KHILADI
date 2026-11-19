@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "../utils/motion";
 import { KhiladiLogo } from "./KhiladiLogo";
 import "./route-transition.css";
@@ -12,11 +12,24 @@ interface Props {
   onFinish: () => void;
 }
 
-/** Navigation-only transitions reconstructed from the supplied Delta Cafés videos.
- * Left: dark interstitial / centred insignia / collapsing triangular reveal.
- * Right: quick pointed triangular wipe from the centre of the navigation.
- * The startup preloader is a separate, unchanged experience.
+/**
+ * Two distinct, navigation-only transitions. Every clip-path keyframe uses
+ * exactly FOUR polygon vertices, in a stable order. The previous version
+ * morphed inset() -> polygon() and 3-point -> 4-point polygons; browsers
+ * cannot interpolate those shapes, causing the jump captured by the user.
+ *
+ * Route content changes only when the overlay fully covers the viewport.
+ * The original first-visit typography loader is not touched.
  */
+const LEFT_START = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)";
+const RIGHT_START = "polygon(50% 8%, 50% 8%, 50% 8%, 50% 8%)";
+const FULL = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+const FULL_TRIANGLE =
+  "polygon(50% -175%, -250% 210%, 350% 210%, 350% 210%)";
+const LEFT_EXIT_TRIANGLE =
+  "polygon(50% -135%, 220% 180%, 220% 180%, -120% 180%)";
+const END = "polygon(50% 110%, 50% 110%, 50% 110%, 50% 110%)";
+
 export function KhiladiRouteTransition({
   side, destination, onSwitch, onFinish,
 }: Props) {
@@ -24,93 +37,113 @@ export function KhiladiRouteTransition({
   const callbacks = useRef({ onSwitch, onFinish });
   callbacks.current = { onSwitch, onFinish };
 
-  useEffect(() => {
+  // Layout effect + inline first-frame clip eliminate the otherwise visible
+  // full-screen paint before GSAP's first requestAnimationFrame.
+  useLayoutEffect(() => {
     const element = root.current;
     if (!element) return;
-    const previousOverflow = document.body.style.overflow;
+    const priorOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    let swapped = false;
-    const switchOnce = () => {
-      if (swapped) return;
-      swapped = true;
+    element.dataset.phase = "entering";
+    let switched = false;
+    const switchWhenCovered = () => {
+      if (switched) return;
+      switched = true;
+      element.dataset.phase = "covered";
       callbacks.current.onSwitch();
     };
-    const tl = gsap.timeline({
-      onComplete: () => callbacks.current.onFinish(),
-    });
+    const complete = () => {
+      element.dataset.phase = "finished";
+      document.body.style.overflow = priorOverflow;
+      callbacks.current.onFinish();
+    };
+
+    const centre = element.querySelector<HTMLElement>(
+      ".kh-route-transition__centre",
+    );
+    const rightMark = element.querySelector<HTMLElement>(
+      ".kh-route-transition__right-mark",
+    );
+    const timeline = gsap.timeline({ onComplete: complete });
+
     if (side === "left") {
-      // Recording 200021: a full dark card interrupts the current scene,
-      // a restrained logo settles, then a very large triangular aperture
-      // opens to the next scene.
-      tl.fromTo(element, {
-        clipPath: "inset(0 100% 0 0)",
-      }, {
-        clipPath: "inset(0 0% 0 0)",
-        duration: .38, ease: "power3.inOut",
-      }, 0)
-        .fromTo(".kh-route-transition__centre", {
-          autoAlpha: 0, scale: .8, y: 12,
-        }, {
-          autoAlpha: 1, scale: 1, y: 0, duration: .31, ease: "power3.out",
-        }, .25)
-        .call(switchOnce, [], .74)
-        .to(".kh-route-transition__centre", {
-          autoAlpha: 0, scale: .91, duration: .2, ease: "power2.in",
-        }, .79)
-        .to(element, {
-          clipPath: "polygon(50% -25%, 170% 130%, 50% 130%, -70% 130%)",
-          duration: .37, ease: "power2.inOut",
-        }, .89)
-        .to(element, {
-          clipPath: "polygon(50% 105%, 50% 105%, 50% 105%, 50% 105%)",
-          duration: .48, ease: "power3.inOut",
-        }, 1.24);
-    } else {
-      // Recording 200050: the next page is introduced immediately through
-      // a growing triangle from the centred nav, with no dark logo pause.
-      tl.fromTo(element, {
-        clipPath: "polygon(50% 8%, 50% 8%, 50% 8%)",
-      }, {
-        clipPath: "polygon(-100% 180%, 50% -130%, 200% 180%)",
-        duration: .5, ease: "power3.inOut",
-      }, 0)
-        .fromTo(".kh-route-transition__right-mark", {
-          autoAlpha: 0, y: 20, scale: .78,
+      // Recording 1: directional entrance -> dark interstitial + insignia
+      // -> hold at complete coverage -> smooth triangular withdrawal.
+      timeline
+        .fromTo(element, { clipPath: LEFT_START }, {
+          clipPath: FULL, duration: 0.42, ease: "power3.inOut",
+        }, 0)
+        .fromTo(centre, {
+          autoAlpha: 0, y: 14, scale: 0.86,
         }, {
           autoAlpha: 1, y: 0, scale: 1,
-          duration: .26, ease: "power2.out",
-        }, .19)
-        .call(switchOnce, [], .51)
+          duration: 0.34, ease: "power3.out",
+        }, 0.28)
+        .call(switchWhenCovered, [], 0.67)
+        .to(centre, {
+          autoAlpha: 0, scale: 0.96, duration: 0.22,
+          ease: "power2.in",
+        }, 0.75)
         .to(element, {
-          clipPath: "polygon(-100% -100%, 200% -100%, 200% 200%, -100% 200%)",
-          duration: .13,
-        }, .51)
-        .to(".kh-route-transition__right-mark", {
-          autoAlpha: 0, y: -24, duration: .17,
-        }, .58)
+          clipPath: LEFT_EXIT_TRIANGLE, duration: 0.21,
+          ease: "power1.inOut",
+        }, 0.97)
         .to(element, {
-          clipPath: "polygon(50% 110%, 50% 110%, 50% 110%)",
-          duration: .58, ease: "power3.inOut",
-        }, .75);
+          clipPath: END, duration: 0.52,
+          ease: "power3.inOut",
+        }, 1.18);
+    } else {
+      // Recording 2: pointed pink triangle expands until FULL SCREEN;
+      // route switches behind its cover, then the SAME four vertices
+      // withdraw. Never insert a different polygon mid-animation.
+      timeline
+        .fromTo(element, { clipPath: RIGHT_START }, {
+          clipPath: FULL_TRIANGLE, duration: 0.52,
+          ease: "power3.inOut",
+        }, 0)
+        .fromTo(rightMark, {
+          autoAlpha: 0, y: 18, scale: 0.9,
+        }, {
+          autoAlpha: 1, y: 0, scale: 1,
+          duration: 0.32, ease: "power2.out",
+        }, 0.19)
+        .call(switchWhenCovered, [], 0.61)
+        .to(rightMark, {
+          autoAlpha: 0, y: -16, duration: 0.2,
+          ease: "power2.in",
+        }, 0.69)
+        .to(element, {
+          clipPath: END, duration: 0.66,
+          ease: "power3.inOut",
+        }, 0.90);
     }
+
     return () => {
-      tl.kill();
-      document.body.style.overflow = previousOverflow;
+      timeline.kill();
+      document.body.style.overflow = priorOverflow;
     };
   }, [side]);
 
-  return <div ref={root} className={`kh-route-transition kh-route-transition--${side}`}
-    data-testid="khiladi-route-transition" data-transition-mode={side}
-    role="status" aria-live="polite" aria-label={`Opening ${destination}`}>
+  return <div
+    ref={root}
+    style={{ clipPath: side === "left" ? LEFT_START : RIGHT_START }}
+    className={`kh-route-transition kh-route-transition--${side}`}
+    data-testid="khiladi-route-transition"
+    data-transition-mode={side}
+    data-phase="initial"
+    role="status"
+    aria-live="polite"
+    aria-label={`Opening ${destination}`}
+  >
     {side === "left" ?
       <div className="kh-route-transition__centre">
         <KhiladiLogo />
         <span className="kh-route-transition__strapline">THE NEXT CHAPTER</span>
         <strong>{destination}</strong>
-      </div>
-      : <div className="kh-route-transition__right-mark" aria-hidden="true">
-          <span>KHILADI</span>
-          <strong>{destination}</strong>
-        </div>}
+      </div> :
+      <div className="kh-route-transition__right-mark" aria-hidden="true">
+        <span>KHILADI</span>
+        <strong>{destination}</strong>
+      </div>}
   </div>;
 }
