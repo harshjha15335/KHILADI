@@ -42,13 +42,28 @@ The reference recordings used for design review were user supplied and are **not
 
 ## Player portraits and fallback
 
-Public portraits are resolved through `khiladi/frontend/src/utils/media.ts` and the exact-ID registry `khiladi/frontend/src/components/player-cards/official-portraits.json`.
+KHILADI's **1,217 canonical player IDs** come exclusively from the original Rajasthan Royals hackathon competition mapping. Portrait sources are decoration only; they can never add a new player to the dataset.
 
-1. A portrait must match the *canonical player ID and normalized player name*. The registry retains an official source profile URL and an image endpoint.
-2. Existing verified sources point to official IPL profiles/assets; a generic IPL silhouette endpoint, failing image or wrong-player identity is **not** treated as a valid face.
-3. Missing or failed portraits use the single user-approved `assets/players/neutral-avatar.webp` illustration, rather than a random player's face or an unrelated match photo. The fallback is only rendered when the image is missing/failed, never layered behind a valid image.
-4. Future additions from IPL, ICC, official clubs and national boards require manual identity verification, a direct stable portrait-image URL, review for non-portrait fallback payloads, and redistribution/licensing review. A profile webpage URL is **not** an image URL. Do not scrape/unverified-hotlink automatically.
-5. Photo usage rights are independent of publicly accessible URLs. The private accepted research pack, sensitive credentials and source archives are excluded from public builds.
+Portrait resolution is implemented in `khiladi/frontend/src/utils/media.ts` and uses the following strict order:
+
+1. The exact-ID **IPL official source registry**, `khiladi/frontend/src/components/player-cards/official-portraits.json`, where the URL renders a real face. Note: existing IPL/club assets are source-discovered; their public reproduction permission is not established by the URL alone.
+2. A separately cleared, **Commons licensed photo** in `licensed-portraits.json`, only if both player ID and normalized player name match, the image URL is a direct Commons image, its source is an individual Commons file page, the identity has been manually reviewed and copyright metadata is complete. Current approved examples: **Dinesh Karthik (143)** and **Suryakumar Yadav (1699)**. These are licensed alternative photos, *not* fake IPL studio cutouts. Their author/license links appear in **Photo credits** in the footer.
+3. The user-approved neutral avatar `assets/players/neutral-avatar.webp` when neither source is available, when network requests fail, or when an official URL returns the generic silhouette.
+
+Avoid guessed image matches, name-only joins, random cricket photographs, or swapping a player with a similar-looking person. Official IPL, RR, BCCI and ICC **profile pages are research sources**, not automatically permission to redistribute official portraits. The two OpenAI inline image previews in the source pack are *not* stable downloadable source-image URLs.
+
+### Importing the KHILADI source-pack ZIP
+
+A safe importer is included in `scripts/import_portrait_source_pack.py` (Python standard library only). The importer does **not** bulk-publish the images in the ZIP. It reads metadata and accepts only reviewed identity+license entries matching the original RR dataset:
+
+```powershell
+py scripts/import_portrait_source_pack.py "C:\\Downloads\\KHILADI_Player_Portrait_Source_Pack.zip"
+py scripts/import_portrait_source_pack.py "C:\\Downloads\\KHILADI_Player_Portrait_Source_Pack.zip" --write
+```
+
+The first command prints an audit with reasons for rejected rows; the second writes only approved CC metadata to the licensed registry. The official source links found in that ZIP remain pending until usable image endpoints and reuse rights are verified. After adding each candidate, confirm the rendered player visually, verify exact ID and name, and check license attribution before merging.
+
+**Source and rights priorities:** IPL/Rajasthan Royals official profiles and transparent studio cutouts first (when permission is secured); then BCCI/ICC official pages for research and permission requests; then individually vetted CC-licensed Commons photographs; finally the neutral silhouette. No scraped third-party photos or unapproved collector output should be committed to the public site.
 
 ## Public versus private analytics
 
