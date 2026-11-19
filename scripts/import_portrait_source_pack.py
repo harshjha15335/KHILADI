@@ -100,6 +100,11 @@ def audit(row: dict, whitelist: dict[str, str]) -> tuple[dict | None, str]:
     verified = row.get("identity_verified", row.get("visually_verified", row.get("reviewed_identity", False)))
     if not truthy(verified):
         return None, "identity not manually verified"
+    style = field(row, "portrait_style").strip().lower()
+    if style not in {"studio_cutout", "studio_portrait"}:
+        return None, "not a KHILADI studio portrait (event/action photos excluded)"
+    if not truthy(row.get("visual_style_approved", False)):
+        return None, "studio portrait visual style not explicitly approved"
     asset = field(row, "image_url", "portrait_url", "asset_url", "image", "url")
     source = field(row, "source_page", "source_url", "profile_url", "source")
     author = field(row, "author", "photographer", "credit")
@@ -133,7 +138,8 @@ def audit(row: dict, whitelist: dict[str, str]) -> tuple[dict | None, str]:
         "license_url": license_url,
         "identity_verified": True,
         "rights_status": "licensed",
-        "portrait_style": field(row, "portrait_style") or "licensed_event_photo",
+        "portrait_style": style,
+        "visual_style_approved": True,
         "modified": truthy(row.get("modified", False)),
     }, ""
 
@@ -163,7 +169,7 @@ def main() -> None:
             denied[reason] = denied.get(reason, 0) + 1
 
     print(f"Canonical RR IDs: {len(canonical)} | existing licensed portraits: {len(existing)}")
-    print(f"New license+identity approved candidates: {len(accepted)}")
+    print(f"New identity, license and studio-style approved candidates: {len(accepted)}")
     for reason, total in sorted(denied.items()):
         print(f"  Skipped {total:4d}: {reason}")
     if not args.write:
