@@ -71,6 +71,10 @@ export const HomePage: React.FC<Props> = ({ introComplete = true, onNavigate, on
   const figures = featured;
   useGSAP(
     () => {
+      // Wait for the small squad JSON to populate before creating target-based
+      // scroll animations; otherwise empty targets cause duplicate geometry
+      // refreshes when the list arrives.
+      if (!squad.length) return;
       const media = gsap.matchMedia();
       // Set up expensive scroll geometry while the first-load curtain still
       // covers the page, rather than running ScrollTrigger.refresh at the
