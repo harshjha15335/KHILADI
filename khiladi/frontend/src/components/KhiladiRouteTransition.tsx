@@ -46,11 +46,22 @@ export function KhiladiRouteTransition({
     document.body.style.overflow = "hidden";
     element.dataset.phase = "entering";
     let switched = false;
+    let paintFrame = 0;
+    let settledFrame = 0;
     const switchWhenCovered = () => {
       if (switched) return;
       switched = true;
       element.dataset.phase = "covered";
+      // Keep the overlay completely opaque while React mounts the next route
+      // and the canvas paints. Resuming after two paint opportunities avoids
+      // the one-frame hitch when the old overlay used to withdraw mid-render.
+      timeline.pause();
       callbacks.current.onSwitch();
+      paintFrame = requestAnimationFrame(() => {
+        settledFrame = requestAnimationFrame(() => {
+          if (element.isConnected) timeline.resume();
+        });
+      });
     };
     const complete = () => {
       element.dataset.phase = "finished";
@@ -119,6 +130,8 @@ export function KhiladiRouteTransition({
     }
 
     return () => {
+      cancelAnimationFrame(paintFrame);
+      cancelAnimationFrame(settledFrame);
       timeline.kill();
       document.body.style.overflow = priorOverflow;
     };
