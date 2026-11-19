@@ -9,7 +9,9 @@
     "identity_verified": true,
     "rights_status": "licensed",
     "portrait_style": "licensed_event_photo",
-    "modified": false
+    "modified": false,
+    "visual_style_approved": false,
+    "review_note": "Correct player identity, but informal outdoor/event photograph. Excluded from KHILADI studio-portrait UI."
   },
   "1699": {
     "name": "Suryakumar Yadav",
@@ -21,6 +23,8 @@
     "identity_verified": true,
     "rights_status": "licensed",
     "portrait_style": "licensed_event_photo",
-    "modified": false
+    "modified": false,
+    "visual_style_approved": false,
+    "review_note": "Correct player identity, but informal outdoor/event photograph. Excluded from KHILADI studio-portrait UI."
   }
 }
