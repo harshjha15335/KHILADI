@@ -164,26 +164,23 @@ test("Method heading clears the fixed dock at desktop and mobile sizes", async (
 });
 
 
-test("licensed portrait fallback uses only exact RR player IDs and preserves credits", async ({ page }) => {
-  await page.emulateMedia({reducedMotion:"reduce"});
+test("rejects outdoor/event photographs even for licensed, correctly identified players", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/#database");
-  const results=await page.evaluate(async()=>{
-    const {playerImage}=await import("/src/utils/media.ts");
+  const results = await page.evaluate(async () => {
+    const { playerImage } = await import("/src/utils/media.ts");
     return {
-      dinesh:playerImage({player_id:143,player_name:"Dinesh Karthik"}),
-      surya:playerImage({player_id:1699,player_name:"Suryakumar Yadav"}),
-      wrongId:playerImage({player_id:999999,player_name:"Dinesh Karthik"}),
-      wrongName:playerImage({player_id:143,player_name:"Another Cricketer"}),
+      dinesh: playerImage({ player_id: 143, player_name: "Dinesh Karthik" }),
+      surya: playerImage({ player_id: 1699, player_name: "Suryakumar Yadav" }),
+      wrongId: playerImage({ player_id: 999999, player_name: "Dinesh Karthik" }),
+      wrongName: playerImage({ player_id: 143, player_name: "Another Cricketer" }),
     };
   });
-  expect(results.dinesh).toContain("upload.wikimedia.org/wikipedia/commons/");
-  expect(results.surya).toContain("upload.wikimedia.org/wikipedia/commons/");
+  expect(results.dinesh).toBeUndefined();
+  expect(results.surya).toBeUndefined();
   expect(results.wrongId).toBeUndefined();
   expect(results.wrongName).toBeUndefined();
-  const credits=page.locator(".khiladi-photo-credits");
-  await expect(credits).toBeVisible();
-  await credits.locator("summary").click();
-  await expect(credits).toContainText("Dinesh Karthik");
-  await expect(credits).toContainText("Suryakumar Yadav");
-  await expect(credits.locator('a[href^="https://creativecommons.org/licenses/"]')).toHaveCount(2);
+  // No displayed alternative photographs means there are no misleading credits
+  // for photos that the visitor never sees.
+  await expect(page.locator(".khiladi-photo-credits")).toHaveCount(0);
 });
